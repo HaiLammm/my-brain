@@ -1,16 +1,16 @@
 ---
 type: person
-title: "Jolande Jacobi"
+title: Jolande Jacobi
 slug: jolande-jacobi
 date_added: 2026-05-11
-affiliation: "Zurich, Switzerland"
+affiliation: Zurich, Switzerland
 tags:
   - jungian-psychology
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/man-and-his-symbols
 ---
 
 ## Overview
@@ -19,7 +19,7 @@ Jolande Jacobi (1889-1973) là nhà phân tích tâm lý học Jung và tác gi�
 
 ## Key Sources
 
-- [[man-and-his-symbols]] — chương về trường hợp phân tích giấc mơ
+- [[sources/man-and-his-symbols]] — chương về trường hợp phân tích giấc mơ
 
 ## Notes
 

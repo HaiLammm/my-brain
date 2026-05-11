@@ -1,19 +1,19 @@
 ---
 type: person
-title: "Vito Corleone"
+title: Vito Corleone
 slug: vito-corleone
 date_added: 2026-05-11
-affiliation: ""
+affiliation: []
 tags:
   - mafia
   - gia-dinh-corleone
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/bo-gia
 related_concepts:
-  - [[nguyen-mau-father]]
-
+  - [[concepts/nguyen-mau-father]]
 ---
 
 ## Overview
@@ -22,7 +22,7 @@ Vito Corleone – "Bố già" – là ông trùm của gia đình mafia Corleone
 
 ## Key sources
 
-- [[bo-gia]]
+- [[sources/bo-gia]]
 
 ## Notes
 
@@ -48,5 +48,5 @@ Mặt tối — biểu hiện qua:
 Mọi thành viên được tổ chức theo mô hình gia đình với Vito là "Bố già" — quyền lực tập trung tuyệt đối, không ai dám thách thức.
 
 **Related concepts:**
-- [[nguyen-mau-father]] — nguyên mẫu Father với hai mặt sáng/tối
-- [[nguyen-mau]] — bối cảnh các nguyên mẫu cốt lõi
+- [[concepts/nguyen-mau-father]] — nguyên mẫu Father với hai mặt sáng/tối
+- [[concepts/nguyen-mau]] — bối cảnh các nguyên mẫu cốt lõi

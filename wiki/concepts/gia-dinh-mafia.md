@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Gia đình Mafia"
+title: Gia đình Mafia
 slug: gia-dinh-mafia
 date_added: 2026-05-11
 confidence: high
@@ -8,11 +8,12 @@ tags:
   - toi-pham-to-chuc
   - mafia
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
-related_concepts: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/bo-gia
+related_concepts:
+  - concepts/mafia
 ---
 
 ## Definition
@@ -21,11 +22,11 @@ Gia đình mafia (tiếng Anh: crime family) là đơn vị cơ bản của tổ
 
 ## Key sources
 
-- [[bo-gia]]
+- [[sources/bo-gia]]
 
 ## Related concepts
 
-- [[mafia]]
+- [[concepts/mafia]]
 
 ## Notes
 

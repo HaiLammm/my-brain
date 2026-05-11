@@ -1,17 +1,17 @@
 ---
 type: person
-title: "Tom Hagen"
+title: Tom Hagen
 slug: tom-hagen
 date_added: 2026-05-11
-affiliation: ""
+affiliation: []
 tags:
   - mafia
   - gia-dinh-corleone
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/bo-gia
 ---
 
 ## Overview
@@ -20,7 +20,7 @@ Tom Hagen là cố vấn kiêm phụ tá của Bố già Vito Corleone, được
 
 ## Key sources
 
-- [[bo-gia]]
+- [[sources/bo-gia]]
 
 ## Notes
 

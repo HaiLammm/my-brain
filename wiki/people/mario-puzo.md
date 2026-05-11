@@ -1,16 +1,16 @@
 ---
 type: person
-title: "Mario Puzo"
+title: Mario Puzo
 slug: mario-puzo
 date_added: 2026-05-11
-affiliation: ""
+affiliation: []
 tags:
   - tac-gia
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/bo-gia
 ---
 
 ## Overview
@@ -19,7 +19,7 @@ Mario Puzo là nhà văn Mỹ gốc Ý, tác giả của tiểu thuyết "Bố g
 
 ## Key sources
 
-- [[bo-gia]]
+- [[sources/bo-gia]]
 
 ## Notes
 

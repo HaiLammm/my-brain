@@ -1,16 +1,16 @@
 ---
 type: person
-title: "Aniela Jaffé"
+title: Aniela Jaffé
 slug: aniela-jaffe
 date_added: 2026-05-11
-affiliation: "Zurich, Switzerland"
+affiliation: Zurich, Switzerland
 tags:
   - jungian-psychology
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/man-and-his-symbols
 ---
 
 ## Overview
@@ -19,11 +19,11 @@ Aniela Jaffé (1902-1991) là thư ký riêng của Carl Jung và là nhà phân
 
 ## Key Sources
 
-- [[man-and-his-symbols]] — chương về biểu tượng trong nghệ thuật
+- [[sources/man-and-his-symbols]] — chương về biểu tượng trong nghệ thuật
 
 ## Key Concepts
 
-- [[bieu-tuong]]
+- [[concepts/bieu-tuong]]
 
 ## Notes
 

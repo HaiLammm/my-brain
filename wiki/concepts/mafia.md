@@ -1,17 +1,17 @@
 ---
 type: concept
-title: "Mafia"
+title: Mafia
 slug: mafia
 date_added: 2026-05-11
 confidence: high
 tags:
   - toi-pham-to-chuc
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
-related_concepts: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/bo-gia
+related_concepts: []
 ---
 
 ## Definition
@@ -20,7 +20,7 @@ Mafia là một tổ chức tội phạm có tổ chức hoạt động ngầm, 
 
 ## Key sources
 
-- [[bo-gia]]
+- [[sources/bo-gia]]
 
 ## Notes
 

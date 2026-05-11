@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Giải mã giấc mơ"
+title: Giải mã giấc mơ
 slug: giai-ma-giac-mo
 date_added: 2026-05-11
 confidence: medium
@@ -8,11 +8,14 @@ tags:
   - jungian-psychology
   - dream-analysis
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
-related_concepts: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/man-and-his-symbols
+related_concepts:
+  - concepts/vo-thuc
+  - concepts/bieu-tuong
+  - concepts/ca-nhan-hoa
 ---
 
 ## Definition
@@ -26,13 +29,13 @@ Giải mã giấc mơ (Dream interpretation) trong tâm lý học Jung không ph
 
 ## Key Sources
 
-- [[man-and-his-symbols]]
+- [[sources/man-and-his-symbols]]
 
 ## Related Concepts
 
-- [[vo-thuc]] — giấc mơ đến từ vô thức
-- [[bieu-tuong]] — giấc mơ sử dụng biểu tượng để giao tiếp
-- [[ca-nhan-hoa]] — giấc mơ là phần của quá trình cá nhân hóa
+- [[concepts/vo-thuc]] — giấc mơ đến từ vô thức
+- [[concepts/bieu-tuong]] — giấc mơ sử dụng biểu tượng để giao tiếp
+- [[concepts/ca-nhan-hoa]] — giấc mơ là phần của quá trình cá nhân hóa
 
 ## Notes
 

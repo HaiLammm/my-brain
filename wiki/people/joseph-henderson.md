@@ -1,16 +1,16 @@
 ---
 type: person
-title: "Joseph L. Henderson"
+title: Joseph L. Henderson
 slug: joseph-henderson
 date_added: 2026-05-11
-affiliation: "San Francisco, USA"
+affiliation: San Francisco, USA
 tags:
   - jungian-psychology
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/man-and-his-symbols
 ---
 
 ## Overview
@@ -19,11 +19,11 @@ Joseph L. Henderson (1900-1990) là bác sĩ và nhà phân tích tâm lý học
 
 ## Key Sources
 
-- [[man-and-his-symbols]] — chương về nguyên mẫu trong thần thoại
+- [[sources/man-and-his-symbols]] — chương về nguyên mẫu trong thần thoại
 
 ## Key Concepts
 
-- [[nguyen-mau]]
+- [[concepts/nguyen-mau]]
 
 ## Notes
 

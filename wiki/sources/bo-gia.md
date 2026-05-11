@@ -19,9 +19,8 @@ raw_paths:
   - raw/sources/book/Bo-gia/SachMoi.net-Bo-gia.epub
 ingest_status: drafted
 id: TODO
-created: TODO
-updated: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
 ---
 
 ## Summary
@@ -43,17 +42,17 @@ Từ phần Lời tựa (Chương 1): Bố già Corleone là người được c
 
 ## Related Concepts
 
-- [[mafia]]
-- [[gia-dinh-mafia]]
-- [[quyen-luc-tiem nan]]
+- [[concepts/mafia]]
+- [[concepts/gia-dinh-mafia]]
+- [[concepts/quyen-luc-tiem-nan]]
 
 ## People
 
-- [[vito-corleone]]
-- [[sonny-corleone]]
-- [[michael-corleone]]
-- [[tom-hagen]]
-- [[luca-brasi]]
+- [[people/vito-corleone]]
+- [[people/sonny-corleone]]
+- [[people/michael-corleone]]
+- [[people/tom-hagen]]
+- [[people/luca-brasi]]
 
 ## Open Questions
 

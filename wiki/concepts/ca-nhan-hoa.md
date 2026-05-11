@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Cá nhân hóa"
+title: Cá nhân hóa
 slug: ca-nhan-hoa
 date_added: 2026-05-11
 confidence: high
@@ -8,11 +8,13 @@ tags:
   - jungian-psychology
   - individuation
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
-related_concepts: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/man-and-his-symbols
+related_concepts:
+  - concepts/vo-thuc
+  - concepts/nguyen-mau
 ---
 
 ## Definition
@@ -25,12 +27,12 @@ Quá trình cá nhân hóa (Individuation) là quá trình mà qua đó ý thứ
 
 ## Key Sources
 
-- [[man-and-his-symbols]] — chương của Marie-Louise von Franz về quá trình cá nhân hóa
+- [[sources/man-and-his-symbols]] — chương của Marie-Louise von Franz về quá trình cá nhân hóa
 
 ## Related Concepts
 
-- [[vo-thuc]] — phần tâm trí được hòa giải trong quá trình cá nhân hóa
-- [[nguyen-mau]] — các mô hình tâm lý cần được đối diện trong quá trình này
+- [[concepts/vo-thuc]] — phần tâm trí được hòa giải trong quá trình cá nhân hóa
+- [[concepts/nguyen-mau]] — các mô hình tâm lý cần được đối diện trong quá trình này
 
 ## Notes
 

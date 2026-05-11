@@ -1,17 +1,17 @@
 ---
 type: person
-title: "Carl Gustav Jung"
+title: Carl Gustav Jung
 slug: carl-jung
 date_added: 2026-05-11
-affiliation: "Zurich, Switzerland"
+affiliation: Zurich, Switzerland
 tags:
   - jungian-psychology
   - psychiatrist
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/man-and-his-symbols
 ---
 
 ## Overview
@@ -20,15 +20,15 @@ Carl Gustav Jung (1875-1961) là bác sĩ tâm thần và nhà tư tưởng ngư
 
 ## Key Sources
 
-- [[man-and-his-symbols]] — tác phẩm cuối cùng, viết về Vô thức
+- [[sources/man-and-his-symbols]] — tác phẩm cuối cùng, viết về Vô thức
 
 ## Key Concepts
 
-- [[vo-thuc]] — khái niệm cốt lõi trong tâm lý học Jung
-- [[nguyen-mau]] — các mô hình tâm lý bẩm sinh
-- [[ca-nhan-hoa]] — quá trình phát triển tâm lý toàn vẹn
-- [[tu-tuong-huong-ngoai]] — extrovert (người hướng ngoại)
-- [[tu-tuong-huong-noi]] — introvert (người hướng nội)
+- [[concepts/vo-thuc]] — khái niệm cốt lõi trong tâm lý học Jung
+- [[concepts/nguyen-mau]] — các mô hình tâm lý bẩm sinh
+- [[concepts/ca-nhan-hoa]] — quá trình phát triển tâm lý toàn vẹn
+- [[concepts/tu-tuong-huong-ngoai]] — extrovert (người hướng ngoại)
+- [[concepts/tu-tuong-huong-noi]] — introvert (người hướng nội)
 
 ## Notes
 

@@ -1,16 +1,16 @@
 ---
 type: person
-title: "Sigmund Freud"
+title: Sigmund Freud
 slug: sigmund-freud
 date_added: 2026-05-11
-affiliation: "Vienna, Austria"
+affiliation: Vienna, Austria
 tags:
   - psychoanalysis
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/man-and-his-symbols
 ---
 
 ## Overview
@@ -19,7 +19,7 @@ Sigmund Freud (1856-1939) là bác sĩ tâm thần người Áo, cha đẻ của
 
 ## Key Sources
 
-- [[man-and-his-symbols]] — được nhắc đến trong bối cảnh so sánh về vô thức
+- [[sources/man-and-his-symbols]] — được nhắc đến trong bối cảnh so sánh về vô thức
 
 ## Notes
 

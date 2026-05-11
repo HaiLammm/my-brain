@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Quyền lực ngầm"
+title: Quyền lực ngầm
 slug: quyen-luc-tiem-nan
 date_added: 2026-05-11
 confidence: high
@@ -8,11 +8,13 @@ tags:
   - quyen-luc
   - toi-pham-to-chuc
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
-related_concepts: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/bo-gia
+related_concepts:
+  - concepts/mafia
+  - concepts/gia-dinh-mafia
 ---
 
 ## Definition
@@ -21,12 +23,12 @@ Quyền lực ngầm (tiếng Anh: underworld power) chỉ sức mạnh và ản
 
 ## Key sources
 
-- [[bo-gia]]
+- [[sources/bo-gia]]
 
 ## Related concepts
 
-- [[mafia]]
-- [[gia-dinh-mafia]]
+- [[concepts/mafia]]
+- [[concepts/gia-dinh-mafia]]
 
 ## Notes
 

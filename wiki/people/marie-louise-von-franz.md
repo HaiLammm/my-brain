@@ -1,16 +1,16 @@
 ---
 type: person
-title: "Marie-Louise von Franz"
+title: Marie-Louise von Franz
 slug: marie-louise-von-franz
 date_added: 2026-05-11
-affiliation: "Zurich, Switzerland"
+affiliation: Zurich, Switzerland
 tags:
   - jungian-psychology
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/man-and-his-symbols
 ---
 
 ## Overview
@@ -19,12 +19,12 @@ Marie-Louise von Franz (1915-2011) là bác sĩ tâm thần và nhà phân tích
 
 ## Key Sources
 
-- [[man-and-his-symbols]] — chương về quá trình cá nhân hóa
+- [[sources/man-and-his-symbols]] — chương về quá trình cá nhân hóa
 
 ## Key Concepts
 
-- [[ca-nhan-hoa]]
-- [[vo-thuc]]
+- [[concepts/ca-nhan-hoa]]
+- [[concepts/vo-thuc]]
 
 ## Notes
 

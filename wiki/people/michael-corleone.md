@@ -1,17 +1,17 @@
 ---
 type: person
-title: "Michael Corleone"
+title: Michael Corleone
 slug: michael-corleone
 date_added: 2026-05-11
-affiliation: ""
+affiliation: []
 tags:
   - mafia
   - gia-dinh-corleone
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/bo-gia
 ---
 
 ## Overview
@@ -20,7 +20,7 @@ Michael Corleone là đứa con út của Vito Corleone. Ban đầu anh là ngư
 
 ## Key sources
 
-- [[bo-gia]]
+- [[sources/bo-gia]]
 
 ## Notes
 

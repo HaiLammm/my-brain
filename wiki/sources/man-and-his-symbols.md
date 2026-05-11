@@ -53,22 +53,22 @@ Man and His Symbols là tác phẩm cuối cùng của Carl Gustav Jung, đượ
 
 ## Related Concepts
 
-- [[vo-thuc]] (Unconscious)
-- [[nguyen-mau]] (Archetype)
-- [[ca-nhan-hoa]] (Individuation)
-- [[bieu-tuong]] (Symbol)
-- [[tu-tuong-huong-ngoai]] (Extravert)
-- [[tu-tuong-huong-noi]] (Introvert)
-- [[giai-ma-giac-mo]] (Dream interpretation)
+- [[concepts/vo-thuc]] (Unconscious)
+- [[concepts/nguyen-mau]] (Archetype)
+- [[concepts/ca-nhan-hoa]] (Individuation)
+- [[concepts/bieu-tuong]] (Symbol)
+- [[concepts/tu-tuong-huong-ngoai]] (Extravert)
+- [[concepts/tu-tuong-huong-noi]] (Introvert)
+- [[concepts/giai-ma-giac-mo]] (Dream interpretation)
 
 ## People
 
-- [[carl-jung]] — tác giả chính, viết chương về Vô thức
-- [[sigmund-freud]] — được nhắc đến trong bối cảnh so sánh về vô thức
-- [[marie-louise-von-franz]] — đồng tác giả, viết về quá trình cá nhân hóa
-- [[joseph-henderson]] — đồng tác giả, phân tích nguyên mẫu trong thần thoại
-- [[aniela-jaffe]] — đồng tác giả, phân tích biểu tượng trong nghệ thuật
-- [[jolande-jacobi]] — đồng tác giả, viết trường hợp phân tích giấc mơ
+- [[people/carl-jung]] — tác giả chính, viết chương về Vô thức
+- [[people/sigmund-freud]] — được nhắc đến trong bối cảnh so sánh về vô thức
+- [[people/marie-louise-von-franz]] — đồng tác giả, viết về quá trình cá nhân hóa
+- [[people/joseph-henderson]] — đồng tác giả, phân tích nguyên mẫu trong thần thoại
+- [[people/aniela-jaffe]] — đồng tác giả, phân tích biểu tượng trong nghệ thuật
+- [[people/jolande-jacobi]] — đồng tác giả, viết trường hợp phân tích giấc mơ
 
 ## Open Questions
 

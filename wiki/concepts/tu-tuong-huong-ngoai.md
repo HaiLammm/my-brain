@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Tư tưởng hướng ngoại"
+title: Tư tưởng hướng ngoại
 slug: tu-tuong-huong-ngoai
 date_added: 2026-05-11
 confidence: high
@@ -8,11 +8,12 @@ tags:
   - jungian-psychology
   - personality-type
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
-related_concepts: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/man-and-his-symbols
+related_concepts:
+  - concepts/vo-thuc
 ---
 
 ## Definition
@@ -26,11 +27,11 @@ Tư tưởng hướng ngoại (Extravert/Introversion) là một trong những t
 
 ## Key Sources
 
-- [[man-and-his-symbols]]
+- [[sources/man-and-his-symbols]]
 
 ## Related Concepts
 
-- [[vo-thuc]] — Jung phân biệt cách người hướng ngoại và hướng nội tiếp cận vô thức
+- [[concepts/vo-thuc]] — Jung phân biệt cách người hướng ngoại và hướng nội tiếp cận vô thức
 
 ## Notes
 

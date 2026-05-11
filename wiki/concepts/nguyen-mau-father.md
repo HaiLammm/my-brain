@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Nguyên mẫu Father (Người Cha)"
+title: Nguyên mẫu Father (Người Cha)
 slug: nguyen-mau-father
 date_added: 2026-05-11
 confidence: high
@@ -8,11 +8,15 @@ tags:
   - jungian-psychology
   - archetype
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
-related_concepts: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/man-and-his-symbols
+  - concepts/nguyen-mau
+related_concepts:
+  - concepts/nguyen-mau
+  - concepts/vo-thuc
+  - concepts/ca-nhan-hoa
 ---
 
 ## Definition
@@ -35,14 +39,14 @@ Nguyên mẫu Father có hai mặt:
 
 ## Key Sources
 
-- [[man-and-his-symbols]] — nguồn chính về nguyên mẫu Father
-- [[nguyen-mau]] — bối cảnh các nguyên mẫu cốt lõi
+- [[sources/man-and-his-symbols]] — nguồn chính về nguyên mẫu Father
+- [[concepts/nguyen-mau]] — bối cảnh các nguyên mẫu cốt lõi
 
 ## Related Concepts
 
-- [[nguyen-mau]] — các nguyên mẫu trong vô thức tập thể
-- [[vo-thuc]] — nơi chứa nguyên mẫu Father
-- [[ca-nhan-hoa]] — quá trình đối diện và tích hợp nguyên mẫu
+- [[concepts/nguyen-mau]] — các nguyên mẫu trong vô thức tập thể
+- [[concepts/vo-thuc]] — nơi chứa nguyên mẫu Father
+- [[concepts/ca-nhan-hoa]] — quá trình đối diện và tích hợp nguyên mẫu
 
 ## Manifestations in Culture
 

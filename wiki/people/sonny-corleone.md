@@ -1,17 +1,17 @@
 ---
 type: person
-title: "Sonny Corleone"
+title: Sonny Corleone
 slug: sonny-corleone
 date_added: 2026-05-11
-affiliation: ""
+affiliation: []
 tags:
   - mafia
   - gia-dinh-corleone
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/bo-gia
 ---
 
 ## Overview
@@ -20,7 +20,7 @@ Santino "Sonny" Corleone là đứa con cả của Vito Corleone. Anh có thể 
 
 ## Key sources
 
-- [[bo-gia]]
+- [[sources/bo-gia]]
 
 ## Notes
 

@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Vô thức"
+title: Vô thức
 slug: vo-thuc
 date_added: 2026-05-11
 confidence: high
@@ -8,11 +8,14 @@ tags:
   - jungian-psychology
   - unconscious
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
-related_concepts: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/man-and-his-symbols
+related_concepts:
+  - concepts/nguyen-mau
+  - concepts/ca-nhan-hoa
+  - concepts/bieu-tuong
 ---
 
 ## Definition
@@ -26,13 +29,13 @@ Vô thức (Unconscious) trong tâm lý học Jung là một thế giới tâm l
 
 ## Key Sources
 
-- [[man-and-his-symbols]] — nguồn chính về vô thức trong tâm lý học Jung
+- [[sources/man-and-his-symbols]] — nguồn chính về vô thức trong tâm lý học Jung
 
 ## Related Concepts
 
-- [[nguyen-mau]] — các mô hình bẩm sinh trong vô thức tập thể
-- [[ca-nhan-hoa]] — quá trình hòa giải giữa ý thức và vô thức
-- [[bieu-tuong]] — ngôn ngữ của vô thức
+- [[concepts/nguyen-mau]] — các mô hình bẩm sinh trong vô thức tập thể
+- [[concepts/ca-nhan-hoa]] — quá trình hòa giải giữa ý thức và vô thức
+- [[concepts/bieu-tuong]] — ngôn ngữ của vô thức
 
 ## Notes
 

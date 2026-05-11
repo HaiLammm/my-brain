@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Nguyên mẫu"
+title: Nguyên mẫu
 slug: nguyen-mau
 date_added: 2026-05-11
 confidence: high
@@ -8,11 +8,14 @@ tags:
   - jungian-psychology
   - archetype
 id: TODO
-created: TODO
-updated: TODO
-key_sources: TODO
-related_concepts: TODO
-
+created: 2026-05-11
+updated: 2026-05-11
+key_sources:
+  - sources/man-and-his-symbols
+related_concepts:
+  - concepts/vo-thuc
+  - concepts/bieu-tuong
+  - concepts/ca-nhan-hoa
 ---
 
 ## Definition
@@ -29,13 +32,13 @@ Nguyên mẫu (Archetype) là những mô hình tâm lý bẩm sinh, có mặt t
 
 ## Key Sources
 
-- [[man-and-his-symbols]] — nguồn chính về nguyên mẫu
+- [[sources/man-and-his-symbols]] — nguồn chính về nguyên mẫu
 
 ## Related Concepts
 
-- [[vo-thuc]] — vô thức tập thể là nơi chứa các nguyên mẫu
-- [[bieu-tuong]] — biểu tượng là cách nguyên mẫu biểu lộ
-- [[ca-nhan-hoa]] — quá trình cá nhân hóa liên quan đến việc đối diện với các nguyên mẫu
+- [[concepts/vo-thuc]] — vô thức tập thể là nơi chứa các nguyên mẫu
+- [[concepts/bieu-tuong]] — biểu tượng là cách nguyên mẫu biểu lộ
+- [[concepts/ca-nhan-hoa]] — quá trình cá nhân hóa liên quan đến việc đối diện với các nguyên mẫu
 
 ## Notes
 
