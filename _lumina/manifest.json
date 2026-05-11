@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 4,
+  "packageVersion": "1.5.0",
+  "locale": "vi",
+  "installedAt": "2026-05-11T13:19:51.712Z",
+  "updatedAt": "2026-05-11T13:19:51.712Z",
+  "packs": {
+    "core": {
+      "version": "1.5.0",
+      "source": "built-in"
+    },
+    "research": {
+      "version": "1.5.0",
+      "source": "built-in"
+    },
+    "reading": {
+      "version": "1.5.0",
+      "source": "built-in"
+    },
+    "learning": {
+      "version": "1.5.0",
+      "source": "built-in"
+    }
+  },
+  "ideTargets": [
+    "claude_code",
+    "codex",
+    "qwen"
+  ],
+  "symlinkStrategies": {
+    "lumi-init": "symlink",
+    "lumi-ingest": "symlink",
+    "lumi-ask": "symlink",
+    "lumi-edit": "symlink",
+    "lumi-check": "symlink",
+    "lumi-reset": "symlink",
+    "lumi-verify": "symlink",
+    "lumi-migrate-legacy": "symlink",
+    "lumi-help": "symlink",
+    "lumi-research-discover": "symlink",
+    "lumi-research-survey": "symlink",
+    "lumi-research-prefill": "symlink",
+    "lumi-research-setup": "symlink",
+    "lumi-research-topic": "symlink",
+    "lumi-research-watchlist": "symlink",
+    "lumi-reading-chapter-ingest": "symlink",
+    "lumi-reading-character-track": "symlink",
+    "lumi-reading-theme-map": "symlink",
+    "lumi-reading-plot-recap": "symlink",
+    "lumi-learning-reflect": "symlink"
+  },
+  "resolvedPaths": {
+    "projectRoot": "/home/luonghailam/Projects/my-brain",
+    "wiki": "/home/luonghailam/Projects/my-brain/wiki",
+    "raw": "/home/luonghailam/Projects/my-brain/raw",
+    "agents": "/home/luonghailam/Projects/my-brain/.agents",
+    "lumina": "/home/luonghailam/Projects/my-brain/_lumina"
+  }
+}

@@ -1,0 +1,37 @@
+---
+type: concept
+title: "Tư tưởng hướng ngoại"
+slug: tu-tuong-huong-ngoai
+date_added: 2026-05-11
+confidence: high
+tags:
+  - jungian-psychology
+  - personality-type
+id: TODO
+created: TODO
+updated: TODO
+key_sources: TODO
+related_concepts: TODO
+
+---
+
+## Definition
+
+Tư tưởng hướng ngoại (Extravert/Introversion) là một trong những thuật ngữ do Jung đặt ra, sau đó được nhiều người khác mượn và đôi khi dùng sai nghĩa. Người hướng ngoại có xu hướng chú ý đến thế giới bên ngoài, trong khi người hướng nội chú ý đến thế giới nội tâm.
+
+## Variants
+
+- **Người hướng ngoại** (Extravert): chú ý đến thế giới bên ngoài, các mối quan hệ và sự kiện
+- **Người hướng nội** (Introvert): chú ý đến thế giới bên trong, suy nghĩ và cảm xúc riêng
+
+## Key Sources
+
+- [[man-and-his-symbols]]
+
+## Related Concepts
+
+- [[vo-thuc]] — Jung phân biệt cách người hướng ngoại và hướng nội tiếp cận vô thức
+
+## Notes
+
+Đây là một trong những khái niệm phổ biến nhất của Jung đã được sử dụng rộng rãi trong văn hóa đại chúng, nhưng thường bị đơn giản hóa hoặc hiểu sai.

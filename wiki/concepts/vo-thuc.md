@@ -1,0 +1,39 @@
+---
+type: concept
+title: "Vô thức"
+slug: vo-thuc
+date_added: 2026-05-11
+confidence: high
+tags:
+  - jungian-psychology
+  - unconscious
+id: TODO
+created: TODO
+updated: TODO
+key_sources: TODO
+related_concepts: TODO
+
+---
+
+## Definition
+
+Vô thức (Unconscious) trong tâm lý học Jung là một thế giới tâm lý rộng lớn không thuộc ý thức, bao gồm cả vô thức cá nhân (những ý tưởng, ký ức bị đè nén) và vô thức tập thể (những mô hình tâm lý chung của nhân loại). Theo Jung, vô thức không phải là nơi chứa đựng những khao khát bị đè nén đơn thuần, mà là một thế giới cũng thực và quan trọng như thế giới ý thức.
+
+## Variants
+
+- **Vô thức cá nhân** (Personal Unconscious): chứa những trải nghiệm bị lãng quên hoặc đè nén
+- **Vô thức tập thể** (Collective Unconscious): chứa các nguyên mẫu và mô hình tâm lý chung của nhân loại
+
+## Key Sources
+
+- [[man-and-his-symbols]] — nguồn chính về vô thức trong tâm lý học Jung
+
+## Related Concepts
+
+- [[nguyen-mau]] — các mô hình bẩm sinh trong vô thức tập thể
+- [[ca-nhan-hoa]] — quá trình hòa giải giữa ý thức và vô thức
+- [[bieu-tuong]] — ngôn ngữ của vô thức
+
+## Notes
+
+Jung khác biệt với Freud ở chỗ ông không xem vô thức chỉ là nơi chứa các xung động bị dồn nén, mà là một phần đối xứng, bổ sung của tâm trí con người.

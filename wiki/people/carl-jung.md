@@ -1,0 +1,35 @@
+---
+type: person
+title: "Carl Gustav Jung"
+slug: carl-jung
+date_added: 2026-05-11
+affiliation: "Zurich, Switzerland"
+tags:
+  - jungian-psychology
+  - psychiatrist
+id: TODO
+created: TODO
+updated: TODO
+key_sources: TODO
+
+---
+
+## Overview
+
+Carl Gustav Jung (1875-1961) là bác sĩ tâm thần và nhà tư tưởng người Thụy Sĩ, người sáng lập tâm lý học phân tích (Analytical Psychology). Ông là một trong những nhân vật có tầm ảnh hưởng nhất thế kỷ 20 trong lĩnh vực tâm lý học, nổi tiếng với các khái niệm về vô thức, nguyên mẫu, và quá trình cá nhân hóa.
+
+## Key Sources
+
+- [[man-and-his-symbols]] — tác phẩm cuối cùng, viết về Vô thức
+
+## Key Concepts
+
+- [[vo-thuc]] — khái niệm cốt lõi trong tâm lý học Jung
+- [[nguyen-mau]] — các mô hình tâm lý bẩm sinh
+- [[ca-nhan-hoa]] — quá trình phát triển tâm lý toàn vẹn
+- [[tu-tuong-huong-ngoai]] — extrovert (người hướng ngoại)
+- [[tu-tuong-huong-noi]] — introvert (người hướng nội)
+
+## Notes
+
+Jung từng là đồng nghiệp và học trò của Sigmund Freud trước khi phát triển trường phái riêng. Cuốn sách "Man and His Symbols" là di sản cuối cùng của ông, hoàn thành chỉ 10 ngày trước khi ông mất năm 1961.
