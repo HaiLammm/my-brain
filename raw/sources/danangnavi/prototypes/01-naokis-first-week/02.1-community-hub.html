@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DaNangNavi — Community</title>
+  <link rel="stylesheet" href="shared/design-tokens.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .page-container { max-width: 1280px; margin: 0 auto; padding: 0 24px 80px; }
+    .page-header { padding: 32px 0 24px; }
+    .page-header h1 { font-family: var(--font-headlines); font-size: 28px; font-weight: 700; color: var(--color-text); margin-bottom: 4px; }
+    .page-header p { font-size: 15px; color: var(--color-text-secondary); }
+    .community-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+
+    /* Groups */
+    .groups-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 32px; }
+    .group-card { display: flex; align-items: center; gap: 14px; padding: 16px; background: var(--color-surface); border-radius: var(--radius); box-shadow: var(--shadow-card); cursor: pointer; transition: box-shadow var(--transition-normal); }
+    .group-card:hover { box-shadow: var(--shadow-card-hover); }
+    .group-icon { font-size: 28px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: rgba(46,196,182,0.08); border-radius: var(--radius); flex-shrink: 0; }
+    .group-name { font-weight: 600; font-size: 15px; color: var(--color-text); }
+    .group-meta { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; }
+    .group-new { color: var(--color-accent); font-weight: 600; }
+
+    /* Activity banner */
+    .activity-banner { display: flex; gap: 24px; padding: 16px 20px; background: rgba(46,196,182,0.06); border-radius: var(--radius); margin-bottom: 32px; }
+    .activity-stat { font-size: 14px; color: var(--color-text-secondary); }
+    .activity-stat strong { color: var(--color-accent); font-size: 18px; }
+
+    /* Trending threads */
+    .section-title { font-family: var(--font-headlines); font-size: 20px; font-weight: 700; color: var(--color-text); margin-bottom: 16px; }
+    .thread-list { display: flex; flex-direction: column; gap: 12px; }
+    .thread-item { display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: var(--color-surface); border-radius: var(--radius); box-shadow: var(--shadow-card); cursor: pointer; transition: box-shadow var(--transition-normal); }
+    .thread-item:hover { box-shadow: var(--shadow-card-hover); }
+    .thread-avatar { width: 40px; height: 40px; border-radius: 50%; background: #D1D5DB; flex-shrink: 0; }
+    .thread-info { flex: 1; }
+    .thread-title { font-weight: 600; font-size: 15px; color: var(--color-text); margin-bottom: 4px; }
+    .thread-preview { font-size: 13px; color: var(--color-text-secondary); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+    .thread-stats { display: flex; gap: 12px; margin-top: 6px; font-size: 12px; color: var(--color-text-secondary); }
+    .thread-replies { color: var(--color-accent); font-weight: 600; }
+
+    /* Upcoming events */
+    .events-preview { display: flex; flex-direction: column; gap: 12px; }
+    .event-preview-card { display: flex; gap: 16px; padding: 16px; background: var(--color-surface); border-radius: var(--radius); box-shadow: var(--shadow-card); cursor: pointer; transition: box-shadow var(--transition-normal); }
+    .event-preview-card:hover { box-shadow: var(--shadow-card-hover); }
+    .event-date-badge { width: 56px; height: 56px; background: var(--color-secondary); border-radius: var(--radius); display: flex; flex-direction: column; align-items: center; justify-content: center; color: #FFF; flex-shrink: 0; }
+    .event-date-day { font-size: 20px; font-weight: 700; line-height: 1; }
+    .event-date-month { font-size: 10px; font-weight: 500; text-transform: uppercase; }
+    .event-info { flex: 1; }
+    .event-title { font-weight: 600; font-size: 15px; color: var(--color-text); margin-bottom: 4px; }
+    .event-meta { font-size: 12px; color: var(--color-text-secondary); }
+    .event-attendees { font-size: 12px; color: var(--color-accent); font-weight: 600; margin-top: 4px; }
+    .newcomer-tag { display: inline-block; font-size: 11px; font-weight: 600; color: var(--color-success); background: rgba(39,174,96,0.1); padding: 2px 8px; border-radius: var(--radius-full); margin-left: 6px; }
+
+    /* New post button */
+    .new-post-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--color-secondary); color: #FFF; font-family: var(--font-ui); font-size: 14px; font-weight: 700; border: none; border-radius: var(--radius-full); cursor: pointer; transition: opacity var(--transition-fast); margin-bottom: 24px; }
+    .new-post-btn:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <div id="nav-container"></div>
+  <div class="page-container">
+    <div class="page-header">
+      <h1>💬 Community</h1>
+      <p>Connect with Japanese expats in Da Nang</p>
+    </div>
+
+    <div class="activity-banner" id="activity-banner"></div>
+
+    <button class="new-post-btn">✏️ New Post</button>
+
+    <div class="community-layout">
+      <div>
+        <div class="section-title">Groups</div>
+        <div class="groups-grid" id="groups-grid"></div>
+
+        <div class="section-title">🔥 Trending Discussions</div>
+        <div class="thread-list" id="thread-list"></div>
+      </div>
+      <div>
+        <div class="section-title">📅 Upcoming Events</div>
+        <div class="events-preview" id="events-preview"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { renderTopNav } from './components/top-nav.js';
+    const res = await fetch('./data/demo-data.json');
+    const data = await res.json();
+
+    renderTopNav(document.getElementById('nav-container'), { activePage: 'community' });
+
+    // Activity banner
+    document.getElementById('activity-banner').innerHTML = `
+      <div class="activity-stat"><strong>28</strong> new posts today</div>
+      <div class="activity-stat"><strong>3</strong> events this week</div>
+      <div class="activity-stat"><strong>156</strong> active members</div>
+    `;
+
+    // Groups
+    const groupsGrid = document.getElementById('groups-grid');
+    data.communityGroups.forEach(g => {
+      const card = document.createElement('div');
+      card.className = 'group-card';
+      card.innerHTML = `
+        <div class="group-icon">${g.icon}</div>
+        <div>
+          <div class="group-name">${g.name}</div>
+          <div class="group-meta">${g.memberCount} members · <span class="group-new">${g.newToday} new today</span></div>
+        </div>
+      `;
+      groupsGrid.appendChild(card);
+    });
+
+    // Trending threads
+    const threadList = document.getElementById('thread-list');
+    const allThreads = [...data.communityThreads, {
+      id: 'thread-004', title: 'Best weekend spots for solo expats?', author: 'senpai-003',
+      replyCount: 12, preview: 'Been here a month. Weekends are lonely. Any recommendations?', postedAgo: '3 hours'
+    }];
+    allThreads.forEach(t => {
+      const senpai = data.senpai.find(s => s.id === t.author) || data.senpai[0];
+      const item = document.createElement('div');
+      item.className = 'thread-item';
+      item.innerHTML = `
+        <div class="thread-avatar"></div>
+        <div class="thread-info">
+          <div class="thread-title">${t.title}</div>
+          <div class="thread-preview">${t.preview}</div>
+          <div class="thread-stats">
+            <span class="thread-replies">💬 ${t.replyCount} replies</span>
+            <span>${t.postedAgo} ago</span>
+            <span>by ${senpai.name}</span>
+          </div>
+        </div>
+      `;
+      item.addEventListener('click', () => console.log('[Community] Thread clicked:', t.id));
+      threadList.appendChild(item);
+    });
+
+    // Events preview
+    const eventsPreview = document.getElementById('events-preview');
+    data.events.forEach(e => {
+      const host = data.senpai.find(s => s.id === e.host) || data.senpai[0];
+      const dayMatch = e.date.match(/(\d+)/);
+      const day = dayMatch ? dayMatch[1] : '?';
+      const card = document.createElement('div');
+      card.className = 'event-preview-card';
+      card.innerHTML = `
+        <div class="event-date-badge">
+          <div class="event-date-day">${day}</div>
+          <div class="event-date-month">APR</div>
+        </div>
+        <div class="event-info">
+          <div class="event-title">${e.title}${e.newcomerWelcome ? '<span class="newcomer-tag">Newcomers Welcome</span>' : ''}</div>
+          <div class="event-meta">📍 ${e.location} · ${e.time}</div>
+          <div class="event-attendees">👥 ${e.attendees} attending · Hosted by ${host.name}</div>
+        </div>
+      `;
+      card.addEventListener('click', () => console.log('[Community] Event clicked:', e.id));
+      eventsPreview.appendChild(card);
+    });
+
+    console.log('[CommunityHub] Loaded');
+  </script>
+</body>
+</html>

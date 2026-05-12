@@ -1,0 +1,2732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Translation Tools — DaNangNavi</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ========================================
+       DESIGN TOKENS (CSS Custom Properties)
+       ======================================== */
+    :root {
+      /* Brand Colors */
+      --color-primary: #1B2A4A;
+      --color-secondary: #FF6B4A;
+      --color-accent: #2EC4B6;
+      
+      /* Surface Colors */
+      --color-bg: #FAFAF8;
+      --color-surface: #FFFFFF;
+      --color-surface-hover: #F5F5F3;
+      
+      /* Text Colors */
+      --color-text-primary: #0D1B2A;
+      --color-text-secondary: #6B7280;
+      --color-text-inverse: #FFFFFF;
+      --color-text-link: #2EC4B6;
+      
+      /* Status Colors */
+      --color-success: #27AE60;
+      --color-warning: #F2994A;
+      --color-error: #EB5757;
+      --color-info: #2EC4B6;
+      
+      /* Translation Bubble Colors */
+      --color-bubble-jp: #EEF0F6;
+      --color-bubble-vn: #E8FAF8;
+      
+      /* Typography */
+      --font-family-primary: 'Noto Sans JP', sans-serif;
+      --font-family-ui: 'Inter', 'Noto Sans', sans-serif;
+      
+      /* Type Scale */
+      --text-h1: 2rem;
+      --text-h2: 1.5rem;
+      --text-h3: 1.25rem;
+      --text-body: 1rem;
+      --text-caption: 0.875rem;
+      --text-small: 0.75rem;
+      
+      /* Spacing */
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 12px;
+      --space-lg: 16px;
+      --space-xl: 24px;
+      --space-2xl: 32px;
+      --space-3xl: 48px;
+      
+      /* Border Radius */
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --radius-full: 9999px;
+      
+      /* Shadows */
+      --shadow-card: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-card-hover: 0 4px 16px rgba(0,0,0,0.12);
+      --shadow-modal: 0 8px 32px rgba(0,0,0,0.2);
+      --shadow-sticky: 0 2px 8px rgba(0,0,0,0.06);
+      
+      /* Animation */
+      --duration-fast: 150ms;
+      --duration-normal: 300ms;
+      --duration-slow: 500ms;
+      --easing-default: ease-in-out;
+      
+      /* Layout */
+      --bottom-nav-height: 64px;
+      --mic-button-size: 80px;
+      --top-bar-height: 56px;
+      --mode-selector-height: 48px;
+    }
+    
+    /* ========================================
+       CSS RESET & BASE STYLES
+       ======================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+    }
+    
+    body {
+      font-family: var(--font-family-primary);
+      font-size: var(--text-body);
+      line-height: 1.6;
+      color: var(--color-text-primary);
+      background-color: var(--color-bg);
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    a {
+      color: var(--color-text-link);
+      text-decoration: none;
+      transition: color var(--duration-fast) var(--easing-default);
+    }
+    
+    a:hover {
+      color: var(--color-primary);
+    }
+    
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+    
+    /* ========================================
+       PAGE CONTAINER
+       ======================================== */
+    .page-container {
+      max-width: 640px;
+      margin: 0 auto;
+      background-color: var(--color-surface);
+      min-height: 100vh;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    @media (min-width: 768px) {
+      .page-container {
+        max-width: 720px;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .page-container {
+        max-width: 800px;
+        box-shadow: var(--shadow-card);
+      }
+    }
+    
+    /* ========================================
+       TOP APP BAR
+       ======================================== */
+    .top-bar {
+      height: var(--top-bar-height);
+      background-color: var(--color-primary);
+      color: var(--color-text-inverse);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 var(--space-lg);
+      flex-shrink: 0;
+    }
+    
+    .top-bar__back {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      color: var(--color-text-inverse);
+      border-radius: var(--radius-full);
+      transition: background-color var(--duration-fast);
+    }
+    
+    .top-bar__back:hover {
+      background-color: rgba(255,255,255,0.1);
+      color: var(--color-text-inverse);
+    }
+    
+    .top-bar__title {
+      font-size: var(--text-body);
+      font-weight: 600;
+    }
+    
+    .top-bar__action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      color: var(--color-text-inverse);
+      border-radius: var(--radius-full);
+      transition: background-color var(--duration-fast);
+    }
+    
+    .top-bar__action:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+    
+    /* ========================================
+       S1: MODE SELECTOR (SEGMENTED CONTROL)
+       ======================================== */
+    .mode-selector {
+      height: var(--mode-selector-height);
+      background-color: var(--color-surface);
+      border-bottom: 1px solid #E5E7EB;
+      display: flex;
+      align-items: center;
+      padding: var(--space-sm) var(--space-lg);
+      flex-shrink: 0;
+    }
+    
+    .mode-selector__tabs {
+      display: flex;
+      width: 100%;
+      background-color: var(--color-bg);
+      border-radius: var(--radius-sm);
+      padding: var(--space-xs);
+    }
+    
+    .mode-selector__tab {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-xs);
+      padding: var(--space-sm) var(--space-md);
+      font-size: var(--text-small);
+      font-weight: 500;
+      color: var(--color-primary);
+      border-radius: var(--radius-sm);
+      transition: all var(--duration-fast);
+      white-space: nowrap;
+    }
+    
+    .mode-selector__tab:hover {
+      background-color: rgba(27, 42, 74, 0.05);
+    }
+    
+    .mode-selector__tab--active {
+      background-color: var(--color-primary);
+      color: var(--color-text-inverse);
+    }
+    
+    .mode-selector__tab--active:hover {
+      background-color: var(--color-primary);
+    }
+    
+    .mode-selector__icon {
+      font-size: var(--text-caption);
+    }
+    
+    /* ========================================
+       S2: VOICE TRANSLATION PANEL
+       ======================================== */
+    .translation-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: #F9FAFB;
+      overflow: hidden;
+    }
+    
+    /* Language Pair Indicator */
+    .language-pair {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-md);
+      padding: var(--space-md) var(--space-lg);
+      background-color: var(--color-surface);
+      border-bottom: 1px solid #E5E7EB;
+      flex-shrink: 0;
+    }
+    
+    .language-pair__lang {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      font-size: var(--text-caption);
+      font-weight: 500;
+      color: var(--color-primary);
+    }
+    
+    .language-pair__flag {
+      font-size: var(--text-body);
+    }
+    
+    .language-pair__swap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-full);
+      background-color: var(--color-bg);
+      color: var(--color-text-secondary);
+      transition: all var(--duration-fast);
+    }
+    
+    .language-pair__swap:hover {
+      background-color: var(--color-accent);
+      color: var(--color-text-inverse);
+    }
+    
+    /* Conversation Area */
+    .conversation-area {
+      flex: 1;
+      overflow-y: auto;
+      padding: var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+    
+    .conversation-pair {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+    
+    /* Japanese Input Bubble (Left) */
+    .bubble {
+      max-width: 85%;
+      padding: var(--space-md) var(--space-lg);
+      border-radius: var(--radius-lg);
+      font-size: var(--text-body);
+      line-height: 1.5;
+      position: relative;
+    }
+    
+    .bubble--jp {
+      align-self: flex-start;
+      background-color: var(--color-bubble-jp);
+      border-bottom-left-radius: var(--space-xs);
+    }
+    
+    .bubble__label {
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .bubble__text {
+      color: var(--color-text-primary);
+    }
+    
+    .bubble__edit {
+      position: absolute;
+      top: var(--space-sm);
+      right: var(--space-sm);
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-text-secondary);
+      opacity: 0;
+      transition: opacity var(--duration-fast);
+    }
+    
+    .bubble:hover .bubble__edit {
+      opacity: 1;
+    }
+    
+    /* Vietnamese Output Bubble (Right) */
+    .bubble--vn {
+      align-self: flex-end;
+      background-color: var(--color-bubble-vn);
+      border-bottom-right-radius: var(--space-xs);
+    }
+    
+    .bubble--vn .bubble__text {
+      font-weight: 500;
+    }
+    
+    .bubble__pronunciation {
+      font-size: var(--text-caption);
+      color: var(--color-primary);
+      background-color: #F0F4FF;
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--space-xs);
+      margin-top: var(--space-sm);
+      display: inline-block;
+    }
+    
+    .bubble__pronunciation::before {
+      content: '📖 ';
+    }
+    
+    .bubble__actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      margin-top: var(--space-sm);
+    }
+    
+    .bubble__play {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background-color: var(--color-accent);
+      color: var(--color-text-inverse);
+      border-radius: var(--radius-full);
+      transition: transform var(--duration-fast);
+    }
+    
+    .bubble__play:hover {
+      transform: scale(1.1);
+    }
+    
+    .bubble__play--playing {
+      animation: pulse-speaker 1s infinite;
+    }
+    
+    @keyframes pulse-speaker {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+    
+    .bubble__show-staff {
+      font-size: var(--text-caption);
+      color: var(--color-secondary);
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    
+    .bubble__show-staff:hover {
+      color: var(--color-primary);
+    }
+    
+    /* Empty State */
+    .conversation-empty {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-md);
+      color: var(--color-text-secondary);
+      text-align: center;
+      padding: var(--space-xl);
+    }
+    
+    .conversation-empty__icon {
+      font-size: 48px;
+      opacity: 0.6;
+    }
+    
+    .conversation-empty__text {
+      font-size: var(--text-caption);
+    }
+    
+    /* ========================================
+       S3: QUICK PHRASES
+       ======================================== */
+    .quick-phrases {
+      padding: var(--space-md) var(--space-lg);
+      background-color: var(--color-surface);
+      border-top: 1px solid #E5E7EB;
+      flex-shrink: 0;
+    }
+    
+    .quick-phrases__label {
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-sm);
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    
+    .quick-phrases__scroll {
+      display: flex;
+      gap: var(--space-sm);
+      overflow-x: auto;
+      padding-bottom: var(--space-sm);
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    
+    .quick-phrases__scroll::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .phrase-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: var(--space-sm) var(--space-md);
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-primary);
+      border-radius: var(--radius-full);
+      font-size: var(--text-caption);
+      color: var(--color-primary);
+      font-weight: 500;
+      white-space: nowrap;
+      transition: all var(--duration-fast);
+      cursor: pointer;
+    }
+    
+    .phrase-chip__icon {
+      font-size: var(--text-body);
+    }
+    
+    .phrase-chip:hover {
+      background-color: var(--color-primary);
+      color: var(--color-text-inverse);
+    }
+    
+    .phrase-chip--positive {
+      border-color: var(--color-secondary);
+      color: var(--color-secondary);
+    }
+    
+    .phrase-chip--positive:hover {
+      background-color: var(--color-secondary);
+      color: var(--color-text-inverse);
+    }
+    
+    .phrase-chip--more {
+      border-style: dashed;
+      border-color: var(--color-text-secondary);
+      color: var(--color-text-secondary);
+    }
+    
+    .phrase-chip--more:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+      background-color: transparent;
+    }
+    
+    .phrase-chip--active {
+      background-color: var(--color-secondary);
+      border-color: var(--color-secondary);
+      color: var(--color-text-inverse);
+    }
+    
+    /* ========================================
+       S2: MIC BUTTON AREA
+       ======================================== */
+    .mic-area {
+      padding: var(--space-lg) var(--space-lg) var(--space-xl);
+      background-color: var(--color-surface);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-md);
+      flex-shrink: 0;
+    }
+    
+    .mic-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-xl);
+    }
+    
+    /* Camera Button */
+    .camera-btn {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-md);
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-primary);
+      border-radius: var(--radius-full);
+      font-size: var(--text-caption);
+      color: var(--color-primary);
+      font-weight: 500;
+      transition: all var(--duration-fast);
+    }
+    
+    .camera-btn:hover {
+      background-color: var(--color-primary);
+      color: var(--color-text-inverse);
+    }
+    
+    /* Main Mic Button */
+    .mic-btn {
+      position: relative;
+      width: var(--mic-button-size);
+      height: var(--mic-button-size);
+      border-radius: var(--radius-full);
+      background: linear-gradient(135deg, var(--color-secondary), #e55a3a);
+      color: var(--color-text-inverse);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(255, 107, 74, 0.4);
+      transition: transform var(--duration-fast), box-shadow var(--duration-fast);
+    }
+    
+    .mic-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255, 107, 74, 0.5);
+    }
+    
+    .mic-btn:active {
+      transform: scale(0.95);
+    }
+    
+    .mic-btn__icon {
+      width: 32px;
+      height: 32px;
+    }
+    
+    /* Listening State */
+    .mic-btn--listening {
+      animation: pulse-mic 1s infinite;
+    }
+    
+    .mic-btn--listening::before {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border-radius: var(--radius-full);
+      border: 3px solid var(--color-secondary);
+      animation: pulse-ring 1s infinite;
+    }
+    
+    @keyframes pulse-mic {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+    
+    @keyframes pulse-ring {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(1.3); opacity: 0; }
+    }
+    
+    .mic-status {
+      font-size: var(--text-caption);
+      color: var(--color-text-secondary);
+      height: 20px;
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    
+    .mic-status--listening {
+      color: var(--color-secondary);
+      font-weight: 500;
+    }
+    
+    .mic-status__dots {
+      display: flex;
+      gap: 2px;
+    }
+    
+    .mic-status__dot {
+      width: 4px;
+      height: 4px;
+      background-color: var(--color-secondary);
+      border-radius: var(--radius-full);
+      animation: dot-pulse 1.4s infinite;
+    }
+    
+    .mic-status__dot:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    
+    .mic-status__dot:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+    
+    @keyframes dot-pulse {
+      0%, 80%, 100% { transform: scale(0.8); opacity: 0.5; }
+      40% { transform: scale(1.2); opacity: 1; }
+    }
+    
+    /* Placeholder for other mic button */
+    .mic-placeholder {
+      width: 80px;
+    }
+    
+    /* ========================================
+       S4: VISUAL MENU HELPER (CAMERA OVERLAY)
+       ======================================== */
+    .camera-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.95);
+      z-index: 2000;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--duration-normal), visibility var(--duration-normal);
+    }
+    
+    .camera-overlay--active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .camera-header {
+      height: var(--top-bar-height);
+      background-color: rgba(27, 42, 74, 0.9);
+      color: var(--color-text-inverse);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 var(--space-lg);
+      flex-shrink: 0;
+    }
+    
+    .camera-header__close {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      color: var(--color-text-inverse);
+    }
+    
+    .camera-header__title {
+      font-size: var(--text-body);
+      font-weight: 600;
+    }
+    
+    .camera-viewfinder {
+      flex: 1;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Simulated camera feed with menu image */
+    .camera-feed {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=800&q=80');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.9);
+    }
+    
+    /* Detection overlays */
+    .detection-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    
+    .detection-box {
+      position: absolute;
+      background-color: rgba(46, 196, 182, 0.3);
+      border: 2px solid var(--color-accent);
+      border-radius: var(--space-xs);
+      pointer-events: auto;
+      cursor: pointer;
+    }
+    
+    .detection-label {
+      position: absolute;
+      bottom: calc(100% + 4px);
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(27, 42, 74, 0.85);
+      color: var(--color-text-inverse);
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--space-xs);
+      font-size: var(--text-small);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    
+    .camera-instructions {
+      position: absolute;
+      top: var(--space-xl);
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: var(--color-text-inverse);
+      padding: var(--space-sm) var(--space-lg);
+      border-radius: var(--radius-full);
+      font-size: var(--text-caption);
+      text-align: center;
+    }
+    
+    .camera-capture-btn {
+      position: absolute;
+      bottom: var(--space-2xl);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 72px;
+      height: 72px;
+      border-radius: var(--radius-full);
+      background-color: var(--color-secondary);
+      color: var(--color-text-inverse);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(255, 107, 74, 0.5);
+      transition: transform var(--duration-fast);
+    }
+    
+    .camera-capture-btn:hover {
+      transform: translateX(-50%) scale(1.08);
+    }
+    
+    /* ========================================
+       SHOW TO STAFF (FULL SCREEN)
+       ======================================== */
+    .staff-display {
+      position: fixed;
+      inset: 0;
+      background-color: var(--color-surface);
+      z-index: 2000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--duration-normal), visibility var(--duration-normal);
+    }
+    
+    .staff-display--active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .staff-display__back {
+      position: absolute;
+      top: var(--space-lg);
+      left: var(--space-lg);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      font-size: var(--text-caption);
+      color: var(--color-text-secondary);
+      padding: var(--space-sm) var(--space-md);
+    }
+    
+    .staff-display__text {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--color-primary);
+      text-align: center;
+      padding: var(--space-xl);
+      line-height: 1.4;
+    }
+    
+    .staff-display__pronunciation {
+      font-size: var(--text-h2);
+      color: var(--color-text-secondary);
+      font-weight: 400;
+      margin-top: var(--space-lg);
+    }
+    
+    /* ========================================
+       TEXT INPUT PANEL
+       ======================================== */
+    .text-panel {
+      display: none;
+      flex: 1;
+      flex-direction: column;
+      background-color: #F9FAFB;
+    }
+    
+    .text-panel--active {
+      display: flex;
+    }
+    
+    .text-input-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: var(--space-lg);
+    }
+    
+    .text-input-box {
+      background-color: var(--color-surface);
+      border: 1px solid #E5E7EB;
+      border-radius: var(--radius-md);
+      padding: var(--space-md);
+      margin-bottom: var(--space-md);
+    }
+    
+    .text-input-box__label {
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-sm);
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    
+    .text-input-box__textarea {
+      width: 100%;
+      min-height: 80px;
+      border: none;
+      outline: none;
+      font-family: var(--font-family-primary);
+      font-size: var(--text-body);
+      resize: none;
+    }
+    
+    .text-output-box {
+      background-color: var(--color-bubble-vn);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+    }
+    
+    .text-output-box__label {
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-sm);
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    
+    .text-output-box__text {
+      font-size: var(--text-h3);
+      font-weight: 500;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .text-output-box__pronunciation {
+      font-size: var(--text-caption);
+      color: var(--color-text-secondary);
+      font-style: italic;
+    }
+    
+    .text-translate-btn {
+      margin-top: var(--space-lg);
+      padding: var(--space-md) var(--space-xl);
+      background-color: var(--color-secondary);
+      color: var(--color-text-inverse);
+      border-radius: var(--radius-full);
+      font-size: var(--text-body);
+      font-weight: 600;
+      align-self: center;
+      transition: opacity var(--duration-fast);
+    }
+    
+    .text-translate-btn:hover {
+      opacity: 0.9;
+    }
+    
+    /* ========================================
+       PHRASEBOOK PANEL
+       ======================================== */
+    .phrasebook-panel {
+      display: none;
+      flex: 1;
+      flex-direction: column;
+      background-color: #F9FAFB;
+      overflow: hidden;
+    }
+    
+    .phrasebook-panel--active {
+      display: flex;
+    }
+    
+    .phrasebook-categories {
+      display: flex;
+      gap: var(--space-sm);
+      padding: var(--space-lg);
+      overflow-x: auto;
+      flex-shrink: 0;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .phrasebook-categories::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .category-chip {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-md);
+      background-color: var(--color-surface);
+      border: 1px solid #E5E7EB;
+      border-radius: var(--radius-full);
+      font-size: var(--text-caption);
+      color: var(--color-text-primary);
+      font-weight: 500;
+      white-space: nowrap;
+      transition: all var(--duration-fast);
+    }
+    
+    .category-chip:hover {
+      border-color: var(--color-accent);
+    }
+    
+    .category-chip--active {
+      background-color: var(--color-accent);
+      border-color: var(--color-accent);
+      color: var(--color-text-inverse);
+    }
+    
+    .category-chip__count {
+      font-size: var(--text-small);
+      opacity: 0.7;
+    }
+    
+    .phrasebook-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0 var(--space-lg) var(--space-lg);
+    }
+    
+    .phrasebook-header {
+      padding: var(--space-md) 0;
+      margin-bottom: var(--space-md);
+      border-bottom: 1px solid #E5E7EB;
+    }
+    
+    .phrasebook-header__title {
+      font-size: var(--text-body);
+      font-weight: 600;
+      color: var(--color-primary);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .phrasebook-header__desc {
+      font-size: var(--text-caption);
+      color: var(--color-text-secondary);
+    }
+    
+    .phrasebook-header__count {
+      font-size: var(--text-small);
+      color: var(--color-accent);
+      font-weight: 500;
+    }
+    
+    .phrase-item {
+      background-color: var(--color-surface);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin-bottom: var(--space-md);
+      box-shadow: var(--shadow-card);
+      cursor: pointer;
+      transition: box-shadow var(--duration-fast);
+      display: flex;
+      gap: var(--space-md);
+    }
+    
+    .phrase-item:hover {
+      box-shadow: var(--shadow-card-hover);
+    }
+    
+    .phrase-item__icon {
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, #E8FAF8, #EEF0F6);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+    }
+    
+    .phrase-item__content {
+      flex: 1;
+      min-width: 0;
+    }
+    
+    .phrase-item__situation {
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-xs);
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    
+    .phrase-item__situation-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 6px;
+      background-color: var(--color-accent);
+      color: var(--color-text-inverse);
+      border-radius: var(--radius-sm);
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    
+    .phrase-item__situation-badge--essential {
+      background-color: var(--color-secondary);
+    }
+    
+    .phrase-item__jp {
+      font-size: var(--text-body);
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .phrase-item__vn {
+      font-size: var(--text-body);
+      color: var(--color-accent);
+      font-weight: 600;
+      margin-bottom: var(--space-xs);
+    }
+    
+    .phrase-item__pronunciation {
+      font-size: var(--text-caption);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .phrase-item__katakana {
+      font-size: var(--text-small);
+      color: var(--color-primary);
+      background-color: var(--color-bg);
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--space-xs);
+      display: inline-block;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .phrase-item__tip {
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+      padding: var(--space-sm);
+      background-color: #FFF8E6;
+      border-left: 3px solid #F2994A;
+      border-radius: 0 var(--space-xs) var(--space-xs) 0;
+      margin-top: var(--space-sm);
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-xs);
+    }
+    
+    .phrase-item__tip-icon {
+      flex-shrink: 0;
+    }
+    
+    .phrase-item__actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      margin-top: var(--space-sm);
+    }
+    
+    .phrase-item__play {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-size: var(--text-small);
+      color: var(--color-accent);
+      font-weight: 500;
+      padding: var(--space-xs) var(--space-sm);
+      background-color: #E8FAF8;
+      border-radius: var(--radius-full);
+      transition: background-color var(--duration-fast);
+    }
+    
+    .phrase-item__play:hover {
+      background-color: var(--color-accent);
+      color: var(--color-text-inverse);
+    }
+    
+    .phrase-item__use {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-size: var(--text-small);
+      color: var(--color-secondary);
+      font-weight: 500;
+      padding: var(--space-xs) var(--space-sm);
+      background-color: #FFF0ED;
+      border-radius: var(--radius-full);
+      transition: background-color var(--duration-fast);
+    }
+    
+    .phrase-item__use:hover {
+      background-color: var(--color-secondary);
+      color: var(--color-text-inverse);
+    }
+    
+    /* ========================================
+       BOTTOM TAB NAVIGATION
+       ======================================== */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: var(--bottom-nav-height);
+      background-color: var(--color-surface);
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.06);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .bottom-nav__container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      max-width: 640px;
+      padding: 0 var(--space-sm);
+    }
+    
+    .bottom-nav__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-sm) var(--space-md);
+      color: var(--color-text-secondary);
+      font-size: var(--text-small);
+      font-weight: 500;
+      text-decoration: none;
+      transition: color var(--duration-fast) var(--easing-default);
+      min-width: 64px;
+    }
+    
+    .bottom-nav__item:hover {
+      color: var(--color-primary);
+    }
+    
+    .bottom-nav__item--active {
+      color: var(--color-secondary);
+    }
+    
+    .bottom-nav__icon {
+      width: 24px;
+      height: 24px;
+      margin-bottom: var(--space-xs);
+    }
+    
+    .bottom-nav__label {
+      line-height: 1;
+    }
+    
+    /* ========================================
+       RESPONSIVE - TABLET
+       ======================================== */
+    @media (min-width: 768px) {
+      .quick-phrases__scroll {
+        flex-wrap: wrap;
+      }
+      
+      .mic-area {
+        padding: var(--space-xl) var(--space-lg) var(--space-2xl);
+      }
+      
+      .conversation-area {
+        padding: var(--space-xl);
+      }
+    }
+    
+    /* ========================================
+       RESPONSIVE - DESKTOP
+       ======================================== */
+    @media (min-width: 1024px) {
+      .page-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      
+      .top-bar,
+      .mode-selector {
+        width: 100%;
+      }
+      
+      .translation-panel {
+        flex-direction: row;
+      }
+      
+      .conversation-area {
+        flex: 1;
+        border-right: 1px solid #E5E7EB;
+      }
+      
+      .desktop-right-panel {
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .quick-phrases {
+        border-top: none;
+        border-bottom: 1px solid #E5E7EB;
+      }
+      
+      .mic-area {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Page Container -->
+  <div class="page-container">
+    
+    <!-- Top App Bar -->
+    <header class="top-bar">
+      <a href="03.1-senpai-article-guide.html" class="top-bar__back" aria-label="Go back">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </a>
+      <h1 class="top-bar__title">翻訳ツール</h1>
+      <button class="top-bar__action" id="clear-history-btn" aria-label="Clear history">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="3 6 5 6 21 6"></polyline>
+          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+        </svg>
+      </button>
+    </header>
+    
+    <!-- S1: Mode Selector -->
+    <div class="mode-selector">
+      <div class="mode-selector__tabs">
+        <button class="mode-selector__tab mode-selector__tab--active" data-mode="voice">
+          <span class="mode-selector__icon">🎤</span>
+          <span>音声翻訳</span>
+        </button>
+        <button class="mode-selector__tab" data-mode="text">
+          <span class="mode-selector__icon">✏️</span>
+          <span>テキスト</span>
+        </button>
+        <button class="mode-selector__tab" data-mode="phrasebook">
+          <span class="mode-selector__icon">📖</span>
+          <span>フレーズ集</span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- S2: Voice Translation Panel -->
+    <div class="translation-panel" id="voice-panel">
+      <!-- Language Pair Indicator -->
+      <div class="language-pair">
+        <span class="language-pair__lang">
+          <span class="language-pair__flag">🇯🇵</span>
+          <span id="source-lang">日本語</span>
+        </span>
+        <button class="language-pair__swap" id="swap-lang-btn" aria-label="Swap languages">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="17 1 21 5 17 9"></polyline>
+            <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+            <polyline points="7 23 3 19 7 15"></polyline>
+            <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+          </svg>
+        </button>
+        <span class="language-pair__lang">
+          <span class="language-pair__flag">🇻🇳</span>
+          <span id="target-lang">ベトナム語</span>
+        </span>
+      </div>
+      
+      <!-- Conversation Area -->
+      <div class="conversation-area" id="conversation-area">
+        <!-- Empty state - shown initially -->
+        <div class="conversation-empty" id="conversation-empty">
+          <span class="conversation-empty__icon">🎤</span>
+          <p class="conversation-empty__text">マイクボタンをタップして<br>話しかけてください</p>
+        </div>
+        
+        <!-- Conversation pairs will be added here by JS -->
+      </div>
+      
+      <!-- S3: Quick Phrases -->
+      <div class="quick-phrases">
+        <div class="quick-phrases__label">
+          <span>🍜</span>
+          <span>レストランでよく使うフレーズ</span>
+        </div>
+        <div class="quick-phrases__scroll" id="quick-phrases">
+          <!-- Phrase chips rendered by JS -->
+        </div>
+      </div>
+      
+      <!-- Mic Button Area -->
+      <div class="mic-area">
+        <div class="mic-buttons">
+          <button class="camera-btn" id="camera-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+              <circle cx="12" cy="13" r="4"></circle>
+            </svg>
+            <span>メニューを翻訳</span>
+          </button>
+          
+          <button class="mic-btn" id="mic-btn" aria-label="Start voice translation">
+            <svg class="mic-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="23"></line>
+              <line x1="8" y1="23" x2="16" y2="23"></line>
+            </svg>
+          </button>
+          
+          <div class="mic-placeholder"></div>
+        </div>
+        
+        <div class="mic-status" id="mic-status">
+          タップして話す
+        </div>
+      </div>
+    </div>
+    
+    <!-- Text Input Panel (hidden by default) -->
+    <div class="text-panel" id="text-panel">
+      <div class="language-pair">
+        <span class="language-pair__lang">
+          <span class="language-pair__flag">🇯🇵</span>
+          <span>日本語</span>
+        </span>
+        <button class="language-pair__swap" aria-label="Swap languages">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="17 1 21 5 17 9"></polyline>
+            <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+            <polyline points="7 23 3 19 7 15"></polyline>
+            <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+          </svg>
+        </button>
+        <span class="language-pair__lang">
+          <span class="language-pair__flag">🇻🇳</span>
+          <span>ベトナム語</span>
+        </span>
+      </div>
+      
+      <div class="text-input-area">
+        <div class="text-input-box">
+          <div class="text-input-box__label">
+            <span>🇯🇵</span>
+            <span>日本語を入力</span>
+          </div>
+          <textarea class="text-input-box__textarea" id="text-input" placeholder="翻訳したいテキストを入力..."></textarea>
+        </div>
+        
+        <div class="text-output-box" id="text-output-box" style="display: none;">
+          <div class="text-output-box__label">
+            <span>🇻🇳</span>
+            <span>ベトナム語</span>
+          </div>
+          <p class="text-output-box__text" id="text-output"></p>
+          <p class="text-output-box__pronunciation" id="text-pronunciation"></p>
+        </div>
+        
+        <button class="text-translate-btn" id="text-translate-btn">翻訳する</button>
+      </div>
+    </div>
+    
+    <!-- Phrasebook Panel (hidden by default) -->
+    <div class="phrasebook-panel" id="phrasebook-panel">
+      <div class="phrasebook-categories" id="phrasebook-categories">
+        <!-- Category chips rendered by JS -->
+      </div>
+      
+      <div class="phrasebook-list" id="phrasebook-list">
+        <!-- Phrase items rendered by JS -->
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- S4: Camera Overlay -->
+  <div class="camera-overlay" id="camera-overlay">
+    <header class="camera-header">
+      <button class="camera-header__close" id="camera-close-btn" aria-label="Close camera">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <h2 class="camera-header__title">メニュー翻訳</h2>
+      <div style="width: 40px;"></div>
+    </header>
+    
+    <div class="camera-viewfinder">
+      <div class="camera-feed"></div>
+      <div class="camera-instructions">メニューにカメラを向けてください</div>
+      
+      <!-- Simulated detection boxes -->
+      <div class="detection-overlay">
+        <div class="detection-box" style="left: 15%; top: 30%; width: 120px; height: 30px;">
+          <span class="detection-label">ブンチャー</span>
+        </div>
+        <div class="detection-box" style="left: 15%; top: 45%; width: 100px; height: 30px;">
+          <span class="detection-label">フォー</span>
+        </div>
+        <div class="detection-box" style="left: 15%; top: 60%; width: 140px; height: 30px;">
+          <span class="detection-label">バインミー</span>
+        </div>
+        <div class="detection-box" style="left: 60%; top: 35%; width: 80px; height: 25px;">
+          <span class="detection-label">¥320</span>
+        </div>
+        <div class="detection-box" style="left: 60%; top: 50%; width: 80px; height: 25px;">
+          <span class="detection-label">¥290</span>
+        </div>
+      </div>
+      
+      <button class="camera-capture-btn" id="camera-capture-btn" aria-label="Capture">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <circle cx="12" cy="12" r="6" fill="currentColor"></circle>
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Show to Staff Full Screen -->
+  <div class="staff-display" id="staff-display">
+    <button class="staff-display__back" id="staff-back-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+      戻る (Back)
+    </button>
+    <p class="staff-display__text" id="staff-text">
+      Không cay
+      <span class="staff-display__pronunciation" id="staff-pronunciation">カイコン</span>
+    </p>
+  </div>
+  
+  <!-- Bottom Tab Navigation -->
+  <nav class="bottom-nav" aria-label="Main navigation">
+    <div class="bottom-nav__container">
+      <a href="#" class="bottom-nav__item">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span class="bottom-nav__label">Home</span>
+      </a>
+      
+      <a href="03.1-senpai-article-guide.html" class="bottom-nav__item">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+        </svg>
+        <span class="bottom-nav__label">Guides</span>
+      </a>
+      
+      <a href="03.3-deals-coupons.html" class="bottom-nav__item">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+          <line x1="7" y1="7" x2="7.01" y2="7"/>
+        </svg>
+        <span class="bottom-nav__label">Deals</span>
+      </a>
+      
+      <a href="#" class="bottom-nav__item bottom-nav__item--active" aria-current="page">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 8l6 6"/>
+          <path d="M4 14l6-6 2-3"/>
+          <path d="M2 5h12"/>
+          <path d="M7 2h1"/>
+          <path d="M22 22l-5-10-5 10"/>
+          <path d="M14 18h6"/>
+        </svg>
+        <span class="bottom-nav__label">Translate</span>
+      </a>
+      
+      <a href="#" class="bottom-nav__item">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+        <span class="bottom-nav__label">Profile</span>
+      </a>
+    </div>
+  </nav>
+  
+  <!-- JavaScript -->
+  <script>
+    // Demo data - Enhanced with images, cultural tips, and katakana
+    const demoData = {
+      quickPhrases: [
+        { jp: "おすすめは？", vn: "Món nào ngon?", pronunciation: "Mon nao ngon?", katakana: "モン ナオ ゴン?", situation: "What do you recommend?", icon: "👨‍🍳" },
+        { jp: "辛くしないで", vn: "Không cay", pronunciation: "Khong kai", katakana: "コン カイ", situation: "Not spicy please", icon: "🌶️" },
+        { jp: "お会計", vn: "Tính tiền", pronunciation: "Tin tien", katakana: "ティン ティエン", situation: "Check please", icon: "💳" },
+        { jp: "これは何？", vn: "Cái này là gì?", pronunciation: "Kai nay la zi?", katakana: "カイ ナイ ラー ジー", situation: "What is this?", icon: "❓" },
+        { jp: "アレルギーがあります", vn: "Tôi bị dị ứng", pronunciation: "Toy bi zi ung", katakana: "トイ ビー ジー ウン", situation: "I have allergies", icon: "⚠️" },
+        { jp: "とても美味しい！", vn: "Ngon quá!", pronunciation: "Ngon kwa!", katakana: "ゴン クア!", situation: "Very delicious!", positive: true, icon: "😋" }
+      ],
+      phrasebookCategories: [
+        { id: "ordering", name: "🍜 Ordering Food", nameJp: "注文する", count: 12, description: "レストランで使える基本フレーズ" },
+        { id: "payment", name: "💰 Payment", nameJp: "お会計", count: 6, description: "支払い時に必要なフレーズ" },
+        { id: "directions", name: "🗺️ Directions", nameJp: "道を聞く", count: 8, description: "道案内・場所を尋ねる" },
+        { id: "emergency", name: "🆘 Emergency", nameJp: "緊急", count: 5, description: "緊急時・困った時に" },
+        { id: "compliments", name: "💬 Compliments", nameJp: "褒める", count: 4, description: "感謝や褒め言葉" },
+        { id: "shopping", name: "🛍️ Shopping", nameJp: "買い物", count: 8, description: "市場やお店で使える" },
+        { id: "transport", name: "🚕 Transport", nameJp: "交通", count: 7, description: "タクシー・バスで使える" },
+        { id: "hotel", name: "🏨 Hotel", nameJp: "ホテル", count: 6, description: "宿泊先で使える" },
+        { id: "greeting", name: "👋 Greetings", nameJp: "挨拶", count: 6, description: "基本的な挨拶" },
+        { id: "numbers", name: "🔢 Numbers", nameJp: "数字", count: 10, description: "数字の言い方" }
+      ],
+      phrases: {
+        ordering: [
+          { 
+            jp: "これをください", 
+            vn: "Cho tôi cái này", 
+            pronunciation: "Cho toy kai nay", 
+            katakana: "チョー トイ カイ ナイ",
+            situation: "I'd like this, please",
+            situationJp: "注文する時",
+            icon: "👆",
+            essential: true,
+            tip: "メニューを指差しながら言うと確実です",
+            tipIcon: "💡"
+          },
+          { 
+            jp: "おすすめは何ですか？", 
+            vn: "Món nào ngon nhất?", 
+            pronunciation: "Mon nao ngon nyat?", 
+            katakana: "モン ナオ ゴン ニャット?",
+            situation: "What do you recommend?",
+            situationJp: "おすすめを聞く",
+            icon: "👨‍🍳",
+            tip: "店員さんのおすすめは大体美味しいです！"
+          },
+          { 
+            jp: "辛さはどのくらい？", 
+            vn: "Cay không?", 
+            pronunciation: "Kai khong?", 
+            katakana: "カイ コン?",
+            situation: "Is it spicy?",
+            situationJp: "辛さを確認",
+            icon: "🌶️",
+            tip: "ベトナム料理は見た目より辛いことが多いです"
+          },
+          { 
+            jp: "辛くしないで", 
+            vn: "Không cay", 
+            pronunciation: "Khong kai", 
+            katakana: "コン カイ",
+            situation: "Not spicy please",
+            situationJp: "辛くしないで",
+            icon: "🚫🌶️",
+            essential: true,
+            tip: "注文時に必ず伝えましょう。「ít cay（イット カイ）」は少し辛いという意味です"
+          },
+          { 
+            jp: "これは何の肉ですか？", 
+            vn: "Thịt gì đây?", 
+            pronunciation: "Tit zi day?", 
+            katakana: "ティット ジー ダイ?",
+            situation: "What meat is this?",
+            situationJp: "肉の種類を確認",
+            icon: "🥩",
+            tip: "牛=bò（ボー）、豚=heo（ヘオ）、鶏=gà（ガー）"
+          },
+          { 
+            jp: "お会計お願いします", 
+            vn: "Tính tiền", 
+            pronunciation: "Tin tien", 
+            katakana: "ティン ティエン",
+            situation: "Check please",
+            situationJp: "お会計",
+            icon: "🧾",
+            essential: true,
+            tip: "ベトナムではレジで払うスタイルが一般的。テーブル会計は高級店のみ"
+          },
+          { 
+            jp: "いくらですか？", 
+            vn: "Bao nhiêu tiền?", 
+            pronunciation: "Bao nyew tien?", 
+            katakana: "バオ ニュー ティエン?",
+            situation: "How much?",
+            situationJp: "値段を聞く",
+            icon: "💵",
+            tip: "数字は指で示すと確実です"
+          },
+          { 
+            jp: "美味しい！", 
+            vn: "Ngon quá!", 
+            pronunciation: "Ngon kwa!", 
+            katakana: "ゴン クア!",
+            situation: "Delicious!",
+            situationJp: "美味しい時",
+            icon: "😋",
+            tip: "店員さんに言うと喜ばれます！笑顔で言いましょう"
+          },
+          { 
+            jp: "お水ください", 
+            vn: "Cho tôi nước", 
+            pronunciation: "Cho toy nuoc", 
+            katakana: "チョー トイ ヌオック",
+            situation: "Water please",
+            situationJp: "水を頼む",
+            icon: "💧",
+            tip: "氷なし=không đá（コン ダー）"
+          },
+          { 
+            jp: "ご飯をもう一杯", 
+            vn: "Thêm cơm", 
+            pronunciation: "Tem com", 
+            katakana: "テム コム",
+            situation: "More rice please",
+            situationJp: "おかわり",
+            icon: "🍚",
+            tip: "ローカル店ではご飯おかわり無料のことも多いです"
+          },
+          { 
+            jp: "持ち帰りできますか？", 
+            vn: "Mang về được không?", 
+            pronunciation: "Mang ve duoc khong?", 
+            katakana: "マン ヴェー ドゥオック コン?",
+            situation: "Can I take away?",
+            situationJp: "持ち帰り",
+            icon: "📦",
+            tip: "ほとんどの店で対応可能です"
+          },
+          { 
+            jp: "ありがとう", 
+            vn: "Cảm ơn", 
+            pronunciation: "Kahm un", 
+            katakana: "カム オン",
+            situation: "Thank you",
+            situationJp: "ありがとう",
+            icon: "🙏",
+            essential: true,
+            tip: "「Cảm ơn nhiều（カム オン ニュー）」でもっと丁寧に"
+          }
+        ],
+        payment: [
+          { 
+            jp: "お会計お願いします", 
+            vn: "Tính tiền", 
+            pronunciation: "Tin tien", 
+            katakana: "ティン ティエン",
+            situation: "Check please",
+            situationJp: "お会計",
+            icon: "🧾",
+            essential: true,
+            tip: "手を挙げて店員を呼んでも大丈夫です"
+          },
+          { 
+            jp: "カードで払えますか？", 
+            vn: "Có thể trả bằng thẻ không?", 
+            pronunciation: "Co te tra bang te khong?", 
+            katakana: "コー テー チャー バン テー コン?",
+            situation: "Can I pay by card?",
+            situationJp: "カード払い",
+            icon: "💳",
+            tip: "ローカル店は現金のみが多いです。高級店・チェーン店はカードOK"
+          },
+          { 
+            jp: "現金で払います", 
+            vn: "Tiền mặt", 
+            pronunciation: "Tien mat", 
+            katakana: "ティエン マット",
+            situation: "I'll pay cash",
+            situationJp: "現金払い",
+            icon: "💵",
+            tip: "小額紙幣を用意しておくと便利です"
+          },
+          { 
+            jp: "おつりは合ってます", 
+            vn: "Đúng rồi", 
+            pronunciation: "Dung roi", 
+            katakana: "ドゥン ロイ",
+            situation: "The change is correct",
+            situationJp: "おつり確認",
+            icon: "✅"
+          },
+          { 
+            jp: "レシートください", 
+            vn: "Cho tôi hóa đơn", 
+            pronunciation: "Cho toy hwa don", 
+            katakana: "チョー トイ ホア ドン",
+            situation: "Receipt please",
+            situationJp: "レシート",
+            icon: "🧾",
+            tip: "経費精算に必要な場合は必ずもらいましょう"
+          },
+          { 
+            jp: "一緒に払います", 
+            vn: "Tính chung", 
+            pronunciation: "Tin chung", 
+            katakana: "ティン チュン",
+            situation: "We'll pay together",
+            situationJp: "まとめて払う",
+            icon: "👥"
+          }
+        ],
+        directions: [
+          { 
+            jp: "ここはどこですか？", 
+            vn: "Đây là đâu?", 
+            pronunciation: "Day la dau?", 
+            katakana: "ダイ ラー ダウ?",
+            situation: "Where is this?",
+            situationJp: "現在地確認",
+            icon: "📍",
+            tip: "スマホの地図を見せると伝わりやすいです"
+          },
+          { 
+            jp: "トイレはどこ？", 
+            vn: "Nhà vệ sinh ở đâu?", 
+            pronunciation: "Nya ve sin o dau?", 
+            katakana: "ニャー ヴェー シン オー ダウ?",
+            situation: "Where is the toilet?",
+            situationJp: "トイレ",
+            icon: "🚻",
+            essential: true,
+            tip: "「WC」でも通じます"
+          },
+          { 
+            jp: "まっすぐ行って", 
+            vn: "Đi thẳng", 
+            pronunciation: "Di tang", 
+            katakana: "ディー タン",
+            situation: "Go straight",
+            situationJp: "直進",
+            icon: "⬆️"
+          },
+          { 
+            jp: "右に曲がって", 
+            vn: "Rẽ phải", 
+            pronunciation: "Re fai", 
+            katakana: "レー ファイ",
+            situation: "Turn right",
+            situationJp: "右折",
+            icon: "➡️"
+          },
+          { 
+            jp: "左に曲がって", 
+            vn: "Rẽ trái", 
+            pronunciation: "Re chai", 
+            katakana: "レー チャイ",
+            situation: "Turn left",
+            situationJp: "左折",
+            icon: "⬅️"
+          },
+          { 
+            jp: "近いですか？", 
+            vn: "Có gần không?", 
+            pronunciation: "Co gan khong?", 
+            katakana: "コー ガン コン?",
+            situation: "Is it near?",
+            situationJp: "距離確認",
+            icon: "📏"
+          },
+          { 
+            jp: "タクシーを呼んでください", 
+            vn: "Gọi taxi giúp tôi", 
+            pronunciation: "Goi taxi zup toy", 
+            katakana: "ゴイ タクシー ズップ トイ",
+            situation: "Please call a taxi",
+            situationJp: "タクシー",
+            icon: "🚕",
+            tip: "GrabアプリがあればGrabの方が便利です"
+          },
+          { 
+            jp: "ここで降ります", 
+            vn: "Dừng ở đây", 
+            pronunciation: "Dung o day", 
+            katakana: "ズン オー ダイ",
+            situation: "Stop here please",
+            situationJp: "降車",
+            icon: "🛑",
+            tip: "タクシーや配車アプリで使います"
+          }
+        ],
+        emergency: [
+          { 
+            jp: "助けて！", 
+            vn: "Cứu tôi!", 
+            pronunciation: "Kuu toy!", 
+            katakana: "クー トイ!",
+            situation: "Help!",
+            situationJp: "助けを求める",
+            icon: "🆘",
+            essential: true,
+            tip: "緊急時は大声で叫びましょう"
+          },
+          { 
+            jp: "警察を呼んで", 
+            vn: "Gọi cảnh sát", 
+            pronunciation: "Goy kanh sat", 
+            katakana: "ゴイ カイン サット",
+            situation: "Call the police",
+            situationJp: "警察",
+            icon: "👮",
+            tip: "ベトナムの警察番号: 113"
+          },
+          { 
+            jp: "病院に連れて行って", 
+            vn: "Đưa tôi đến bệnh viện", 
+            pronunciation: "Dua toy den ben vien", 
+            katakana: "ドゥア トイ デン ベン ヴィエン",
+            situation: "Take me to hospital",
+            situationJp: "病院",
+            icon: "🏥",
+            tip: "救急番号: 115"
+          },
+          { 
+            jp: "薬局はどこですか？", 
+            vn: "Nhà thuốc ở đâu?", 
+            pronunciation: "Nya tuoc o dau?", 
+            katakana: "ニャー トゥオック オー ダウ?",
+            situation: "Where is the pharmacy?",
+            situationJp: "薬局",
+            icon: "💊",
+            tip: "「Nhà thuốc」の看板を探しましょう"
+          },
+          { 
+            jp: "日本大使館に連絡して", 
+            vn: "Liên hệ Đại sứ quán Nhật", 
+            pronunciation: "Lien he dai su kwan nyat", 
+            katakana: "リエン ヘー ダイ ス クアン ニャット",
+            situation: "Contact Japanese Embassy",
+            situationJp: "大使館",
+            icon: "🇯🇵",
+            tip: "在ベトナム日本大使館: +84-24-3846-3000"
+          }
+        ],
+        compliments: [
+          { 
+            jp: "とても美味しいです！", 
+            vn: "Ngon quá!", 
+            pronunciation: "Ngon kwa!", 
+            katakana: "ゴン クア!",
+            situation: "Very delicious!",
+            situationJp: "美味しい",
+            icon: "😋",
+            tip: "笑顔で言うと店員さんも嬉しそうになります"
+          },
+          { 
+            jp: "素敵なお店ですね", 
+            vn: "Quán đẹp quá!", 
+            pronunciation: "Kwan dep kwa!", 
+            katakana: "クアン デップ クア!",
+            situation: "Nice restaurant!",
+            situationJp: "お店を褒める",
+            icon: "✨"
+          },
+          { 
+            jp: "サービスが最高です", 
+            vn: "Phục vụ rất tốt!", 
+            pronunciation: "Fook vu rat tot!", 
+            katakana: "フック ヴー ラット トット!",
+            situation: "Great service!",
+            situationJp: "サービスを褒める",
+            icon: "⭐"
+          },
+          { 
+            jp: "また来ます！", 
+            vn: "Tôi sẽ quay lại!", 
+            pronunciation: "Toy se kway lai!", 
+            katakana: "トイ セー クアイ ライ!",
+            situation: "I'll come back!",
+            situationJp: "また来る",
+            icon: "👋",
+            tip: "常連になれるかも！"
+          }
+        ],
+        shopping: [
+          { 
+            jp: "いくらですか？", 
+            vn: "Bao nhiêu tiền?", 
+            pronunciation: "Bao nyew tien?", 
+            katakana: "バオ ニュー ティエン?",
+            situation: "How much?",
+            situationJp: "値段を聞く",
+            icon: "💵",
+            essential: true,
+            tip: "買い物の基本フレーズ"
+          },
+          { 
+            jp: "安くしてください", 
+            vn: "Giảm giá được không?", 
+            pronunciation: "Zam za duoc khong?", 
+            katakana: "ザム ザー ドゥオック ホン?",
+            situation: "Can you give discount?",
+            situationJp: "値引き交渉",
+            icon: "🏷️",
+            tip: "市場やお土産屋では交渉OK"
+          },
+          { 
+            jp: "見ているだけです", 
+            vn: "Tôi chỉ xem thôi", 
+            pronunciation: "Toy chi sem toy", 
+            katakana: "トイ チー セム トイ",
+            situation: "Just looking",
+            situationJp: "見るだけ",
+            icon: "👀"
+          },
+          { 
+            jp: "これをください", 
+            vn: "Cho tôi cái này", 
+            pronunciation: "Cho toy kai nay", 
+            katakana: "チョー トイ カイ ナイ",
+            situation: "I'll take this",
+            situationJp: "これを買う",
+            icon: "🛒",
+            essential: true
+          },
+          { 
+            jp: "試着できますか？", 
+            vn: "Tôi có thể thử được không?", 
+            pronunciation: "Toy ko te tu duoc khong?", 
+            katakana: "トイ コー テー トゥー ドゥオック ホン?",
+            situation: "Can I try this on?",
+            situationJp: "試着",
+            icon: "👗"
+          },
+          { 
+            jp: "もっと大きいサイズありますか？", 
+            vn: "Có size lớn hơn không?", 
+            pronunciation: "Ko sai lon hon khong?", 
+            katakana: "コー サイ ロン ホン ホン?",
+            situation: "Bigger size?",
+            situationJp: "サイズ確認",
+            icon: "📐"
+          },
+          { 
+            jp: "クレジットカード使えますか？", 
+            vn: "Có nhận thẻ tín dụng không?", 
+            pronunciation: "Ko nyan te tin zung khong?", 
+            katakana: "コー ニャン テー ティン ズン ホン?",
+            situation: "Credit card OK?",
+            situationJp: "カード払い",
+            icon: "💳",
+            tip: "大型店やモールでは使えることが多い"
+          },
+          { 
+            jp: "袋をください", 
+            vn: "Cho tôi túi", 
+            pronunciation: "Cho toy tui", 
+            katakana: "チョー トイ トゥイ",
+            situation: "Give me a bag",
+            situationJp: "袋をもらう",
+            icon: "🛍️"
+          }
+        ],
+        transport: [
+          { 
+            jp: "この住所までお願いします", 
+            vn: "Làm ơn đến địa chỉ này", 
+            pronunciation: "Lam on den dia chi nay", 
+            katakana: "ラム オン デン ディア チー ナイ",
+            situation: "To this address please",
+            situationJp: "住所を伝える",
+            icon: "📍",
+            essential: true,
+            tip: "住所を見せながら言いましょう"
+          },
+          { 
+            jp: "メーターを使ってください", 
+            vn: "Xin bật đồng hồ", 
+            pronunciation: "Sin bat dong ho", 
+            katakana: "シン バット ドン ホー",
+            situation: "Please use the meter",
+            situationJp: "メーター",
+            icon: "🚕",
+            tip: "タクシー乗車時は必ず確認"
+          },
+          { 
+            jp: "ここで降ろしてください", 
+            vn: "Cho tôi xuống đây", 
+            pronunciation: "Cho toy suong day", 
+            katakana: "チョー トイ スオン ダイ",
+            situation: "Let me off here",
+            situationJp: "降りる",
+            icon: "🛑",
+            essential: true
+          },
+          { 
+            jp: "空港までいくらですか？", 
+            vn: "Đi sân bay bao nhiêu tiền?", 
+            pronunciation: "Di san bay bao nyew tien?", 
+            katakana: "ディ サン バイ バオ ニュー ティエン?",
+            situation: "How much to airport?",
+            situationJp: "空港まで",
+            icon: "✈️"
+          },
+          { 
+            jp: "Grabを呼んでください", 
+            vn: "Làm ơn gọi Grab cho tôi", 
+            pronunciation: "Lam on goy Grab cho toy", 
+            katakana: "ラム オン ゴイ グラブ チョー トイ",
+            situation: "Please call Grab for me",
+            situationJp: "Grab配車",
+            icon: "📱",
+            tip: "Grabアプリがベトナムでは便利"
+          },
+          { 
+            jp: "バス停はどこですか？", 
+            vn: "Trạm xe buýt ở đâu?", 
+            pronunciation: "Cham se buit o dau?", 
+            katakana: "チャム セー ブイット オー ダウ?",
+            situation: "Where is bus stop?",
+            situationJp: "バス停",
+            icon: "🚌"
+          },
+          { 
+            jp: "ゆっくり運転してください", 
+            vn: "Xin đi chậm thôi", 
+            pronunciation: "Sin di cham toy", 
+            katakana: "シン ディー チャム トイ",
+            situation: "Please drive slowly",
+            situationJp: "ゆっくり",
+            icon: "🐢"
+          }
+        ],
+        hotel: [
+          { 
+            jp: "チェックインお願いします", 
+            vn: "Tôi muốn nhận phòng", 
+            pronunciation: "Toy muon nyan fong", 
+            katakana: "トイ ムオン ニャン フォン",
+            situation: "Check-in please",
+            situationJp: "チェックイン",
+            icon: "🔑",
+            essential: true
+          },
+          { 
+            jp: "Wi-Fiのパスワードは？", 
+            vn: "Mật khẩu Wi-Fi là gì?", 
+            pronunciation: "Mat kau Wifi la zi?", 
+            katakana: "マット カウ ワイファイ ラー ズィー?",
+            situation: "Wi-Fi password?",
+            situationJp: "Wi-Fi",
+            icon: "📶",
+            essential: true
+          },
+          { 
+            jp: "部屋を掃除してください", 
+            vn: "Làm ơn dọn phòng", 
+            pronunciation: "Lam on zon fong", 
+            katakana: "ラム オン ゾン フォン",
+            situation: "Please clean the room",
+            situationJp: "掃除",
+            icon: "🧹"
+          },
+          { 
+            jp: "タオルをください", 
+            vn: "Cho tôi khăn tắm", 
+            pronunciation: "Cho toy kan tam", 
+            katakana: "チョー トイ カン タム",
+            situation: "Give me towels",
+            situationJp: "タオル",
+            icon: "🛁"
+          },
+          { 
+            jp: "エアコンが動きません", 
+            vn: "Điều hòa không hoạt động", 
+            pronunciation: "Diew hoa khong hoat dong", 
+            katakana: "ディエウ ホア ホン ホアット ドン",
+            situation: "AC is not working",
+            situationJp: "エアコン故障",
+            icon: "❄️",
+            tip: "フロントに連絡しましょう"
+          },
+          { 
+            jp: "チェックアウトは何時ですか？", 
+            vn: "Giờ trả phòng là mấy giờ?", 
+            pronunciation: "Zo cha fong la may zo?", 
+            katakana: "ゾー チャー フォン ラー マイ ゾー?",
+            situation: "What time is checkout?",
+            situationJp: "チェックアウト時間",
+            icon: "⏰"
+          }
+        ],
+        greeting: [
+          { 
+            jp: "こんにちは", 
+            vn: "Xin chào", 
+            pronunciation: "Sin chao", 
+            katakana: "シン チャオ",
+            situation: "Hello",
+            situationJp: "挨拶",
+            icon: "👋",
+            essential: true,
+            tip: "一番基本的な挨拶"
+          },
+          { 
+            jp: "ありがとう", 
+            vn: "Cảm ơn", 
+            pronunciation: "Kam on", 
+            katakana: "カム オン",
+            situation: "Thank you",
+            situationJp: "感謝",
+            icon: "🙏",
+            essential: true
+          },
+          { 
+            jp: "すみません", 
+            vn: "Xin lỗi", 
+            pronunciation: "Sin loy", 
+            katakana: "シン ロイ",
+            situation: "Excuse me / Sorry",
+            situationJp: "謝罪・呼びかけ",
+            icon: "🙇",
+            essential: true
+          },
+          { 
+            jp: "私は日本人です", 
+            vn: "Tôi là người Nhật", 
+            pronunciation: "Toy la nguoi Nyat", 
+            katakana: "トイ ラー グオイ ニャット",
+            situation: "I am Japanese",
+            situationJp: "自己紹介",
+            icon: "🇯🇵"
+          },
+          { 
+            jp: "はじめまして", 
+            vn: "Rất vui được gặp bạn", 
+            pronunciation: "Rat vui duoc gap ban", 
+            katakana: "ラット ヴイ ドゥオック ガップ バン",
+            situation: "Nice to meet you",
+            situationJp: "初対面",
+            icon: "🤝"
+          },
+          { 
+            jp: "さようなら", 
+            vn: "Tạm biệt", 
+            pronunciation: "Tam biet", 
+            katakana: "タム ビエット",
+            situation: "Goodbye",
+            situationJp: "別れの挨拶",
+            icon: "👋"
+          }
+        ],
+        numbers: [
+          { 
+            jp: "1", 
+            vn: "Một", 
+            pronunciation: "Mot", 
+            katakana: "モット",
+            situation: "One",
+            situationJp: "数字",
+            icon: "1️⃣"
+          },
+          { 
+            jp: "2", 
+            vn: "Hai", 
+            pronunciation: "Hai", 
+            katakana: "ハイ",
+            situation: "Two",
+            situationJp: "数字",
+            icon: "2️⃣"
+          },
+          { 
+            jp: "3", 
+            vn: "Ba", 
+            pronunciation: "Ba", 
+            katakana: "バー",
+            situation: "Three",
+            situationJp: "数字",
+            icon: "3️⃣"
+          },
+          { 
+            jp: "5", 
+            vn: "Năm", 
+            pronunciation: "Nam", 
+            katakana: "ナム",
+            situation: "Five",
+            situationJp: "数字",
+            icon: "5️⃣"
+          },
+          { 
+            jp: "10", 
+            vn: "Mười", 
+            pronunciation: "Muoi", 
+            katakana: "ムオイ",
+            situation: "Ten",
+            situationJp: "数字",
+            icon: "🔟"
+          },
+          { 
+            jp: "100", 
+            vn: "Một trăm", 
+            pronunciation: "Mot cham", 
+            katakana: "モット チャム",
+            situation: "One hundred",
+            situationJp: "数字",
+            icon: "💯"
+          },
+          { 
+            jp: "1,000", 
+            vn: "Một nghìn", 
+            pronunciation: "Mot ngin", 
+            katakana: "モット ギン",
+            situation: "One thousand",
+            situationJp: "数字",
+            icon: "🔢",
+            tip: "ベトナムドンは桁が大きいので覚えておくと便利"
+          },
+          { 
+            jp: "10,000", 
+            vn: "Mười nghìn", 
+            pronunciation: "Muoi ngin", 
+            katakana: "ムオイ ギン",
+            situation: "Ten thousand",
+            situationJp: "数字",
+            icon: "🔢"
+          },
+          { 
+            jp: "100,000", 
+            vn: "Một trăm nghìn", 
+            pronunciation: "Mot cham ngin", 
+            katakana: "モット チャム ギン",
+            situation: "One hundred thousand",
+            situationJp: "数字",
+            icon: "🔢",
+            tip: "約600円相当（レートにより変動）"
+          },
+          { 
+            jp: "1,000,000", 
+            vn: "Một triệu", 
+            pronunciation: "Mot chiew", 
+            katakana: "モット チエウ",
+            situation: "One million",
+            situationJp: "数字",
+            icon: "🔢",
+            tip: "約6,000円相当（レートにより変動）"
+          }
+        ]
+      },
+      sampleTranslations: [
+        { jp: "辛くしないでください", vn: "Làm ơn đừng cho cay", pronunciation: "ラム ウン ドゥン チョー カイ" },
+        { jp: "これは何ですか？", vn: "Cái này là gì?", pronunciation: "カイ ナイ ラー ジー?" },
+        { jp: "お会計お願いします", vn: "Tính tiền ạ", pronunciation: "ティン ティエン アー" },
+        { jp: "おすすめは何ですか？", vn: "Món nào ngon?", pronunciation: "モン ナオ ゴン?" },
+        { jp: "これをください", vn: "Cho tôi cái này", pronunciation: "チョー トイ カイ ナイ" }
+      ]
+    };
+    
+    // State
+    let currentMode = 'voice';
+    let isListening = false;
+    let conversationHistory = [];
+    let isLangSwapped = false;
+    let currentCategory = 'ordering';
+    
+    // DOM Elements
+    const modeTabs = document.querySelectorAll('.mode-selector__tab');
+    const voicePanel = document.getElementById('voice-panel');
+    const textPanel = document.getElementById('text-panel');
+    const phrasebookPanel = document.getElementById('phrasebook-panel');
+    const micBtn = document.getElementById('mic-btn');
+    const micStatus = document.getElementById('mic-status');
+    const conversationArea = document.getElementById('conversation-area');
+    const conversationEmpty = document.getElementById('conversation-empty');
+    const quickPhrasesContainer = document.getElementById('quick-phrases');
+    const swapLangBtn = document.getElementById('swap-lang-btn');
+    const sourceLang = document.getElementById('source-lang');
+    const targetLang = document.getElementById('target-lang');
+    const cameraBtn = document.getElementById('camera-btn');
+    const cameraOverlay = document.getElementById('camera-overlay');
+    const cameraCloseBtn = document.getElementById('camera-close-btn');
+    const cameraCaptureBtn = document.getElementById('camera-capture-btn');
+    const staffDisplay = document.getElementById('staff-display');
+    const staffBackBtn = document.getElementById('staff-back-btn');
+    const staffText = document.getElementById('staff-text');
+    const staffPronunciation = document.getElementById('staff-pronunciation');
+    const clearHistoryBtn = document.getElementById('clear-history-btn');
+    const textInput = document.getElementById('text-input');
+    const textTranslateBtn = document.getElementById('text-translate-btn');
+    const textOutputBox = document.getElementById('text-output-box');
+    const textOutput = document.getElementById('text-output');
+    const textPronunciationEl = document.getElementById('text-pronunciation');
+    const phrasebookCategories = document.getElementById('phrasebook-categories');
+    const phrasebookList = document.getElementById('phrasebook-list');
+    
+    // Render quick phrases with icons
+    function renderQuickPhrases() {
+      quickPhrasesContainer.innerHTML = demoData.quickPhrases.map((phrase, i) => `
+        <button class="phrase-chip ${phrase.positive ? 'phrase-chip--positive' : ''}" data-index="${i}" title="${phrase.situation}">
+          <span class="phrase-chip__icon">${phrase.icon || ''}</span>
+          ${phrase.jp}
+        </button>
+      `).join('') + `
+        <button class="phrase-chip phrase-chip--more" id="more-phrases-btn">
+          もっと見る (+25)
+        </button>
+      `;
+      
+      // Add click handlers
+      document.querySelectorAll('.phrase-chip[data-index]').forEach(chip => {
+        chip.addEventListener('click', () => {
+          const index = parseInt(chip.dataset.index);
+          const phrase = demoData.quickPhrases[index];
+          
+          // Visual feedback
+          chip.classList.add('phrase-chip--active');
+          setTimeout(() => chip.classList.remove('phrase-chip--active'), 300);
+          
+          // Add to conversation with katakana pronunciation
+          addToConversation(phrase.jp, phrase.vn, phrase.katakana || phrase.pronunciation);
+        });
+      });
+      
+      // More phrases button
+      document.getElementById('more-phrases-btn').addEventListener('click', () => {
+        switchMode('phrasebook');
+      });
+    }
+    
+    // Render phrasebook categories
+    function renderPhrasebookCategories() {
+      phrasebookCategories.innerHTML = demoData.phrasebookCategories.map(cat => `
+        <button class="category-chip ${cat.id === currentCategory ? 'category-chip--active' : ''}" data-category="${cat.id}" title="${cat.description}">
+          ${cat.name}
+          <span class="category-chip__count">(${cat.count})</span>
+        </button>
+      `).join('');
+      
+      // Add click handlers
+      document.querySelectorAll('.category-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          currentCategory = chip.dataset.category;
+          renderPhrasebookCategories();
+          renderPhrasebookList();
+        });
+      });
+    }
+    
+    // Render phrasebook list with enhanced design
+    function renderPhrasebookList() {
+      const phrases = demoData.phrases[currentCategory] || [];
+      const categoryInfo = demoData.phrasebookCategories.find(c => c.id === currentCategory);
+      
+      let headerHtml = '';
+      if (categoryInfo) {
+        headerHtml = `
+          <div class="phrasebook-header">
+            <h3 class="phrasebook-header__title">${categoryInfo.name} <span class="phrasebook-header__count">${phrases.length}フレーズ</span></h3>
+            <p class="phrasebook-header__desc">${categoryInfo.description}</p>
+          </div>
+        `;
+      }
+      
+      phrasebookList.innerHTML = headerHtml + phrases.map((phrase, i) => `
+        <div class="phrase-item" data-category="${currentCategory}" data-index="${i}">
+          <div class="phrase-item__icon">${phrase.icon || '💬'}</div>
+          <div class="phrase-item__content">
+            <p class="phrase-item__situation">
+              ${phrase.situationJp || phrase.situation}
+              ${phrase.essential ? '<span class="phrase-item__situation-badge phrase-item__situation-badge--essential">必須</span>' : ''}
+            </p>
+            <p class="phrase-item__jp">${phrase.jp}</p>
+            <p class="phrase-item__vn">${phrase.vn}</p>
+            <p class="phrase-item__katakana">📖 ${phrase.katakana}</p>
+            <p class="phrase-item__pronunciation">${phrase.pronunciation}</p>
+            ${phrase.tip ? `
+              <div class="phrase-item__tip">
+                <span class="phrase-item__tip-icon">${phrase.tipIcon || '💡'}</span>
+                <span>${phrase.tip}</span>
+              </div>
+            ` : ''}
+            <div class="phrase-item__actions">
+              <button class="phrase-item__play">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                音声再生
+              </button>
+              <button class="phrase-item__use">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="9 11 12 14 22 4"></polyline>
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                </svg>
+                使う
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+      
+      // Add click handlers for play buttons
+      document.querySelectorAll('.phrase-item__play').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          // Play audio simulation
+          btn.innerHTML = `
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="6" y="4" width="4" height="16"></rect>
+              <rect x="14" y="4" width="4" height="16"></rect>
+            </svg>
+            再生中...
+          `;
+          setTimeout(() => {
+            btn.innerHTML = `
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              音声再生
+            `;
+          }, 1500);
+        });
+      });
+      
+      // Add click handlers for use buttons
+      document.querySelectorAll('.phrase-item__use').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const item = btn.closest('.phrase-item');
+          const idx = parseInt(item.dataset.index);
+          const cat = item.dataset.category;
+          const phrase = demoData.phrases[cat][idx];
+          
+          addToConversation(phrase.jp, phrase.vn, phrase.katakana || phrase.pronunciation);
+          switchMode('voice');
+        });
+      });
+    }
+    
+    // Add to conversation
+    function addToConversation(jp, vn, pronunciation) {
+      conversationEmpty.style.display = 'none';
+      
+      const pair = document.createElement('div');
+      pair.className = 'conversation-pair';
+      pair.innerHTML = `
+        <div class="bubble bubble--jp">
+          <span class="bubble__label">🇯🇵 日本語</span>
+          <p class="bubble__text">${jp}</p>
+          <button class="bubble__edit" aria-label="Edit">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="bubble bubble--vn">
+          <span class="bubble__label">🇻🇳 ベトナム語</span>
+          <p class="bubble__text">${vn}</p>
+          <p class="bubble__pronunciation">${pronunciation}</p>
+          <div class="bubble__actions">
+            <button class="bubble__play" aria-label="Play audio">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+            </button>
+            <button class="bubble__show-staff" data-vn="${vn}" data-pronunciation="${pronunciation}">
+              スタッフに見せる
+            </button>
+          </div>
+        </div>
+      `;
+      
+      conversationArea.appendChild(pair);
+      
+      // Scroll to bottom
+      conversationArea.scrollTop = conversationArea.scrollHeight;
+      
+      // Add event listeners
+      pair.querySelector('.bubble__play').addEventListener('click', function() {
+        this.classList.add('bubble__play--playing');
+        setTimeout(() => this.classList.remove('bubble__play--playing'), 1500);
+      });
+      
+      pair.querySelector('.bubble__show-staff').addEventListener('click', function() {
+        showStaffDisplay(this.dataset.vn, this.dataset.pronunciation);
+      });
+      
+      // Store in history
+      conversationHistory.push({ jp, vn, pronunciation });
+    }
+    
+    // Show staff display
+    function showStaffDisplay(vn, pronunciation) {
+      staffText.innerHTML = `${vn}<span class="staff-display__pronunciation">${pronunciation}</span>`;
+      staffDisplay.classList.add('staff-display--active');
+    }
+    
+    // Switch mode
+    function switchMode(mode) {
+      currentMode = mode;
+      
+      modeTabs.forEach(tab => {
+        tab.classList.toggle('mode-selector__tab--active', tab.dataset.mode === mode);
+      });
+      
+      voicePanel.style.display = mode === 'voice' ? 'flex' : 'none';
+      textPanel.classList.toggle('text-panel--active', mode === 'text');
+      phrasebookPanel.classList.toggle('phrasebook-panel--active', mode === 'phrasebook');
+    }
+    
+    // Toggle listening
+    function toggleListening() {
+      isListening = !isListening;
+      
+      if (isListening) {
+        micBtn.classList.add('mic-btn--listening');
+        micStatus.innerHTML = `
+          <span class="mic-status--listening">聞いています...</span>
+          <span class="mic-status__dots">
+            <span class="mic-status__dot"></span>
+            <span class="mic-status__dot"></span>
+            <span class="mic-status__dot"></span>
+          </span>
+        `;
+        
+        // Simulate speech recognition after 2 seconds
+        setTimeout(() => {
+          if (isListening) {
+            toggleListening();
+            // Add random sample translation
+            const sample = demoData.sampleTranslations[Math.floor(Math.random() * demoData.sampleTranslations.length)];
+            addToConversation(sample.jp, sample.vn, sample.pronunciation);
+          }
+        }, 2000);
+      } else {
+        micBtn.classList.remove('mic-btn--listening');
+        micStatus.textContent = 'タップして話す';
+      }
+    }
+    
+    // Swap languages
+    function swapLanguages() {
+      isLangSwapped = !isLangSwapped;
+      
+      const swap = swapLangBtn.querySelector('svg');
+      swap.style.transform = `rotate(${isLangSwapped ? 180 : 0}deg)`;
+      swap.style.transition = 'transform 0.2s';
+      
+      if (isLangSwapped) {
+        sourceLang.textContent = 'ベトナム語';
+        targetLang.textContent = '日本語';
+      } else {
+        sourceLang.textContent = '日本語';
+        targetLang.textContent = 'ベトナム語';
+      }
+    }
+    
+    // Clear history
+    function clearHistory() {
+      conversationHistory = [];
+      conversationArea.querySelectorAll('.conversation-pair').forEach(el => el.remove());
+      conversationEmpty.style.display = 'flex';
+    }
+    
+    // Text translation
+    function translateText() {
+      const input = textInput.value.trim();
+      if (!input) return;
+      
+      // Find matching phrase or use default
+      const match = Object.values(demoData.phrases).flat().find(p => p.jp === input);
+      
+      if (match) {
+        textOutput.textContent = match.vn;
+        textPronunciationEl.textContent = match.pronunciation;
+      } else {
+        // Simulate translation
+        textOutput.textContent = 'Xin chào';
+        textPronunciationEl.textContent = 'Sin chao';
+      }
+      
+      textOutputBox.style.display = 'block';
+    }
+    
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function() {
+      renderQuickPhrases();
+      renderPhrasebookCategories();
+      renderPhrasebookList();
+      
+      // Mode tabs
+      modeTabs.forEach(tab => {
+        tab.addEventListener('click', () => switchMode(tab.dataset.mode));
+      });
+      
+      // Mic button
+      micBtn.addEventListener('click', toggleListening);
+      
+      // Swap languages
+      swapLangBtn.addEventListener('click', swapLanguages);
+      
+      // Clear history
+      clearHistoryBtn.addEventListener('click', clearHistory);
+      
+      // Camera
+      cameraBtn.addEventListener('click', () => {
+        cameraOverlay.classList.add('camera-overlay--active');
+      });
+      
+      cameraCloseBtn.addEventListener('click', () => {
+        cameraOverlay.classList.remove('camera-overlay--active');
+      });
+      
+      cameraCaptureBtn.addEventListener('click', () => {
+        // Simulate capture
+        alert('Photo captured! Translation saved to history.');
+        cameraOverlay.classList.remove('camera-overlay--active');
+      });
+      
+      // Staff display back
+      staffBackBtn.addEventListener('click', () => {
+        staffDisplay.classList.remove('staff-display--active');
+      });
+      
+      // Text translation
+      textTranslateBtn.addEventListener('click', translateText);
+      
+      textInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          translateText();
+        }
+      });
+      
+      console.log('[DaNangNavi] Page 03.2 Translation Tools loaded');
+    });
+  </script>
+</body>
+</html>

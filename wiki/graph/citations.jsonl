@@ -1,1 +1,14 @@
 {"from":"sources/bai-5-phan-i-phan-tich-giac-mo","type":"cites","to":"sources/man-and-his-symbols"}
+{"from":"sources/danangnavi-architecture-decision-document","type":"cites","to":"sources/danangnavi-product-requirements-document"}
+{"from":"sources/phan-i-qua-khu-va-tuong-lai-trong-vo-thuc","type":"cites","to":"sources/man-and-his-symbols"}
+{"from":"sources/phan-i-chuc-nang-cua-nhung-giac-mo","type":"cites","to":"sources/tam-quan-trong-cua-giac-mo"}
+{"from":"sources/phan-i-chuc-nang-cua-nhung-giac-mo","type":"cites","to":"sources/man-and-his-symbols"}
+{"from":"sources/phan-i-chuc-nang-cua-nhung-giac-mo","type":"cites","to":"sources/bai-5-phan-i-phan-tich-giac-mo"}
+{"from":"sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi","type":"cites","to":"sources/bai-5-phan-i-phan-tich-giac-mo"}
+{"from":"sources/tailor-project-prd","type":"cites","to":"sources/danangnavi-product-requirements-document"}
+{"from":"sources/epic-breakdown-tailor-project","type":"cites","to":"sources/tailor-project-prd"}
+{"from":"sources/epic-1-implementation-artifacts-tailor-project","type":"cites","to":"sources/tailor-project-prd"}
+{"from":"sources/epic-1-implementation-artifacts-tailor-project","type":"cites","to":"sources/epic-breakdown-tailor-project"}
+{"from":"sources/technical-research-semantic-to-geometric-translation-architecture","type":"cites","to":"sources/tailor-project-prd"}
+{"from":"sources/technical-research-semantic-to-geometric-translation-architecture","type":"cites","to":"sources/epic-breakdown-tailor-project"}
+{"from":"sources/technical-research-semantic-to-geometric-translation-architecture","type":"cites","to":"sources/epic-1-implementation-artifacts-tailor-project"}

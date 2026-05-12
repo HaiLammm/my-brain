@@ -35,4 +35,6 @@ Tối ưu hóa từ khóa CV là kỹ thuật đồng bộ nội dung CV với c
 
 ## Mentioned in
 
+- [[concepts/cv-tot]]
+
 ## Notes

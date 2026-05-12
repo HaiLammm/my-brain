@@ -1,0 +1,331 @@
+{
+  "currentUser": {
+    "id": "user-tomoko",
+    "name": "Tomoko Ishikawa",
+    "nameJp": "石川智子",
+    "age": 28,
+    "role": "Office Worker (Tokyo)",
+    "situation": "tourist",
+    "tripDay": 2,
+    "tripTotal": 5,
+    "location": "My Khe Beach area",
+    "avatar": "/assets/avatars/tomoko.jpg",
+    "registered": false,
+    "savedCoupons": [],
+    "totalSavings": 0
+  },
+  "senpaiArticle": {
+    "id": "guide-001",
+    "slug": "top-5-bun-cha-my-khe",
+    "title": "Top 5 Bun Cha near My Khe Beach",
+    "titleJp": "My Khe Beach近くのブンチャーTOP5 🍜",
+    "subtitle": "Only restaurants senpai actually frequent",
+    "subtitleJp": "先輩が実際に通っているお店だけを厳選",
+    "heroImage": "/assets/guides/bun-cha-hero.jpg",
+    "author": "senpai-tanaka",
+    "publishedDate": "2026-04-01",
+    "readTime": "3 min",
+    "category": "Food & Dining"
+  },
+  "restaurants": [
+    {
+      "id": "rest-001",
+      "name": "Bún Chả Hương Liên",
+      "nameJp": "ブンチャー・フォンリエン",
+      "rank": 1,
+      "rating": 4.8,
+      "reviewCount": 23,
+      "fairPrice": "fair",
+      "priceRange": { "min": 50000, "max": 80000, "currency": "VND" },
+      "priceRangeJpy": { "min": 290, "max": 460 },
+      "distance": "5 min walk (400m)",
+      "distanceMeters": 400,
+      "senpaiVerified": true,
+      "senpaiQuote": "The dipping sauce here is incredible. Tourists and locals pay the same price.",
+      "senpaiQuoteAuthor": "Tanaka-san",
+      "couponId": "coupon-001",
+      "hasCoupon": true,
+      "photo": "/assets/restaurants/bun-cha-huong-lien.jpg",
+      "address": "25 Le Quang Dao, Ngu Hanh Son",
+      "hours": "7:00 - 21:00",
+      "phone": "+84 236 123 4567",
+      "lat": 16.0544,
+      "lng": 108.2472,
+      "menuHighlights": [
+        { "name": "Bún Chả Hà Nội", "price": 55000, "priceJpy": 320 },
+        { "name": "Bún Chả Giò", "price": 60000, "priceJpy": 350 },
+        { "name": "Nem Lụi", "price": 45000, "priceJpy": 260 }
+      ]
+    },
+    {
+      "id": "rest-002",
+      "name": "Quán Bún Chả 109",
+      "nameJp": "クアン・ブンチャー109",
+      "rank": 2,
+      "rating": 4.6,
+      "reviewCount": 18,
+      "fairPrice": "fair",
+      "priceRange": { "min": 40000, "max": 60000, "currency": "VND" },
+      "priceRangeJpy": { "min": 230, "max": 350 },
+      "distance": "8 min walk (650m)",
+      "distanceMeters": 650,
+      "senpaiVerified": true,
+      "senpaiQuote": "Best value bun cha in the area. Big portions, super friendly staff.",
+      "senpaiQuoteAuthor": "Yamamoto-san",
+      "couponId": null,
+      "hasCoupon": false,
+      "photo": "/assets/restaurants/bun-cha-109.jpg",
+      "address": "109 Vo Nguyen Giap, Ngu Hanh Son",
+      "hours": "6:30 - 20:30",
+      "phone": "+84 236 234 5678",
+      "lat": 16.0521,
+      "lng": 108.2458,
+      "menuHighlights": [
+        { "name": "Bún Chả Đặc Biệt", "price": 50000, "priceJpy": 290 },
+        { "name": "Bún Thịt Nướng", "price": 45000, "priceJpy": 260 }
+      ]
+    },
+    {
+      "id": "rest-003",
+      "name": "Bún Chả Cá Đà Nẵng",
+      "nameJp": "ブンチャーカー・ダナン",
+      "rank": 3,
+      "rating": 4.7,
+      "reviewCount": 31,
+      "fairPrice": "fair",
+      "priceRange": { "min": 48000, "max": 70000, "currency": "VND" },
+      "priceRangeJpy": { "min": 280, "max": 400 },
+      "distance": "12 min walk (950m)",
+      "distanceMeters": 950,
+      "senpaiVerified": true,
+      "senpaiQuote": "Da Nang's specialty! Fish cake bun cha — you won't find this in Hanoi.",
+      "senpaiQuoteAuthor": "Sato-san",
+      "couponId": "coupon-002",
+      "hasCoupon": true,
+      "photo": "/assets/restaurants/bun-cha-ca.jpg",
+      "address": "78 Tran Quoc Toan, Hai Chau",
+      "hours": "6:00 - 14:00",
+      "phone": "+84 236 345 6789",
+      "lat": 16.0498,
+      "lng": 108.2435,
+      "menuHighlights": [
+        { "name": "Bún Chả Cá", "price": 55000, "priceJpy": 320 },
+        { "name": "Bún Chả Cá Đặc Biệt", "price": 70000, "priceJpy": 400 }
+      ]
+    },
+    {
+      "id": "rest-004",
+      "name": "Nhà Hàng Ngọc Anh",
+      "nameJp": "ニャーハン・ゴックアン",
+      "rank": 4,
+      "rating": 4.3,
+      "reviewCount": 12,
+      "fairPrice": "fair",
+      "priceRange": { "min": 35000, "max": 55000, "currency": "VND" },
+      "priceRangeJpy": { "min": 200, "max": 300 },
+      "distance": "15 min walk (1.2km)",
+      "distanceMeters": 1200,
+      "senpaiVerified": false,
+      "senpaiQuote": "No-frills local spot. Cheapest bun cha around but quality is solid.",
+      "senpaiQuoteAuthor": "Watanabe-san",
+      "couponId": null,
+      "hasCoupon": false,
+      "photo": "/assets/restaurants/ngoc-anh.jpg",
+      "address": "42 Phan Tu, Ngu Hanh Son",
+      "hours": "7:00 - 20:00",
+      "phone": "+84 236 456 7890",
+      "lat": 16.0475,
+      "lng": 108.2410,
+      "menuHighlights": [
+        { "name": "Bún Chả", "price": 35000, "priceJpy": 200 },
+        { "name": "Bún Bò Huế", "price": 40000, "priceJpy": 230 }
+      ]
+    },
+    {
+      "id": "rest-005",
+      "name": "Bún Chả Phố Cổ",
+      "nameJp": "ブンチャー・フォーコー",
+      "rank": 5,
+      "rating": 4.5,
+      "reviewCount": 15,
+      "fairPrice": "fair",
+      "priceRange": { "min": 42000, "max": 65000, "currency": "VND" },
+      "priceRangeJpy": { "min": 250, "max": 380 },
+      "distance": "20 min walk (1.6km)",
+      "distanceMeters": 1600,
+      "senpaiVerified": true,
+      "senpaiQuote": "Hidden gem! The grilled pork is smoked on-site. Worth the walk.",
+      "senpaiQuoteAuthor": "Yamamoto-san",
+      "couponId": "coupon-003",
+      "hasCoupon": true,
+      "photo": "/assets/restaurants/bun-cha-pho-co.jpg",
+      "address": "15 Hoang Sa, Son Tra",
+      "hours": "10:00 - 22:00",
+      "phone": "+84 236 567 8901",
+      "lat": 16.0589,
+      "lng": 108.2501,
+      "menuHighlights": [
+        { "name": "Bún Chả Nướng Than", "price": 55000, "priceJpy": 320 },
+        { "name": "Nem Nướng", "price": 42000, "priceJpy": 250 },
+        { "name": "Gỏi Cuốn", "price": 30000, "priceJpy": 175 }
+      ]
+    }
+  ],
+  "senpai": [
+    {
+      "id": "senpai-tanaka",
+      "name": "Tanaka-san",
+      "nameJp": "田中さん",
+      "avatar": "/assets/avatars/tanaka.jpg",
+      "yearsInDanang": 3,
+      "area": "Hai Chau",
+      "role": "Software Engineer",
+      "badge": "rank-senpai"
+    },
+    {
+      "id": "senpai-yamamoto",
+      "name": "Yamamoto-san",
+      "nameJp": "山本さん",
+      "avatar": "/assets/avatars/yuki.jpg",
+      "yearsInDanang": 2,
+      "area": "Son Tra",
+      "role": "Marketing Manager",
+      "badge": "rank-senpai"
+    },
+    {
+      "id": "senpai-sato",
+      "name": "Sato-san",
+      "nameJp": "佐藤さん",
+      "avatar": "/assets/avatars/takeshi.jpg",
+      "yearsInDanang": 3,
+      "area": "Hai Chau",
+      "role": "Restaurant Owner",
+      "badge": "rank-master"
+    },
+    {
+      "id": "senpai-watanabe",
+      "name": "Watanabe-san",
+      "nameJp": "渡辺さん",
+      "avatar": "/assets/avatars/kenji.jpg",
+      "yearsInDanang": 1.5,
+      "area": "Ngu Hanh Son",
+      "role": "Freelance Developer",
+      "badge": "rank-helper"
+    }
+  ],
+  "senpaiTips": [
+    {
+      "id": "tip-001",
+      "author": "senpai-sato",
+      "text": "Point at the menu and hold up fingers for quantity — it works everywhere. More accurate than Google Translate.",
+      "textJp": "指さしメニューを使えば大丈夫。Google翻訳より正確です"
+    },
+    {
+      "id": "tip-002",
+      "author": "senpai-tanaka",
+      "text": "Pay at the counter after eating. Table payment is only at high-end restaurants.",
+      "textJp": "お会計は食後にレジで。テーブル会計は高級店だけ"
+    },
+    {
+      "id": "tip-003",
+      "author": "senpai-yamamoto",
+      "text": "If there's a coupon, show it BEFORE ordering. Some places won't accept it after.",
+      "textJp": "クーポンは注文前に見せること。後からは受け付けない店もあります"
+    }
+  ],
+  "coupons": [
+    {
+      "id": "coupon-001",
+      "restaurantId": "rest-001",
+      "businessName": "Bún Chả Hương Liên",
+      "description": "15% off your meal",
+      "discount": "15%",
+      "savingsEstimate": { "vnd": 10000, "jpy": 58 },
+      "expiresDate": "2026-04-15",
+      "expiresIn": "7 days",
+      "conditions": "Valid for dine-in only. Min order 50,000₫",
+      "qrCode": "DNAV-BCHL-15OFF",
+      "status": "available",
+      "category": "Food & Dining"
+    },
+    {
+      "id": "coupon-002",
+      "restaurantId": "rest-003",
+      "businessName": "Bún Chả Cá Đà Nẵng",
+      "description": "10% off + free drink",
+      "discount": "10%",
+      "savingsEstimate": { "vnd": 7000, "jpy": 40 },
+      "expiresDate": "2026-04-12",
+      "expiresIn": "4 days",
+      "conditions": "Dine-in, show before ordering",
+      "qrCode": "DNAV-BCCD-10OFF",
+      "status": "available",
+      "category": "Food & Dining"
+    },
+    {
+      "id": "coupon-003",
+      "restaurantId": "rest-005",
+      "businessName": "Bún Chả Phố Cổ",
+      "description": "20% off first visit",
+      "discount": "20%",
+      "savingsEstimate": { "vnd": 11000, "jpy": 64 },
+      "expiresDate": "2026-04-20",
+      "expiresIn": "12 days",
+      "conditions": "First-time customers only. Show QR at counter",
+      "qrCode": "DNAV-BCPC-20OFF",
+      "status": "available",
+      "category": "Food & Dining"
+    },
+    {
+      "id": "coupon-004",
+      "restaurantId": null,
+      "businessName": "Da Nang Coffee House",
+      "description": "Free Vietnamese coffee with any pastry",
+      "discount": "Free item",
+      "savingsEstimate": { "vnd": 35000, "jpy": 200 },
+      "expiresDate": "2026-04-13",
+      "expiresIn": "5 days",
+      "conditions": "One per customer per day",
+      "qrCode": "DNAV-DNCH-COFFEE",
+      "status": "available",
+      "category": "Cafe"
+    },
+    {
+      "id": "coupon-005",
+      "restaurantId": null,
+      "businessName": "Bien Dong Seafood",
+      "description": "Buy 2 get 1 free — Fresh seafood platter",
+      "discount": "Buy 2 Get 1",
+      "savingsEstimate": { "vnd": 85000, "jpy": 500 },
+      "expiresDate": "2026-04-09",
+      "expiresIn": "1 day",
+      "conditions": "Dine-in groups of 2+",
+      "qrCode": "DNAV-BDSF-B2G1",
+      "status": "available",
+      "category": "Food & Dining"
+    }
+  ],
+  "translationPhrases": {
+    "ordering": [
+      { "situation": "Order this dish", "jp": "これをください", "vn": "Cho tôi cái này", "en": "I'd like this, please", "pronunciation": "Cho toy kai nay" },
+      { "situation": "How spicy?", "jp": "辛さはどのくらい？", "vn": "Cay không?", "en": "Is it spicy?", "pronunciation": "Kai khong?" },
+      { "situation": "Not spicy please", "jp": "辛くしないで", "vn": "Không cay", "en": "Not spicy", "pronunciation": "Khong kai" },
+      { "situation": "The bill please", "jp": "お会計お願いします", "vn": "Tính tiền", "en": "Check please", "pronunciation": "Tin tien" },
+      { "situation": "How much?", "jp": "いくらですか？", "vn": "Bao nhiêu tiền?", "en": "How much?", "pronunciation": "Bao nyew tien?" },
+      { "situation": "Delicious!", "jp": "美味しい！", "vn": "Ngon quá!", "en": "Delicious!", "pronunciation": "Ngon kwa!" },
+      { "situation": "Water please", "jp": "お水ください", "vn": "Cho tôi nước", "en": "Water please", "pronunciation": "Cho toy nuoc" },
+      { "situation": "Thank you", "jp": "ありがとう", "vn": "Cảm ơn", "en": "Thank you", "pronunciation": "Kahm un" }
+    ],
+    "categories": [
+      { "id": "ordering", "name": "Ordering Food", "icon": "🍜", "phraseCount": 8 },
+      { "id": "payment", "name": "Payment", "icon": "💰", "phraseCount": 4 },
+      { "id": "directions", "name": "Directions", "icon": "🗺️", "phraseCount": 5 },
+      { "id": "emergency", "name": "Emergency", "icon": "🆘", "phraseCount": 3 }
+    ]
+  },
+  "userLocation": {
+    "name": "My Khe Beach",
+    "lat": 16.0560,
+    "lng": 108.2490
+  }
+}

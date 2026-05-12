@@ -25,6 +25,7 @@ Phân tích giấc mơ (Dream Analysis) trong tâm lý học Jung là quá trìn
 ## Key Sources
 
 - [[sources/bai-5-phan-i-phan-tich-giac-mo]]
+- [[sources/phan-i-chuc-nang-cua-nhung-giac-mo]] — giấc mơ có chức năng bù đắp, cảnh báo khi ý thức thiên lệch
 
 ## Related Concepts
 

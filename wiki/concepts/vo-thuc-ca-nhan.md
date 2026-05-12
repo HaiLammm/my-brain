@@ -30,12 +30,15 @@ Vô thức cá nhân (Personal Unconscious) là lớp vô thức chứa các tr�
 ## Key Sources
 
 - [[sources/bai-5-phan-i-phan-tich-giac-mo]]
+- [[sources/phan-i-qua-khu-va-tuong-lai-trong-vo-thuc]] — ký ức bị lãng quên và kìm nén trong vô thức cá nhân
 
 ## Related Concepts
 
 - [[concepts/vo-thuc]] — khái niệm tổng quát
 - [[concepts/vo-thuc-tap-the]] — lớp vô thức sâu hơn, chia sẻ bởi nhân loại
 - [[concepts/ca-nhan-hoa]] — quá trình đối thoại với vô thức
+- [[concepts/kim-nen]] — ký ức bị kìm nén trong vô thức cá nhân
+- [[concepts/chung-tiem-ky-uc]] — ký ức "ẩn" quay lại dưới dạng ý tưởng mới
 
 ## Notes
 

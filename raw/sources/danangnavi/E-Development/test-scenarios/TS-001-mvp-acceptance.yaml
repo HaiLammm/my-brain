@@ -1,0 +1,243 @@
+# Test Scenario TS-001: DaNangNavi MVP Acceptance Tests
+# Validates DD-001 implementation against design specifications
+
+test_scenario:
+  id: TS-001
+  name: "DaNangNavi MVP Acceptance Tests"
+  delivery_id: DD-001
+  status: ready
+  created: "2026-04-08"
+
+# ─── HAPPY PATH TESTS ────────────────────────────────────
+
+happy_path:
+  - id: HP-001
+    name: "Naoki discovers DaNangNavi homepage"
+    scenario: "01-naokis-first-week"
+    steps:
+      - action: "Open homepage on mobile (375px)"
+        expected: "Hero section with search bar, tagline, Da Nang background image"
+        design_ref: "01.1-homepage.md § Section 1"
+      - action: "Scroll down"
+        expected: "Welcome banner, senpai picks, deals, community highlights visible"
+      - action: "Tap search bar"
+        expected: "Search overlay opens with suggestions"
+      - action: "Verify bottom tab nav"
+        expected: "5 tabs visible: Home (active), Search, Community, Deals, Profile"
+
+  - id: HP-002
+    name: "Naoki completes newcomer onboarding"
+    scenario: "01-naokis-first-week"
+    steps:
+      - action: "Tap 'はじめる' on welcome banner"
+        expected: "Onboarding step 1: situation questionnaire with option cards"
+      - action: "Select 'Work Transfer'"
+        expected: "Step 2: urgency topic chips (max 3 selectable)"
+      - action: "Select 3 topics, tap next"
+        expected: "Step 3: area map selector with workplace input"
+      - action: "Select area, complete flow"
+        expected: "Personalized checklist with senpai tips"
+
+  - id: HP-003
+    name: "Naoki searches and finds an apartment"
+    scenario: "01-naokis-first-week"
+    steps:
+      - action: "Navigate to search page"
+        expected: "Search bar, filter chips, results list"
+      - action: "Apply area filter"
+        expected: "Results update with filter chip highlighted (teal)"
+      - action: "View listing card"
+        expected: "Photo, title, dual price (VND + JPY), fair-price indicator, senpai badge"
+      - action: "Tap listing"
+        expected: "Listing detail with gallery, info card, reviews, sticky action bar"
+
+  - id: HP-004
+    name: "Naoki joins the community"
+    scenario: "02-naoki-becomes-senpai"
+    steps:
+      - action: "Tap Community tab"
+        expected: "Community hub with category cards, trending threads, upcoming events"
+      - action: "Tap trending thread"
+        expected: "Thread page with header, replies (senpai badges), reply composer"
+      - action: "Tap reply composer"
+        expected: "Composer expands, text area + photo upload + post button"
+      - action: "Navigate to Events"
+        expected: "Events list with filter chips, event cards, join button"
+      - action: "Tap 'Join' on an event"
+        expected: "Confirmation modal with checkmark animation"
+
+  - id: HP-005
+    name: "Tomoko finds a restaurant from senpai guide"
+    scenario: "03-tomokos-danang-discovery"
+    steps:
+      - action: "Open senpai article guide"
+        expected: "Hero image, author with senpai badge, 5 ranked restaurants"
+      - action: "View restaurant #1"
+        expected: "Photo, rating, fair-price indicator (green), dual price, distance, senpai quote"
+      - action: "Tap coupon tag"
+        expected: "Navigate to deals page or coupon detail"
+      - action: "Tap 'Get directions'"
+        expected: "Opens native maps app"
+
+  - id: HP-006
+    name: "Tomoko uses translation tools"
+    scenario: "03-tomokos-danang-discovery"
+    steps:
+      - action: "Open translation page (or tap FAB)"
+        expected: "Segmented control: Voice / Text / Phrasebook"
+      - action: "Tap mic button"
+        expected: "Mic button pulses, 'Listening...' label appears"
+      - action: "View translation result"
+        expected: "Japanese input bubble + Vietnamese output bubble + pronunciation"
+      - action: "Tap speaker button"
+        expected: "Vietnamese audio playback (mock for demo)"
+
+  - id: HP-007
+    name: "Tomoko redeems a coupon"
+    scenario: "03-tomokos-danang-discovery"
+    steps:
+      - action: "Open deals page"
+        expected: "Filter chips, coupon cards with savings in JPY"
+      - action: "Tap coupon CTA"
+        expected: "Coupon detail modal with QR code"
+      - action: "Tap 'Redeem'"
+        expected: "Confirmation dialog → confetti animation → green checkmark"
+      - action: "Check My Coupons"
+        expected: "Used tab shows grayed coupon with '使用済み' stamp"
+
+  - id: HP-008
+    name: "Lan creates a business listing"
+    scenario: "04-lan-lists-her-business"
+    steps:
+      - action: "Open listing editor"
+        expected: "3-step progress header, Vietnamese form fields"
+      - action: "Fill business name, category, address"
+        expected: "Form validates required fields, address auto-suggests"
+      - action: "Upload photos"
+        expected: "Photo grid with first photo marked as cover"
+      - action: "Upload menu photo"
+        expected: "OCR processing → editable Vietnamese-to-Japanese table"
+      - action: "View preview"
+        expected: "Japanese customer preview card updates in real-time"
+      - action: "Tap 'Publish'"
+        expected: "Success overlay with confetti, coupon creation prompt"
+
+  - id: HP-009
+    name: "Lan creates a coupon"
+    scenario: "04-lan-lists-her-business"
+    steps:
+      - action: "Open coupon manager from post-publish prompt"
+        expected: "Success banner, coupon form in Vietnamese"
+      - action: "Select discount type, fill details"
+        expected: "Japanese preview card updates live"
+      - action: "Tap 'Tạo Coupon'"
+        expected: "Success toast, coupon appears in active list"
+      - action: "Navigate to dashboard"
+        expected: "Status cards (listing + coupon active), empty metric cards"
+
+  - id: HP-010
+    name: "User signs up via LINE"
+    scenario: "05-naoki-tomoko-sign-up"
+    steps:
+      - action: "Trigger auth-required action (e.g., save listing)"
+        expected: "Signup modal appears with LINE button prominent"
+      - action: "Tap LINE login"
+        expected: "Opens LINE OAuth (mocked → success)"
+      - action: "View success state"
+        expected: "Green checkmark animation, auto-redirect after 1.5s"
+      - action: "Original action completes"
+        expected: "Listing saved, user is authenticated"
+
+# ─── RESPONSIVE TESTS ────────────────────────────────────
+
+responsive:
+  - id: RS-001
+    name: "Mobile layout (375px)"
+    checks:
+      - "Bottom tab nav visible and functional"
+      - "Single column layout on all pages"
+      - "Sticky action bars above bottom tab nav"
+      - "Horizontal scroll for filter chips and cards"
+      - "Touch targets ≥ 44px"
+
+  - id: RS-002
+    name: "Tablet layout (768px)"
+    checks:
+      - "Bottom tab nav hidden, top nav visible"
+      - "2-column grid for cards where specified"
+      - "Modals centered, not bottom-sheet style"
+
+  - id: RS-003
+    name: "Desktop layout (1280px)"
+    checks:
+      - "Sticky top nav with categories"
+      - "3-column grids where specified"
+      - "Sidebar layouts (community, search map)"
+      - "Hover states on cards (lift + shadow)"
+
+# ─── DESIGN SYSTEM VALIDATION ─────────────────────────────
+
+design_system_validation:
+  - id: DS-001
+    name: "Color tokens match"
+    checks:
+      - "Primary Navy #1B2A4A used for headers, nav, active states"
+      - "Coral #FF6B4A used for all primary CTA buttons"
+      - "Teal #2EC4B6 used for filter chip active states (NOT coral)"
+      - "Background #FAFAF8 on all page backgrounds"
+      - "Success green #27AE60 on senpai verified badges"
+
+  - id: DS-002
+    name: "Typography tokens match"
+    checks:
+      - "Noto Sans JP renders correctly for Japanese text"
+      - "H1: 32px Bold, H2: 24px Bold, H3: 20px SemiBold"
+      - "Body: 16px Regular, Caption: 14px, Small: 12px"
+      - "Minimum text size 14px anywhere in the UI"
+
+  - id: DS-003
+    name: "Component consistency"
+    checks:
+      - "Senpai badge: green verified variant + teal/gray rank variants"
+      - "Fair price indicator: 3 tiers (green/yellow/red)"
+      - "Dual price: VND primary + JPY secondary in parentheses"
+      - "Bottom tab nav: 5 tabs, active = Navy fill"
+      - "Filter chips: teal active state across all pages"
+
+# ─── EDGE CASE TESTS ─────────────────────────────────────
+
+edge_cases:
+  - id: EC-001
+    name: "Empty states"
+    checks:
+      - "Search no results: illustration + message + reset CTA"
+      - "Empty coupon wallet: message + explore CTA"
+      - "New dashboard: placeholder metrics + help card"
+      - "No events: friendly message"
+
+  - id: EC-002
+    name: "Auth gates"
+    checks:
+      - "Save heart on listing → signup modal (if unauthenticated)"
+      - "Save onboarding progress → signup modal"
+      - "Reply to thread → signup modal"
+      - "Modal dismissal returns to previous state"
+
+  - id: EC-003
+    name: "Content boundaries"
+    checks:
+      - "Long business names truncate with ellipsis on cards"
+      - "Long thread titles truncate at 2 lines"
+      - "Vietnamese text with diacritics renders correctly"
+      - "Japanese text with kanji/hiragana/katakana mix renders correctly"
+
+# ─── SIGN-OFF CRITERIA ────────────────────────────────────
+
+sign_off:
+  criteria:
+    - "All HP (happy path) tests pass"
+    - "All RS (responsive) tests pass"
+    - "All DS (design system) validations pass"
+    - "Critical EC (edge case) tests pass"
+    - "No visual regressions from design specs"
+  approver: "Lem (Designer + Developer)"

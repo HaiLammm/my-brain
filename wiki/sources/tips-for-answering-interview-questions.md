@@ -47,7 +47,7 @@ Tài liệu tập trung vào 3 tình huống giao tiếp khó trong phỏng vấ
 
 ## Related sources
 
-- [[sources/chien-luoc-phong-van-ot-pha]]
+- [[sources/chien-luoc-phong-van-dot-pha]]
 - [[sources/ky-nang-phong-van-tu-duy-phan-xa-giai-ma-logic]]
 - [[sources/tell-me-about-yourself-interview-framework]]
 

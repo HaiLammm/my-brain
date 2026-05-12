@@ -1,0 +1,48 @@
+view: V1 — Senpai Article/Guide
+spec: C-UX-Scenarios/03-tomokos-danang-discovery/03.1-senpai-article-guide/03.1-senpai-article-guide.md
+created: 2026-04-08
+status: planning-complete
+
+sections:
+  - id: S0
+    name: Page Shell + Shared Components
+    objects: [19-BottomTabNav, 20-TranslationFAB]
+    description: Responsive page scaffold, bottom tab nav, translation FAB, design tokens CSS variables, demo data loader, Google Fonts
+    estimate: 20min
+    status: completed
+    story: Page shell created with all design tokens, bottom nav (5 tabs), translation FAB with tooltip, responsive layout (mobile-first up to 1024px), demo data loader with currency formatters
+
+  - id: S1
+    name: Article Header
+    objects: [1-HeroImage, 2-ArticleTitle, 3-Subtitle, 4-AuthorInfo, 5-PublishedDate, 6-ReadTime]
+    description: Full-width hero with gradient overlay, article title, subtitle, author row with senpai badge, date, read time
+    estimate: 15min
+    status: completed
+    story: Hero image (16:9 aspect ratio, Unsplash placeholder), navy gradient overlay from bottom, title/subtitle in white, author row with 40px avatar + senpai badge component, meta row with date + read time with icons. Responsive typography (h2 mobile → h1 tablet+).
+
+  - id: S2
+    name: Quick Filters + Restaurant List
+    objects: [7-StickyFilterBar, 8-FilterChips, 9-LocationIndicator, 10-RestaurantCards]
+    description: Sticky filter bar with sort chips, location indicator, 5 restaurant cards with rank, photo, name, JP name, rating, fair-price indicator, dual-price, distance, senpai quote, coupon tag, CTA row. Filter/sort functionality.
+    estimate: 30min
+    status: completed
+    story: Filter bar with 3 sort chips (Nearest/Top Rated/Cheapest), location indicator, 5 restaurant cards rendered from demo data with all 12 elements. JS sort/filter functionality working.
+
+  - id: S3
+    name: Senpai Tips
+    objects: [11-SectionHeader, 12-SenpaiTipCards, 13-TranslationCTA]
+    description: Section header with emoji, 2 senpai tip cards with avatar and quote, translation tools CTA link
+    estimate: 10min
+    status: completed
+    story: Section header with emoji icon, tip cards rendered from demo data with avatar + quote, translation tools CTA link to 03.2.
+
+  - id: S4
+    name: Map Overview
+    objects: [14-MapWithPins, 15-UserLocationDot, 16-PinTooltip, 17-ExpandToggle, 18-OpenInMapsLink]
+    description: Map area with 5 numbered restaurant pins, user location, tap-for-tooltip, expand/collapse, open in maps link
+    estimate: 15min
+    status: completed
+    story: Map placeholder with numbered pins from demo data, expand/collapse toggle, open in maps link.
+
+build_order: [S0, S1, S2, S3, S4]
+total_estimate: 90min

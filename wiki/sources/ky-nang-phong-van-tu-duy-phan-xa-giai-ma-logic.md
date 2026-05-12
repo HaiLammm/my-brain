@@ -48,7 +48,7 @@ Tài liệu hướng dẫn xây dựng khả năng phản xạ trong phỏng v�
 ## Related sources
 
 - [[sources/cam-nang-giai-ma-cau-truc-cv-chuan]]
-- [[sources/chien-luoc-phong-van-ot-pha]]
+- [[sources/chien-luoc-phong-van-dot-pha]]
 - [[sources/tell-me-about-yourself-interview-framework]]
 - [[sources/tips-for-answering-interview-questions]]
 

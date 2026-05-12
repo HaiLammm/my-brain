@@ -36,4 +36,6 @@ ATS (Applicant Tracking System) — hệ thống quản lý tuyển dụng tự 
 
 ## Mentioned in
 
+- [[concepts/cv-tot]]
+
 ## Notes

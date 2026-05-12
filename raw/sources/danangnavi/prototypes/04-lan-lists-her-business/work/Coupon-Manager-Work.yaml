@@ -1,0 +1,62 @@
+view: V2 - Coupon Manager
+spec: 04.2-coupon-manager.md
+route: /business/coupons
+device: desktop-only (1440px)
+fidelity: design-system
+
+sections:
+  S1:
+    name: Page Shell & Header
+    objects:
+      - 2-column layout (left 55% / right 45%), max-width 1200px
+      - Breadcrumb "Doanh nghiệp > Coupon"
+      - Headline "Tạo Coupon"
+      - Subtitle "Thu hút khách Nhật với ưu đãi đặc biệt"
+      - Success banner (green, dismissible) from listing publish
+    estimate: 15min
+    status: complete
+    completed: 2026-04-08
+
+  S2:
+    name: Coupon Creator Form
+    objects:
+      - Discount type toggle (Giảm % / Giảm tiền)
+      - Percentage input (1-50%)
+      - Fixed amount input (10,000-500,000 VND)
+      - Coupon title input + auto-translate hint
+      - Start date picker (default today)
+      - End date picker (default +30 days)
+      - Quick presets (1 tuần / 1 tháng / 3 tháng)
+      - Usage limit toggle (Không giới hạn / Giới hạn)
+      - Limited uses number input
+      - Conditions textarea (optional, 120 chars)
+      - "Tạo Coupon" coral CTA button
+    estimate: 25min
+    status: complete
+    completed: 2026-04-08
+
+  S3:
+    name: Japanese Preview Card + Tips
+    objects:
+      - Section label "Khách Nhật sẽ thấy thế này"
+      - JP coupon card (coral border, restaurant name JP, discount badge, JP title, validity, conditions)
+      - "Bản dịch tự động" refresh label
+      - Tips card (teal bg, lightbulb icon, 3 tips, social proof)
+    estimate: 20min
+    status: complete
+    completed: 2026-04-08
+
+  S4:
+    name: Active Coupons List + Navigation
+    objects:
+      - Section label "Coupon đang hoạt động"
+      - Empty state message
+      - Coupon cards (title, discount, validity, status badge, usage stats)
+      - Card actions (Sửa / Tạm dừng / Xóa)
+      - "Đi tới Bảng điều khiển →" link
+      - "Bỏ qua, đi tới Bảng điều khiển" skip link
+    estimate: 15min
+    status: complete
+    completed: 2026-04-08
+
+total_estimate: 75min

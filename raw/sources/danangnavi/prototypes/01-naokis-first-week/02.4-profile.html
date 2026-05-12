@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DaNangNavi — Profile</title>
+  <link rel="stylesheet" href="shared/design-tokens.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .page-container { max-width: 1280px; margin: 0 auto; padding: 0 24px 80px; }
+    .profile-layout { display: grid; grid-template-columns: 300px 1fr 280px; gap: 32px; margin-top: 24px; }
+
+    /* Profile Header (sidebar left) */
+    .profile-sidebar { position: sticky; top: 88px; align-self: start; }
+    .profile-card { background: var(--color-surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-card); padding: 24px; text-align: center; }
+    .profile-avatar { width: 80px; height: 80px; border-radius: 50%; background: #D1D5DB; margin: 0 auto 16px; cursor: pointer; position: relative; display: flex; align-items: center; justify-content: center; font-size: 32px; }
+    .profile-name { font-family: var(--font-headlines); font-size: 22px; font-weight: 700; color: var(--color-text); margin-bottom: 6px; }
+    .status-badge { display: inline-block; font-size: 12px; font-weight: 600; color: var(--color-text-secondary); background: var(--color-bg); padding: 4px 12px; border-radius: var(--radius-full); margin-bottom: 8px; }
+    .profile-meta { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 16px; }
+    .profile-bio { font-size: 14px; color: var(--color-text); line-height: 1.5; margin-bottom: 16px; font-style: italic; }
+    .profile-edit { font-family: var(--font-ui); font-size: 13px; font-weight: 500; color: var(--color-text-secondary); background: none; border: 1px solid var(--color-border); padding: 8px 16px; border-radius: var(--radius-full); cursor: pointer; width: 100%; transition: all var(--transition-fast); }
+    .profile-edit:hover { border-color: var(--color-accent); color: var(--color-accent); }
+    .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--color-border); border-radius: var(--radius); overflow: hidden; margin-top: 16px; }
+    .stat-item { background: var(--color-surface); padding: 12px 8px; text-align: center; cursor: pointer; }
+    .stat-item:hover { background: var(--color-bg); }
+    .stat-number { font-size: 20px; font-weight: 700; color: var(--color-text); }
+    .stat-label { font-size: 11px; color: var(--color-text-secondary); margin-top: 2px; }
+
+    /* Center content */
+    .center-content {}
+
+    /* Senpai Progress */
+    .progress-card { background: var(--color-surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-card); padding: 24px; margin-bottom: 24px; }
+    .progress-title { font-family: var(--font-headlines); font-size: 18px; font-weight: 700; color: var(--color-text); margin-bottom: 20px; }
+    .progress-bar-container { display: flex; gap: 4px; margin-bottom: 16px; }
+    .progress-stage { flex: 1; height: 8px; border-radius: 4px; background: var(--color-border); position: relative; }
+    .progress-stage.active { background: var(--color-accent); }
+    .progress-stage.completed { background: var(--color-success); }
+    .progress-labels { display: flex; justify-content: space-between; margin-bottom: 20px; font-size: 11px; }
+    .progress-label { text-align: center; color: var(--color-text-secondary); }
+    .progress-label.active { color: var(--color-accent); font-weight: 600; }
+    .progress-current { font-size: 14px; color: var(--color-text-secondary); margin-bottom: 4px; }
+    .progress-current strong { color: var(--color-text); }
+    .progress-next { font-size: 14px; color: var(--color-accent); font-weight: 500; margin-bottom: 20px; }
+
+    /* Milestones */
+    .milestone-list { display: flex; flex-direction: column; gap: 10px; }
+    .milestone-item { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: var(--radius); font-size: 14px; }
+    .milestone-item.complete { background: rgba(39,174,96,0.06); color: var(--color-text); }
+    .milestone-item.incomplete { background: var(--color-bg); color: var(--color-text-secondary); }
+    .milestone-check { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; }
+    .milestone-check.done { background: var(--color-success); color: #FFF; }
+    .milestone-check.pending { background: var(--color-border); color: var(--color-text-secondary); }
+
+    /* Activity Timeline */
+    .timeline-card { background: var(--color-surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-card); padding: 24px; }
+    .timeline-title { font-family: var(--font-headlines); font-size: 18px; font-weight: 700; color: var(--color-text); margin-bottom: 20px; }
+    .timeline-list { position: relative; padding-left: 24px; }
+    .timeline-list::before { content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: var(--color-border); }
+    .timeline-item { position: relative; padding: 0 0 20px 16px; }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-dot { position: absolute; left: -20px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--color-accent); border: 2px solid var(--color-surface); }
+    .timeline-text { font-size: 14px; color: var(--color-text); }
+    .timeline-time { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; }
+
+    /* Right sidebar: Saved + Settings */
+    .right-sidebar { }
+    .saved-card { background: var(--color-surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-card); padding: 20px; margin-bottom: 20px; }
+    .saved-title { font-family: var(--font-headlines); font-size: 16px; font-weight: 700; color: var(--color-text); margin-bottom: 16px; }
+    .saved-item { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--color-border); cursor: pointer; }
+    .saved-item:last-child { border-bottom: none; }
+    .saved-item:hover { color: var(--color-accent); }
+    .saved-icon { font-size: 20px; width: 36px; height: 36px; background: var(--color-bg); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .saved-info { flex: 1; }
+    .saved-name { font-size: 14px; font-weight: 500; color: var(--color-text); }
+    .saved-type { font-size: 12px; color: var(--color-text-secondary); }
+
+    /* Settings */
+    .settings-card { background: var(--color-surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-card); padding: 20px; }
+    .settings-link { display: flex; align-items: center; gap: 10px; padding: 10px 0; font-size: 14px; color: var(--color-text-secondary); cursor: pointer; border-bottom: 1px solid var(--color-border); transition: color var(--transition-fast); }
+    .settings-link:last-child { border-bottom: none; }
+    .settings-link:hover { color: var(--color-accent); }
+    .settings-link.logout { color: var(--color-error); }
+    .settings-link.logout:hover { color: var(--color-error); opacity: 0.8; }
+  </style>
+</head>
+<body>
+  <div id="nav-container"></div>
+  <div class="page-container">
+    <div class="profile-layout">
+
+      <!-- Left: Profile Card -->
+      <div class="profile-sidebar">
+        <div class="profile-card" id="profile-card"></div>
+      </div>
+
+      <!-- Center: Progress + Timeline -->
+      <div class="center-content">
+        <div class="progress-card" id="progress-card"></div>
+        <div class="timeline-card" id="timeline-card"></div>
+      </div>
+
+      <!-- Right: Saved + Settings -->
+      <div class="right-sidebar">
+        <div class="saved-card" id="saved-card"></div>
+        <div class="settings-card" id="settings-card"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module">
+    import { renderTopNav } from './components/top-nav.js';
+    const res = await fetch('./data/demo-data.json');
+    const data = await res.json();
+    const user = data.currentUser;
+
+    renderTopNav(document.getElementById('nav-container'), { activePage: 'profile' });
+
+    // Profile Card
+    document.getElementById('profile-card').innerHTML = `
+      <div class="profile-avatar">👤</div>
+      <div class="profile-name">${user.name}</div>
+      <div class="status-badge">🔰 Newcomer</div>
+      <div class="profile-meta">📅 Since ${user.memberSince}<br>📍 Da Nang</div>
+      <div class="profile-bio">"${user.bio}"</div>
+      <button class="profile-edit">Edit Profile</button>
+      <div class="stats-row">
+        <div class="stat-item"><div class="stat-number">${user.stats.posts}</div><div class="stat-label">Posts</div></div>
+        <div class="stat-item"><div class="stat-number">${user.stats.eventsJoined}</div><div class="stat-label">Events</div></div>
+        <div class="stat-item"><div class="stat-number">${user.stats.likesReceived}</div><div class="stat-label">Likes</div></div>
+      </div>
+    `;
+
+    // Senpai Progress
+    const milestones = user.milestones;
+    const completedCount = Object.values(milestones).filter(Boolean).length;
+    const totalMilestones = Object.keys(milestones).length;
+
+    document.getElementById('progress-card').innerHTML = `
+      <div class="progress-title">🏆 Path to Senpai</div>
+      <div class="progress-bar-container">
+        <div class="progress-stage active"></div>
+        <div class="progress-stage"></div>
+        <div class="progress-stage"></div>
+        <div class="progress-stage"></div>
+      </div>
+      <div class="progress-labels">
+        <div class="progress-label active">Newcomer</div>
+        <div class="progress-label">Active Member</div>
+        <div class="progress-label">Contributor</div>
+        <div class="progress-label">Senpai ⭐</div>
+      </div>
+      <div class="progress-current">Current status: <strong>Newcomer</strong></div>
+      <div class="progress-next">Next step: Active Member (${completedCount}/${totalMilestones} complete)</div>
+      <div class="milestone-list">
+        <div class="milestone-item ${milestones.firstPost ? 'complete' : 'incomplete'}">
+          <div class="milestone-check ${milestones.firstPost ? 'done' : 'pending'}">${milestones.firstPost ? '✓' : ''}</div>
+          First post in community
+        </div>
+        <div class="milestone-item ${milestones.threeReplies ? 'complete' : 'incomplete'}">
+          <div class="milestone-check ${milestones.threeReplies ? 'done' : 'pending'}">${milestones.threeReplies ? '✓' : ''}</div>
+          Post 3 replies (0/3)
+        </div>
+        <div class="milestone-item ${milestones.attendEvent ? 'complete' : 'incomplete'}">
+          <div class="milestone-check ${milestones.attendEvent ? 'done' : 'pending'}">${milestones.attendEvent ? '✓' : ''}</div>
+          Attend an event
+        </div>
+        <div class="milestone-item ${milestones.profilePhoto ? 'complete' : 'incomplete'}">
+          <div class="milestone-check ${milestones.profilePhoto ? 'done' : 'pending'}">${milestones.profilePhoto ? '✓' : ''}</div>
+          Set a profile photo
+        </div>
+        <div class="milestone-item ${milestones.fiveLikes ? 'complete' : 'incomplete'}">
+          <div class="milestone-check ${milestones.fiveLikes ? 'done' : 'pending'}">${milestones.fiveLikes ? '✓' : ''}</div>
+          Receive 5 likes
+        </div>
+      </div>
+    `;
+
+    // Activity Timeline
+    document.getElementById('timeline-card').innerHTML = `
+      <div class="timeline-title">📋 Recent Activity</div>
+      <div class="timeline-list">
+        ${data.activityTimeline.map(a => `
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-text">${a.icon} ${a.text}</div>
+            <div class="timeline-time">${a.time}</div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+
+    // Saved Content
+    document.getElementById('saved-card').innerHTML = `
+      <div class="saved-title">❤️ Saved Content</div>
+      ${data.savedContent.map(s => `
+        <div class="saved-item">
+          <div class="saved-icon">${s.icon}</div>
+          <div class="saved-info">
+            <div class="saved-name">${s.title}</div>
+            <div class="saved-type">${s.type}</div>
+          </div>
+        </div>
+      `).join('')}
+    `;
+
+    // Settings
+    document.getElementById('settings-card').innerHTML = `
+      <div class="settings-link">⚙️ Settings</div>
+      <div class="settings-link">🔔 Notifications</div>
+      <div class="settings-link">🌐 Language: English</div>
+      <div class="settings-link">❓ Help & FAQ</div>
+      <div class="settings-link logout">Logout</div>
+    `;
+
+    console.log('[Profile] Loaded');
+  </script>
+</body>
+</html>

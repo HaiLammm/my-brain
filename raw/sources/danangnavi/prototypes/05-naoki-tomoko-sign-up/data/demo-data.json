@@ -1,0 +1,80 @@
+{
+  "currentUser": {
+    "id": "user-naoki",
+    "name": "Naoki Tanaka",
+    "nameJp": "田中直樹",
+    "age": 32,
+    "role": "Software Engineer",
+    "situation": "newcomer",
+    "weeksInDanang": 1,
+    "location": "Hai Chau District",
+    "avatar": "/assets/avatars/naoki.jpg",
+    "registered": false
+  },
+  "triggerListing": {
+    "id": "listing-apt-001",
+    "title": "Modern 1BR Apartment near Dragon Bridge",
+    "titleJp": "ドラゴンブリッジ近くのモダン1BRアパート",
+    "type": "Apartment",
+    "price": 8000000,
+    "priceJpy": 46000,
+    "currency": "VND/month",
+    "area": "Hai Chau",
+    "photo": "/assets/listings/apartment-dragon-bridge.jpg",
+    "rating": 4.7,
+    "reviewCount": 15,
+    "senpaiVerified": true
+  },
+  "socialProof": {
+    "userCount": 12000,
+    "text": "12,000 users active"
+  },
+  "notificationCategories": [
+    {
+      "id": "new-listings",
+      "label": "New Listings in Area",
+      "labelJp": "新着物件",
+      "description": "New listings matching your preferences",
+      "descriptionJp": "あなたのエリアの新しい物件",
+      "icon": "house",
+      "defaultOn": true
+    },
+    {
+      "id": "community-replies",
+      "label": "Community Replies",
+      "labelJp": "コミュニティ返信",
+      "description": "Replies to your posts and @mentions",
+      "descriptionJp": "質問への返信や@メンション",
+      "icon": "message-circle",
+      "defaultOn": true
+    },
+    {
+      "id": "weekly-deals",
+      "label": "Weekly Deals",
+      "labelJp": "お得情報",
+      "description": "Weekly deals digest",
+      "descriptionJp": "週1回のお得な情報まとめ",
+      "icon": "tag",
+      "defaultOn": true
+    },
+    {
+      "id": "events",
+      "label": "Events Near You",
+      "labelJp": "イベント",
+      "description": "Events happening near you",
+      "descriptionJp": "近くのイベント情報",
+      "icon": "calendar",
+      "defaultOn": false
+    }
+  ],
+  "frequencyOptions": [
+    { "id": "instant", "label": "Instant", "labelJp": "すぐに", "description": "Real-time notifications" },
+    { "id": "daily", "label": "Daily Digest", "labelJp": "毎日まとめ", "description": "Once daily summary", "default": true },
+    { "id": "weekly", "label": "Weekly Digest", "labelJp": "週1まとめ", "description": "Once weekly summary" }
+  ],
+  "deliveryChannels": [
+    { "id": "line", "label": "LINE Notifications", "labelJp": "LINEで通知を受け取る", "defaultOn": true },
+    { "id": "push", "label": "Push Notifications", "labelJp": "プッシュ通知", "defaultOn": false, "note": "Browser permission required" },
+    { "id": "email", "label": "Email Notifications", "labelJp": "メール通知", "defaultOn": false }
+  ]
+}

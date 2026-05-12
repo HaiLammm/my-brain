@@ -1,0 +1,101 @@
+view: V1 - Listing Editor
+spec: 04.1-listing-editor.md
+route: /business/listings/new
+device: desktop-only (1440px)
+fidelity: design-system
+
+sections:
+  S1:
+    name: Page Shell & Progress Header
+    objects:
+      - Layout container (max-width 1200px centered)
+      - Sticky header bar
+      - 3-step indicator (Thông tin · Ảnh & Menu · Xem trước)
+      - Step connectors (line between circles)
+      - Time estimate label
+      - Back link "← Bảng điều khiển"
+      - Step navigation logic (click completed steps)
+    estimate: 20min
+    status: complete
+    completed: 2026-04-08
+
+  S2:
+    name: Step 1 — Basic Info Form
+    objects:
+      - Tên doanh nghiệp (text input, required)
+      - Danh mục (dropdown select, required)
+      - Địa chỉ (text input + map pin, required)
+      - Số điện thoại (phone input, required)
+      - Giờ mở cửa (time selector + presets, required)
+      - Mô tả ngắn (textarea, optional, max 200)
+      - Zalo liên hệ (text input, optional)
+      - Required indicators, error states, focus states
+      - "Tiếp theo" button
+    estimate: 25min
+    status: complete
+    completed: 2026-04-08
+
+  S3:
+    name: Step 2 — Photos Upload
+    objects:
+      - Photo upload grid (3-column)
+      - Upload slot with "+" icon
+      - Cover label "Ảnh bìa" on first photo
+      - Photo preview thumbnails
+      - Remove "×" button per photo
+      - Reorder drag handle
+      - Max 10 photos indicator
+      - Section label "Ảnh doanh nghiệp"
+      - Instruction text
+    estimate: 20min
+    status: complete
+    completed: 2026-04-08
+
+  S4:
+    name: Step 2 — Menu OCR
+    objects:
+      - Section label "Menu / Thực đơn"
+      - OCR trigger button "📷 Chụp ảnh thực đơn"
+      - Processing spinner + "Đang nhận dạng menu..."
+      - Editable result table (Món ăn VI | Dịch JP | Giá | Confidence)
+      - Confidence indicators (✅ high / ⚠️ medium)
+      - Inline cell editing
+      - Add row link "＋ Thêm món"
+    estimate: 25min
+    status: complete
+    completed: 2026-04-08
+
+  S5:
+    name: Step 3 — Preview & Publish
+    objects:
+      - 2-column split layout (form 55% / preview 45%)
+      - Japanese preview card in phone mockup
+      - Live-updating preview content
+      - Restaurant name in katakana
+      - Menu list in Japanese with ¥ prices
+      - "新規" (New) badge
+      - Refresh translation icon
+      - "🇯🇵 日本語プレビュー" label
+      - "Đăng tin ngay" publish button (sticky)
+      - "Lưu nháp" save draft link
+      - Terms note
+    estimate: 25min
+    status: complete
+    completed: 2026-04-08
+
+  S6:
+    name: Post-Publish Success
+    objects:
+      - Full-screen success overlay
+      - Animated green checkmark (bounce)
+      - Headline "Tin đăng đã được đăng thành công! 🎉"
+      - Subtext
+      - Listing link "Xem tin đăng →"
+      - Coupon CTA card (teal left border)
+      - "Tạo Coupon ngay →" button → 04.2
+      - Skip link "Bỏ qua, đi đến Bảng điều khiển →" → 04.3
+    estimate: 15min
+    status: complete
+    completed: 2026-04-08
+
+total_estimate: 130min

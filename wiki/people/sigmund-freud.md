@@ -20,6 +20,7 @@ Sigmund Freud (1856-1939) là bác sĩ tâm thần người Áo, cha đẻ của
 ## Key Sources
 
 - [[sources/man-and-his-symbols]] — được nhắc đến trong bối cảnh so sánh về vô thức
+- [[sources/phan-i-qua-khu-va-tuong-lai-trong-vo-thuc]] — mô tả cơ chế kìm nén và ký ức bị kìm nén
 
 ## Notes
 

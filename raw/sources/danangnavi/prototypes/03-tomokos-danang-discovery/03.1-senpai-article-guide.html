@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top 5 Bun Cha near My Khe Beach — DaNangNavi</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ========================================
+       DESIGN TOKENS (CSS Custom Properties)
+       ======================================== */
+    :root {
+      /* Brand Colors */
+      --color-primary: #1B2A4A;
+      --color-secondary: #FF6B4A;
+      --color-accent: #2EC4B6;
+      
+      /* Surface Colors */
+      --color-bg: #FAFAF8;
+      --color-surface: #FFFFFF;
+      --color-surface-hover: #F5F5F3;
+      
+      /* Text Colors */
+      --color-text-primary: #0D1B2A;
+      --color-text-secondary: #6B7280;
+      --color-text-inverse: #FFFFFF;
+      --color-text-link: #2EC4B6;
+      
+      /* Status Colors */
+      --color-success: #27AE60;
+      --color-warning: #F2994A;
+      --color-error: #EB5757;
+      --color-info: #2EC4B6;
+      
+      /* Typography */
+      --font-family-primary: 'Noto Sans JP', sans-serif;
+      --font-family-ui: 'Inter', 'Noto Sans', sans-serif;
+      
+      /* Type Scale */
+      --text-h1: 2rem;
+      --text-h2: 1.5rem;
+      --text-h3: 1.25rem;
+      --text-body: 1rem;
+      --text-caption: 0.875rem;
+      --text-small: 0.75rem;
+      
+      /* Spacing */
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 12px;
+      --space-lg: 16px;
+      --space-xl: 24px;
+      --space-2xl: 32px;
+      --space-3xl: 48px;
+      
+      /* Border Radius */
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
+      
+      /* Shadows */
+      --shadow-card: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-card-hover: 0 4px 16px rgba(0,0,0,0.12);
+      --shadow-modal: 0 8px 32px rgba(0,0,0,0.2);
+      --shadow-sticky: 0 2px 8px rgba(0,0,0,0.06);
+      
+      /* Animation */
+      --duration-fast: 150ms;
+      --duration-normal: 300ms;
+      --duration-slow: 500ms;
+      --easing-default: ease-in-out;
+      
+      /* Layout */
+      --bottom-nav-height: 64px;
+      --fab-size: 56px;
+      --fab-offset: 24px;
+    }
+    
+    /* ========================================
+       CSS RESET & BASE STYLES
+       ======================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+    }
+    
+    body {
+      font-family: var(--font-family-primary);
+      font-size: var(--text-body);
+      line-height: 1.6;
+      color: var(--color-text-primary);
+      background-color: var(--color-bg);
+      min-height: 100vh;
+      padding-bottom: calc(var(--bottom-nav-height) + var(--space-xl));
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    a {
+      color: var(--color-text-link);
+      text-decoration: none;
+      transition: color var(--duration-fast) var(--easing-default);
+    }
+    
+    a:hover {
+      color: var(--color-primary);
+    }
+    
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+    
+    /* ========================================
+       PAGE CONTAINER
+       ======================================== */
+    .page-container {
+      max-width: 640px;
+      margin: 0 auto;
+      background-color: var(--color-surface);
+      min-height: 100vh;
+      position: relative;
+    }
+    
+    @media (min-width: 768px) {
+      .page-container {
+        max-width: 720px;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .page-container {
+        max-width: 800px;
+        box-shadow: var(--shadow-card);
+      }
+    }
+    
+    /* ========================================
+       MAIN CONTENT AREA
+       ======================================== */
+    .main-content {
+      padding-bottom: var(--space-xl);
+    }
+    
+    /* ========================================
+       BOTTOM TAB NAVIGATION
+       ======================================== */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: var(--bottom-nav-height);
+      background-color: var(--color-surface);
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.06);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .bottom-nav__container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      max-width: 640px;
+      padding: 0 var(--space-sm);
+    }
+    
+    .bottom-nav__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-sm) var(--space-md);
+      color: var(--color-text-secondary);
+      font-size: var(--text-small);
+      font-weight: 500;
+      text-decoration: none;
+      transition: color var(--duration-fast) var(--easing-default);
+      min-width: 64px;
+    }
+    
+    .bottom-nav__item:hover {
+      color: var(--color-primary);
+    }
+    
+    .bottom-nav__item--active {
+      color: var(--color-secondary);
+    }
+    
+    .bottom-nav__icon {
+      width: 24px;
+      height: 24px;
+      margin-bottom: var(--space-xs);
+    }
+    
+    .bottom-nav__label {
+      line-height: 1;
+    }
+    
+    /* ========================================
+       TRANSLATION FAB
+       ======================================== */
+    .translation-fab {
+      position: fixed;
+      bottom: calc(var(--bottom-nav-height) + var(--fab-offset));
+      right: var(--fab-offset);
+      width: var(--fab-size);
+      height: var(--fab-size);
+      border-radius: var(--radius-full);
+      background: linear-gradient(135deg, var(--color-secondary), #e55a3a);
+      color: var(--color-text-inverse);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(255, 107, 74, 0.4);
+      z-index: 999;
+      transition: transform var(--duration-fast) var(--easing-default),
+                  box-shadow var(--duration-fast) var(--easing-default);
+    }
+    
+    .translation-fab:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 20px rgba(255, 107, 74, 0.5);
+      color: var(--color-text-inverse);
+    }
+    
+    .translation-fab:active {
+      transform: scale(0.95);
+    }
+    
+    .translation-fab__icon {
+      width: 28px;
+      height: 28px;
+    }
+    
+    .translation-fab__tooltip {
+      position: absolute;
+      right: calc(100% + var(--space-sm));
+      background-color: var(--color-primary);
+      color: var(--color-text-inverse);
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--radius-sm);
+      font-size: var(--text-small);
+      font-weight: 500;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--duration-fast) var(--easing-default);
+    }
+    
+    .translation-fab:hover .translation-fab__tooltip {
+      opacity: 1;
+    }
+    
+    @media (max-width: 767px) {
+      .translation-fab__tooltip {
+        display: none;
+      }
+    }
+    
+    /* ========================================
+       S1: ARTICLE HEADER
+       ======================================== */
+    .article-header {
+      position: relative;
+      width: 100%;
+    }
+    
+    .article-header__hero {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+    
+    .article-header__hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .article-header__overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 70%;
+      background: linear-gradient(
+        to top,
+        rgba(27, 42, 74, 0.85) 0%,
+        rgba(27, 42, 74, 0.6) 40%,
+        transparent 100%
+      );
+    }
+    
+    .article-header__content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: var(--space-lg);
+      color: var(--color-text-inverse);
+    }
+    
+    @media (min-width: 768px) {
+      .article-header__content {
+        padding: var(--space-xl);
+      }
+    }
+    
+    .article-header__title {
+      font-size: var(--text-h2);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: var(--space-sm);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    
+    @media (min-width: 768px) {
+      .article-header__title {
+        font-size: var(--text-h1);
+      }
+    }
+    
+    .article-header__subtitle {
+      font-size: var(--text-caption);
+      font-weight: 400;
+      opacity: 0.85;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .article-header__author {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .article-header__avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-full);
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    
+    .article-header__author-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    
+    .article-header__author-name {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      font-size: var(--text-caption);
+      font-weight: 600;
+    }
+    
+    .article-header__author-detail {
+      font-size: var(--text-small);
+      opacity: 0.7;
+    }
+    
+    .senpai-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: 2px var(--space-sm);
+      background-color: var(--color-accent);
+      color: var(--color-text-inverse);
+      font-size: var(--text-small);
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      line-height: 1.2;
+    }
+    
+    .article-header__meta {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      font-size: var(--text-small);
+      opacity: 0.7;
+    }
+    
+    .article-header__meta-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    
+    /* ========================================
+       S2: QUICK FILTERS (STICKY)
+       ======================================== */
+    .filters-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--color-surface);
+      padding: var(--space-md) var(--space-lg);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      box-shadow: var(--shadow-sticky);
+    }
+    
+    .filters-bar__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-md);
+    }
+    
+    .filters-bar__chips {
+      display: flex;
+      gap: var(--space-sm);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    
+    .filters-bar__chips::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .filter-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: var(--space-sm) var(--space-md);
+      background-color: var(--color-bg);
+      border: 1px solid transparent;
+      border-radius: var(--radius-full);
+      font-family: var(--font-family-ui);
+      font-size: var(--text-small);
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all var(--duration-fast) var(--easing-default);
+    }
+    
+    .filter-chip:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+    
+    .filter-chip--active {
+      background-color: var(--color-accent);
+      color: var(--color-text-inverse);
+      border-color: var(--color-accent);
+    }
+    
+    .filters-bar__location {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+      white-space: nowrap;
+    }
+    
+    /* ========================================
+       S2: RESTAURANT LIST
+       ======================================== */
+    .restaurant-list {
+      padding: var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+    
+    .restaurant-card {
+      background-color: var(--color-surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      transition: box-shadow var(--duration-normal) var(--easing-default);
+    }
+    
+    .restaurant-card:hover {
+      box-shadow: var(--shadow-card-hover);
+    }
+    
+    .restaurant-card__image-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      overflow: hidden;
+    }
+    
+    .restaurant-card__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .restaurant-card__rank {
+      position: absolute;
+      top: var(--space-md);
+      left: var(--space-md);
+      width: 40px;
+      height: 40px;
+      background-color: var(--color-accent);
+      color: var(--color-text-inverse);
+      font-size: var(--text-h3);
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .restaurant-card__verified {
+      position: absolute;
+      top: var(--space-md);
+      right: var(--space-md);
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: var(--space-xs) var(--space-sm);
+      background-color: rgba(39, 174, 96, 0.95);
+      color: var(--color-text-inverse);
+      font-size: var(--text-small);
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+    }
+    
+    .restaurant-card__coupon-badge {
+      position: absolute;
+      bottom: var(--space-md);
+      right: var(--space-md);
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: var(--space-xs) var(--space-sm);
+      background-color: var(--color-secondary);
+      color: var(--color-text-inverse);
+      font-size: var(--text-small);
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: transform var(--duration-fast);
+    }
+    
+    .restaurant-card__coupon-badge:hover {
+      transform: scale(1.05);
+    }
+    
+    .restaurant-card__body {
+      padding: var(--space-lg);
+    }
+    
+    .restaurant-card__header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .restaurant-card__name {
+      font-size: var(--text-h3);
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-bottom: 2px;
+    }
+    
+    .restaurant-card__name-jp {
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+    }
+    
+    .restaurant-card__rating {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-size: var(--text-caption);
+      color: var(--color-text-primary);
+      font-weight: 500;
+    }
+    
+    .restaurant-card__rating svg {
+      color: #F59E0B;
+    }
+    
+    .restaurant-card__reviews {
+      color: var(--color-text-secondary);
+      font-weight: 400;
+    }
+    
+    .restaurant-card__meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-md);
+    }
+    
+    .restaurant-card__fair-price {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: 2px var(--space-sm);
+      background-color: rgba(39, 174, 96, 0.1);
+      color: var(--color-success);
+      font-size: var(--text-small);
+      font-weight: 600;
+      border-radius: var(--radius-full);
+    }
+    
+    .restaurant-card__price {
+      font-size: var(--text-caption);
+      color: var(--color-text-primary);
+    }
+    
+    .restaurant-card__price-jpy {
+      color: var(--color-text-secondary);
+    }
+    
+    .restaurant-card__distance {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-size: var(--text-caption);
+      color: var(--color-accent);
+      font-weight: 500;
+    }
+    
+    .restaurant-card__quote {
+      padding: var(--space-md);
+      background-color: var(--color-bg);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-md);
+      border-left: 3px solid var(--color-accent);
+    }
+    
+    .restaurant-card__quote-text {
+      font-size: var(--text-caption);
+      color: var(--color-text-primary);
+      font-style: italic;
+      line-height: 1.5;
+    }
+    
+    .restaurant-card__quote-author {
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+      margin-top: var(--space-xs);
+    }
+    
+    .restaurant-card__actions {
+      display: flex;
+      gap: var(--space-lg);
+    }
+    
+    .restaurant-card__action {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-size: var(--text-caption);
+      color: var(--color-accent);
+      font-weight: 500;
+    }
+    
+    .restaurant-card__action:hover {
+      color: var(--color-primary);
+    }
+    
+    /* ========================================
+       S3: SENPAI TIPS SECTION
+       ======================================== */
+    .section-tips {
+      padding: var(--space-xl) var(--space-lg);
+      background-color: var(--color-bg);
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .section-header__icon {
+      font-size: var(--text-h2);
+    }
+    
+    .section-header__title {
+      font-size: var(--text-h3);
+      font-weight: 700;
+      color: var(--color-text-primary);
+    }
+    
+    .tip-cards {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    
+    .tip-card {
+      display: flex;
+      gap: var(--space-md);
+      padding: var(--space-lg);
+      background-color: var(--color-surface);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-card);
+    }
+    
+    .tip-card__avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-full);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    
+    .tip-card__content {
+      flex: 1;
+    }
+    
+    .tip-card__author {
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .tip-card__author strong {
+      color: var(--color-text-primary);
+      font-weight: 600;
+    }
+    
+    .tip-card__text {
+      font-size: var(--text-caption);
+      color: var(--color-text-primary);
+      line-height: 1.5;
+    }
+    
+    .tips-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+      margin-top: var(--space-lg);
+      padding: var(--space-md) var(--space-xl);
+      background-color: var(--color-secondary);
+      color: var(--color-text-inverse);
+      font-size: var(--text-caption);
+      font-weight: 600;
+      border-radius: var(--radius-full);
+      transition: opacity var(--duration-fast);
+    }
+    
+    .tips-cta:hover {
+      opacity: 0.9;
+      color: var(--color-text-inverse);
+    }
+    
+    /* ========================================
+       S4: MAP OVERVIEW
+       ======================================== */
+    .section-map {
+      padding: var(--space-lg);
+    }
+    
+    .map-container {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      background-color: #E8F4F8;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      cursor: pointer;
+      transition: height var(--duration-normal) var(--easing-default);
+    }
+    
+    .map-container--expanded {
+      height: 50vh;
+    }
+    
+    .map-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-md);
+      color: var(--color-text-secondary);
+    }
+    
+    .map-placeholder__icon {
+      font-size: 48px;
+      opacity: 0.6;
+    }
+    
+    .map-placeholder__text {
+      font-size: var(--text-caption);
+    }
+    
+    .map-pins {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    
+    .map-pin {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background-color: var(--color-primary);
+      color: var(--color-text-inverse);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--text-caption);
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      transform: translate(-50%, -50%);
+      pointer-events: auto;
+      cursor: pointer;
+      transition: transform var(--duration-fast);
+    }
+    
+    .map-pin:hover {
+      transform: translate(-50%, -50%) scale(1.2);
+      z-index: 10;
+    }
+    
+    .map-pin--user {
+      background-color: #3B82F6;
+      width: 16px;
+      height: 16px;
+      font-size: 0;
+    }
+    
+    .map-pin--user::after {
+      content: '';
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background-color: rgba(59, 130, 246, 0.3);
+      border-radius: var(--radius-full);
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(2); opacity: 0; }
+    }
+    
+    .map-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: var(--space-md);
+    }
+    
+    .map-actions__link {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-size: var(--text-caption);
+      color: var(--color-accent);
+      font-weight: 500;
+    }
+    
+    .map-actions__expand {
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+    
+    .map-actions__expand:hover {
+      color: var(--color-text-primary);
+    }
+  </style>
+</head>
+<body>
+  <!-- Page Container -->
+  <div class="page-container">
+    
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- S1: Article Header -->
+      <header class="article-header">
+        <div class="article-header__hero">
+          <img 
+            src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=800&q=80" 
+            alt="Delicious Vietnamese Bun Cha with grilled pork and noodles" 
+            class="article-header__hero-img"
+          >
+          <div class="article-header__overlay"></div>
+        </div>
+        
+        <div class="article-header__content">
+          <h1 class="article-header__title">Top 5 Bun Cha near My Khe Beach</h1>
+          <p class="article-header__subtitle">Only restaurants senpai actually frequent</p>
+          
+          <div class="article-header__author">
+            <img 
+              src="https://i.pravatar.cc/80?img=11" 
+              alt="Tanaka-san" 
+              class="article-header__avatar"
+            >
+            <div class="article-header__author-info">
+              <span class="article-header__author-name">
+                Tanaka-san
+                <span class="senpai-badge">Senpai</span>
+              </span>
+              <span class="article-header__author-detail">3 years in Da Nang</span>
+            </div>
+          </div>
+          
+          <div class="article-header__meta">
+            <span class="article-header__meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              Apr 1, 2026
+            </span>
+            <span class="article-header__meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              3 min read
+            </span>
+          </div>
+        </div>
+      </header>
+      
+      <!-- S2: Quick Filters -->
+      <div class="filters-bar">
+        <div class="filters-bar__row">
+          <div class="filters-bar__chips">
+            <button class="filter-chip filter-chip--active" data-sort="distance">Nearest</button>
+            <button class="filter-chip" data-sort="rating">Top Rated</button>
+            <button class="filter-chip" data-sort="price">Cheapest</button>
+          </div>
+          <div class="filters-bar__location">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            From My Khe Beach
+          </div>
+        </div>
+      </div>
+      
+      <!-- S2: Restaurant List -->
+      <div class="restaurant-list" id="restaurant-list">
+        <!-- Restaurant cards will be rendered by JavaScript -->
+      </div>
+      
+      <!-- S3: Senpai Tips -->
+      <section class="section-tips">
+        <div class="section-header">
+          <span class="section-header__icon">💡</span>
+          <h2 class="section-header__title">Senpai Dining Tips</h2>
+        </div>
+        
+        <div class="tip-cards" id="tip-cards">
+          <!-- Tip cards will be rendered by JavaScript -->
+        </div>
+        
+        <a href="03.2-translation-tools.html" class="tips-cta">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 8l6 6"></path>
+            <path d="M4 14l6-6 2-3"></path>
+            <path d="M2 5h12"></path>
+            <path d="M7 2h1"></path>
+            <path d="M22 22l-5-10-5 10"></path>
+            <path d="M14 18h6"></path>
+          </svg>
+          Use Translation Tools
+        </a>
+      </section>
+      
+      <!-- S4: Map Overview -->
+      <section class="section-map">
+        <div class="section-header">
+          <span class="section-header__icon">📍</span>
+          <h2 class="section-header__title">Map Overview</h2>
+        </div>
+        
+        <div class="map-container" id="map-container">
+          <div class="map-placeholder">
+            <span class="map-placeholder__icon">🗺️</span>
+            <span class="map-placeholder__text">Tap to expand map</span>
+          </div>
+          <div class="map-pins" id="map-pins">
+            <!-- Map pins will be positioned by JavaScript -->
+          </div>
+        </div>
+        
+        <div class="map-actions">
+          <a href="#" class="map-actions__link" target="_blank">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            Open in Maps
+          </a>
+          <button class="map-actions__expand" id="map-expand-btn">
+            <span id="map-expand-text">Expand</span>
+          </button>
+        </div>
+      </section>
+      
+    </main>
+    
+  </div>
+  
+  <!-- Translation FAB -->
+  <a href="03.2-translation-tools.html" class="translation-fab" aria-label="Open translation tools">
+    <span class="translation-fab__tooltip">Translation Tools</span>
+    <svg class="translation-fab__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 8l6 6"/>
+      <path d="M4 14l6-6 2-3"/>
+      <path d="M2 5h12"/>
+      <path d="M7 2h1"/>
+      <path d="M22 22l-5-10-5 10"/>
+      <path d="M14 18h6"/>
+    </svg>
+  </a>
+  
+  <!-- Bottom Tab Navigation -->
+  <nav class="bottom-nav" aria-label="Main navigation">
+    <div class="bottom-nav__container">
+      <a href="#" class="bottom-nav__item">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span class="bottom-nav__label">Home</span>
+      </a>
+      
+      <a href="#" class="bottom-nav__item bottom-nav__item--active" aria-current="page">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+        </svg>
+        <span class="bottom-nav__label">Guides</span>
+      </a>
+      
+      <a href="03.3-deals-coupons.html" class="bottom-nav__item">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+          <line x1="7" y1="7" x2="7.01" y2="7"/>
+        </svg>
+        <span class="bottom-nav__label">Deals</span>
+      </a>
+      
+      <a href="03.2-translation-tools.html" class="bottom-nav__item">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 8l6 6"/>
+          <path d="M4 14l6-6 2-3"/>
+          <path d="M2 5h12"/>
+          <path d="M7 2h1"/>
+          <path d="M22 22l-5-10-5 10"/>
+          <path d="M14 18h6"/>
+        </svg>
+        <span class="bottom-nav__label">Translate</span>
+      </a>
+      
+      <a href="#" class="bottom-nav__item">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+        <span class="bottom-nav__label">Profile</span>
+      </a>
+    </div>
+  </nav>
+  
+  <!-- JavaScript -->
+  <script>
+    // Demo data (inline for reliability)
+    const demoData = {
+      restaurants: [
+        {
+          id: "rest-001",
+          name: "Bun Cha Huong Lien",
+          nameJp: "ブンチャー・フォンリエン",
+          rank: 1,
+          rating: 4.8,
+          reviewCount: 23,
+          fairPrice: "fair",
+          priceMin: 50000,
+          priceMax: 80000,
+          priceMinJpy: 290,
+          priceMaxJpy: 460,
+          distance: "5 min walk",
+          distanceMeters: 400,
+          senpaiVerified: true,
+          quote: "The dipping sauce here is incredible. Tourists and locals pay the same price.",
+          quoteAuthor: "Tanaka-san",
+          hasCoupon: true,
+          couponText: "15% off",
+          photo: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600&q=80",
+          mapPos: { x: 65, y: 35 }
+        },
+        {
+          id: "rest-002",
+          name: "Quan Bun Cha 109",
+          nameJp: "クアン・ブンチャー109",
+          rank: 2,
+          rating: 4.6,
+          reviewCount: 18,
+          fairPrice: "fair",
+          priceMin: 40000,
+          priceMax: 60000,
+          priceMinJpy: 230,
+          priceMaxJpy: 350,
+          distance: "8 min walk",
+          distanceMeters: 650,
+          senpaiVerified: true,
+          quote: "Best value bun cha in the area. Big portions, super friendly staff.",
+          quoteAuthor: "Yamamoto-san",
+          hasCoupon: false,
+          photo: "https://images.unsplash.com/photo-1555126634-323283e090fa?w=600&q=80",
+          mapPos: { x: 45, y: 55 }
+        },
+        {
+          id: "rest-003",
+          name: "Bun Cha Ca Da Nang",
+          nameJp: "ブンチャーカー・ダナン",
+          rank: 3,
+          rating: 4.7,
+          reviewCount: 31,
+          fairPrice: "fair",
+          priceMin: 48000,
+          priceMax: 70000,
+          priceMinJpy: 280,
+          priceMaxJpy: 400,
+          distance: "12 min walk",
+          distanceMeters: 950,
+          senpaiVerified: true,
+          quote: "Da Nang's specialty! Fish cake bun cha — you won't find this in Hanoi.",
+          quoteAuthor: "Sato-san",
+          hasCoupon: true,
+          couponText: "10% off",
+          photo: "https://images.unsplash.com/photo-1576577445504-6af96477db52?w=600&q=80",
+          mapPos: { x: 30, y: 40 }
+        },
+        {
+          id: "rest-004",
+          name: "Nha Hang Ngoc Anh",
+          nameJp: "ニャーハン・ゴックアン",
+          rank: 4,
+          rating: 4.3,
+          reviewCount: 12,
+          fairPrice: "fair",
+          priceMin: 35000,
+          priceMax: 55000,
+          priceMinJpy: 200,
+          priceMaxJpy: 300,
+          distance: "15 min walk",
+          distanceMeters: 1200,
+          senpaiVerified: false,
+          quote: "No-frills local spot. Cheapest bun cha around but quality is solid.",
+          quoteAuthor: "Watanabe-san",
+          hasCoupon: false,
+          photo: "https://images.unsplash.com/photo-1552611052-33e04de081de?w=600&q=80",
+          mapPos: { x: 20, y: 70 }
+        },
+        {
+          id: "rest-005",
+          name: "Bun Cha Pho Co",
+          nameJp: "ブンチャー・フォーコー",
+          rank: 5,
+          rating: 4.5,
+          reviewCount: 15,
+          fairPrice: "fair",
+          priceMin: 42000,
+          priceMax: 65000,
+          priceMinJpy: 250,
+          priceMaxJpy: 380,
+          distance: "20 min walk",
+          distanceMeters: 1600,
+          senpaiVerified: true,
+          quote: "Hidden gem! The grilled pork is smoked on-site. Worth the walk.",
+          quoteAuthor: "Yamamoto-san",
+          hasCoupon: true,
+          couponText: "20% off",
+          photo: "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80",
+          mapPos: { x: 75, y: 60 }
+        }
+      ],
+      senpaiTips: [
+        {
+          id: "tip-001",
+          author: "Sato-san",
+          yearsInDanang: 3,
+          avatar: "https://i.pravatar.cc/88?img=12",
+          text: "Point at the menu and hold up fingers for quantity — it works everywhere. More accurate than Google Translate."
+        },
+        {
+          id: "tip-002",
+          author: "Tanaka-san",
+          yearsInDanang: 3,
+          avatar: "https://i.pravatar.cc/88?img=11",
+          text: "Pay at the counter after eating. Table payment is only at high-end restaurants."
+        },
+        {
+          id: "tip-003",
+          author: "Yamamoto-san",
+          yearsInDanang: 2,
+          avatar: "https://i.pravatar.cc/88?img=33",
+          text: "If there's a coupon, show it BEFORE ordering. Some places won't accept it after."
+        }
+      ]
+    };
+    
+    // Format currency helpers
+    function formatVND(amount) {
+      return new Intl.NumberFormat('vi-VN').format(amount) + '₫';
+    }
+    
+    function formatJPY(amount) {
+      return '¥' + new Intl.NumberFormat('ja-JP').format(amount);
+    }
+    
+    // Render restaurant card
+    function renderRestaurantCard(restaurant) {
+      return `
+        <article class="restaurant-card" data-id="${restaurant.id}">
+          <div class="restaurant-card__image-wrapper">
+            <img src="${restaurant.photo}" alt="${restaurant.name}" class="restaurant-card__image">
+            <div class="restaurant-card__rank">${String(restaurant.rank).padStart(2, '0')}</div>
+            ${restaurant.senpaiVerified ? `
+              <div class="restaurant-card__verified">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Senpai Verified
+              </div>
+            ` : ''}
+            ${restaurant.hasCoupon ? `
+              <a href="03.3-deals-coupons.html" class="restaurant-card__coupon-badge">
+                🎫 ${restaurant.couponText}
+              </a>
+            ` : ''}
+          </div>
+          <div class="restaurant-card__body">
+            <div class="restaurant-card__header">
+              <div>
+                <h3 class="restaurant-card__name">${restaurant.name}</h3>
+                <div class="restaurant-card__name-jp">${restaurant.nameJp}</div>
+              </div>
+              <div class="restaurant-card__rating">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                ${restaurant.rating}
+                <span class="restaurant-card__reviews">(${restaurant.reviewCount})</span>
+              </div>
+            </div>
+            
+            <div class="restaurant-card__meta">
+              <span class="restaurant-card__fair-price">🟢 Fair Price</span>
+              <span class="restaurant-card__price">
+                ${formatVND(restaurant.priceMin)}-${formatVND(restaurant.priceMax)}
+                <span class="restaurant-card__price-jpy">(${formatJPY(restaurant.priceMinJpy)}-${formatJPY(restaurant.priceMaxJpy)})</span>
+              </span>
+              <span class="restaurant-card__distance">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                ${restaurant.distance}
+              </span>
+            </div>
+            
+            <div class="restaurant-card__quote">
+              <p class="restaurant-card__quote-text">"${restaurant.quote}"</p>
+              <p class="restaurant-card__quote-author">— ${restaurant.quoteAuthor}</p>
+            </div>
+            
+            <div class="restaurant-card__actions">
+              <a href="#" class="restaurant-card__action">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                </svg>
+                Get Directions
+              </a>
+              <a href="#" class="restaurant-card__action">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+                See Menu
+              </a>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+    
+    // Render tip card
+    function renderTipCard(tip) {
+      return `
+        <div class="tip-card">
+          <img src="${tip.avatar}" alt="${tip.author}" class="tip-card__avatar">
+          <div class="tip-card__content">
+            <p class="tip-card__author"><strong>${tip.author}</strong> · ${tip.yearsInDanang} years in Da Nang</p>
+            <p class="tip-card__text">"${tip.text}"</p>
+          </div>
+        </div>
+      `;
+    }
+    
+    // Render map pins
+    function renderMapPins(restaurants) {
+      // User location pin (center-ish)
+      let html = `<div class="map-pin map-pin--user" style="left: 50%; top: 25%;"></div>`;
+      
+      // Restaurant pins
+      restaurants.forEach(r => {
+        html += `<div class="map-pin" style="left: ${r.mapPos.x}%; top: ${r.mapPos.y}%;" title="${r.name}">${r.rank}</div>`;
+      });
+      
+      return html;
+    }
+    
+    // Sort restaurants
+    function sortRestaurants(restaurants, sortBy) {
+      const sorted = [...restaurants];
+      switch(sortBy) {
+        case 'distance':
+          sorted.sort((a, b) => a.distanceMeters - b.distanceMeters);
+          break;
+        case 'rating':
+          sorted.sort((a, b) => b.rating - a.rating);
+          break;
+        case 'price':
+          sorted.sort((a, b) => a.priceMin - b.priceMin);
+          break;
+      }
+      return sorted;
+    }
+    
+    // Initialize page
+    document.addEventListener('DOMContentLoaded', function() {
+      const restaurantList = document.getElementById('restaurant-list');
+      const tipCards = document.getElementById('tip-cards');
+      const mapPins = document.getElementById('map-pins');
+      const mapContainer = document.getElementById('map-container');
+      const mapExpandBtn = document.getElementById('map-expand-btn');
+      const mapExpandText = document.getElementById('map-expand-text');
+      const filterChips = document.querySelectorAll('.filter-chip');
+      
+      let currentSort = 'distance';
+      
+      // Render restaurants
+      function renderRestaurants() {
+        const sorted = sortRestaurants(demoData.restaurants, currentSort);
+        restaurantList.innerHTML = sorted.map(renderRestaurantCard).join('');
+      }
+      
+      // Render tips
+      tipCards.innerHTML = demoData.senpaiTips.map(renderTipCard).join('');
+      
+      // Render map pins
+      mapPins.innerHTML = renderMapPins(demoData.restaurants);
+      
+      // Initial render
+      renderRestaurants();
+      
+      // Filter chip click handlers
+      filterChips.forEach(chip => {
+        chip.addEventListener('click', function() {
+          filterChips.forEach(c => c.classList.remove('filter-chip--active'));
+          this.classList.add('filter-chip--active');
+          currentSort = this.dataset.sort;
+          renderRestaurants();
+        });
+      });
+      
+      // Map expand toggle
+      mapExpandBtn.addEventListener('click', function() {
+        mapContainer.classList.toggle('map-container--expanded');
+        mapExpandText.textContent = mapContainer.classList.contains('map-container--expanded') ? 'Collapse' : 'Expand';
+      });
+      
+      // Map click to expand
+      mapContainer.addEventListener('click', function(e) {
+        if (e.target.classList.contains('map-pin')) return;
+        mapContainer.classList.toggle('map-container--expanded');
+        mapExpandText.textContent = mapContainer.classList.contains('map-container--expanded') ? 'Collapse' : 'Expand';
+      });
+      
+      console.log('[DaNangNavi] Page 03.1 Senpai Article/Guide loaded');
+    });
+  </script>
+</body>
+</html>

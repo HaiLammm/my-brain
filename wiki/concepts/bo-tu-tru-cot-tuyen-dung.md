@@ -26,12 +26,14 @@ _(chưa xác định)_
 
 ## Key sources
 
-- [[sources/chien-luoc-phong-van-ot-pha]]
+- [[sources/chien-luoc-phong-van-dot-pha]]
 
 ## Related concepts
 
 - [[concepts/tu-duy-win-win-phong-van]]
 
 ## Mentioned in
+
+- [[concepts/cv-tot]]
 
 ## Notes

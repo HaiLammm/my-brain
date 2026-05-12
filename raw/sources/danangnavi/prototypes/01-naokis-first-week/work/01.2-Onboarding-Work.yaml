@@ -1,0 +1,86 @@
+metadata:
+  page_number: "01.2"
+  page_name: "Newcomer Onboarding"
+  scenario: "01: Naoki's First Week"
+  spec_path: "C-UX-Scenarios/01-naokis-first-week/01.2-newcomer-onboarding/01.2-newcomer-onboarding.md"
+  device_compatibility:
+    type: "desktop-only"
+    min_width: "1280px"
+  design_fidelity: "design-system-components"
+  language: "en"
+  created: "2026-04-08"
+
+sections:
+  - number: 1
+    name: "Page Shell + Welcome Header"
+    status: "Complete"
+    completed: "2026-04-08"
+    story_file: null
+    objects:
+      - "HTML structure with TopNav (no active tab)"
+      - "Progress indicator: 3 dots (active/inactive)"
+      - "Illustration area placeholder"
+      - "Headline: Let's start your Da Nang life together!"
+      - "Subtitle: We'll create a first-week plan tailored to your situation"
+
+  - number: 2
+    name: "Step 1: Why are you here?"
+    status: "Complete"
+    completed: "2026-04-08"
+    story_file: null
+    objects:
+      - "Question: Why are you in Da Nang?"
+      - "4 card options: Work transfer, Freelance, Study, Tourism"
+      - "Single select, tap to advance"
+      - "Progress dot update: ● ● ○"
+
+  - number: 3
+    name: "Step 2: What's most urgent?"
+    status: "Complete"
+    completed: "2026-04-08"
+    story_file: null
+    objects:
+      - "Question: What's your biggest challenge?"
+      - "8 multi-select chips with icons"
+      - "Max 3 selection, toggle on/off"
+      - "Continue button"
+      - "Progress dot update: ● ● ●"
+
+  - number: 4
+    name: "Step 3: Workplace area?"
+    status: "Complete"
+    completed: "2026-04-08"
+    story_file: null
+    objects:
+      - "Question: Where is your workplace?"
+      - "4 area options + Not decided yet"
+      - "Single select"
+      - "Triggers checklist generation"
+
+  - number: 5
+    name: "Generated Checklist"
+    status: "Complete"
+    completed: "2026-04-08"
+    story_file: null
+    objects:
+      - "Header: Your 1-Week Plan"
+      - "Dynamic task list based on step 1-3 selections"
+      - "Checkbox items with day labels, icons, links"
+      - "Recommended next action marker"
+      - "Expandable senpai tips per item"
+      - "localStorage persistence for checkbox state"
+
+  - number: 6
+    name: "Senpai Tip + Save CTA"
+    status: "Complete"
+    completed: "2026-04-08"
+    story_file: null
+    objects:
+      - "Senpai quote card (avatar, name, years, quote)"
+      - "CTA link to Area Guide (01.3)"
+      - "Sticky bottom save bar"
+      - "LINE signup button"
+      - "Later dismiss option"
+
+demo_data_source: "data/demo-data.json"
+output_file: "01.2-onboarding.html"

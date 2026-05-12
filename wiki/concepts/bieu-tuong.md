@@ -30,6 +30,8 @@ Biểu tượng (Symbol) là ngôn ngữ của vô thức — cách thức mà v
 ## Key Sources
 
 - [[sources/man-and-his-symbols]] — nguồn chính về vai trò của biểu tượng trong tâm lý học Jung
+- [[sources/phan-i-qua-khu-va-tuong-lai-trong-vo-thuc]] — biểu tượng cổ xưa (rắn ngậm đuôi) xuất hiện trong mạc khải khoa học
+- [[sources/phan-i-chuc-nang-cua-nhung-giac-mo]] — biểu tượng trong giấc mơ không "ngụy trang" mà phản ánh bản chất hình tượng của vô thức
 
 ## Related Concepts
 

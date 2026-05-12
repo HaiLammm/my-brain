@@ -17,10 +17,10 @@ raw_paths:
   - raw/sources/book/Carl-Jung/[Bài 2] - Phần I - Tầm Quan Trọng Của Giấc Mơ.pdf
 ingest_status: drafted
 id: TODO
-created: TODO
-updated: TODO
-year: TODO
-provenance: TODO
+created: 2026-05-12
+updated: 2026-05-12
+year: 1964
+provenance: replayable
 
 ---
 
@@ -47,18 +47,17 @@ Bài viết của Jung trình bày quan điểm về tầm quan trọng của gi
 
 ## Related Concepts
 
-- [[tam-quan-trong-cua-giac-mo]] — (trang này)
-- [[vo-thuc]] — Vô thức là tầng không ý thức của tâm trí, nơi chứa những ẩn dụng mà ta không nhận thức được
-- [[bieu-tuong]] — Biểu tượng là ký hiệu mang ý nghĩa vượt xa nghĩa hời của nó
-- [[trieu-chung-than-kinh]] — Các triệu chứng thần kinh là ngôn ngữ của vô thức, mang ý nghĩa biểu tượng
-- [[phien-tu-day-chu]] — Sự phân tách tâm lý khi ý thức bị chia rẽ khỏi vô thức
+- [[concepts/vo-thuc]] — Vô thức là tầng không ý thức của tâm trí
+- [[concepts/bieu-tuong]] — Biểu tượng là ký hiệu mang ý nghĩa vượt xa nghĩa hời của nó
+- [[concepts/trieu-chung-than-kinh]] — Các triệu chứng thần kinh là ngôn ngữ của vô thức
+- [[concepts/phien-tu-dan-vat]] — Sự phân tách tâm lý khi ý thức bị chia rẽ khỏi vô thức
 
 ## People
 
-- [[carl-jung]] — Tác giả, nhà phân tâm học người Thụy Sĩ
-- [[sigmund-freud]] — Nhà tiên phong trong việc nghiên cứu vô thức qua giấc mơ
-- [[piere-janet]] — Nhà thần kinh học, được Jung nhắc đến trong nghiên cứu
-- [[lucien-levy-bruhl]] — Nhà nhân chủng học người Pháp, người đầu tiên ghi nhận hiện tượng "linh hồn hoang dã"
+- [[people/carl-jung]] — Tác giả, nhà phân tâm học người Thụy Sĩ
+- [[people/sigmund-freud]] — Nhà tiên phong trong việc nghiên cứu vô thức qua giấc mơ
+- [[people/pierre-janet]] — Nhà thần kinh học, được Jung nhắc đến trong nghiên cứu
+- [[people/lucien-levy-bruhl]] — Nhà nhân chủng học người Pháp
 
 ## Open Questions
 

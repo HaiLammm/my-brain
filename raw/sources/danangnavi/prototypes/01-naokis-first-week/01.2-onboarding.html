@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DaNangNavi — Newcomer Onboarding</title>
+  <link rel="stylesheet" href="shared/design-tokens.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .onboarding-container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 48px 24px 120px;
+      min-height: calc(100vh - 64px);
+    }
+
+    /* Progress dots */
+    .progress-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .progress-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--color-border);
+      transition: background-color var(--transition-normal);
+    }
+    .progress-dot.active {
+      background-color: var(--color-accent);
+    }
+    .progress-dot.completed {
+      background-color: var(--color-success);
+    }
+
+    /* Welcome header */
+    .welcome-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .welcome-illustration {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 24px;
+      background-color: rgba(46, 196, 182, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 56px;
+    }
+    .welcome-headline {
+      font-family: var(--font-headlines);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--color-text);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    .welcome-subtitle {
+      font-size: 16px;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Wizard steps */
+    .wizard-step {
+      display: none;
+      animation: fadeIn 300ms ease;
+    }
+    .wizard-step.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Step question */
+    .step-question {
+      font-family: var(--font-headlines);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--color-text);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    /* Option cards (Step 1) */
+    .option-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .option-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 24px 16px;
+      background-color: var(--color-surface);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      cursor: pointer;
+      transition: border-color var(--transition-normal), box-shadow var(--transition-normal), transform var(--transition-normal);
+    }
+    .option-card:hover {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-card);
+      transform: translateY(-2px);
+    }
+    .option-card.selected {
+      border-color: var(--color-accent);
+      background-color: rgba(46, 196, 182, 0.05);
+      box-shadow: 0 0 0 3px rgba(46, 196, 182, 0.15);
+    }
+    .option-card-icon {
+      font-size: 32px;
+    }
+    .option-card-label {
+      font-family: var(--font-ui);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    /* Multi-select chips (Step 2) */
+    .chip-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .select-chip {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 18px;
+      background-color: var(--color-surface);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      font-family: var(--font-ui);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-text);
+      transition: border-color var(--transition-normal), background-color var(--transition-normal);
+    }
+    .select-chip:hover {
+      border-color: var(--color-accent);
+    }
+    .select-chip.selected {
+      border-color: var(--color-accent);
+      background-color: rgba(46, 196, 182, 0.1);
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+    .select-chip.disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .chip-hint {
+      text-align: center;
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      margin-bottom: 16px;
+    }
+
+    /* Continue button */
+    .continue-btn {
+      display: block;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+      padding: 14px 32px;
+      font-family: var(--font-ui);
+      font-size: 16px;
+      font-weight: 700;
+      color: #FFFFFF;
+      background-color: var(--color-accent);
+      border: none;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      transition: opacity var(--transition-fast), transform var(--transition-fast);
+    }
+    .continue-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+    .continue-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Area options (Step 3) */
+    .area-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .area-option {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      background-color: var(--color-surface);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+    }
+    .area-option:hover {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-card);
+    }
+    .area-option.selected {
+      border-color: var(--color-accent);
+      background-color: rgba(46, 196, 182, 0.05);
+    }
+    .area-option-name {
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--color-text);
+    }
+    .area-option-desc {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+    }
+    .area-option-fallback {
+      text-align: center;
+      padding: 12px;
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      cursor: pointer;
+      border-radius: var(--radius);
+      transition: color var(--transition-fast);
+    }
+    .area-option-fallback:hover {
+      color: var(--color-accent);
+    }
+
+    /* Checklist */
+    .checklist-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .checklist-title {
+      font-family: var(--font-headlines);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 8px;
+    }
+    .checklist-subtitle {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+    }
+    .checklist-items {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 16px;
+      background-color: var(--color-surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-card);
+    }
+    .checklist-item.recommended {
+      border-left: 3px solid var(--color-secondary);
+    }
+    .checklist-checkbox {
+      width: 22px;
+      height: 22px;
+      border: 2px solid var(--color-border);
+      border-radius: 4px;
+      flex-shrink: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+      transition: background-color var(--transition-fast), border-color var(--transition-fast);
+    }
+    .checklist-checkbox.checked {
+      background-color: var(--color-success);
+      border-color: var(--color-success);
+      color: #FFFFFF;
+    }
+    .checklist-item-content {
+      flex: 1;
+    }
+    .checklist-day {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+    }
+    .checklist-task {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--color-text);
+      margin-bottom: 4px;
+    }
+    .checklist-task.done {
+      text-decoration: line-through;
+      color: var(--color-text-secondary);
+    }
+    .checklist-link {
+      font-size: 13px;
+      color: var(--color-accent);
+      text-decoration: none;
+    }
+    .checklist-link:hover {
+      text-decoration: underline;
+    }
+    .checklist-star {
+      color: var(--color-secondary);
+      font-size: 12px;
+      font-weight: 700;
+      margin-left: 4px;
+    }
+
+    /* Senpai tip card */
+    .senpai-tip-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px;
+      background-color: rgba(46, 196, 182, 0.06);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(46, 196, 182, 0.15);
+      margin-bottom: 24px;
+    }
+    .senpai-tip-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: #D1D5DB;
+      flex-shrink: 0;
+    }
+    .senpai-tip-content {
+      flex: 1;
+    }
+    .senpai-tip-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 2px;
+    }
+    .senpai-tip-years {
+      font-size: 12px;
+      color: var(--color-text-secondary);
+      margin-bottom: 8px;
+    }
+    .senpai-tip-quote {
+      font-size: 14px;
+      color: var(--color-text);
+      line-height: 1.5;
+      font-style: italic;
+    }
+    .senpai-tip-cta {
+      margin-top: 10px;
+    }
+    .senpai-tip-cta a {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-accent);
+    }
+
+    /* Sticky save bar */
+    .save-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: var(--color-surface);
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+      padding: 16px 24px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      z-index: 40;
+    }
+    .save-bar.visible {
+      display: flex;
+    }
+    .save-bar-text {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+    }
+    .save-bar-btn {
+      font-family: var(--font-ui);
+      font-size: 14px;
+      font-weight: 700;
+      color: #FFFFFF;
+      background-color: var(--color-success);
+      border: none;
+      padding: 10px 24px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      transition: opacity var(--transition-fast);
+    }
+    .save-bar-btn:hover {
+      opacity: 0.9;
+    }
+    .save-bar-later {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TopNavBar -->
+  <div id="nav-container"></div>
+
+  <!-- Onboarding Content -->
+  <div class="onboarding-container">
+
+    <!-- Progress Dots -->
+    <div class="progress-dots" id="progress-dots">
+      <div class="progress-dot active" data-step="1"></div>
+      <div class="progress-dot" data-step="2"></div>
+      <div class="progress-dot" data-step="3"></div>
+    </div>
+
+    <!-- Welcome Header -->
+    <div class="welcome-header" id="welcome-header">
+      <div class="welcome-illustration">🧳</div>
+      <h1 class="welcome-headline">Let's start your Da Nang life together!</h1>
+      <p class="welcome-subtitle">We'll create a first-week plan tailored to your situation</p>
+    </div>
+
+    <!-- Wizard Steps -->
+    <div id="wizard-steps">
+
+      <!-- Step 1: Why are you here? -->
+      <div class="wizard-step active" id="step-1">
+        <div class="step-question">Why are you in Da Nang?</div>
+        <div class="option-cards" id="step1-options">
+          <div class="option-card" data-value="work-transfer">
+            <span class="option-card-icon">🏢</span>
+            <span class="option-card-label">Work Transfer</span>
+          </div>
+          <div class="option-card" data-value="freelance">
+            <span class="option-card-icon">💻</span>
+            <span class="option-card-label">Freelance / Nomad</span>
+          </div>
+          <div class="option-card" data-value="study">
+            <span class="option-card-icon">🎓</span>
+            <span class="option-card-label">Study</span>
+          </div>
+          <div class="option-card" data-value="tourism">
+            <span class="option-card-icon">🏖️</span>
+            <span class="option-card-label">Tourism</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: What's most urgent? -->
+      <div class="wizard-step" id="step-2">
+        <div class="step-question">What's your biggest challenge right now?</div>
+        <div class="chip-hint">Select up to 3</div>
+        <div class="chip-grid" id="step2-chips">
+          <button class="select-chip" data-value="housing">🏠 Housing</button>
+          <button class="select-chip" data-value="sim">📱 SIM Card</button>
+          <button class="select-chip" data-value="bank">🏦 Bank Account</button>
+          <button class="select-chip" data-value="food">🍜 Food</button>
+          <button class="select-chip" data-value="transport">🚗 Transport</button>
+          <button class="select-chip" data-value="visa">📋 Visa</button>
+          <button class="select-chip" data-value="medical">🏥 Medical</button>
+          <button class="select-chip" data-value="friends">👥 Making Friends</button>
+        </div>
+        <button class="continue-btn" id="step2-continue" disabled>Continue</button>
+      </div>
+
+      <!-- Step 3: Workplace area? -->
+      <div class="wizard-step" id="step-3">
+        <div class="step-question">Where is your workplace?</div>
+        <div class="area-options" id="step3-areas"></div>
+        <div class="area-option-fallback" id="step3-fallback">Not decided yet</div>
+      </div>
+
+      <!-- Checklist Result -->
+      <div class="wizard-step" id="step-checklist">
+        <div class="checklist-header">
+          <div class="checklist-title">🎯 Your 1-Week Plan</div>
+          <div class="checklist-subtitle">Created from senpai experiences, optimized for you</div>
+        </div>
+        <div class="checklist-items" id="checklist-items"></div>
+
+        <!-- Senpai Tip -->
+        <div id="senpai-tip"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Sticky Save Bar -->
+  <div class="save-bar" id="save-bar">
+    <span class="save-bar-text">Save your checklist?</span>
+    <button class="save-bar-btn" id="save-btn">Sign up with LINE</button>
+    <button class="save-bar-later" id="save-later">Later</button>
+  </div>
+
+  <script type="module">
+    import { renderTopNav } from './components/top-nav.js';
+
+    // Load demo data
+    const res = await fetch('./data/demo-data.json');
+    const data = await res.json();
+
+    // TopNav — no active page (onboarding is standalone)
+    renderTopNav(document.getElementById('nav-container'), { activePage: '' });
+
+    // State
+    const state = {
+      currentStep: 1,
+      reason: null,
+      urgentNeeds: [],
+      workplace: null,
+    };
+
+    const CHECKLIST_KEY = 'danangnavi-checklist';
+
+    // Progress dots
+    function updateProgress(step) {
+      document.querySelectorAll('.progress-dot').forEach((dot, i) => {
+        dot.classList.remove('active', 'completed');
+        if (i + 1 < step) dot.classList.add('completed');
+        if (i + 1 === step) dot.classList.add('active');
+      });
+    }
+
+    // Step transition
+    function goToStep(step) {
+      document.querySelectorAll('.wizard-step').forEach(s => s.classList.remove('active'));
+      const target = step === 4 ? 'step-checklist' : `step-${step}`;
+      document.getElementById(target).classList.add('active');
+      state.currentStep = step;
+      updateProgress(Math.min(step, 3));
+
+      // Hide welcome header after step 1
+      if (step > 1) {
+        document.getElementById('welcome-header').style.display = 'none';
+      }
+
+      // Show save bar on checklist
+      if (step === 4) {
+        document.getElementById('save-bar').classList.add('visible');
+      }
+
+      console.log('[Onboarding] Step', step, 'State:', JSON.stringify(state));
+    }
+
+    // Step 1: Reason cards
+    document.querySelectorAll('#step1-options .option-card').forEach(card => {
+      card.addEventListener('click', () => {
+        document.querySelectorAll('#step1-options .option-card').forEach(c => c.classList.remove('selected'));
+        card.classList.add('selected');
+        state.reason = card.dataset.value;
+
+        if (state.reason === 'tourism') {
+          console.log('[Onboarding] Tourism selected — would redirect to Tomoko flow');
+        }
+
+        setTimeout(() => goToStep(2), 400);
+      });
+    });
+
+    // Step 2: Multi-select chips
+    const MAX_CHIPS = 3;
+    const step2Continue = document.getElementById('step2-continue');
+
+    document.querySelectorAll('#step2-chips .select-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        if (chip.classList.contains('disabled') && !chip.classList.contains('selected')) return;
+
+        chip.classList.toggle('selected');
+
+        state.urgentNeeds = Array.from(document.querySelectorAll('#step2-chips .select-chip.selected'))
+          .map(c => c.dataset.value);
+
+        // Disable non-selected if at max
+        document.querySelectorAll('#step2-chips .select-chip').forEach(c => {
+          if (state.urgentNeeds.length >= MAX_CHIPS && !c.classList.contains('selected')) {
+            c.classList.add('disabled');
+          } else {
+            c.classList.remove('disabled');
+          }
+        });
+
+        step2Continue.disabled = state.urgentNeeds.length === 0;
+      });
+    });
+
+    step2Continue.addEventListener('click', () => {
+      if (state.urgentNeeds.length > 0) goToStep(3);
+    });
+
+    // Step 3: Area options
+    const areasContainer = document.getElementById('step3-areas');
+    data.areas.forEach(area => {
+      const opt = document.createElement('div');
+      opt.className = 'area-option';
+      opt.dataset.value = area.id;
+      opt.innerHTML = `
+        <div>
+          <div class="area-option-name">${area.name}</div>
+          <div class="area-option-desc">${area.tagline}</div>
+        </div>
+      `;
+      opt.addEventListener('click', () => {
+        document.querySelectorAll('.area-option').forEach(o => o.classList.remove('selected'));
+        opt.classList.add('selected');
+        state.workplace = area.id;
+        setTimeout(() => generateChecklist(), 400);
+      });
+      areasContainer.appendChild(opt);
+    });
+
+    document.getElementById('step3-fallback').addEventListener('click', () => {
+      state.workplace = null;
+      generateChecklist();
+    });
+
+    // Generate checklist
+    function generateChecklist() {
+      goToStep(4);
+
+      const tasks = [];
+
+      // Always include based on urgency
+      const taskMap = {
+        sim: { day: 'Day 1', icon: '📱', task: 'Buy a SIM card', link: '#', linkText: 'SIM Guide' },
+        food: { day: 'Day 1', icon: '🍜', task: 'Find nearby Japanese restaurants', link: '#', linkText: 'Search: Japanese food' },
+        housing: { day: 'Day 2', icon: '🏠', task: 'Decide your neighborhood', link: '#', linkText: 'Area Guide', recommended: true },
+        bank: { day: 'Day 3', icon: '🏦', task: 'Open a bank account', link: '#', linkText: 'Banking Guide' },
+        transport: { day: 'Day 4', icon: '🚗', task: 'Figure out your commute', link: '#', linkText: 'Transport Guide' },
+        visa: { day: 'Day 2', icon: '📋', task: 'Check visa requirements', link: '#', linkText: 'Visa Guide' },
+        medical: { day: 'Day 3', icon: '🏥', task: 'Find a hospital with Japanese support', link: '#', linkText: 'Search: Medical' },
+        friends: { day: 'Day 5-7', icon: '👥', task: 'Join the senpai community', link: '#', linkText: 'Community Hub' },
+      };
+
+      // Add urgent needs first
+      state.urgentNeeds.forEach(need => {
+        if (taskMap[need]) tasks.push(taskMap[need]);
+      });
+
+      // Add defaults not already selected
+      const defaults = ['sim', 'food', 'housing', 'bank', 'transport', 'friends'];
+      defaults.forEach(d => {
+        if (!state.urgentNeeds.includes(d) && taskMap[d]) {
+          tasks.push(taskMap[d]);
+        }
+      });
+
+      // Load saved state
+      const saved = JSON.parse(localStorage.getItem(CHECKLIST_KEY) || '{}');
+
+      const container = document.getElementById('checklist-items');
+      container.innerHTML = '';
+
+      tasks.forEach((t, i) => {
+        const item = document.createElement('div');
+        item.className = 'checklist-item' + (t.recommended ? ' recommended' : '');
+
+        const isChecked = saved[t.task] === true;
+
+        item.innerHTML = `
+          <div class="checklist-checkbox ${isChecked ? 'checked' : ''}" data-task="${t.task}">
+            ${isChecked ? '✓' : ''}
+          </div>
+          <div class="checklist-item-content">
+            <div class="checklist-day">${t.day}</div>
+            <div class="checklist-task ${isChecked ? 'done' : ''}">${t.icon} ${t.task}${t.recommended ? '<span class="checklist-star">★ Recommended</span>' : ''}</div>
+            <a class="checklist-link" href="${t.link}">${t.linkText} →</a>
+          </div>
+        `;
+
+        // Checkbox toggle
+        const checkbox = item.querySelector('.checklist-checkbox');
+        checkbox.addEventListener('click', () => {
+          const checked = checkbox.classList.toggle('checked');
+          checkbox.textContent = checked ? '✓' : '';
+          item.querySelector('.checklist-task').classList.toggle('done', checked);
+
+          // Save to localStorage
+          const state = JSON.parse(localStorage.getItem(CHECKLIST_KEY) || '{}');
+          state[t.task] = checked;
+          localStorage.setItem(CHECKLIST_KEY, JSON.stringify(state));
+          console.log('[Checklist]', t.task, checked ? 'done' : 'undone');
+        });
+
+        container.appendChild(item);
+      });
+
+      // Senpai tip
+      const senpai = data.senpai[2]; // Mika
+      document.getElementById('senpai-tip').innerHTML = `
+        <div class="senpai-tip-card">
+          <div class="senpai-tip-avatar"></div>
+          <div class="senpai-tip-content">
+            <div class="senpai-tip-name">${senpai.name}</div>
+            <div class="senpai-tip-years">${senpai.yearsInDanang} year${senpai.yearsInDanang > 1 ? 's' : ''} in Da Nang</div>
+            <div class="senpai-tip-quote">"${senpai.quote}"</div>
+            <div class="senpai-tip-cta"><a href="#">View Area Guide →</a></div>
+          </div>
+        </div>
+      `;
+
+      console.log('[Onboarding] Checklist generated with', tasks.length, 'tasks');
+    }
+
+    // Save bar
+    document.getElementById('save-btn').addEventListener('click', () => {
+      console.log('[Onboarding] LINE signup clicked');
+    });
+
+    document.getElementById('save-later').addEventListener('click', () => {
+      document.getElementById('save-bar').classList.remove('visible');
+      console.log('[Onboarding] Save later — bar dismissed');
+    });
+
+    console.log('[Onboarding] Page loaded');
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+view: V3 - Business Dashboard
+spec: 04.3-business-dashboard.md
+route: /business/dashboard
+device: desktop-only (1440px)
+fidelity: design-system
+
+sections:
+  S1:
+    name: Page Shell + Welcome + Status
+    objects:
+      - Header with breadcrumb style
+      - Headline "Bảng điều khiển"
+      - Welcome banner (first visit, dismissible)
+      - Subtext
+      - 2 status cards (Listing + Coupon) side-by-side
+      - Green left border, status badges, links
+    estimate: 15min
+    status: complete
+    completed: 2026-04-08
+
+  S2:
+    name: Metrics + Chart
+    objects:
+      - 4 metric cards in single row (Views, Clicks, Bookings, Customers)
+      - All empty state "Chưa có dữ liệu"
+      - Icons per metric
+      - Empty state note below cards
+      - Performance chart placeholder (dashed outline)
+      - Chart message
+    estimate: 15min
+    status: complete
+    completed: 2026-04-08
+
+  S3:
+    name: Activity Feed + Help
+    objects:
+      - Section title "Hoạt động gần đây"
+      - 3 activity items (timeline with icons, timestamps)
+      - "Tiếp theo là gì?" help card
+      - Teal left border, 4 tips
+      - Support link (Zalo)
+    estimate: 15min
+    status: complete
+    completed: 2026-04-08
+
+total_estimate: 45min

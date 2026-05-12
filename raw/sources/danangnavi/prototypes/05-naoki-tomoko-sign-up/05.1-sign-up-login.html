@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up — DaNangNavi</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========================================
+       DESIGN TOKENS
+       ======================================== */
+    :root {
+      --color-primary: #1B2A4A;
+      --color-secondary: #FF6B4A;
+      --color-accent: #2EC4B6;
+      --color-bg: #FAFAF8;
+      --color-surface: #FFFFFF;
+      --color-text-primary: #0D1B2A;
+      --color-text-secondary: #6B7280;
+      --color-text-inverse: #FFFFFF;
+      --color-success: #27AE60;
+      --color-warning: #F2994A;
+      --color-error: #EB5757;
+      --color-line-green: #06C755;
+
+      --font-family-primary: 'Noto Sans JP', sans-serif;
+      --font-family-ui: 'Inter', 'Noto Sans', sans-serif;
+
+      --text-h1: 2rem;
+      --text-h2: 1.5rem;
+      --text-h3: 1.25rem;
+      --text-body: 1rem;
+      --text-caption: 0.875rem;
+      --text-small: 0.75rem;
+
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 12px;
+      --space-lg: 16px;
+      --space-xl: 24px;
+      --space-2xl: 32px;
+      --space-3xl: 48px;
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
+
+      --shadow-card: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-card-hover: 0 4px 16px rgba(0,0,0,0.12);
+      --shadow-modal: 0 8px 32px rgba(0,0,0,0.2);
+      --shadow-sticky: 0 2px 8px rgba(0,0,0,0.06);
+
+      --duration-fast: 150ms;
+      --duration-normal: 300ms;
+      --duration-slow: 500ms;
+      --easing-default: ease-in-out;
+
+      --bottom-nav-height: 64px;
+    }
+
+    /* ========================================
+       RESET & BASE
+       ======================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      font-family: var(--font-family-primary);
+      font-size: var(--text-body);
+      line-height: 1.6;
+      color: var(--color-text-primary);
+      background-color: var(--color-bg);
+      min-height: 100vh;
+      padding-bottom: calc(var(--bottom-nav-height) + var(--space-xl));
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--color-accent); text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    /* ========================================
+       S0: BACKGROUND LISTING PAGE
+       ======================================== */
+    .page-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: var(--color-surface);
+      min-height: 100vh;
+      position: relative;
+      box-shadow: var(--shadow-card);
+    }
+
+    /* Hero Image */
+    .listing-hero {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .listing-hero__placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.6);
+      font-size: 4rem;
+    }
+
+    .listing-hero__back {
+      position: absolute;
+      top: var(--space-lg);
+      left: var(--space-lg);
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.9);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-card);
+    }
+
+    /* Listing Body */
+    .listing-body {
+      padding: var(--space-xl);
+    }
+
+    .listing-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: var(--space-lg);
+      margin-bottom: var(--space-lg);
+    }
+
+    .listing-title {
+      font-size: var(--text-h2);
+      font-weight: 700;
+      color: var(--color-text-primary);
+      line-height: 1.3;
+    }
+
+    .save-button {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-full);
+      transition: background-color var(--duration-fast);
+    }
+
+    .save-button:hover {
+      background-color: rgba(255, 107, 74, 0.1);
+    }
+
+    .save-button svg {
+      width: 24px;
+      height: 24px;
+      color: var(--color-text-secondary);
+    }
+
+    /* Meta Row */
+    .listing-meta {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+      flex-wrap: wrap;
+    }
+
+    .listing-rating {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-size: var(--text-caption);
+      font-weight: 600;
+    }
+
+    .listing-rating__star {
+      color: var(--color-warning);
+    }
+
+    .listing-rating__count {
+      color: var(--color-text-secondary);
+      font-weight: 400;
+    }
+
+    .senpai-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      background-color: rgba(46, 196, 182, 0.1);
+      color: var(--color-accent);
+      font-size: var(--text-small);
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: var(--radius-full);
+    }
+
+    .listing-area {
+      font-size: var(--text-caption);
+      color: var(--color-text-secondary);
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    /* Price */
+    .listing-price {
+      margin-bottom: var(--space-xl);
+    }
+
+    .listing-price__vnd {
+      font-size: var(--text-h3);
+      font-weight: 700;
+      color: var(--color-secondary);
+    }
+
+    .listing-price__jpy {
+      font-size: var(--text-caption);
+      color: var(--color-text-secondary);
+      margin-left: var(--space-sm);
+    }
+
+    /* Description */
+    .listing-description {
+      color: var(--color-text-secondary);
+      font-size: var(--text-body);
+      line-height: 1.7;
+      margin-bottom: var(--space-xl);
+    }
+
+    /* Features */
+    .listing-features {
+      display: flex;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+      margin-bottom: var(--space-xl);
+    }
+
+    .feature-pill {
+      background-color: var(--color-bg);
+      color: var(--color-text-primary);
+      font-size: var(--text-caption);
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+    }
+
+    /* Contact CTA */
+    .listing-cta {
+      display: flex;
+      gap: var(--space-md);
+    }
+
+    .listing-cta__primary {
+      flex: 1;
+      padding: 14px;
+      background-color: var(--color-secondary);
+      color: var(--color-text-inverse);
+      font-size: var(--text-body);
+      font-weight: 600;
+      border-radius: var(--radius-md);
+      text-align: center;
+      transition: opacity var(--duration-fast);
+    }
+
+    .listing-cta__secondary {
+      flex: 1;
+      padding: 14px;
+      background-color: transparent;
+      color: var(--color-primary);
+      font-size: var(--text-body);
+      font-weight: 600;
+      border: 2px solid var(--color-primary);
+      border-radius: var(--radius-md);
+      text-align: center;
+      transition: background-color var(--duration-fast);
+    }
+
+    /* ========================================
+       BOTTOM NAV
+       ======================================== */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: var(--bottom-nav-height);
+      background-color: var(--color-surface);
+      border-top: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.06);
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+    }
+
+    .bottom-nav__container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      max-width: 800px;
+      padding: 0 var(--space-sm);
+    }
+
+    .bottom-nav__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-sm) var(--space-md);
+      color: var(--color-text-secondary);
+      font-size: var(--text-small);
+      font-weight: 500;
+      text-decoration: none;
+      min-width: 64px;
+    }
+
+    .bottom-nav__item--active {
+      color: var(--color-secondary);
+    }
+
+    .bottom-nav__icon {
+      width: 24px;
+      height: 24px;
+      margin-bottom: var(--space-xs);
+    }
+
+    /* ========================================
+       S1: MODAL OVERLAY
+       ======================================== */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(27, 42, 74, 0.6);
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity var(--duration-normal) var(--easing-default);
+    }
+
+    .modal-backdrop--visible {
+      opacity: 1;
+    }
+
+    .modal-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-modal);
+      width: 100%;
+      max-width: 400px;
+      padding: var(--space-2xl);
+      position: relative;
+      transform: translateY(20px);
+      transition: transform var(--duration-normal) var(--easing-default);
+    }
+
+    .modal-backdrop--visible .modal-card {
+      transform: translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: var(--space-lg);
+      right: var(--space-lg);
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-text-secondary);
+      border-radius: var(--radius-full);
+      transition: background-color var(--duration-fast), color var(--duration-fast);
+    }
+
+    .modal-close:hover {
+      background-color: rgba(0,0,0,0.05);
+      color: var(--color-text-primary);
+    }
+
+    /* Modal Header */
+    .modal-header {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+    }
+
+    .modal-logo {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-lg);
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .modal-headline {
+      font-size: var(--text-h3);
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .modal-context {
+      font-size: var(--text-caption);
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+    }
+
+    /* LINE Login Button */
+    .line-login-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-md);
+      width: 100%;
+      height: 52px;
+      background-color: var(--color-line-green);
+      color: white;
+      font-size: var(--text-body);
+      font-weight: 700;
+      border-radius: var(--radius-md);
+      transition: opacity var(--duration-fast);
+      margin-bottom: var(--space-lg);
+    }
+
+    .line-login-btn:hover {
+      opacity: 0.9;
+    }
+
+    .line-login-btn svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Social Proof */
+    .social-proof {
+      text-align: center;
+      font-size: 13px;
+      color: rgba(27, 42, 74, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-xs);
+      margin-bottom: var(--space-xl);
+    }
+
+    /* ========================================
+       S2: EMAIL ALTERNATIVE + PRIVACY
+       ======================================== */
+    .or-divider {
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+      margin-bottom: var(--space-xl);
+    }
+
+    .or-divider__line {
+      flex: 1;
+      height: 1px;
+      background-color: rgba(0,0,0,0.1);
+    }
+
+    .or-divider__text {
+      font-size: var(--text-caption);
+      color: var(--color-text-secondary);
+      font-weight: 500;
+    }
+
+    /* Email Accordion */
+    .email-accordion-trigger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+      width: 100%;
+      padding: var(--space-md) 0;
+      color: var(--color-accent);
+      font-size: var(--text-caption);
+      font-weight: 500;
+      transition: color var(--duration-fast);
+      margin-bottom: var(--space-sm);
+    }
+
+    .email-accordion-trigger:hover {
+      color: var(--color-primary);
+    }
+
+    .email-accordion-trigger__icon {
+      transition: transform var(--duration-normal);
+    }
+
+    .email-accordion-trigger--open .email-accordion-trigger__icon {
+      transform: rotate(180deg);
+    }
+
+    .email-form {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--duration-normal) var(--easing-default);
+    }
+
+    .email-form--open {
+      max-height: 300px;
+    }
+
+    .email-form__inner {
+      padding-bottom: var(--space-lg);
+    }
+
+    /* Form Fields */
+    .form-field {
+      margin-bottom: var(--space-lg);
+    }
+
+    .form-field__label {
+      display: block;
+      font-size: var(--text-caption);
+      font-weight: 500;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-xs);
+    }
+
+    .form-field__input-wrapper {
+      position: relative;
+    }
+
+    .form-field__input {
+      width: 100%;
+      height: 44px;
+      padding: 0 var(--space-lg);
+      border: 1.5px solid rgba(0,0,0,0.15);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-family-ui);
+      font-size: var(--text-caption);
+      color: var(--color-text-primary);
+      background: var(--color-surface);
+      transition: border-color var(--duration-fast);
+      outline: none;
+    }
+
+    .form-field__input:focus {
+      border-color: var(--color-accent);
+    }
+
+    .form-field__input--error {
+      border-color: var(--color-error);
+    }
+
+    .form-field__error {
+      font-size: var(--text-small);
+      color: var(--color-error);
+      margin-top: var(--space-xs);
+      display: none;
+    }
+
+    .form-field__error--visible {
+      display: block;
+    }
+
+    .form-field__toggle {
+      position: absolute;
+      right: var(--space-md);
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-text-secondary);
+      padding: var(--space-xs);
+    }
+
+    /* Register Button */
+    .register-btn {
+      width: 100%;
+      height: 48px;
+      background-color: var(--color-secondary);
+      color: var(--color-text-inverse);
+      font-size: var(--text-body);
+      font-weight: 600;
+      border-radius: var(--radius-md);
+      transition: opacity var(--duration-fast);
+      margin-bottom: var(--space-lg);
+    }
+
+    .register-btn:hover {
+      opacity: 0.9;
+    }
+
+    /* Privacy Note */
+    .privacy-note {
+      text-align: center;
+      padding-top: var(--space-lg);
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .privacy-note__text {
+      font-size: var(--text-small);
+      color: rgba(27, 42, 74, 0.5);
+      margin-bottom: var(--space-xs);
+    }
+
+    .privacy-note__links {
+      font-size: var(--text-small);
+      color: rgba(27, 42, 74, 0.5);
+    }
+
+    .privacy-note__links a {
+      color: rgba(27, 42, 74, 0.5);
+      text-decoration: underline;
+      transition: color var(--duration-fast);
+    }
+
+    .privacy-note__links a:hover {
+      color: var(--color-text-primary);
+    }
+
+    /* ========================================
+       S3: SUCCESS STATE
+       ======================================== */
+    .modal-success {
+      display: none;
+      text-align: center;
+      padding: var(--space-xl) 0;
+    }
+
+    .modal-success--visible {
+      display: block;
+    }
+
+    .modal-success__checkmark {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius-full);
+      background-color: rgba(39, 174, 96, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-lg);
+      animation: successPop 0.4s ease-out;
+    }
+
+    .modal-success__checkmark svg {
+      width: 32px;
+      height: 32px;
+      color: var(--color-success);
+      stroke-dasharray: 50;
+      stroke-dashoffset: 50;
+      animation: checkDraw 0.5s 0.2s ease-out forwards;
+    }
+
+    @keyframes successPop {
+      0% { transform: scale(0); opacity: 0; }
+      60% { transform: scale(1.15); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes checkDraw {
+      to { stroke-dashoffset: 0; }
+    }
+
+    .modal-success__title {
+      font-size: var(--text-h3);
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .modal-success__subtitle {
+      font-size: var(--text-caption);
+      color: var(--color-text-secondary);
+    }
+
+    /* Hide form content when success shows */
+    .modal-card--success .modal-header,
+    .modal-card--success .line-login-btn,
+    .modal-card--success .social-proof,
+    .modal-card--success .or-divider,
+    .modal-card--success .email-accordion-trigger,
+    .modal-card--success .email-form,
+    .modal-card--success .privacy-note {
+      display: none;
+    }
+
+    .modal-card--success .modal-close {
+      display: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ========================================
+       S0: BACKGROUND LISTING PAGE
+       ======================================== -->
+  <div class="page-container" id="background-listing" data-object-id="background-listing">
+
+    <!-- Hero Image -->
+    <div class="listing-hero">
+      <div class="listing-hero__placeholder">🏠</div>
+      <button class="listing-hero__back" aria-label="Go back">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5"/><polyline points="12 19 5 12 12 5"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Listing Body -->
+    <div class="listing-body">
+
+      <!-- Title Row + Save Button -->
+      <div class="listing-title-row">
+        <h1 class="listing-title" id="listing-title"></h1>
+        <button class="save-button" id="save-button" data-object-id="save-button" aria-label="Save to favorites">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Meta Row -->
+      <div class="listing-meta">
+        <span class="listing-rating">
+          <span class="listing-rating__star">⭐</span>
+          <span id="listing-rating"></span>
+          <span class="listing-rating__count" id="listing-review-count"></span>
+        </span>
+        <span class="senpai-badge" id="senpai-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Senpai Verified
+        </span>
+        <span class="listing-area">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span id="listing-area"></span>
+        </span>
+      </div>
+
+      <!-- Price -->
+      <div class="listing-price">
+        <span class="listing-price__vnd" id="listing-price-vnd"></span>
+        <span class="listing-price__jpy" id="listing-price-jpy"></span>
+      </div>
+
+      <!-- Description -->
+      <p class="listing-description">
+        Bright and modern 1-bedroom apartment with balcony overlooking Han River. Fully furnished with washer, AC, high-speed wifi. 5-minute walk to Dragon Bridge, close to convenience stores and restaurants. Perfect for expats settling into Da Nang life.
+      </p>
+
+      <!-- Features -->
+      <div class="listing-features">
+        <span class="feature-pill">🛏️ 1 Bedroom</span>
+        <span class="feature-pill">🪑 Furnished</span>
+        <span class="feature-pill">📶 High-speed WiFi</span>
+        <span class="feature-pill">❄️ Air Conditioning</span>
+      </div>
+
+      <!-- Contact CTA -->
+      <div class="listing-cta">
+        <button class="listing-cta__primary">Contact Owner</button>
+        <button class="listing-cta__secondary">Get Directions</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================
+       BOTTOM NAV
+       ======================================== -->
+  <nav class="bottom-nav">
+    <div class="bottom-nav__container">
+      <a href="#" class="bottom-nav__item">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Home</span>
+      </a>
+      <a href="#" class="bottom-nav__item">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+      </a>
+      <a href="#" class="bottom-nav__item">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span>Community</span>
+      </a>
+      <a href="#" class="bottom-nav__item">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+        <span>Deals</span>
+      </a>
+      <a href="#" class="bottom-nav__item">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Profile</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ========================================
+       S1: MODAL OVERLAY
+       ======================================== -->
+  <div class="modal-backdrop" id="modal-backdrop" data-object-id="modal-backdrop">
+    <div class="modal-card" id="modal-card" data-object-id="modal-card">
+
+      <!-- Close Button -->
+      <button class="modal-close" id="modal-close" data-object-id="modal-close" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="modal-header" id="modal-header" data-object-id="modal-header">
+        <div class="modal-logo" id="modal-logo" data-object-id="modal-logo">DN</div>
+        <h2 class="modal-headline" id="modal-headline" data-object-id="modal-headline">Create Account</h2>
+        <p class="modal-context" id="modal-context" data-object-id="modal-context">An account is needed to save this listing</p>
+      </div>
+
+      <!-- LINE Login Button -->
+      <button class="line-login-btn" id="line-login-btn" data-object-id="line-login-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+        </svg>
+        Log in with LINE
+      </button>
+
+      <!-- Social Proof -->
+      <div class="social-proof" id="social-proof" data-object-id="social-proof">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        <span id="social-proof-text">12,000 users active</span>
+      </div>
+
+      <!-- S2: Email Alternative + Privacy -->
+
+      <!-- Or Divider -->
+      <div class="or-divider" id="or-divider" data-object-id="or-divider">
+        <div class="or-divider__line"></div>
+        <span class="or-divider__text">or</span>
+        <div class="or-divider__line"></div>
+      </div>
+
+      <!-- Email Accordion Trigger -->
+      <button class="email-accordion-trigger" id="email-accordion-trigger" data-object-id="email-accordion-trigger">
+        Register with email
+        <svg class="email-accordion-trigger__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </button>
+
+      <!-- Email Form (collapsed by default) -->
+      <div class="email-form" id="email-form" data-object-id="email-form">
+        <div class="email-form__inner">
+
+          <!-- Email Field -->
+          <div class="form-field">
+            <label class="form-field__label" for="email-input">Email</label>
+            <div class="form-field__input-wrapper">
+              <input class="form-field__input" id="email-input" data-object-id="email-input" type="email" placeholder="example@mail.com" autocomplete="email">
+            </div>
+            <p class="form-field__error" id="email-error">Please enter a valid email address</p>
+          </div>
+
+          <!-- Password Field -->
+          <div class="form-field">
+            <label class="form-field__label" for="password-input">Password</label>
+            <div class="form-field__input-wrapper">
+              <input class="form-field__input" id="password-input" data-object-id="password-input" type="password" placeholder="Minimum 8 characters" autocomplete="new-password" minlength="8">
+              <button class="form-field__toggle" id="password-toggle" data-object-id="password-toggle" type="button" aria-label="Show password">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+                </svg>
+              </button>
+            </div>
+            <p class="form-field__error" id="password-error">Password must be at least 8 characters</p>
+          </div>
+
+          <!-- Register Button -->
+          <button class="register-btn" id="register-btn" data-object-id="register-btn">Register</button>
+
+        </div>
+      </div>
+
+      <!-- Privacy Note -->
+      <div class="privacy-note" id="privacy-note" data-object-id="privacy-note">
+        <p class="privacy-note__text">We will not request LINE posting permissions</p>
+        <p class="privacy-note__links">
+          <a href="#" target="_blank">Terms of Service</a> · <a href="#" target="_blank">Privacy Policy</a>
+        </p>
+      </div>
+
+      <!-- S3: Success State -->
+      <div class="modal-success" id="modal-success" data-object-id="modal-success">
+        <div class="modal-success__checkmark" id="success-checkmark" data-object-id="success-checkmark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <h2 class="modal-success__title" id="success-title" data-object-id="success-title">Account created!</h2>
+        <p class="modal-success__subtitle" id="success-subtitle" data-object-id="success-subtitle">Listing saved. Redirecting to notification settings...</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================
+       JAVASCRIPT
+       ======================================== -->
+  <script>
+    // Load demo data and render listing
+    async function loadDemoData() {
+      try {
+        const response = await fetch('data/demo-data.json');
+        const data = await response.json();
+        renderListing(data.triggerListing);
+        console.log('📄 05.1 Sign Up / Login — Background listing loaded');
+        console.log('🏠 Listing:', data.triggerListing.title);
+      } catch (err) {
+        console.warn('Demo data not loaded, using inline fallback');
+        renderListing({
+          title: 'Modern 1BR Apartment near Dragon Bridge',
+          price: 8000000,
+          priceJpy: 46000,
+          rating: 4.7,
+          reviewCount: 15,
+          senpaiVerified: true,
+          area: 'Hai Chau District'
+        });
+      }
+    }
+
+    function formatVND(amount) {
+      return new Intl.NumberFormat('vi-VN').format(amount) + '₫';
+    }
+
+    function formatJPY(amount) {
+      return '¥' + new Intl.NumberFormat('ja-JP').format(amount);
+    }
+
+    function renderListing(listing) {
+      document.getElementById('listing-title').textContent = listing.title;
+      document.getElementById('listing-rating').textContent = listing.rating;
+      document.getElementById('listing-review-count').textContent = `(${listing.reviewCount} reviews)`;
+      document.getElementById('listing-area').textContent = listing.area || 'Hai Chau District';
+      document.getElementById('listing-price-vnd').textContent = formatVND(listing.price) + '/month';
+      document.getElementById('listing-price-jpy').textContent = `(~${formatJPY(listing.priceJpy)})`;
+
+      // Hide senpai badge if not verified
+      if (!listing.senpaiVerified) {
+        document.getElementById('senpai-badge').style.display = 'none';
+      }
+    }
+
+    // ========================================
+    // S1: Modal Logic
+    // ========================================
+    const modalBackdrop = document.getElementById('modal-backdrop');
+    const modalClose = document.getElementById('modal-close');
+    const lineLoginBtn = document.getElementById('line-login-btn');
+
+    function showModal() {
+      modalBackdrop.style.display = 'flex';
+      // Trigger reflow for animation
+      requestAnimationFrame(() => {
+        modalBackdrop.classList.add('modal-backdrop--visible');
+      });
+      console.log('🔐 Sign up modal shown');
+    }
+
+    function hideModal() {
+      modalBackdrop.classList.remove('modal-backdrop--visible');
+      setTimeout(() => {
+        modalBackdrop.style.display = 'none';
+      }, 300);
+      console.log('❌ Modal dismissed');
+    }
+
+    // Close modal on × button
+    modalClose.addEventListener('click', hideModal);
+
+    // Close modal on backdrop click (not card)
+    modalBackdrop.addEventListener('click', (e) => {
+      if (e.target === modalBackdrop) hideModal();
+    });
+
+    // Close on ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') hideModal();
+    });
+
+    // ========================================
+    // S3: Success State + Redirect
+    // ========================================
+    const modalCard = document.getElementById('modal-card');
+    const modalSuccess = document.getElementById('modal-success');
+
+    function showSuccessState() {
+      // Switch modal to success mode
+      modalCard.classList.add('modal-card--success');
+      modalSuccess.classList.add('modal-success--visible');
+      console.log('✅ Account created! Listing saved.');
+
+      // Auto-redirect after 1.5s
+      setTimeout(() => {
+        console.log('🔄 Redirecting to notification settings...');
+        window.location.href = '05.2-notification-center.html';
+      }, 1500);
+    }
+
+    // LINE login click
+    lineLoginBtn.addEventListener('click', () => {
+      console.log('🟢 LINE login clicked — simulating auth...');
+      lineLoginBtn.textContent = 'Connecting...';
+      lineLoginBtn.style.opacity = '0.7';
+      lineLoginBtn.disabled = true;
+
+      // Simulate LINE auth delay
+      setTimeout(showSuccessState, 800);
+    });
+
+    // ========================================
+    // S2: Email Accordion + Form Validation
+    // ========================================
+    const emailAccordionTrigger = document.getElementById('email-accordion-trigger');
+    const emailForm = document.getElementById('email-form');
+    const emailInput = document.getElementById('email-input');
+    const passwordInput = document.getElementById('password-input');
+    const passwordToggle = document.getElementById('password-toggle');
+    const registerBtn = document.getElementById('register-btn');
+    const emailError = document.getElementById('email-error');
+    const passwordError = document.getElementById('password-error');
+
+    // Toggle email accordion
+    emailAccordionTrigger.addEventListener('click', () => {
+      const isOpen = emailForm.classList.toggle('email-form--open');
+      emailAccordionTrigger.classList.toggle('email-accordion-trigger--open', isOpen);
+      console.log(isOpen ? '📧 Email form expanded' : '📧 Email form collapsed');
+    });
+
+    // Password show/hide toggle
+    passwordToggle.addEventListener('click', () => {
+      const isPassword = passwordInput.type === 'password';
+      passwordInput.type = isPassword ? 'text' : 'password';
+      console.log(isPassword ? '👁️ Password visible' : '🔒 Password hidden');
+    });
+
+    // Form validation
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    registerBtn.addEventListener('click', () => {
+      let valid = true;
+
+      // Validate email
+      if (!validateEmail(emailInput.value)) {
+        emailInput.classList.add('form-field__input--error');
+        emailError.classList.add('form-field__error--visible');
+        valid = false;
+      } else {
+        emailInput.classList.remove('form-field__input--error');
+        emailError.classList.remove('form-field__error--visible');
+      }
+
+      // Validate password
+      if (passwordInput.value.length < 8) {
+        passwordInput.classList.add('form-field__input--error');
+        passwordError.classList.add('form-field__error--visible');
+        valid = false;
+      } else {
+        passwordInput.classList.remove('form-field__input--error');
+        passwordError.classList.remove('form-field__error--visible');
+      }
+
+      if (valid) {
+        console.log('✅ Email registration valid — simulating account creation...');
+        registerBtn.textContent = 'Creating account...';
+        registerBtn.style.opacity = '0.7';
+        registerBtn.disabled = true;
+        setTimeout(showSuccessState, 800);
+      } else {
+        console.log('❌ Form validation failed');
+      }
+    });
+
+    // Clear errors on input
+    emailInput.addEventListener('input', () => {
+      emailInput.classList.remove('form-field__input--error');
+      emailError.classList.remove('form-field__error--visible');
+    });
+    passwordInput.addEventListener('input', () => {
+      passwordInput.classList.remove('form-field__input--error');
+      passwordError.classList.remove('form-field__error--visible');
+    });
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      loadDemoData();
+      // Show modal on page load (simulating "save" trigger)
+      setTimeout(showModal, 500);
+    });
+  </script>
+
+</body>
+</html>

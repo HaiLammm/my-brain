@@ -30,7 +30,7 @@ Tư duy Win-Win trong phỏng vấn là cách nhìn phỏng vấn như một cu�
 
 ## Key sources
 
-- [[sources/chien-luoc-phong-van-ot-pha]]
+- [[sources/chien-luoc-phong-van-dot-pha]]
 - [[sources/ky-nang-phong-van-tu-duy-phan-xa-giai-ma-logic]]
 - [[sources/tell-me-about-yourself-interview-framework]]
 - [[sources/tips-for-answering-interview-questions]]

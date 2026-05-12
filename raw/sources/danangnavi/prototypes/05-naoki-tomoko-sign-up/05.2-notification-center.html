@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notification Settings — DaNangNavi</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========================================
+       DESIGN TOKENS
+       ======================================== */
+    :root {
+      --color-primary: #1B2A4A;
+      --color-secondary: #FF6B4A;
+      --color-accent: #2EC4B6;
+      --color-bg: #FAFAF8;
+      --color-surface: #FFFFFF;
+      --color-text-primary: #0D1B2A;
+      --color-text-secondary: #6B7280;
+      --color-text-inverse: #FFFFFF;
+      --color-success: #27AE60;
+      --color-warning: #F2994A;
+      --color-error: #EB5757;
+
+      --font-family-primary: 'Noto Sans JP', sans-serif;
+      --font-family-ui: 'Inter', 'Noto Sans', sans-serif;
+
+      --text-h1: 2rem;
+      --text-h2: 1.5rem;
+      --text-h3: 1.25rem;
+      --text-body: 1rem;
+      --text-caption: 0.875rem;
+      --text-small: 0.75rem;
+
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 12px;
+      --space-lg: 16px;
+      --space-xl: 24px;
+      --space-2xl: 32px;
+      --space-3xl: 48px;
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
+
+      --shadow-card: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-modal: 0 8px 32px rgba(0,0,0,0.2);
+      --shadow-sticky: 0 2px 8px rgba(0,0,0,0.06);
+
+      --duration-fast: 150ms;
+      --duration-normal: 300ms;
+      --duration-slow: 500ms;
+      --easing-default: ease-in-out;
+    }
+
+    /* ========================================
+       RESET & BASE
+       ======================================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+
+    body {
+      font-family: var(--font-family-primary);
+      font-size: var(--text-body);
+      line-height: 1.6;
+      color: var(--color-text-primary);
+      background-color: var(--color-bg);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: var(--space-3xl) var(--space-xl);
+    }
+
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    /* ========================================
+       S0: PAGE SHELL
+       ======================================== */
+    .page-container {
+      width: 100%;
+      max-width: 560px;
+    }
+
+    /* Welcome Banner */
+    .welcome-banner {
+      background-color: rgba(39, 174, 96, 0.08);
+      border: 1px solid rgba(39, 174, 96, 0.2);
+      border-radius: var(--radius-md);
+      padding: var(--space-xl);
+      text-align: center;
+      margin-bottom: var(--space-2xl);
+    }
+
+    .welcome-banner__icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-full);
+      background-color: rgba(39, 174, 96, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-md);
+    }
+
+    .welcome-banner__icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--color-success);
+    }
+
+    .welcome-banner__title {
+      font-size: var(--text-h3);
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-xs);
+    }
+
+    .welcome-banner__subtitle {
+      font-size: var(--text-caption);
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Section Labels */
+    .section-label {
+      font-size: var(--text-caption);
+      font-weight: 600;
+      color: var(--color-text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-md);
+    }
+
+    /* ========================================
+       S1: CATEGORY TOGGLES
+       ======================================== */
+    .category-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-2xl);
+    }
+
+    .category-card {
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+      background: var(--color-surface);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg) var(--space-xl);
+      box-shadow: var(--shadow-card);
+      cursor: pointer;
+      transition: box-shadow var(--duration-fast);
+      user-select: none;
+    }
+
+    .category-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .category-card__icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      background-color: rgba(27, 42, 74, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .category-card__info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .category-card__label {
+      font-size: var(--text-body);
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .category-card__desc {
+      font-size: var(--text-caption);
+      color: var(--color-text-secondary);
+    }
+
+    /* Toggle Switch */
+    .toggle-switch {
+      width: 48px;
+      height: 28px;
+      border-radius: 14px;
+      background-color: #D1D5DB;
+      position: relative;
+      transition: background-color var(--duration-normal);
+      flex-shrink: 0;
+    }
+
+    .toggle-switch--on {
+      background-color: var(--color-accent);
+    }
+
+    .toggle-switch__knob {
+      width: 22px;
+      height: 22px;
+      border-radius: var(--radius-full);
+      background: white;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      transition: transform var(--duration-normal);
+    }
+
+    .toggle-switch--on .toggle-switch__knob {
+      transform: translateX(20px);
+    }
+
+    /* ========================================
+       S1: FREQUENCY SELECTOR
+       ======================================== */
+    .frequency-section {
+      margin-bottom: var(--space-2xl);
+    }
+
+    .segmented-control {
+      display: flex;
+      background-color: rgba(27, 42, 74, 0.06);
+      border-radius: var(--radius-sm);
+      padding: 3px;
+      margin-bottom: var(--space-sm);
+    }
+
+    .segmented-control__option {
+      flex: 1;
+      padding: var(--space-md) var(--space-lg);
+      text-align: center;
+      font-size: var(--text-caption);
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      border-radius: 6px;
+      transition: all var(--duration-normal);
+    }
+
+    .segmented-control__option--active {
+      background-color: var(--color-primary);
+      color: var(--color-text-inverse);
+      font-weight: 600;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    }
+
+    .frequency-helper {
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+      font-style: italic;
+    }
+
+    /* ========================================
+       S1: DELIVERY CHANNELS
+       ======================================== */
+    .channel-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-2xl);
+    }
+
+    .channel-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--color-surface);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg) var(--space-xl);
+      box-shadow: var(--shadow-card);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .channel-row:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .channel-row__info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .channel-row__label {
+      font-size: var(--text-body);
+      font-weight: 500;
+      color: var(--color-text-primary);
+    }
+
+    .channel-row__note {
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+    }
+
+    /* ========================================
+       S2: SAVE ACTIONS
+       ======================================== */
+    .save-actions {
+      margin-bottom: var(--space-xl);
+    }
+
+    .save-btn {
+      width: 100%;
+      height: 52px;
+      background-color: var(--color-secondary);
+      color: var(--color-text-inverse);
+      font-size: var(--text-body);
+      font-weight: 700;
+      border-radius: var(--radius-md);
+      transition: opacity var(--duration-fast);
+      margin-bottom: var(--space-md);
+    }
+
+    .save-btn:hover {
+      opacity: 0.9;
+    }
+
+    .skip-link {
+      display: block;
+      text-align: center;
+      color: var(--color-accent);
+      font-size: var(--text-caption);
+      font-weight: 500;
+      padding: var(--space-md);
+      transition: color var(--duration-fast);
+    }
+
+    .skip-link:hover {
+      color: var(--color-primary);
+    }
+
+    /* Footer Note */
+    .footer-note {
+      text-align: center;
+      font-size: var(--text-small);
+      color: rgba(27, 42, 74, 0.5);
+      padding-top: var(--space-lg);
+    }
+
+    /* ========================================
+       S2: TOAST NOTIFICATION
+       ======================================== */
+    .toast {
+      position: fixed;
+      top: var(--space-xl);
+      left: 50%;
+      transform: translateX(-50%) translateY(-100px);
+      background-color: var(--color-primary);
+      color: var(--color-text-inverse);
+      padding: var(--space-md) var(--space-xl);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-modal);
+      font-size: var(--text-caption);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      z-index: 1000;
+      transition: transform var(--duration-normal) var(--easing-default);
+    }
+
+    .toast--visible {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .toast__icon {
+      color: var(--color-success);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================
+       PAGE CONTAINER
+       ======================================== -->
+  <div class="page-container">
+
+    <!-- ========================================
+         S0: WELCOME BANNER
+         ======================================== -->
+    <div class="welcome-banner" id="welcome-banner" data-object-id="welcome-banner">
+      <div class="welcome-banner__icon" id="welcome-checkmark" data-object-id="welcome-checkmark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+      <h1 class="welcome-banner__title" id="welcome-title" data-object-id="welcome-title">Account created! Listing saved. ✓</h1>
+      <p class="welcome-banner__subtitle" id="welcome-subtitle" data-object-id="welcome-subtitle">One more step: set up notifications so you don't miss important info</p>
+    </div>
+
+    <!-- ========================================
+         S1: NOTIFICATION CATEGORIES
+         ======================================== -->
+    <p class="section-label">Notification Categories</p>
+    <div class="category-list" id="category-list" data-object-id="category-list">
+      <!-- Rendered by JavaScript -->
+    </div>
+
+    <!-- FREQUENCY SELECTOR -->
+    <div class="frequency-section">
+      <p class="section-label">Notification Frequency</p>
+      <div class="segmented-control" id="frequency-control" data-object-id="frequency-control">
+        <!-- Rendered by JavaScript -->
+      </div>
+      <p class="frequency-helper" id="frequency-helper" data-object-id="frequency-helper">Community replies are always delivered instantly regardless of this setting</p>
+    </div>
+
+    <!-- DELIVERY CHANNELS -->
+    <p class="section-label">Delivery Method</p>
+    <div class="channel-list" id="channel-list" data-object-id="channel-list">
+      <!-- Rendered by JavaScript -->
+    </div>
+
+    <!-- ========================================
+         S2: SAVE ACTIONS
+         ======================================== -->
+    <div class="save-actions">
+      <button class="save-btn" id="save-btn" data-object-id="save-btn">Save Settings</button>
+      <a href="#" class="skip-link" id="skip-link" data-object-id="skip-link">Set up later</a>
+    </div>
+
+    <!-- FOOTER NOTE -->
+    <p class="footer-note" id="footer-note" data-object-id="footer-note">You can change notification settings anytime from "Settings"</p>
+
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast" data-object-id="toast">
+    <span class="toast__icon">✓</span>
+    <span id="toast-text">Settings saved</span>
+  </div>
+
+  <!-- ========================================
+       JAVASCRIPT
+       ======================================== -->
+  <script>
+    // State
+    const state = {
+      categories: {},
+      frequency: 'daily',
+      channels: {}
+    };
+
+    // Load demo data
+    async function loadDemoData() {
+      try {
+        const response = await fetch('data/demo-data.json');
+        const data = await response.json();
+        initFromData(data);
+        console.log('📄 05.2 Notification Center loaded');
+      } catch (err) {
+        console.warn('Demo data not loaded, using defaults');
+        initFromData(getDefaultData());
+      }
+    }
+
+    function getDefaultData() {
+      return {
+        notificationCategories: [
+          { id: 'new-listings', label: 'New Listings in Area', description: 'New listings matching your preferences', icon: '🏠', defaultOn: true },
+          { id: 'community-replies', label: 'Community Replies', description: 'Replies to your posts and @mentions', icon: '💬', defaultOn: true },
+          { id: 'weekly-deals', label: 'Weekly Deals', description: 'Weekly deals digest', icon: '🏷️', defaultOn: true },
+          { id: 'events', label: 'Events Near You', description: 'Events happening near you', icon: '📅', defaultOn: false }
+        ],
+        frequencyOptions: [
+          { id: 'instant', label: 'Instant', description: 'Real-time notifications' },
+          { id: 'daily', label: 'Daily Digest', description: 'Once daily summary', default: true },
+          { id: 'weekly', label: 'Weekly Digest', description: 'Once weekly summary' }
+        ],
+        deliveryChannels: [
+          { id: 'line', label: 'LINE Notifications', defaultOn: true },
+          { id: 'push', label: 'Push Notifications', defaultOn: false, note: 'Browser permission required' },
+          { id: 'email', label: 'Email Notifications', defaultOn: false }
+        ]
+      };
+    }
+
+    function initFromData(data) {
+      renderCategories(data.notificationCategories);
+      renderFrequency(data.frequencyOptions);
+      renderChannels(data.deliveryChannels);
+    }
+
+    // ========================================
+    // S1: Render Categories
+    // ========================================
+    function renderCategories(categories) {
+      const list = document.getElementById('category-list');
+      list.innerHTML = categories.map(cat => {
+        state.categories[cat.id] = cat.defaultOn;
+        return `
+          <div class="category-card" data-category="${cat.id}" data-object-id="category-${cat.id}">
+            <div class="category-card__icon">${cat.icon}</div>
+            <div class="category-card__info">
+              <div class="category-card__label">${cat.label}</div>
+              <div class="category-card__desc">${cat.description}</div>
+            </div>
+            <div class="toggle-switch ${cat.defaultOn ? 'toggle-switch--on' : ''}" data-toggle="${cat.id}">
+              <div class="toggle-switch__knob"></div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Add click handlers
+      list.querySelectorAll('.category-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const id = card.dataset.category;
+          state.categories[id] = !state.categories[id];
+          const toggle = card.querySelector('.toggle-switch');
+          toggle.classList.toggle('toggle-switch--on', state.categories[id]);
+          console.log(`🔔 ${id}: ${state.categories[id] ? 'ON' : 'OFF'}`);
+        });
+      });
+    }
+
+    // ========================================
+    // S1: Render Frequency
+    // ========================================
+    function renderFrequency(options) {
+      const control = document.getElementById('frequency-control');
+      control.innerHTML = options.map(opt => {
+        if (opt.default) state.frequency = opt.id;
+        return `
+          <button class="segmented-control__option ${opt.default ? 'segmented-control__option--active' : ''}"
+                  data-frequency="${opt.id}" data-object-id="freq-${opt.id}">
+            ${opt.label}
+          </button>
+        `;
+      }).join('');
+
+      // Add click handlers
+      control.querySelectorAll('.segmented-control__option').forEach(btn => {
+        btn.addEventListener('click', () => {
+          control.querySelectorAll('.segmented-control__option').forEach(b =>
+            b.classList.remove('segmented-control__option--active'));
+          btn.classList.add('segmented-control__option--active');
+          state.frequency = btn.dataset.frequency;
+          console.log(`⏱️ Frequency: ${state.frequency}`);
+        });
+      });
+    }
+
+    // ========================================
+    // S1: Render Channels
+    // ========================================
+    function renderChannels(channels) {
+      const list = document.getElementById('channel-list');
+      list.innerHTML = channels.map(ch => {
+        state.channels[ch.id] = ch.defaultOn;
+        return `
+          <div class="channel-row" data-channel="${ch.id}" data-object-id="channel-${ch.id}">
+            <div class="channel-row__info">
+              <span class="channel-row__label">${ch.label}</span>
+              ${ch.note ? `<span class="channel-row__note">${ch.note}</span>` : ''}
+            </div>
+            <div class="toggle-switch ${ch.defaultOn ? 'toggle-switch--on' : ''}" data-toggle="${ch.id}">
+              <div class="toggle-switch__knob"></div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Add click handlers
+      list.querySelectorAll('.channel-row').forEach(row => {
+        row.addEventListener('click', () => {
+          const id = row.dataset.channel;
+          state.channels[id] = !state.channels[id];
+          const toggle = row.querySelector('.toggle-switch');
+          toggle.classList.toggle('toggle-switch--on', state.channels[id]);
+          console.log(`📡 ${id}: ${state.channels[id] ? 'ON' : 'OFF'}`);
+        });
+      });
+    }
+
+    // ========================================
+    // S2: Save Actions
+    // ========================================
+    const saveBtn = document.getElementById('save-btn');
+    const skipLink = document.getElementById('skip-link');
+    const toast = document.getElementById('toast');
+
+    function showToast(message) {
+      document.getElementById('toast-text').textContent = message;
+      toast.classList.add('toast--visible');
+      setTimeout(() => {
+        toast.classList.remove('toast--visible');
+      }, 2500);
+    }
+
+    function saveAndRedirect() {
+      console.log('💾 Settings saved:', JSON.stringify(state, null, 2));
+      showToast('Settings saved ✓');
+
+      // Redirect to saved listing after toast
+      setTimeout(() => {
+        console.log('🔄 Redirecting to saved listing...');
+        window.location.href = '05.1-sign-up-login.html';
+      }, 1500);
+    }
+
+    saveBtn.addEventListener('click', () => {
+      saveBtn.textContent = 'Saving...';
+      saveBtn.style.opacity = '0.7';
+      saveBtn.disabled = true;
+      setTimeout(saveAndRedirect, 500);
+    });
+
+    skipLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      console.log('⏭️ Skipped — applying defaults');
+      showToast('Default settings applied ✓');
+      setTimeout(() => {
+        window.location.href = '05.1-sign-up-login.html';
+      }, 1500);
+    });
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', loadDemoData);
+  </script>
+
+</body>
+</html>

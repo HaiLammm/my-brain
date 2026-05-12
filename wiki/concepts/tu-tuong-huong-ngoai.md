@@ -12,8 +12,10 @@ created: 2026-05-11
 updated: 2026-05-11
 key_sources:
   - sources/man-and-his-symbols
+  - sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi
 related_concepts:
   - concepts/vo-thuc
+  - concepts/bon-chuc-nang-tam-ly
 ---
 
 ## Definition

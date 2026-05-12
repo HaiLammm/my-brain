@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DaNangNavi — Thread</title>
+  <link rel="stylesheet" href="shared/design-tokens.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .page-container { max-width: 1280px; margin: 0 auto; padding: 0 24px 80px; }
+    .thread-layout { display: grid; grid-template-columns: 65% 35%; gap: 32px; margin-top: 24px; }
+
+    /* Back link */
+    .back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; color: var(--color-text-secondary); text-decoration: none; padding: 16px 0 8px; }
+    .back-link:hover { color: var(--color-accent); text-decoration: none; }
+
+    /* Original Post */
+    .op-card { background: var(--color-surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-card); padding: 24px; margin-bottom: 24px; }
+    .op-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .op-avatar { width: 44px; height: 44px; border-radius: 50%; background: #D1D5DB; flex-shrink: 0; }
+    .op-name { font-weight: 600; font-size: 15px; color: var(--color-text); }
+    .op-time { font-size: 12px; color: var(--color-text-secondary); }
+    .op-title { font-family: var(--font-headlines); font-size: 22px; font-weight: 700; color: var(--color-text); margin-bottom: 12px; line-height: 1.3; }
+    .op-body { font-size: 15px; color: var(--color-text); line-height: 1.7; margin-bottom: 16px; }
+    .op-tags { display: flex; gap: 8px; margin-bottom: 16px; }
+    .op-tag { font-size: 12px; color: var(--color-accent); background: rgba(46,196,182,0.1); padding: 4px 10px; border-radius: var(--radius-full); }
+    .op-stats { display: flex; gap: 16px; font-size: 14px; color: var(--color-text-secondary); }
+    .op-likes { cursor: pointer; transition: color var(--transition-fast); }
+    .op-likes:hover, .op-likes.active { color: var(--color-secondary); }
+
+    /* Sort bar */
+    .sort-bar { display: flex; gap: 8px; margin-bottom: 16px; }
+    .sort-pill { font-family: var(--font-ui); font-size: 13px; font-weight: 500; padding: 6px 14px; border-radius: var(--radius-full); border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text-secondary); cursor: pointer; transition: all var(--transition-fast); }
+    .sort-pill.active { background: var(--color-primary); color: #FFF; border-color: var(--color-primary); }
+
+    /* Replies */
+    .reply-card { display: flex; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--color-border); }
+    .reply-card:last-child { border-bottom: none; }
+    .reply-avatar { width: 36px; height: 36px; border-radius: 50%; background: #D1D5DB; flex-shrink: 0; margin-top: 2px; }
+    .reply-content { flex: 1; }
+    .reply-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+    .reply-name { font-weight: 600; font-size: 14px; color: var(--color-text); }
+    .senpai-badge { font-size: 11px; font-weight: 600; color: var(--color-accent); background: rgba(46,196,182,0.1); padding: 2px 8px; border-radius: var(--radius-full); }
+    .reply-time { font-size: 12px; color: var(--color-text-secondary); }
+    .reply-text { font-size: 14px; color: var(--color-text); line-height: 1.6; margin-bottom: 8px; }
+    .reply-actions { display: flex; gap: 16px; align-items: center; }
+    .upvote-btn { display: flex; align-items: center; gap: 4px; font-size: 13px; color: var(--color-text-secondary); cursor: pointer; border: none; background: none; padding: 4px 8px; border-radius: 6px; transition: all var(--transition-fast); }
+    .upvote-btn:hover { background: rgba(255,107,74,0.08); color: var(--color-secondary); }
+    .upvote-btn.active { color: var(--color-secondary); font-weight: 600; }
+    .reply-action-link { font-size: 13px; color: var(--color-text-secondary); cursor: pointer; border: none; background: none; }
+    .reply-action-link:hover { color: var(--color-accent); }
+
+    /* Composer */
+    .composer { background: var(--color-surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-card); padding: 16px 20px; margin-top: 24px; }
+    .composer-collapsed { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+    .composer-avatar { width: 36px; height: 36px; border-radius: 50%; background: #D1D5DB; flex-shrink: 0; }
+    .composer-placeholder { font-size: 14px; color: var(--color-text-secondary); flex: 1; padding: 10px 16px; background: var(--color-bg); border-radius: var(--radius-full); }
+    .composer-expanded { display: none; }
+    .composer-expanded.visible { display: block; }
+    .composer-textarea { width: 100%; min-height: 100px; padding: 12px; border: 1px solid var(--color-border); border-radius: var(--radius); font-family: var(--font-body); font-size: 14px; resize: vertical; margin-bottom: 12px; }
+    .composer-textarea:focus { outline: none; border-color: var(--color-accent); }
+    .composer-footer { display: flex; justify-content: space-between; align-items: center; }
+    .composer-char { font-size: 12px; color: var(--color-text-secondary); }
+    .composer-actions { display: flex; gap: 8px; align-items: center; }
+    .composer-photo-btn { background: none; border: none; font-size: 18px; cursor: pointer; padding: 4px; }
+    .composer-submit { font-family: var(--font-ui); font-size: 14px; font-weight: 700; color: #FFF; background: var(--color-secondary); border: none; padding: 8px 20px; border-radius: var(--radius-full); cursor: pointer; }
+    .composer-submit:disabled { opacity: 0.4; cursor: not-allowed; }
+    .composer-close { background: none; border: none; font-size: 16px; color: var(--color-text-secondary); cursor: pointer; }
+
+    /* Related threads sidebar */
+    .sidebar-title { font-family: var(--font-headlines); font-size: 16px; font-weight: 700; color: var(--color-text); margin-bottom: 16px; }
+    .related-thread { padding: 12px; background: var(--color-surface); border-radius: var(--radius); box-shadow: var(--shadow-card); margin-bottom: 10px; cursor: pointer; transition: box-shadow var(--transition-normal); }
+    .related-thread:hover { box-shadow: var(--shadow-card-hover); }
+    .related-thread-title { font-size: 14px; font-weight: 500; color: var(--color-text); margin-bottom: 4px; line-height: 1.3; }
+    .related-thread-meta { font-size: 12px; color: var(--color-text-secondary); }
+    .back-to-community { display: inline-block; margin-top: 16px; font-size: 14px; font-weight: 600; color: var(--color-accent); }
+  </style>
+</head>
+<body>
+  <div id="nav-container"></div>
+  <div class="page-container">
+    <a class="back-link" href="#">← Back to Community</a>
+
+    <div class="thread-layout">
+      <div>
+        <!-- Original Post -->
+        <div class="op-card" id="op-card"></div>
+
+        <!-- Sort -->
+        <div class="sort-bar">
+          <button class="sort-pill active" data-sort="popular">Popular</button>
+          <button class="sort-pill" data-sort="newest">Newest</button>
+        </div>
+
+        <!-- Replies -->
+        <div id="replies-list"></div>
+
+        <!-- Composer -->
+        <div class="composer" id="composer">
+          <div class="composer-collapsed" id="composer-collapsed">
+            <div class="composer-avatar"></div>
+            <div class="composer-placeholder">Write a reply...</div>
+          </div>
+          <div class="composer-expanded" id="composer-expanded">
+            <textarea class="composer-textarea" id="composer-text" placeholder="Write your reply..." maxlength="500"></textarea>
+            <div class="composer-footer">
+              <span class="composer-char" id="composer-char">0/500</span>
+              <div class="composer-actions">
+                <button class="composer-photo-btn" title="Attach photo">📷</button>
+                <button class="composer-close" id="composer-close">✕</button>
+                <button class="composer-submit" id="composer-submit" disabled>Post</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div>
+        <div class="sidebar-title">Related Topics</div>
+        <div id="related-threads"></div>
+        <a class="back-to-community" href="#">← Back to Community</a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { renderTopNav } from './components/top-nav.js';
+    const res = await fetch('./data/demo-data.json');
+    const data = await res.json();
+
+    renderTopNav(document.getElementById('nav-container'), { activePage: 'community' });
+
+    const thread = data.threadDetail;
+
+    // Original Post
+    document.getElementById('op-card').innerHTML = `
+      <div class="op-header">
+        <div class="op-avatar"></div>
+        <div>
+          <div class="op-name">${thread.author === 'senpai-003' ? data.senpai[2].name : 'Anonymous'}</div>
+          <div class="op-time">${thread.postedAgo}</div>
+        </div>
+      </div>
+      <div class="op-title">${thread.title}</div>
+      <div class="op-body">${thread.body}</div>
+      <div class="op-tags">${thread.tags.map(t => `<span class="op-tag">#${t}</span>`).join('')}</div>
+      <div class="op-stats">
+        <span class="op-likes" id="op-likes">❤️ ${thread.likes} likes</span>
+        <span>💬 ${thread.replies.length} replies</span>
+      </div>
+    `;
+
+    document.getElementById('op-likes').addEventListener('click', function() {
+      this.classList.toggle('active');
+      console.log('[Thread] Like toggled');
+    });
+
+    // Replies
+    let sortBy = 'popular';
+    function renderReplies() {
+      const list = document.getElementById('replies-list');
+      list.innerHTML = '';
+      const sorted = [...thread.replies].sort((a, b) =>
+        sortBy === 'popular' ? b.upvotes - a.upvotes : 0
+      );
+      sorted.forEach(r => {
+        const div = document.createElement('div');
+        div.className = 'reply-card';
+        div.innerHTML = `
+          <div class="reply-avatar"></div>
+          <div class="reply-content">
+            <div class="reply-header">
+              <span class="reply-name">${r.authorName}</span>
+              ${r.isSenpai ? '<span class="senpai-badge">Senpai</span>' : ''}
+              <span class="reply-time">${r.postedAgo}</span>
+            </div>
+            <div class="reply-text">${r.text}</div>
+            <div class="reply-actions">
+              <button class="upvote-btn" data-id="${r.id}">▲ ${r.upvotes}</button>
+              <button class="reply-action-link">Reply</button>
+            </div>
+          </div>
+        `;
+        div.querySelector('.upvote-btn').addEventListener('click', function() {
+          this.classList.toggle('active');
+          console.log('[Thread] Upvote:', r.id);
+        });
+        list.appendChild(div);
+      });
+    }
+    renderReplies();
+
+    // Sort
+    document.querySelectorAll('.sort-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.sort-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        sortBy = pill.dataset.sort;
+        renderReplies();
+      });
+    });
+
+    // Composer
+    const collapsed = document.getElementById('composer-collapsed');
+    const expanded = document.getElementById('composer-expanded');
+    const textarea = document.getElementById('composer-text');
+    const charCount = document.getElementById('composer-char');
+    const submitBtn = document.getElementById('composer-submit');
+
+    collapsed.addEventListener('click', () => {
+      collapsed.style.display = 'none';
+      expanded.classList.add('visible');
+      textarea.focus();
+    });
+
+    document.getElementById('composer-close').addEventListener('click', () => {
+      expanded.classList.remove('visible');
+      collapsed.style.display = 'flex';
+      textarea.value = '';
+      charCount.textContent = '0/500';
+      submitBtn.disabled = true;
+    });
+
+    textarea.addEventListener('input', () => {
+      charCount.textContent = `${textarea.value.length}/500`;
+      submitBtn.disabled = textarea.value.trim().length === 0;
+    });
+
+    submitBtn.addEventListener('click', () => {
+      console.log('[Thread] Reply posted:', textarea.value);
+      textarea.value = '';
+      expanded.classList.remove('visible');
+      collapsed.style.display = 'flex';
+    });
+
+    // Related threads
+    const related = document.getElementById('related-threads');
+    const relatedData = [
+      { title: 'Best cafes to work from in Da Nang', replies: 28 },
+      { title: 'Weekend events roundup — April', replies: 15 },
+      { title: 'How do solo senpai make friends here?', replies: 34 },
+    ];
+    relatedData.forEach(r => {
+      const div = document.createElement('div');
+      div.className = 'related-thread';
+      div.innerHTML = `
+        <div class="related-thread-title">${r.title}</div>
+        <div class="related-thread-meta">💬 ${r.replies} replies</div>
+      `;
+      related.appendChild(div);
+    });
+
+    console.log('[Thread] Loaded');
+  </script>
+</body>
+</html>

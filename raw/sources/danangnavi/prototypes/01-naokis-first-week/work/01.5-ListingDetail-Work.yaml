@@ -1,0 +1,36 @@
+metadata:
+  page_number: "01.5"
+  page_name: "Listing Detail"
+  scenario: "01: Naoki's First Week"
+  spec_path: "C-UX-Scenarios/01-naokis-first-week/01.5-listing-detail/01.5-listing-detail.md"
+  device_compatibility:
+    type: "desktop-only"
+    min_width: "1280px"
+  design_fidelity: "design-system-components"
+  language: "en"
+  created: "2026-04-08"
+
+sections:
+  - number: 1
+    name: "Page Shell + Photo Gallery"
+    status: "Complete"
+    completed: "2026-04-08"
+  - number: 2
+    name: "Listing Header + Price"
+    status: "Complete"
+    completed: "2026-04-08"
+  - number: 3
+    name: "Key Details + Amenities"
+    status: "Complete"
+    completed: "2026-04-08"
+  - number: 4
+    name: "Senpai Reviews"
+    status: "Complete"
+    completed: "2026-04-08"
+  - number: 5
+    name: "Contract Guide + Map + Action Bar"
+    status: "Complete"
+    completed: "2026-04-08"
+
+demo_data_source: "data/demo-data.json"
+output_file: "01.5-listing-detail.html"

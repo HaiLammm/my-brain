@@ -1,0 +1,274 @@
+# Design Delivery DD-001: DaNangNavi MVP — Full Platform
+# Contract between UX Design and Development
+
+delivery:
+  id: DD-001
+  name: "DaNangNavi MVP — Full Platform"
+  status: ready
+  priority: high
+  created: "2026-04-08"
+  designer: Lem
+  description: >
+    Complete MVP covering all 5 user scenarios across 3 personas (Naoki the Newcomer,
+    Tomoko the Tourist, Lan the Business Owner). 17 pages with full specifications,
+    22 design system components, and design tokens.
+
+# ─── USER VALUE ───────────────────────────────────────────
+
+user_value:
+  problem: |
+    Japanese expats and tourists in Da Nang lack a trusted, Japanese-language platform
+    for finding local businesses, connecting with community, and navigating daily life.
+    Business owners lack a way to reach Japanese customers without knowing Japanese.
+  solution: |
+    A bilingual (JP/VI) local guide platform with senpai-verified listings, community hub,
+    translation tools, deals/coupons, and a Vietnamese business portal with auto-translation.
+  success_criteria:
+    - "First-time user finds a relevant listing within 2 minutes"
+    - "Tourist redeems a coupon within one session"
+    - "Business owner publishes listing in under 15 minutes"
+    - "Newcomer joins a community event within first week"
+    - "Community generates 100+ posts/day within 3 months"
+
+# ─── DESIGN ARTIFACTS ─────────────────────────────────────
+
+design_artifacts:
+  scenarios:
+    - id: "01-naokis-first-week"
+      name: "Naoki's First Week"
+      priority: P1
+      persona: Naoki (Primary)
+      pages: 5
+      path: "C-UX-Scenarios/01-naokis-first-week/"
+      pages_list:
+        - "01.1-homepage"
+        - "01.2-newcomer-onboarding"
+        - "01.3-area-neighborhood-guide"
+        - "01.4-search-browse"
+        - "01.5-listing-detail"
+
+    - id: "02-naoki-becomes-senpai"
+      name: "Naoki Becomes Senpai"
+      priority: P1
+      persona: Naoki (Primary)
+      pages: 4
+      path: "C-UX-Scenarios/02-naoki-becomes-senpai/"
+      pages_list:
+        - "02.1-community-hub"
+        - "02.2-community-thread"
+        - "02.3-events-meetups"
+        - "02.4-user-profile"
+
+    - id: "03-tomokos-danang-discovery"
+      name: "Tomoko's Da Nang Discovery"
+      priority: P2
+      persona: Tomoko (Secondary)
+      pages: 3
+      path: "C-UX-Scenarios/03-tomokos-danang-discovery/"
+      pages_list:
+        - "03.1-senpai-article-guide"
+        - "03.2-translation-tools"
+        - "03.3-deals-coupons"
+
+    - id: "04-lan-lists-her-business"
+      name: "Lan Lists Her Business"
+      priority: P2
+      persona: Lan (Tertiary)
+      pages: 3
+      path: "C-UX-Scenarios/04-lan-lists-her-business/"
+      pages_list:
+        - "04.1-listing-editor"
+        - "04.2-coupon-manager"
+        - "04.3-business-dashboard"
+
+    - id: "05-naoki-tomoko-sign-up"
+      name: "Naoki & Tomoko Sign Up"
+      priority: P3
+      persona: Cross-persona
+      pages: 2
+      path: "C-UX-Scenarios/05-naoki-tomoko-sign-up/"
+      pages_list:
+        - "05.1-sign-up-login"
+        - "05.2-notification-center"
+
+  design_system:
+    path: "D-Design-System/"
+    tokens: "design-tokens.md"
+    components_count: 22
+    components:
+      simple:
+        - primary-cta-button
+        - senpai-badge
+        - filter-chips
+        - section-header
+        - dual-price-display
+        - fair-price-indicator
+        - empty-state
+        - toast-notification
+        - expandable-accordion
+        - senpai-tip-card
+        - save-heart-button
+        - status-badge
+        - success-banner
+        - segmented-control
+      moderate_complex:
+        - bottom-tab-nav
+        - interactive-map
+        - signup-modal
+        - sticky-action-bar
+        - search-bar
+        - modal-bottom-sheet
+        - senpai-card
+        - coupon-card
+
+  supporting_artifacts:
+    - path: "A-Product-Brief/"
+      contents: "project-brief.md, visual-direction.md, content-language.md, platform-requirements.md"
+    - path: "B-Trigger-Map/"
+      contents: "3 personas, 7 business goals, key insights"
+
+# ─── TECHNICAL REQUIREMENTS ───────────────────────────────
+
+technical_requirements:
+  platform:
+    type: "Web application (responsive, mobile-first)"
+    framework: "Next.js 14+ (App Router)"
+    styling: "Tailwind CSS"
+    language: "TypeScript"
+    font: "Noto Sans JP (Google Fonts)"
+    icons: "Lucide Icons"
+
+  data:
+    phase: "Demo/MVP — mock data, no real backend"
+    approach: "Static JSON files or hardcoded data for demo"
+    future: "FastAPI backend planned for production"
+
+  integrations:
+    required_for_demo:
+      - name: "Google Fonts"
+        purpose: "Noto Sans JP typography"
+      - name: "Lucide Icons"
+        purpose: "UI icon library"
+    deferred_to_production:
+      - name: "Mapbox or Google Maps"
+        purpose: "Interactive maps (use static images for demo)"
+      - name: "LINE Login OAuth"
+        purpose: "Authentication (mock for demo)"
+      - name: "Google Cloud Vision / OCR"
+        purpose: "Menu translation (mock for demo)"
+      - name: "Translation API"
+        purpose: "Auto JP-VI translation (mock for demo)"
+
+  i18n:
+    consumer_ui: "Japanese (primary)"
+    business_ui: "Vietnamese"
+    content: "Bilingual JP + VI"
+    currency: "Dual display VND + JPY (static exchange rate for demo)"
+
+  performance:
+    first_load: "< 3s on 4G"
+    interaction: "< 100ms response"
+    images: "Next.js Image component, WebP, lazy loading"
+    bundle: "< 200KB initial JS"
+
+# ─── ACCEPTANCE CRITERIA ──────────────────────────────────
+
+acceptance_criteria:
+  functional:
+    - "Homepage loads with hero, search bar, senpai picks, deals, community highlights"
+    - "Newcomer onboarding flow completes 3 steps and generates personalized checklist"
+    - "Search page filters listings by area, budget, type with real-time results"
+    - "Listing detail shows photos, price (dual currency), fair-price indicator, reviews"
+    - "Community hub shows categories, trending threads, upcoming events"
+    - "Thread page displays replies with senpai badges, supports reply composer"
+    - "Events page shows list/calendar toggle, event cards with join flow"
+    - "User profile shows senpai progress tracker and activity timeline"
+    - "Senpai article guide displays ranked restaurants with ratings and coupons"
+    - "Translation tools page has voice input, camera OCR, phrasebook tabs"
+    - "Deals page shows coupon cards with QR redemption flow"
+    - "Listing editor: 3-step form with photo upload and menu OCR preview"
+    - "Coupon manager: create coupon with Japanese customer preview"
+    - "Business dashboard: status cards, metrics (empty state), activity feed"
+    - "Sign up modal: LINE login primary, email accordion secondary"
+    - "Notification center: category toggles, frequency selector"
+    - "Bottom tab navigation works across all consumer mobile pages"
+
+  non_functional:
+    - "Responsive: mobile (375px), tablet (768px), desktop (1280px)"
+    - "All text minimum 14px (senior-friendly)"
+    - "Touch targets minimum 44px"
+    - "Color contrast meets WCAG AA"
+    - "Japanese text renders correctly (Noto Sans JP)"
+    - "Vietnamese text renders correctly in business portal"
+
+  edge_cases:
+    - "Empty states for: search no results, empty wallet, new dashboard, no events"
+    - "Unauthenticated user actions trigger signup modal"
+    - "Form validation: required fields, email format, character limits"
+    - "Long text truncation with ellipsis on card titles"
+    - "Image loading placeholders/skeletons"
+
+# ─── IMPLEMENTATION GUIDANCE ──────────────────────────────
+
+implementation:
+  recommended_build_order:
+    - epic: "E1: Foundation & Design System"
+      pages: "None (infrastructure)"
+      scope: "Tailwind config with design tokens, shared components (bottom-tab-nav, primary-cta-button, senpai-badge, filter-chips, section-header), layout shell"
+      estimate: "1 day"
+
+    - epic: "E2: Scenario 01 — Naoki's First Week"
+      pages: "01.1, 01.2, 01.3, 01.4, 01.5"
+      scope: "Homepage, onboarding, area guide, search, listing detail"
+      estimate: "2-3 days"
+      priority: "P1 — build first, this is the demo's core flow"
+
+    - epic: "E3: Scenario 02 — Community"
+      pages: "02.1, 02.2, 02.3, 02.4"
+      scope: "Community hub, thread, events, profile"
+      estimate: "1-2 days"
+      priority: "P1"
+
+    - epic: "E4: Scenario 05 — Auth"
+      pages: "05.1, 05.2"
+      scope: "Signup modal, notification center"
+      estimate: "0.5 day"
+      priority: "P3 — can be stubbed initially"
+
+    - epic: "E5: Scenario 03 — Tourist Flow"
+      pages: "03.1, 03.2, 03.3"
+      scope: "Senpai guide, translation tools, deals/coupons"
+      estimate: "1-2 days"
+      priority: "P2"
+
+    - epic: "E6: Scenario 04 — Business Portal"
+      pages: "04.1, 04.2, 04.3"
+      scope: "Listing editor, coupon manager, dashboard"
+      estimate: "1-2 days"
+      priority: "P2"
+
+  total_estimate: "6-10 days"
+
+  assumptions:
+    - "Demo uses mock/static data — no real API integration"
+    - "Maps use static images or simple embed — no Mapbox integration for demo"
+    - "LINE login is mocked — button exists but redirects to mock success"
+    - "OCR/translation is mocked — shows pre-defined results"
+    - "Single developer (Lem) implementing"
+
+  risks:
+    - level: medium
+      description: "17 pages is ambitious for solo developer in ~7 days"
+      mitigation: "Build P1 scenarios first, P2/P3 can be simplified or deferred"
+    - level: low
+      description: "CJK typography rendering edge cases"
+      mitigation: "Noto Sans JP handles all 3 languages; test early"
+
+# ─── REFERENCE FILES ──────────────────────────────────────
+
+reference_files:
+  visual_direction: "A-Product-Brief/visual-direction.md"
+  color_palette: "D-Design-System/design-tokens.md"
+  component_index: "D-Design-System/index.md"
+  scenario_index: "C-UX-Scenarios/00-ux-scenarios.md"
+  trigger_map: "B-Trigger-Map/00-trigger-map.md"

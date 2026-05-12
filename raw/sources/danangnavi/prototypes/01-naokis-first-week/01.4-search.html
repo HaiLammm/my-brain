@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DaNangNavi — Search</title>
+  <link rel="stylesheet" href="shared/design-tokens.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .page-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+      min-height: 100vh;
+    }
+
+    /* Search Header */
+    .search-header {
+      padding: 24px 0 16px;
+    }
+    .search-header-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .search-header-row #search-bar {
+      max-width: 100%;
+      flex: 1;
+    }
+    .results-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .results-count {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+    }
+    .results-count strong {
+      color: var(--color-text);
+    }
+    .sort-select {
+      font-family: var(--font-ui);
+      font-size: 13px;
+      color: var(--color-text);
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+
+    /* Filter Chips */
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+    .filter-chip {
+      font-family: var(--font-ui);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-text);
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+      padding: 7px 16px;
+      cursor: pointer;
+      transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+      white-space: nowrap;
+    }
+    .filter-chip:hover {
+      border-color: var(--color-accent);
+    }
+    .filter-chip.active {
+      border-color: var(--color-accent);
+      background-color: rgba(46,196,182,0.1);
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+    .filter-chip-toggle {
+      font-family: var(--font-ui);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+      padding: 7px 16px;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .filter-chip-toggle.active {
+      border-color: var(--color-success);
+      background-color: rgba(39,174,96,0.1);
+      color: var(--color-success);
+      font-weight: 600;
+    }
+
+    /* View Toggle */
+    .view-toggle {
+      display: flex;
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-left: auto;
+    }
+    .view-toggle-btn {
+      font-family: var(--font-ui);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 7px 16px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      color: var(--color-text-secondary);
+      transition: all var(--transition-fast);
+    }
+    .view-toggle-btn.active {
+      background-color: var(--color-primary);
+      color: #FFFFFF;
+    }
+
+    /* Content area */
+    .search-content {
+      margin-top: 24px;
+    }
+
+    /* Results Grid */
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    /* Listing Card */
+    .listing-card {
+      background-color: var(--color-surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      cursor: pointer;
+      transition: box-shadow var(--transition-normal);
+    }
+    .listing-card:hover {
+      box-shadow: var(--shadow-card-hover);
+    }
+    .listing-card-photo {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/10;
+      background-size: cover;
+      background-position: center;
+    }
+    .listing-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--color-success);
+      background-color: rgba(255,255,255,0.95);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+    }
+    .listing-save {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 36px;
+      height: 36px;
+      background-color: rgba(255,255,255,0.9);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      transition: transform var(--transition-fast);
+    }
+    .listing-save:hover {
+      transform: scale(1.1);
+    }
+    .listing-save.saved {
+      color: var(--color-secondary);
+    }
+    .listing-card-body {
+      padding: 16px 20px;
+    }
+    .listing-title {
+      font-family: var(--font-headlines);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .listing-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+    .listing-price-vnd {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+    .listing-price-jpy {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-accent);
+    }
+    .listing-price-suffix {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+    }
+    .fair-price {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+      margin-bottom: 10px;
+    }
+    .fair-price.fair {
+      color: var(--color-success);
+      background-color: rgba(39,174,96,0.1);
+    }
+    .fair-price.slightly-high {
+      color: var(--color-warning);
+      background-color: rgba(242,153,74,0.1);
+    }
+    .fair-price.caution {
+      color: var(--color-error);
+      background-color: rgba(235,87,87,0.1);
+    }
+    .listing-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      margin-bottom: 10px;
+    }
+    .listing-rating {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .listing-rating-star {
+      color: var(--color-warning);
+    }
+    .listing-rating-count {
+      color: var(--color-text-secondary);
+    }
+    .listing-snippet {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      line-height: 1.4;
+      font-style: italic;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Map View */
+    .map-view {
+      display: none;
+      width: 100%;
+      height: 500px;
+      background-color: var(--color-surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+    }
+    .map-view.visible {
+      display: block;
+    }
+    .map-view-bg {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #E8F4F8 0%, #D4EEE9 100%);
+      position: relative;
+    }
+    .map-pin {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: transform var(--transition-fast);
+    }
+    .map-pin:hover {
+      transform: scale(1.1);
+      z-index: 10;
+    }
+    .map-pin-price {
+      font-family: var(--font-ui);
+      font-size: 12px;
+      font-weight: 700;
+      color: #FFFFFF;
+      background-color: var(--color-primary);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      white-space: nowrap;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .map-pin-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--color-primary);
+      border-radius: 50%;
+      margin-top: -2px;
+    }
+    .map-pin.senpai .map-pin-price {
+      background-color: var(--color-success);
+    }
+    .map-pin.senpai .map-pin-dot {
+      background-color: var(--color-success);
+    }
+    .map-workplace-pin {
+      position: absolute;
+      font-size: 20px;
+    }
+
+    /* Empty State */
+    .empty-state {
+      display: none;
+      text-align: center;
+      padding: 80px 24px;
+    }
+    .empty-state.visible {
+      display: block;
+    }
+    .empty-state-icon {
+      font-size: 64px;
+      margin-bottom: 16px;
+    }
+    .empty-state-title {
+      font-family: var(--font-headlines);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 8px;
+    }
+    .empty-state-text {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      margin-bottom: 24px;
+    }
+    .empty-state-btn {
+      font-family: var(--font-ui);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-accent);
+      background: none;
+      border: 2px solid var(--color-accent);
+      padding: 10px 24px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      transition: background-color var(--transition-fast), color var(--transition-fast);
+    }
+    .empty-state-btn:hover {
+      background-color: var(--color-accent);
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TopNavBar -->
+  <div id="nav-container"></div>
+
+  <div class="page-container">
+
+    <!-- Section 1: Search Header -->
+    <div class="search-header">
+      <div class="search-header-row">
+        <div id="search-container" style="flex:1;"></div>
+        <div class="view-toggle" id="view-toggle">
+          <button class="view-toggle-btn active" data-view="list">📋 List</button>
+          <button class="view-toggle-btn" data-view="map">🗺️ Map</button>
+        </div>
+      </div>
+      <div class="results-meta">
+        <div class="results-count" id="results-count"></div>
+        <select class="sort-select" id="sort-select">
+          <option value="recommended">Sort: Recommended</option>
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+          <option value="rating">Rating</option>
+          <option value="newest">Newest</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Section 2: Filter Bar -->
+    <div class="filter-bar" id="filter-bar">
+      <button class="filter-chip" data-filter="area" data-value="all">All Areas</button>
+      <button class="filter-chip" data-filter="area" data-value="son-tra">Son Tra</button>
+      <button class="filter-chip" data-filter="area" data-value="hai-chau">Hai Chau</button>
+      <button class="filter-chip" data-filter="area" data-value="ngu-hanh-son">Ngu Hanh Son</button>
+      <button class="filter-chip" data-filter="area" data-value="east-han-river">East Han River</button>
+      <span style="width:1px;height:24px;background:var(--color-border);"></span>
+      <button class="filter-chip" data-filter="type" data-value="all">All Types</button>
+      <button class="filter-chip" data-filter="type" data-value="Studio">Studio</button>
+      <button class="filter-chip" data-filter="type" data-value="1BR">1BR</button>
+      <button class="filter-chip" data-filter="type" data-value="2BR">2BR</button>
+      <span style="width:1px;height:24px;background:var(--color-border);"></span>
+      <button class="filter-chip-toggle" data-filter="senpai" id="filter-senpai">Senpai Verified</button>
+      <button class="filter-chip-toggle" data-filter="japanese" id="filter-japanese">Japanese OK</button>
+    </div>
+
+    <!-- Content Area -->
+    <div class="search-content">
+      <!-- List View -->
+      <div class="results-grid" id="results-grid"></div>
+
+      <!-- Map View -->
+      <div class="map-view" id="map-view">
+        <div class="map-view-bg" id="map-view-bg"></div>
+      </div>
+
+      <!-- Empty State -->
+      <div class="empty-state" id="empty-state">
+        <div class="empty-state-icon">🔍</div>
+        <div class="empty-state-title">No listings match your filters</div>
+        <div class="empty-state-text">Try adjusting filters or expanding the area</div>
+        <button class="empty-state-btn" id="reset-filters-btn">Reset Filters</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module">
+    import { renderTopNav } from './components/top-nav.js';
+    import { renderSearchBar } from './components/search-bar.js';
+
+    const res = await fetch('./data/demo-data.json');
+    const data = await res.json();
+
+    // TopNav
+    renderTopNav(document.getElementById('nav-container'), { activePage: 'search' });
+
+    // Search bar
+    renderSearchBar(document.getElementById('search-container'), {
+      size: 'compact',
+      placeholder: 'Search apartments, areas...',
+      onSearch: (val) => {
+        state.searchQuery = val.toLowerCase();
+        renderResults();
+      },
+    });
+
+    // State
+    const state = {
+      view: 'list',
+      areaFilter: 'all',
+      typeFilter: 'all',
+      senpaiOnly: false,
+      japaneseOnly: false,
+      sortBy: 'recommended',
+      searchQuery: '',
+    };
+
+    // Filter logic
+    function getFilteredListings() {
+      let listings = [...data.listings];
+
+      if (state.areaFilter !== 'all') {
+        listings = listings.filter(l => l.area === state.areaFilter);
+      }
+      if (state.typeFilter !== 'all') {
+        listings = listings.filter(l => l.type === state.typeFilter);
+      }
+      if (state.senpaiOnly) {
+        listings = listings.filter(l => l.senpaiVerified);
+      }
+      if (state.searchQuery) {
+        listings = listings.filter(l =>
+          l.title.toLowerCase().includes(state.searchQuery) ||
+          l.description.toLowerCase().includes(state.searchQuery)
+        );
+      }
+
+      // Sort
+      switch (state.sortBy) {
+        case 'price-asc': listings.sort((a, b) => a.price - b.price); break;
+        case 'price-desc': listings.sort((a, b) => b.price - a.price); break;
+        case 'rating': listings.sort((a, b) => b.rating - a.rating); break;
+      }
+
+      return listings;
+    }
+
+    // Render results
+    function renderResults() {
+      const listings = getFilteredListings();
+      const grid = document.getElementById('results-grid');
+      const mapView = document.getElementById('map-view');
+      const emptyState = document.getElementById('empty-state');
+
+      // Update count
+      document.getElementById('results-count').innerHTML = `<strong>${listings.length}</strong> listings`;
+
+      if (listings.length === 0) {
+        grid.style.display = 'none';
+        mapView.classList.remove('visible');
+        emptyState.classList.add('visible');
+        return;
+      }
+
+      emptyState.classList.remove('visible');
+
+      if (state.view === 'list') {
+        grid.style.display = 'grid';
+        mapView.classList.remove('visible');
+        renderListView(listings, grid);
+      } else {
+        grid.style.display = 'none';
+        mapView.classList.add('visible');
+        renderMapView(listings);
+      }
+    }
+
+    function renderListView(listings, grid) {
+      grid.innerHTML = '';
+
+      listings.forEach(listing => {
+        const area = data.areas.find(a => a.id === listing.area);
+        const review = data.reviews.find(r => r.listingId === listing.id);
+
+        const fairPriceLabels = {
+          'fair': { text: '🟢 Fair Price', cls: 'fair' },
+          'slightly-high': { text: '🟡 Slightly High', cls: 'slightly-high' },
+          'caution': { text: '🔴 Caution', cls: 'caution' },
+        };
+        const fp = fairPriceLabels[listing.fairPrice] || fairPriceLabels.fair;
+
+        const card = document.createElement('div');
+        card.className = 'listing-card';
+        card.innerHTML = `
+          <div class="listing-card-photo" style="background-color:${listing.senpaiVerified ? 'rgba(46,196,182,0.15)' : 'rgba(27,42,74,0.1)'};display:flex;align-items:center;justify-content:center;font-size:40px;">
+            🏠
+            ${listing.senpaiVerified ? '<div class="listing-badge">Senpai Verified ✓</div>' : ''}
+            <button class="listing-save" data-id="${listing.id}">♡</button>
+          </div>
+          <div class="listing-card-body">
+            <div class="listing-title">${listing.title}</div>
+            <div class="listing-price-row">
+              <span class="listing-price-vnd">${listing.price.toLocaleString()} VND</span>
+              <span class="listing-price-jpy">(¥${listing.priceJpy.toLocaleString()})</span>
+              <span class="listing-price-suffix">/month</span>
+            </div>
+            <div class="fair-price ${fp.cls}">${fp.text}</div>
+            <div class="listing-details">
+              <span>🛏️ ${listing.type}</span>
+              <span>📐 ${listing.sqm}m²</span>
+              <span>🏢 ${listing.floor}F</span>
+              <span>🚗 ${listing.commuteToHaiChau}</span>
+            </div>
+            <div class="listing-rating">
+              <span class="listing-rating-star">⭐</span>
+              <strong>${listing.rating}</strong>
+              <span class="listing-rating-count">(${listing.reviewCount} reviews)</span>
+            </div>
+            ${review ? `<div class="listing-snippet">"${review.text}"</div>` : ''}
+          </div>
+        `;
+
+        // Save button
+        card.querySelector('.listing-save').addEventListener('click', (e) => {
+          e.stopPropagation();
+          const btn = e.currentTarget;
+          btn.classList.toggle('saved');
+          btn.textContent = btn.classList.contains('saved') ? '♥' : '♡';
+          console.log('[Search] Save toggled:', listing.id);
+        });
+
+        // Card click
+        card.addEventListener('click', () => {
+          console.log('[Search] Navigate to listing:', listing.id);
+        });
+
+        grid.appendChild(card);
+      });
+    }
+
+    function renderMapView(listings) {
+      const bg = document.getElementById('map-view-bg');
+      bg.innerHTML = '';
+
+      // Workplace pin
+      const wp = document.createElement('div');
+      wp.className = 'map-workplace-pin';
+      wp.style.cssText = 'left:25%;top:40%;';
+      wp.textContent = '⭐';
+      wp.title = 'Your workplace (Hai Chau)';
+      bg.appendChild(wp);
+
+      // Area label
+      const areaPositions = {
+        'hai-chau': { left: '20%', top: '45%' },
+        'son-tra': { left: '55%', top: '20%' },
+        'ngu-hanh-son': { left: '60%', top: '65%' },
+        'east-han-river': { left: '45%', top: '40%' },
+      };
+
+      // Listing pins
+      const pinPositions = [
+        { left: '50%', top: '18%' },
+        { left: '22%', top: '35%' },
+        { left: '55%', top: '25%' },
+        { left: '40%', top: '50%' },
+        { left: '62%', top: '60%' },
+        { left: '18%', top: '52%' },
+      ];
+
+      listings.forEach((listing, i) => {
+        const pos = pinPositions[i % pinPositions.length];
+        const pin = document.createElement('div');
+        pin.className = `map-pin ${listing.senpaiVerified ? 'senpai' : ''}`;
+        pin.style.cssText = `left:${pos.left};top:${pos.top};`;
+        pin.innerHTML = `
+          <div class="map-pin-price">¥${(listing.priceJpy / 1000).toFixed(0)}K</div>
+          <div class="map-pin-dot"></div>
+        `;
+        pin.title = listing.title;
+        pin.addEventListener('click', () => {
+          console.log('[Map] Pin clicked:', listing.id);
+        });
+        bg.appendChild(pin);
+      });
+    }
+
+    // Filter chip handlers
+    document.querySelectorAll('.filter-chip[data-filter="area"]').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.filter-chip[data-filter="area"]').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        state.areaFilter = chip.dataset.value;
+        renderResults();
+      });
+    });
+    // Set "All Areas" active by default
+    document.querySelector('.filter-chip[data-value="all"][data-filter="area"]').classList.add('active');
+
+    document.querySelectorAll('.filter-chip[data-filter="type"]').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.filter-chip[data-filter="type"]').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        state.typeFilter = chip.dataset.value;
+        renderResults();
+      });
+    });
+    document.querySelector('.filter-chip[data-value="all"][data-filter="type"]').classList.add('active');
+
+    // Toggle filters
+    document.getElementById('filter-senpai').addEventListener('click', (e) => {
+      e.currentTarget.classList.toggle('active');
+      state.senpaiOnly = e.currentTarget.classList.contains('active');
+      renderResults();
+    });
+
+    // Sort
+    document.getElementById('sort-select').addEventListener('change', (e) => {
+      state.sortBy = e.target.value;
+      renderResults();
+    });
+
+    // View toggle
+    document.querySelectorAll('.view-toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.view-toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        state.view = btn.dataset.view;
+        renderResults();
+      });
+    });
+
+    // Reset filters
+    document.getElementById('reset-filters-btn').addEventListener('click', () => {
+      state.areaFilter = 'all';
+      state.typeFilter = 'all';
+      state.senpaiOnly = false;
+      state.japaneseOnly = false;
+      state.searchQuery = '';
+
+      document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+      document.querySelector('.filter-chip[data-value="all"][data-filter="area"]').classList.add('active');
+      document.querySelector('.filter-chip[data-value="all"][data-filter="type"]').classList.add('active');
+      document.querySelectorAll('.filter-chip-toggle').forEach(c => c.classList.remove('active'));
+
+      renderResults();
+      console.log('[Search] Filters reset');
+    });
+
+    // Initial render
+    renderResults();
+    console.log('[Search] Page loaded');
+  </script>
+
+</body>
+</html>

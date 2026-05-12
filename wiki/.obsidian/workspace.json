@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3014e0f38f3a2103",
+        "id": "3f2a8fc4f5f19df8",
         "type": "tabs",
         "children": [
           {
-            "id": "1388a7419dd94a66",
+            "id": "f1c50d5b9545a7d7",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#tailor-project",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,11 +70,12 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 335.5
   },
   "right": {
     "id": "40e07cc7104c4e9b",
@@ -90,6 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "concepts/cv_tot.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +101,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for cv_tot"
             }
           },
           {
@@ -108,11 +110,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "concepts/cv_tot.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from cv_tot"
             }
           },
           {
@@ -150,12 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "concepts/cv_tot.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of cv_tot"
             }
           }
         ]
@@ -176,43 +180,43 @@
       "bases:Create new base": false
     }
   },
-  "active": "1388a7419dd94a66",
+  "active": "f1c50d5b9545a7d7",
   "lastOpenFiles": [
-    "concepts/ca-nhan-hoa.md",
-    "sources/tam-quan-trong-cua-giac-mo.md.tmp",
-    "sources/tam-quan-trong-cua-giac-mo.md",
-    "quyen-luc-tiem-nan.md",
-    "sources/bai-5-phan-i-phan-tich-giac-mo.md.tmp",
-    "graph/citations.jsonl",
-    "graph/citations.jsonl.tmp",
-    "graph/edges.jsonl.tmp",
-    "people/charles-darwin.md",
-    "people/arthur-schopenhauer.md",
-    "people/immanuel-kant.md",
-    "concepts/anh-huong-psychoanalytic.md",
-    "concepts/phan-tich-giac-mo.md",
-    "concepts/vo-thuc-tap-the.md",
-    "concepts/vo-thuc-ca-nhan.md",
-    "concepts/bieu-tuong-tap-the.md",
-    "sources/bai-5-phan-i-phan-tich-giac-mo.md",
-    "sources/tips-for-answering-interview-questions.md.tmp",
-    "sources/tell-me-about-yourself-interview-framework.md.tmp",
-    "sources/ky-nang-phong-van-tu-duy-phan-xa-giai-ma-logic.md.tmp",
-    "sources/chien-luoc-phong-van-ot-pha.md.tmp",
-    "sources/cam-nang-giai-ma-cau-truc-cv-chuan.md.tmp",
-    "concepts/tu-tuong-huong-noi.md",
-    "concepts/mo-hinh-star.md",
-    "sources/tips-for-answering-interview-questions.md",
-    "concepts/bo-tu-tru-cot-tuyen-dung.md",
-    "concepts/tu-duy-win-win-phong-van.md",
-    "sources/tell-me-about-yourself-interview-framework.md",
-    "sources/ky-nang-phong-van-tu-duy-phan-xa-giai-ma-logic.md",
-    "sources/chien-luoc-phong-van-ot-pha.md",
-    "concepts/tu-khoa-cv.md",
+    "sources/technical-research-semantic-to-geometric-translation-architecture.md.tmp",
+    "log.md.tmp",
+    "people/lem.md.tmp",
+    "concepts/two-stage-query.md.tmp",
+    "concepts/smart-rules.md.tmp",
+    "concepts/shapely.md.tmp",
+    "concepts/semantic-pattern-engine.md.tmp",
+    "concepts/pygem.md.tmp",
+    "concepts/pydantic.md.tmp",
+    "concepts/pgvector.md.tmp",
+    "concepts/manufacturing-blueprint.md.tmp",
+    "people/lem.md",
+    "concepts/shapely.md",
+    "concepts/pygem.md",
+    "concepts/atelier-academy.md",
+    "concepts/manufacturing-blueprint.md",
+    "concepts/geometric-transformation-engine.md",
+    "concepts/contract-driven-development.md",
+    "concepts/agentic-rag.md",
+    "concepts/two-stage-query.md",
+    "concepts/smart-rules.md",
+    "concepts/design-atoms.md",
+    "concepts/semantic-pattern-engine.md",
+    "concepts/clean-architecture.md",
+    "concepts/fastapi.md",
+    "concepts/pydantic.md",
+    "concepts/pgvector.md",
+    "concepts/langgraph.md",
+    "concepts/ly-tri-tam-ly.md",
+    "sources/technical-research-semantic-to-geometric-translation-architecture.md",
+    "concepts/mac-cam-quyen-luc.md",
+    "concepts/local-first-data-model.md",
     "concepts/giai-ma-giac-mo.md",
-    "concepts/ats.md",
-    "sources/cam-nang-giai-ma-cau-truc-cv-chuan.md",
-    "concepts/quyen-luc-tiem-nan.md",
-    "people/jolande-jacobi.md"
+    "concepts/geometric-delta.md",
+    "concepts/dual-mode-ui.md",
+    "concepts/deterministic-guardrails.md"
   ]
 }

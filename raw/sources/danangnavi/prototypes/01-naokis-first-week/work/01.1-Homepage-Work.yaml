@@ -1,0 +1,137 @@
+metadata:
+  page_number: "01.1"
+  page_name: "Homepage"
+  scenario: "01: Naoki's First Week"
+  spec_path: "C-UX-Scenarios/01-naokis-first-week/01.1-homepage/01.1-homepage.md"
+  device_compatibility:
+    type: "desktop-only"
+    min_width: "1280px"
+    hover_interactions: true
+  design_fidelity: "design-system-components"
+  language: "en"
+  created: "2026-04-08"
+
+design_tokens:
+  primary: "#1B2A4A"
+  secondary: "#FF6B4A"
+  accent: "#2EC4B6"
+  background: "#FAFAF8"
+  surface: "#FFFFFF"
+  text_primary: "#0D1B2A"
+  text_secondary: "#6B7280"
+  success: "#27AE60"
+  warning: "#F2994A"
+  error: "#EB5757"
+  font_headlines: "Noto Sans JP, sans-serif"
+  font_body: "Noto Sans JP, sans-serif"
+  font_ui: "Inter, Noto Sans, sans-serif"
+  border_radius: "12px"
+  border_radius_lg: "16px"
+  icons: "Lucide Icons"
+  shadow_card: "0 2px 8px rgba(0,0,0,0.08)"
+  shadow_card_hover: "0 4px 16px rgba(0,0,0,0.12)"
+
+sections:
+  - number: 0
+    name: "Shared Components Library"
+    status: "Complete"
+    completed: "2026-04-08"
+    story_file: null
+    objects:
+      - "Design tokens (CSS custom properties)"
+      - "TopNavBar — sticky desktop nav with logo, nav links, search, CTA"
+      - "SearchBar — input with icon and placeholder"
+      - "SenpaiCard — photo + title + rating + senpai avatar + verified badge"
+      - "DealCard — business photo + deal description + savings + expiry"
+      - "SectionHeader — title + 'View all' link"
+      - "DualCurrencyPrice — VND + JPY display"
+      - "CategoryIcon — icon + label grid item"
+    notes: "Foundation for all pages. Created as JS modules in shared/ and components/"
+
+  - number: 1
+    name: "Page Shell + Top Nav"
+    status: "Complete"
+    completed: "2026-04-08"
+    story_file: null
+    objects:
+      - "HTML boilerplate with meta tags"
+      - "Import and render TopNavBar"
+      - "Global layout (max-width container, background)"
+      - "Font loading (Noto Sans JP, Inter)"
+    notes: "Skeleton page that all sections build upon"
+
+  - number: 2
+    name: "Hero + Search"
+    status: "Complete"
+    completed: "2026-04-08"
+    story_file: null
+    objects:
+      - "Full-width hero with Da Nang background image + overlay"
+      - "Tagline: 'Everything about Da Nang, right here.'"
+      - "Subtitle: 'A Da Nang guide built on senpai experiences'"
+      - "Import SearchBar — centered, prominent"
+      - "Quick filter chips: Restaurants, Cafes, Housing, Visa, Hospital, Translation"
+    notes: "Search-first portal pattern (Naver reference)"
+
+  - number: 3
+    name: "Welcome Banner (CTA)"
+    status: "Complete"
+    completed: "2026-04-08"
+    story_file: null
+    objects:
+      - "Full-width coral banner below hero"
+      - "Welcome icon + headline + body text"
+      - "CTA button: 'Get Started' (coral, large)"
+      - "Dismiss X button"
+      - "localStorage persistence for dismissed state"
+    notes: "Primary conversion path for newcomers. Hidden for returning users."
+
+  - number: 4
+    name: "Senpai Picks"
+    status: "Complete"
+    completed: "2026-04-08"
+    story_file: null
+    objects:
+      - "Import SectionHeader: 'Senpai Picks'"
+      - "3-column grid of SenpaiCard components"
+      - "6 cards with demo data (mix of restaurants, guides, experiences)"
+      - "Card hover lift effect"
+    notes: "Social proof section. Cards reused across other pages."
+
+  - number: 5
+    name: "Today's Deals"
+    status: "Complete"
+    completed: "2026-04-08"
+    story_file: null
+    objects:
+      - "Import SectionHeader: 'Today's Deals'"
+      - "4 DealCard components in a row"
+      - "Each card: photo + deal + savings in JPY + expiry countdown"
+      - "'View all' link"
+    notes: "Tomoko's primary hook. Dual currency display."
+
+  - number: 6
+    name: "Community Highlights"
+    status: "Complete"
+    completed: "2026-04-08"
+    story_file: null
+    objects:
+      - "Import SectionHeader: 'Community'"
+      - "3 thread items with preview text + reply count + time"
+      - "Today's post count indicator"
+      - "'Go to Community' link"
+    notes: "Shows active community. Addresses isolation fear."
+
+  - number: 7
+    name: "Category Quick Links + Footer"
+    status: "Complete"
+    completed: "2026-04-08"
+    story_file: null
+    objects:
+      - "6-across icon grid using CategoryIcon components"
+      - "Categories: Food, Housing, Visa, Medical, Events, Translation"
+      - "Simple footer with copyright + links"
+    notes: "Quick access to first-week essentials."
+
+demo_data_source: "data/demo-data.json"
+output_file: "01.1-homepage.html"

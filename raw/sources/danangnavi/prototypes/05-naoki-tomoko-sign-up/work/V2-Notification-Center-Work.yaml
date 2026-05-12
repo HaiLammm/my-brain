@@ -1,0 +1,32 @@
+view: V2 — Notification Center
+spec: C-UX-Scenarios/05-naoki-tomoko-sign-up/05.2-notification-center/05.2-notification-center.md
+created: 2026-04-08
+status: planning-complete
+
+sections:
+  - id: S0
+    name: Page Shell + Welcome Banner
+    objects: [1-WelcomeBanner, 2-CheckmarkIcon, 3-HeadlineSubtext, 13-FooterNote]
+    description: Page scaffold (560px centered, desktop-first), welcome confirmation banner with green checkmark and "Account created! Listing saved." headline, footer note about changing settings later
+    estimate: 15min
+    status: completed
+    story: implemented
+
+  - id: S1
+    name: Categories + Frequency + Channels
+    objects: [4-CategoryToggles, 5-FrequencyControl, 6-HelperText, 7-LINEToggle, 8-PushToggle, 9-EmailToggle]
+    description: 4 notification category toggle cards (3 ON, 1 OFF by default), 3-segment frequency selector (Daily default), 3 delivery channel toggles (LINE ON, Push OFF, Email OFF), all loaded from demo data
+    estimate: 20min
+    status: completed
+    story: implemented
+
+  - id: S2
+    name: Save Actions + Toast
+    objects: [10-SaveButton, 11-SkipLink, 12-SuccessToast]
+    description: Coral "Save Settings" full-width button, "Set up later" teal skip link, success toast notification "Settings saved", redirect to listing after save/skip
+    estimate: 10min
+    status: completed
+    story: implemented
+
+build_order: [S0, S1, S2]
+total_estimate: 45min

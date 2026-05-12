@@ -1,0 +1,65 @@
+{
+  "business_owner": {
+    "name": "Lan",
+    "full_name": "Nguyễn Thị Lan",
+    "age": 38,
+    "phone": "0905 123 456",
+    "zalo": "0905123456",
+    "role": "Chủ quán"
+  },
+  "restaurant": {
+    "name_vi": "Quán Phở Hương",
+    "name_ja": "フォーフォン",
+    "category": "Nhà hàng",
+    "address": "25 Trần Hưng Đạo, Sơn Trà, Đà Nẵng",
+    "phone": "0905 123 456",
+    "zalo": "0905123456",
+    "hours": "7:00 - 22:00",
+    "description_vi": "Phở gia truyền 3 đời, nằm gần biển Mỹ Khê. Chuyên phở bò, bún chả, và các món Việt truyền thống.",
+    "description_ja": "ミーケービーチ近くの3代続く伝統的なフォー専門店。牛肉フォー、ブンチャー、ベトナム伝統料理を提供。",
+    "cover_photo": "restaurant-front.jpg",
+    "photos": [
+      "restaurant-front.jpg",
+      "pho-bo-special.jpg",
+      "interior-seating.jpg",
+      "bun-cha.jpg",
+      "goi-cuon.jpg"
+    ]
+  },
+  "menu": [
+    { "name_vi": "Phở bò đặc biệt", "name_ja": "特製牛肉フォー", "price_vnd": 55000, "price_jpy": 330, "confidence": "high" },
+    { "name_vi": "Phở gà", "name_ja": "鶏肉フォー", "price_vnd": 45000, "price_jpy": 270, "confidence": "high" },
+    { "name_vi": "Bún chả Hà Nội", "name_ja": "ハノイ風ブンチャー", "price_vnd": 50000, "price_jpy": 300, "confidence": "high" },
+    { "name_vi": "Gỏi cuốn (2 cuốn)", "name_ja": "生春巻き（2本）", "price_vnd": 30000, "price_jpy": 180, "confidence": "medium" },
+    { "name_vi": "Cơm gà Hội An", "name_ja": "ホイアン風チキンライス", "price_vnd": 45000, "price_jpy": 270, "confidence": "high" },
+    { "name_vi": "Bánh xèo", "name_ja": "バインセオ（ベトナム風お好み焼き）", "price_vnd": 40000, "price_jpy": 240, "confidence": "medium" },
+    { "name_vi": "Nước mía", "name_ja": "サトウキビジュース", "price_vnd": 15000, "price_jpy": 90, "confidence": "high" },
+    { "name_vi": "Cà phê sữa đá", "name_ja": "ベトナムアイスコーヒー", "price_vnd": 20000, "price_jpy": 120, "confidence": "high" }
+  ],
+  "coupon": {
+    "title_vi": "Giảm 10% cho người dùng DaNangNavi",
+    "title_ja": "ダナンナビユーザー10%オフ",
+    "discount_type": "percentage",
+    "discount_value": 10,
+    "start_date": "2026-04-08",
+    "end_date": "2026-05-08",
+    "usage_limit": 100,
+    "used_count": 0,
+    "conditions_vi": "Đơn tối thiểu 100,000 VNĐ",
+    "conditions_ja": "最低注文額 100,000 VND（約600円）",
+    "status": "active"
+  },
+  "dashboard": {
+    "metrics": {
+      "views": null,
+      "clicks": null,
+      "bookings": null,
+      "customers_from_app": null
+    },
+    "activity": [
+      { "time": "Vừa xong", "text": "Bạn đã tạo coupon \"Giảm 10% cho người dùng DaNangNavi\"", "icon": "ticket", "color": "teal" },
+      { "time": "5 phút trước", "text": "Tin đăng của bạn đã được đăng thành công", "icon": "storefront", "color": "green" },
+      { "time": "10 phút trước", "text": "Tài khoản doanh nghiệp đã được tạo", "icon": "user", "color": "blue" }
+    ]
+  }
+}

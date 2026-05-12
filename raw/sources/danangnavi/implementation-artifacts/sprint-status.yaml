@@ -1,0 +1,129 @@
+# generated: 2026-04-11
+# last_updated: 2026-05-03 (story 8-3 coupon-management-business — code review complete)
+# project: danangnavi
+# project_key: NOKEY
+# tracking_system: file-system
+# story_location: {project-root}/_bmad-output/implementation-artifacts
+
+# STATUS DEFINITIONS:
+# ==================
+# Epic Status:
+#   - backlog: Epic not yet started
+#   - in-progress: Epic actively being worked on
+#   - done: All stories in epic completed
+#
+# Epic Status Transitions:
+#   - backlog → in-progress: Automatically when first story is created (via create-story)
+#   - in-progress → done: Manually when all stories reach 'done' status
+#
+# Story Status:
+#   - backlog: Story only exists in epic file
+#   - ready-for-dev: Story file created in stories folder
+#   - in-progress: Developer actively working on implementation
+#   - review: Ready for code review (via Dev's code-review workflow)
+#   - done: Story completed
+#
+# Retrospective Status:
+#   - optional: Can be completed but not required
+#   - done: Retrospective has been completed
+#
+# WORKFLOW NOTES:
+# ===============
+# - Epic transitions to 'in-progress' automatically when first story is created
+# - Stories can be worked in parallel if team capacity allows
+# - SM typically creates next story after previous one is 'done' to incorporate learnings
+# - Dev moves story to 'review', then runs code-review (fresh context, different LLM recommended)
+
+generated: 2026-04-11
+last_updated: 2026-05-07 (story 9-5 staff-management-rbac-reporting — review)
+project: danangnavi
+project_key: NOKEY
+tracking_system: file-system
+story_location: "{project-root}/_bmad-output/implementation-artifacts"
+
+development_status:
+  # Epic 1: Platform Foundation, Authentication & Design System
+  epic-1: done
+  1-1-monorepo-setup-development-infrastructure: done
+  1-2-design-token-system-core-ui-components: done
+  1-3-application-layout-shell-navigation: done
+  1-4-user-authentication-social-login-line-google: done
+  1-5-1-zalo-social-login-users: done
+  1-5-2-business-owner-registration-email-zalo: review
+  1-6-privacy-controls-account-management: done
+  epic-1-retrospective: optional
+
+  # Epic 2: Discovery, Search & Listing Experience
+  epic-2: in-progress
+  2-1-listing-data-model-api-foundation: done
+  2-2-homepage-hero-senpai-picks-deals: done
+  2-3-search-browse-with-cross-language-support: done
+  2-4-listing-detail-page: done
+  2-5-area-neighborhood-guides: review
+  2-6-favorites-collection: review
+  epic-2-retrospective: optional
+
+  # Epic 3: User Onboarding & Senpai Profile System
+  epic-3: done
+  3-1-newcomer-onboarding-flow: done
+  3-2-user-profile-page: done
+  3-3-contribution-points-gamification-engine: done
+  3-4-senpai-badge-system: done
+  epic-3-retrospective: optional
+
+  # Epic 4: Reviews & Content Creation
+  epic-4: done
+  4-1-write-review-with-star-rating-camera-only-photos: done
+  4-2-helpful-votes-review-display: done
+  4-3-senpai-picks-verified-reviews: done
+  epic-4-retrospective: optional
+
+  # Epic 5: Community & Events
+  epic-5: in-progress
+  5-1-community-hub-group-browsing: review
+  5-2-join-groups-create-posts-comments: review
+  5-3-community-thread-detail: review
+  5-4-events-meetups: review
+  epic-5-retrospective: optional
+
+  # Epic 6: Communication Bridge & Translation Tools
+  epic-6: done
+  6-1-voice-translation-conversation-interface: done
+  6-2-phrase-packs-phrasebook: done
+  6-3-visual-menu-ocr-helper-floating-fab: done
+  epic-6-retrospective: optional
+
+  # Epic 7: Deals, Coupons & Notifications cần thực hiện hết epic 7 trước epic-10
+  epic-7: in-progress
+  7-1-deals-coupons-browsing: done
+  7-2-coupon-claim-redemption: done
+  7-3-notification-system-preferences: done
+  epic-7-retrospective: optional
+
+  # Epic 8: Business Owner Portal
+  epic-8: in-progress
+  8-1-listing-editor-create-edit-with-auto-translation: review
+  8-2-photo-upload-media-management-business: done
+  8-3-coupon-management-business: review
+  8-4-business-analytics-dashboard: in-progress
+  epic-8-retrospective: optional
+
+  # Epic 9: Admin Panel & Platform Governance
+  epic-9: in-progress
+  9-1-admin-dashboard-platform-analytics: review
+  9-2-user-business-owner-management: done
+  9-3-content-moderation-auto-filtering: review
+  9-4-fake-review-disputes-resolution: review
+  9-5-staff-management-rbac-reporting: review
+  epic-9-retrospective: optional
+
+  # Epic 10: Journey-Based Discovery (Google Maps Integration)
+  # Scheduled AFTER Epic 2 completes. 10.6 depends on Epic 7 (Deals).
+  epic-10: done
+  10-1-google-maps-integration-route-api-foundation: done
+  10-2-journey-input-route-display: done
+  10-3-route-aware-listing-matching: done
+  10-4-listings-along-route-ui: done
+  10-5-route-personality-scoring: done
+  10-6-journey-deals-integration: done
+  epic-10-retrospective: done

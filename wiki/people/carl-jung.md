@@ -12,6 +12,7 @@ created: 2026-05-11
 updated: 2026-05-11
 key_sources:
   - sources/man-and-his-symbols
+  - sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi
 ---
 
 ## Overview
@@ -21,6 +22,7 @@ Carl Gustav Jung (1875-1961) là bác sĩ tâm thần và nhà tư tưởng ngư
 ## Key Sources
 
 - [[sources/man-and-his-symbols]] — tác phẩm cuối cùng, viết về Vô thức
+- [[sources/phan-i-qua-khu-va-tuong-lai-trong-vo-thuc]] — Bài 3: quá khứ và tương lai trong vô thức
 
 ## Key Concepts
 
@@ -29,6 +31,7 @@ Carl Gustav Jung (1875-1961) là bác sĩ tâm thần và nhà tư tưởng ngư
 - [[concepts/ca-nhan-hoa]] — quá trình phát triển tâm lý toàn vẹn
 - [[concepts/tu-tuong-huong-ngoai]] — extrovert (người hướng ngoại)
 - [[concepts/tu-tuong-huong-noi]] — introvert (người hướng nội)
+- [[concepts/bon-chuc-nang-tam-ly]] — bốn chức năng tâm lý
 
 ## Notes
 

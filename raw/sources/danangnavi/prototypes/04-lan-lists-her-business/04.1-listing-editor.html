@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04.1 Listing Editor - DaNangNavi</title>
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config (Design Tokens) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1B2A4A',
+                        coral: '#FF6B4A',
+                        teal: '#2EC4B6',
+                        'warm-white': '#FAFAF8',
+                        'dark-navy': '#0D1B2A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans', 'sans-serif'],
+                        jp: ['Noto Sans JP', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'card': '0 2px 8px rgba(0,0,0,0.08)',
+                        'card-hover': '0 4px 16px rgba(0,0,0,0.12)',
+                        'modal': '0 8px 32px rgba(0,0,0,0.2)',
+                        'sticky': '0 2px 8px rgba(0,0,0,0.06)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { background-color: #FAFAF8; }
+        .step-circle {
+            width: 32px;
+            height: 32px;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+        }
+        .step-circle.active {
+            background-color: #1B2A4A;
+            color: #FFFFFF;
+        }
+        .step-circle.completed {
+            background-color: #27AE60;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+        .step-circle.upcoming {
+            background-color: #E5E7EB;
+            color: #6B7280;
+        }
+        .step-connector {
+            height: 2px;
+            flex-grow: 1;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .step-connector.completed { background-color: #27AE60; }
+        .step-connector.upcoming { background-color: #E5E7EB; }
+        .step-label {
+            font-size: 14px;
+            transition: color 0.3s ease-in-out;
+        }
+        .step-label.active { color: #1B2A4A; font-weight: 600; }
+        .step-label.completed { color: #27AE60; }
+        .step-label.upcoming { color: #6B7280; }
+
+        @keyframes bounce-in {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="min-h-screen font-sans">
+
+    <!-- ========================================================================
+         SECTION 1: STICKY HEADER & PROGRESS
+         ======================================================================== -->
+    <header
+        id="listing-header"
+        data-object-id="listing-header"
+        class="sticky top-0 z-50 bg-white shadow-sticky"
+    >
+        <div class="max-w-[1200px] mx-auto px-6 py-4">
+            <!-- Top row: back link + title + time estimate -->
+            <div class="flex items-center justify-between mb-3">
+                <a
+                    id="listing-header-back"
+                    data-object-id="listing-header-back"
+                    href="#"
+                    class="text-sm text-gray-500 hover:text-dark-navy transition-colors"
+                >
+                    ← Bảng điều khiển
+                </a>
+                <h2
+                    id="listing-header-title"
+                    data-object-id="listing-header-title"
+                    class="text-2xl font-bold text-dark-navy"
+                >
+                    Tạo tin đăng mới
+                </h2>
+                <span
+                    id="listing-header-time"
+                    data-object-id="listing-header-time"
+                    class="text-xs text-gray-500"
+                >
+                    ⏱️ Khoảng 10-15 phút
+                </span>
+            </div>
+
+            <!-- Step indicator row -->
+            <div class="flex items-center gap-3">
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center gap-1">
+                    <div
+                        id="listing-step-1-circle"
+                        data-object-id="listing-step-1-circle"
+                        class="step-circle active"
+                        onclick="goToStep(1)"
+                    >1</div>
+                    <span
+                        id="listing-step-1-label"
+                        data-object-id="listing-step-1-label"
+                        class="step-label active"
+                    >Thông tin</span>
+                </div>
+
+                <!-- Connector 1→2 -->
+                <div
+                    id="listing-connector-1"
+                    data-object-id="listing-connector-1"
+                    class="step-connector upcoming self-start mt-4"
+                ></div>
+
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center gap-1">
+                    <div
+                        id="listing-step-2-circle"
+                        data-object-id="listing-step-2-circle"
+                        class="step-circle upcoming"
+                        onclick="goToStep(2)"
+                    >2</div>
+                    <span
+                        id="listing-step-2-label"
+                        data-object-id="listing-step-2-label"
+                        class="step-label upcoming"
+                    >Ảnh & Menu</span>
+                </div>
+
+                <!-- Connector 2→3 -->
+                <div
+                    id="listing-connector-2"
+                    data-object-id="listing-connector-2"
+                    class="step-connector upcoming self-start mt-4"
+                ></div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center gap-1">
+                    <div
+                        id="listing-step-3-circle"
+                        data-object-id="listing-step-3-circle"
+                        class="step-circle upcoming"
+                        onclick="goToStep(3)"
+                    >3</div>
+                    <span
+                        id="listing-step-3-label"
+                        data-object-id="listing-step-3-label"
+                        class="step-label upcoming"
+                    >Xem trước</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================================================
+         MAIN CONTENT
+         ======================================================================== -->
+    <main class="max-w-[1200px] mx-auto px-6 py-8">
+
+        <!-- Step 1 Content -->
+        <div id="step-1-content" data-object-id="step-1-content">
+            <div class="bg-white rounded-xl shadow-card p-8 max-w-[800px] mx-auto">
+                <h3 class="text-xl font-bold text-dark-navy mb-6">Thông tin cơ bản</h3>
+
+                <form id="listing-form-step1" class="space-y-6" onsubmit="event.preventDefault(); handleNextStep();">
+
+                    <!-- Field 1: Tên doanh nghiệp -->
+                    <div>
+                        <label for="listing-input-name" class="block text-sm font-semibold text-dark-navy mb-1.5">
+                            Tên doanh nghiệp <span class="text-red-500">*</span>
+                        </label>
+                        <input
+                            type="text"
+                            id="listing-input-name"
+                            data-object-id="listing-input-name"
+                            placeholder="VD: Quán Phở Hương"
+                            class="w-full h-12 px-4 bg-white border border-gray-200 rounded-lg text-base text-dark-navy placeholder-gray-400 focus:outline-none focus:border-teal focus:ring-1 focus:ring-teal transition-colors"
+                        />
+                        <p id="error-name" class="hidden text-xs text-red-500 mt-1">Vui lòng nhập tên doanh nghiệp</p>
+                    </div>
+
+                    <!-- Field 2: Danh mục -->
+                    <div>
+                        <label for="listing-select-category" class="block text-sm font-semibold text-dark-navy mb-1.5">
+                            Danh mục <span class="text-red-500">*</span>
+                        </label>
+                        <select
+                            id="listing-select-category"
+                            data-object-id="listing-select-category"
+                            class="w-full h-12 px-4 bg-white border border-gray-200 rounded-lg text-base text-dark-navy focus:outline-none focus:border-teal focus:ring-1 focus:ring-teal transition-colors appearance-none cursor-pointer"
+                        >
+                            <option value="" disabled selected>Chọn danh mục...</option>
+                            <option value="nha-hang">Nhà hàng</option>
+                            <option value="quan-ca-phe">Quán cà phê</option>
+                            <option value="spa">Spa</option>
+                            <option value="khach-san">Khách sạn</option>
+                            <option value="tour">Tour</option>
+                            <option value="dich-vu-khac">Dịch vụ khác</option>
+                        </select>
+                        <p id="error-category" class="hidden text-xs text-red-500 mt-1">Vui lòng chọn danh mục</p>
+                    </div>
+
+                    <!-- Field 3: Địa chỉ -->
+                    <div>
+                        <label for="listing-input-address" class="block text-sm font-semibold text-dark-navy mb-1.5">
+                            Địa chỉ <span class="text-red-500">*</span>
+                        </label>
+                        <div class="relative">
+                            <input
+                                type="text"
+                                id="listing-input-address"
+                                data-object-id="listing-input-address"
+                                placeholder="Nhập địa chỉ..."
+                                class="w-full h-12 px-4 pr-10 bg-white border border-gray-200 rounded-lg text-base text-dark-navy placeholder-gray-400 focus:outline-none focus:border-teal focus:ring-1 focus:ring-teal transition-colors"
+                            />
+                            <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <p id="error-address" class="hidden text-xs text-red-500 mt-1">Vui lòng nhập địa chỉ</p>
+                    </div>
+
+                    <!-- Field 4: Số điện thoại -->
+                    <div>
+                        <label for="listing-input-phone" class="block text-sm font-semibold text-dark-navy mb-1.5">
+                            Số điện thoại <span class="text-red-500">*</span>
+                        </label>
+                        <input
+                            type="tel"
+                            id="listing-input-phone"
+                            data-object-id="listing-input-phone"
+                            placeholder="0905 123 456"
+                            value="0905 123 456"
+                            class="w-full h-12 px-4 bg-white border border-gray-200 rounded-lg text-base text-dark-navy placeholder-gray-400 focus:outline-none focus:border-teal focus:ring-1 focus:ring-teal transition-colors"
+                        />
+                        <p id="error-phone" class="hidden text-xs text-red-500 mt-1">Vui lòng nhập số điện thoại hợp lệ</p>
+                    </div>
+
+                    <!-- Field 5: Giờ mở cửa -->
+                    <div>
+                        <label class="block text-sm font-semibold text-dark-navy mb-1.5">
+                            Giờ mở cửa <span class="text-red-500">*</span>
+                        </label>
+                        <div class="flex gap-2 mb-2">
+                            <button
+                                type="button"
+                                id="listing-hours-preset-1"
+                                data-object-id="listing-hours-preset-1"
+                                onclick="selectHoursPreset(1)"
+                                class="h-9 px-4 border border-gray-200 rounded-lg text-sm text-dark-navy hover:bg-gray-50 transition-colors"
+                            >8:00 - 22:00</button>
+                            <button
+                                type="button"
+                                id="listing-hours-preset-2"
+                                data-object-id="listing-hours-preset-2"
+                                onclick="selectHoursPreset(2)"
+                                class="h-9 px-4 border border-gray-200 rounded-lg text-sm text-dark-navy hover:bg-gray-50 transition-colors"
+                            >10:00 - 21:00</button>
+                            <button
+                                type="button"
+                                id="listing-hours-preset-3"
+                                data-object-id="listing-hours-preset-3"
+                                onclick="selectHoursPreset(3)"
+                                class="h-9 px-4 border border-gray-200 rounded-lg text-sm text-dark-navy hover:bg-gray-50 transition-colors"
+                            >Tùy chỉnh</button>
+                        </div>
+                        <div id="listing-hours-custom" class="hidden flex items-center gap-2">
+                            <input
+                                type="time"
+                                id="listing-input-hours-open"
+                                data-object-id="listing-input-hours-open"
+                                class="h-12 px-4 bg-white border border-gray-200 rounded-lg text-base text-dark-navy focus:outline-none focus:border-teal focus:ring-1 focus:ring-teal transition-colors"
+                            />
+                            <span class="text-gray-500">—</span>
+                            <input
+                                type="time"
+                                id="listing-input-hours-close"
+                                data-object-id="listing-input-hours-close"
+                                class="h-12 px-4 bg-white border border-gray-200 rounded-lg text-base text-dark-navy focus:outline-none focus:border-teal focus:ring-1 focus:ring-teal transition-colors"
+                            />
+                        </div>
+                        <p id="error-hours" class="hidden text-xs text-red-500 mt-1">Vui lòng chọn giờ mở cửa</p>
+                    </div>
+
+                    <!-- Field 6: Mô tả ngắn -->
+                    <div>
+                        <label for="listing-textarea-desc" class="block text-sm font-semibold text-dark-navy mb-1.5">
+                            Mô tả ngắn
+                        </label>
+                        <textarea
+                            id="listing-textarea-desc"
+                            data-object-id="listing-textarea-desc"
+                            placeholder="Mô tả ngắn về doanh nghiệp..."
+                            maxlength="200"
+                            rows="3"
+                            oninput="updateCharCounter()"
+                            class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-base text-dark-navy placeholder-gray-400 focus:outline-none focus:border-teal focus:ring-1 focus:ring-teal transition-colors resize-none"
+                        ></textarea>
+                        <p id="listing-char-counter" class="text-xs text-gray-500 text-right mt-1">0/200</p>
+                    </div>
+
+                    <!-- Field 7: Zalo liên hệ -->
+                    <div>
+                        <label for="listing-input-zalo" class="block text-sm font-semibold text-dark-navy mb-1.5">
+                            Zalo liên hệ
+                        </label>
+                        <input
+                            type="text"
+                            id="listing-input-zalo"
+                            data-object-id="listing-input-zalo"
+                            placeholder="Số Zalo hoặc link"
+                            class="w-full h-12 px-4 bg-white border border-gray-200 rounded-lg text-base text-dark-navy placeholder-gray-400 focus:outline-none focus:border-teal focus:ring-1 focus:ring-teal transition-colors"
+                        />
+                    </div>
+
+                    <!-- CTA: Tiếp theo -->
+                    <button
+                        type="submit"
+                        id="listing-btn-next-step"
+                        data-object-id="listing-btn-next-step"
+                        class="w-full h-12 bg-coral text-white rounded-lg font-semibold text-base hover:brightness-90 transition-all mt-4"
+                    >
+                        Tiếp theo →
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Step 2 Content -->
+        <div id="step-2-content" data-object-id="step-2-content" class="hidden">
+
+            <!-- S3: Photos Upload -->
+            <div id="listing-photos-section" data-object-id="listing-photos-section" class="bg-white rounded-xl shadow-card p-8 max-w-[800px] mx-auto mb-6">
+                <h3 id="listing-photos-label" data-object-id="listing-photos-label" class="text-xl font-semibold text-dark-navy mb-1">Ảnh doanh nghiệp</h3>
+                <p id="listing-photos-instruction" data-object-id="listing-photos-instruction" class="text-sm text-gray-500 mb-4">Thêm ít nhất 3 ảnh. Ảnh đầu tiên sẽ là ảnh bìa.</p>
+
+                <div id="listing-photos-grid" data-object-id="listing-photos-grid" class="grid grid-cols-5 gap-3 mb-3">
+                    <!-- Photos rendered by JS -->
+                </div>
+
+                <p id="listing-photos-count" data-object-id="listing-photos-count" class="text-sm text-gray-500">0/10 ảnh</p>
+
+                <!-- Hidden file input -->
+                <input type="file" id="listing-photo-input" data-object-id="listing-photo-input" accept="image/*" class="hidden" onchange="handlePhotoSelected(event)" />
+            </div>
+
+            <!-- S4: Menu OCR -->
+            <div id="listing-menu-section" data-object-id="listing-menu-section" class="bg-white rounded-xl shadow-card p-8 max-w-[800px] mx-auto">
+                <h3 id="listing-menu-label" data-object-id="listing-menu-label" class="text-xl font-semibold text-dark-navy mb-1">Menu / Thực đơn</h3>
+                <p class="text-sm text-gray-500 mb-4">Chụp ảnh thực đơn để hệ thống tự động dịch sang tiếng Nhật</p>
+
+                <!-- OCR Trigger Button -->
+                <button
+                    type="button"
+                    id="listing-menu-ocr-btn"
+                    data-object-id="listing-menu-ocr-btn"
+                    onclick="triggerMenuOCR()"
+                    class="h-12 px-6 border-2 border-coral text-coral rounded-lg font-semibold text-base hover:bg-red-50 transition-colors"
+                >
+                    📷 Chụp ảnh thực đơn
+                </button>
+
+                <!-- Processing State -->
+                <div id="listing-menu-processing" data-object-id="listing-menu-processing" class="hidden flex items-center justify-center gap-3 py-8">
+                    <div class="w-6 h-6 border-2 border-coral border-t-transparent rounded-full animate-spin"></div>
+                    <span class="text-base text-gray-600">Đang nhận dạng menu...</span>
+                </div>
+
+                <!-- OCR Results -->
+                <div id="listing-menu-results" data-object-id="listing-menu-results" class="hidden mt-4">
+                    <p id="listing-menu-edit-note" data-object-id="listing-menu-edit-note" class="text-xs text-teal mb-2">💡 Nhấn vào ô để chỉnh sửa nếu cần</p>
+
+                    <div class="overflow-x-auto">
+                        <table id="listing-menu-table" data-object-id="listing-menu-table" class="w-full">
+                            <thead>
+                                <tr class="bg-gray-50">
+                                    <th class="text-left text-sm font-semibold text-dark-navy py-2 px-3 rounded-tl-lg">Món ăn (VI)</th>
+                                    <th class="text-left text-sm font-semibold text-dark-navy py-2 px-3">Dịch sang tiếng Nhật</th>
+                                    <th class="text-right text-sm font-semibold text-dark-navy py-2 px-3">Giá (VNĐ)</th>
+                                    <th class="text-center text-sm font-semibold text-dark-navy py-2 px-3 rounded-tr-lg w-12"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="listing-menu-tbody">
+                                <!-- Rows rendered by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Add Row -->
+                    <button
+                        type="button"
+                        id="listing-menu-add-row"
+                        data-object-id="listing-menu-add-row"
+                        onclick="addMenuRow()"
+                        class="text-sm font-medium text-teal hover:underline mt-3"
+                    >
+                        ＋ Thêm món
+                    </button>
+                </div>
+
+                <!-- Step 2 Next Button -->
+                <button
+                    type="button"
+                    id="listing-btn-step2-next"
+                    data-object-id="listing-btn-step2-next"
+                    onclick="handleStep2Next()"
+                    class="w-full h-12 bg-coral text-white rounded-lg font-semibold text-base hover:brightness-90 transition-all mt-6"
+                >
+                    Tiếp theo →
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Step 3 Content -->
+        <div id="step-3-content" data-object-id="step-3-content" class="hidden">
+            <div id="listing-preview-layout" data-object-id="listing-preview-layout" class="grid grid-cols-[55%_45%] gap-6 max-w-[1000px] mx-auto">
+
+                <!-- Left: Vietnamese Summary -->
+                <div id="listing-preview-summary" data-object-id="listing-preview-summary" class="bg-white rounded-xl shadow-card p-8">
+                    <h3 class="text-xl font-bold text-dark-navy mb-6">Xem lại thông tin</h3>
+
+                    <div class="mb-4">
+                        <p class="text-sm font-semibold text-gray-500 mb-1">Tên doanh nghiệp</p>
+                        <p id="listing-preview-summary-name" data-object-id="listing-preview-summary-name" class="text-base text-dark-navy">—</p>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-sm font-semibold text-gray-500 mb-1">Danh mục</p>
+                        <p id="listing-preview-summary-category" data-object-id="listing-preview-summary-category" class="text-base text-dark-navy">—</p>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-sm font-semibold text-gray-500 mb-1">Địa chỉ</p>
+                        <p id="listing-preview-summary-address" data-object-id="listing-preview-summary-address" class="text-base text-dark-navy">—</p>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-sm font-semibold text-gray-500 mb-1">Giờ mở cửa</p>
+                        <p id="listing-preview-summary-hours" data-object-id="listing-preview-summary-hours" class="text-base text-dark-navy">—</p>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-sm font-semibold text-gray-500 mb-1">Ảnh</p>
+                        <div id="listing-preview-summary-photos" data-object-id="listing-preview-summary-photos" class="flex gap-2 flex-wrap">
+                            <span class="text-gray-400 text-sm">—</span>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <p class="text-sm font-semibold text-gray-500 mb-1">Thực đơn</p>
+                        <p id="listing-preview-summary-menu" data-object-id="listing-preview-summary-menu" class="text-base text-dark-navy">—</p>
+                    </div>
+
+                    <!-- Publish Actions -->
+                    <button
+                        type="button"
+                        id="listing-btn-publish"
+                        data-object-id="listing-btn-publish"
+                        onclick="handlePublish()"
+                        class="w-full h-12 bg-coral text-white rounded-lg font-semibold text-base hover:brightness-90 transition-all flex items-center justify-center gap-2"
+                    >
+                        <span id="listing-publish-text">Đăng tin ngay</span>
+                        <div id="listing-publish-spinner" class="hidden w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    </button>
+                    <a
+                        href="#"
+                        id="listing-btn-draft"
+                        data-object-id="listing-btn-draft"
+                        onclick="handleSaveDraft(); return false;"
+                        class="block text-sm text-gray-500 text-center mt-2 hover:underline"
+                    >Lưu nháp</a>
+                    <p id="listing-terms-note" data-object-id="listing-terms-note" class="text-xs text-gray-400 text-center mt-2">
+                        Bằng cách đăng, bạn đồng ý với <a href="#" class="underline">Điều khoản sử dụng</a>
+                    </p>
+                </div>
+
+                <!-- Right: Japanese Preview -->
+                <div class="sticky top-32">
+                    <p id="listing-preview-label" data-object-id="listing-preview-label" class="text-sm font-medium text-teal mb-2">Khách hàng Nhật sẽ thấy:</p>
+                    <span id="listing-preview-lang" data-object-id="listing-preview-lang" class="inline-block text-xs text-gray-500 mb-3">🇯🇵 日本語プレビュー</span>
+
+                    <!-- Phone Mockup -->
+                    <div id="listing-preview-phone" data-object-id="listing-preview-phone" class="border-2 border-gray-300 rounded-[2rem] p-3 bg-white shadow-card max-w-[320px] mx-auto">
+                        <!-- Phone notch -->
+                        <div class="w-20 h-1.5 bg-gray-200 rounded-full mx-auto mb-2"></div>
+
+                        <div class="rounded-[1.5rem] overflow-hidden bg-warm-white">
+                            <!-- Cover Photo -->
+                            <div id="listing-preview-cover" data-object-id="listing-preview-cover" class="w-full h-[160px] bg-gray-200 flex items-center justify-center text-gray-400">
+                                <span>📷</span>
+                            </div>
+
+                            <div class="px-4 pt-3 pb-4">
+                                <!-- JP Name + Badge -->
+                                <div class="flex items-center gap-2 mb-1">
+                                    <h3 id="listing-preview-jp-name" data-object-id="listing-preview-jp-name" class="font-jp text-lg font-bold text-dark-navy">フォーフォン</h3>
+                                    <span id="listing-preview-badge" data-object-id="listing-preview-badge" class="bg-teal text-white text-xs px-2 py-0.5 rounded font-medium">新規</span>
+                                </div>
+
+                                <!-- Category + Rating -->
+                                <p class="text-xs text-gray-500 mb-3 font-jp">レストラン · ⭐ —</p>
+
+                                <!-- JP Menu -->
+                                <p class="text-xs font-semibold text-dark-navy mb-2 font-jp">メニュー</p>
+                                <div id="listing-preview-jp-menu" data-object-id="listing-preview-jp-menu" class="max-h-[200px] overflow-y-auto">
+                                    <!-- Menu rows rendered by JS -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Refresh -->
+                    <div class="text-center mt-3">
+                        <button
+                            type="button"
+                            id="listing-preview-refresh"
+                            data-object-id="listing-preview-refresh"
+                            onclick="refreshTranslation()"
+                            class="text-sm text-teal hover:underline"
+                        >🔄 Bản dịch tự động</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ========================================================================
+         SUCCESS OVERLAY (S6 - will be added later)
+         ======================================================================== -->
+    <div id="success-overlay" data-object-id="success-overlay" class="hidden fixed inset-0 z-50 bg-white flex items-center justify-center">
+        <div class="flex flex-col items-center max-w-md px-6">
+
+            <!-- Animated Checkmark -->
+            <div
+                id="success-checkmark"
+                data-object-id="success-checkmark"
+                class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center"
+                style="animation: bounce-in 0.6s ease-out;"
+            >
+                <span class="text-white text-3xl font-bold">✓</span>
+            </div>
+
+            <!-- Headline -->
+            <h2
+                id="success-headline"
+                data-object-id="success-headline"
+                class="text-2xl font-bold text-dark-navy mt-6 text-center"
+            >Tin đăng đã được đăng thành công! 🎉</h2>
+
+            <!-- Subtext -->
+            <p
+                id="success-subtext"
+                data-object-id="success-subtext"
+                class="text-base text-gray-500 mt-2 text-center"
+            >Khách hàng Nhật giờ có thể tìm thấy bạn trên DaNangNavi</p>
+
+            <!-- Listing Link -->
+            <a
+                id="success-listing-link"
+                data-object-id="success-listing-link"
+                href="#"
+                class="text-sm text-teal mt-3 hover:underline"
+            >Xem tin đăng →</a>
+
+            <!-- Coupon CTA Card -->
+            <div
+                id="success-coupon-card"
+                data-object-id="success-coupon-card"
+                class="border-l-4 border-teal bg-teal/5 rounded-lg p-5 mt-8 w-full"
+            >
+                <p class="text-xl mb-1">💡</p>
+                <p class="text-base text-dark-navy font-medium">Bước tiếp theo: Tạo coupon để thu hút khách hàng đầu tiên!</p>
+
+                <button
+                    id="success-coupon-btn"
+                    data-object-id="success-coupon-btn"
+                    onclick="window.location.href='04.2-coupon-manager.html'"
+                    class="w-full h-12 bg-coral text-white rounded-lg font-semibold text-base hover:brightness-90 transition-all mt-3"
+                >Tạo Coupon ngay →</button>
+            </div>
+
+            <!-- Skip Link -->
+            <a
+                id="success-skip-link"
+                data-object-id="success-skip-link"
+                href="04.3-business-dashboard.html"
+                class="text-sm text-gray-500 mt-3 hover:underline"
+            >Bỏ qua, đi đến Bảng điều khiển →</a>
+
+        </div>
+    </div>
+
+    <!-- ========================================================================
+         JAVASCRIPT
+         ======================================================================== -->
+    <script>
+        /**
+         * Page: 04.1 Listing Editor
+         * Section: S1 — Page Shell & Progress Header
+         */
+
+        // ================================================================
+        // STATE MANAGEMENT
+        // ================================================================
+        let currentStep = 1;
+        let completedSteps = [];
+
+        // ================================================================
+        // INITIALIZATION
+        // ================================================================
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('📄 04.1 Listing Editor loaded');
+            console.log('📍 Current step:', currentStep);
+            setStep(1);
+        });
+
+        // ================================================================
+        // STEP NAVIGATION
+        // ================================================================
+        function setStep(n) {
+            currentStep = n;
+            console.log('📍 Setting step to:', n);
+
+            // Update circles, labels, connectors
+            for (let i = 1; i <= 3; i++) {
+                const circle = document.getElementById(`listing-step-${i}-circle`);
+                const label = document.getElementById(`listing-step-${i}-label`);
+                const content = document.getElementById(`step-${i}-content`);
+
+                // Reset classes
+                circle.className = 'step-circle';
+                label.className = 'step-label';
+
+                if (completedSteps.includes(i)) {
+                    circle.classList.add('completed');
+                    label.classList.add('completed');
+                } else if (i === n) {
+                    circle.classList.add('active');
+                    label.classList.add('active');
+                } else {
+                    circle.classList.add('upcoming');
+                    label.classList.add('upcoming');
+                }
+
+                // Show/hide content
+                if (i === n) {
+                    content.classList.remove('hidden');
+                } else {
+                    content.classList.add('hidden');
+                }
+            }
+
+            // Update connectors
+            for (let i = 1; i <= 2; i++) {
+                const connector = document.getElementById(`listing-connector-${i}`);
+                connector.className = 'step-connector self-start mt-4';
+                if (completedSteps.includes(i)) {
+                    connector.classList.add('completed');
+                } else {
+                    connector.classList.add('upcoming');
+                }
+            }
+        }
+
+        function goToStep(n) {
+            // Can only go to completed steps or current step
+            if (completedSteps.includes(n) || n === currentStep) {
+                setStep(n);
+                console.log('🔄 Navigated to step:', n);
+            } else {
+                console.log('🚫 Cannot navigate to step:', n, '(not completed)');
+            }
+        }
+
+        function completeStep(n) {
+            if (!completedSteps.includes(n)) {
+                completedSteps.push(n);
+                console.log('✅ Step completed:', n);
+            }
+            // Auto-advance to next step
+            if (n < 3) {
+                setStep(n + 1);
+            }
+        }
+
+        // ================================================================
+        // S2: FORM STATE & FUNCTIONS
+        // ================================================================
+        let formData = {};
+        let selectedHoursPreset = null;
+
+        function selectHoursPreset(n) {
+            selectedHoursPreset = n;
+            const presets = {
+                1: { open: '08:00', close: '22:00' },
+                2: { open: '10:00', close: '21:00' },
+                3: null // custom
+            };
+
+            // Update chip styles
+            for (let i = 1; i <= 3; i++) {
+                const btn = document.getElementById(`listing-hours-preset-${i}`);
+                if (i === n) {
+                    btn.className = 'h-9 px-4 rounded-lg text-sm font-semibold transition-colors bg-navy text-white';
+                } else {
+                    btn.className = 'h-9 px-4 border border-gray-200 rounded-lg text-sm text-dark-navy hover:bg-gray-50 transition-colors';
+                }
+            }
+
+            // Show/hide custom inputs
+            const customDiv = document.getElementById('listing-hours-custom');
+            if (n === 3) {
+                customDiv.classList.remove('hidden');
+            } else {
+                customDiv.classList.add('hidden');
+                // Pre-fill time values
+                const p = presets[n];
+                document.getElementById('listing-input-hours-open').value = p.open;
+                document.getElementById('listing-input-hours-close').value = p.close;
+            }
+
+            clearFieldError('hours');
+            console.log('🕐 Hours preset selected:', n);
+        }
+
+        function updateCharCounter() {
+            const textarea = document.getElementById('listing-textarea-desc');
+            const counter = document.getElementById('listing-char-counter');
+            counter.textContent = `${textarea.value.length}/200`;
+        }
+
+        function validateStep1() {
+            let isValid = true;
+
+            // Tên doanh nghiệp
+            const name = document.getElementById('listing-input-name').value.trim();
+            if (!name) {
+                showFieldError('name', 'Vui lòng nhập tên doanh nghiệp');
+                isValid = false;
+            } else {
+                clearFieldError('name');
+            }
+
+            // Danh mục
+            const category = document.getElementById('listing-select-category').value;
+            if (!category) {
+                showFieldError('category', 'Vui lòng chọn danh mục');
+                isValid = false;
+            } else {
+                clearFieldError('category');
+            }
+
+            // Địa chỉ
+            const address = document.getElementById('listing-input-address').value.trim();
+            if (!address) {
+                showFieldError('address', 'Vui lòng nhập địa chỉ');
+                isValid = false;
+            } else {
+                clearFieldError('address');
+            }
+
+            // Số điện thoại
+            const phone = document.getElementById('listing-input-phone').value.trim();
+            if (!phone || phone.replace(/\D/g, '').length < 9) {
+                showFieldError('phone', 'Vui lòng nhập số điện thoại hợp lệ');
+                isValid = false;
+            } else {
+                clearFieldError('phone');
+            }
+
+            // Giờ mở cửa
+            if (!selectedHoursPreset) {
+                showFieldError('hours', 'Vui lòng chọn giờ mở cửa');
+                isValid = false;
+            } else if (selectedHoursPreset === 3) {
+                const open = document.getElementById('listing-input-hours-open').value;
+                const close = document.getElementById('listing-input-hours-close').value;
+                if (!open || !close) {
+                    showFieldError('hours', 'Vui lòng nhập giờ mở và đóng cửa');
+                    isValid = false;
+                } else {
+                    clearFieldError('hours');
+                }
+            } else {
+                clearFieldError('hours');
+            }
+
+            return isValid;
+        }
+
+        function handleNextStep() {
+            if (!validateStep1()) {
+                console.log('❌ Validation failed');
+                return;
+            }
+
+            // Store form data
+            formData = {
+                name: document.getElementById('listing-input-name').value.trim(),
+                category: document.getElementById('listing-select-category').value,
+                address: document.getElementById('listing-input-address').value.trim(),
+                phone: document.getElementById('listing-input-phone').value.trim(),
+                hoursOpen: document.getElementById('listing-input-hours-open').value,
+                hoursClose: document.getElementById('listing-input-hours-close').value,
+                description: document.getElementById('listing-textarea-desc').value.trim(),
+                zalo: document.getElementById('listing-input-zalo').value.trim(),
+            };
+
+            console.log('📋 Form data saved:', formData);
+            completeStep(1);
+        }
+
+        function showFieldError(fieldId, message) {
+            const errorEl = document.getElementById(`error-${fieldId}`);
+            if (errorEl) {
+                errorEl.textContent = message;
+                errorEl.classList.remove('hidden');
+            }
+            // Add red border to input
+            const inputEl = document.getElementById(`listing-input-${fieldId}`) ||
+                           document.getElementById(`listing-select-${fieldId}`);
+            if (inputEl) {
+                inputEl.classList.remove('border-gray-200');
+                inputEl.classList.add('border-red-500');
+            }
+        }
+
+        function clearFieldError(fieldId) {
+            const errorEl = document.getElementById(`error-${fieldId}`);
+            if (errorEl) {
+                errorEl.classList.add('hidden');
+            }
+            const inputEl = document.getElementById(`listing-input-${fieldId}`) ||
+                           document.getElementById(`listing-select-${fieldId}`);
+            if (inputEl) {
+                inputEl.classList.remove('border-red-500');
+                inputEl.classList.add('border-gray-200');
+            }
+        }
+
+        // Clear error on input
+        document.addEventListener('DOMContentLoaded', function() {
+            ['name', 'address', 'phone', 'zalo'].forEach(field => {
+                const el = document.getElementById(`listing-input-${field}`);
+                if (el) el.addEventListener('input', () => clearFieldError(field));
+            });
+            const catEl = document.getElementById('listing-select-category');
+            if (catEl) catEl.addEventListener('change', () => clearFieldError('category'));
+        });
+
+        // ================================================================
+        // S3: PHOTOS UPLOAD
+        // ================================================================
+        let photos = [];
+        const MAX_PHOTOS = 10;
+        const MIN_PHOTOS = 3;
+
+        // Demo color placeholders for quick testing
+        const demoColors = ['#E74C3C', '#3498DB', '#2ECC71', '#F39C12', '#9B59B6', '#1ABC9C', '#E67E22', '#34495E', '#E91E63', '#00BCD4'];
+
+        function triggerPhotoUpload() {
+            document.getElementById('listing-photo-input').click();
+        }
+
+        function handlePhotoSelected(event) {
+            const files = event.target.files;
+            if (!files.length) return;
+
+            for (const file of files) {
+                if (photos.length >= MAX_PHOTOS) break;
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    photos.push({ url: e.target.result, name: file.name });
+                    renderPhotosGrid();
+                    console.log('📷 Photo added:', file.name, `(${photos.length}/${MAX_PHOTOS})`);
+                };
+                reader.readAsDataURL(file);
+            }
+            // Reset input so same file can be re-selected
+            event.target.value = '';
+        }
+
+        function addDemoPhoto() {
+            if (photos.length >= MAX_PHOTOS) return;
+            const color = demoColors[photos.length % demoColors.length];
+            const canvas = document.createElement('canvas');
+            canvas.width = 200;
+            canvas.height = 200;
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = color;
+            ctx.fillRect(0, 0, 200, 200);
+            ctx.fillStyle = '#FFFFFF';
+            ctx.font = 'bold 48px Inter, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(photos.length + 1, 100, 100);
+            photos.push({ url: canvas.toDataURL(), name: `demo-${photos.length + 1}.jpg` });
+            renderPhotosGrid();
+            console.log('📷 Demo photo added:', photos.length);
+        }
+
+        function removePhoto(index) {
+            photos.splice(index, 1);
+            renderPhotosGrid();
+            console.log('🗑️ Photo removed, remaining:', photos.length);
+        }
+
+        function renderPhotosGrid() {
+            const grid = document.getElementById('listing-photos-grid');
+            const count = document.getElementById('listing-photos-count');
+            grid.innerHTML = '';
+
+            // Render existing photos
+            photos.forEach((photo, i) => {
+                const div = document.createElement('div');
+                div.id = `listing-photo-${i}`;
+                div.setAttribute('data-object-id', `listing-photo-${i}`);
+                div.className = 'relative w-[100px] h-[100px] rounded-lg overflow-hidden group';
+                div.innerHTML = `
+                    <img src="${photo.url}" alt="${photo.name}" class="w-full h-full object-cover" />
+                    ${i === 0 ? '<span id="listing-photo-cover-badge" data-object-id="listing-photo-cover-badge" class="absolute top-1 left-1 bg-navy text-white text-xs px-2 py-0.5 rounded font-medium">Ảnh bìa</span>' : ''}
+                    <button
+                        id="listing-photo-remove-${i}"
+                        data-object-id="listing-photo-remove-${i}"
+                        onclick="removePhoto(${i})"
+                        class="absolute top-1 right-1 w-5 h-5 bg-red-500 text-white rounded-full text-xs flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-600"
+                    >×</button>
+                `;
+                grid.appendChild(div);
+            });
+
+            // Add upload button if under max
+            if (photos.length < MAX_PHOTOS) {
+                const uploadBtn = document.createElement('button');
+                uploadBtn.type = 'button';
+                uploadBtn.id = 'listing-photo-upload-btn';
+                uploadBtn.setAttribute('data-object-id', 'listing-photo-upload-btn');
+                uploadBtn.className = 'w-[100px] h-[100px] border-2 border-dashed border-gray-200 rounded-lg flex items-center justify-center text-2xl text-gray-400 hover:border-teal hover:text-teal transition-colors cursor-pointer';
+                uploadBtn.textContent = '＋';
+                uploadBtn.onclick = triggerPhotoUpload;
+                grid.appendChild(uploadBtn);
+
+                // Add demo button (dev helper)
+                const demoBtn = document.createElement('button');
+                demoBtn.type = 'button';
+                demoBtn.className = 'w-[100px] h-[100px] border-2 border-dashed border-blue-200 rounded-lg flex flex-col items-center justify-center text-xs text-blue-400 hover:border-blue-400 hover:text-blue-500 transition-colors cursor-pointer';
+                demoBtn.innerHTML = '🎨<span class="mt-1">Demo</span>';
+                demoBtn.onclick = addDemoPhoto;
+                grid.appendChild(demoBtn);
+            }
+
+            // Update count
+            count.textContent = `${photos.length}/${MAX_PHOTOS} ảnh`;
+            if (photos.length < MIN_PHOTOS) {
+                count.className = 'text-sm text-amber-500';
+            } else {
+                count.className = 'text-sm text-green-600';
+            }
+        }
+
+        // Initial render on step 2 entry
+        const origSetStep = setStep;
+        setStep = function(n) {
+            origSetStep(n);
+            if (n === 2) renderPhotosGrid();
+        };
+
+        // ================================================================
+        // S4: MENU OCR
+        // ================================================================
+        const demoMenu = [
+            { name_vi: "Phở bò đặc biệt", name_ja: "特製牛肉フォー", price_vnd: 55000, confidence: "high" },
+            { name_vi: "Phở gà", name_ja: "鶏肉フォー", price_vnd: 45000, confidence: "high" },
+            { name_vi: "Bún chả Hà Nội", name_ja: "ハノイ風ブンチャー", price_vnd: 50000, confidence: "high" },
+            { name_vi: "Gỏi cuốn (2 cuốn)", name_ja: "生春巻き（2本）", price_vnd: 30000, confidence: "medium" },
+            { name_vi: "Cơm gà Hội An", name_ja: "ホイアン風チキンライス", price_vnd: 45000, confidence: "high" },
+            { name_vi: "Bánh xèo", name_ja: "バインセオ（ベトナム風お好み焼き）", price_vnd: 40000, confidence: "medium" },
+            { name_vi: "Nước mía", name_ja: "サトウキビジュース", price_vnd: 15000, confidence: "high" },
+            { name_vi: "Cà phê sữa đá", name_ja: "ベトナムアイスコーヒー", price_vnd: 20000, confidence: "high" }
+        ];
+
+        let menuItems = [];
+        let menuOCRDone = false;
+
+        function triggerMenuOCR() {
+            const ocrBtn = document.getElementById('listing-menu-ocr-btn');
+            const processing = document.getElementById('listing-menu-processing');
+            const results = document.getElementById('listing-menu-results');
+
+            // Hide button, show processing
+            ocrBtn.classList.add('hidden');
+            processing.classList.remove('hidden');
+            console.log('🔍 OCR processing started...');
+
+            // Simulate 3s processing
+            setTimeout(() => {
+                processing.classList.add('hidden');
+                results.classList.remove('hidden');
+                menuItems = JSON.parse(JSON.stringify(demoMenu));
+                renderMenuTable(menuItems);
+                menuOCRDone = true;
+                console.log('✅ OCR complete! Found', menuItems.length, 'items');
+            }, 3000);
+        }
+
+        function renderMenuTable(items) {
+            const tbody = document.getElementById('listing-menu-tbody');
+            tbody.innerHTML = '';
+
+            items.forEach((item, i) => {
+                const tr = document.createElement('tr');
+                tr.id = `listing-menu-row-${i}`;
+                tr.setAttribute('data-object-id', `listing-menu-row-${i}`);
+                tr.className = 'border-b border-gray-100 hover:bg-gray-50';
+
+                const confidenceIcon = item.confidence === 'high'
+                    ? '<span class="text-green-600">✅</span>'
+                    : '<span class="text-amber-500">⚠️</span>';
+
+                tr.innerHTML = `
+                    <td class="py-2.5 px-3 text-sm text-dark-navy">
+                        <span contenteditable="true" class="outline-none focus:ring-1 focus:ring-teal rounded px-1 -mx-1 block">${item.name_vi}</span>
+                    </td>
+                    <td class="py-2.5 px-3 text-sm text-dark-navy font-jp">
+                        <span contenteditable="true" class="outline-none focus:ring-1 focus:ring-teal rounded px-1 -mx-1 block">${item.name_ja}</span>
+                    </td>
+                    <td class="py-2.5 px-3 text-sm text-dark-navy text-right">
+                        <span contenteditable="true" class="outline-none focus:ring-1 focus:ring-teal rounded px-1 -mx-1 inline-block">${item.price_vnd.toLocaleString('vi-VN')}₫</span>
+                    </td>
+                    <td class="py-2.5 px-3 text-center" id="listing-menu-confidence-${i}" data-object-id="listing-menu-confidence-${i}">
+                        ${confidenceIcon}
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function addMenuRow() {
+            menuItems.push({ name_vi: "", name_ja: "", price_vnd: 0, confidence: "high" });
+            renderMenuTable(menuItems);
+            // Focus the new row's first cell
+            const lastRow = document.getElementById(`listing-menu-row-${menuItems.length - 1}`);
+            if (lastRow) {
+                const firstCell = lastRow.querySelector('[contenteditable]');
+                if (firstCell) firstCell.focus();
+            }
+            console.log('➕ Menu row added, total:', menuItems.length);
+        }
+
+        function handleStep2Next() {
+            // Validate: at least 3 photos
+            if (photos.length < MIN_PHOTOS) {
+                alert(`Vui lòng thêm ít nhất ${MIN_PHOTOS} ảnh (hiện có ${photos.length})`);
+                console.log('❌ Not enough photos:', photos.length);
+                return;
+            }
+            // Menu OCR is optional
+            if (!menuOCRDone) {
+                console.log('ℹ️ Menu OCR skipped');
+            }
+
+            console.log('📋 Step 2 complete — photos:', photos.length, ', menu items:', menuItems.length);
+            completeStep(2);
+        }
+
+        // ================================================================
+        // S5: PREVIEW & PUBLISH
+        // ================================================================
+        const categoryLabels = {
+            'nha-hang': 'Nhà hàng',
+            'quan-ca-phe': 'Quán cà phê',
+            'spa': 'Spa',
+            'khach-san': 'Khách sạn',
+            'tour': 'Tour',
+            'dich-vu-khac': 'Dịch vụ khác'
+        };
+        const categoryLabelsJP = {
+            'nha-hang': 'レストラン',
+            'quan-ca-phe': 'カフェ',
+            'spa': 'スパ',
+            'khach-san': 'ホテル',
+            'tour': 'ツアー',
+            'dich-vu-khac': 'その他'
+        };
+
+        function renderPreview() {
+            // Left: Summary
+            const name = formData.name || 'Quán Phở Hương';
+            const cat = categoryLabels[formData.category] || 'Nhà hàng';
+            const addr = formData.address || '25 Trần Hưng Đạo, Sơn Trà, Đà Nẵng';
+            const hours = (formData.hoursOpen && formData.hoursClose)
+                ? `${formData.hoursOpen} - ${formData.hoursClose}`
+                : '7:00 - 22:00';
+
+            document.getElementById('listing-preview-summary-name').textContent = name;
+            document.getElementById('listing-preview-summary-category').textContent = cat;
+            document.getElementById('listing-preview-summary-address').textContent = addr;
+            document.getElementById('listing-preview-summary-hours').textContent = hours;
+
+            // Photos thumbnails
+            const photosDiv = document.getElementById('listing-preview-summary-photos');
+            if (photos.length > 0) {
+                photosDiv.innerHTML = photos.map((p, i) =>
+                    `<img src="${p.url}" alt="${p.name}" class="w-10 h-10 rounded object-cover" />`
+                ).join('') + `<span class="text-sm text-gray-500 self-center ml-1">${photos.length} ảnh</span>`;
+            } else {
+                photosDiv.innerHTML = '<span class="text-gray-400 text-sm">Chưa có ảnh</span>';
+            }
+
+            // Menu count
+            document.getElementById('listing-preview-summary-menu').textContent =
+                menuItems.length > 0 ? `${menuItems.length} món` : 'Chưa có thực đơn';
+
+            // Right: JP Preview
+            // Cover photo
+            const coverDiv = document.getElementById('listing-preview-cover');
+            if (photos.length > 0) {
+                coverDiv.innerHTML = `<img src="${photos[0].url}" alt="Cover" class="w-full h-full object-cover" />`;
+            }
+
+            // JP name (use demo fallback)
+            document.getElementById('listing-preview-jp-name').textContent = 'フォーフォン';
+
+            // Category JP
+            const catJP = categoryLabelsJP[formData.category] || 'レストラン';
+            // Already static in HTML, could update dynamically if needed
+
+            // JP Menu
+            const jpMenuDiv = document.getElementById('listing-preview-jp-menu');
+            if (menuItems.length > 0) {
+                jpMenuDiv.innerHTML = menuItems.map(item => `
+                    <div class="flex justify-between py-1.5 border-b border-gray-100 text-sm font-jp">
+                        <span class="text-dark-navy">${item.name_ja || item.name_vi}</span>
+                        <span class="text-gray-500 ml-2 whitespace-nowrap">¥${item.price_vnd ? Math.round(item.price_vnd / 166).toLocaleString() : '—'}</span>
+                    </div>
+                `).join('');
+            } else {
+                jpMenuDiv.innerHTML = '<p class="text-sm text-gray-400 font-jp">メニューなし</p>';
+            }
+
+            console.log('👁️ Preview rendered');
+        }
+
+        function refreshTranslation() {
+            const btn = document.getElementById('listing-preview-refresh');
+            btn.textContent = '⏳ Đang dịch lại...';
+            btn.disabled = true;
+            setTimeout(() => {
+                renderPreview();
+                btn.textContent = '🔄 Bản dịch tự động';
+                btn.disabled = false;
+                console.log('🔄 Translation refreshed');
+            }, 1500);
+        }
+
+        function handlePublish() {
+            const btn = document.getElementById('listing-btn-publish');
+            const text = document.getElementById('listing-publish-text');
+            const spinner = document.getElementById('listing-publish-spinner');
+
+            btn.disabled = true;
+            text.textContent = 'Đang đăng...';
+            spinner.classList.remove('hidden');
+            console.log('📤 Publishing listing...');
+
+            setTimeout(() => {
+                btn.disabled = false;
+                text.textContent = 'Đăng tin ngay';
+                spinner.classList.add('hidden');
+                // Show success overlay (S6)
+                document.getElementById('success-overlay').classList.remove('hidden');
+                console.log('✅ Listing published!');
+            }, 2000);
+        }
+
+        function handleSaveDraft() {
+            // Show simple toast
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-6 left-1/2 -translate-x-1/2 bg-gray-900 text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-2 z-50';
+            toast.innerHTML = '<span class="text-green-400">✓</span> Đã lưu nháp';
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+            console.log('💾 Draft saved');
+        }
+
+        // Hook into setStep to render preview when entering step 3
+        const origSetStep2 = setStep;
+        setStep = function(n) {
+            origSetStep2(n);
+            if (n === 3) renderPreview();
+        };
+
+        // ================================================================
+        // DEV HELPERS
+        // ================================================================
+        console.log('💡 Dev helpers: completeStep(1), completeStep(2), goToStep(n), addDemoPhoto(), triggerMenuOCR()');
+    </script>
+</body>
+</html>

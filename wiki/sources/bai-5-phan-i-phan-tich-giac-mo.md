@@ -45,19 +45,19 @@ Jung phân biệt giữa **dấu hiệu** (chỉ biểu đơn nghĩa) và **bi�
 
 ## Khái niệm liên quan
 
-- [[bieu-tuong-tap-the]] — Biểu tượng mang tính tập thể, bắt nguồn từ vô thức tập thể
-- [[vo-thuc-ca-nhan]] — Vô thức cá nhân theo Jung
-- [[vo-thuc-tap-the]] — Lớp vô thức chia sẻ bởi toàn nhân loại
-- [[phan-tich-giac-mo]] — Phương pháp và kỹ thuật phân tích giấc mơ
-- [[anh-huong-psychoanalytic]] — Ảnh hưởng qua lại với Freud và trường phái phân tích
+- [[concepts/bieu-tuong-tap-the]] — Biểu tượng mang tính tập thể, bắt nguồn từ vô thức tập thể
+- [[concepts/vo-thuc-ca-nhan]] — Vô thức cá nhân theo Jung
+- [[concepts/vo-thuc-tap-the]] — Lớp vô thức chia sẻ bởi toàn nhân loại
+- [[concepts/phan-tich-giac-mo]] — Phương pháp và kỹ thuật phân tích giấc mơ
+- [[concepts/anh-huong-psychoanalytic]] — Ảnh hưởng qua lại với Freud và trường phái phân tích
 
 ## Người được đề cập
 
-- [[carl-jung]] — Tác giả
-- [[sigmund-freud]] — Đồng nghiệp và đối thoại trong giấc mơ
-- [[immanuel-kant]] — Ảnh hưởng triết học
-- [[arthur-schopenhauer]] — Ảnh hưởng triết học
-- [[charles-darwin]] — Hợp tác gần đây
+- [[people/carl-jung]] — Tác giả
+- [[people/sigmund-freud]] — Đồng nghiệp và đối thoại trong giấc mơ
+- [[people/immanuel-kant]] — Ảnh hưởng triết học
+- [[people/arthur-schopenhauer]] — Ảnh hưởng triết học
+- [[people/charles-darwin]] — Hợp tác gần đây
 
 ## Câu hỏi mở
 

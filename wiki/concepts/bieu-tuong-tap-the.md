@@ -32,6 +32,7 @@ Biểu tượng tập thể (Collective Symbol / Archetypal Symbol) là những 
 ## Key Sources
 
 - [[sources/bai-5-phan-i-phan-tich-giac-mo]]
+- [[sources/phan-i-chuc-nang-cua-nhung-giac-mo]] — liên tưởng mang tính lịch sử tạo cầu nối giữa ý thức và bản năng
 
 ## Related Concepts
 

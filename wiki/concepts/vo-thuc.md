@@ -30,12 +30,16 @@ Vô thức (Unconscious) trong tâm lý học Jung là một thế giới tâm l
 ## Key Sources
 
 - [[sources/man-and-his-symbols]] — nguồn chính về vô thức trong tâm lý học Jung
+- [[sources/phan-i-qua-khu-va-tuong-lai-trong-vo-thuc]] — vô thức vừa là kho quá khứ vừa là mầm mống tương lai
+- [[sources/phan-i-chuc-nang-cua-nhung-giac-mo]] — vô thức chứa liên kết tâm lý dưới ngưỡng ý thức, giấc mơ là ngôn ngữ của vô thức
 
 ## Related Concepts
 
 - [[concepts/nguyen-mau]] — các mô hình bẩm sinh trong vô thức tập thể
 - [[concepts/ca-nhan-hoa]] — quá trình hòa giải giữa ý thức và vô thức
 - [[concepts/bieu-tuong]] — ngôn ngữ của vô thức
+- [[concepts/kim-nen]] — cơ chế đẩy nội dung khó chịu xuống vô thức
+- [[concepts/sang-tao-tu-vo-thuc]] — ý tưởng mới nảy mầm từ vô thức
 
 ## Notes
 

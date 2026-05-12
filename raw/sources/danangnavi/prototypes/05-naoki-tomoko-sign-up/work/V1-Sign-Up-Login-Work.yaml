@@ -1,0 +1,40 @@
+view: V1 — Sign Up / Login
+spec: C-UX-Scenarios/05-naoki-tomoko-sign-up/05.1-sign-up-login/05.1-sign-up-login.md
+created: 2026-04-08
+status: planning-complete
+
+sections:
+  - id: S0
+    name: Background Listing Page
+    objects: [18-BackgroundListingPage]
+    description: Simulated listing detail page behind modal — static, non-interactive, shows apartment card with photo, title, price, rating to provide context for why user is signing up
+    estimate: 15min
+    status: completed
+    story: Static listing detail page with hero, title, price (VND+JPY), rating, senpai badge, features, CTAs, bottom nav. Demo data loaded from JSON.
+
+  - id: S1
+    name: Modal Shell + Header + LINE Login
+    objects: [1-DarkBackdrop, 2-ModalCard, 3-CloseButton, 4-LogoMark, 5-Headline, 6-ContextMessage, 7-LINELoginButton, 8-SocialProof]
+    description: Dark overlay backdrop (Navy 60%), centered modal card (400px, white, rounded 16px), close × button, logo, headline, context message, LINE green login button (52px height), social proof text
+    estimate: 20min
+    status: completed
+    story: Modal with fade-in backdrop + slide-up card animation. Close via × button, backdrop click, or ESC. DN logo, headline, context message, LINE green button, social proof. Modal auto-shows on page load.
+
+  - id: S2
+    name: Email Alternative + Privacy
+    objects: [9-OrDivider, 10-EmailAccordionTrigger, 11-EmailInput, 12-PasswordInput, 13-RegisterButton, 14-PrivacyNote, 15-TermsLinks]
+    description: "Or" divider line, email accordion (collapsed by default, expands to reveal form), email + password fields with validation, Coral register button, privacy note about LINE permissions, terms/privacy links
+    estimate: 15min
+    status: completed
+    story: Or divider, email accordion with expand/collapse animation, email + password fields with inline validation, show/hide password toggle, Coral register button, privacy note, terms/privacy links.
+
+  - id: S3
+    name: Success State + Redirect
+    objects: [16-SuccessCheckmark, 17-SuccessMessageRedirect]
+    description: Green checkmark animation, success message "Account created! Listing saved.", auto-redirect to 05.2-notification-center.html after 1.5s
+    estimate: 10min
+    status: completed
+    story: Animated green checkmark (pop + draw), hides form content, shows success message. Both LINE and email paths trigger success. Auto-redirect to 05.2 after 1.5s. Button loading states during auth simulation.
+
+build_order: [S0, S1, S2, S3]
+total_estimate: 60min

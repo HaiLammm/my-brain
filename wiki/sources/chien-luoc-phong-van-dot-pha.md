@@ -1,7 +1,7 @@
 ---
 type: source
 title: Chiến Lược Phỏng Vấn Đột Phá
-slug: chien-luoc-phong-van-ot-pha
+slug: chien-luoc-phong-van-dot-pha
 date_added: 2026-05-12
 authors: []
 source_type: note
@@ -14,7 +14,7 @@ tags:
   - chien-luoc
 raw_paths:
   - raw/sources/interview/chien-luoc-tra-loi-phong-van.md
-id: sources/chien-luoc-phong-van-ot-pha
+id: sources/chien-luoc-phong-van-dot-pha
 created: 2026-05-12
 updated: 2026-05-12
 year: 2026
@@ -45,6 +45,7 @@ Tài liệu đề xuất thay đổi tư duy cốt lõi khi bước vào phỏng
 
 - [[concepts/tu-duy-win-win-phong-van]]
 - [[concepts/bo-tu-tru-cot-tuyen-dung]]
+- [[concepts/cv-tot]]
 
 ## Related sources
 

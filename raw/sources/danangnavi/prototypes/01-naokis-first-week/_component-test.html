@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DaNangNavi — Component Test</title>
+  <link rel="stylesheet" href="shared/design-tokens.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .test-section {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .test-section h2 {
+      margin-bottom: 24px;
+      color: var(--color-text-secondary);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .deal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+    }
+    .price-row {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- C2: TopNavBar -->
+  <div id="nav-container"></div>
+
+  <!-- C6: SectionHeader -->
+  <div class="test-section">
+    <h2>C6: SectionHeader</h2>
+    <div id="section-header-1"></div>
+    <div id="section-header-2" style="margin-top: 16px;"></div>
+  </div>
+
+  <!-- C3: SearchBar -->
+  <div class="test-section">
+    <h2>C3: SearchBar</h2>
+    <div style="display: flex; flex-direction: column; gap: 24px; align-items: center;">
+      <div id="search-large"></div>
+      <div id="search-compact"></div>
+    </div>
+  </div>
+
+  <!-- C4: SenpaiCard -->
+  <div class="test-section">
+    <h2>C4: SenpaiCard (3-column grid)</h2>
+    <div id="senpai-grid" class="card-grid"></div>
+  </div>
+
+  <!-- C5: DealCard -->
+  <div class="test-section">
+    <h2>C5: DealCard (4-column grid)</h2>
+    <div id="deal-grid" class="deal-grid"></div>
+  </div>
+
+  <!-- C7: DualCurrencyPrice -->
+  <div class="test-section">
+    <h2>C7: DualCurrencyPrice</h2>
+    <div id="price-row" class="price-row"></div>
+  </div>
+
+  <!-- C8: CategoryIcon -->
+  <div class="test-section">
+    <h2>C8: CategoryIcon (6-across grid)</h2>
+    <div id="category-grid" class="category-grid"></div>
+  </div>
+
+  <script type="module">
+    import { renderTopNav } from './components/top-nav.js';
+    import { renderSearchBar } from './components/search-bar.js';
+    import { renderSenpaiCard } from './components/senpai-card.js';
+    import { renderDealCard } from './components/deal-card.js';
+    import { renderSectionHeader } from './components/section-header.js';
+    import { renderDualCurrencyPrice } from './components/dual-currency-price.js';
+    import { renderCategoryIcon } from './components/category-icon.js';
+
+    // Load demo data
+    const res = await fetch('./data/demo-data.json');
+    const data = await res.json();
+
+    // C2: TopNavBar
+    renderTopNav(document.getElementById('nav-container'), { activePage: 'home' });
+
+    // C6: SectionHeader
+    renderSectionHeader(document.getElementById('section-header-1'), {
+      title: '🔥 Senpai Picks',
+      linkText: 'View all →',
+      linkHref: '#',
+    });
+    renderSectionHeader(document.getElementById('section-header-2'), {
+      title: '💬 Community',
+    });
+
+    // C3: SearchBar
+    renderSearchBar(document.getElementById('search-large'), {
+      size: 'large',
+      placeholder: 'What are you looking for?',
+      onSearch: (val) => console.log('Search:', val),
+    });
+    renderSearchBar(document.getElementById('search-compact'), {
+      size: 'compact',
+      placeholder: 'Search...',
+    });
+
+    // C4: SenpaiCard — use senpai data to create sample cards
+    const senpaiGrid = document.getElementById('senpai-grid');
+    const senpaiCards = [
+      { photo: '', title: 'Best Ramen Spots in Hai Chau — Senpai Guide', rating: 4.8, senpai: data.senpai[0], verified: true },
+      { photo: '', title: 'Son Tra Beach Morning Routine', rating: 4.5, senpai: data.senpai[1], verified: true },
+      { photo: '', title: 'How to Get Your Vietnamese Driver License', rating: 4.6, senpai: data.senpai[2], verified: false },
+    ];
+    senpaiCards.forEach(c => renderSenpaiCard(senpaiGrid, c));
+
+    // C5: DealCard
+    const dealGrid = document.getElementById('deal-grid');
+    data.deals.forEach(d => renderDealCard(dealGrid, {
+      photo: '',
+      business: d.business,
+      description: d.description,
+      savingsJpy: d.savingsJpy,
+      expiresIn: d.expiresIn,
+    }));
+
+    // C7: DualCurrencyPrice
+    const priceRow = document.getElementById('price-row');
+    renderDualCurrencyPrice(priceRow, { vnd: 8000000, jpy: 48000, suffix: '/month', size: 'lg' });
+    renderDualCurrencyPrice(priceRow, { vnd: 5500000, jpy: 33000, suffix: '/month', size: 'md' });
+    renderDualCurrencyPrice(priceRow, { vnd: 3000000, jpy: 18000, size: 'sm' });
+
+    // C8: CategoryIcon
+    const catGrid = document.getElementById('category-grid');
+    const categories = [
+      { icon: 'food', label: 'Food', href: '/search?cat=restaurant' },
+      { icon: 'housing', label: 'Housing', href: '/search?cat=housing' },
+      { icon: 'visa', label: 'Visa & Docs', href: '/guides/visa' },
+      { icon: 'medical', label: 'Medical', href: '/search?cat=medical' },
+      { icon: 'events', label: 'Events', href: '/events' },
+      { icon: 'translation', label: 'Translation', href: '/tools/translate' },
+    ];
+    categories.forEach(c => renderCategoryIcon(catGrid, c));
+
+    console.log('✅ All components rendered successfully!');
+  </script>
+
+</body>
+</html>

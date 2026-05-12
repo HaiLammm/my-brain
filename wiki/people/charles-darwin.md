@@ -22,6 +22,7 @@ Charles Darwin (1809-1882) là nhà tự nhiên học người Anh, cha đẻ c�
 ## Key Sources
 
 - [[sources/bai-5-phan-i-phan-tich-giac-mo]]
+- [[sources/phan-i-qua-khu-va-tuong-lai-trong-vo-thuc]] — ví dụ nỗi sợ cái mới: vụ Scopes 1925
 
 ## Notes
 

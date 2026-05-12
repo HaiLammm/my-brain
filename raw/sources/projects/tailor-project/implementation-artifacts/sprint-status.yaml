@@ -1,0 +1,135 @@
+# generated: 2026-03-10 project: tailor_project
+# project_key: NOKEY
+# tracking_system: file-system
+# story_location: docs/unified
+
+# STATUS DEFINITIONS:
+# ==================
+# Epic Status:
+#   - backlog: Epic not yet started
+#   - in-progress: Epic actively being worked on
+#   - done: All stories in epic completed
+#
+# Epic Status Transitions:
+#   - backlog → in-progress: Automatically when first story is created (via create-story)
+#   - in-progress → done: Manually when all stories reach 'done' status
+#
+# Story Status:
+#   - backlog: Story only exists in epic file
+#   - ready-for-dev: Story file created in stories folder
+#   - in-progress: Developer actively working on implementation
+#   - review: Ready for code review (via Dev's code-review workflow)
+#   - done: Story completed
+#
+# Retrospective Status:
+#   - optional: Can be completed but not required
+#   - done: Retrospective has been completed
+#
+# WORKFLOW NOTES:
+# ===============
+# - Epic transitions to 'in-progress' automatically when first story is created
+# - Stories can be worked in parallel if team capacity allows
+# - SM typically creates next story after previous one is 'done' to incorporate learnings
+# - Dev moves story to 'review', then runs code-review (fresh context, different LLM recommended)
+
+last_updated: 2026-05-07  # Story 11.6 ready-for-dev: Dual Export & Order Attachment
+generated: 2026-03-19
+project: tailor_project
+project_key: NOKEY
+tracking_system: file-system
+story_location: docs/unified
+
+development_status:
+  epic-1: done
+  1-1-thiet-lap-cau-truc-du-an-tu-starter-template: done
+  1-2-thiet-ke-va-khoi-tao-database-multi-tenant: done
+  1-3-dang-nhap-he-thong-da-phuong-thuc: done
+  1-4-dang-ky-tai-khoan-xac-thuc-otp: done
+  1-5-khoi-phuc-mat-khau-qua-otp: done
+  1-6-quan-ly-nhan-su: done
+  1-7-quan-ly-ho-so-so-do-khach-hang: done
+  epic-1-retrospective: optional
+
+  epic-2: done
+  2-1-hien-thi-listing-grid-san-pham: done
+  2-2-tuong-tac-view-chi-tiet-zoom-anh: done
+  2-3-he-thong-loc-san-pham-da-chieu: done  # Code Review passed (3 rounds)
+  2-4-dashboard-owner-crud-san-pham-ao-dai: done
+  2-5-tracker-trang-thai-2-cham: done
+  2-6-timeline-tracking-automated-email-reminders: done
+  epic-2-retrospective: optional
+
+  epic-3: done
+  3-1-cart-state-management: done
+  3-2-render-cart-checkout-details: done
+  3-3-checkout-information-payment-gateway: done
+  3-4-lich-book-appointments-tiem-khach: done
+  epic-3-retrospective: optional
+
+  epic-4: done
+  4-1-xu-ly-state-thanh-toan-qua-webhook: done
+  4-2-visual-bang-don-hang-owner-host: done
+  4-3-owner-theo-doi-thuemuon-dai-han: done  # Code Review 2026-03-18: 10/11 items fixed (3H/5M/2L)
+  4-4a-customer-profile-layout-navbar-icon: done  # P0 - Thay thế story 4.4 gốc, tách thành 7 sub-stories (Sprint Change 2026-03-12)
+  4-4b-thong-tin-ca-nhan-bao-mat: done  # Code Review Round 2 completed 2026-03-18: 8 items resolved (2H/4M/2L)
+  4-4c-lich-su-mua-hang-trang-thai-don: done  # P0 — Code Review fixes completed 2026-03-18: All 10 action items resolved (3H/5M/2L)
+  4-4d-so-do-co-the: done  # P1
+  4-4e-lich-hen-sap-toi: done  # P1
+  4-4f-thong-bao-notifications: done  # P2
+  4-4g-kho-voucher: done  # P2
+  epic-4-retrospective: optional
+
+  epic-5: done
+  5-1-kpi-morning-command-center-dash: done
+  5-2-bang-dieu-phoi-khoi-san-xuat-gap-viec: done
+  5-3-workstation-production-flow-dash-cho-tho-tiem: done  # Code Review Fixes 2026-03-17: All 10 action items resolved (3H/4M/3L)
+  5-4-tinh-luongthu-nhap-tho: done
+  epic-5-retrospective: optional
+
+  epic-6: in-progress
+  6-1-quan-tri-he-thong-danh-sach-bang-chia-khoa: done
+  6-2-khai-mo-chuyen-hoa-khach: done
+  6-3-voucher-creator-ui: done
+  6-4-tuong-tac-broadcasting-template-sms-sns: done
+  epic-6-retrospective: optional
+
+  epic-7: done
+  7-1-uiux-tru-cot-phong-cach: done
+  7-2-style-intensity-ease-control-sliders: done
+  7-3-he-goi-y-loai-vai-tu-thong-so: done
+  7-4-goi-compiler-doi-adjective-ra-semantic-toan: done
+  epic-7-retrospective: optional
+
+  epic-8: done
+  8-1-api-hinh-hoc-can-ban-sinh-json-cot-so: done
+  8-2-base-render-2d-svg-cat-path-kich-co-mo: done
+  8-3-noi-moc-morphing-effect-truot-thanh-so-slider: done # FIXED: Removed invalid placeholder in DesignSessionClient
+  8-4-layer-bong-mo-so-sanh-cham-comparison-dau-lech: done
+  epic-8-retrospective: optional
+
+  epic-9: done
+  9-1-hard-constraints: done
+  9-2-hintsui-truc-tiep-nhay-vi-pham-kheo-nho-cui-soft: done
+  9-3-chuc-nang-bang-sanity-check-3-cot-khao-sat-tho: done
+  9-4-manual-override: done # FIXED: Moved OverrideError to types/override.ts to fix Server Actions build
+  9-5-cat-export-ban-thiet-ke-so: done
+  epic-9-retrospective: optional
+
+  epic-10: in-progress  # Sprint Change Proposal 2026-03-26: Unified Order Workflow (5-Phase)
+  10-1-db-migration-service-type-model: done
+  10-2-measurement-gate-cho-dat-may: done
+  10-3-checkout-phan-loai-dich-vu: done
+  10-4-owner-approve-va-auto-routing: done
+  10-5-sub-steps-chuan-bi-thue-va-mua: done
+  10-6-remaining-payment-va-handover: done
+  10-7-rental-return-va-security-refund: review
+  epic-10-retrospective: optional
+
+  epic-11: in-progress  # Sprint Change Proposal 2026-04-03: Technical Pattern Generation & Production Export
+  11-1-db-migration-pattern-data-model: review
+  11-2-pattern-engine-core-api: review
+  11-3-svg-gcode-export-api: done
+  11-4-profile-driven-measurement-form-ui: in-progress
+  11-5-split-pane-pattern-preview: ready-for-dev
+  11-6-dual-export-order-attachment: ready-for-dev
+  epic-11-retrospective: optional

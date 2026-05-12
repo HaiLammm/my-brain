@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DaNangNavi — Listing Detail</title>
+  <link rel="stylesheet" href="shared/design-tokens.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .page-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px 100px;
+      min-height: 100vh;
+    }
+
+    /* Photo Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 4px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-top: 24px;
+      cursor: pointer;
+      position: relative;
+    }
+    .gallery-main {
+      aspect-ratio: 4/3;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .gallery-side {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 4px;
+    }
+    .gallery-thumb {
+      background-size: cover;
+      background-position: center;
+    }
+    .gallery-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-success);
+      background-color: rgba(255,255,255,0.95);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .gallery-counter {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #FFFFFF;
+      background-color: rgba(0,0,0,0.5);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+    }
+
+    /* Fullscreen Gallery */
+    .gallery-fullscreen {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0,0,0,0.9);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .gallery-fullscreen.open {
+      display: flex;
+    }
+    .gallery-fs-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.2);
+      border: none;
+      border-radius: 50%;
+      color: #FFFFFF;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .gallery-fs-image {
+      width: 90vw;
+      height: 80vh;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 72px;
+      color: rgba(255,255,255,0.3);
+      background-size: cover;
+      background-position: center;
+    }
+    .gallery-fs-nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-top: 20px;
+    }
+    .gallery-fs-btn {
+      width: 48px;
+      height: 48px;
+      background: rgba(255,255,255,0.15);
+      border: none;
+      border-radius: 50%;
+      color: #FFFFFF;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .gallery-fs-btn:hover {
+      background: rgba(255,255,255,0.3);
+    }
+    .gallery-fs-counter {
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+    }
+
+    /* Two-column layout */
+    .detail-layout {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 32px;
+      margin-top: 32px;
+    }
+    .detail-main { }
+    .detail-sidebar { }
+
+    /* Section 2: Header */
+    .listing-header {
+      margin-bottom: 32px;
+    }
+    .listing-title {
+      font-family: var(--font-headlines);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--color-text);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    .listing-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .listing-price-vnd {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+    .listing-price-jpy {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--color-accent);
+    }
+    .listing-price-suffix {
+      font-size: 16px;
+      color: var(--color-text-secondary);
+    }
+    .fair-price-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: 16px;
+    }
+    .fair-price-badge.fair {
+      color: var(--color-success);
+      background-color: rgba(39,174,96,0.1);
+    }
+    .fair-price-detail {
+      font-weight: 400;
+      font-size: 13px;
+      color: var(--color-text-secondary);
+    }
+    .quick-specs {
+      display: flex;
+      gap: 20px;
+      font-size: 15px;
+      color: var(--color-text);
+      margin-bottom: 16px;
+    }
+    .listing-rating-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+    .listing-rating-star { color: var(--color-warning); }
+    .listing-rating-count { color: var(--color-text-secondary); font-size: 14px; }
+    .listing-actions {
+      display: flex;
+      gap: 12px;
+    }
+    .action-btn {
+      font-family: var(--font-ui);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+      color: var(--color-text);
+      transition: all var(--transition-fast);
+    }
+    .action-btn:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+
+    /* Section 3: Key Details */
+    .info-card {
+      background-color: var(--color-surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .info-card-title {
+      font-family: var(--font-headlines);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 16px;
+    }
+    .info-rows {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .info-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+    }
+    .info-row-icon {
+      width: 20px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .info-row-label {
+      color: var(--color-text-secondary);
+      width: 120px;
+      flex-shrink: 0;
+    }
+    .info-row-value {
+      color: var(--color-text);
+      font-weight: 500;
+    }
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .amenity-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--color-text);
+      padding: 8px 0;
+    }
+    .amenity-check {
+      color: var(--color-success);
+      font-weight: 600;
+    }
+
+    /* Section 4: Reviews */
+    .reviews-section {
+      margin-bottom: 24px;
+    }
+    .star-breakdown {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 16px 20px;
+      background-color: var(--color-surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-card);
+    }
+    .star-big {
+      text-align: center;
+    }
+    .star-big-number {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--color-text);
+      line-height: 1;
+    }
+    .star-big-label {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      margin-top: 4px;
+    }
+    .star-bars {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .star-bar-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--color-text-secondary);
+    }
+    .star-bar-label { width: 16px; text-align: right; }
+    .star-bar-track {
+      flex: 1;
+      height: 6px;
+      background-color: var(--color-border);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .star-bar-fill {
+      height: 100%;
+      background-color: var(--color-warning);
+      border-radius: 3px;
+    }
+    .star-bar-count { width: 16px; }
+    .review-card {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .review-card:last-child { border-bottom: none; }
+    .review-card.featured {
+      background-color: rgba(46,196,182,0.04);
+      padding: 16px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(46,196,182,0.15);
+      margin-bottom: 8px;
+    }
+    .review-featured-badge {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--color-accent);
+      background-color: rgba(46,196,182,0.1);
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .review-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #D1D5DB;
+      flex-shrink: 0;
+    }
+    .review-name { font-size: 14px; font-weight: 600; color: var(--color-text); }
+    .review-meta { font-size: 12px; color: var(--color-text-secondary); }
+    .review-stars { color: var(--color-warning); font-size: 13px; margin-bottom: 6px; }
+    .review-text { font-size: 14px; color: var(--color-text); line-height: 1.6; }
+    .review-tags {
+      display: flex;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .review-tag {
+      font-size: 11px;
+      color: var(--color-text-secondary);
+      background-color: var(--color-bg);
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+    }
+
+    /* Section 5: Contract Guide */
+    .contract-guide {
+      background-color: var(--color-surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .contract-title {
+      font-family: var(--font-headlines);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 16px;
+    }
+    .contract-intro {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      margin-bottom: 16px;
+    }
+    .contract-checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .contract-checklist li {
+      font-size: 14px;
+      color: var(--color-text);
+      padding-left: 4px;
+    }
+    .senpai-advice {
+      font-size: 14px;
+      color: var(--color-text);
+      line-height: 1.5;
+      padding: 12px 16px;
+      background-color: rgba(46,196,182,0.06);
+      border-left: 3px solid var(--color-accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin-bottom: 16px;
+    }
+    .contract-warning {
+      font-size: 14px;
+      color: var(--color-warning);
+      padding: 12px 16px;
+      background-color: rgba(242,153,74,0.08);
+      border-left: 3px solid var(--color-warning);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    /* Location map placeholder */
+    .location-map {
+      background-color: var(--color-surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-text-secondary);
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    /* Sidebar card */
+    .sidebar-card {
+      background-color: var(--color-surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      padding: 24px;
+      position: sticky;
+      top: 88px;
+    }
+    .sidebar-price {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 4px;
+    }
+    .sidebar-jpy {
+      font-size: 16px;
+      color: var(--color-accent);
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    .sidebar-cta {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      font-family: var(--font-ui);
+      font-size: 16px;
+      font-weight: 700;
+      color: #FFFFFF;
+      background-color: var(--color-secondary);
+      border: none;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      text-align: center;
+      margin-bottom: 12px;
+      transition: opacity var(--transition-fast);
+    }
+    .sidebar-cta:hover { opacity: 0.9; }
+    .sidebar-save {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      font-family: var(--font-ui);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-primary);
+      background: none;
+      border: 2px solid var(--color-primary);
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      text-align: center;
+      transition: all var(--transition-fast);
+    }
+    .sidebar-save:hover {
+      background-color: var(--color-primary);
+      color: #FFFFFF;
+    }
+    .sidebar-divider {
+      height: 1px;
+      background: var(--color-border);
+      margin: 20px 0;
+    }
+    .sidebar-info {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+    .sidebar-info strong {
+      color: var(--color-text);
+    }
+
+    /* Contact Modal */
+    .contact-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 150;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact-modal-overlay.open {
+      display: flex;
+    }
+    .contact-modal {
+      background-color: var(--color-surface);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      max-width: 480px;
+      width: 90%;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+    .contact-modal h3 {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+    .contact-modal textarea {
+      width: 100%;
+      height: 120px;
+      padding: 12px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 14px;
+      resize: vertical;
+      margin-bottom: 16px;
+    }
+    .contact-modal textarea:focus {
+      outline: none;
+      border-color: var(--color-accent);
+    }
+    .contact-methods {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .contact-method {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      text-align: center;
+      font-size: 13px;
+      cursor: pointer;
+      transition: border-color var(--transition-fast);
+    }
+    .contact-method:hover {
+      border-color: var(--color-accent);
+    }
+    .contact-modal-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+    .contact-modal-cancel {
+      font-family: var(--font-ui);
+      font-size: 14px;
+      padding: 10px 20px;
+      border: none;
+      background: none;
+      color: var(--color-text-secondary);
+      cursor: pointer;
+    }
+    .contact-modal-send {
+      font-family: var(--font-ui);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 24px;
+      border: none;
+      background-color: var(--color-secondary);
+      color: #FFFFFF;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TopNavBar -->
+  <div id="nav-container"></div>
+
+  <div class="page-container">
+
+    <!-- Section 1: Photo Gallery -->
+    <div class="gallery" id="gallery"></div>
+
+    <!-- Two-column layout -->
+    <div class="detail-layout">
+
+      <!-- Main content -->
+      <div class="detail-main">
+
+        <!-- Section 2: Listing Header -->
+        <div class="listing-header" id="listing-header"></div>
+
+        <!-- Section 3: Key Details -->
+        <div class="info-card" id="key-details"></div>
+
+        <!-- Section 3b: Amenities -->
+        <div class="info-card" id="amenities-card"></div>
+
+        <!-- Section 4: Senpai Reviews -->
+        <div class="reviews-section" id="reviews-section"></div>
+
+        <!-- Section 5: Contract Guide -->
+        <div class="contract-guide" id="contract-guide"></div>
+
+        <!-- Location Map -->
+        <div class="location-map">📍 Map — Son Tra, Da Nang (Interactive map placeholder)</div>
+
+      </div>
+
+      <!-- Sidebar -->
+      <div class="detail-sidebar">
+        <div class="sidebar-card" id="sidebar-card"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Fullscreen Gallery -->
+  <div class="gallery-fullscreen" id="gallery-fullscreen"></div>
+
+  <!-- Contact Modal -->
+  <div class="contact-modal-overlay" id="contact-modal"></div>
+
+  <script type="module">
+    import { renderTopNav } from './components/top-nav.js';
+
+    const res = await fetch('./data/demo-data.json');
+    const data = await res.json();
+
+    // Use first listing as demo
+    const listing = data.listings[0];
+    const listingReviews = data.reviews.filter(r => r.listingId === listing.id);
+    const area = data.areas.find(a => a.id === listing.area);
+
+    renderTopNav(document.getElementById('nav-container'), { activePage: 'search' });
+
+    // Section 1: Photo Gallery
+    const photoColors = ['#2EC4B680', '#1B2A4A60', '#FF6B4A50'];
+    const photoLabels = ['Living Room', 'Bedroom', 'Ocean View'];
+    const totalPhotos = 12;
+
+    const gallery = document.getElementById('gallery');
+    gallery.innerHTML = `
+      <div class="gallery-main" style="background-color:${photoColors[0]};display:flex;align-items:center;justify-content:center;font-size:48px;color:rgba(0,0,0,0.2);">
+        🏠 ${photoLabels[0]}
+        ${listing.senpaiVerified ? '<div class="gallery-badge">Senpai Verified ✓</div>' : ''}
+        <div class="gallery-counter">1/${totalPhotos}</div>
+      </div>
+      <div class="gallery-side">
+        <div class="gallery-thumb" style="background-color:${photoColors[1]};display:flex;align-items:center;justify-content:center;font-size:24px;color:rgba(0,0,0,0.2);">🛏️ ${photoLabels[1]}</div>
+        <div class="gallery-thumb" style="background-color:${photoColors[2]};display:flex;align-items:center;justify-content:center;font-size:24px;color:rgba(0,0,0,0.2);">🌊 ${photoLabels[2]}</div>
+      </div>
+    `;
+
+    // Fullscreen gallery
+    let currentPhoto = 0;
+    const fsGallery = document.getElementById('gallery-fullscreen');
+
+    gallery.addEventListener('click', () => {
+      currentPhoto = 0;
+      renderFullscreen();
+      fsGallery.classList.add('open');
+    });
+
+    function renderFullscreen() {
+      fsGallery.innerHTML = `
+        <button class="gallery-fs-close" id="fs-close">✕</button>
+        <div class="gallery-fs-image" style="background-color:${photoColors[currentPhoto % 3]};">
+          ${['🏠', '🛏️', '🌊'][currentPhoto % 3]} Photo ${currentPhoto + 1}
+        </div>
+        <div class="gallery-fs-nav">
+          <button class="gallery-fs-btn" id="fs-prev">‹</button>
+          <span class="gallery-fs-counter">${currentPhoto + 1} / ${totalPhotos}</span>
+          <button class="gallery-fs-btn" id="fs-next">›</button>
+        </div>
+      `;
+      document.getElementById('fs-close').addEventListener('click', () => fsGallery.classList.remove('open'));
+      document.getElementById('fs-prev').addEventListener('click', () => {
+        currentPhoto = (currentPhoto - 1 + totalPhotos) % totalPhotos;
+        renderFullscreen();
+      });
+      document.getElementById('fs-next').addEventListener('click', () => {
+        currentPhoto = (currentPhoto + 1) % totalPhotos;
+        renderFullscreen();
+      });
+    }
+
+    fsGallery.addEventListener('click', (e) => {
+      if (e.target === fsGallery) fsGallery.classList.remove('open');
+    });
+
+    // Section 2: Listing Header
+    document.getElementById('listing-header').innerHTML = `
+      <h1 class="listing-title">${listing.title}</h1>
+      <div class="listing-price-row">
+        <span class="listing-price-vnd">${listing.price.toLocaleString()} VND</span>
+        <span class="listing-price-jpy">(¥${listing.priceJpy.toLocaleString()})</span>
+        <span class="listing-price-suffix">/month</span>
+      </div>
+      <div class="fair-price-badge fair">🟢 Fair Price <span class="fair-price-detail">— Senpai average: ¥45,000-55,000</span></div>
+      <div class="quick-specs">
+        <span>🛏️ ${listing.type}</span>
+        <span>📐 ${listing.sqm}m²</span>
+        <span>🏢 ${listing.floor}F</span>
+        <span>🅿️ ${listing.parking ? 'Parking' : 'No parking'}</span>
+      </div>
+      <div class="listing-rating-row">
+        <span class="listing-rating-star">⭐</span>
+        <strong>${listing.rating}</strong>
+        <span class="listing-rating-count">(${listing.reviewCount} reviews)</span>
+      </div>
+      <div class="listing-actions">
+        <button class="action-btn" id="save-btn">♡ Save</button>
+        <button class="action-btn" id="share-btn">📤 Share</button>
+      </div>
+    `;
+
+    document.getElementById('save-btn').addEventListener('click', () => {
+      const btn = document.getElementById('save-btn');
+      btn.classList.toggle('saved');
+      btn.textContent = btn.classList.contains('saved') ? '♥ Saved' : '♡ Save';
+      btn.style.color = btn.classList.contains('saved') ? 'var(--color-secondary)' : '';
+      btn.style.borderColor = btn.classList.contains('saved') ? 'var(--color-secondary)' : '';
+    });
+
+    // Section 3: Key Details
+    document.getElementById('key-details').innerHTML = `
+      <div class="info-card-title">Key Details</div>
+      <div class="info-rows">
+        <div class="info-row"><span class="info-row-icon">📍</span><span class="info-row-label">Address</span><span class="info-row-value">${area.name}, Da Nang</span></div>
+        <div class="info-row"><span class="info-row-icon">🚗</span><span class="info-row-label">Commute</span><span class="info-row-value">${listing.commuteToHaiChau} to workplace (motorbike)</span></div>
+        <div class="info-row"><span class="info-row-icon">📅</span><span class="info-row-label">Available</span><span class="info-row-value">${listing.availableNow ? 'Now' : 'Contact for date'}</span></div>
+        <div class="info-row"><span class="info-row-icon">📝</span><span class="info-row-label">Min. Lease</span><span class="info-row-value">${listing.minLease}</span></div>
+        <div class="info-row"><span class="info-row-icon">💰</span><span class="info-row-label">Deposit</span><span class="info-row-value">${listing.deposit}</span></div>
+        <div class="info-row"><span class="info-row-icon">🔌</span><span class="info-row-label">Utilities</span><span class="info-row-value">~${listing.utilities.toLocaleString()} VND/month extra</span></div>
+      </div>
+    `;
+
+    // Amenities
+    const amenityLabels = {
+      aircon: '❄️ Air conditioning',
+      wifi: '📶 Free WiFi',
+      washer: '🧺 Washer (in-unit)',
+      kitchen: '🍳 Full kitchen',
+      pool: '🏊 Rooftop pool',
+      gym: '🏋️ Building gym',
+      security: '🛡️ 24h security',
+      parking: '🅿️ Free motorbike parking',
+      'ocean-view': '🌊 Ocean view',
+      balcony: '🏞️ Balcony',
+    };
+
+    document.getElementById('amenities-card').innerHTML = `
+      <div class="info-card-title">Amenities</div>
+      <div class="amenities-grid">
+        ${listing.amenities.map(a => `<div class="amenity-item"><span class="amenity-check">✓</span> ${amenityLabels[a] || a}</div>`).join('')}
+      </div>
+    `;
+
+    // Section 4: Reviews
+    const starDist = [8, 3, 1, 0, 0];
+    const totalReviews = starDist.reduce((a, b) => a + b, 0);
+
+    let reviewsHTML = `
+      <div class="info-card-title">Senpai Reviews (${listing.reviewCount})</div>
+      <div class="star-breakdown">
+        <div class="star-big">
+          <div class="star-big-number">${listing.rating}</div>
+          <div class="star-big-label">⭐ ${listing.reviewCount} reviews</div>
+        </div>
+        <div class="star-bars">
+          ${starDist.map((count, i) => `
+            <div class="star-bar-row">
+              <span class="star-bar-label">${5 - i}</span>
+              <div class="star-bar-track"><div class="star-bar-fill" style="width:${totalReviews ? (count/totalReviews*100) : 0}%"></div></div>
+              <span class="star-bar-count">${count}</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+
+    // Featured review
+    if (listingReviews.length > 0) {
+      const featured = listingReviews[0];
+      const fSenpai = data.senpai.find(s => s.id === featured.author) || data.senpai[0];
+      reviewsHTML += `
+        <div class="review-card featured">
+          <div class="review-featured-badge">Most Helpful</div>
+          <div class="review-header">
+            <div class="review-avatar"></div>
+            <div>
+              <div class="review-name">${fSenpai.name}</div>
+              <div class="review-meta">${fSenpai.yearsInDanang} years in Da Nang · ${featured.date}</div>
+            </div>
+          </div>
+          <div class="review-stars">${'⭐'.repeat(featured.rating)}</div>
+          <div class="review-text">${featured.text}</div>
+          <div class="review-tags">
+            ${(featured.tags || []).map(t => `<span class="review-tag">${t}</span>`).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    // Other reviews
+    listingReviews.slice(1).forEach(review => {
+      const senpai = data.senpai.find(s => s.id === review.author) || data.senpai[0];
+      reviewsHTML += `
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar"></div>
+            <div>
+              <div class="review-name">${senpai.name}</div>
+              <div class="review-meta">${senpai.yearsInDanang} years · ${review.date}</div>
+            </div>
+          </div>
+          <div class="review-stars">${'⭐'.repeat(review.rating)}</div>
+          <div class="review-text">${review.text}</div>
+          <div class="review-tags">
+            ${(review.tags || []).map(t => `<span class="review-tag">${t}</span>`).join('')}
+          </div>
+        </div>
+      `;
+    });
+
+    document.getElementById('reviews-section').innerHTML = reviewsHTML;
+
+    // Section 5: Contract Guide
+    document.getElementById('contract-guide').innerHTML = `
+      <div class="contract-title">📋 Contract Guide</div>
+      <div class="contract-intro">Key points about Vietnamese rental contracts</div>
+      <ul class="contract-checklist">
+        <li>✅ Confirm deposit amount and conditions</li>
+        <li>✅ Verify how utilities are calculated</li>
+        <li>✅ Check move-out terms and notice period</li>
+        <li>✅ Take photos of the contract for your records</li>
+      </ul>
+      <div class="senpai-advice">
+        💡 <strong>Senpai advice:</strong> Scan the contract with Google Translate to verify. If something is unclear, ask in the DaNangNavi community.
+      </div>
+      <div class="contract-warning">
+        ⚠️ If asked for full cash payment upfront, be cautious. Legitimate landlords accept bank transfers.
+      </div>
+    `;
+
+    // Sidebar
+    document.getElementById('sidebar-card').innerHTML = `
+      <div class="sidebar-price">${listing.price.toLocaleString()} VND/month</div>
+      <div class="sidebar-jpy">≈ ¥${listing.priceJpy.toLocaleString()}/month</div>
+      <button class="sidebar-cta" id="contact-btn">Contact Landlord</button>
+      <button class="sidebar-save" id="sidebar-save-btn">♡ Save to Favorites</button>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-info">
+        <p><strong>Deposit:</strong> ${listing.deposit}</p>
+        <p><strong>Min. Lease:</strong> ${listing.minLease}</p>
+        <p><strong>Available:</strong> ${listing.availableNow ? 'Now' : 'Contact'}</p>
+      </div>
+    `;
+
+    // Contact modal
+    const contactModal = document.getElementById('contact-modal');
+
+    document.getElementById('contact-btn').addEventListener('click', () => {
+      contactModal.innerHTML = `
+        <div class="contact-modal">
+          <h3>Contact Landlord</h3>
+          <textarea placeholder="I'm interested in this apartment.\nTôi quan tâm đến căn hộ này.\n\nI would like to schedule a viewing.\nTôi muốn hẹn xem phòng."></textarea>
+          <div style="font-size:13px;color:var(--color-text-secondary);margin-bottom:12px;">Contact via:</div>
+          <div class="contact-methods">
+            <div class="contact-method">💬 Platform</div>
+            <div class="contact-method">📱 Zalo</div>
+            <div class="contact-method">📞 Phone</div>
+          </div>
+          <div class="contact-modal-actions">
+            <button class="contact-modal-cancel" id="modal-cancel">Cancel</button>
+            <button class="contact-modal-send" id="modal-send">Send Message</button>
+          </div>
+        </div>
+      `;
+      contactModal.classList.add('open');
+
+      document.getElementById('modal-cancel').addEventListener('click', () => contactModal.classList.remove('open'));
+      document.getElementById('modal-send').addEventListener('click', () => {
+        console.log('[Listing] Message sent');
+        contactModal.classList.remove('open');
+      });
+    });
+
+    contactModal.addEventListener('click', (e) => {
+      if (e.target === contactModal) contactModal.classList.remove('open');
+    });
+
+    // Sidebar save
+    document.getElementById('sidebar-save-btn').addEventListener('click', () => {
+      const btn = document.getElementById('sidebar-save-btn');
+      const saved = btn.textContent.includes('♥');
+      btn.textContent = saved ? '♡ Save to Favorites' : '♥ Saved';
+      btn.style.borderColor = saved ? '' : 'var(--color-secondary)';
+      btn.style.color = saved ? '' : 'var(--color-secondary)';
+    });
+
+    console.log('[ListingDetail] All sections loaded');
+  </script>
+
+</body>
+</html>

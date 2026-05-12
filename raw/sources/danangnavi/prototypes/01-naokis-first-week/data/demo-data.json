@@ -1,0 +1,522 @@
+{
+  "currentUser": {
+    "id": "user-001",
+    "name": "Naoki Tanaka",
+    "nameJp": "田中直樹",
+    "age": 28,
+    "role": "Software Engineer",
+    "company": "TechCorp Vietnam",
+    "workplaceArea": "hai-chau",
+    "situation": "work-transfer",
+    "urgentNeeds": ["housing", "sim-card", "food"],
+    "avatar": "/assets/avatars/naoki.jpg",
+    "registered": false,
+    "memberSince": "March 2026",
+    "bio": "Engineer, 3 weeks in Da Nang",
+    "stats": { "posts": 2, "eventsJoined": 1, "likesReceived": 5 },
+    "senpaiStage": 1,
+    "milestones": {
+      "firstPost": true,
+      "threeReplies": false,
+      "attendEvent": true,
+      "profilePhoto": false,
+      "fiveLikes": true
+    }
+  },
+  "communityGroups": [
+    { "id": "group-newcomers", "name": "Newcomers", "icon": "👋", "memberCount": 156, "newToday": 5 },
+    { "id": "group-food", "name": "Food & Dining", "icon": "🍜", "memberCount": 312, "newToday": 12 },
+    { "id": "group-housing", "name": "Housing", "icon": "🏠", "memberCount": 198, "newToday": 3 },
+    { "id": "group-events", "name": "Events & Social", "icon": "🎉", "memberCount": 245, "newToday": 8 }
+  ],
+  "events": [
+    {
+      "id": "event-001",
+      "title": "Japanese BBQ Meetup 🔥",
+      "date": "Apr 12 (Sat)",
+      "time": "16:00 - 20:00",
+      "location": "My Khe Beach Area",
+      "attendees": 12,
+      "host": "senpai-002",
+      "newcomerWelcome": true,
+      "price": "Free",
+      "description": "Monthly BBQ at My Khe Beach! Bring your own drinks, we provide the grill and meat. Great chance to meet other Japanese expats in a relaxed setting. First-timers very welcome!",
+      "photo": ""
+    },
+    {
+      "id": "event-002",
+      "title": "Morning Cafe Meetup ☕",
+      "date": "Apr 13 (Sun)",
+      "time": "9:00 - 11:00",
+      "location": "Cong Cafe, Hai Chau",
+      "attendees": 6,
+      "host": "senpai-001",
+      "newcomerWelcome": true,
+      "price": "Free",
+      "description": "Casual morning coffee and chat. We meet every other Sunday at Cong Cafe. Come say hi!",
+      "photo": ""
+    },
+    {
+      "id": "event-003",
+      "title": "Son Tra Peninsula Hike 🥾",
+      "date": "Apr 19 (Sat)",
+      "time": "7:00 - 12:00",
+      "location": "Son Tra Mountain",
+      "attendees": 8,
+      "host": "senpai-004",
+      "newcomerWelcome": false,
+      "price": "¥500",
+      "description": "Moderate hike up Son Tra peninsula. Amazing ocean views and monkey spotting. Bring water and sunscreen.",
+      "photo": ""
+    },
+    {
+      "id": "event-004",
+      "title": "JP-VN Exchange Dinner 🍽️",
+      "date": "Apr 20 (Sun)",
+      "time": "18:00 - 21:00",
+      "location": "Local restaurant, Ngu Hanh Son",
+      "attendees": 15,
+      "host": "senpai-003",
+      "newcomerWelcome": true,
+      "price": "¥1,500",
+      "description": "Japanese-Vietnamese cultural exchange dinner. Try local dishes and practice Vietnamese with friendly locals!",
+      "photo": ""
+    }
+  ],
+  "threadDetail": {
+    "id": "thread-full-001",
+    "title": "Any places to go alone on weekends?",
+    "author": "senpai-003",
+    "authorBadge": false,
+    "body": "I've been in Da Nang for about a month now. Work is fine, but weekends are really lonely. My colleagues go home to their families. Does anyone know good spots for a solo expat on weekends? Cafes, parks, activities... anything helps!",
+    "tags": ["Weekend", "Solo life", "Recommendations"],
+    "likes": 23,
+    "postedAgo": "3 hours ago",
+    "replies": [
+      {
+        "id": "reply-001",
+        "author": "senpai-002",
+        "authorName": "Takeshi Sato",
+        "isSenpai": true,
+        "text": "My Khe Beach is great on Saturday mornings — get there before 7am for sunrise. Also check the events page — there's a BBQ this Saturday! I organize it monthly. Come join us 🔥",
+        "upvotes": 15,
+        "postedAgo": "2 hours ago"
+      },
+      {
+        "id": "reply-002",
+        "author": "senpai-001",
+        "authorName": "Yuki Yamamoto",
+        "isSenpai": true,
+        "text": "Son Tra peninsula hike is amazing solo — I go every other Sunday. The views from the top are incredible. Also, Cong Cafe in Hai Chau is a great spot for a chill afternoon with a good book.",
+        "upvotes": 11,
+        "postedAgo": "2 hours ago"
+      },
+      {
+        "id": "reply-003",
+        "author": "user-new-001",
+        "authorName": "Maiko",
+        "isSenpai": false,
+        "text": "I'm also new here! Only been 2 weeks. Following this thread. Let's hang out sometime? 😊",
+        "upvotes": 8,
+        "postedAgo": "1 hour ago"
+      },
+      {
+        "id": "reply-004",
+        "author": "senpai-004",
+        "authorName": "Kenji Watanabe",
+        "isSenpai": true,
+        "text": "Dragon Bridge fire show on Saturday night is a must-see! Also the Han Market area is fun to explore solo. If you like working out, there are some cheap gyms around Son Tra area.",
+        "upvotes": 6,
+        "postedAgo": "45 min ago"
+      }
+    ]
+  },
+  "savedContent": [
+    { "id": "saved-001", "type": "Guide", "title": "First Week Checklist", "icon": "📋" },
+    { "id": "saved-002", "type": "Listing", "title": "Pho Ba Huong — Authentic Pho", "icon": "🍜" },
+    { "id": "saved-003", "type": "Deal", "title": "CoWorking Space 50% Off First Month", "icon": "🎫" }
+  ],
+  "activityTimeline": [
+    { "icon": "🎉", "text": "Registered for Japanese BBQ Meetup", "time": "5 min ago" },
+    { "icon": "💬", "text": "Replied in community: Weekend spots", "time": "30 min ago" },
+    { "icon": "❤️", "text": "Received 5 likes", "time": "1 hour ago" },
+    { "icon": "📝", "text": "Made your first post!", "time": "2 hours ago" },
+    { "icon": "👋", "text": "Joined DaNangNavi", "time": "3 weeks ago" }
+  ],
+  "areas": [
+    {
+      "id": "hai-chau",
+      "name": "Hai Chau",
+      "nameJp": "ハイチャウ",
+      "tagline": "Central, walkable, most amenities",
+      "description": "The heart of Da Nang — central location with easy access to restaurants, shops, and offices. Most popular area for expats who work in the city center.",
+      "rentRange": { "min": 7000000, "max": 15000000, "currency": "VND" },
+      "rentRangeJpy": { "min": 42000, "max": 90000 },
+      "senpaiCount": 67,
+      "rating": 4.3,
+      "highlights": ["Central", "Walkable", "Nightlife"],
+      "commuteFromHaiChau": "0 min",
+      "heroImage": "/assets/areas/hai-chau.jpg",
+      "pros": ["Walking distance to most offices", "Best restaurant variety", "Active nightlife scene", "Easy taxi/Grab access"],
+      "cons": ["Higher rent prices", "Traffic noise", "Less beach access", "Crowded during peak hours"],
+      "priceBreakdown": {
+        "studio": { "min": 5000000, "max": 8000000 },
+        "oneBr": { "min": 7000000, "max": 12000000 },
+        "twoBr": { "min": 10000000, "max": 18000000 }
+      }
+    },
+    {
+      "id": "son-tra",
+      "name": "Son Tra",
+      "nameJp": "ソンチャ",
+      "tagline": "Beach life, quiet, expat-popular",
+      "description": "Peaceful coastal district with beautiful beaches and mountain views. Popular among expats who value quality of life and don't mind a short commute.",
+      "rentRange": { "min": 6000000, "max": 12000000, "currency": "VND" },
+      "rentRangeJpy": { "min": 36000, "max": 72000 },
+      "senpaiCount": 42,
+      "rating": 4.5,
+      "highlights": ["Beach", "Quiet", "Japanese restaurants"],
+      "commuteFromHaiChau": "15 min",
+      "heroImage": "/assets/areas/son-tra.jpg",
+      "pros": ["5-min walk to My Khe Beach", "Quiet residential streets", "Many Japanese restaurants", "Mountain hiking trails"],
+      "cons": ["15-min commute to city center", "Fewer shopping options", "Limited nightlife", "Need motorbike for errands"],
+      "priceBreakdown": {
+        "studio": { "min": 4000000, "max": 7000000 },
+        "oneBr": { "min": 6000000, "max": 10000000 },
+        "twoBr": { "min": 8000000, "max": 15000000 }
+      }
+    },
+    {
+      "id": "ngu-hanh-son",
+      "name": "Ngu Hanh Son",
+      "nameJp": "ゴバンハン",
+      "tagline": "My Khe Beach area, tourist zone",
+      "description": "Home to the famous My Khe Beach strip with luxury resorts and tourist amenities. Good for those who enjoy beach lifestyle with modern facilities.",
+      "rentRange": { "min": 8000000, "max": 18000000, "currency": "VND" },
+      "rentRangeJpy": { "min": 48000, "max": 108000 },
+      "senpaiCount": 28,
+      "rating": 4.1,
+      "highlights": ["Luxury", "Beach", "Resorts"],
+      "commuteFromHaiChau": "20 min",
+      "heroImage": "/assets/areas/ngu-hanh-son.jpg",
+      "pros": ["Premium beach access", "Modern apartment buildings", "Resort amenities", "Marble Mountains nearby"],
+      "cons": ["Tourist pricing", "Far from city center", "Less local feel", "Higher utility costs"],
+      "priceBreakdown": {
+        "studio": { "min": 6000000, "max": 10000000 },
+        "oneBr": { "min": 8000000, "max": 14000000 },
+        "twoBr": { "min": 12000000, "max": 22000000 }
+      }
+    },
+    {
+      "id": "east-han-river",
+      "name": "East of Han River",
+      "nameJp": "ハン川東エリア",
+      "tagline": "Local, affordable, authentic",
+      "description": "The authentic local side of Da Nang. Lower prices, real Vietnamese neighborhood feel, and excellent street food. Best value for budget-conscious expats.",
+      "rentRange": { "min": 4000000, "max": 8000000, "currency": "VND" },
+      "rentRangeJpy": { "min": 24000, "max": 48000 },
+      "senpaiCount": 19,
+      "rating": 4.0,
+      "highlights": ["Affordable", "Local food", "Authentic"],
+      "commuteFromHaiChau": "10 min",
+      "heroImage": "/assets/areas/east-han-river.jpg",
+      "pros": ["Lowest rent in Da Nang", "Best street food", "Authentic Vietnamese experience", "Quick bridge crossing to Hai Chau"],
+      "cons": ["Less English spoken", "Fewer modern amenities", "Can feel isolated", "Limited expat community"],
+      "priceBreakdown": {
+        "studio": { "min": 3000000, "max": 5000000 },
+        "oneBr": { "min": 4000000, "max": 7000000 },
+        "twoBr": { "min": 6000000, "max": 10000000 }
+      }
+    }
+  ],
+  "listings": [
+    {
+      "id": "listing-001",
+      "title": "Ocean View 1BR Apartment — Son Tra",
+      "area": "son-tra",
+      "type": "1BR",
+      "price": 8000000,
+      "priceJpy": 48000,
+      "fairPrice": "fair",
+      "sqm": 45,
+      "floor": 6,
+      "parking": true,
+      "availableNow": true,
+      "minLease": "6 months",
+      "deposit": "2 months",
+      "utilities": 1000000,
+      "amenities": ["aircon", "wifi", "washer", "kitchen", "pool", "gym", "security", "parking", "ocean-view"],
+      "senpaiVerified": true,
+      "rating": 4.6,
+      "reviewCount": 12,
+      "commuteToHaiChau": "12 min",
+      "photos": ["/assets/listings/001-1.jpg", "/assets/listings/001-2.jpg", "/assets/listings/001-3.jpg"],
+      "description": "Bright, furnished 1BR with stunning ocean view. Rooftop pool and modern gym. Quiet neighborhood, 5-min walk to My Khe Beach."
+    },
+    {
+      "id": "listing-002",
+      "title": "Modern Studio — Hai Chau Center",
+      "area": "hai-chau",
+      "type": "Studio",
+      "price": 6500000,
+      "priceJpy": 39000,
+      "fairPrice": "fair",
+      "sqm": 30,
+      "floor": 4,
+      "parking": true,
+      "availableNow": true,
+      "minLease": "3 months",
+      "deposit": "1 month",
+      "utilities": 800000,
+      "amenities": ["aircon", "wifi", "washer", "kitchen", "security", "parking"],
+      "senpaiVerified": true,
+      "rating": 4.2,
+      "reviewCount": 8,
+      "commuteToHaiChau": "5 min walk",
+      "photos": ["/assets/listings/002-1.jpg", "/assets/listings/002-2.jpg"],
+      "description": "Cozy studio in the heart of Hai Chau. Walking distance to offices, restaurants, and convenience stores. Perfect for solo professionals."
+    },
+    {
+      "id": "listing-003",
+      "title": "Spacious 2BR Family Apartment — Son Tra",
+      "area": "son-tra",
+      "type": "2BR",
+      "price": 12000000,
+      "priceJpy": 72000,
+      "fairPrice": "fair",
+      "sqm": 75,
+      "floor": 10,
+      "parking": true,
+      "availableNow": false,
+      "minLease": "12 months",
+      "deposit": "2 months",
+      "utilities": 1500000,
+      "amenities": ["aircon", "wifi", "washer", "kitchen", "pool", "gym", "security", "parking", "balcony"],
+      "senpaiVerified": true,
+      "rating": 4.8,
+      "reviewCount": 5,
+      "commuteToHaiChau": "15 min",
+      "photos": ["/assets/listings/003-1.jpg", "/assets/listings/003-2.jpg", "/assets/listings/003-3.jpg"],
+      "description": "Family-friendly 2BR with large balcony and mountain views. Quiet building with playground. Available from May 1st."
+    },
+    {
+      "id": "listing-004",
+      "title": "Budget-Friendly 1BR — East of Han River",
+      "area": "east-han-river",
+      "type": "1BR",
+      "price": 5000000,
+      "priceJpy": 30000,
+      "fairPrice": "fair",
+      "sqm": 40,
+      "floor": 3,
+      "parking": true,
+      "availableNow": true,
+      "minLease": "6 months",
+      "deposit": "1 month",
+      "utilities": 700000,
+      "amenities": ["aircon", "wifi", "washer", "kitchen", "parking"],
+      "senpaiVerified": false,
+      "rating": 3.8,
+      "reviewCount": 3,
+      "commuteToHaiChau": "10 min",
+      "photos": ["/assets/listings/004-1.jpg", "/assets/listings/004-2.jpg"],
+      "description": "Affordable 1BR in a local neighborhood. Great street food nearby. Basic but clean and well-maintained."
+    },
+    {
+      "id": "listing-005",
+      "title": "Luxury 1BR — Ngu Hanh Son Beach",
+      "area": "ngu-hanh-son",
+      "type": "1BR",
+      "price": 14000000,
+      "priceJpy": 84000,
+      "fairPrice": "slightly-high",
+      "sqm": 55,
+      "floor": 15,
+      "parking": true,
+      "availableNow": true,
+      "minLease": "6 months",
+      "deposit": "3 months",
+      "utilities": 1200000,
+      "amenities": ["aircon", "wifi", "washer", "kitchen", "pool", "gym", "security", "parking", "ocean-view", "balcony"],
+      "senpaiVerified": true,
+      "rating": 4.4,
+      "reviewCount": 6,
+      "commuteToHaiChau": "20 min",
+      "photos": ["/assets/listings/005-1.jpg", "/assets/listings/005-2.jpg", "/assets/listings/005-3.jpg"],
+      "description": "Premium beachfront apartment with infinity pool and full resort amenities. Direct beach access. Ideal for those wanting luxury lifestyle."
+    },
+    {
+      "id": "listing-006",
+      "title": "Cozy Studio Near Dragon Bridge — Hai Chau",
+      "area": "hai-chau",
+      "type": "Studio",
+      "price": 5500000,
+      "priceJpy": 33000,
+      "fairPrice": "fair",
+      "sqm": 25,
+      "floor": 2,
+      "parking": true,
+      "availableNow": true,
+      "minLease": "3 months",
+      "deposit": "1 month",
+      "utilities": 600000,
+      "amenities": ["aircon", "wifi", "kitchen", "parking"],
+      "senpaiVerified": false,
+      "rating": 3.5,
+      "reviewCount": 2,
+      "commuteToHaiChau": "3 min walk",
+      "photos": ["/assets/listings/006-1.jpg"],
+      "description": "Small but well-located studio right next to Dragon Bridge. Perfect for short stays or budget-conscious newcomers."
+    }
+  ],
+  "senpai": [
+    {
+      "id": "senpai-001",
+      "name": "Yuki Yamamoto",
+      "nameJp": "山本ゆき",
+      "avatar": "/assets/avatars/yuki.jpg",
+      "yearsInDanang": 2,
+      "area": "son-tra",
+      "role": "Marketing Manager",
+      "bio": "Moved to Da Nang for work in 2024. Love the beach life and local food scene.",
+      "quote": "Moving to Son Tra was the best decision. 5-min walk to the beach!",
+      "tags": ["remote-work", "beach-lover"]
+    },
+    {
+      "id": "senpai-002",
+      "name": "Takeshi Sato",
+      "nameJp": "佐藤武志",
+      "avatar": "/assets/avatars/takeshi.jpg",
+      "yearsInDanang": 3,
+      "area": "hai-chau",
+      "role": "Restaurant Owner",
+      "bio": "Opened a Japanese restaurant in Hai Chau. Know every corner of this city.",
+      "quote": "Hai Chau is where the action is. Everything you need within walking distance.",
+      "tags": ["business-owner", "foodie"]
+    },
+    {
+      "id": "senpai-003",
+      "name": "Mika Suzuki",
+      "nameJp": "鈴木美香",
+      "avatar": "/assets/avatars/mika.jpg",
+      "yearsInDanang": 1,
+      "area": "hai-chau",
+      "role": "English Teacher",
+      "bio": "Teaching English at a local school. Da Nang feels like home now.",
+      "quote": "Housing was my biggest challenge too. The key is to decide the area first!",
+      "tags": ["teacher", "has-family"]
+    },
+    {
+      "id": "senpai-004",
+      "name": "Kenji Watanabe",
+      "nameJp": "渡辺健二",
+      "avatar": "/assets/avatars/kenji.jpg",
+      "yearsInDanang": 1.5,
+      "area": "ngu-hanh-son",
+      "role": "Freelance Developer",
+      "bio": "Digital nomad who fell in love with Da Nang and decided to stay.",
+      "quote": "The cost of living here is amazing. I pay half of what I did in Tokyo for twice the space.",
+      "tags": ["freelance", "remote-work"]
+    }
+  ],
+  "deals": [
+    {
+      "id": "deal-001",
+      "business": "Sakura Ramen",
+      "description": "20% off first visit — Authentic Tonkotsu Ramen",
+      "savingsJpy": 300,
+      "savingsVnd": 50000,
+      "expiresIn": "3 days",
+      "photo": "/assets/deals/sakura-ramen.jpg",
+      "area": "hai-chau"
+    },
+    {
+      "id": "deal-002",
+      "business": "Da Nang Coffee House",
+      "description": "Free Vietnamese coffee with any pastry",
+      "savingsJpy": 200,
+      "savingsVnd": 35000,
+      "expiresIn": "5 days",
+      "photo": "/assets/deals/coffee-house.jpg",
+      "area": "son-tra"
+    },
+    {
+      "id": "deal-003",
+      "business": "Bien Dong Seafood",
+      "description": "Buy 2 get 1 free — Fresh seafood platter",
+      "savingsJpy": 500,
+      "savingsVnd": 85000,
+      "expiresIn": "1 day",
+      "photo": "/assets/deals/seafood.jpg",
+      "area": "son-tra"
+    },
+    {
+      "id": "deal-004",
+      "business": "Zen Yoga Studio",
+      "description": "First week unlimited classes free",
+      "savingsJpy": 2000,
+      "savingsVnd": 340000,
+      "expiresIn": "7 days",
+      "photo": "/assets/deals/yoga.jpg",
+      "area": "ngu-hanh-son"
+    }
+  ],
+  "communityThreads": [
+    {
+      "id": "thread-001",
+      "title": "Best SIM card for newcomers? Viettel vs Mobifone",
+      "author": "senpai-002",
+      "replyCount": 47,
+      "preview": "Just arrived and need a SIM. Which carrier do senpai recommend for data + calls?",
+      "postedAgo": "2 hours"
+    },
+    {
+      "id": "thread-002",
+      "title": "Son Tra vs Hai Chau for families — honest comparison",
+      "author": "senpai-003",
+      "replyCount": 32,
+      "preview": "Lived in both areas. Here's my breakdown of pros and cons for families with kids...",
+      "postedAgo": "5 hours"
+    },
+    {
+      "id": "thread-003",
+      "title": "Warning: Avoid this rental scam on Facebook",
+      "author": "senpai-001",
+      "replyCount": 89,
+      "preview": "Saw fake listings on Facebook Marketplace. Always verify through DaNangNavi first.",
+      "postedAgo": "1 day"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "review-001",
+      "listingId": "listing-001",
+      "author": "senpai-001",
+      "rating": 5,
+      "text": "Furnished and move-in ready. The landlord speaks English and handles repairs quickly. Some noise from the street but at this price, very satisfied.",
+      "date": "2026-03-15",
+      "helpful": 8,
+      "tags": ["remote-work"]
+    },
+    {
+      "id": "review-002",
+      "listingId": "listing-001",
+      "author": "senpai-004",
+      "rating": 4,
+      "text": "Great location and view. Pool is nice but small. WiFi is fast enough for video calls. Would recommend for solo professionals.",
+      "date": "2026-02-20",
+      "helpful": 5,
+      "tags": ["freelance"]
+    },
+    {
+      "id": "review-003",
+      "listingId": "listing-002",
+      "author": "senpai-003",
+      "rating": 4,
+      "text": "Perfect for my first month in Da Nang. Small but has everything you need. Convenience store downstairs is super handy.",
+      "date": "2026-03-01",
+      "helpful": 3,
+      "tags": ["teacher"]
+    }
+  ]
+}

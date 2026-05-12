@@ -45,10 +45,11 @@ Cẩm nang hướng dẫn viết CV chuẩn cho thị trường tuyển dụng h
 
 - [[concepts/ats]]
 - [[concepts/tu-khoa-cv]]
+- [[concepts/cv-tot]]
 
 ## Related sources
 
-- [[sources/chien-luoc-phong-van-ot-pha]]
+- [[sources/chien-luoc-phong-van-dot-pha]]
 - [[sources/ky-nang-phong-van-tu-duy-phan-xa-giai-ma-logic]]
 
 ## People

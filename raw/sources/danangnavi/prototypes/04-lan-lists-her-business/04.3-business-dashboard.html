@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04.3 Business Dashboard - DaNangNavi</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1B2A4A',
+                        coral: '#FF6B4A',
+                        teal: '#2EC4B6',
+                        'warm-white': '#FAFAF8',
+                        'dark-navy': '#0D1B2A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'card': '0 2px 8px rgba(0,0,0,0.08)',
+                        'sticky': '0 2px 8px rgba(0,0,0,0.06)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { background-color: #FAFAF8; }
+    </style>
+</head>
+<body class="min-h-screen font-sans">
+
+    <!-- ========================================================================
+         HEADER
+         ======================================================================== -->
+    <header id="dashboard-header" data-object-id="dashboard-header" class="sticky top-0 z-50 bg-white shadow-sticky">
+        <div class="max-w-[1200px] mx-auto px-6 py-4">
+            <h2 id="dashboard-headline" data-object-id="dashboard-headline" class="text-2xl font-bold text-dark-navy">Bảng điều khiển</h2>
+        </div>
+    </header>
+
+    <!-- ========================================================================
+         MAIN CONTENT
+         ======================================================================== -->
+    <main class="max-w-[1200px] mx-auto px-6 py-6">
+
+        <!-- ============================================================
+             S1: WELCOME + STATUS
+             ============================================================ -->
+
+        <!-- Welcome Banner (first visit) -->
+        <div
+            id="dashboard-welcome"
+            data-object-id="dashboard-welcome"
+            class="bg-teal/5 border border-teal/20 rounded-lg p-5 mb-6 flex items-start justify-between"
+        >
+            <div>
+                <p class="text-lg font-bold text-dark-navy">Chào mừng, Lan! Mọi thứ đã sẵn sàng. 👋</p>
+                <p class="text-sm text-gray-600 mt-1">Đây là nơi bạn theo dõi hiệu quả kinh doanh trên DaNangNavi</p>
+            </div>
+            <button
+                onclick="document.getElementById('dashboard-welcome').remove()"
+                class="text-gray-400 hover:text-gray-600 transition-colors flex-shrink-0 ml-4"
+            >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Status Overview: 2 cards -->
+        <div id="dashboard-status" data-object-id="dashboard-status" class="grid grid-cols-2 gap-4 mb-8">
+            <!-- Listing Status -->
+            <div id="dashboard-status-listing" data-object-id="dashboard-status-listing" class="bg-white rounded-xl shadow-card p-5 border-l-4 border-green-500">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-2xl">🏪</span>
+                    <div>
+                        <p class="text-sm text-gray-500">Tin đăng</p>
+                        <p class="text-base font-semibold text-dark-navy">Quán Phở Hương</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Đang hoạt động ✓</span>
+                    <a href="#" class="text-sm text-teal hover:underline">Xem tin đăng →</a>
+                </div>
+            </div>
+
+            <!-- Coupon Status -->
+            <div id="dashboard-status-coupon" data-object-id="dashboard-status-coupon" class="bg-white rounded-xl shadow-card p-5 border-l-4 border-green-500">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-2xl">🎫</span>
+                    <div>
+                        <p class="text-sm text-gray-500">Coupon</p>
+                        <p class="text-base font-semibold text-dark-navy">Giảm 10% cho người dùng DaNangNavi</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Đang hoạt động ✓</span>
+                    <a href="04.2-coupon-manager.html" class="text-sm text-teal hover:underline">Quản lý coupon →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             S2: METRICS + CHART
+             ============================================================ -->
+
+        <!-- 4 Metric Cards -->
+        <div id="dashboard-metrics" data-object-id="dashboard-metrics" class="grid grid-cols-4 gap-4 mb-4">
+            <!-- Views -->
+            <div id="dashboard-metric-views" data-object-id="dashboard-metric-views" class="bg-white rounded-xl shadow-card p-5 text-center">
+                <div class="w-10 h-10 bg-navy/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <svg class="w-5 h-5 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                    </svg>
+                </div>
+                <p class="text-sm font-semibold text-dark-navy mb-1">Lượt xem</p>
+                <p class="text-lg text-gray-300">— —</p>
+                <p class="text-xs text-gray-400 mt-1">Số lần tin đăng được xem</p>
+            </div>
+
+            <!-- Clicks -->
+            <div id="dashboard-metric-clicks" data-object-id="dashboard-metric-clicks" class="bg-white rounded-xl shadow-card p-5 text-center">
+                <div class="w-10 h-10 bg-navy/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <svg class="w-5 h-5 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
+                    </svg>
+                </div>
+                <p class="text-sm font-semibold text-dark-navy mb-1">Lượt click</p>
+                <p class="text-lg text-gray-300">— —</p>
+                <p class="text-xs text-gray-400 mt-1">Số lần nhấn vào chi tiết</p>
+            </div>
+
+            <!-- Bookings -->
+            <div id="dashboard-metric-bookings" data-object-id="dashboard-metric-bookings" class="bg-white rounded-xl shadow-card p-5 text-center">
+                <div class="w-10 h-10 bg-navy/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <svg class="w-5 h-5 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <p class="text-sm font-semibold text-dark-navy mb-1">Đặt chỗ</p>
+                <p class="text-lg text-gray-300">— —</p>
+                <p class="text-xs text-gray-400 mt-1">Số lượt đặt chỗ từ app</p>
+            </div>
+
+            <!-- Customers from app -->
+            <div id="dashboard-metric-customers" data-object-id="dashboard-metric-customers" class="bg-white rounded-xl shadow-card p-5 text-center">
+                <div class="w-10 h-10 bg-navy/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <svg class="w-5 h-5 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                </div>
+                <p class="text-sm font-semibold text-dark-navy mb-1">Khách từ app</p>
+                <p class="text-lg text-gray-300">— —</p>
+                <p class="text-xs text-gray-400 mt-1">Khách đến từ DaNangNavi</p>
+            </div>
+        </div>
+
+        <!-- Empty state note -->
+        <p class="text-xs text-gray-400 text-center mb-8">Dữ liệu sẽ bắt đầu hiển thị khi có khách xem tin đăng của bạn</p>
+
+        <!-- Performance Chart Placeholder -->
+        <div id="dashboard-chart" data-object-id="dashboard-chart" class="bg-white rounded-xl shadow-card p-8 mb-8">
+            <h3 class="text-lg font-bold text-dark-navy mb-4">Biểu đồ hiệu quả</h3>
+            <div class="border-2 border-dashed border-gray-200 rounded-lg h-[200px] flex flex-col items-center justify-center">
+                <svg class="w-16 h-16 text-gray-200 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                </svg>
+                <p class="text-sm text-gray-400">Biểu đồ sẽ hiển thị sau khi có đủ dữ liệu (khoảng 3-5 ngày)</p>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             S3: ACTIVITY FEED + HELP
+             ============================================================ -->
+
+        <div class="grid grid-cols-[65%_35%] gap-6">
+
+            <!-- Activity Feed -->
+            <div id="dashboard-activity" data-object-id="dashboard-activity" class="bg-white rounded-xl shadow-card p-6">
+                <h3 class="text-lg font-bold text-dark-navy mb-4">Hoạt động gần đây</h3>
+
+                <div class="space-y-0">
+                    <!-- Activity 1 -->
+                    <div class="flex items-start gap-3 py-3 border-b border-gray-100">
+                        <div class="w-8 h-8 bg-teal/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span class="text-sm">🎫</span>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm text-dark-navy">Bạn đã tạo coupon "Giảm 10% cho người dùng DaNangNavi"</p>
+                            <p class="text-xs text-gray-400 mt-0.5">Vừa xong</p>
+                        </div>
+                    </div>
+
+                    <!-- Activity 2 -->
+                    <div class="flex items-start gap-3 py-3 border-b border-gray-100">
+                        <div class="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span class="text-sm">🏪</span>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm text-dark-navy">Tin đăng của bạn đã được đăng thành công</p>
+                            <p class="text-xs text-gray-400 mt-0.5">5 phút trước</p>
+                        </div>
+                    </div>
+
+                    <!-- Activity 3 -->
+                    <div class="flex items-start gap-3 py-3">
+                        <div class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span class="text-sm">👤</span>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm text-dark-navy">Tài khoản doanh nghiệp đã được tạo</p>
+                            <p class="text-xs text-gray-400 mt-0.5">10 phút trước</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="block text-sm text-teal hover:underline mt-4">Xem tất cả →</a>
+            </div>
+
+            <!-- Help Section -->
+            <div id="dashboard-help" data-object-id="dashboard-help" class="bg-white rounded-xl shadow-card p-6 border-l-4 border-teal self-start">
+                <h3 class="text-lg font-bold text-dark-navy mb-1">Tiếp theo là gì?</h3>
+                <p class="text-sm text-gray-500 mb-4">Một vài mẹo để tận dụng DaNangNavi tốt nhất</p>
+
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-2">
+                        <span class="text-teal text-xs mt-1">●</span>
+                        <p class="text-sm text-gray-700">Chia sẻ tin đăng lên Zalo và Facebook để tăng lượt xem</p>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-teal text-xs mt-1">●</span>
+                        <p class="text-sm text-gray-700">Cập nhật ảnh và menu thường xuyên — tin đăng mới cập nhật được ưu tiên hiển thị</p>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-teal text-xs mt-1">●</span>
+                        <p class="text-sm text-gray-700">Kiểm tra bảng điều khiển mỗi tuần để xem hiệu quả</p>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-teal text-xs mt-1">●</span>
+                        <p class="text-sm text-gray-700">Trả lời đánh giá của khách để xây dựng uy tín</p>
+                    </li>
+                </ul>
+
+                <div class="mt-5 pt-4 border-t border-gray-100">
+                    <a href="#" class="text-sm text-teal hover:underline">Cần giúp đỡ? Liên hệ hỗ trợ →</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ========================================================================
+         JAVASCRIPT
+         ======================================================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('📄 04.3 Business Dashboard loaded');
+            console.log('📊 All metrics empty — data will appear when customers view listing');
+        });
+    </script>
+</body>
+</html>

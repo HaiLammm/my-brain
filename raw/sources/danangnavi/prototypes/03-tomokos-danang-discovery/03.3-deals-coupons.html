@@ -1,0 +1,2265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deals & Coupons — DaNangNavi</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ========================================
+       DESIGN TOKENS (CSS Custom Properties)
+       ======================================== */
+    :root {
+      /* Brand Colors */
+      --color-primary: #1B2A4A;
+      --color-secondary: #FF6B4A;
+      --color-accent: #2EC4B6;
+      
+      /* Surface Colors */
+      --color-bg: #F9FAFB;
+      --color-surface: #FFFFFF;
+      --color-surface-hover: #F5F5F3;
+      
+      /* Text Colors */
+      --color-text-primary: #0D1B2A;
+      --color-text-secondary: #6B7280;
+      --color-text-inverse: #FFFFFF;
+      --color-text-link: #2EC4B6;
+      
+      /* Status Colors */
+      --color-success: #27AE60;
+      --color-warning: #F2994A;
+      --color-error: #EF4444;
+      --color-info: #2EC4B6;
+      
+      /* Typography */
+      --font-family-primary: 'Noto Sans JP', sans-serif;
+      --font-family-ui: 'Inter', 'Noto Sans', sans-serif;
+      --font-mono: 'Courier New', monospace;
+      
+      /* Type Scale */
+      --text-h1: 2rem;
+      --text-h2: 1.5rem;
+      --text-h3: 1.25rem;
+      --text-body: 1rem;
+      --text-caption: 0.875rem;
+      --text-small: 0.75rem;
+      
+      /* Spacing */
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 12px;
+      --space-lg: 16px;
+      --space-xl: 24px;
+      --space-2xl: 32px;
+      --space-3xl: 48px;
+      
+      /* Border Radius */
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --radius-full: 9999px;
+      
+      /* Shadows */
+      --shadow-card: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-card-hover: 0 4px 16px rgba(0,0,0,0.12);
+      --shadow-modal: 0 8px 32px rgba(0,0,0,0.2);
+      --shadow-sticky: 0 2px 8px rgba(0,0,0,0.06);
+      
+      /* Animation */
+      --duration-fast: 150ms;
+      --duration-normal: 300ms;
+      --duration-slow: 500ms;
+      --easing-default: ease-in-out;
+      
+      /* Layout */
+      --bottom-nav-height: 64px;
+      --header-height: 56px;
+    }
+    
+    /* ========================================
+       CSS RESET & BASE STYLES
+       ======================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+    }
+    
+    body {
+      font-family: var(--font-family-primary);
+      font-size: var(--text-body);
+      line-height: 1.6;
+      color: var(--color-text-primary);
+      background-color: var(--color-bg);
+      min-height: 100vh;
+      padding-bottom: calc(var(--bottom-nav-height) + var(--space-xl));
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    a {
+      color: var(--color-text-link);
+      text-decoration: none;
+      transition: color var(--duration-fast) var(--easing-default);
+    }
+    
+    a:hover {
+      color: var(--color-primary);
+    }
+    
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+    
+    /* ========================================
+       PAGE CONTAINER
+       ======================================== */
+    .page-container {
+      max-width: 640px;
+      margin: 0 auto;
+      background-color: var(--color-bg);
+      min-height: 100vh;
+      position: relative;
+    }
+    
+    @media (min-width: 768px) {
+      .page-container {
+        max-width: 720px;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .page-container {
+        max-width: 1024px;
+      }
+    }
+    
+    /* ========================================
+       S1: DEALS HEADER
+       ======================================== */
+    .deals-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--color-surface);
+      padding: var(--space-lg);
+      border-bottom: 2px solid;
+      border-image: linear-gradient(90deg, var(--color-secondary), var(--color-accent)) 1;
+    }
+    
+    .deals-header__top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: var(--space-md);
+    }
+    
+    .deals-header__title {
+      font-size: var(--text-h2);
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+    
+    .deals-header__subtitle {
+      font-size: var(--text-caption);
+      color: var(--color-text-secondary);
+      margin-top: var(--space-xs);
+    }
+    
+    .deals-header__wallet-btn {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: var(--space-sm) var(--space-md);
+      background-color: var(--color-bg);
+      border-radius: var(--radius-full);
+      font-size: var(--text-small);
+      font-weight: 500;
+      color: var(--color-primary);
+      transition: background-color var(--duration-fast);
+    }
+    
+    .deals-header__wallet-btn:hover {
+      background-color: var(--color-surface-hover);
+    }
+    
+    .deals-header__wallet-badge {
+      background-color: var(--color-secondary);
+      color: var(--color-text-inverse);
+      font-size: var(--text-small);
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: var(--radius-full);
+    }
+    
+    .deals-header__filters {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-md);
+    }
+    
+    .filter-chips {
+      display: flex;
+      gap: var(--space-sm);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      flex: 1;
+    }
+    
+    .filter-chips::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .filter-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: var(--space-sm) var(--space-md);
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-primary);
+      border-radius: var(--radius-full);
+      font-size: var(--text-small);
+      font-weight: 500;
+      color: var(--color-primary);
+      white-space: nowrap;
+      transition: all var(--duration-fast);
+      cursor: pointer;
+    }
+    
+    .filter-chip:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+    
+    .filter-chip--active {
+      background-color: var(--color-accent);
+      border-color: var(--color-accent);
+      color: var(--color-text-inverse);
+    }
+    
+    .filter-chip--active:hover {
+      background-color: var(--color-accent);
+      border-color: var(--color-accent);
+      color: var(--color-text-inverse);
+    }
+    
+    .sort-dropdown {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-size: var(--text-small);
+      color: var(--color-primary);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    
+    .sort-dropdown:hover {
+      color: var(--color-accent);
+    }
+    
+    /* ========================================
+       S5: SAVINGS SUMMARY
+       ======================================== */
+    .savings-card {
+      margin: var(--space-md) var(--space-lg);
+      padding: var(--space-md) var(--space-lg);
+      background: linear-gradient(135deg, var(--color-primary) 0%, #1A6B62 100%);
+      border-radius: var(--radius-md);
+      color: var(--color-text-inverse);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .savings-card__period {
+      position: absolute;
+      top: var(--space-sm);
+      right: var(--space-sm);
+      font-size: var(--text-small);
+      opacity: 0.6;
+    }
+    
+    .savings-card__label {
+      font-size: var(--text-small);
+      opacity: 0.8;
+      margin-bottom: 2px;
+    }
+    
+    .savings-card__amount {
+      font-size: var(--text-h2);
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    
+    .savings-card__amount span {
+      font-size: var(--text-h3);
+    }
+    
+    .savings-card__vnd {
+      font-size: var(--text-small);
+      opacity: 0.7;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .savings-card__count {
+      font-size: var(--text-small);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .savings-card__share {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: var(--space-xs) var(--space-md);
+      background-color: transparent;
+      border: 1px solid var(--color-text-inverse);
+      border-radius: var(--radius-full);
+      font-size: var(--text-small);
+      color: var(--color-text-inverse);
+      transition: all var(--duration-fast);
+    }
+    
+    .savings-card__share:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+    
+    /* Confetti Animation */
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      animation: confetti-fall 2s ease-out forwards;
+      pointer-events: none;
+    }
+    
+    @keyframes confetti-fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(200px) rotate(720deg);
+        opacity: 0;
+      }
+    }
+    
+    /* ========================================
+       S2: COUPON CARDS
+       ======================================== */
+    .coupon-list {
+      padding: var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    
+    .coupon-card {
+      display: flex;
+      gap: var(--space-md);
+      background-color: var(--color-surface);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-card);
+      padding: var(--space-md);
+      position: relative;
+      transition: box-shadow var(--duration-fast);
+    }
+    
+    .coupon-card:hover {
+      box-shadow: var(--shadow-card-hover);
+    }
+    
+    .coupon-card--used {
+      opacity: 0.6;
+    }
+    
+    .coupon-card__image {
+      width: 100px;
+      height: 100px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    
+    .coupon-card__content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    
+    .coupon-card__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .coupon-card__title {
+      font-size: var(--text-body);
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    
+    .coupon-card__save {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-text-secondary);
+      transition: all var(--duration-fast);
+    }
+    
+    .coupon-card__save:hover {
+      color: var(--color-secondary);
+      transform: scale(1.1);
+    }
+    
+    .coupon-card__save--saved {
+      color: var(--color-secondary);
+    }
+    
+    .coupon-card__business {
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .coupon-card__meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-md);
+    }
+    
+    .coupon-card__savings {
+      display: inline-flex;
+      align-items: center;
+      padding: var(--space-xs) var(--space-sm);
+      background-color: var(--color-secondary);
+      color: var(--color-text-inverse);
+      font-size: var(--text-small);
+      font-weight: 600;
+      border-radius: var(--radius-full);
+    }
+    
+    .coupon-card__distance {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-size: var(--text-small);
+      color: var(--color-accent);
+    }
+    
+    .coupon-card__expiry {
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+    }
+    
+    .coupon-card__expiry--urgent {
+      color: var(--color-error);
+      font-weight: 500;
+    }
+    
+    .coupon-card__cta {
+      width: 100%;
+      padding: var(--space-sm) var(--space-md);
+      background-color: var(--color-secondary);
+      color: var(--color-text-inverse);
+      font-size: var(--text-caption);
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      transition: opacity var(--duration-fast);
+    }
+    
+    .coupon-card__cta:hover {
+      opacity: 0.9;
+      color: var(--color-text-inverse);
+    }
+    
+    /* Used stamp overlay */
+    .coupon-card__stamp {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-15deg);
+      font-size: var(--text-h3);
+      font-weight: 700;
+      color: var(--color-text-secondary);
+      border: 3px solid var(--color-text-secondary);
+      padding: var(--space-sm) var(--space-lg);
+      border-radius: var(--radius-sm);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+    
+    /* ========================================
+       S3: COUPON DETAIL MODAL
+       ======================================== */
+    .coupon-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--duration-normal), visibility var(--duration-normal);
+    }
+    
+    .coupon-modal--active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .coupon-modal__sheet {
+      background-color: var(--color-surface);
+      border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+      width: 100%;
+      max-width: 480px;
+      max-height: 90vh;
+      overflow-y: auto;
+      transform: translateY(100%);
+      transition: transform var(--duration-normal) ease-out;
+    }
+    
+    .coupon-modal--active .coupon-modal__sheet {
+      transform: translateY(0);
+    }
+    
+    .coupon-modal__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-lg);
+      border-bottom: 1px solid #E5E7EB;
+      position: sticky;
+      top: 0;
+      background-color: var(--color-surface);
+    }
+    
+    .coupon-modal__header-bar {
+      position: absolute;
+      top: var(--space-sm);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 4px;
+      background-color: #D1D5DB;
+      border-radius: var(--radius-full);
+    }
+    
+    .coupon-modal__title {
+      font-size: var(--text-body);
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+    
+    .coupon-modal__close {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-text-secondary);
+      transition: color var(--duration-fast);
+    }
+    
+    .coupon-modal__close:hover {
+      color: var(--color-text-primary);
+    }
+    
+    .coupon-modal__body {
+      padding: var(--space-xl);
+      text-align: center;
+    }
+    
+    .coupon-modal__business {
+      margin-bottom: var(--space-lg);
+    }
+    
+    .coupon-modal__logo {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      margin: 0 auto var(--space-sm);
+    }
+    
+    .coupon-modal__business-name {
+      font-size: var(--text-h3);
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+    
+    .coupon-modal__qr {
+      background-color: var(--color-surface);
+      padding: var(--space-lg);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-lg);
+      display: inline-block;
+    }
+    
+    .coupon-modal__qr-code {
+      width: 180px;
+      height: 180px;
+      background: repeating-linear-gradient(
+        0deg,
+        var(--color-primary) 0px,
+        var(--color-primary) 8px,
+        var(--color-surface) 8px,
+        var(--color-surface) 16px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        var(--color-primary) 0px,
+        var(--color-primary) 8px,
+        var(--color-surface) 8px,
+        var(--color-surface) 16px
+      );
+      background-blend-mode: difference;
+      margin: 0 auto var(--space-md);
+      border-radius: var(--space-xs);
+      position: relative;
+    }
+    
+    .coupon-modal__qr-code::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 40px;
+      background-color: var(--color-surface);
+      border-radius: var(--space-xs);
+    }
+    
+    .coupon-modal__code {
+      font-family: var(--font-mono);
+      font-size: var(--text-body);
+      color: var(--color-text-secondary);
+      cursor: pointer;
+    }
+    
+    .coupon-modal__code:hover {
+      color: var(--color-accent);
+    }
+    
+    .coupon-modal__instruction {
+      padding: var(--space-md);
+      border: 2px dashed var(--color-secondary);
+      border-radius: var(--radius-sm);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .coupon-modal__instruction-text {
+      font-size: var(--text-body);
+      font-weight: 600;
+      color: var(--color-secondary);
+    }
+    
+    .coupon-modal__deal {
+      font-size: var(--text-caption);
+      color: var(--color-primary);
+      margin-bottom: var(--space-md);
+    }
+    
+    .coupon-modal__terms {
+      text-align: left;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .coupon-modal__terms-toggle {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+      cursor: pointer;
+    }
+    
+    .coupon-modal__terms-content {
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+      margin-top: var(--space-sm);
+      padding-left: var(--space-lg);
+      display: none;
+    }
+    
+    .coupon-modal__terms-content--visible {
+      display: block;
+    }
+    
+    .coupon-modal__validity {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .coupon-modal__redeem {
+      width: 100%;
+      padding: var(--space-md) var(--space-xl);
+      background-color: var(--color-secondary);
+      color: var(--color-text-inverse);
+      font-size: var(--text-body);
+      font-weight: 700;
+      border-radius: var(--radius-full);
+      transition: all var(--duration-fast);
+    }
+    
+    .coupon-modal__redeem:hover {
+      opacity: 0.9;
+    }
+    
+    .coupon-modal__redeem--used {
+      background-color: var(--color-success);
+      cursor: default;
+    }
+    
+    .coupon-modal__redeem--used:hover {
+      opacity: 1;
+    }
+    
+    /* ========================================
+       S4: MY COUPONS (WALLET VIEW)
+       ======================================== */
+    .wallet-view {
+      display: none;
+    }
+    
+    .wallet-view--active {
+      display: block;
+    }
+    
+    .wallet-tabs {
+      display: flex;
+      padding: 0 var(--space-lg);
+      border-bottom: 1px solid #E5E7EB;
+      background-color: var(--color-surface);
+    }
+    
+    .wallet-tab {
+      flex: 1;
+      padding: var(--space-md);
+      text-align: center;
+      font-size: var(--text-caption);
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      border-bottom: 3px solid transparent;
+      transition: all var(--duration-fast);
+    }
+    
+    .wallet-tab:hover {
+      color: var(--color-primary);
+    }
+    
+    .wallet-tab--active {
+      color: var(--color-primary);
+      font-weight: 600;
+      border-bottom-color: var(--color-primary);
+    }
+    
+    .wallet-tab__badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 20px;
+      height: 20px;
+      padding: 0 6px;
+      background-color: var(--color-secondary);
+      color: var(--color-text-inverse);
+      font-size: var(--text-small);
+      font-weight: 600;
+      border-radius: var(--radius-full);
+      margin-left: var(--space-xs);
+    }
+    
+    .wallet-tab--active .wallet-tab__badge {
+      background-color: var(--color-primary);
+    }
+    
+    .wallet-empty {
+      text-align: center;
+      padding: var(--space-3xl) var(--space-xl);
+    }
+    
+    .wallet-empty__icon {
+      font-size: 64px;
+      margin-bottom: var(--space-lg);
+      opacity: 0.6;
+    }
+    
+    .wallet-empty__text {
+      font-size: var(--text-body);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .wallet-empty__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-md) var(--space-xl);
+      background-color: var(--color-secondary);
+      color: var(--color-text-inverse);
+      font-size: var(--text-caption);
+      font-weight: 600;
+      border-radius: var(--radius-full);
+    }
+    
+    .wallet-empty__cta:hover {
+      opacity: 0.9;
+      color: var(--color-text-inverse);
+    }
+    
+    /* ========================================
+       CONFIRMATION MODAL
+       ======================================== */
+    .confirm-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 3000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--duration-fast), visibility var(--duration-fast);
+    }
+    
+    .confirm-modal--active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .confirm-modal__box {
+      background-color: var(--color-surface);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      max-width: 320px;
+      text-align: center;
+      box-shadow: var(--shadow-modal);
+    }
+    
+    .confirm-modal__text {
+      font-size: var(--text-body);
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-xl);
+    }
+    
+    .confirm-modal__actions {
+      display: flex;
+      gap: var(--space-md);
+    }
+    
+    .confirm-modal__btn {
+      flex: 1;
+      padding: var(--space-md);
+      font-size: var(--text-caption);
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      transition: opacity var(--duration-fast);
+    }
+    
+    .confirm-modal__btn--cancel {
+      background-color: var(--color-bg);
+      color: var(--color-text-secondary);
+    }
+    
+    .confirm-modal__btn--confirm {
+      background-color: var(--color-secondary);
+      color: var(--color-text-inverse);
+    }
+    
+    /* ========================================
+       TOAST NOTIFICATION
+       ======================================== */
+    .toast {
+      position: fixed;
+      bottom: calc(var(--bottom-nav-height) + var(--space-xl));
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background-color: var(--color-primary);
+      color: var(--color-text-inverse);
+      padding: var(--space-md) var(--space-xl);
+      border-radius: var(--radius-full);
+      font-size: var(--text-caption);
+      font-weight: 500;
+      box-shadow: var(--shadow-modal);
+      opacity: 0;
+      transition: transform var(--duration-normal), opacity var(--duration-normal);
+      z-index: 4000;
+    }
+    
+    .toast--visible {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+    
+    /* ========================================
+       TRANSLATION FAB
+       ======================================== */
+    .translation-fab {
+      position: fixed;
+      bottom: calc(var(--bottom-nav-height) + var(--space-xl));
+      right: var(--space-xl);
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-full);
+      background: linear-gradient(135deg, var(--color-secondary), #e55a3a);
+      color: var(--color-text-inverse);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(255, 107, 74, 0.4);
+      z-index: 999;
+      transition: transform var(--duration-fast), box-shadow var(--duration-fast);
+    }
+    
+    .translation-fab:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 20px rgba(255, 107, 74, 0.5);
+      color: var(--color-text-inverse);
+    }
+    
+    .translation-fab__icon {
+      width: 24px;
+      height: 24px;
+    }
+    
+    /* ========================================
+       BOTTOM TAB NAVIGATION
+       ======================================== */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: var(--bottom-nav-height);
+      background-color: var(--color-surface);
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.06);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .bottom-nav__container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      max-width: 640px;
+      padding: 0 var(--space-sm);
+    }
+    
+    .bottom-nav__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-sm) var(--space-md);
+      color: var(--color-text-secondary);
+      font-size: var(--text-small);
+      font-weight: 500;
+      text-decoration: none;
+      transition: color var(--duration-fast) var(--easing-default);
+      min-width: 64px;
+    }
+    
+    .bottom-nav__item:hover {
+      color: var(--color-primary);
+    }
+    
+    .bottom-nav__item--active {
+      color: var(--color-secondary);
+    }
+    
+    .bottom-nav__icon {
+      width: 24px;
+      height: 24px;
+      margin-bottom: var(--space-xs);
+    }
+    
+    .bottom-nav__label {
+      line-height: 1;
+    }
+    
+    /* ========================================
+       RESPONSIVE - TABLET
+       ======================================== */
+    @media (min-width: 768px) {
+      .coupon-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+      }
+      
+      .coupon-card {
+        flex-direction: column;
+      }
+      
+      .coupon-card__image {
+        width: 100%;
+        height: 140px;
+      }
+      
+      .filter-chips {
+        flex-wrap: wrap;
+      }
+      
+      /* Hide savings card on tablet - show only when has savings */
+      .savings-card {
+        display: none;
+      }
+      
+      .savings-card--has-savings {
+        display: block;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    
+    /* ========================================
+       RESPONSIVE - DESKTOP
+       ======================================== */
+    @media (min-width: 1024px) {
+      .page-container {
+        max-width: 1200px;
+      }
+      
+      .coupon-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-lg);
+      }
+      
+      .coupon-card {
+        flex-direction: column;
+      }
+      
+      .coupon-card__image {
+        width: 100%;
+        height: 160px;
+      }
+      
+      /* Hide savings card on desktop - not needed for browse view */
+      .savings-card {
+        display: none;
+      }
+      
+      .savings-card--has-savings {
+        display: block;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: var(--space-lg);
+      }
+      
+      .coupon-modal__sheet {
+        border-radius: var(--radius-lg);
+        max-height: 80vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Page Container -->
+  <div class="page-container">
+    
+    <!-- S1: Deals Header -->
+    <header class="deals-header">
+      <div class="deals-header__top">
+        <div>
+          <h1 class="deals-header__title">今日のお得情報</h1>
+          <p class="deals-header__subtitle" id="coupon-count">25件のクーポンが利用可能</p>
+        </div>
+        <button class="deals-header__wallet-btn" id="wallet-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+            <line x1="1" y1="10" x2="23" y2="10"></line>
+          </svg>
+          マイクーポン
+          <span class="deals-header__wallet-badge" id="saved-count">4</span>
+        </button>
+      </div>
+      
+      <div class="deals-header__filters">
+        <div class="filter-chips" id="filter-chips">
+          <button class="filter-chip filter-chip--active" data-filter="all">すべて</button>
+          <button class="filter-chip" data-filter="nearby">📍 近く</button>
+          <button class="filter-chip" data-filter="food">🍜 グルメ</button>
+          <button class="filter-chip" data-filter="spa">💆 スパ</button>
+          <button class="filter-chip" data-filter="tour">🗺️ ツアー</button>
+        </div>
+        <button class="sort-dropdown" id="sort-dropdown">
+          おすすめ順
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+      </div>
+    </header>
+    
+    <!-- Main Content Wrapper -->
+    <div class="main-content" id="main-content">
+      
+      <!-- S5: Savings Summary -->
+      <div class="savings-card" id="savings-card">
+        <span class="savings-card__period">4月6日〜</span>
+        <p class="savings-card__label">今回の旅行で</p>
+        <p class="savings-card__amount"><span>¥</span><span id="savings-amount">0</span> <span>お得！</span></p>
+        <p class="savings-card__vnd" id="savings-vnd">(約0₫)</p>
+        <p class="savings-card__count">🎫 <span id="used-count">0</span>枚のクーポンを利用</p>
+        <button class="savings-card__share" id="share-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+          友達にシェア
+        </button>
+      </div>
+      
+      <!-- S2: Coupon Cards -->
+      <div class="coupon-list" id="coupon-list">
+        <!-- Coupon cards rendered by JS -->
+      </div>
+      
+    </div>
+    
+    <!-- S4: My Coupons Wallet View -->
+    <div class="wallet-view" id="wallet-view">
+      <div class="wallet-tabs">
+        <button class="wallet-tab wallet-tab--active" data-tab="unused">
+          未使用
+          <span class="wallet-tab__badge" id="unused-badge">4</span>
+        </button>
+        <button class="wallet-tab" data-tab="used">
+          使用済み
+          <span class="wallet-tab__badge" id="used-badge">0</span>
+        </button>
+      </div>
+      
+      <div id="wallet-unused" class="coupon-list">
+        <!-- Saved unused coupons -->
+      </div>
+      
+      <div id="wallet-used" style="display: none;">
+        <div class="wallet-empty">
+          <div class="wallet-empty__icon">🎫</div>
+          <p class="wallet-empty__text">まだクーポンを使っていません</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- S3: Coupon Detail Modal -->
+  <div class="coupon-modal" id="coupon-modal">
+    <div class="coupon-modal__sheet">
+      <div class="coupon-modal__header">
+        <div class="coupon-modal__header-bar"></div>
+        <h2 class="coupon-modal__title">クーポン</h2>
+        <button class="coupon-modal__close" id="modal-close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="coupon-modal__body">
+        <div class="coupon-modal__business">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=96&q=80" alt="" class="coupon-modal__logo" id="modal-logo">
+          <h3 class="coupon-modal__business-name" id="modal-business"></h3>
+        </div>
+        
+        <div class="coupon-modal__qr">
+          <div class="coupon-modal__qr-code"></div>
+          <p class="coupon-modal__code" id="modal-code" title="タップしてコピー">DN-2026-A7X3</p>
+        </div>
+        
+        <div class="coupon-modal__instruction">
+          <p class="coupon-modal__instruction-text">この画面をスタッフに見せてください</p>
+        </div>
+        
+        <p class="coupon-modal__deal" id="modal-deal"></p>
+        
+        <div class="coupon-modal__terms">
+          <button class="coupon-modal__terms-toggle" id="terms-toggle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+            利用条件
+          </button>
+          <div class="coupon-modal__terms-content" id="terms-content"></div>
+        </div>
+        
+        <div class="coupon-modal__validity" id="modal-validity">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span id="modal-dates"></span>
+        </div>
+        
+        <button class="coupon-modal__redeem" id="redeem-btn">クーポンを使用済みにする</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Confirmation Modal -->
+  <div class="confirm-modal" id="confirm-modal">
+    <div class="confirm-modal__box">
+      <p class="confirm-modal__text">本当に使用しますか？</p>
+      <div class="confirm-modal__actions">
+        <button class="confirm-modal__btn confirm-modal__btn--cancel" id="confirm-cancel">キャンセル</button>
+        <button class="confirm-modal__btn confirm-modal__btn--confirm" id="confirm-ok">使用する</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+  
+  <!-- Translation FAB -->
+  <a href="03.2-translation-tools.html" class="translation-fab" aria-label="Open translation tools">
+    <svg class="translation-fab__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 8l6 6"/>
+      <path d="M4 14l6-6 2-3"/>
+      <path d="M2 5h12"/>
+      <path d="M7 2h1"/>
+      <path d="M22 22l-5-10-5 10"/>
+      <path d="M14 18h6"/>
+    </svg>
+  </a>
+  
+  <!-- Bottom Tab Navigation -->
+  <nav class="bottom-nav" aria-label="Main navigation">
+    <div class="bottom-nav__container">
+      <a href="#" class="bottom-nav__item">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span class="bottom-nav__label">Home</span>
+      </a>
+      
+      <a href="03.1-senpai-article-guide.html" class="bottom-nav__item">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+        </svg>
+        <span class="bottom-nav__label">Guides</span>
+      </a>
+      
+      <a href="#" class="bottom-nav__item bottom-nav__item--active" aria-current="page">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+          <line x1="7" y1="7" x2="7.01" y2="7"/>
+        </svg>
+        <span class="bottom-nav__label">Deals</span>
+      </a>
+      
+      <a href="03.2-translation-tools.html" class="bottom-nav__item">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 8l6 6"/>
+          <path d="M4 14l6-6 2-3"/>
+          <path d="M2 5h12"/>
+          <path d="M7 2h1"/>
+          <path d="M22 22l-5-10-5 10"/>
+          <path d="M14 18h6"/>
+        </svg>
+        <span class="bottom-nav__label">Translate</span>
+      </a>
+      
+      <a href="#" class="bottom-nav__item">
+        <svg class="bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+        <span class="bottom-nav__label">Profile</span>
+      </a>
+    </div>
+  </nav>
+  
+  <!-- JavaScript -->
+  <script>
+    // Demo data
+    const coupons = [
+      {
+        id: "coupon-001",
+        business: "Bún Chả Hương Liên",
+        businessJp: "ブンチャー・フォンリエン",
+        title: "15% off your meal",
+        titleJp: "お食事15%オフ",
+        discount: "15%",
+        savingsVnd: 10000,
+        savingsJpy: 58,
+        distance: "5 min (400m)",
+        distanceJp: "徒歩5分 (400m)",
+        expiry: "7 days",
+        expiryJp: "あと7日",
+        urgent: false,
+        conditions: "Valid for dine-in only. Min order 50,000₫",
+        conditionsJp: "店内飲食のみ。50,000₫以上の注文",
+        validDates: "2026年4月8日 〜 4月15日",
+        code: "DNAV-BCHL-15OFF",
+        category: "food",
+        photo: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=200&q=80",
+        saved: true,
+        used: false
+      },
+      {
+        id: "coupon-002",
+        business: "Bún Chả Cá Đà Nẵng",
+        businessJp: "ブンチャーカー・ダナン",
+        title: "10% off + free drink",
+        titleJp: "10%オフ + ドリンク無料",
+        discount: "10%",
+        savingsVnd: 7000,
+        savingsJpy: 40,
+        distance: "12 min (950m)",
+        distanceJp: "徒歩12分 (950m)",
+        expiry: "4 days",
+        expiryJp: "あと4日",
+        urgent: false,
+        conditions: "Dine-in, show before ordering",
+        conditionsJp: "店内飲食、注文前に提示",
+        validDates: "2026年4月8日 〜 4月12日",
+        code: "DNAV-BCCD-10OFF",
+        category: "food",
+        photo: "https://images.unsplash.com/photo-1576577445504-6af96477db52?w=200&q=80",
+        saved: true,
+        used: false
+      },
+      {
+        id: "coupon-003",
+        business: "Bún Chả Phố Cổ",
+        businessJp: "ブンチャー・フォーコー",
+        title: "20% off first visit",
+        titleJp: "初回20%オフ",
+        discount: "20%",
+        savingsVnd: 11000,
+        savingsJpy: 64,
+        distance: "20 min (1.6km)",
+        distanceJp: "徒歩20分 (1.6km)",
+        expiry: "12 days",
+        expiryJp: "あと12日",
+        urgent: false,
+        conditions: "First-time customers only. Show QR at counter",
+        conditionsJp: "初回のお客様限定。レジでQRを提示",
+        validDates: "2026年4月8日 〜 4月20日",
+        code: "DNAV-BCPC-20OFF",
+        category: "food",
+        photo: "https://images.unsplash.com/photo-1544025162-d76694265947?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      {
+        id: "coupon-004",
+        business: "Da Nang Coffee House",
+        businessJp: "ダナン・コーヒーハウス",
+        title: "Free Vietnamese coffee",
+        titleJp: "ベトナムコーヒー無料",
+        discount: "Free",
+        savingsVnd: 35000,
+        savingsJpy: 200,
+        distance: "3 min (200m)",
+        distanceJp: "徒歩3分 (200m)",
+        expiry: "5 days",
+        expiryJp: "あと5日",
+        urgent: false,
+        conditions: "One per customer per day with any pastry",
+        conditionsJp: "ペストリー注文で1日1杯まで",
+        validDates: "2026年4月8日 〜 4月13日",
+        code: "DNAV-DNCH-COFFEE",
+        category: "food",
+        photo: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      {
+        id: "coupon-005",
+        business: "Bien Dong Seafood",
+        businessJp: "ビエンドン・シーフード",
+        title: "Buy 2 get 1 free seafood",
+        titleJp: "シーフード2皿で1皿無料",
+        discount: "B2G1",
+        savingsVnd: 85000,
+        savingsJpy: 500,
+        distance: "15 min (1.2km)",
+        distanceJp: "徒歩15分 (1.2km)",
+        expiry: "1 day",
+        expiryJp: "あと1日",
+        urgent: true,
+        conditions: "Dine-in groups of 2+",
+        conditionsJp: "2名以上の店内飲食",
+        validDates: "2026年4月8日 〜 4月9日",
+        code: "DNAV-BDSF-B2G1",
+        category: "food",
+        photo: "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      // ===== SPA CATEGORY =====
+      {
+        id: "coupon-006",
+        business: "Herbal Spa Da Nang",
+        businessJp: "ハーバルスパ・ダナン",
+        title: "30% off 90min massage",
+        titleJp: "90分マッサージ30%オフ",
+        discount: "30%",
+        savingsVnd: 180000,
+        savingsJpy: 1050,
+        distance: "10 min (800m)",
+        distanceJp: "徒歩10分 (800m)",
+        expiry: "10 days",
+        expiryJp: "あと10日",
+        urgent: false,
+        conditions: "Advance booking required. Valid Mon-Fri only",
+        conditionsJp: "要事前予約。平日のみ有効",
+        validDates: "2026年4月8日 〜 4月18日",
+        code: "DNAV-HSPA-30OFF",
+        category: "spa",
+        photo: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      {
+        id: "coupon-007",
+        business: "Golden Lotus Spa",
+        businessJp: "ゴールデンロータス・スパ",
+        title: "Free foot massage with body",
+        titleJp: "ボディ施術でフットマッサージ無料",
+        discount: "Free",
+        savingsVnd: 150000,
+        savingsJpy: 870,
+        distance: "8 min (650m)",
+        distanceJp: "徒歩8分 (650m)",
+        expiry: "5 days",
+        expiryJp: "あと5日",
+        urgent: false,
+        conditions: "With any 60min+ body treatment",
+        conditionsJp: "60分以上のボディ施術で適用",
+        validDates: "2026年4月8日 〜 4月13日",
+        code: "DNAV-GLSP-FOOT",
+        category: "spa",
+        photo: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=200&q=80",
+        saved: true,
+        used: false
+      },
+      {
+        id: "coupon-008",
+        business: "My Khe Beach Spa",
+        businessJp: "ミーケービーチ・スパ",
+        title: "Couples package 25% off",
+        titleJp: "カップルパッケージ25%オフ",
+        discount: "25%",
+        savingsVnd: 250000,
+        savingsJpy: 1450,
+        distance: "2 min (150m)",
+        distanceJp: "徒歩2分 (150m)",
+        expiry: "8 days",
+        expiryJp: "あと8日",
+        urgent: false,
+        conditions: "2-person booking required",
+        conditionsJp: "2名での予約が必要",
+        validDates: "2026年4月8日 〜 4月16日",
+        code: "DNAV-MKBS-COUPLE",
+        category: "spa",
+        photo: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      // ===== TOUR CATEGORY =====
+      {
+        id: "coupon-009",
+        business: "Marble Mountains Tour",
+        businessJp: "五行山ツアー",
+        title: "¥500 off guided tour",
+        titleJp: "ガイドツアー ¥500オフ",
+        discount: "¥500",
+        savingsVnd: 86000,
+        savingsJpy: 500,
+        distance: "Pickup available",
+        distanceJp: "送迎あり",
+        expiry: "14 days",
+        expiryJp: "あと14日",
+        urgent: false,
+        conditions: "Book 24hrs in advance. Includes entry fee",
+        conditionsJp: "24時間前予約。入場料込み",
+        validDates: "2026年4月8日 〜 4月22日",
+        code: "DNAV-MMTN-500",
+        category: "tour",
+        photo: "https://images.unsplash.com/photo-1528127269322-539801943592?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      {
+        id: "coupon-010",
+        business: "Hoi An Day Trip",
+        businessJp: "ホイアン日帰りツアー",
+        title: "20% off full-day tour",
+        titleJp: "終日ツアー20%オフ",
+        discount: "20%",
+        savingsVnd: 200000,
+        savingsJpy: 1160,
+        distance: "Hotel pickup",
+        distanceJp: "ホテル送迎",
+        expiry: "7 days",
+        expiryJp: "あと7日",
+        urgent: false,
+        conditions: "Min 2 persons. Includes lunch & guide",
+        conditionsJp: "2名以上。昼食とガイド込み",
+        validDates: "2026年4月8日 〜 4月15日",
+        code: "DNAV-HADT-20OFF",
+        category: "tour",
+        photo: "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      {
+        id: "coupon-011",
+        business: "Ba Na Hills Express",
+        businessJp: "バナヒルズ・エクスプレス",
+        title: "Free cable car upgrade",
+        titleJp: "ケーブルカー無料アップグレード",
+        discount: "Free",
+        savingsVnd: 100000,
+        savingsJpy: 580,
+        distance: "Shuttle bus",
+        distanceJp: "シャトルバス",
+        expiry: "2 days",
+        expiryJp: "あと2日",
+        urgent: true,
+        conditions: "With full-day package booking",
+        conditionsJp: "終日パッケージ予約で適用",
+        validDates: "2026年4月8日 〜 4月10日",
+        code: "DNAV-BNHE-CABLE",
+        category: "tour",
+        photo: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=200&q=80",
+        saved: true,
+        used: false
+      },
+      // ===== MORE FOOD =====
+      {
+        id: "coupon-012",
+        business: "Pho 24 Da Nang",
+        businessJp: "フォー24・ダナン",
+        title: "Free spring rolls",
+        titleJp: "生春巻き無料サービス",
+        discount: "Free",
+        savingsVnd: 45000,
+        savingsJpy: 260,
+        distance: "6 min (500m)",
+        distanceJp: "徒歩6分 (500m)",
+        expiry: "6 days",
+        expiryJp: "あと6日",
+        urgent: false,
+        conditions: "With any pho order",
+        conditionsJp: "フォー注文で適用",
+        validDates: "2026年4月8日 〜 4月14日",
+        code: "DNAV-P24D-SPRING",
+        category: "food",
+        photo: "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      {
+        id: "coupon-013",
+        business: "Banh Mi Queen",
+        businessJp: "バインミー・クイーン",
+        title: "Buy 1 get 1 free",
+        titleJp: "1個買うと1個無料",
+        discount: "B1G1",
+        savingsVnd: 25000,
+        savingsJpy: 145,
+        distance: "4 min (300m)",
+        distanceJp: "徒歩4分 (300m)",
+        expiry: "3 days",
+        expiryJp: "あと3日",
+        urgent: true,
+        conditions: "Same or lesser value. 11am-2pm only",
+        conditionsJp: "同額以下。11時〜14時限定",
+        validDates: "2026年4月8日 〜 4月11日",
+        code: "DNAV-BMQN-B1G1",
+        category: "food",
+        photo: "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      {
+        id: "coupon-014",
+        business: "Sky Bar 36",
+        businessJp: "スカイバー36",
+        title: "2nd cocktail 50% off",
+        titleJp: "2杯目カクテル50%オフ",
+        discount: "50%",
+        savingsVnd: 75000,
+        savingsJpy: 435,
+        distance: "18 min (1.5km)",
+        distanceJp: "徒歩18分 (1.5km)",
+        expiry: "9 days",
+        expiryJp: "あと9日",
+        urgent: false,
+        conditions: "5pm-8pm happy hour. Show coupon when ordering",
+        conditionsJp: "17時〜20時ハッピーアワー。注文時に提示",
+        validDates: "2026年4月8日 〜 4月17日",
+        code: "DNAV-SB36-HAPPY",
+        category: "food",
+        photo: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      {
+        id: "coupon-015",
+        business: "Tropical Smoothie Bar",
+        businessJp: "トロピカルスムージーバー",
+        title: "Large for price of medium",
+        titleJp: "Mサイズ価格でLサイズ",
+        discount: "Size UP",
+        savingsVnd: 15000,
+        savingsJpy: 87,
+        distance: "1 min (80m)",
+        distanceJp: "徒歩1分 (80m)",
+        expiry: "11 days",
+        expiryJp: "あと11日",
+        urgent: false,
+        conditions: "Any smoothie or fresh juice",
+        conditionsJp: "全スムージー・フレッシュジュース対象",
+        validDates: "2026年4月8日 〜 4月19日",
+        code: "DNAV-TSMB-SIZEUP",
+        category: "food",
+        photo: "https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      // ===== MORE DEALS =====
+      {
+        id: "coupon-016",
+        business: "Com Ga A Hai",
+        businessJp: "コムガー・アーハイ",
+        title: "Free iced tea with meal",
+        titleJp: "お食事でアイスティー無料",
+        discount: "Free",
+        savingsVnd: 10000,
+        savingsJpy: 58,
+        distance: "7 min (550m)",
+        distanceJp: "徒歩7分 (550m)",
+        expiry: "5 days",
+        expiryJp: "あと5日",
+        urgent: false,
+        conditions: "Dine-in only, one per customer",
+        conditionsJp: "店内飲食のみ、お一人様1杯",
+        validDates: "2026年4月8日 〜 4月13日",
+        code: "DNAV-CGAH-TEA",
+        category: "food",
+        photo: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      {
+        id: "coupon-017",
+        business: "Mi Quang Ba Mua",
+        businessJp: "ミークアン・バームア",
+        title: "15% off all noodles",
+        titleJp: "全麺類15%オフ",
+        discount: "15%",
+        savingsVnd: 12000,
+        savingsJpy: 70,
+        distance: "9 min (700m)",
+        distanceJp: "徒歩9分 (700m)",
+        expiry: "8 days",
+        expiryJp: "あと8日",
+        urgent: false,
+        conditions: "Valid anytime",
+        conditionsJp: "終日有効",
+        validDates: "2026年4月8日 〜 4月16日",
+        code: "DNAV-MQBM-15OFF",
+        category: "food",
+        photo: "https://images.unsplash.com/photo-1555126634-323283e090fa?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      {
+        id: "coupon-018",
+        business: "Zen Garden Spa",
+        businessJp: "禅ガーデン・スパ",
+        title: "40% off first visit",
+        titleJp: "初回40%オフ",
+        discount: "40%",
+        savingsVnd: 280000,
+        savingsJpy: 1630,
+        distance: "12 min (950m)",
+        distanceJp: "徒歩12分 (950m)",
+        expiry: "15 days",
+        expiryJp: "あと15日",
+        urgent: false,
+        conditions: "New customers only, booking required",
+        conditionsJp: "新規のお客様限定、要予約",
+        validDates: "2026年4月8日 〜 4月23日",
+        code: "DNAV-ZGSP-40OFF",
+        category: "spa",
+        photo: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      {
+        id: "coupon-019",
+        business: "Dragon Bridge Cafe",
+        businessJp: "ドラゴンブリッジ・カフェ",
+        title: "Free dessert with coffee",
+        titleJp: "コーヒー注文でデザート無料",
+        discount: "Free",
+        savingsVnd: 35000,
+        savingsJpy: 200,
+        distance: "14 min (1.1km)",
+        distanceJp: "徒歩14分 (1.1km)",
+        expiry: "4 days",
+        expiryJp: "あと4日",
+        urgent: false,
+        conditions: "With any coffee order over 40,000đ",
+        conditionsJp: "40,000đ以上のコーヒー注文で",
+        validDates: "2026年4月8日 〜 4月12日",
+        code: "DNAV-DBCF-DESSERT",
+        category: "food",
+        photo: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      {
+        id: "coupon-020",
+        business: "Son Tra Night Tour",
+        businessJp: "ソンチャー・ナイトツアー",
+        title: "¥300 off sunset tour",
+        titleJp: "サンセットツアー¥300オフ",
+        discount: "¥300",
+        savingsVnd: 52000,
+        savingsJpy: 300,
+        distance: "Pickup included",
+        distanceJp: "送迎込み",
+        expiry: "6 days",
+        expiryJp: "あと6日",
+        urgent: false,
+        conditions: "Book 12hrs in advance",
+        conditionsJp: "12時間前までに予約",
+        validDates: "2026年4月8日 〜 4月14日",
+        code: "DNAV-STNT-300",
+        category: "tour",
+        photo: "https://images.unsplash.com/photo-1528127269322-539801943592?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      {
+        id: "coupon-021",
+        business: "Nem Lui 109",
+        businessJp: "ネムルイ109",
+        title: "Extra 2 skewers free",
+        titleJp: "串焼き2本サービス",
+        discount: "Free",
+        savingsVnd: 20000,
+        savingsJpy: 116,
+        distance: "5 min (400m)",
+        distanceJp: "徒歩5分 (400m)",
+        expiry: "3 days",
+        expiryJp: "あと3日",
+        urgent: true,
+        conditions: "With order of 5+ skewers",
+        conditionsJp: "5本以上の注文で",
+        validDates: "2026年4月8日 〜 4月11日",
+        code: "DNAV-NL109-2FREE",
+        category: "food",
+        photo: "https://images.unsplash.com/photo-1544025162-d76694265947?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      {
+        id: "coupon-022",
+        business: "Aroma Wellness",
+        businessJp: "アロマ・ウェルネス",
+        title: "Free aromatherapy upgrade",
+        titleJp: "アロマセラピー無料追加",
+        discount: "Free",
+        savingsVnd: 100000,
+        savingsJpy: 580,
+        distance: "10 min (800m)",
+        distanceJp: "徒歩10分 (800m)",
+        expiry: "7 days",
+        expiryJp: "あと7日",
+        urgent: false,
+        conditions: "With any 60min+ treatment",
+        conditionsJp: "60分以上の施術で",
+        validDates: "2026年4月8日 〜 4月15日",
+        code: "DNAV-AWSP-AROMA",
+        category: "spa",
+        photo: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      {
+        id: "coupon-023",
+        business: "Hai Van Pass Motorbike",
+        businessJp: "ハイヴァン峠バイクツアー",
+        title: "25% off full-day rental",
+        titleJp: "終日レンタル25%オフ",
+        discount: "25%",
+        savingsVnd: 125000,
+        savingsJpy: 725,
+        distance: "Free delivery",
+        distanceJp: "無料配達",
+        expiry: "10 days",
+        expiryJp: "あと10日",
+        urgent: false,
+        conditions: "Valid license required, includes helmet",
+        conditionsJp: "有効な免許証必須、ヘルメット込み",
+        validDates: "2026年4月8日 〜 4月18日",
+        code: "DNAV-HVPM-25OFF",
+        category: "tour",
+        photo: "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      {
+        id: "coupon-024",
+        business: "Banh Xeo Ba Duong",
+        businessJp: "バインセオ・バーズオン",
+        title: "30% off set menu",
+        titleJp: "セットメニュー30%オフ",
+        discount: "30%",
+        savingsVnd: 45000,
+        savingsJpy: 260,
+        distance: "8 min (650m)",
+        distanceJp: "徒歩8分 (650m)",
+        expiry: "5 days",
+        expiryJp: "あと5日",
+        urgent: false,
+        conditions: "Set menu for 2 persons",
+        conditionsJp: "2名用セットメニュー",
+        validDates: "2026年4月8日 〜 4月13日",
+        code: "DNAV-BXBD-30OFF",
+        category: "food",
+        photo: "https://images.unsplash.com/photo-1576577445504-6af96477db52?w=200&q=80",
+        saved: false,
+        used: false
+      },
+      {
+        id: "coupon-025",
+        business: "My Khe Surf School",
+        businessJp: "ミーケー・サーフスクール",
+        title: "Free 30min lesson extension",
+        titleJp: "レッスン30分延長無料",
+        discount: "Free",
+        savingsVnd: 150000,
+        savingsJpy: 870,
+        distance: "2 min (150m)",
+        distanceJp: "徒歩2分 (150m)",
+        expiry: "9 days",
+        expiryJp: "あと9日",
+        urgent: false,
+        conditions: "With any 1hr+ lesson booking",
+        conditionsJp: "1時間以上のレッスン予約で",
+        validDates: "2026年4月8日 〜 4月17日",
+        code: "DNAV-MKSS-30MIN",
+        category: "tour",
+        photo: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=200&q=80",
+        saved: false,
+        used: false
+      }
+    ];
+    
+    // State
+    let currentFilter = 'all';
+    let currentView = 'browse'; // 'browse' or 'wallet'
+    let currentWalletTab = 'unused';
+    let selectedCoupon = null;
+    let totalSavings = 0;
+    let usedCount = 0;
+    
+    // DOM Elements
+    const couponList = document.getElementById('coupon-list');
+    const couponModal = document.getElementById('coupon-modal');
+    const confirmModal = document.getElementById('confirm-modal');
+    const walletView = document.getElementById('wallet-view');
+    const mainContent = document.getElementById('main-content');
+    const toast = document.getElementById('toast');
+    const savingsCard = document.getElementById('savings-card');
+    const filterChips = document.querySelectorAll('.filter-chip');
+    
+    // Format currency
+    function formatVND(amount) {
+      return new Intl.NumberFormat('vi-VN').format(amount) + '₫';
+    }
+    
+    function formatJPY(amount) {
+      return '¥' + new Intl.NumberFormat('ja-JP').format(amount);
+    }
+    
+    // Show toast
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add('toast--visible');
+      setTimeout(() => toast.classList.remove('toast--visible'), 2500);
+    }
+    
+    // Create confetti
+    function createConfetti() {
+      const colors = ['#FF6B4A', '#2EC4B6', '#FFFFFF', '#1B2A4A'];
+      for (let i = 0; i < 30; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.top = '-10px';
+        confetti.style.animationDelay = Math.random() * 0.5 + 's';
+        savingsCard.appendChild(confetti);
+        setTimeout(() => confetti.remove(), 2500);
+      }
+    }
+    
+    // Update savings display
+    function updateSavings() {
+      const usedCoupons = coupons.filter(c => c.used);
+      totalSavings = usedCoupons.reduce((sum, c) => sum + c.savingsJpy, 0);
+      usedCount = usedCoupons.length;
+      
+      const totalVnd = usedCoupons.reduce((sum, c) => sum + c.savingsVnd, 0);
+      
+      // Show/hide savings card based on whether user has savings
+      const savingsCardEl = document.getElementById('savings-card');
+      if (usedCount > 0) {
+        savingsCardEl.classList.add('savings-card--has-savings');
+      } else {
+        savingsCardEl.classList.remove('savings-card--has-savings');
+      }
+      
+      // Animate count up
+      const amountEl = document.getElementById('savings-amount');
+      const vndEl = document.getElementById('savings-vnd');
+      const countEl = document.getElementById('used-count');
+      
+      let currentAmount = 0;
+      const step = Math.ceil(totalSavings / 20);
+      const interval = setInterval(() => {
+        currentAmount = Math.min(currentAmount + step, totalSavings);
+        amountEl.textContent = new Intl.NumberFormat('ja-JP').format(currentAmount);
+        if (currentAmount >= totalSavings) clearInterval(interval);
+      }, 50);
+      
+      vndEl.textContent = `(約${formatVND(totalVnd)})`;
+      countEl.textContent = usedCount;
+      
+      document.getElementById('used-badge').textContent = usedCount;
+    }
+    
+    // Update wallet counts
+    function updateWalletCounts() {
+      const savedUnused = coupons.filter(c => c.saved && !c.used);
+      const savedUsed = coupons.filter(c => c.saved && c.used);
+      
+      document.getElementById('saved-count').textContent = savedUnused.length;
+      document.getElementById('unused-badge').textContent = savedUnused.length;
+      document.getElementById('used-badge').textContent = savedUsed.length;
+    }
+    
+    // Render coupon card
+    function renderCouponCard(coupon) {
+      return `
+        <div class="coupon-card ${coupon.used ? 'coupon-card--used' : ''}" data-id="${coupon.id}">
+          ${coupon.used ? '<div class="coupon-card__stamp">使用済み</div>' : ''}
+          <img src="${coupon.photo}" alt="${coupon.business}" class="coupon-card__image">
+          <div class="coupon-card__content">
+            <div class="coupon-card__header">
+              <h3 class="coupon-card__title">${coupon.titleJp}</h3>
+              <button class="coupon-card__save ${coupon.saved ? 'coupon-card__save--saved' : ''}" data-id="${coupon.id}" ${coupon.used ? 'disabled' : ''}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="${coupon.saved ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+            </div>
+            <p class="coupon-card__business">${coupon.businessJp}</p>
+            <div class="coupon-card__meta">
+              <span class="coupon-card__savings">${formatVND(coupon.savingsVnd)} OFF (約${formatJPY(coupon.savingsJpy)})</span>
+              <span class="coupon-card__distance">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                ${coupon.distanceJp}
+              </span>
+              <span class="coupon-card__expiry ${coupon.urgent ? 'coupon-card__expiry--urgent' : ''}">${coupon.expiryJp}</span>
+            </div>
+            ${!coupon.used ? `
+              <button class="coupon-card__cta" data-id="${coupon.id}">クーポンを使う</button>
+            ` : ''}
+          </div>
+        </div>
+      `;
+    }
+    
+    // Render coupon list
+    function renderCoupons(filter = 'all') {
+      let filtered = coupons.filter(c => !c.used);
+      
+      if (filter === 'nearby') {
+        filtered = filtered.sort((a, b) => parseInt(a.distance) - parseInt(b.distance));
+      } else if (filter !== 'all') {
+        filtered = filtered.filter(c => c.category === filter);
+      }
+      
+      couponList.innerHTML = filtered.map(renderCouponCard).join('');
+      document.getElementById('coupon-count').textContent = `${filtered.length}件のクーポンが利用可能`;
+      
+      // Add event listeners
+      document.querySelectorAll('.coupon-card__save').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const id = btn.dataset.id;
+          const coupon = coupons.find(c => c.id === id);
+          coupon.saved = !coupon.saved;
+          btn.classList.toggle('coupon-card__save--saved');
+          btn.querySelector('svg').setAttribute('fill', coupon.saved ? 'currentColor' : 'none');
+          showToast(coupon.saved ? 'マイクーポンに保存しました' : 'マイクーポンから削除しました');
+          updateWalletCounts();
+        });
+      });
+      
+      document.querySelectorAll('.coupon-card__cta').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.dataset.id;
+          openCouponModal(id);
+        });
+      });
+    }
+    
+    // Render wallet view
+    function renderWallet(tab = 'unused') {
+      const savedUnused = coupons.filter(c => c.saved && !c.used);
+      const savedUsed = coupons.filter(c => c.saved && c.used);
+      
+      document.getElementById('wallet-unused').innerHTML = savedUnused.length > 0
+        ? savedUnused.map(renderCouponCard).join('')
+        : `<div class="wallet-empty">
+            <div class="wallet-empty__icon">🛍️</div>
+            <p class="wallet-empty__text">クーポンを探しましょう！</p>
+            <button class="wallet-empty__cta" id="browse-deals-btn">お得情報を見る</button>
+          </div>`;
+      
+      document.getElementById('wallet-used').innerHTML = savedUsed.length > 0
+        ? savedUsed.map(renderCouponCard).join('')
+        : `<div class="wallet-empty">
+            <div class="wallet-empty__icon">🎫</div>
+            <p class="wallet-empty__text">まだクーポンを使っていません</p>
+          </div>`;
+      
+      document.getElementById('wallet-unused').style.display = tab === 'unused' ? 'flex' : 'none';
+      document.getElementById('wallet-used').style.display = tab === 'used' ? 'block' : 'none';
+      
+      // Re-add event listeners
+      document.querySelectorAll('.coupon-card__cta').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.dataset.id;
+          openCouponModal(id);
+        });
+      });
+      
+      const browseBtn = document.getElementById('browse-deals-btn');
+      if (browseBtn) {
+        browseBtn.addEventListener('click', () => switchView('browse'));
+      }
+    }
+    
+    // Open coupon modal
+    function openCouponModal(id) {
+      selectedCoupon = coupons.find(c => c.id === id);
+      if (!selectedCoupon) return;
+      
+      document.getElementById('modal-logo').src = selectedCoupon.photo;
+      document.getElementById('modal-business').textContent = selectedCoupon.businessJp;
+      document.getElementById('modal-code').textContent = selectedCoupon.code;
+      document.getElementById('modal-deal').textContent = selectedCoupon.conditionsJp;
+      document.getElementById('terms-content').textContent = selectedCoupon.conditionsJp;
+      document.getElementById('modal-dates').textContent = selectedCoupon.validDates;
+      
+      const redeemBtn = document.getElementById('redeem-btn');
+      if (selectedCoupon.used) {
+        redeemBtn.textContent = '✓ 使用済み';
+        redeemBtn.classList.add('coupon-modal__redeem--used');
+      } else {
+        redeemBtn.textContent = 'クーポンを使用済みにする';
+        redeemBtn.classList.remove('coupon-modal__redeem--used');
+      }
+      
+      couponModal.classList.add('coupon-modal--active');
+    }
+    
+    // Close coupon modal
+    function closeCouponModal() {
+      couponModal.classList.remove('coupon-modal--active');
+      selectedCoupon = null;
+    }
+    
+    // Redeem coupon
+    function redeemCoupon() {
+      if (!selectedCoupon || selectedCoupon.used) return;
+      
+      confirmModal.classList.add('confirm-modal--active');
+    }
+    
+    function confirmRedeem() {
+      if (!selectedCoupon) return;
+      
+      selectedCoupon.used = true;
+      selectedCoupon.saved = true;
+      
+      confirmModal.classList.remove('confirm-modal--active');
+      
+      const redeemBtn = document.getElementById('redeem-btn');
+      redeemBtn.textContent = '✓ 使用済み';
+      redeemBtn.classList.add('coupon-modal__redeem--used');
+      
+      // Update savings and trigger confetti
+      updateSavings();
+      createConfetti();
+      
+      showToast(`${formatJPY(selectedCoupon.savingsJpy)}お得になりました！`);
+      
+      // Update lists
+      renderCoupons(currentFilter);
+      renderWallet(currentWalletTab);
+      updateWalletCounts();
+    }
+    
+    // Switch view
+    function switchView(view) {
+      currentView = view;
+      
+      if (view === 'browse') {
+        mainContent.style.display = 'block';
+        walletView.classList.remove('wallet-view--active');
+      } else {
+        mainContent.style.display = 'none';
+        walletView.classList.add('wallet-view--active');
+        renderWallet(currentWalletTab);
+      }
+    }
+    
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function() {
+      renderCoupons();
+      updateSavings();
+      updateWalletCounts();
+      
+      // Filter chips
+      filterChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          filterChips.forEach(c => c.classList.remove('filter-chip--active'));
+          chip.classList.add('filter-chip--active');
+          currentFilter = chip.dataset.filter;
+          renderCoupons(currentFilter);
+        });
+      });
+      
+      // Wallet button
+      document.getElementById('wallet-btn').addEventListener('click', () => {
+        switchView(currentView === 'browse' ? 'wallet' : 'browse');
+      });
+      
+      // Wallet tabs
+      document.querySelectorAll('.wallet-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          document.querySelectorAll('.wallet-tab').forEach(t => t.classList.remove('wallet-tab--active'));
+          tab.classList.add('wallet-tab--active');
+          currentWalletTab = tab.dataset.tab;
+          renderWallet(currentWalletTab);
+        });
+      });
+      
+      // Modal close
+      document.getElementById('modal-close').addEventListener('click', closeCouponModal);
+      couponModal.addEventListener('click', (e) => {
+        if (e.target === couponModal) closeCouponModal();
+      });
+      
+      // Redeem
+      document.getElementById('redeem-btn').addEventListener('click', redeemCoupon);
+      document.getElementById('confirm-ok').addEventListener('click', confirmRedeem);
+      document.getElementById('confirm-cancel').addEventListener('click', () => {
+        confirmModal.classList.remove('confirm-modal--active');
+      });
+      
+      // Terms toggle
+      document.getElementById('terms-toggle').addEventListener('click', () => {
+        const content = document.getElementById('terms-content');
+        content.classList.toggle('coupon-modal__terms-content--visible');
+      });
+      
+      // Code copy
+      document.getElementById('modal-code').addEventListener('click', function() {
+        navigator.clipboard.writeText(this.textContent).then(() => {
+          showToast('コードをコピーしました');
+        });
+      });
+      
+      // Share
+      document.getElementById('share-btn').addEventListener('click', () => {
+        const text = `ダナンナビで${formatJPY(totalSavings)}もお得に！🎉`;
+        if (navigator.share) {
+          navigator.share({ title: 'DaNangNavi', text });
+        } else {
+          navigator.clipboard.writeText(text).then(() => {
+            showToast('シェアテキストをコピーしました');
+          });
+        }
+      });
+      
+      console.log('[DaNangNavi] Page 03.3 Deals & Coupons loaded');
+    });
+  </script>
+</body>
+</html>

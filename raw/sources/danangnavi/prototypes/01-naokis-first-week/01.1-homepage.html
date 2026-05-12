@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DaNangNavi — Your Da Nang Guide</title>
+  <link rel="stylesheet" href="shared/design-tokens.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .main-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      min-height: 100vh;
+    }
+    .content-section {
+      padding: 48px 24px;
+    }
+    .section-placeholder {
+      padding: 40px 24px;
+      border: 2px dashed var(--color-border);
+      border-radius: var(--radius);
+      text-align: center;
+      color: var(--color-text-secondary);
+      font-family: var(--font-ui);
+      font-size: 14px;
+      margin: 16px 24px;
+    }
+
+    /* Section 2: Hero */
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 420px;
+      background: linear-gradient(135deg, #1B2A4A 0%, #2a4a7a 40%, #2EC4B6 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(13,27,42,0.6) 0%, rgba(13,27,42,0.4) 50%, rgba(13,27,42,0.7) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 48px 24px;
+      max-width: 720px;
+      width: 100%;
+    }
+    .hero-tagline {
+      font-family: var(--font-headlines);
+      font-size: 40px;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .hero-subtitle {
+      font-size: 18px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.5;
+      margin-bottom: 32px;
+    }
+    .hero-search-wrap {
+      width: 100%;
+      max-width: 640px;
+      margin-bottom: 20px;
+    }
+    .hero-search-wrap #search-bar input {
+      background-color: rgba(255,255,255,0.95);
+    }
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .hero-chip {
+      font-family: var(--font-ui);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-text);
+      background-color: rgba(255,255,255,0.9);
+      border: none;
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      transition: background-color var(--transition-normal), color var(--transition-normal);
+    }
+    .hero-chip:hover {
+      background-color: var(--color-accent);
+      color: #FFFFFF;
+    }
+
+    /* Section 3: Welcome Banner */
+    .welcome-banner {
+      position: relative;
+      width: 100%;
+      background-color: var(--color-secondary);
+      padding: 20px 32px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .welcome-banner.hidden {
+      display: none;
+    }
+    .welcome-banner-icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+    .welcome-banner-text {
+      flex: 1;
+    }
+    .welcome-banner-headline {
+      font-family: var(--font-headlines);
+      font-size: 20px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+    }
+    .welcome-banner-body {
+      font-size: 15px;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.4;
+    }
+    .welcome-banner-cta {
+      font-family: var(--font-ui);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-secondary);
+      background-color: #FFFFFF;
+      border: none;
+      padding: 10px 24px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+    }
+    .welcome-banner-cta:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transform: translateY(-1px);
+    }
+    .welcome-banner-dismiss {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.7);
+      font-size: 20px;
+      cursor: pointer;
+      padding: 4px;
+      line-height: 1;
+      transition: color var(--transition-fast);
+    }
+    .welcome-banner-dismiss:hover {
+      color: #FFFFFF;
+    }
+
+    /* Section 6: Community */
+    .community-thread {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .community-thread:last-child {
+      border-bottom: none;
+    }
+    .thread-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #D1D5DB;
+      flex-shrink: 0;
+    }
+    .thread-content {
+      flex: 1;
+    }
+    .thread-title {
+      font-family: var(--font-headlines);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 4px;
+      cursor: pointer;
+    }
+    .thread-title:hover {
+      color: var(--color-accent);
+    }
+    .thread-preview {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .thread-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 6px;
+      font-size: 12px;
+      color: var(--color-text-secondary);
+    }
+    .thread-replies {
+      font-weight: 600;
+      color: var(--color-accent);
+    }
+    .community-stats {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background-color: rgba(46, 196, 182, 0.08);
+      border-radius: var(--radius);
+      font-size: 14px;
+      color: var(--color-text-secondary);
+    }
+    .community-stats strong {
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+
+    /* Section 7: Footer */
+    .site-footer {
+      margin-top: 24px;
+      padding: 32px 24px;
+      border-top: 1px solid var(--color-border);
+      text-align: center;
+      font-size: 13px;
+      color: var(--color-text-secondary);
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 12px;
+    }
+    .footer-links a {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      color: var(--color-accent);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Section 1: TopNavBar -->
+  <div id="nav-container"></div>
+
+  <!-- Main Content -->
+  <div class="main-container">
+
+    <!-- Section 2: Hero + Search -->
+    <section id="hero-section" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-tagline">Everything about Da Nang, right here.</h1>
+        <p class="hero-subtitle">A Da Nang guide built on senpai experiences</p>
+        <div id="hero-search" class="hero-search-wrap"></div>
+        <div id="hero-chips" class="hero-chips"></div>
+      </div>
+    </section>
+
+    <!-- Section 3: Welcome Banner -->
+    <section id="welcome-banner-section" class="welcome-banner">
+      <span class="welcome-banner-icon">👋</span>
+      <div class="welcome-banner-text">
+        <div class="welcome-banner-headline">Welcome to Da Nang!</div>
+        <div class="welcome-banner-body">For first-timers — start your first week with confidence using our checklist</div>
+      </div>
+      <button class="welcome-banner-cta" id="banner-cta">Get Started →</button>
+      <button class="welcome-banner-dismiss" id="banner-dismiss">✕</button>
+    </section>
+
+    <!-- Section 4: Senpai Picks -->
+    <section id="senpai-picks-section" class="content-section">
+      <div id="senpai-picks-header"></div>
+      <div id="senpai-picks-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;"></div>
+    </section>
+
+    <!-- Section 5: Today's Deals -->
+    <section id="deals-section" class="content-section">
+      <div id="deals-header"></div>
+      <div id="deals-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;"></div>
+    </section>
+
+    <!-- Section 6: Community Highlights -->
+    <section id="community-section" class="content-section">
+      <div id="community-header"></div>
+      <div id="community-threads"></div>
+      <div id="community-stats" class="community-stats"></div>
+    </section>
+
+    <!-- Section 7: Category Quick Links + Footer -->
+    <section id="categories-section" class="content-section">
+      <div id="categories-header"></div>
+      <div id="categories-grid" style="display:grid;grid-template-columns:repeat(6,1fr);gap:8px;"></div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Help</a>
+      </div>
+      <div>© 2026 DaNangNavi. All rights reserved.</div>
+    </footer>
+
+  </div>
+
+  <script type="module">
+    import { renderTopNav } from './components/top-nav.js';
+    import { renderSearchBar } from './components/search-bar.js';
+    import { renderSenpaiCard } from './components/senpai-card.js';
+    import { renderDealCard } from './components/deal-card.js';
+    import { renderSectionHeader } from './components/section-header.js';
+    import { renderCategoryIcon } from './components/category-icon.js';
+
+    // Load demo data
+    const res = await fetch('./data/demo-data.json');
+    const data = await res.json();
+
+    // Section 1: Render TopNavBar
+    renderTopNav(document.getElementById('nav-container'), { activePage: 'home' });
+
+    // Section 2: Hero Search + Chips
+    renderSearchBar(document.getElementById('hero-search'), {
+      size: 'large',
+      placeholder: 'What are you looking for?',
+      onSearch: (val) => console.log('[Hero] Search:', val),
+    });
+
+    const chips = [
+      { label: 'Restaurants', href: '/search?cat=restaurant' },
+      { label: 'Cafes', href: '/search?cat=cafe' },
+      { label: 'Housing', href: '/search?cat=housing' },
+      { label: 'Visa', href: '/guides/visa' },
+      { label: 'Hospital', href: '/search?cat=medical' },
+      { label: 'Translation', href: '/tools/translate' },
+    ];
+    const chipsContainer = document.getElementById('hero-chips');
+    chips.forEach(chip => {
+      const btn = document.createElement('button');
+      btn.className = 'hero-chip';
+      btn.textContent = chip.label;
+      btn.addEventListener('click', () => {
+        console.log('[Hero] Chip clicked:', chip.label, chip.href);
+      });
+      chipsContainer.appendChild(btn);
+    });
+
+    // Section 3: Welcome Banner
+    const banner = document.getElementById('welcome-banner-section');
+    const BANNER_KEY = 'danangnavi-banner-dismissed';
+
+    if (localStorage.getItem(BANNER_KEY) === 'true') {
+      banner.classList.add('hidden');
+      console.log('[Banner] Already dismissed');
+    }
+
+    document.getElementById('banner-dismiss').addEventListener('click', () => {
+      banner.classList.add('hidden');
+      localStorage.setItem(BANNER_KEY, 'true');
+      console.log('[Banner] Dismissed');
+    });
+
+    document.getElementById('banner-cta').addEventListener('click', () => {
+      console.log('[Banner] Get Started clicked — navigate to /onboarding');
+    });
+
+    // Section 4: Senpai Picks
+    renderSectionHeader(document.getElementById('senpai-picks-header'), {
+      title: '🔥 Senpai Picks',
+      linkText: 'View all →',
+      linkHref: '#',
+    });
+
+    const senpaiPicksData = [
+      { photo: '', title: 'Best Ramen Spots in Hai Chau — A Senpai Guide', rating: 4.8, senpai: data.senpai[0], verified: true },
+      { photo: '', title: 'Son Tra Beach Morning Routine for Newcomers', rating: 4.5, senpai: data.senpai[1], verified: true },
+      { photo: '', title: 'How to Get Your Vietnamese Driver License', rating: 4.6, senpai: data.senpai[2], verified: true },
+      { photo: '', title: 'Top 5 Coworking Spaces in Da Nang', rating: 4.7, senpai: data.senpai[3], verified: true },
+      { photo: '', title: 'Weekend Trips from Da Nang — Hoi An & Hue', rating: 4.9, senpai: data.senpai[0], verified: true },
+      { photo: '', title: 'Finding a Reliable Motorbike Rental', rating: 4.3, senpai: data.senpai[1], verified: false },
+    ];
+    const senpaiGrid = document.getElementById('senpai-picks-grid');
+    senpaiPicksData.forEach(card => renderSenpaiCard(senpaiGrid, card));
+
+    // Section 5: Today's Deals
+    renderSectionHeader(document.getElementById('deals-header'), {
+      title: '🎫 Today\'s Deals',
+      linkText: 'View all →',
+      linkHref: '#',
+    });
+
+    const dealsGrid = document.getElementById('deals-grid');
+    data.deals.forEach(deal => renderDealCard(dealsGrid, {
+      photo: '',
+      business: deal.business,
+      description: deal.description,
+      savingsJpy: deal.savingsJpy,
+      expiresIn: deal.expiresIn,
+    }));
+
+    // Section 6: Community Highlights
+    renderSectionHeader(document.getElementById('community-header'), {
+      title: '💬 Community',
+      linkText: 'Go to Community →',
+      linkHref: '#',
+    });
+
+    const threadsContainer = document.getElementById('community-threads');
+    data.communityThreads.forEach(thread => {
+      const senpai = data.senpai.find(s => s.id === thread.author) || data.senpai[0];
+
+      const row = document.createElement('div');
+      row.className = 'community-thread';
+
+      const avatar = document.createElement('div');
+      avatar.className = 'thread-avatar';
+      avatar.style.backgroundImage = senpai.avatar ? `url('${senpai.avatar}')` : '';
+      avatar.style.backgroundSize = 'cover';
+
+      const content = document.createElement('div');
+      content.className = 'thread-content';
+
+      const title = document.createElement('div');
+      title.className = 'thread-title';
+      title.textContent = thread.title;
+
+      const preview = document.createElement('div');
+      preview.className = 'thread-preview';
+      preview.textContent = thread.preview;
+
+      const meta = document.createElement('div');
+      meta.className = 'thread-meta';
+      meta.innerHTML = `<span class="thread-replies">${thread.replyCount} replies</span><span>${thread.postedAgo} ago</span><span>by ${senpai.name}</span>`;
+
+      content.appendChild(title);
+      content.appendChild(preview);
+      content.appendChild(meta);
+      row.appendChild(avatar);
+      row.appendChild(content);
+      threadsContainer.appendChild(row);
+    });
+
+    document.getElementById('community-stats').innerHTML = `Today's posts: <strong>234</strong> — Join the conversation!`;
+
+    // Section 7: Category Quick Links
+    renderSectionHeader(document.getElementById('categories-header'), {
+      title: '📂 Quick Links',
+    });
+
+    const categories = [
+      { icon: 'food', label: 'Food', href: '/search?cat=restaurant' },
+      { icon: 'housing', label: 'Housing', href: '/search?cat=housing' },
+      { icon: 'visa', label: 'Visa & Docs', href: '/guides/visa' },
+      { icon: 'medical', label: 'Medical', href: '/search?cat=medical' },
+      { icon: 'events', label: 'Events', href: '/events' },
+      { icon: 'translation', label: 'Translation', href: '/tools/translate' },
+    ];
+    const catGrid = document.getElementById('categories-grid');
+    categories.forEach(cat => renderCategoryIcon(catGrid, cat));
+
+    console.log('[Homepage] All sections loaded');
+  </script>
+
+</body>
+</html>
