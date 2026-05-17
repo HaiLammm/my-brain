@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Shibodoki (志望動機)"
+title: Shibodoki (志望動機)
 slug: shibodoki
 date_added: 2026-05-18
 confidence: high
@@ -13,6 +13,7 @@ created: 2026-05-18
 updated: 2026-05-18
 key_sources:
   - sources/buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet
+  - sources/huong-dan-viet-cv-pr-self-pr-tieng-nhat
 related_concepts:
   - concepts/jiko-pr
   - concepts/cv-tot
@@ -31,6 +32,7 @@ Shibodoki (志望動機 — "Mong muốn ứng tuyển") là phần CV tiếng N
 ## Key sources
 
 - [[sources/buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet]]
+- [[sources/huong-dan-viet-cv-pr-self-pr-tieng-nhat]]
 
 ## Related concepts
 

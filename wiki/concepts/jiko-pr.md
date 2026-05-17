@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Jiko PR (自己PR)"
+title: Jiko PR (自己PR)
 slug: jiko-pr
 date_added: 2026-05-18
 confidence: high
@@ -13,6 +13,7 @@ created: 2026-05-18
 updated: 2026-05-18
 key_sources:
   - sources/buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet
+  - sources/huong-dan-viet-cv-pr-self-pr-tieng-nhat
 related_concepts:
   - concepts/shibodoki
   - concepts/cv-tot
@@ -32,6 +33,8 @@ Jiko PR (自己PR — "Tự PR bản thân") là phần quan trọng trong CV ti
 ## Key sources
 
 - [[sources/buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet]]
+- [[sources/huong-dan-viet-cv-pr-self-pr-tieng-nhat]]
+- [[sources/huynh-hai-dang-it-ba-qc]]
 
 ## Related concepts
 

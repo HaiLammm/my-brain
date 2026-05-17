@@ -74,3 +74,13 @@ _Append-only. Format: `## [YYYY-MM-DD] skill | details`_
 ## [2026-05-18] ingest | session:81a69606 | Added "Buổi Huấn Luyện Chuyên Sâu về Viết CV Tiếng Nhật" → 7 pages touched (1 source, 3 concept stubs, 3 existing pages updated)
 ## [2026-05-18] verify | session:c2ef43de | Verified 1 entries (--external): 0 passed, 1 findings_pending (12 findings), 0 skipped, 0 drift.
 ## [2026-05-18] verify | session:460ba9d4 | Updated buoi-huan-luyen source: identified instructor as pham-thi-thanh-thao, fixed authored_by edge, corrected 6 claims per verify findings.
+## [2026-05-18] ingest | session:49d1d5e9 | Added "Hướng dẫn viết CV / 自己PR (Self PR) Tiếng Nhật" → 5 pages touched (1 source mới + 4 concept cập nhật backlink)
+## [2026-05-18] verify | session:fc1cade4 | Verified 1 entries: 1 passed, 0 findings, 0 skipped, 0 drift.
+## [2026-05-18] ingest | session:c8dcd5eb | Added "CV chính thức — Lương Hải Lâm (phiên bản 4)" → 16 pages touched
+## [2026-05-18] ingest | session:e2a5c9a3 | Added "CV chính thức — Lương Hải Lâm (phiên bản 4)" → 16 pages touched
+## [2026-05-18] edit | session:2c39e45a | Updated buoi-huan-luyen + people/luong-hai-lam: ghi nhận 4 vấn đề CV của Lâm từ phản hồi chị Thảo — Jiko PR sai, thiếu Shibodoki, kinh nghiệm không nổi bật, thiếu Self-PR
+## [2026-05-18] ask | session:f99c7095 | CV Jiko PR + Shibodoki cho EAERA -> outputs/cv-jiko-pr-shibodoki-eaera.md
+## [2026-05-18] ingest | session:aa3bdbde | Added "Huynh Hai Dang - IT BA/QC" → 2 pages touched (1 source + 1 person)
+## [2026-05-18] verify | session:2dec736d | Verified 1 entries: 0 passed, 1 findings_pending, 0 skipped, 0 drift.
+## [2026-05-18] ask | CV tiếng Việt hoàn chỉnh của Lương Hải Lâm → outputs/cv-luong-hai-lam-tieng-viet.md
+## [2026-05-18] edit | Xóa outputs/cv-jiko-pr-shibodoki-eaera.md (bản nháp cũ). CV chính thức: outputs/cv-luong-hai-lam-tieng-viet.md. Cập nhật people/luong-hai-lam.md.

@@ -25,7 +25,7 @@ findings: []
 
 ## Summary
 
-Hồ sơ cá nhân của Lương Hải Lâm — fullstack developer sinh năm 2001, tốt nghiệp Công nghệ thông tin tại Đại học Đông Á. Tài liệu ghi lại hai dự án cá nhân lớn: DaNangNavi (nền tảng B2B2C hỗ trợ người Nhật tại Đà Nẵng) và tailor_project (nền tảng may đo Áo dài tích hợp AI). Cả hai đều sử dụng Python/FastAPI + Next.js 16 và thể hiện kiến trúc Modular Monolith với event-driven communication.
+Hồ sơ cá nhân của Lương Hải Lâm — fullstack developer sinh năm 2001, tốt nghiệp Công nghệ phần mềm tại Đại học Đông Á. Tài liệu ghi lại hai dự án cá nhân lớn: DaNangNavi (nền tảng B2B2C hỗ trợ người Nhật tại Đà Nẵng) và tailor_project (nền tảng may đo Áo dài tích hợp AI). Cả hai đều sử dụng Python/FastAPI + Next.js 16 và thể hiện kiến trúc Modular Monolith với event-driven communication.
 
 ## Key claims
 

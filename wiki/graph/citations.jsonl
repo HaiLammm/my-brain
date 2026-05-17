@@ -20,3 +20,6 @@
 {"from":"sources/buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet","type":"cites","to":"sources/cam-nang-giai-ma-cau-truc-cv-chuan"}
 {"from":"sources/buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet","type":"cites","to":"sources/chien-luoc-phong-van-dot-pha"}
 {"from":"sources/buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet","type":"cites","to":"sources/tell-me-about-yourself-interview-framework"}
+{"from":"sources/huong-dan-viet-cv-pr-self-pr-tieng-nhat","type":"cites","to":"sources/buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet"}
+{"from":"sources/huong-dan-viet-cv-pr-self-pr-tieng-nhat","type":"cites","to":"sources/cam-nang-giai-ma-cau-truc-cv-chuan"}
+{"from":"sources/huong-dan-viet-cv-pr-self-pr-tieng-nhat","type":"cites","to":"sources/tell-me-about-yourself-interview-framework"}

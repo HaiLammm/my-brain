@@ -77,5 +77,6 @@ Bộ tứ trụ cột mà nhà tuyển dụng sử dụng để sàng lọc:
 - [[sources/cam-nang-giai-ma-cau-truc-cv-chuan]] — 8 thành phần thiết yếu, công thức viết thành tích, 7 lỗi phổ biến
 - [[sources/chien-luoc-phong-van-dot-pha]] — ma trận đánh giá tuyển dụng 4 chiều
 - [[sources/ptthao]] — tư duy viết CV có mục đích, mỗi từ mỗi chữ đều rõ lý do
+- [[sources/huynh-hai-dang-it-ba-qc]] — CV mẫu thực tế của ứng viên IT BA/QC tiếng Nhật
 
 ## Mentioned in
