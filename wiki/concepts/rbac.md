@@ -9,10 +9,11 @@ tags:
   - access-control
 id: concepts/rbac
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-15
 key_sources:
   - sources/tailor-project-prd
   - sources/epic-breakdown-tailor-project
+  - sources/kien-truc-he-thong-lo-trinh-mo-rong-quy-mo-cho-he-thong-hang-trieu-nguoi-dung
 related_concepts:
   - concepts/unified-order-workflow
   - concepts/ssot
@@ -32,6 +33,7 @@ Role-Based Access Control (RBAC — Kiểm soát Truy cập Dựa trên Vai trò
 
 - [[sources/tailor-project-prd]]
 - [[sources/epic-breakdown-tailor-project]]
+- [[sources/kien-truc-he-thong-lo-trinh-mo-rong-quy-mo-cho-he-thong-hang-trieu-nguoi-dung]]
 
 ## Related concepts
 

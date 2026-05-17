@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Trực giác (chức năng tâm lý)"
+title: Trực giác (chức năng tâm lý)
 slug: truc-giac-tam-ly
 date_added: 2026-05-12
 confidence: high
@@ -9,13 +9,13 @@ tags:
   - intuition-function
 id: concepts/truc-giac-tam-ly
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-14
 key_sources:
   - sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi
+  - sources/the-question-of-psychological-types
 related_concepts:
   - concepts/bon-chuc-nang-tam-ly
   - concepts/tri-giac-tam-ly
-
 ---
 
 ## Định nghĩa
@@ -30,6 +30,7 @@ Trực giác (intuition) là một trong bốn chức năng tâm lý theo Jung, 
 ## Nguồn chính
 
 - [[sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi]] — Jung định nghĩa trực giác và phân biệt với tri giác
+- [[sources/the-question-of-psychological-types]] — Ghi nhận vai trò của Maria Moltzer trong việc Jung dần xem trực giác là một chức năng riêng
 
 ## Khái niệm liên quan
 

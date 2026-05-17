@@ -13,10 +13,13 @@ updated: 2026-05-12
 key_sources:
   - sources/cam-nang-giai-ma-cau-truc-cv-chuan
   - sources/chien-luoc-phong-van-ot-pha
+  - sources/ptthao
+  - sources/buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet
 related_concepts:
   - concepts/tu-khoa-cv
   - concepts/ats
   - concepts/bo-tu-tru-cot-tuyen-dung
+  - concepts/khung-trinh-bay-cv
 ---
 
 ## Definition
@@ -67,10 +70,12 @@ Bộ tứ trụ cột mà nhà tuyển dụng sử dụng để sàng lọc:
 - [[concepts/tu-khoa-cv]] — kỹ thuật đồng bộ từ khóa với JD
 - [[concepts/ats]] — hệ thống lọc tự động
 - [[concepts/bo-tu-tru-cot-tuyen-dung]] — ma trận đánh giá ngầm của nhà tuyển dụng
+- [[concepts/khung-trinh-bay-cv]] — mô hình trình bày CV 5 bước
 
 ## Key sources
 
 - [[sources/cam-nang-giai-ma-cau-truc-cv-chuan]] — 8 thành phần thiết yếu, công thức viết thành tích, 7 lỗi phổ biến
 - [[sources/chien-luoc-phong-van-dot-pha]] — ma trận đánh giá tuyển dụng 4 chiều
+- [[sources/ptthao]] — tư duy viết CV có mục đích, mỗi từ mỗi chữ đều rõ lý do
 
 ## Mentioned in

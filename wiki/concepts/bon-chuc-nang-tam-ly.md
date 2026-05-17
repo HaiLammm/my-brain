@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Bốn chức năng tâm lý"
+title: Bốn chức năng tâm lý
 slug: bon-chuc-nang-tam-ly
 date_added: 2026-05-12
 confidence: high
@@ -9,9 +9,10 @@ tags:
   - psychological-functions
 id: concepts/bon-chuc-nang-tam-ly
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-14
 key_sources:
   - sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi
+  - sources/the-question-of-psychological-types
 related_concepts:
   - concepts/ly-tri-tam-ly
   - concepts/cam-nhan-tam-ly
@@ -19,9 +20,8 @@ related_concepts:
   - concepts/truc-giac-tam-ly
   - concepts/tu-tuong-huong-ngoai
   - concepts/tu-tuong-huong-noi
-
 ---
-	
+		
 ## Định nghĩa
 
 Bốn chức năng tâm lý (four psychological functions) là mô hình của Jung mô tả bốn cách thức cơ bản mà ý thức sử dụng để định hướng trải nghiệm: **lý trí** (thinking) — cho biết sự vật là gì; **cảm nhận** (feeling) — đánh giá dễ hay khó chịu; **tri giác** (sensation) — nhận thức sự tồn tại qua giác quan; và **trực giác** (intuition) — cho biết nguồn gốc và hướng đi. Bốn chức năng tạo thành "la bàn tâm lý", mỗi chiếc có một chiếc đối lập: lý trí đối lập cảm nhận, tri giác đối lập trực giác.
@@ -35,6 +35,7 @@ Bốn chức năng tâm lý (four psychological functions) là mô hình của J
 ## Nguồn chính
 
 - [[sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi]] — Nơi Jung trình bày đầy đủ mô hình bốn chức năng
+- [[sources/the-question-of-psychological-types]] — Cho thấy mô hình bốn chức năng hình thành dần từ các tranh luận typology sớm hơn
 
 ## Khái niệm liên quan
 

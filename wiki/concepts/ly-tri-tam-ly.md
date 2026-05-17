@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Lý trí (chức năng tâm lý)"
+title: Lý trí (chức năng tâm lý)
 slug: ly-tri-tam-ly
 date_added: 2026-05-12
 confidence: high
@@ -9,13 +9,13 @@ tags:
   - thinking-function
 id: concepts/ly-tri-tam-ly
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-14
 key_sources:
   - sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi
+  - sources/the-question-of-psychological-types
 related_concepts:
   - concepts/bon-chuc-nang-tam-ly
   - concepts/cam-nhan-tam-ly
-
 ---
 
 ## Định nghĩa
@@ -30,6 +30,7 @@ Lý trí (thinking) là một trong bốn chức năng tâm lý theo Jung, dùng
 ## Nguồn chính
 
 - [[sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi]] — Jung phân biệt lý trí với các chức năng khác
+- [[sources/the-question-of-psychological-types]] — Theo dõi vai trò của thinking trong giai đoạn Jung còn gắn nó chặt với thái độ hướng nội
 
 ## Khái niệm liên quan
 

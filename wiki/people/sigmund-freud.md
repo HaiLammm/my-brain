@@ -8,9 +8,12 @@ tags:
   - psychoanalysis
 id: TODO
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-14
 key_sources:
   - sources/man-and-his-symbols
+  - sources/phan-i-qua-khu-va-tuong-lai-trong-vo-thuc
+  - sources/the-undiscovered-self
+  - sources/the-question-of-psychological-types
 ---
 
 ## Overview
@@ -21,6 +24,8 @@ Sigmund Freud (1856-1939) là bác sĩ tâm thần người Áo, cha đẻ của
 
 - [[sources/man-and-his-symbols]] — được nhắc đến trong bối cảnh so sánh về vô thức
 - [[sources/phan-i-qua-khu-va-tuong-lai-trong-vo-thuc]] — mô tả cơ chế kìm nén và ký ức bị kìm nén
+- [[sources/the-undiscovered-self]] — Jung nhắc đến Freud khi bàn về vô thức, giáo điều và nỗi sợ đối với các tầng tâm lý sâu hơn
+- [[sources/the-question-of-psychological-types]] — phần dẫn nhập đặt Freud vào cặp đối chiếu Freud-Adler để giải thích xuất phát điểm của câu hỏi type
 
 ## Notes
 

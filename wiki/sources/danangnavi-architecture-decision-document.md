@@ -4,7 +4,7 @@ title: DaNangNavi — Architecture Decision Document
 slug: danangnavi-architecture-decision-document
 date_added: 2026-05-12
 authors:
-  - DaNangNavi Team
+  - Lương Hải Lâm
 source_type: note
 importance: 4
 confidence: high
@@ -28,7 +28,7 @@ raw_paths:
 ingest_status: finalized
 id: sources/danangnavi-architecture-decision-document
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-14
 year: 2026
 ---
 
@@ -73,7 +73,7 @@ Tài liệu kiến trúc DaNangNavi xác định **modular monolith + event-driv
 
 ## Mọi người
 
-_(Không có cá nhân có thật — tất cả user personas là hư cấu)_
+- [[people/luong-hai-lam]]
 
 ## Câu hỏi mở
 

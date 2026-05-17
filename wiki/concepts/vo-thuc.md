@@ -9,9 +9,13 @@ tags:
   - unconscious
 id: TODO
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-14
 key_sources:
   - sources/man-and-his-symbols
+  - sources/phan-i-qua-khu-va-tuong-lai-trong-vo-thuc
+  - sources/phan-i-chuc-nang-cua-nhung-giac-mo
+  - sources/the-undiscovered-self
+  - sources/the-quotable-jung
 related_concepts:
   - concepts/nguyen-mau
   - concepts/ca-nhan-hoa
@@ -32,6 +36,7 @@ Vô thức (Unconscious) trong tâm lý học Jung là một thế giới tâm l
 - [[sources/man-and-his-symbols]] — nguồn chính về vô thức trong tâm lý học Jung
 - [[sources/phan-i-qua-khu-va-tuong-lai-trong-vo-thuc]] — vô thức vừa là kho quá khứ vừa là mầm mống tương lai
 - [[sources/phan-i-chuc-nang-cua-nhung-giac-mo]] — vô thức chứa liên kết tâm lý dưới ngưỡng ý thức, giấc mơ là ngôn ngữ của vô thức
+- [[sources/the-undiscovered-self]] — tự hiểu mình đòi hỏi phải biết các nội dung vô thức, không chỉ biết bản ngã ý thức
 
 ## Related Concepts
 

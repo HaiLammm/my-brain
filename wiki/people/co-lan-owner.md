@@ -5,7 +5,7 @@ slug: co-lan-owner
 date_added: 2026-05-12
 affiliation: tailor_project — Persona chủ tiệm/sáng lập
 tags:
-  - persona
+  - user-persona
   - owner
   - management
 id: people/co-lan-owner

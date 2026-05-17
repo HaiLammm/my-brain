@@ -12,7 +12,7 @@ id: concepts/kim-nen
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:
-  - sources/phan-i-qua-khu-va-tuong-lai-trong-vo-thuc
+  - sources/the-quotable-jung
 related_concepts:
   - concepts/vo-thuc
   - concepts/vo-thuc-ca-nhan

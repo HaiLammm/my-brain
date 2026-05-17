@@ -9,10 +9,12 @@ tags:
   - psychiatrist
 id: TODO
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-14
 key_sources:
   - sources/man-and-his-symbols
   - sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi
+  - sources/the-undiscovered-self
+  - sources/the-question-of-psychological-types
 ---
 
 ## Overview
@@ -23,6 +25,8 @@ Carl Gustav Jung (1875-1961) là bác sĩ tâm thần và nhà tư tưởng ngư
 
 - [[sources/man-and-his-symbols]] — tác phẩm cuối cùng, viết về Vô thức
 - [[sources/phan-i-qua-khu-va-tuong-lai-trong-vo-thuc]] — Bài 3: quá khứ và tương lai trong vô thức
+- [[sources/the-undiscovered-self]] — tiểu luận xã hội - tâm lý về cá nhân, đám đông, tôn giáo và tự hiểu mình
+- [[sources/the-question-of-psychological-types]] — tập thư và lời dẫn nhập học thuật về quá trình ông hình thành typology
 
 ## Key Concepts
 

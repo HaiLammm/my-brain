@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Tư tưởng hướng nội"
+title: Tư tưởng hướng nội
 slug: tu-tuong-huong-noi
 date_added: 2026-05-12
 confidence: high
@@ -9,10 +9,11 @@ tags:
   - jung
 id: concepts/tu-tuong-huong-noi
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-14
 key_sources:
   - sources/man-and-his-symbols
   - sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi
+  - sources/the-question-of-psychological-types
 related_concepts:
   - concepts/tu-tuong-huong-ngoai
   - concepts/vo-thuc
@@ -30,6 +31,7 @@ Tư tưởng hướng nội (Introversion) là một trong hai thái độ tâm 
 ## Key sources
 
 - [[sources/man-and-his-symbols]]
+- [[sources/the-question-of-psychological-types]] — nguồn gốc học thuyết cho thấy khái niệm này được tinh luyện trong thư từ 1915-1916
 
 ## Related concepts
 

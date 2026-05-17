@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Cảm nhận (chức năng tâm lý)"
+title: Cảm nhận (chức năng tâm lý)
 slug: cam-nhan-tam-ly
 date_added: 2026-05-12
 confidence: high
@@ -9,13 +9,13 @@ tags:
   - feeling-function
 id: concepts/cam-nhan-tam-ly
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-14
 key_sources:
   - sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi
+  - sources/the-question-of-psychological-types
 related_concepts:
   - concepts/bon-chuc-nang-tam-ly
   - concepts/ly-tri-tam-ly
-
 ---
 
 ## Định nghĩa
@@ -30,6 +30,7 @@ Cảm nhận (feeling) là một trong bốn chức năng tâm lý theo Jung, l�
 ## Nguồn chính
 
 - [[sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi]] — Jung định nghĩa cảm nhận và phân biệt với cảm xúc
+- [[sources/the-question-of-psychological-types]] — Cho thấy feeling từng được Jung buộc rất sát với cực hướng ngoại trước khi mô hình chín hơn
 
 ## Khái niệm liên quan
 

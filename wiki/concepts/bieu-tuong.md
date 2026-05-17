@@ -9,9 +9,13 @@ tags:
   - symbolism
 id: TODO
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-14
 key_sources:
   - sources/man-and-his-symbols
+  - sources/phan-i-qua-khu-va-tuong-lai-trong-vo-thuc
+  - sources/phan-i-chuc-nang-cua-nhung-giac-mo
+  - sources/the-undiscovered-self
+  - sources/the-quotable-jung
 related_concepts:
   - concepts/vo-thuc
   - concepts/nguyen-mau
@@ -32,6 +36,7 @@ Biểu tượng (Symbol) là ngôn ngữ của vô thức — cách thức mà v
 - [[sources/man-and-his-symbols]] — nguồn chính về vai trò của biểu tượng trong tâm lý học Jung
 - [[sources/phan-i-qua-khu-va-tuong-lai-trong-vo-thuc]] — biểu tượng cổ xưa (rắn ngậm đuôi) xuất hiện trong mạc khải khoa học
 - [[sources/phan-i-chuc-nang-cua-nhung-giac-mo]] — biểu tượng trong giấc mơ không "ngụy trang" mà phản ánh bản chất hình tượng của vô thức
+- [[sources/the-undiscovered-self]] — biểu tượng tôn giáo là phương tiện giúp cá nhân nối lại quan hệ với các lực tâm lý sâu hơn bản ngã
 
 ## Related Concepts
 

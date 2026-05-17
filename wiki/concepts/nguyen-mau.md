@@ -9,9 +9,11 @@ tags:
   - archetype
 id: TODO
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-14
 key_sources:
   - sources/man-and-his-symbols
+  - sources/the-undiscovered-self
+  - sources/the-quotable-jung
 related_concepts:
   - concepts/vo-thuc
   - concepts/bieu-tuong
@@ -33,6 +35,7 @@ Nguyên mẫu (Archetype) là những mô hình tâm lý bẩm sinh, có mặt t
 ## Key Sources
 
 - [[sources/man-and-his-symbols]] — nguồn chính về nguyên mẫu
+- [[sources/the-undiscovered-self]] — Jung gắn nguyên mẫu với các hình thức bản năng cổ xưa và với nhu cầu tái diễn giải biểu tượng tôn giáo
 
 ## Related Concepts
 

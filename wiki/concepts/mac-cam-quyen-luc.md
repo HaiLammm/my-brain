@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Mặc cảm quyền lực"
+title: Mặc cảm quyền lực
 slug: mac-cam-quyen-luc
 date_added: 2026-05-12
 confidence: high
@@ -12,11 +12,11 @@ created: 2026-05-12
 updated: 2026-05-12
 key_sources:
   - sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi
+  - sources/lam-chu-quyen-luc-noi-tai
 related_concepts:
   - concepts/mac-cam-tu-ti
   - concepts/chuc-nang-bu-dap
   - concepts/vo-thuc
-
 ---
 
 ## Định nghĩa
@@ -31,6 +31,7 @@ Mặc cảm quyền lực (power complex) là thuật ngữ của Jung biểu th
 ## Nguồn chính
 
 - [[sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi]] — Jung mô tả mặc cảm quyền lực và ví dụ giấc mơ bù đắp
+- [[sources/lam-chu-quyen-luc-noi-tai]] — Bất lực (powerlessness) như trạng thái tâm lý độc hại
 
 ## Khái niệm liên quan
 

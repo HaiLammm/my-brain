@@ -9,10 +9,12 @@ tags:
   - personality-type
 id: TODO
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-14
 key_sources:
   - sources/man-and-his-symbols
   - sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi
+  - sources/the-question-of-psychological-types
+  - sources/lam-chu-quyen-luc-noi-tai
 related_concepts:
   - concepts/vo-thuc
   - concepts/bon-chuc-nang-tam-ly
@@ -30,6 +32,8 @@ Tư tưởng hướng ngoại (Extravert/Introversion) là một trong những t
 ## Key Sources
 
 - [[sources/man-and-his-symbols]]
+- [[sources/lam-chu-quyen-luc-noi-tai]] — Thái độ hướng ngoại trong quyến rũ chiến lược
+- [[sources/the-question-of-psychological-types]] — phần dẫn nhập và thư từ cho thấy cách cực hướng ngoại được dùng như đối cực đối thoại của Jung
 
 ## Related Concepts
 

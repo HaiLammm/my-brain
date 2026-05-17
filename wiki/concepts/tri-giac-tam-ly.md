@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Tri giác (chức năng tâm lý)"
+title: Tri giác (chức năng tâm lý)
 slug: tri-giac-tam-ly
 date_added: 2026-05-12
 confidence: high
@@ -9,13 +9,13 @@ tags:
   - sensation-function
 id: concepts/tri-giac-tam-ly
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-14
 key_sources:
   - sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi
+  - sources/the-question-of-psychological-types
 related_concepts:
   - concepts/bon-chuc-nang-tam-ly
   - concepts/truc-giac-tam-ly
-
 ---
 
 ## Định nghĩa
@@ -30,6 +30,7 @@ Tri giác (sensation) là một trong bốn chức năng tâm lý theo Jung, là
 ## Nguồn chính
 
 - [[sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi]] — Jung mô tả tri giác và đối lập với trực giác
+- [[sources/the-question-of-psychological-types]] — Phần hậu sử giúp định vị tri giác trong bước chuyển từ nhị nguyên ban đầu sang mô hình chức năng đầy đủ hơn
 
 ## Khái niệm liên quan
 

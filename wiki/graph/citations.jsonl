@@ -12,3 +12,11 @@
 {"from":"sources/technical-research-semantic-to-geometric-translation-architecture","type":"cites","to":"sources/tailor-project-prd"}
 {"from":"sources/technical-research-semantic-to-geometric-translation-architecture","type":"cites","to":"sources/epic-breakdown-tailor-project"}
 {"from":"sources/technical-research-semantic-to-geometric-translation-architecture","type":"cites","to":"sources/epic-1-implementation-artifacts-tailor-project"}
+{"from":"sources/the-quotable-jung","type":"cites","to":"sources/man-and-his-symbols"}
+{"from":"sources/the-quotable-jung","type":"cites","to":"sources/the-undiscovered-self"}
+{"from":"sources/epic-2-implementation-artifacts-tailor-project","type":"cites","to":"sources/epic-1-implementation-artifacts-tailor-project"}
+{"from":"sources/epic-2-implementation-artifacts-tailor-project","type":"cites","to":"sources/tailor-project-prd"}
+{"from":"sources/epic-2-implementation-artifacts-tailor-project","type":"cites","to":"sources/epic-breakdown-tailor-project"}
+{"from":"sources/buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet","type":"cites","to":"sources/cam-nang-giai-ma-cau-truc-cv-chuan"}
+{"from":"sources/buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet","type":"cites","to":"sources/chien-luoc-phong-van-dot-pha"}
+{"from":"sources/buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet","type":"cites","to":"sources/tell-me-about-yourself-interview-framework"}

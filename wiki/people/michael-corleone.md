@@ -7,11 +7,19 @@ affiliation: []
 tags:
   - mafia
   - gia-dinh-corleone
+  - jungian-psychology
 id: TODO
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-05-14
 key_sources:
   - sources/bo-gia
+  - sources/man-and-his-symbols
+related_concepts:
+  - [[concepts/nguyen-mau-father]]
+  - [[concepts/ca-nhan-hoa]]
+  - [[concepts/mac-cam-quyen-luc]]
+  - [[concepts/mac-cam-tu-ti]]
+  - [[concepts/vo-thuc-ca-nhan]]
 ---
 
 ## Overview
@@ -25,3 +33,31 @@ Michael Corleone là đứa con út của Vito Corleone. Ban đầu anh là ngư
 ## Notes
 
 Michael là nhân vật chính của loạt phim "The Godfather" và là người cuối cùng tiếp quản đế chế Corleone sau cái chết của cha và anh trai Sonny.
+
+## Jungian Analysis
+
+Michael Corleone là ví dụ kinh điển về **quá trình cá nhân hóa bị đảo ngược** — không đạt được [[concepts/ca-nhan-hoa]] mà bị nguyên mẫu Father chiếm hữu.
+
+**Con đường cá nhân hóa dang dở:**
+
+Ban đầu, Michael đại diện cho nỗ lực cá nhân hóa — tách mình khỏi hình bóng người cha để trở thành bản thân riêng. Việc anh gia nhập Thủy quân Lục chiến là biểu hiện củamong muốn thoát khỏi [[concepts/nguyen-mau-father]] và xây dựng identity độc lập.
+
+**Nguyên mẫu Father chiếm hữu:**
+
+Khi Vito bị ám sát, [[concepts/vo-thuc-ca-nhan]] của Michael bị kích hoạt mạnh mẽ. Hình ảnh "người cha bị hại" trỗi dậy từ vô thức, kéo anh vào quỹ đạo nguyên mẫu Father. Không như Vito — người sở hữu cả mặt sáng lẫn mặt tối của Father — Michael chỉ thừa hưởng **mặt tối**: quyền lực tuyệt đối, thống trị, trừng phạt (xem [[concepts/nguyen-mau-father]]).
+
+**Mặc cảm quyền lực bù đắp tự ti:**
+
+Michael là hiện thân của sự tương tác giữa [[concepts/mac-cam-quyen-luc]] và [[concepts/mac-cam-tu-ti]]. Với tư cách con út, anh luôn ở vị trí yếu thế trong gia đình — mặc cảm tự ti kéo theo khát vọng quyền lực. Cuối cùng, Michael trở thành ông trùm tàn nhẫn hơn cả cha mình, nhưng đánh mất chính mình: cô lập, lạnh lùng, mất kết nối gia đình.
+
+**Kết quả: cá nhân hóa thất bại:**
+
+Bi kịch của Michael nằm ở chỗ anh **tưởng mình đang lựa chọn** nhưng thực chất bị vô thức thao túng. [[concepts/vo-thuc]] hất những hình ảnh Father lên ý thức, và Michael nhầm lẫn sự thôi thúc của nguyên mẫu với quyết định tự chủ. Càng nắm quyền lực, anh càng xa rời bản ngã thật — quá trình ngược lại hoàn toàn với cá nhân hóa.
+
+**Related concepts:**
+
+- [[concepts/nguyen-mau-father]] — nguyên mẫu Father chiếm hữu Michael
+- [[concepts/ca-nhan-hoa]] — quá trình Michael không đạt được
+- [[concepts/mac-cam-quyen-luc]] — mặc cảm thúc đẩy Michael nắm quyền
+- [[concepts/mac-cam-tu-ti]] — mặc cảm ẩn sau quyền lực
+- [[concepts/vo-thuc-ca-nhan]] — vô thức cá nhân kích hoạt khi cha bị hại

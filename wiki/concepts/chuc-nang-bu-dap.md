@@ -11,10 +11,11 @@ tags:
   - Jung
 id: concepts/chuc-nang-bu-dap
 created: 2026-05-12
-updated: 2026-05-12
+updated: 2026-05-14
 key_sources:
   - sources/phan-i-chuc-nang-cua-nhung-giac-mo
   - sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi
+  - sources/the-question-of-psychological-types
 related_concepts:
   - concepts/mac-cam-quyen-luc
   - concepts/mac-cam-tu-ti
@@ -32,6 +33,7 @@ Chức năng bù đắp (compensatory function) của giấc mơ là khái niệ
 ## Nguồn chính
 
 - [[sources/phan-i-chuc-nang-cua-nhung-giac-mo]] — Jung trình bày chức năng bù đắp như luận điểm trung tâm của bài viết
+- [[sources/the-question-of-psychological-types]] — Thư từ và lời dẫn nhập cho thấy logic bù trừ còn vận hành cả trong xung đột type và sự xuất hiện của chức năng đối cực
 
 ## Khái niệm liên quan
 

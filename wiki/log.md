@@ -21,3 +21,56 @@ _Append-only. Format: `## [YYYY-MM-DD] skill | details`_
 ## [2026-05-12] check | session:4e4bb479 | 0 errors, 0 warnings advisory.
 ## [2026-05-12] ingest | session:87003f32 | Added "Epic 1 — Implementation Artifacts (tailor_project)" → 9 pages touched (1 source + 6 concepts + 2 sources updated)
 ## [2026-05-12] ingest | session:4f314c9f | Added "Nghiên cứu kỹ thuật: Kiến trúc Dịch ngữ Ngữ nghĩa-Hình học" → 18 pages touched (1 source + 16 concepts + 1 person)
+## [2026-05-13] ingest | session:2160ef74 | Added "Sao Chúng Ta Lại Ngủ" → 17 pages touched (1 source + 13 concepts + 3 people)
+## [2026-05-14] verify | session:e8cf22ea | Verified 1 entries: 1 passed, 0 findings, 0 skipped, 0 drift.
+## [2026-05-14] ingest | session:535c64e2 | Added "Khuyến học" → 12 pages touched
+## [2026-05-14] edit | session:3241d0f2 | Added Jungian analysis to Michael Corleone (individuation reversal, Father possession, power/inferiority complex), Sonny Corleone (Sensation function dominance, participation mystique, unintegrated Shadow), Tom Hagen (Feeling function, Anima role in Father structure, partial individuation). Added 14 concept edges across 3 person pages.
+## [2026-05-14] ingest | session:e460b1fb | Added "The Undiscovered Self" → 11 pages touched
+## [2026-05-14] ingest | session:eca09b06 | Added "The Quotable Jung" → 11 pages touched (1 source + 7 concepts new + 2 people new + 1 index)
+## [2026-05-14] ingest | session:61d24893 | Added "Psychology and Western Religion" → 10 pages touched
+## [2026-05-14] ingest | session:652c5aa1 | Added "The Question of Psychological Types" → 18 pages touched
+## [2026-05-14] ingest | session:0cc41b98 | Added "Phạm Thị Thanh Thảo — Ghi chú cá nhân" → 4 pages touched
+## [2026-05-14] check | session:6984a4ea | 0 errors, 0 warnings. All 207 files pass.
+## [2026-05-14] ingest | session:cd6fd993 | Added "JD Backend Python EAERA" → 5 pages touched (1 source, 4 concepts)
+## [2026-05-14] ingest | session:a98834bb | Added "Epic 2 — Implementation Artifacts (tailor_project)" → 9 pages touched (1 source + 8 concepts new)
+## [2026-05-14] verify | session:078851a4 | Verified 1 entries: 0 passed, 1 findings, 0 skipped, 0 drift.
+## [2026-05-14] verify | session:4709986f | Verified 1 entries: 1 passed, 0 findings, 0 skipped, 0 drift.
+## [2026-05-14] ingest | session:0bae6b57 | Added "Lập Trình Viên Python Mid-Level (2-3 Năm Kinh Nghiệm) - Thái Bình" → 6 pages touched (1 source, 5 concepts)
+## [2026-05-14] ingest | session:9088c061 | Added "Epic 3 — Implementation Artifacts (tailor_project)" → 9 pages touched
+## [2026-05-14] ingest | session:57fea9a8 | Added "Hồ sơ cá nhân — Lương Hải Lâm" → 5 pages touched (1 source, 1 person, 3 concepts)
+## [2026-05-14] edit | session:30da859d | Updated sources/danangnavi-architecture-decision-document: sửa authors thành Lương Hải Lâm, thêm authored_by → people/luong-hai-lam
+## [2026-05-14] lumi-learning-reflect | session:79cc8057 | reflected on xac-thuc-nguoi-dung-trong-tailor-project; evolution_count=1
+## [2026-05-14] lumi-learning-reflect | session:8deb08d3 | reflected on xac-thuc-nguoi-dung-trong-tailor-project; evolution_count=2
+## [2026-05-14] lumi-learning-reflect | session:956a5f1f | reflected on xac-thuc-nguoi-dung-trong-tailor-project; evolution_count=3
+## [2026-05-15] lumi-learning-reflect | session:5e20d214 | reflected on xac-thuc-nguoi-dung-trong-tailor-project; evolution_count=4
+## [2026-05-15] ingest | session:1497ec58 | Added "Hướng dẫn sử dụng Look trên Linux Mint" → 4 pages touched
+## [2026-05-15] ingest | session:65cbb51e | Added "Hướng dẫn sử dụng Look trên Linux Mint" → 4 pages touched
+## [2026-05-15] verify | session:182e056c | Verified 1 entries: 1 passed, 0 findings, 0 skipped, 0 drift.
+## [2026-05-15] ingest | session:67fe963c | Added "Kiến trúc Hệ thống: Lộ trình Mở rộng Quy mô cho Hệ thống Hàng triệu Người dùng" → 13 pages touched (1 source + 10 concepts new + 2 concepts updated)
+## [2026-05-15] verify | session:f7d00b1b | Verified 1 entries: 0 passed, 1 findings, 0 skipped, 0 drift.
+## [2026-05-15] verify | session:ffd891fd | Verified 1 entries: 1 passed, 0 findings, 0 skipped, 0 drift.
+## [2026-05-15] ingest | session:ae9e0cb2 | Added "Epic 4 — Implementation Artifacts (tailor_project)" → 6 pages touched
+## [2026-05-15] verify | session:eb2c81c8 | Verified 1 entries: 0 passed, 1 findings, 0 skipped, 0 drift.
+## [2026-05-15] verify | session:3cc51dc6 | Verified 1 entries: 1 passed, 0 findings, 0 skipped, 0 drift.
+## [2026-05-15] ingest | session:5690ef3e | Added "EAERA - Hồ sơ công ty" → 7 pages touched (1 source + 6 concepts updated)
+## [2026-05-16] verify | session:e38b2576 | Verified 1 entries: 0 passed, 1 findings, 0 skipped, 0 drift.
+## [2026-05-16] verify | session:97e4beb3 | Verified 1 entries: 0 passed, 1 findings, 0 skipped, 0 drift.
+## [2026-05-16] ingest | session:153dac45 | Added "Hướng dẫn viết bài SEO cho Setsubi-pro" → 6 pages touched
+## [2026-05-16] ingest | session:3d0ba553 | Added "Kế hoạch nội dung blog và SEO cho Setsuki-pro" → 7 pages touched (1 source + 4 concepts new + 2 concepts updated)
+## [2026-05-16] check | session:468d5b65 | 0 errors, 0 warnings advisory. 0 errors remain.
+## [2026-05-16] edit | session:5ca43269 | Drafted first Setsubi-pro SEO article -> outputs/seo-01-aircon-atatakaku-naranai.md
+## [2026-05-16] ingest | session:142030cc | Added "Practical Statistics for Data Scientists" → 16 pages touched
+## [2026-05-16] lumi-research-prefill | session:42c6ef42 | prefilled foundation machine-learning (provenance: partial - Wikipedia summary used)
+## [2026-05-16] ingest | session:dca36dbc | Added "Epic 5 — Implementation Artifacts (tailor_project)" → 10 pages touched (1 source + 9 concepts)
+## [2026-05-17] verify | session:4455e9a0 | Verified 1 entry: 1 passed (external-only), 0 findings, 0 skipped, 0 drift.
+## [2026-05-17] lumi-research-topic | session:8a565ccd | created topic machine-learning covering 2 sources, 9 concepts
+## [2026-05-17] ingest | session:86a1cc25 | Added "Làm chủ quyền lực nội tại" → 7 pages touched (1 source, 2 concepts, 4 people)
+## [2026-05-17] ingest | session:8a1c0310 | Added "Chiến lược hành vi — Vanessa Van Edwards về giao tiếp phi ngôn ngữ" → 9 pages touched (1 source + 4 concepts + 2 people new, 1 concept + 1 source updated)
+## [2026-05-17] ingest | session:b4f225cb | Added "Vin J — Chuyên gia giao tiếp về sức mạnh giọng nói và ngôn ngữ cơ thể" → 7 pages touched
+## [2026-05-17] output | session:e0f3db72 | SEO bài 02 — トイレが詰まった！原因別の対処法と業者を呼ぶべきケース -> outputs/seo-02-toilet-tsumari.md
+## [2026-05-17] ask | session:0cdd792c | tao bai SEO 03 cho setsubi-pro -> outputs/seo-03-kyutoki-ugokanai.md
+## [2026-05-18] verify | session:98ed4ee1 | Verified 1 entries: 1 passed, 0 findings, 0 skipped, 0 drift.
+## [2026-05-18] ingest | session:f998b4b6 | Added "Buổi Huấn Luyện Chuyên Sâu về Viết CV Tiếng Nhật" → 7 pages touched (1 source, 3 concept stubs, 3 existing pages updated)
+## [2026-05-18] ingest | session:81a69606 | Added "Buổi Huấn Luyện Chuyên Sâu về Viết CV Tiếng Nhật" → 7 pages touched (1 source, 3 concept stubs, 3 existing pages updated)
+## [2026-05-18] verify | session:c2ef43de | Verified 1 entries (--external): 0 passed, 1 findings_pending (12 findings), 0 skipped, 0 drift.
+## [2026-05-18] verify | session:460ba9d4 | Updated buoi-huan-luyen source: identified instructor as pham-thi-thanh-thao, fixed authored_by edge, corrected 6 claims per verify findings.
