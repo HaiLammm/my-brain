@@ -1423,3 +1423,17 @@
 {"from":"themes/bo-gia/the-gioi-ngam","type":"appears_in","to":"chapters/bo-gia/chuong-8"}
 {"from":"chapters/bo-gia/chuong-8","type":"tagged_with","to":"themes/bo-gia/su-ke-thua"}
 {"from":"themes/bo-gia/su-ke-thua","type":"appears_in","to":"chapters/bo-gia/chuong-8"}
+{"from":"sources/review-bai-seo-cho-setsubi-pro","type":"uses_concept","to":"concepts/seo-symptom-problem-first"}
+{"from":"concepts/seo-symptom-problem-first","type":"used_in","to":"sources/review-bai-seo-cho-setsubi-pro"}
+{"from":"sources/review-bai-seo-cho-setsubi-pro","type":"uses_concept","to":"concepts/noi-dung-giai-thich-cho-nguoi-khong-chuyen"}
+{"from":"concepts/noi-dung-giai-thich-cho-nguoi-khong-chuyen","type":"used_in","to":"sources/review-bai-seo-cho-setsubi-pro"}
+{"from":"sources/review-bai-seo-cho-setsubi-pro","type":"uses_concept","to":"concepts/cta-mem"}
+{"from":"concepts/cta-mem","type":"used_in","to":"sources/review-bai-seo-cho-setsubi-pro"}
+{"from":"sources/review-bai-seo-cho-setsubi-pro","type":"uses_concept","to":"concepts/bang-tu-xu-ly-hay-goi-tho"}
+{"from":"concepts/bang-tu-xu-ly-hay-goi-tho","type":"used_in","to":"sources/review-bai-seo-cho-setsubi-pro"}
+{"from":"sources/review-bai-seo-cho-setsubi-pro","type":"introduces_concept","to":"concepts/mat-do-tu-khoa-seo"}
+{"from":"concepts/mat-do-tu-khoa-seo","type":"introduced_in","to":"sources/review-bai-seo-cho-setsubi-pro"}
+{"from":"sources/review-bai-seo-cho-setsubi-pro","type":"introduces_concept","to":"concepts/cau-truc-heading-seo"}
+{"from":"concepts/cau-truc-heading-seo","type":"introduced_in","to":"sources/review-bai-seo-cho-setsubi-pro"}
+{"from":"sources/review-bai-seo-cho-setsubi-pro","type":"builds_on","to":"sources/huong-dan-viet-bai-seo-cho-setsubi-pro"}
+{"from":"sources/huong-dan-viet-bai-seo-cho-setsubi-pro","type":"built_upon_by","to":"sources/review-bai-seo-cho-setsubi-pro"}

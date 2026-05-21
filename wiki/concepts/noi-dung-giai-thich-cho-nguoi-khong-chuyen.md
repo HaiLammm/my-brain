@@ -28,6 +28,7 @@ Nội dung giải thích cho người không chuyên là kiểu viết giữ gó
 ## Key sources
 
 - [[sources/huong-dan-viet-bai-seo-cho-setsubi-pro]]
+- [[sources/review-bai-seo-cho-setsubi-pro]]
 
 ## Related concepts
 

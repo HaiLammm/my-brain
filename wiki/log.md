@@ -95,3 +95,4 @@ _Append-only. Format: `## [YYYY-MM-DD] skill | details`_
 ## [2026-05-21] chapter-ingest | session:6838305a | bo-gia ch6 "Chương 6" -> 6 characters, 3 themes
 ## [2026-05-21] chapter-ingest | session:07f3ce25 | bo-gia ch7 "Chương 7" -> 4 characters, 3 themes
 ## [2026-05-21] chapter-ingest | session:d6507d56 | bo-gia ch8 "Chương 8" -> 14 characters, 3 themes
+## [2026-05-21] ingest | session:2f705f16 | Added "Review bài SEO cho Setsubi-Pro" → 7 pages touched

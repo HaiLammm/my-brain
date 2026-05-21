@@ -32,6 +32,7 @@ SEO symptom/problem-first là cách viết nội dung bắt đầu trực tiếp
 - [[sources/huong-dan-viet-bai-seo-cho-setsubi-pro]]
 - [[sources/ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro]]
 - [[sources/review-seo]]
+- [[sources/review-bai-seo-cho-setsubi-pro]]
 
 ## Related concepts
 

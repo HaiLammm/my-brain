@@ -28,6 +28,7 @@ Bảng tự xử lý hay gọi thợ là một khung trình bày ngắn gọn gi
 ## Key sources
 
 - [[sources/huong-dan-viet-bai-seo-cho-setsubi-pro]]
+- [[sources/review-bai-seo-cho-setsubi-pro]]
 
 ## Related concepts
 
