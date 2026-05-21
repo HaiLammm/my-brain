@@ -84,6 +84,8 @@ _Append-only. Format: `## [YYYY-MM-DD] skill | details`_
 ## [2026-05-18] verify | session:2dec736d | Verified 1 entries: 0 passed, 1 findings_pending, 0 skipped, 0 drift.
 ## [2026-05-18] ask | CV tiếng Việt hoàn chỉnh của Lương Hải Lâm → outputs/cv-luong-hai-lam-tieng-viet.md
 ## [2026-05-18] edit | Xóa outputs/cv-jiko-pr-shibodoki-eaera.md (bản nháp cũ). CV chính thức: outputs/cv-luong-hai-lam-tieng-viet.md. Cập nhật people/luong-hai-lam.md.
+## [2026-05-18] ingest | session:fa1cc97e | Added "Dr. Daniel Amen về ADHD, Sức Khỏe Não và Chấn Thương Tâm Lý" → 11 pages touched (1 source + 7 concept stubs mới + 1 person mới + 2 pages updated)
+## [2026-05-18] ask | session:983c68a9 | tao bai SEO 04 cho setsubi-pro -> outputs/seo-04-kagi-o-nakushita.md
 ## [2026-05-21] chapter-ingest | session:7e24016f | bo-gia ch1 "Chương 1" -> 25 characters, 4 themes
 ## [2026-05-21] chapter-ingest | session:2e4b752d | bo-gia ch2 "Chương 2" -> 16 characters, 4 themes
 ## [2026-05-21] chapter-ingest | session:bfa46456 | bo-gia ch3 "Chương 3" -> 6 characters, 2 themes
