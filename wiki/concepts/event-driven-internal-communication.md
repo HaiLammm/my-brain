@@ -14,6 +14,7 @@ created: 2026-05-12
 updated: 2026-05-12
 key_sources:
   - sources/danangnavi-architecture-decision-document
+  - sources/luong-hai-lam-4
 related_concepts:
   - concepts/modular-monolith
 ---
@@ -43,3 +44,7 @@ _(Chưa có)_
 ## Ghi chú
 
 Quy ước đặt tên event: `{module}.{entity}.{action}` (snake_case). Ví dụ: `listing.listing.created`, `review.review.voted_helpful`, `gamification.user.badge_upgraded`. Payload chuẩn gồm `event`, `timestamp`, `actor_id`, và `payload`. Anti-pattern nghiêm cấm: import module khác trực tiếp trong backend Python code.
+
+## Key sources
+
+- [[sources/luong-hai-lam-4]]

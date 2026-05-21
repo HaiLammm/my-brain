@@ -14,6 +14,7 @@ created: 2026-05-12
 updated: 2026-05-12
 key_sources:
   - sources/epic-1-implementation-artifacts-tailor-project
+  - sources/luong-hai-lam-4
 related_concepts:
   - concepts/rbac
   - concepts/ssot
@@ -32,6 +33,7 @@ Multi-tenant RLS (Row-Level Security) là phương pháp cô lập dữ liệu g
 ## Key sources
 
 - [[sources/epic-1-implementation-artifacts-tailor-project]]
+- [[sources/luong-hai-lam-4]]
 
 ## Related concepts
 

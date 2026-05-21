@@ -9,6 +9,7 @@ created: 2026-05-15
 updated: 2026-05-15
 key_sources:
   - sources/kien-truc-he-thong-lo-trinh-mo-rong-quy-mo-cho-he-thong-hang-trieu-nguoi-dung
+  - sources/luong-hai-lam-4
 related_concepts: []
 ---
 ## Definition
@@ -24,6 +25,7 @@ Cơ sở dữ liệu NoSQL là nhóm hệ lưu trữ ưu tiên tính linh hoạt
 ## Key sources
 
 - [[sources/kien-truc-he-thong-lo-trinh-mo-rong-quy-mo-cho-he-thong-hang-trieu-nguoi-dung]]
+- [[sources/luong-hai-lam-4]]
 
 ## Related concepts
 

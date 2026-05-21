@@ -69,6 +69,19 @@ Buổi huấn luyện nhóm (17/05/2026) do [[people/pham-thi-thanh-thao]] — c
 - [[people/pham-thi-thanh-thao]] — người hướng dẫn (chị Thảo)
 - [[people/luong-hai-lam]] — học viên nhận phản hồi CV
 
+## Phản hồi CV theo học viên
+
+### [[people/luong-hai-lam]] — Lương Hải Lâm
+
+Chị Thảo đánh giá CV của Lâm **chưa đạt chuẩn CV tiếng Nhật** với 4 vấn đề chính:
+
+1. **Jiko PR sai cấu trúc** — không theo khung 4 bước (Kết luận → Bối cảnh → Kết quả → Cam kết cống hiến).
+2. **Thiếu hoàn toàn Shibodoki** — không có phần mong muốn ứng tuyển (志望動機).
+3. **Kinh nghiệm làm việc không nổi bật** — chưa áp dụng khung 5 bước; thành tích kỹ thuật có nhưng không được trình bày theo logic Kết luận → Lí do → Ví dụ → Kết luận lại → Ứng dụng.
+4. **Không có Self-PR** — thiếu phần tự PR bản thân rõ ràng.
+
+**Hướng xử lý**: Viết lại toàn bộ theo khung [[concepts/khung-trinh-bay-cv]], đặc biệt ưu tiên bổ sung Shibodoki nhắm vào JD cụ thể (EAERA).
+
 ## Open questions
 
 - Con số "vài giây" HR lướt qua CV cần xác minh: nguồn ngoài cho thấy 7–11 giây, không có nghiên cứu xác nhận riêng cho CV Nhật.

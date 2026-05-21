@@ -13,6 +13,7 @@ created: 2026-05-12
 updated: 2026-05-12
 key_sources:
   - sources/technical-research-semantic-to-geometric-translation-architecture
+  - sources/luong-hai-lam-4
 related_concepts: []
 ---
 
@@ -23,6 +24,7 @@ FastAPI là web framework Python hiệu năng cao cho xây dựng API endpoints.
 ## Key sources
 
 - [[sources/technical-research-semantic-to-geometric-translation-architecture]]
+- [[sources/luong-hai-lam-4]]
 
 ## Related concepts
 

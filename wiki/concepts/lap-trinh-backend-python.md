@@ -14,6 +14,7 @@ updated: 2026-05-15
 key_sources:
   - sources/lap-trinh-vien-backend-python-2-nam-kinh-nghiem-eaera
   - sources/eaera-ho-so-cong-ty
+  - sources/luong-hai-lam-4
 related_concepts:
   - concepts/he-thong-crm
   - concepts/docker-va-kubernetes
@@ -32,6 +33,7 @@ Lập trình backend Python là phát triển phần máy chủ của ứng dụ
 
 - [[sources/lap-trinh-vien-backend-python-2-nam-kinh-nghiem-eaera]]
 - [[sources/eaera-ho-so-cong-ty]]
+- [[sources/luong-hai-lam-4]]
 
 ## Related concepts
 

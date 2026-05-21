@@ -13,6 +13,7 @@ created: 2026-05-12
 updated: 2026-05-12
 key_sources:
   - sources/danangnavi-architecture-decision-document
+  - sources/luong-hai-lam-4
 related_concepts:
   - concepts/event-driven-internal-communication
   - concepts/three-sided-cultural-bridge
@@ -44,3 +45,7 @@ _(Chưa có)_
 ## Ghi chú
 
 Lựa chọn này đặc biệt phù hợp cho solo developer + dự án greenfield. Microservices thêm network overhead, distributed debugging complexity, và deployment orchestration cost không cần thiết ở giai đoạn đầu. Modular monolith cho phép tách module thành microservice sau khi xác định được bottleneck cụ thể.
+
+## Key sources
+
+- [[sources/luong-hai-lam-4]]

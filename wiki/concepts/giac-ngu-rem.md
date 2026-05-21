@@ -37,4 +37,6 @@ Giấc ngủ REM (Rapid Eye Movement) là giai đoạn chiếm ~20–25% tổng 
 
 ## Mentioned in
 
+- [[concepts/he-lymph-nao]]
+
 ## Notes

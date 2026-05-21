@@ -10,6 +10,7 @@ created: 2026-05-14
 updated: 2026-05-14
 key_sources:
   - sources/luong-hai-lam
+  - sources/luong-hai-lam-4
 related_concepts:
   - concepts/tich-hop-he-thong-ben-thu-ba
   - concepts/event-driven-internal-communication
@@ -28,6 +29,7 @@ Circuit Breaker (bộ ngắt mạch) là resilience pattern trong kiến trúc p
 ## Key sources
 
 - [[sources/luong-hai-lam]]
+- [[sources/luong-hai-lam-4]]
 
 ## Related concepts
 

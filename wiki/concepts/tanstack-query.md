@@ -13,6 +13,7 @@ created: 2026-05-14
 updated: 2026-05-14
 key_sources:
   - sources/epic-2-implementation-artifacts-tailor-project
+  - sources/luong-hai-lam-4
 related_concepts:
   - concepts/ssot
   - concepts/digital-showroom
@@ -30,6 +31,7 @@ TanStack Query (trước đây là React Query) là thư viện quản lý state
 ## Key sources
 
 - [[sources/epic-2-implementation-artifacts-tailor-project]]
+- [[sources/luong-hai-lam-4]]
 
 ## Related concepts
 

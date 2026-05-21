@@ -1,6 +1,6 @@
 ---
 type: concept
-title: "Hourensou (報連相)"
+title: Hourensou (報連相)
 slug: hourensou
 date_added: 2026-05-18
 confidence: high
@@ -13,6 +13,7 @@ created: 2026-05-18
 updated: 2026-05-18
 key_sources:
   - sources/buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet
+  - sources/huong-dan-viet-cv-pr-self-pr-tieng-nhat
 related_concepts:
   - concepts/jiko-pr
 ---
@@ -28,6 +29,7 @@ Hourensou (報連相) là từ ghép của ba nguyên tắc giao tiếp công s�
 ## Key sources
 
 - [[sources/buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet]]
+- [[sources/huong-dan-viet-cv-pr-self-pr-tieng-nhat]]
 
 ## Related concepts
 

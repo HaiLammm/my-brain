@@ -12,7 +12,8 @@ tags:
 id: TODO
 created: 2026-05-14
 updated: 2026-05-14
-key_sources: []
+key_sources:
+  - sources/luong-hai-lam-4
 related_concepts: []
 ---
 
@@ -29,6 +30,7 @@ Authoritative Server Pattern là chiến lược thiết kế mà trong đó bac
 ## Key sources
 
 - [[sources/epic-3-implementation-artifacts-tailor-project]]
+- [[sources/luong-hai-lam-4]]
 
 ## Related concepts
 

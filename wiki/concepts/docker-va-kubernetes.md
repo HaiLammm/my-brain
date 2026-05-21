@@ -15,6 +15,7 @@ updated: 2026-05-15
 key_sources:
   - sources/lap-trinh-vien-backend-python-2-nam-kinh-nghiem-eaera
   - sources/eaera-ho-so-cong-ty
+  - sources/luong-hai-lam-4
 related_concepts:
   - concepts/lap-trinh-backend-python
 ---
@@ -32,6 +33,7 @@ Docker và Kubernetes là công nghệ container hóa và điều phối contain
 
 - [[sources/lap-trinh-vien-backend-python-2-nam-kinh-nghiem-eaera]]
 - [[sources/eaera-ho-so-cong-ty]]
+- [[sources/luong-hai-lam-4]]
 
 ## Related concepts
 

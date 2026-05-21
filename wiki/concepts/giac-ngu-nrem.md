@@ -37,4 +37,6 @@ Giấc ngủ NREM (Non-Rapid Eye Movement) là giai đoạn chiếm ~75–80% t�
 
 ## Mentioned in
 
+- [[concepts/he-lymph-nao]]
+
 ## Notes

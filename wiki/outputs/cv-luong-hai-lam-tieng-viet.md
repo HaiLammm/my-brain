@@ -23,9 +23,9 @@ GitHub: github.com/HaiLammm | Đại học Đông Á — Công nghệ Phần m�
 
 ## Giới thiệu bản thân
 
-Backend Developer với điểm mạnh cốt lõi: **nhìn ra vấn đề thực tế của người dùng và thiết kế kiến trúc backend đúng ngay từ đầu** — trước khi viết dòng code đầu tiên.
+Tôi là backend developer với điểm mạnh **nhìn ra vấn đề thực tế của người dùng và thiết kế kiến trúc backend đúng ngay từ đầu** trước khi viết dòng code đầu tiên.
 
-Năng lực này hình thành từ thực tế: khi thấy mẹ đang gặp khó khăn trong quản lý nhân sự và kết nối khách hàng tại tiệm may, tôi quyết định vừa học vừa tự xây dựng giải pháp. Không xây theo giả định — tôi trực tiếp quan sát quy trình làm việc, phỏng vấn để hiểu nghiệp vụ, liên tục điều chỉnh theo phản hồi thực tế. Hệ thống hiện được mẹ sử dụng hàng ngày: không còn quên lịch hẹn, giao việc thợ rõ ràng, tính lương cuối tháng minh bạch.
+Năng lực này hình thành từ khi thấy mẹ đang gặp khó khăn trong quản lý nhân sự và kết nối khách hàng tại tiệm may, tôi quyết định vừa học vừa tự xây dựng giải pháp. Không xây theo giả định , tôi trực tiếp quan sát quy trình làm việc, phỏng vấn để hiểu nghiệp vụ, liên tục điều chỉnh theo phản hồi thực tế. Hệ thống hiện được mẹ sử dụng hàng ngày: không còn quên lịch hẹn, giao việc thợ rõ ràng, tính lương cuối tháng minh bạch.
 
 Tôi tiếp tục áp dụng cách tiếp cận này khi xây dựng DaNangNavi — kết nối cộng đồng người Nhật tại Đà Nẵng. Bắt đầu từ quan sát nhu cầu thực tế, không phải từ code.
 

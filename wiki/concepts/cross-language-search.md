@@ -14,6 +14,7 @@ created: 2026-05-12
 updated: 2026-05-12
 key_sources:
   - sources/danangnavi-architecture-decision-document
+  - sources/luong-hai-lam-4
 related_concepts:
   - concepts/three-sided-cultural-bridge
   - concepts/context-aware-voice-translation
@@ -45,3 +46,7 @@ _(Chưa có)_
 ## Ghi chú
 
 DaNangNavi sử dụng Meilisearch 1.16+ với CJK tokenization cho tiếng Nhật và analysis cho tiếng Việt. Flow: JP Query → Translation Module → Normalized Query → Meilisearch (JP + VN content) → Ranked Results. PostgreSQL full-text search là fallback khi Meilisearch không khả dụng.
+
+## Key sources
+
+- [[sources/luong-hai-lam-4]]
