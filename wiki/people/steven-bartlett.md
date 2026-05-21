@@ -21,6 +21,7 @@ Steven Bartlett là doanh nhân, tác giả và người dẫn chương trình p
 ## Key sources
 
 - [[sources/chien-luoc-hanh-vi-vanessa-van-edwards-ve-giao-tiep-phi-ngon-ngu]]
+- [[sources/dr-daniel-amen-on-adhd-brain-health-and-trauma]]
 
 ## Key concepts
 
