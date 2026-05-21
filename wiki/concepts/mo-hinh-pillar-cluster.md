@@ -28,6 +28,7 @@ Mô hình pillar-cluster là cách tổ chức nội dung bằng một vài nhó
 ## Key sources
 
 - [[sources/ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro]]
+- [[sources/review-seo]]
 
 ## Related concepts
 

@@ -28,6 +28,7 @@ Checklist SEO 100 điểm là khung kiểm tra chất lượng trước khi xu�
 ## Key sources
 
 - [[sources/ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro]]
+- [[sources/review-seo]]
 
 ## Related concepts
 

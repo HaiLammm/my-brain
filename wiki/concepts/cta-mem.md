@@ -28,6 +28,7 @@ CTA mềm là lời mời hành động xuất hiện như một phương án h�
 ## Key sources
 
 - [[sources/huong-dan-viet-bai-seo-cho-setsubi-pro]]
+- [[sources/review-seo]]
 
 ## Related concepts
 
