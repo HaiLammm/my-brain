@@ -84,3 +84,12 @@ _Append-only. Format: `## [YYYY-MM-DD] skill | details`_
 ## [2026-05-18] verify | session:2dec736d | Verified 1 entries: 0 passed, 1 findings_pending, 0 skipped, 0 drift.
 ## [2026-05-18] ask | CV tiếng Việt hoàn chỉnh của Lương Hải Lâm → outputs/cv-luong-hai-lam-tieng-viet.md
 ## [2026-05-18] edit | Xóa outputs/cv-jiko-pr-shibodoki-eaera.md (bản nháp cũ). CV chính thức: outputs/cv-luong-hai-lam-tieng-viet.md. Cập nhật people/luong-hai-lam.md.
+## [2026-05-21] chapter-ingest | session:7e24016f | bo-gia ch1 "Chương 1" -> 25 characters, 4 themes
+## [2026-05-21] chapter-ingest | session:2e4b752d | bo-gia ch2 "Chương 2" -> 16 characters, 4 themes
+## [2026-05-21] chapter-ingest | session:bfa46456 | bo-gia ch3 "Chương 3" -> 6 characters, 2 themes
+## [2026-05-21] chapter-ingest | session:497752e3 | bo-gia ch4 "Chương 4" -> 11 characters, 2 themes
+## [2026-05-21] chapter-ingest | session:05c61ad9 | bo-gia ch5 "Chương 5" -> 10 characters, 3 themes
+## [2026-05-21] edit | session:75228173 | Updated characters/bo-gia: normalized first_seen on 29 pages to chapter slugs
+## [2026-05-21] chapter-ingest | session:6838305a | bo-gia ch6 "Chương 6" -> 6 characters, 3 themes
+## [2026-05-21] chapter-ingest | session:07f3ce25 | bo-gia ch7 "Chương 7" -> 4 characters, 3 themes
+## [2026-05-21] chapter-ingest | session:d6507d56 | bo-gia ch8 "Chương 8" -> 14 characters, 3 themes
