@@ -96,3 +96,13 @@ _Append-only. Format: `## [YYYY-MM-DD] skill | details`_
 ## [2026-05-21] chapter-ingest | session:07f3ce25 | bo-gia ch7 "Chương 7" -> 4 characters, 3 themes
 ## [2026-05-21] chapter-ingest | session:d6507d56 | bo-gia ch8 "Chương 8" -> 14 characters, 3 themes
 ## [2026-05-21] ingest | session:2f705f16 | Added "Review bài SEO cho Setsubi-Pro" → 7 pages touched
+## [2026-05-21] ask | session:8e3faf04 | SEO-01 v2: viết lại hoàn toàn bài エアコンが暖かくならない, áp dụng review rules + feedback -> outputs/seo-01-aircon-atatakaku-naranai.md
+## [2026-05-21] ask | session:31914188 | SEO-05: bài mới トイレの水が止まらない (W4, Situation, High) -> outputs/seo-05-toilet-mizu-tomaranai.md
+## [2026-05-27] chapter-ingest | session:d677e597 | bo-gia ch9-ch32 (24 chương) → 62 characters, 6 themes, 24 plot-beat pages
+## [2026-05-29] chapter-ingest | session:929988b5 | man-and-his-symbols ch1 "Lời Nói Đầu" -> 4 characters, 4 themes
+## [2026-05-29] chapter-ingest | session:f9d80c25 | man-and-his-symbols ch2 "Tầm Quan Trọng Của Giấc Mơ" -> 1 characters, 4 themes
+## [2026-05-29] chapter-ingest | session:f3855dfc | man-and-his-symbols ch3 "Quá Khứ Và Tương Lai Trong Vô Thức" -> 0 characters, 3 themes
+## [2026-05-29] chapter-ingest | session:7e51d8f1 | man-and-his-symbols ch4 "Chức Năng của Những Giấc Mơ" -> 0 characters, 3 themes
+## [2026-05-29] chapter-ingest | session:e96ea13a | man-and-his-symbols ch5 "Phân Tích Giấc Mơ" -> 0 characters, 3 themes
+## [2026-05-29] chapter-ingest | session:46dd3fe9 | man-and-his-symbols ch6 "Vấn Đề về Các Mẫu Người" -> 0 characters, 3 themes
+## [2026-05-29] ingest | session:d97a8cf9 | psychology-and-the-occult: Jung - Psychology and the Occult (Routledge, 2008) -> 1 source, 0 concepts mới, 3 concepts cập nhật, 3 people cập nhật

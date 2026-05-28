@@ -13,6 +13,7 @@ created: 2026-05-12
 updated: 2026-05-12
 key_sources:
   - sources/phan-i-qua-khu-va-tuong-lai-trong-vo-thuc
+  - sources/psychology-and-the-occult
 related_concepts:
   - concepts/vo-thuc
   - concepts/vo-thuc-ca-nhan

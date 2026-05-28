@@ -14,6 +14,7 @@ key_sources:
   - sources/phan-i-qua-khu-va-tuong-lai-trong-vo-thuc
   - sources/the-undiscovered-self
   - sources/the-question-of-psychological-types
+  - sources/psychology-and-the-occult
 ---
 
 ## Overview

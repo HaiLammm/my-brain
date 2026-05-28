@@ -14,6 +14,7 @@ created: 2026-05-12
 updated: 2026-05-12
 key_sources:
   - sources/phan-i-chuc-nang-cua-nhung-giac-mo
+  - sources/psychology-and-the-occult
 related_concepts: []
 ---
 	

@@ -15,6 +15,7 @@ key_sources:
   - sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi
   - sources/the-undiscovered-self
   - sources/the-question-of-psychological-types
+  - sources/psychology-and-the-occult
 ---
 
 ## Overview

@@ -11,6 +11,7 @@ created: 2026-05-11
 updated: 2026-05-11
 key_sources:
   - sources/man-and-his-symbols
+  - sources/psychology-and-the-occult
 ---
 
 ## Overview

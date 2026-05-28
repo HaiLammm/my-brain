@@ -13,6 +13,7 @@ created: 2026-05-12
 updated: 2026-05-12
 key_sources:
   - sources/bai-5-phan-i-phan-tich-giac-mo
+  - sources/psychology-and-the-occult
 related_concepts:
   - concepts/vo-thuc-ca-nhan
   - concepts/nguyen-mau
