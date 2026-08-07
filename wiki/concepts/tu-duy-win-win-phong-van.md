@@ -11,7 +11,7 @@ id: concepts/tu-duy-win-win-phong-van
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:
-  - sources/chien-luoc-phong-van-ot-pha
+  - sources/chien-luoc-phong-van-dot-pha
   - sources/ky-nang-phong-van-tu-duy-phan-xa-giai-ma-logic
   - sources/tell-me-about-yourself-interview-framework
   - sources/tips-for-answering-interview-questions

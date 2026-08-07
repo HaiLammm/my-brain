@@ -5,7 +5,7 @@ slug: amerigo-bonasera
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-1
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-08-07
 tags:
   - bo-gia
 id: TODO
@@ -17,4 +17,7 @@ Chủ nhà xe tang (undertaker). Con gái bị hai thanh niên đánh đập dã
 
 ## Appearances
 
-- [[chapters/bo-gia/chuong-1]]
+- [[chapters/bo-gia/chuong-1]] — xin Bố Già trả thù cho con gái, bị khiển trách vì chỉ tin pháp luật rồi mới tìm đến
+- [[chapters/bo-gia/chuong-18]] — được gọi đến nhà đòn, kinh hoàng nhận ra trên cáng là thi thể Sonny
+- [[chapters/bo-gia/chuong-19]] — được Ông Trùm sai Hagen gọi đến lo khâm liệm
+- [[chapters/bo-gia/chuong-29]] — tự tay khâm liệm Bố Già trong tang lễ

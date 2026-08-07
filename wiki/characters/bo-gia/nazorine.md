@@ -5,7 +5,7 @@ slug: nazorine
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-1
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-08-07
 tags:
   - bo-gia
 id: TODO
@@ -17,4 +17,6 @@ Chủ lò bánh mì, bạn thân từ nhỏ của Vito Corleone ở Sicily. Đ�
 
 ## Appearances
 
-- [[chapters/bo-gia/chuong-1]]
+- [[chapters/bo-gia/chuong-1]] — xin Bố Già lo nhập tịch cho Enzo để gả con gái Katherine
+- [[chapters/bo-gia/chuong-14]] — là xóm giềng gắn bó với Vito từ thuở hàn vi
+- [[chapters/bo-gia/chuong-29]] — có mặt trong hàng ngũ người chịu ơn dự tang lễ

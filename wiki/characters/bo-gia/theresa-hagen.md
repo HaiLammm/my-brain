@@ -5,7 +5,7 @@ slug: theresa-hagen
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-4
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-08-07
 tags:
   - bo-gia
 id: TODO
@@ -17,4 +17,4 @@ Vợ của Tom Hagen. Gốc Ý, người New Jersey. Đẹp, nhỏ nhắn, tế 
 
 ## Appearances
 
-- [[chapters/bo-gia/chuong-4]]
+- [[chapters/bo-gia/chuong-4]] — khóc nức nở đón chồng trở về từ tay Sollozzo

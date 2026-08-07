@@ -11,7 +11,7 @@ id: concepts/bo-tu-tru-cot-tuyen-dung
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:
-  - sources/chien-luoc-phong-van-ot-pha
+  - sources/chien-luoc-phong-van-dot-pha
 related_concepts:
   - concepts/tu-duy-win-win-phong-van
 ---

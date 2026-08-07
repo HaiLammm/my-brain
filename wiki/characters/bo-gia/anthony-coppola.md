@@ -5,7 +5,7 @@ slug: anthony-coppola
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-1
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-08-07
 tags:
   - bo-gia
 id: TODO
@@ -17,4 +17,4 @@ Con cháu nhà Corleone, cha từng cùng làm phu hỏa xa với Vito. Đến x
 
 ## Appearances
 
-- [[chapters/bo-gia/chuong-1]]
+- [[chapters/bo-gia/chuong-1]] — đến xin Bố Già vay 500 đô mở tiệm bánh chiên

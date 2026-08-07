@@ -5,7 +5,7 @@ slug: jerry-wagner
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-1
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-08-07
 tags:
   - bo-gia
 id: TODO
@@ -17,4 +17,4 @@ id: TODO
 
 ## Appearances
 
-- [[chapters/bo-gia/chuong-1]]
+- [[chapters/bo-gia/chuong-1]] — một trong hai kẻ hành hung con gái Bonasera, bị Paulie Gatto đánh nát mặt

@@ -106,3 +106,12 @@ _Append-only. Format: `## [YYYY-MM-DD] skill | details`_
 ## [2026-05-29] chapter-ingest | session:e96ea13a | man-and-his-symbols ch5 "Phân Tích Giấc Mơ" -> 0 characters, 3 themes
 ## [2026-05-29] chapter-ingest | session:46dd3fe9 | man-and-his-symbols ch6 "Vấn Đề về Các Mẫu Người" -> 0 characters, 3 themes
 ## [2026-05-29] ingest | session:d97a8cf9 | psychology-and-the-occult: Jung - Psychology and the Occult (Routledge, 2008) -> 1 source, 0 concepts mới, 3 concepts cập nhật, 3 people cập nhật
+## [2026-05-29] chapter-ingest | session:cdd3f4a7 | khuyen-hoc ch1-ch17 (17 phần) -> 12 nhân vật, 13 chủ đề, 17 plot-beat pages
+## [2026-05-29] ask | session:68b23196 | Tổng hợp phân tích Jung xuyên suốt Bố Già -> outputs/phan-tich-jung-bo-gia.md
+## [2026-05-30] output | session:lumi-help-seo | Drafted 10 new SEO articles for Setsubi-pro (điện + nước): seo-06 aircon-noisy, seo-07 aircon-not-cooling, seo-08 aircon-no-power, seo-09 breaker-tripping, seo-10 breaker-wont-reset, seo-11 kitchen-water-leak, seo-12 bath-drain-clog, seo-13 kitchen-drain-smell, seo-14 washbasin-no-water, seo-15 bath-water-leak. Tuân thủ prompt-viet-bai-seo-setsubi-pro.md và feedback_seo_article_structure.md.
+## [2026-06-01] ingest | session:b7d91d6b | Added "Review SEO — Cấu trúc 3 phần cho bài SEO troubleshooting Setsubi-pro" → 9 pages touched (1 source mới, 3 concept mới, 5 concept cập nhật, plus 4 source nối ngược)
+## [2026-06-01] seo | session:59af956c | Tạo 5 bài SEO điện-nước theo template 3-phần: seo-16 (outlet-not-working), seo-17 (lights-flickering), seo-18 (faucet-wont-stop-running), seo-19 (low-water-pressure), seo-20 (hot-water-lukewarm)
+## [2026-08-07] edit | session:56952c5f | Updated characters/bo-gia/sonny-corleone: bổ sung mục sai lầm chương 2 (chen lời hỏi bảo đảm vốn, lộ ý ủng hộ thương vụ Sollozzo) + thú nhận 'sủa ẩu' chương 4; thêm chuong-2/3/4 vào Appearances; edges expresses_theme su-ke-thua và appears_with sollozzo
+## [2026-08-07] character-track | session:ad41e94b | bo-gia ch1-ch32 -> 62 characters updated, 128 edges added
+## [2026-08-07] character-track | session:3947b099 | bo-gia -> removed 8 orphan edges (barzini, ginny-fontane) + rebuilt graph: 2507 -> 2499 edges
+## [2026-08-07] edit | session:69e16e37 | Sửa 7 edge mồ côi ngoài bo-gia: nắn slug sources/chien-luoc-phong-van-ot-pha -> dot-pha (3 concept key_sources + 4 edge, thêm 6 edge introduces_concept/introduced_in); chuyển 3 edge produced từ outputs/cv-jiko-pr-shibodoki-eaera (đã xóa 2026-05-18) sang outputs/cv-luong-hai-lam-tieng-viet. Graph: 0 edge mồ côi, 2501 edge.

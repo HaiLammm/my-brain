@@ -12,7 +12,7 @@ created: 2026-05-12
 updated: 2026-05-12
 key_sources:
   - sources/cam-nang-giai-ma-cau-truc-cv-chuan
-  - sources/chien-luoc-phong-van-ot-pha
+  - sources/chien-luoc-phong-van-dot-pha
   - sources/ptthao
   - sources/buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet
 related_concepts:
