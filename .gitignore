@@ -4,3 +4,7 @@ raw/tmp/
 .env
 node_modules/
 Obsidian-*.AppImage
+
+# Nguồn thô quá lớn cho git (GitHub cảnh báo >50MB, chặn >100MB).
+# File vẫn nằm trên đĩa để ingest, chỉ không đưa vào lịch sử repo.
+raw/sources/book/Hands-On_Machine_Learning_with_Scikit-Learn-Keras-and-TensorFlow-2nd-Edition-Aurelien-Geron.pdf
