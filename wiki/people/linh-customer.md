@@ -28,6 +28,6 @@ Linh là persona khách hàng trong tailor_project — nhà thiết kế số (d
 - [[concepts/tailor/ao-dai-bespoke]]
 - [[concepts/tailor/unified-order-workflow]]
 - [[concepts/tailor/physical-emotional-compiler]]
-- [[concepts/tailor/appointment-booking]]
+- [[concepts/tailor/booking-flow]]
 
 ## Notes

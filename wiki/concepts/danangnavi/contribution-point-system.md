@@ -18,12 +18,10 @@ related_concepts:
 
 ---
 
-## Định nghĩa
-
+## Definition
 Hệ thống gamification trong đó hoạt động cộng đồng được thưởng điểm có thể tích lũy để đạt cấp badge. Badge không chỉ là vanity metric mà thể hiện thẩm quyền xã hội thực tế — đánh giá từ Senpai được hiển thị nổi bật trong "Senpai Picks". Hệ thống gắn điểm đóng góp với thẩm quyền xã hội thực thay vì chỉ số ảo.
 
-## Biến thể
-
+## Variants
 | Hành động | Điểm |
 |-----------|------|
 | Viết đánh giá | +5 |
@@ -40,18 +38,14 @@ Hệ thống gamification trong đó hoạt động cộng đồng được thư
 | Senpai | 500 | 🏅 |
 | Expert Senpai | 2.000 | 👑 |
 
-## Nguồn chính
-
+## Key sources
 - [[sources/danangnavi-product-requirements-document]]
 
-## Khái niệm liên quan
-
+## Related concepts
 - [[concepts/danangnavi/senpai-trust-flywheel]]
 
-## Được nhắc đến
-
+## Mentioned in
 _(Chưa có)_
 
-## Ghi chú
-
+## Notes
 Điểm khác biệt cốt lõi so với gamification truyền thống: Senpai badge thể hiện kinh nghiệm sống thực tế tại Đà Nẵng, không phải chỉ là người dùng hoạt động nhiều. Yêu cầu tối thiểu 500 điểm và hoạt động cộng đồng liên tục.

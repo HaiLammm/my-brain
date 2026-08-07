@@ -20,22 +20,18 @@ related_concepts:
   - concepts/danangnavi/context-aware-voice-translation
 ---
 
-## Định nghĩa
-
+## Definition
 Cross-language search là khả năng tìm kiếm nội dung bằng ngôn ngữ truy vấn khác với ngôn ngữ nội dung, trả kết quả đa ngôn ngữ được xếp hạng. Ví dụ: người dùng Nhật gõ "美味しいラーメー" (ramen ngon) và nhận kết quả nhà hàng Việt Nam "Phở Hòa" với mô tả tiếng Việt đã được dịch và đánh matching score.
 
-## Biến thể
-
+## Variants
 - **Index-side bilingual** — nội dung được dịch và index song song (cả JP + VN trong Meilisearch), query gốc match trực tiếp
 - **Query-side translation** — query được dịch trước rồi tìm trong index mono-language
 - **Hybrid** — kết hợp cả hai: Meilisearch chạy query trên cả trường JP và VN, xếp hạng bằng relevance scoring
 
-## Nguồn chính
-
+## Key sources
 - [[sources/danangnavi-architecture-decision-document]]
 
-## Khái niệm liên quan
-
+## Related concepts
 - [[concepts/danangnavi/three-sided-cultural-bridge]]
 - [[concepts/danangnavi/context-aware-voice-translation]]
 
@@ -43,8 +39,7 @@ Cross-language search là khả năng tìm kiếm nội dung bằng ngôn ngữ 
 
 _(Chưa có)_
 
-## Ghi chú
-
+## Notes
 DaNangNavi sử dụng Meilisearch 1.16+ với CJK tokenization cho tiếng Nhật và analysis cho tiếng Việt. Flow: JP Query → Translation Module → Normalized Query → Meilisearch (JP + VN content) → Ranked Results. PostgreSQL full-text search là fallback khi Meilisearch không khả dụng.
 
 ## Key sources

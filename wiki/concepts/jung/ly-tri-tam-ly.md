@@ -18,21 +18,17 @@ related_concepts:
   - concepts/jung/cam-nhan-tam-ly
 ---
 
-## Định nghĩa
-
+## Definition
 Lý trí (thinking) là một trong bốn chức năng tâm lý theo Jung, dùng năng lực trí tuệ để thích nghi với con người và tình huống. Lý trí cho biết sự vật là gì — phân tích, diễn giải, và tạo ra các liên kết logic. Đối lập với cảm nhận (feeling).
 
-## Biến thể
-
+## Variants
 - Lý trí hướng ngoại — dựa vào chuẩn mực khách quan, sự đồng thuận
 - Lý trí hướng nội — dựa vào cấu trúc logic chủ quan nội tại
 
-## Nguồn chính
-
+## Key sources
 - [[sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi]] — Jung phân biệt lý trí với các chức năng khác
 - [[sources/the-question-of-psychological-types]] — Theo dõi vai trò của thinking trong giai đoạn Jung còn gắn nó chặt với thái độ hướng nội
 
-## Khái niệm liên quan
-
+## Related concepts
 - [[concepts/jung/bon-chuc-nang-tam-ly]] — Bốn chức năng tâm lý
 - [[concepts/jung/cam-nhan-tam-ly]] — Chức năng đối lập: cảm nhận

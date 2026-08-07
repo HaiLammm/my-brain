@@ -18,28 +18,22 @@ related_concepts:
 
 ---
 
-## Định nghĩa
-
+## Definition
 Chính sách chỉ cho phép tải ảnh được chụp trực tiếp bằng camera thiết bị — không cho phép tải lên từ thư viện/gallery. Xác thực được thực hiện qua kiểm tra EXIF metadata của ảnh để đảm bảo ảnh được chụp tại chỗ thay vì tải từ nguồn bên ngoài. Mục đích: đảm bảo hình ảnh đánh giá và danh mục phản ánh trải nghiệm thực tế.
 
-## Biến thể
-
+## Variants
 - **Review photo enforcement**: Ảnh trong đánh giá phải chụp trực tiếp — EXIF phải chứa thiết bị chụp và thời gian gần đây
 - **Business listing photos**: Chủ doanh nghiệp cũng phải chụp trực tiếp — loại bỏ ảnh stock và ảnh sao chép
 - **Admin override**: Admin có thể gắn cờ và loại bỏ ảnh nghi ngờ vi phạm chính sách
 
-## Nguồn chính
-
+## Key sources
 - [[sources/danangnavi-product-requirements-document]]
 
-## Khái niệm liên quan
-
+## Related concepts
 - [[concepts/danangnavi/closed-data-philosophy]]
 
-## Được nhắc đến
-
+## Mentioned in
 _(Chưa có)_
 
-## Ghi chú
-
+## Notes
 Yêu cầu phi chức năng: ảnh tải lên tối đa 10MB, được quét malware, xác thực loại tệp + EXIF + kích thước. Ảnh được nén và tối ưu cho giao diện web qua CDN.

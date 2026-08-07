@@ -22,23 +22,19 @@ related_concepts:
   - concepts/jung/tu-tuong-huong-noi
 ---
 		
-## Định nghĩa
-
+## Definition
 Bốn chức năng tâm lý (four psychological functions) là mô hình của Jung mô tả bốn cách thức cơ bản mà ý thức sử dụng để định hướng trải nghiệm: **lý trí** (thinking) — cho biết sự vật là gì; **cảm nhận** (feeling) — đánh giá dễ hay khó chịu; **tri giác** (sensation) — nhận thức sự tồn tại qua giác quan; và **trực giác** (intuition) — cho biết nguồn gốc và hướng đi. Bốn chức năng tạo thành "la bàn tâm lý", mỗi chiếc có một chiếc đối lập: lý trí đối lập cảm nhận, tri giác đối lập trực giác.
 
-## Biến thể
-
+## Variants
 - **Chức năng trội** — phát triển mạnh nhất, được sử dụng có ý thức
 - **Chức năng phụ** — hỗ trợ chức năng trội, có mức độ phát triển trung bình
 - **Chức năng kém** — chức năng đối lập với chức năng trội, ít phát triển nhất, thường nằm trong vô thức
 
-## Nguồn chính
-
+## Key sources
 - [[sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi]] — Nơi Jung trình bày đầy đủ mô hình bốn chức năng
 - [[sources/the-question-of-psychological-types]] — Cho thấy mô hình bốn chức năng hình thành dần từ các tranh luận typology sớm hơn
 
-## Khái niệm liên quan
-
+## Related concepts
 - [[concepts/jung/ly-tri-tam-ly]] — Chức năng lý trí
 - [[concepts/jung/cam-nhan-tam-ly]] — Chức năng cảm nhận
 - [[concepts/jung/tri-giac-tam-ly]] — Chức năng tri giác

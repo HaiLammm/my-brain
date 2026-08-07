@@ -64,7 +64,7 @@ findings:
 - [[concepts/swe/rbac]]
 - [[concepts/swe/ssot]]
 - [[concepts/tailor/physical-emotional-compiler]]
-- [[concepts/tailor/appointment-booking]]
+- [[concepts/tailor/booking-flow]]
 
 ## Related sources
 

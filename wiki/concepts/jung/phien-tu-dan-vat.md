@@ -16,14 +16,11 @@ related_concepts:
   - concepts/jung/vo-thuc
 ---
 
-## Định nghĩa
-
+## Definition
 Phiền tư dằn vặt (obsession/compulsion) là dạng phân tách tâm lý khi ý thức bị chia rẽ khỏi vô thức. Trong ngữ cảnh Jung, đây là hiện tượng mà các nội dung vô thức xâm nhập ý thức dưới dạng ý nghĩ ép buộc, không thể kiểm soát.
 
-## Nguồn chính
-
+## Key sources
 - [[sources/tam-quan-trong-cua-giac-mo]] — Jung mô tả sự phân tách tâm lý
 
-## Khái niệm liên quan
-
+## Related concepts
 - [[concepts/jung/vo-thuc]] — Nội dung vô thức xâm nhập ý thức

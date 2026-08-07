@@ -34,8 +34,8 @@ Server Action Pattern là pattern giao tiếp frontend-backend được dùng nh
 ## Related concepts
 
 - [[concepts/swe/authoritative-server-pattern]]
-- [[concepts/tailor/checkout-flow]]
-- [[concepts/tailor/calendar-booking-ux]]
+- [[concepts/tailor/checkout-and-payment]]
+- [[concepts/tailor/booking-flow]]
 - [[concepts/swe/tanstack-query]]
 
 ## Notes

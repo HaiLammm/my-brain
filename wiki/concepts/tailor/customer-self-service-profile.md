@@ -15,9 +15,9 @@ updated: 2026-05-15
 key_sources:
   - sources/epic-4-implementation-artifacts-tailor-project
 related_concepts:
-  - concepts/tailor/heritage-palette
+  - concepts/tailor/design-system
   - concepts/tailor/measurement-versioning
-  - concepts/tailor/appointment-booking
+  - concepts/tailor/booking-flow
   - concepts/swe/rbac
   - concepts/tailor/order-status-pipeline
 ---
@@ -38,9 +38,9 @@ Hồ sơ Khách hàng Tự phục vụ là lớp giao diện và API để khác
 
 ## Related concepts
 
-- [[concepts/tailor/heritage-palette]]
+- [[concepts/tailor/design-system]]
 - [[concepts/tailor/measurement-versioning]]
-- [[concepts/tailor/appointment-booking]]
+- [[concepts/tailor/booking-flow]]
 - [[concepts/swe/rbac]]
 - [[concepts/tailor/order-status-pipeline]]
 

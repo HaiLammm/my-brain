@@ -19,21 +19,17 @@ related_concepts:
 
 ---
 
-## Định nghĩa
-
+## Definition
 Mặc cảm tự ti (inferiority complex) là trạng thái cảm giác vô dụng và kém cỏi, thường bị đè nén trong vô thức. Theo Jung, giấc mơ bù đắp cho mặc cảm tự ti bằng cách tạo ra các hình ảnh vĩ đại (gặp Napoleon, Alexander Đại đế) để thỏa mãn khao khát vĩ đại bị đè nén. Tuy nhiên, các ý niệm vô thức về sự vĩ đại cũng có thể cách ly cá nhân khỏi môi trường sống thực tế và cho phép họ tách rời khỏi nghĩa vụ.
 
-## Biến thể
-
+## Variants
 - Mặc cảm tự ti ý thức — cá nhân nhận biết cảm giác kém cỏi
 - Mặc cảm tự ti vô thức — bị đè nén, chỉ biểu hiện qua giấc mơ và hành vi không chủ ý
 
-## Nguồn chính
-
+## Key sources
 - [[sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi]] — Jung phân tích mặc cảm tự ti qua các ca bệnh
 
-## Khái niệm liên quan
-
+## Related concepts
 - [[concepts/jung/mac-cam-quyen-luc]] — Mặc cảm quyền lực thường bù đắp cho mặc cảm tự ti
 - [[concepts/jung/chuc-nang-bu-dap]] — Giấc mơ bù đắp cho mặc cảm tự ti
 - [[concepts/jung/vo-thuc]] — Mặc cảm nằm trong vô thức

@@ -15,10 +15,10 @@ updated: 2026-05-15
 key_sources:
   - sources/epic-4-implementation-artifacts-tailor-project
 related_concepts:
-  - concepts/tailor/heritage-palette
+  - concepts/tailor/design-system
   - concepts/swe/soft-delete
   - concepts/swe/rbac
-  - concepts/tailor/checkout-flow
+  - concepts/tailor/checkout-and-payment
 ---
 
 ## Definition
@@ -37,10 +37,10 @@ Ví Voucher Khách hàng là giao diện và dữ liệu tự phục vụ để 
 
 ## Related concepts
 
-- [[concepts/tailor/heritage-palette]]
+- [[concepts/tailor/design-system]]
 - [[concepts/swe/soft-delete]]
 - [[concepts/swe/rbac]]
-- [[concepts/tailor/checkout-flow]]
+- [[concepts/tailor/checkout-and-payment]]
 
 ## Mentioned in
 

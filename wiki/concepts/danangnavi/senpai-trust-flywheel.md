@@ -20,29 +20,23 @@ related_concepts:
 
 ---
 
-## Định nghĩa
-
+## Definition
 Vòng bay Senpai là mô hình tăng trưởng tự củng cố trong đó người dùng mới bị thu hút bởi nội dung từ senpai (người cư trú lâu năm đáng tin cậy), sau đó dần trở thành senpai mới, tạo ra vòng lặp tăng trưởng hữu cơ. Khác với nền tảng biên tập một chiều, niềm tin được xây từ đóng góp thực tế thay vì tuyển chọn biên tập.
 
-## Biến thể
-
+## Variants
 - **Founding Senpai**: 10–15 người Nhật cư trú lâu năm được tuyển trước khi ra mắt, có badge đặc biệt vĩnh viễn và ưu tiên hiển thị
 - **Expert Senpai**: Cấp cao nhất (2.000+ điểm đóng góp), thể hiện thẩm quyền chuyên sâu về Đà Nẵng
 - **Organic Senpai**: Người dùng đạt 500 điểm đóng góp thông qua hoạt động cộng đồng tự nhiên
 
-## Nguồn chính
-
+## Key sources
 - [[sources/danangnavi-product-requirements-document]]
 
-## Khái niệm liên quan
-
+## Related concepts
 - [[concepts/danangnavi/contribution-point-system]]
 - [[concepts/danangnavi/closed-data-philosophy]]
 
-## Được nhắc đến
-
+## Mentioned in
 _(Chưa có)_
 
-## Ghi chú
-
+## Notes
 Ngưỡng flywheel được xác nhận khi tỷ lệ nội dung tự tạo vượt 60%. Kế hoạch dự phòng: chuyển sang biên tập trước (Plan B) hoặc trả tiền đóng góp (Plan C) nếu nội dung hữu cơ <30% sau 3 tháng.

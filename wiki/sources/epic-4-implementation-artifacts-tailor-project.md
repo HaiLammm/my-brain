@@ -60,16 +60,16 @@ findings: []
 
 ## Concepts
 
-- [[concepts/tailor/payment-webhook-processing]]
+- [[concepts/swe/payment-webhook-processing]]
 - [[concepts/tailor/order-status-pipeline]]
 - [[concepts/tailor/rental-return-processing]]
 - [[concepts/tailor/customer-self-service-profile]]
 - [[concepts/tailor/measurement-versioning]]
-- [[concepts/tailor/appointment-booking]]
+- [[concepts/tailor/booking-flow]]
 - [[concepts/tailor/customer-voucher-wallet]]
 - [[concepts/tailor/in-app-notification-center]]
 - [[concepts/swe/optimistic-update]]
-- [[concepts/tailor/heritage-palette]]
+- [[concepts/tailor/design-system]]
 
 ## Related Sources
 

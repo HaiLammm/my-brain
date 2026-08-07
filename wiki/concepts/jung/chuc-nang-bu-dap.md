@@ -21,22 +21,18 @@ related_concepts:
   - concepts/jung/mac-cam-tu-ti
 ---
 
-## Định nghĩa
-
+## Definition
 Chức năng bù đắp (compensatory function) của giấc mơ là khái niệm cốt lõi của Jung: giấc mơ khôi phục cân bằng tâm lý bằng cách sản sinh ra những hình ảnh và nguyện vọng bù đắp cho những thiên kiến, thành kiến và thiếu sót của ý thức. Khi ý thức quá thiên lệch theo một hướng, vô thức sẽ tạo ra giấc mơ mang nội dung ngược lại để cảnh báo và điều chỉnh.
 
-## Biến thể
-
+## Variants
 - **Bù đắp cảnh báo**: Giấc mơ cảnh báo về nguy hiểm khi ý thức không nhận ra (ví dụ: người leo núi mơ thấy rơi xuống núi)
 - **Bù đắp khiêm tốn**: Giấc mơ nhắc nhở về những khía cạnh tiêu cực mà ý thức chối bỏ (ví dụ: phụ nữ kiêu ngạo mơ thấy bị nhốt trong chuồng bò)
 
-## Nguồn chính
-
+## Key sources
 - [[sources/phan-i-chuc-nang-cua-nhung-giac-mo]] — Jung trình bày chức năng bù đắp như luận điểm trung tâm của bài viết
 - [[sources/the-question-of-psychological-types]] — Thư từ và lời dẫn nhập cho thấy logic bù trừ còn vận hành cả trong xung đột type và sự xuất hiện của chức năng đối cực
 
-## Khái niệm liên quan
-
+## Related concepts
 - [[concepts/jung/ngon-ngu-giac-mo]] — Ngôn ngữ biểu tượng mà giấc mơ sử dụng để bù đắp
 - [[concepts/jung/vo-thuc]] — Vô thức là nguồn gốc của hình ảnh bù đắp
 - [[concepts/jung/thanh-kien-y-thuc]] — Thành kiến ý thức là đối tượng cần bù đắp
@@ -44,4 +40,4 @@ Chức năng bù đắp (compensatory function) của giấc mơ là khái niệ
 
 ## Được nhắc đến trong
 
-## Ghi chú
+## Notes

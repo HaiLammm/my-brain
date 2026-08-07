@@ -18,7 +18,7 @@ related_concepts:
   - concepts/swe/event-driven-internal-communication
   - concepts/swe/soft-delete
   - concepts/swe/optimistic-update
-  - concepts/tailor/heritage-palette
+  - concepts/tailor/design-system
 ---
 
 ## Definition
@@ -40,7 +40,7 @@ Trung tâm Thông báo Trong ứng dụng là lớp feed giúp khách hàng xem 
 - [[concepts/swe/event-driven-internal-communication]]
 - [[concepts/swe/soft-delete]]
 - [[concepts/swe/optimistic-update]]
-- [[concepts/tailor/heritage-palette]]
+- [[concepts/tailor/design-system]]
 
 ## Mentioned in
 

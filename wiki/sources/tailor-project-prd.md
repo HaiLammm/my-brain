@@ -67,7 +67,7 @@ verify_status: passed
 - [[concepts/swe/audit-trail]]
 - [[concepts/swe/ssot]]
 - [[concepts/swe/rbac]]
-- [[concepts/tailor/appointment-booking]]
+- [[concepts/tailor/booking-flow]]
 
 ## People
 

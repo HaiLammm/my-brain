@@ -29,6 +29,6 @@ Cô Lan là persona chủ tiệm/sáng lập trong tailor_project — đại di�
 - [[concepts/swe/audit-trail]]
 - [[concepts/swe/rbac]]
 - [[concepts/swe/ssot]]
-- [[concepts/tailor/appointment-booking]]
+- [[concepts/tailor/booking-flow]]
 
 ## Notes

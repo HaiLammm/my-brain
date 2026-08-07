@@ -56,7 +56,7 @@ CV chính thức dạng PDF của Lương Hải Lâm — Backend Developer chuy�
 - [[concepts/swe/authoritative-server-pattern]]
 - [[concepts/swe/circuit-breaker]]
 - [[concepts/swe/celery]]
-- [[concepts/tailor/checkout-flow]]
+- [[concepts/tailor/checkout-and-payment]]
 - [[concepts/swe/cross-language-search]]
 - [[concepts/swe/race-condition-prevention]]
 - [[concepts/swe/tanstack-query]]

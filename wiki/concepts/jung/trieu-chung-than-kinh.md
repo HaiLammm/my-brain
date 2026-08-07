@@ -17,15 +17,12 @@ related_concepts:
   - concepts/jung/bieu-tuong
 ---
 
-## Định nghĩa
-
+## Definition
 Triệu chứng thần kinh (neurotic symptom) theo Jung là biểu hiện của vô thức, mang ý nghĩa biểu tượng và được mã hóa trong giấc mơ. Freud và Breuer đầu tiên nhận ra các triệu chứng thần kinh đều mang ý nghĩa biểu tượng.
 
-## Nguồn chính
-
+## Key sources
 - [[sources/tam-quan-trong-cua-giac-mo]] — Jung mô tả triệu chứng thần kinh như ngôn ngữ của vô thức
 
-## Khái niệm liên quan
-
+## Related concepts
 - [[concepts/jung/vo-thuc]] — Vô thức chứa nguyên nhân của triệu chứng
 - [[concepts/jung/bieu-tuong]] — Triệu chứng mang tính biểu tượng

@@ -38,11 +38,11 @@ Bộ 5 artifact triển khai cho **Epic 3 — Cart, Checkout & Booking** của t
 
 - **Cart State Management thuần client** — Zustand v5 + persist middleware quản lý giỏ hàng hoàn toàn ở client-side; backend chỉ được gọi khi checkout để verify giá và availability ([[concepts/swe/authoritative-server-pattern]]).
 - **Authoritative Server Pattern** — Giá và tình trạng kho PHẢI được backend xác thực trước khi cho phép thanh toán; Zustand cart chỉ là Optimistic UI, không phải nguồn sự thật ([[concepts/swe/ssot]], [[concepts/swe/authoritative-server-pattern]]).
-- **Checkout flow 3 bước** — (1) Review Cart & Verify → (2) Shipping Info & Payment Method → (3) Confirmation. Mục tiêu: từ Homepage đến Order Confirmation ≤ 3 phút ([[concepts/tailor/checkout-flow]]).
-- **Payment Gateway MVP** — COD là phương thức mặc định (fallback); VNPay/Momo dùng mock payment URL cho MVP; webhook xử lý ở Story 4.1 ([[concepts/tailor/payment-gateway-mvp]]).
-- **Inline Validation (không Zod)** — Frontend validation dùng hàm inline thay vì Zod library (Zod không có trong deps); pattern nhất quán qua các story 3.2, 3.3, 3.4b ([[concepts/tailor/inline-validation]]).
+- **Checkout flow 3 bước** — (1) Review Cart & Verify → (2) Shipping Info & Payment Method → (3) Confirmation. Mục tiêu: từ Homepage đến Order Confirmation ≤ 3 phút ([[concepts/tailor/checkout-and-payment]]).
+- **Payment Gateway MVP** — COD là phương thức mặc định (fallback); VNPay/Momo dùng mock payment URL cho MVP; webhook xử lý ở Story 4.1 ([[concepts/tailor/checkout-and-payment]]).
+- **Inline Validation (không Zod)** — Frontend validation dùng hàm inline thay vì Zod library (Zod không có trong deps); pattern nhất quán qua các story 3.2, 3.3, 3.4b ([[concepts/swe/inline-form-validation]]).
 - **Race Condition Prevention** — `SELECT ... FOR UPDATE` khi tạo appointment và order; MongoDB/PostgreSQL isolation level; double-submit guard ở frontend ([[concepts/swe/race-condition-prevention]]).
-- **Calendar Booking với Slot Management** — Max 3 bookings/slot (sáng/chiều); `get_month_availability()` API; Framer Motion animation; responsive week/month view ([[concepts/tailor/calendar-booking-ux]], [[concepts/tailor/appointment-booking]]).
+- **Calendar Booking với Slot Management** — Max 3 bookings/slot (sáng/chiều); `get_month_availability()` API; Framer Motion animation; responsive week/month view ([[concepts/tailor/booking-flow]], [[concepts/tailor/booking-flow]]).
 - **Server Action Pattern nhất quán** — AbortController timeout 10s; error handling chuẩn hóa; guest checkout hỗ trợ ([[concepts/swe/server-action-pattern]]).
 
 ## Evidence
@@ -57,18 +57,18 @@ Bộ 5 artifact triển khai cho **Epic 3 — Cart, Checkout & Booking** của t
 
 - [[concepts/swe/authoritative-server-pattern]]
 - [[concepts/swe/zustand-cart-store]]
-- [[concepts/tailor/checkout-flow]]
-- [[concepts/tailor/payment-gateway-mvp]]
-- [[concepts/tailor/inline-validation]]
+- [[concepts/tailor/checkout-and-payment]]
+- [[concepts/tailor/checkout-and-payment]]
+- [[concepts/swe/inline-form-validation]]
 - [[concepts/swe/server-action-pattern]]
 - [[concepts/swe/race-condition-prevention]]
-- [[concepts/tailor/calendar-booking-ux]]
-- [[concepts/tailor/appointment-booking]]
+- [[concepts/tailor/booking-flow]]
+- [[concepts/tailor/booking-flow]]
 - [[concepts/swe/ssot]]
 - [[concepts/swe/optimistic-update]]
 - [[concepts/tailor/order-status-pipeline]]
 - [[concepts/tailor/unified-order-workflow]]
-- [[concepts/tailor/heritage-palette]]
+- [[concepts/tailor/design-system]]
 - [[concepts/swe/tanstack-query]]
 
 ## Related sources

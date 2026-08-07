@@ -36,7 +36,7 @@ Race Condition Prevention là tập hợp các chiến lược chống race cond
 ## Related concepts
 
 - [[concepts/swe/authoritative-server-pattern]]
-- [[concepts/tailor/payment-gateway-mvp]]
+- [[concepts/tailor/checkout-and-payment]]
 - [[concepts/swe/ssot]]
 
 ## Notes

@@ -18,21 +18,17 @@ related_concepts:
   - concepts/jung/tri-giac-tam-ly
 ---
 
-## Định nghĩa
-
+## Definition
 Trực giác (intuition) là một trong bốn chức năng tâm lý theo Jung, là chức năng không dựa trên lý lẽ mà được lĩnh hội — một "linh cảm" nói với bạn nguồn gốc và hướng đi của sự vật. Trực giác không phải sản phẩm của hành vi tự nguyện mà là sự kiện không chủ ý, phụ thuộc vào nhiều nhân tố từ môi trường bên ngoài và bên trong. Giống nhận thức bằng giác quan hơn, nhưng dựa trên kích thích khách quan vật lý chứ không phải tâm trí. Đối lập với tri giác (sensation).
 
-## Biến thể
-
+## Variants
 - Trực giác hướng ngoại — cảm nhận cơ hội và khả năng trong thế giới bên ngoài
 - Trực giác hướng nội — cảm nhận nội tâm sâu xa, các hình ảnh từ vô thức
 
-## Nguồn chính
-
+## Key sources
 - [[sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi]] — Jung định nghĩa trực giác và phân biệt với tri giác
 - [[sources/the-question-of-psychological-types]] — Ghi nhận vai trò của Maria Moltzer trong việc Jung dần xem trực giác là một chức năng riêng
 
-## Khái niệm liên quan
-
+## Related concepts
 - [[concepts/jung/bon-chuc-nang-tam-ly]] — Bốn chức năng tâm lý
 - [[concepts/jung/tri-giac-tam-ly]] — Chức năng đối lập: tri giác

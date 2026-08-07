@@ -9,13 +9,13 @@ tags:
   - payment
   - webhook
   - backend
-id: concepts/tailor/payment-webhook-processing
+id: concepts/swe/payment-webhook-processing
 created: 2026-05-15
 updated: 2026-05-15
 key_sources:
   - sources/epic-4-implementation-artifacts-tailor-project
 related_concepts:
-  - concepts/tailor/payment-gateway-mvp
+  - concepts/tailor/checkout-and-payment
   - concepts/swe/authoritative-server-pattern
   - concepts/swe/race-condition-prevention
   - concepts/swe/audit-trail
@@ -38,7 +38,7 @@ Xử lý Webhook Thanh toán là pattern backend nhận callback từ cổng tha
 
 ## Related concepts
 
-- [[concepts/tailor/payment-gateway-mvp]]
+- [[concepts/tailor/checkout-and-payment]]
 - [[concepts/swe/authoritative-server-pattern]]
 - [[concepts/swe/race-condition-prevention]]
 - [[concepts/swe/audit-trail]]
