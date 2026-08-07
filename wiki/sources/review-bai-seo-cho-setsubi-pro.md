@@ -57,6 +57,7 @@ Tài liệu review chi tiết các quy tắc viết bài SEO tiếng Nhật cho 
 ## Related sources
 
 - [[sources/huong-dan-viet-bai-seo-cho-setsubi-pro]]
+- [[sources/cau-truc-3-phan-bai-seo-troubleshooting]]
 
 ## People
 

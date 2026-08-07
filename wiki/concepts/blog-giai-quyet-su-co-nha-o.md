@@ -30,8 +30,12 @@ Blog giải quyết sự cố nhà ở là mô hình nội dung tập trung vào
 
 - [[sources/huong-dan-viet-bai-seo-cho-setsubi-pro]]
 - [[sources/ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro]]
+- [[sources/cau-truc-3-phan-bai-seo-troubleshooting]]
 
 ## Related concepts
+
+- [[concepts/template-seo-3-phan]]
+- [[concepts/noi-dung-phong-ngua-bao-tri-thiet-bi]]
 
 ## Mentioned in
 

@@ -62,6 +62,7 @@ Tài liệu hướng dẫn nội bộ của Setsubi Pro tổng hợp các tiêu 
 
 - [[sources/huong-dan-viet-bai-seo-cho-setsubi-pro]]
 - [[sources/ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro]]
+- [[sources/cau-truc-3-phan-bai-seo-troubleshooting]]
 
 ## People
 

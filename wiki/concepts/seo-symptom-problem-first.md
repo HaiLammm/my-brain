@@ -33,8 +33,11 @@ SEO symptom/problem-first là cách viết nội dung bắt đầu trực tiếp
 - [[sources/ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro]]
 - [[sources/review-seo]]
 - [[sources/review-bai-seo-cho-setsubi-pro]]
+- [[sources/cau-truc-3-phan-bai-seo-troubleshooting]]
 
 ## Related concepts
+
+- [[concepts/template-seo-3-phan]]
 
 ## Mentioned in
 

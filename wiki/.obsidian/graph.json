@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "seo",
+  "search": "bo-gia",
   "showTags": true,
   "showAttachments": true,
   "hideUnresolved": true,
@@ -17,6 +17,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.12682720810577913,
-  "close": false
+  "scale": 0.9630941115532596,
+  "close": true
 }

@@ -59,7 +59,7 @@ findings:
 
 ## Related sources
 
-Chưa nối trực tiếp với nguồn nào khác trong wiki hiện tại.
+- [[sources/cau-truc-3-phan-bai-seo-troubleshooting]]
 
 ## People
 

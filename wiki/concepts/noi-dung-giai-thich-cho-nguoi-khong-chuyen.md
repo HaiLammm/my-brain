@@ -29,8 +29,11 @@ Nội dung giải thích cho người không chuyên là kiểu viết giữ gó
 
 - [[sources/huong-dan-viet-bai-seo-cho-setsubi-pro]]
 - [[sources/review-bai-seo-cho-setsubi-pro]]
+- [[sources/cau-truc-3-phan-bai-seo-troubleshooting]]
 
 ## Related concepts
+
+- [[concepts/template-seo-3-phan]]
 
 ## Mentioned in
 
