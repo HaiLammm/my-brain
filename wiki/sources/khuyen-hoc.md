@@ -38,32 +38,32 @@ Khuyến học là tác phẩm chính trị - giáo dục kinh điển của Fuk
 ## Key claims
 
 - [Cao] Fukuzawa khẳng định con người sinh ra vốn bình đẳng; khác biệt giữa người với người không phải do trời định mà chủ yếu do học hay không học.
-- [Cao] Học vấn đúng nghĩa phải là [[concepts/thuc-hoc]]: học những điều có thể dùng để quản trị đời sống, gia đình và xã hội, thay vì sa vào lối học từ chương vô dụng.
-- [Cao] [[concepts/tu-do]] không phải là làm điều mình thích bất chấp người khác, mà là quyền sống và hành động trong phạm vi không xâm hại quyền lợi của đồng loại.
-- [Cao] [[concepts/chi-khi-doc-lap]] của từng cá nhân là điều kiện tiên quyết để hình thành [[concepts/quoc-dan]] có khả năng bảo vệ nền độc lập của quốc gia.
-- [Cao] Một nước văn minh không thể chỉ dựa vào chính phủ; [[concepts/khai-hoa-van-minh]] phải được dẫn dắt bởi học giả, tầng lớp trung lưu và khu vực tư nhân biết tự chủ.
-- [Cao] [[concepts/phap-tri]] là nền tảng của quốc gia hiện đại: luật phải rõ ràng, nghiêm minh, và mọi hành vi tự xử hay báo thù nhân danh chính nghĩa đều làm hại đất nước.
-- [Cao] Việc học phương Tây chỉ có ích khi là [[concepts/tiep-thu-co-chon-loc]]; sùng bái mù quáng hoặc chạy theo hào nhoáng vật chất đều làm mất độc lập tinh thần.
+- [Cao] Học vấn đúng nghĩa phải là [[concepts/khuyen-hoc/thuc-hoc]]: học những điều có thể dùng để quản trị đời sống, gia đình và xã hội, thay vì sa vào lối học từ chương vô dụng.
+- [Cao] [[concepts/khuyen-hoc/tu-do]] không phải là làm điều mình thích bất chấp người khác, mà là quyền sống và hành động trong phạm vi không xâm hại quyền lợi của đồng loại.
+- [Cao] [[concepts/khuyen-hoc/chi-khi-doc-lap]] của từng cá nhân là điều kiện tiên quyết để hình thành [[concepts/khuyen-hoc/quoc-dan]] có khả năng bảo vệ nền độc lập của quốc gia.
+- [Cao] Một nước văn minh không thể chỉ dựa vào chính phủ; [[concepts/khuyen-hoc/khai-hoa-van-minh]] phải được dẫn dắt bởi học giả, tầng lớp trung lưu và khu vực tư nhân biết tự chủ.
+- [Cao] [[concepts/khuyen-hoc/phap-tri]] là nền tảng của quốc gia hiện đại: luật phải rõ ràng, nghiêm minh, và mọi hành vi tự xử hay báo thù nhân danh chính nghĩa đều làm hại đất nước.
+- [Cao] Việc học phương Tây chỉ có ích khi là [[concepts/khuyen-hoc/tiep-thu-co-chon-loc]]; sùng bái mù quáng hoặc chạy theo hào nhoáng vật chất đều làm mất độc lập tinh thần.
 - [Cao] Quốc dân phải biết vừa tuân thủ luật pháp vừa công khai kháng nghị những gì sai trái; chỉ than phiền sau lưng chính quyền là dấu hiệu của xã hội chưa trưởng thành.
 
 ## Evidence
 
-- Câu mở đầu nổi tiếng "Trời không tạo ra người đứng trên người và cũng không tạo ra người đứng dưới người" được dùng làm điểm tựa cho toàn bộ lập luận về [[concepts/binh-dang]].
-- Fukuzawa liên tục đối chiếu lối học từ chương với các môn thực dụng như địa lý, vật lý, kinh tế và đạo đức để chứng minh giá trị của [[concepts/thuc-hoc]].
-- Ông dùng sự đối lập giữa quân của Imagawa Yoshimoto và quốc dân Pháp thời Napoleon III để cho thấy vì sao [[concepts/chi-khi-doc-lap]] quyết định sức sống quốc gia.
-- Các bàn luận về nghĩa sĩ Akou, "Tenchyu" và tục báo thù được dùng để phân tích giới hạn của bạo lực cá nhân trước [[concepts/phap-tri]].
-- Những chương cuối phê phán việc bắt chước phương Tây từ ăn mặc, tiêu dùng đến tư tưởng, cho thấy hiện đại hóa chỉ bền vững khi có [[concepts/tiep-thu-co-chon-loc]].
+- Câu mở đầu nổi tiếng "Trời không tạo ra người đứng trên người và cũng không tạo ra người đứng dưới người" được dùng làm điểm tựa cho toàn bộ lập luận về [[concepts/khuyen-hoc/binh-dang]].
+- Fukuzawa liên tục đối chiếu lối học từ chương với các môn thực dụng như địa lý, vật lý, kinh tế và đạo đức để chứng minh giá trị của [[concepts/khuyen-hoc/thuc-hoc]].
+- Ông dùng sự đối lập giữa quân của Imagawa Yoshimoto và quốc dân Pháp thời Napoleon III để cho thấy vì sao [[concepts/khuyen-hoc/chi-khi-doc-lap]] quyết định sức sống quốc gia.
+- Các bàn luận về nghĩa sĩ Akou, "Tenchyu" và tục báo thù được dùng để phân tích giới hạn của bạo lực cá nhân trước [[concepts/khuyen-hoc/phap-tri]].
+- Những chương cuối phê phán việc bắt chước phương Tây từ ăn mặc, tiêu dùng đến tư tưởng, cho thấy hiện đại hóa chỉ bền vững khi có [[concepts/khuyen-hoc/tiep-thu-co-chon-loc]].
 
 ## Related concepts
 
-- [[concepts/binh-dang]] — nền tảng đạo lý cho việc phủ nhận đẳng cấp bẩm sinh
-- [[concepts/thuc-hoc]] — lối học thiết thực phục vụ đời sống và xã hội
-- [[concepts/tu-do]] — quyền sống và hành động đi cùng bổn phận
-- [[concepts/chi-khi-doc-lap]] — sức tự chủ tinh thần của cá nhân và dân tộc
-- [[concepts/quoc-dan]] — con người hiện đại biết quyền lợi và trách nhiệm công dân
-- [[concepts/phap-tri]] — nguyên tắc cai trị bằng luật thay cho tùy tiện cá nhân
-- [[concepts/khai-hoa-van-minh]] — công cuộc mở mang dân trí và năng lực xã hội
-- [[concepts/tiep-thu-co-chon-loc]] — học phương Tây mà không sùng bái phương Tây
+- [[concepts/khuyen-hoc/binh-dang]] — nền tảng đạo lý cho việc phủ nhận đẳng cấp bẩm sinh
+- [[concepts/khuyen-hoc/thuc-hoc]] — lối học thiết thực phục vụ đời sống và xã hội
+- [[concepts/khuyen-hoc/tu-do]] — quyền sống và hành động đi cùng bổn phận
+- [[concepts/khuyen-hoc/chi-khi-doc-lap]] — sức tự chủ tinh thần của cá nhân và dân tộc
+- [[concepts/khuyen-hoc/quoc-dan]] — con người hiện đại biết quyền lợi và trách nhiệm công dân
+- [[concepts/khuyen-hoc/phap-tri]] — nguyên tắc cai trị bằng luật thay cho tùy tiện cá nhân
+- [[concepts/khuyen-hoc/khai-hoa-van-minh]] — công cuộc mở mang dân trí và năng lực xã hội
+- [[concepts/khuyen-hoc/tiep-thu-co-chon-loc]] — học phương Tây mà không sùng bái phương Tây
 
 ## Related sources
 

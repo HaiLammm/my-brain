@@ -30,4 +30,4 @@ Quốc dân là con người hiện đại biết cả quyền lợi lẫn trác
 
 ## Notes
 
-Kết nối với khái niệm [[concepts/quoc-dan]] đã được nạp từ trang nguồn [[sources/khuyen-hoc]].
+Kết nối với khái niệm [[concepts/khuyen-hoc/quoc-dan]] đã được nạp từ trang nguồn [[sources/khuyen-hoc]].

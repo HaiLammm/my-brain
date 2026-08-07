@@ -58,19 +58,19 @@ Bộ 7 artifact triển khai cho **Epic 2 — Digital Showroom & Product Managem
 
 ## Related concepts
 
-- [[concepts/digital-showroom]]
-- [[concepts/tanstack-query]]
-- [[concepts/filter-chips]]
-- [[concepts/optimistic-update]]
-- [[concepts/heritage-palette]]
-- [[concepts/rule-editor]]
-- [[concepts/email-reminder-scheduler]]
-- [[concepts/multi-tenant-rls]]
-- [[concepts/dual-mode-ui]]
-- [[concepts/order-status-pipeline]]
-- [[concepts/ssot]]
-- [[concepts/rbac]]
-- [[concepts/react-hook-form-zod]]
+- [[concepts/tailor/digital-showroom]]
+- [[concepts/swe/tanstack-query]]
+- [[concepts/tailor/filter-chips]]
+- [[concepts/swe/optimistic-update]]
+- [[concepts/tailor/heritage-palette]]
+- [[concepts/tailor/rule-editor]]
+- [[concepts/tailor/email-reminder-scheduler]]
+- [[concepts/swe/multi-tenant-rls]]
+- [[concepts/tailor/dual-mode-ui]]
+- [[concepts/tailor/order-status-pipeline]]
+- [[concepts/swe/ssot]]
+- [[concepts/swe/rbac]]
+- [[concepts/swe/react-hook-form-zod]]
 
 ## Related sources
 

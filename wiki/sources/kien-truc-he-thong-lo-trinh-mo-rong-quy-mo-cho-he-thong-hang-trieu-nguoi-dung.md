@@ -48,18 +48,18 @@ Tài liệu này là một bản đồ nhập môn về cách một hệ thống
 
 ## Related concepts
 
-- [[concepts/kien-truc-may-chu-don-nhat]]
-- [[concepts/mo-rong-ngang]]
-- [[concepts/can-bang-tai]]
-- [[concepts/co-so-du-lieu-sql]]
-- [[concepts/co-so-du-lieu-nosql]]
-- [[concepts/grpc]]
-- [[concepts/json-web-token]]
-- [[concepts/oauth2-va-oidc]]
-- [[concepts/rbac]]
-- [[concepts/abac]]
-- [[concepts/access-control-list]]
-- [[concepts/rate-limiting]]
+- [[concepts/swe/kien-truc-may-chu-don-nhat]]
+- [[concepts/swe/mo-rong-ngang]]
+- [[concepts/swe/can-bang-tai]]
+- [[concepts/swe/co-so-du-lieu-sql]]
+- [[concepts/swe/co-so-du-lieu-nosql]]
+- [[concepts/swe/grpc]]
+- [[concepts/swe/json-web-token]]
+- [[concepts/swe/oauth2-va-oidc]]
+- [[concepts/swe/rbac]]
+- [[concepts/swe/abac]]
+- [[concepts/swe/access-control-list]]
+- [[concepts/swe/rate-limiting]]
 
 ## Related sources
 

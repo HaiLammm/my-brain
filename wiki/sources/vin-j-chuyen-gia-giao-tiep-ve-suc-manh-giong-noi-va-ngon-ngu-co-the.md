@@ -61,10 +61,10 @@ Cuộc phỏng vấn giữa Steven Bartlett và Vin J — diễn giả, chuyên 
 
 ## Related concepts
 
-- [[concepts/ngon-ngu-co-the]]
-- [[concepts/giao-tiep-phi-ngon-ngu]]
-- [[concepts/tam-ly-dam-dong]]
-- [[concepts/khung-trinh-bay-cv]]
+- [[concepts/comm/ngon-ngu-co-the]]
+- [[concepts/comm/giao-tiep-phi-ngon-ngu]]
+- [[concepts/jung/tam-ly-dam-dong]]
+- [[concepts/career/khung-trinh-bay-cv]]
 
 ## Related sources
 

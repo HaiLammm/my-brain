@@ -52,19 +52,19 @@ findings:
 
 ## Related concepts
 
-- [[concepts/dual-mode-ui]]
-- [[concepts/order-status-pipeline]]
-- [[concepts/transition-as-video]]
-- [[concepts/unified-order-workflow]]
-- [[concepts/pattern-engine]]
-- [[concepts/deterministic-guardrails]]
-- [[concepts/geometric-delta]]
-- [[concepts/ao-dai-bespoke]]
-- [[concepts/audit-trail]]
-- [[concepts/rbac]]
-- [[concepts/ssot]]
-- [[concepts/physical-emotional-compiler]]
-- [[concepts/appointment-booking]]
+- [[concepts/tailor/dual-mode-ui]]
+- [[concepts/tailor/order-status-pipeline]]
+- [[concepts/swe/transition-as-video]]
+- [[concepts/tailor/unified-order-workflow]]
+- [[concepts/tailor/pattern-engine]]
+- [[concepts/tailor/deterministic-guardrails]]
+- [[concepts/tailor/geometric-delta]]
+- [[concepts/tailor/ao-dai-bespoke]]
+- [[concepts/swe/audit-trail]]
+- [[concepts/swe/rbac]]
+- [[concepts/swe/ssot]]
+- [[concepts/tailor/physical-emotional-compiler]]
+- [[concepts/tailor/appointment-booking]]
 
 ## Related sources
 

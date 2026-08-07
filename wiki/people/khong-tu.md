@@ -25,8 +25,8 @@ Khổng Tử là nhà tư tưởng cổ điển Trung Hoa, đại diện cho tru
 
 ## Key concepts
 
-- [[concepts/binh-dang]]
-- [[concepts/tu-do]]
-- [[concepts/phap-tri]]
+- [[concepts/khuyen-hoc/binh-dang]]
+- [[concepts/khuyen-hoc/tu-do]]
+- [[concepts/khuyen-hoc/phap-tri]]
 
 ## Notes

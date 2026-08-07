@@ -10,11 +10,11 @@ covers:
   - sources/huong-dan-viet-bai-seo-cho-setsubi-pro
   - sources/review-bai-seo-cho-setsubi-pro
   - sources/review-seo
-  - concepts/template-seo-3-phan
-  - concepts/seo-symptom-problem-first
-  - concepts/noi-dung-giai-thich-cho-nguoi-khong-chuyen
-  - concepts/cta-mem
-  - concepts/bang-tu-xu-ly-hay-goi-tho
+  - concepts/seo/template-seo-3-phan
+  - concepts/seo/seo-symptom-problem-first
+  - concepts/seo/noi-dung-giai-thich-cho-nguoi-khong-chuyen
+  - concepts/seo/cta-mem
+  - concepts/seo/bang-tu-xu-ly-hay-goi-tho
 ---
 
 ## SEO metadata
@@ -151,6 +151,6 @@ Setsubi-proでは、コンセントが使えないトラブルについても24�
 - Muc tieu bai: `Situation, High priority`
 - Pillar: `電気`
 - Huong viet: template 3-phần (CHECKLIST → 理解 → STOP/CALL), symptom-first, CTA mềm
-- Phien ban: v1 (2026-06-01) — bài mới, áp dụng template 3-phần theo [[concepts/template-seo-3-phan]]
+- Phien ban: v1 (2026-06-01) — bài mới, áp dụng template 3-phần theo [[concepts/seo/template-seo-3-phan]]
 - Co the bo sung sau: thumbnail, 1 internal link sang `seo-09-breaker-tripping` (ブレーカー落ち), 1 internal link sang `seo-17-lights-flickering`, ảnh minh họa phân biệt 安全ブレーカー / 漏電ブレーカー
 - Ghi chú an toàn: KHÔNG hướng dẫn tự tháo ổ cắm hay sửa dây — yêu cầu 電気工事士 resource

@@ -47,10 +47,10 @@ Bài viết của Jung trình bày quan điểm về tầm quan trọng của gi
 
 ## Related Concepts
 
-- [[concepts/vo-thuc]] — Vô thức là tầng không ý thức của tâm trí
-- [[concepts/bieu-tuong]] — Biểu tượng là ký hiệu mang ý nghĩa vượt xa nghĩa hời của nó
-- [[concepts/trieu-chung-than-kinh]] — Các triệu chứng thần kinh là ngôn ngữ của vô thức
-- [[concepts/phien-tu-dan-vat]] — Sự phân tách tâm lý khi ý thức bị chia rẽ khỏi vô thức
+- [[concepts/jung/vo-thuc]] — Vô thức là tầng không ý thức của tâm trí
+- [[concepts/jung/bieu-tuong]] — Biểu tượng là ký hiệu mang ý nghĩa vượt xa nghĩa hời của nó
+- [[concepts/jung/trieu-chung-than-kinh]] — Các triệu chứng thần kinh là ngôn ngữ của vô thức
+- [[concepts/jung/phien-tu-dan-vat]] — Sự phân tách tâm lý khi ý thức bị chia rẽ khỏi vô thức
 
 ## People
 

@@ -58,16 +58,16 @@ verify_status: passed
 
 ## Related concepts
 
-- [[concepts/physical-emotional-compiler]]
-- [[concepts/geometric-delta]]
-- [[concepts/deterministic-guardrails]]
-- [[concepts/pattern-engine]]
-- [[concepts/ao-dai-bespoke]]
-- [[concepts/unified-order-workflow]]
-- [[concepts/audit-trail]]
-- [[concepts/ssot]]
-- [[concepts/rbac]]
-- [[concepts/appointment-booking]]
+- [[concepts/tailor/physical-emotional-compiler]]
+- [[concepts/tailor/geometric-delta]]
+- [[concepts/tailor/deterministic-guardrails]]
+- [[concepts/tailor/pattern-engine]]
+- [[concepts/tailor/ao-dai-bespoke]]
+- [[concepts/tailor/unified-order-workflow]]
+- [[concepts/swe/audit-trail]]
+- [[concepts/swe/ssot]]
+- [[concepts/swe/rbac]]
+- [[concepts/tailor/appointment-booking]]
 
 ## People
 

@@ -25,6 +25,6 @@ Eugene Aserinsky là nghiên cứu sinh tại Đại học Chicago khi ông phá
 
 ## Key concepts
 
-- [[concepts/giac-ngu-rem]]
+- [[concepts/neuro/giac-ngu-rem]]
 
 ## Notes

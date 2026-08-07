@@ -25,6 +25,6 @@ Steven Bartlett là doanh nhân, tác giả và người dẫn chương trình p
 
 ## Key concepts
 
-- [[concepts/giao-tiep-phi-ngon-ngu]]
+- [[concepts/comm/giao-tiep-phi-ngon-ngu]]
 
 ## Notes

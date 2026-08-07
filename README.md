@@ -87,7 +87,7 @@ Mỗi trang wiki có loại, frontmatter và cấu trúc phần được định
 | Loại       | Thư mục       | Mục đích                                                                  |
 |------------|--------------|---------------------------------------------------------------------------|
 | Source     | `sources/`   | Tóm tắt theo tài liệu: các luận điểm chính, bằng chứng, kết luận, câu hỏi |
-| Concept    | `concepts/`  | Ý tưởng hoặc kỹ thuật xuyên nguồn với các biến thể và so sánh            |
+| Concept    | `concepts/<domain>/` | Ý tưởng hoặc kỹ thuật xuyên nguồn với các biến thể và so sánh — **luôn nằm trong thư mục domain** |
 | Person     | `people/`    | Hồ sơ của người được đề cập với các nguồn chính và mối quan hệ           |
 | Summary    | `summary/`   | Tổng hợp cấp vùng trải rộng nhiều nguồn và khái niệm                     |
 | Topic      | `topics/`     | Cụm chủ đề nhóm các khái niệm và nguồn liên quan; tạo qua `/lumi-research-topic` (research) |
@@ -97,6 +97,21 @@ Mỗi trang wiki có loại, frontmatter và cấu trúc phần được định
 | Theme      | `themes/`     | Chủ đề xuyên suốt tác phẩm (reading)                                    |
 | Plot       | `plot/`       | Các luồng cốt truyện, nhịp điệu và dòng thời gian (reading)             |
 | Reflection | `reflections/`| Hiểu biết cá nhân về một khái niệm; có thể cập nhật + nhật ký chỉ thêm (learning) |
+
+### Namespace của `concepts/`
+
+Concept **không bao giờ** đặt thẳng ở `wiki/concepts/` — luôn nằm trong một thư mục domain,
+giống cách `characters/` và `chapters/` phân theo book-slug. Danh sách domain hiện có và quy
+tắc chọn nằm trong `_lumina/schema/page-templates.md`; đọc phần đó trước khi tạo concept mới.
+
+Khi nạp một dự án phần mềm vào wiki, lọc theo **tuổi thọ** chứ không theo phạm vi:
+
+- **Vào wiki** — pattern kỹ thuật tái dùng được (`concepts/swe/`), quyết định kiến trúc kèm
+  lý do, cạm bẫy đã trả giá, thuật ngữ nghiệp vụ (`concepts/<tên-dự-án>/`).
+- **Ở lại repo dự án** — mã FR, schema bảng, danh sách endpoint, breakdown epic, cấu hình.
+
+Phép thử một câu: *"Điều này còn đúng khi dự án chết không?"* Ngưỡng gợi ý: mỗi dự án
+khoảng 20 concept. Vượt xa ngưỡng nghĩa là đang chép tài liệu chứ không chưng cất tri thức.
 
 ---
 

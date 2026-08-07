@@ -25,4 +25,4 @@ Khai hóa văn minh là công cuộc mở mang dân trí và năng lực xã h�
 
 ## Notes
 
-Kết nối với khái niệm [[concepts/khai-hoa-van-minh]] đã được nạp từ trang nguồn [[sources/khuyen-hoc]].
+Kết nối với khái niệm [[concepts/khuyen-hoc/khai-hoa-van-minh]] đã được nạp từ trang nguồn [[sources/khuyen-hoc]].

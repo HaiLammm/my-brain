@@ -24,10 +24,10 @@ Daniel Amen là bác sĩ tâm thần người Mỹ, người sáng lập Amen Cl
 
 ## Key concepts
 
-- [[concepts/adhd]]
-- [[concepts/suc-khoe-nao]]
-- [[concepts/bright-minds]]
-- [[concepts/suy-nghi-tieu-cuc-tu-dong]]
-- [[concepts/emdr]]
+- [[concepts/neuro/adhd]]
+- [[concepts/neuro/suc-khoe-nao]]
+- [[concepts/neuro/bright-minds]]
+- [[concepts/neuro/suy-nghi-tieu-cuc-tu-dong]]
+- [[concepts/neuro/emdr]]
 
 ## Notes

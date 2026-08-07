@@ -13,8 +13,8 @@ updated: 2026-05-14
 key_sources:
   - sources/psychology-and-western-religion
 related_concepts:
-  - concepts/trinity
-  - concepts/quaternity
+  - concepts/jung/trinity
+  - concepts/jung/quaternity
 ---
 
 ## Overview
@@ -27,8 +27,8 @@ Plato (khoảng 428–348 TCN) là triết gia Hy Lạp cổ đại, học trò 
 
 ## Key concepts
 
-- [[concepts/trinity]] — Plato là một trong những nguồn triết học của khái niệm Ba Ngôi
-- [[concepts/quaternity]] — câu hỏi về yếu tố thứ tư của Plato là khởi điểm cho vấn đề tứ phân
+- [[concepts/jung/trinity]] — Plato là một trong những nguồn triết học của khái niệm Ba Ngôi
+- [[concepts/jung/quaternity]] — câu hỏi về yếu tố thứ tư của Plato là khởi điểm cho vấn đề tứ phân
 
 ## Notes
 

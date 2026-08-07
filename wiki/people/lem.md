@@ -24,8 +24,8 @@ Lem là kiến trúc sư và nhà nghiên cứu chính của dự án Tailor Pro
 
 ## Key concepts
 
-- [[concepts/physical-emotional-compiler]]
-- [[concepts/langgraph]]
-- [[concepts/modular-monolith]]
+- [[concepts/tailor/physical-emotional-compiler]]
+- [[concepts/swe/langgraph]]
+- [[concepts/swe/modular-monolith]]
 
 ## Notes

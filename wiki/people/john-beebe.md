@@ -24,8 +24,8 @@ John Beebe là nhà phân tích Jungian và đồng biên tập của The Questi
 
 ## Key concepts
 
-- [[concepts/bon-chuc-nang-tam-ly]] — Beebe đọc tập thư như một giai đoạn tiền sử của mô hình chức năng mà Jung hoàn thiện sau này
-- [[concepts/chuc-nang-ha-dang]] — ông nhấn mạnh vai trò của phần yếu, chưa biệt hóa trong giao tiếp giữa các type
+- [[concepts/jung/bon-chuc-nang-tam-ly]] — Beebe đọc tập thư như một giai đoạn tiền sử của mô hình chức năng mà Jung hoàn thiện sau này
+- [[concepts/jung/chuc-nang-ha-dang]] — ông nhấn mạnh vai trò của phần yếu, chưa biệt hóa trong giao tiếp giữa các type
 
 ## Notes
 

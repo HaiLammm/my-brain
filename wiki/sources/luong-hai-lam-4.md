@@ -48,20 +48,20 @@ CV chính thức dạng PDF của Lương Hải Lâm — Backend Developer chuy�
 
 ## Related concepts
 
-- [[concepts/modular-monolith]]
-- [[concepts/event-driven-internal-communication]]
-- [[concepts/fastapi]]
-- [[concepts/docker-va-kubernetes]]
-- [[concepts/multi-tenant-rls]]
-- [[concepts/authoritative-server-pattern]]
-- [[concepts/circuit-breaker]]
-- [[concepts/celery]]
-- [[concepts/checkout-flow]]
-- [[concepts/cross-language-search]]
-- [[concepts/race-condition-prevention]]
-- [[concepts/tanstack-query]]
-- [[concepts/lap-trinh-backend-python]]
-- [[concepts/co-so-du-lieu-nosql]]
+- [[concepts/swe/modular-monolith]]
+- [[concepts/swe/event-driven-internal-communication]]
+- [[concepts/swe/fastapi]]
+- [[concepts/swe/docker-va-kubernetes]]
+- [[concepts/swe/multi-tenant-rls]]
+- [[concepts/swe/authoritative-server-pattern]]
+- [[concepts/swe/circuit-breaker]]
+- [[concepts/swe/celery]]
+- [[concepts/tailor/checkout-flow]]
+- [[concepts/swe/cross-language-search]]
+- [[concepts/swe/race-condition-prevention]]
+- [[concepts/swe/tanstack-query]]
+- [[concepts/swe/lap-trinh-backend-python]]
+- [[concepts/swe/co-so-du-lieu-nosql]]
 
 ## Related sources
 

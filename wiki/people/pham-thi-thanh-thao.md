@@ -26,9 +26,9 @@ Chuyên gia HR Việt Nam với hơn 10 năm kinh nghiệm làm việc tại Nh�
 
 ## Key concepts
 
-- [[concepts/quan-ly-phat-huy-diem-manh]]
-- [[concepts/khung-trinh-bay-cv]]
-- [[concepts/cv-tot]]
+- [[concepts/career/quan-ly-phat-huy-diem-manh]]
+- [[concepts/career/khung-trinh-bay-cv]]
+- [[concepts/career/cv-tot]]
 
 ## Notes
 

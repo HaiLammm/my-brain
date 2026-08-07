@@ -37,9 +37,9 @@ findings:
 ## Key claims
 
 - [Cao] Vị trí này nghiêng về phát triển ứng dụng Python cho môi trường doanh nghiệp, với trọng tâm là phân tích yêu cầu, xây module và xử lý lỗi kỹ thuật.
-- [Cao] Kiến thức về [[concepts/he-thong-erp]] là bối cảnh nghiệp vụ trung tâm, vì sản phẩm nhắm vào quản trị nguồn nhân lực và chuỗi cung ứng.
-- [Cao] Ứng viên cần đồng thời có nền tảng [[concepts/lap-trinh-giao-dien-web]] và [[concepts/co-so-du-lieu-sql]], cho thấy đây không phải vai trò Python thuần một mảng.
-- [Cao] JD đồng thời yêu cầu [[concepts/tich-hop-he-thong-ben-thu-ba]] và kỹ năng giao tiếp, truyền đạt rõ ràng.
+- [Cao] Kiến thức về [[concepts/swe/he-thong-erp]] là bối cảnh nghiệp vụ trung tâm, vì sản phẩm nhắm vào quản trị nguồn nhân lực và chuỗi cung ứng.
+- [Cao] Ứng viên cần đồng thời có nền tảng [[concepts/swe/lap-trinh-giao-dien-web]] và [[concepts/swe/co-so-du-lieu-sql]], cho thấy đây không phải vai trò Python thuần một mảng.
+- [Cao] JD đồng thời yêu cầu [[concepts/swe/tich-hop-he-thong-ben-thu-ba]] và kỹ năng giao tiếp, truyền đạt rõ ràng.
 - [Trung bình] Kinh nghiệm với .NET được nêu là lợi thế, cho thấy kinh nghiệm công nghệ bổ sung ngoài Python vẫn được đánh giá tích cực.
 
 ## Evidence
@@ -52,11 +52,11 @@ findings:
 
 ## Related concepts
 
-- [[concepts/lap-trinh-python]] - năng lực phát triển ứng dụng bằng Python là yêu cầu cốt lõi
-- [[concepts/he-thong-erp]] - bối cảnh sản phẩm chính của vị trí
-- [[concepts/tich-hop-he-thong-ben-thu-ba]] - tích hợp hệ thống với dịch vụ ngoài
-- [[concepts/lap-trinh-giao-dien-web]] - phần nền tảng frontend được yêu cầu
-- [[concepts/co-so-du-lieu-sql]] - nhóm kỹ năng cơ sở dữ liệu quan hệ bắt buộc
+- [[concepts/swe/lap-trinh-python]] - năng lực phát triển ứng dụng bằng Python là yêu cầu cốt lõi
+- [[concepts/swe/he-thong-erp]] - bối cảnh sản phẩm chính của vị trí
+- [[concepts/swe/tich-hop-he-thong-ben-thu-ba]] - tích hợp hệ thống với dịch vụ ngoài
+- [[concepts/swe/lap-trinh-giao-dien-web]] - phần nền tảng frontend được yêu cầu
+- [[concepts/swe/co-so-du-lieu-sql]] - nhóm kỹ năng cơ sở dữ liệu quan hệ bắt buộc
 
 ## Related sources
 

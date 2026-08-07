@@ -15,11 +15,11 @@ key_sources:
   - sources/bo-gia
   - sources/man-and-his-symbols
 related_concepts:
-  - [[concepts/bon-chuc-nang-tam-ly]]
-  - [[concepts/tri-giac-tam-ly]]
-  - [[concepts/dong-nhat-tam-linh]]
-  - [[concepts/vo-thuc]]
-  - [[concepts/nguyen-mau]]
+  - [[concepts/jung/bon-chuc-nang-tam-ly]]
+  - [[concepts/jung/tri-giac-tam-ly]]
+  - [[concepts/jung/dong-nhat-tam-linh]]
+  - [[concepts/jung/vo-thuc]]
+  - [[concepts/jung/nguyen-mau]]
 ---
 
 ## Overview
@@ -36,23 +36,23 @@ Sonny nổi tiếng với tính nóng vội và đời sống tình cảm phóng
 
 ## Jungian Analysis
 
-Sonny Corleone là hiện thân của **chức năng Tri giác** (Sensation) thống trị không kiểm soát — một trong bốn chức năng tâm lý của Jung (xem [[concepts/bon-chuc-nang-tam-ly]]).
+Sonny Corleone là hiện thân của **chức năng Tri giác** (Sensation) thống trị không kiểm soát — một trong bốn chức năng tâm lý của Jung (xem [[concepts/jung/bon-chuc-nang-tam-ly]]).
 
 **Chức năng trội: Tri giác (Sensation):**
 
-Sonny phản ứng theo giác quan — bốc đồng, thể lực, bạo lực tức thời. Anh sống hoàn toàn trong hiện tại, không có khả năng dự kiến hệ quả xa. Trong mô hình bốn chức năng (xem [[concepts/bon-chuc-nang-tam-ly]]), Tri giác là chức năng trội của Sonny — anh "nhận thức sự tồn tại qua giác quan" một cách tuyệt đối.
+Sonny phản ứng theo giác quan — bốc đồng, thể lực, bạo lực tức thời. Anh sống hoàn toàn trong hiện tại, không có khả năng dự kiến hệ quả xa. Trong mô hình bốn chức năng (xem [[concepts/jung/bon-chuc-nang-tam-ly]]), Tri giác là chức năng trội của Sonny — anh "nhận thức sự tồn tại qua giác quan" một cách tuyệt đối.
 
 **Chức năng kém: Trực giác (Intuition):**
 
-Đối lập với Tri giác là Trực giác — khả năng nhìn thấy bức tranh lớn, dự đoán tương lai, nhận ra ẩn ý. Sonny gần như thiếu hẳn chức năng này. Anh không nhận ra cái bẫy tại trạm xăng, không thấy rằng Sollozzo muốn đàm phán chứ không phải chiến tranh. Chức năng kém nằm trong [[concepts/vo-thuc]] và khi không được phát triển, nó trở thành điểm mù chí mạng.
+Đối lập với Tri giác là Trực giác — khả năng nhìn thấy bức tranh lớn, dự đoán tương lai, nhận ra ẩn ý. Sonny gần như thiếu hẳn chức năng này. Anh không nhận ra cái bẫy tại trạm xăng, không thấy rằng Sollozzo muốn đàm phán chứ không phải chiến tranh. Chức năng kém nằm trong [[concepts/jung/vo-thuc]] và khi không được phát triển, nó trở thành điểm mù chí mạng.
 
 **Đồng nhất tâm linh (Participation Mystique):**
 
-Sonny là ví dụ rõ ràng của [[concepts/dong-nhat-tam-linh]] — trạng thái không có khoảng cách giữa xúc cảm và hành động. Khi anh tức giận, bạo lực xảy ra ngay lập tức; không có quá trình trung gian của ý thức. Giống như "người nguyên thủy đội mặt nạ sư tử và tin mình thực sự là sư tử" — Sonny hòa tan xúc cảm vào hành động mà không có sự phản tỉnh.
+Sonny là ví dụ rõ ràng của [[concepts/jung/dong-nhat-tam-linh]] — trạng thái không có khoảng cách giữa xúc cảm và hành động. Khi anh tức giận, bạo lực xảy ra ngay lập tức; không có quá trình trung gian của ý thức. Giống như "người nguyên thủy đội mặt nạ sư tử và tin mình thực sự là sư tử" — Sonny hòa tan xúc cảm vào hành động mà không có sự phản tỉnh.
 
 **Shadow chưa tích hợp:**
 
-Bạo lực bốc đồng của Sonny chính là Shadow cá nhân — phần tối tăm từ [[concepts/vo-thuc-ca-nhan]] chưa được ý thức hóa. Khác với Luca Brasi (Shadow phục vụ Father), bạo lực của Sonny là Shadow **sống động** — nổi lên bất ngờ, không kiểm soát, và cuối cùng tiêu diệt chính anh.
+Bạo lực bốc đồng của Sonny chính là Shadow cá nhân — phần tối tăm từ [[concepts/jung/vo-thuc-ca-nhan]] chưa được ý thức hóa. Khác với Luca Brasi (Shadow phục vụ Father), bạo lực của Sonny là Shadow **sống động** — nổi lên bất ngờ, không kiểm soát, và cuối cùng tiêu diệt chính anh.
 
 **Cái chết như biểu tượng:**
 
@@ -60,8 +60,8 @@ Cái chết của Sonny tại trạm xăng là biểu tượng sâu sắc: **khi
 
 **Related concepts:**
 
-- [[concepts/bon-chuc-nang-tam-ly]] — mô hình bốn chức năng tâm lý
-- [[concepts/tri-giac-tam-ly]] — chức năng trội của Sonny
-- [[concepts/dong-nhat-tam-linh]] — trạng thái hòa tan xúc cảm vào hành động
-- [[concepts/vo-thuc]] — vô thức chứa Shadow chưa tích hợp
-- [[concepts/nguyen-mau]] — Sonny đại diện cho hình mẫu chiến binh chưa giác ngộ
+- [[concepts/jung/bon-chuc-nang-tam-ly]] — mô hình bốn chức năng tâm lý
+- [[concepts/jung/tri-giac-tam-ly]] — chức năng trội của Sonny
+- [[concepts/jung/dong-nhat-tam-linh]] — trạng thái hòa tan xúc cảm vào hành động
+- [[concepts/jung/vo-thuc]] — vô thức chứa Shadow chưa tích hợp
+- [[concepts/jung/nguyen-mau]] — Sonny đại diện cho hình mẫu chiến binh chưa giác ngộ

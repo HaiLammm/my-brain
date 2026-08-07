@@ -52,11 +52,11 @@ Tài liệu hướng dẫn nội bộ của Setsubi Pro tổng hợp các tiêu 
 
 ## Related concepts
 
-- [[concepts/checklist-seo-100-diem]]
-- [[concepts/mo-hinh-pillar-cluster]]
-- [[concepts/mat-do-tu-khoa]]
-- [[concepts/cta-mem]]
-- [[concepts/seo-symptom-problem-first]]
+- [[concepts/seo/checklist-seo-100-diem]]
+- [[concepts/seo/mo-hinh-pillar-cluster]]
+- [[concepts/seo/mat-do-tu-khoa]]
+- [[concepts/seo/cta-mem]]
+- [[concepts/seo/seo-symptom-problem-first]]
 
 ## Related sources
 

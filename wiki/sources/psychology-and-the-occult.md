@@ -35,10 +35,10 @@ Tuyển tập các bài viết và tiểu luận của Carl Gustav Jung về hi�
 
 ## Concepts
 
-- [[concepts/vo-thuc-tap-the]] — vô thức tập thể chứa ý tưởng phổ quát
-- [[concepts/chung-tiem-ky-uc]] — cryptomnesia, ký ức ẩn
-- [[concepts/vo-thuc]] — vô thức và các biểu hiện tâm lý
-- [[concepts/dong-nhat-tam-linh]] — đồng nhất tâm linh
+- [[concepts/jung/vo-thuc-tap-the]] — vô thức tập thể chứa ý tưởng phổ quát
+- [[concepts/jung/chung-tiem-ky-uc]] — cryptomnesia, ký ức ẩn
+- [[concepts/jung/vo-thuc]] — vô thức và các biểu hiện tâm lý
+- [[concepts/jung/dong-nhat-tam-linh]] — đồng nhất tâm linh
 
 ## People
 

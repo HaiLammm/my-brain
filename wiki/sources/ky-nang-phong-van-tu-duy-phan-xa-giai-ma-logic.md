@@ -42,8 +42,8 @@ Tài liệu hướng dẫn xây dựng khả năng phản xạ trong phỏng v�
 
 ## Related concepts
 
-- [[concepts/mo-hinh-star]]
-- [[concepts/tu-duy-win-win-phong-van]]
+- [[concepts/career/mo-hinh-star]]
+- [[concepts/career/tu-duy-win-win-phong-van]]
 
 ## Related sources
 

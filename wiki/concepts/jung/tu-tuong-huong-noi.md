@@ -1,0 +1,43 @@
+---
+type: concept
+title: Tư tưởng hướng nội
+slug: tu-tuong-huong-noi
+date_added: 2026-05-12
+confidence: high
+tags:
+  - tam-ly
+  - jung
+id: concepts/jung/tu-tuong-huong-noi
+created: 2026-05-12
+updated: 2026-05-14
+key_sources:
+  - sources/man-and-his-symbols
+  - sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi
+  - sources/the-question-of-psychological-types
+related_concepts:
+  - concepts/jung/tu-tuong-huong-ngoai
+  - concepts/jung/vo-thuc
+  - concepts/jung/bon-chuc-nang-tam-ly
+---
+
+## Definition
+
+Tư tưởng hướng nội (Introversion) là một trong hai thái độ tâm lý cơ bản trong lý thuyết của Carl Jung, đối lập với hướng ngoại. Người hướng nội định hướng năng lượng tâm lý vào thế giới nội tâm — suy nghĩ, cảm xúc, và các trải nghiệm chủ quan — thay vì ra bên ngoài. Họ phục hồi năng lượng khi ở một mình và cần thời gian để xử lý nội tâm trước khi hành động.
+
+## Variants
+
+- Trong khuôn khổ Jung, hướng nội không đồng nghĩa với nhút nhát; đó là hướng ưu tiên của libido tâm lý.
+
+## Key sources
+
+- [[sources/man-and-his-symbols]]
+- [[sources/the-question-of-psychological-types]] — nguồn gốc học thuyết cho thấy khái niệm này được tinh luyện trong thư từ 1915-1916
+
+## Related concepts
+
+- [[concepts/jung/tu-tuong-huong-ngoai]]
+- [[concepts/jung/vo-thuc]]
+
+## Mentioned in
+
+## Notes

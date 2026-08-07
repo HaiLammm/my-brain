@@ -24,7 +24,7 @@ Aniela Jaffé (1902-1991) là thư ký riêng của Carl Jung và là nhà phân
 
 ## Key Concepts
 
-- [[concepts/bieu-tuong]]
+- [[concepts/jung/bieu-tuong]]
 
 ## Notes
 

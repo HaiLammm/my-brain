@@ -45,11 +45,11 @@ Jung phân biệt giữa **dấu hiệu** (chỉ biểu đơn nghĩa) và **bi�
 
 ## Khái niệm liên quan
 
-- [[concepts/bieu-tuong-tap-the]] — Biểu tượng mang tính tập thể, bắt nguồn từ vô thức tập thể
-- [[concepts/vo-thuc-ca-nhan]] — Vô thức cá nhân theo Jung
-- [[concepts/vo-thuc-tap-the]] — Lớp vô thức chia sẻ bởi toàn nhân loại
-- [[concepts/phan-tich-giac-mo]] — Phương pháp và kỹ thuật phân tích giấc mơ
-- [[concepts/anh-huong-psychoanalytic]] — Ảnh hưởng qua lại với Freud và trường phái phân tích
+- [[concepts/jung/bieu-tuong-tap-the]] — Biểu tượng mang tính tập thể, bắt nguồn từ vô thức tập thể
+- [[concepts/jung/vo-thuc-ca-nhan]] — Vô thức cá nhân theo Jung
+- [[concepts/jung/vo-thuc-tap-the]] — Lớp vô thức chia sẻ bởi toàn nhân loại
+- [[concepts/jung/phan-tich-giac-mo]] — Phương pháp và kỹ thuật phân tích giấc mơ
+- [[concepts/jung/anh-huong-psychoanalytic]] — Ảnh hưởng qua lại với Freud và trường phái phân tích
 
 ## Người được đề cập
 

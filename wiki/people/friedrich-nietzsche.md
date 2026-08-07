@@ -25,6 +25,6 @@ Triết gia Đức thế kỷ 19, nổi tiếng với khái niệm ý chí quy�
 
 ## Khái niệm chính
 
-- [[concepts/kim-nen]] — "Khi lòng tự cao có đủ quyết tâm xóa đi ký ức"
+- [[concepts/jung/kim-nen]] — "Khi lòng tự cao có đủ quyết tâm xóa đi ký ức"
 
 ## Ghi chú

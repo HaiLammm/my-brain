@@ -25,8 +25,8 @@ Ernst Falzeder là học giả Jung, đồng biên tập và dịch giả của 
 
 ## Key concepts
 
-- [[concepts/tu-tuong-huong-noi]] — Falzeder truy dấu sự xuất hiện và biến đổi của khái niệm này trong trước tác đầu của Jung
-- [[concepts/truc-giac-tam-ly]] — ông nhấn mạnh vai trò của Maria Moltzer trong việc Jung dần tách trực giác thành một chức năng
+- [[concepts/jung/tu-tuong-huong-noi]] — Falzeder truy dấu sự xuất hiện và biến đổi của khái niệm này trong trước tác đầu của Jung
+- [[concepts/jung/truc-giac-tam-ly]] — ông nhấn mạnh vai trò của Maria Moltzer trong việc Jung dần tách trực giác thành một chức năng
 
 ## Notes
 

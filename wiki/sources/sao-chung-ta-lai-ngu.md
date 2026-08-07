@@ -58,19 +58,19 @@ Sao Chúng Ta Lại Ngủ là cuốn sách khoa học đại chúng bán chạy 
 
 ## Related concepts
 
-- [[concepts/nhip-sinh-hoc]] — hệ thống đồng hồ nội tại 24h điều chỉnh thức-ngủ
-- [[concepts/ap-luc-ngu]] — tín hiệu hóa học adenosine tích tụ khi thức
-- [[concepts/caffeine]] — chất kích thích thần kinh phổ biến nhất chặn thụ thể adenosine
-- [[concepts/melatonin]] — hormone tín hiệu giấc ngủ
-- [[concepts/giac-ngu-nrem]] — giấc ngủ sóng chậm, phục hồi thể chất và củng cố trí nhớ khai báo
-- [[concepts/giac-ngu-rem]] — giấc ngủ mắt chuyển động nhanh, mơ và xử lý cảm xúc
-- [[concepts/nhan-tren-cheo]] — đồng hồ sinh học trung tâm trong não
-- [[concepts/mat-ngu]] — tình trạng thiếu ngủ mãn tính và hậu quả
-- [[concepts/jet-lag]] — rối loạn nhịp sinh học do di chuyển xuyên múi giờ
-- [[concepts/adenosine]] — hóa chất tích tụ tạo áp lực ngủ
-- [[concepts/chung-mat-ngu]] — rối loạn giấc ngủ phổ biến nhất
-- [[concepts/cung-co-tri-nho]] — quá trình củng cố trí nhớ trong giấc ngủ
-- [[concepts/oi-thi]] — cửa ngõ giác quan đóng lại khi ngủ
+- [[concepts/neuro/nhip-sinh-hoc]] — hệ thống đồng hồ nội tại 24h điều chỉnh thức-ngủ
+- [[concepts/neuro/ap-luc-ngu]] — tín hiệu hóa học adenosine tích tụ khi thức
+- [[concepts/neuro/caffeine]] — chất kích thích thần kinh phổ biến nhất chặn thụ thể adenosine
+- [[concepts/neuro/melatonin]] — hormone tín hiệu giấc ngủ
+- [[concepts/neuro/giac-ngu-nrem]] — giấc ngủ sóng chậm, phục hồi thể chất và củng cố trí nhớ khai báo
+- [[concepts/neuro/giac-ngu-rem]] — giấc ngủ mắt chuyển động nhanh, mơ và xử lý cảm xúc
+- [[concepts/neuro/nhan-tren-cheo]] — đồng hồ sinh học trung tâm trong não
+- [[concepts/neuro/mat-ngu]] — tình trạng thiếu ngủ mãn tính và hậu quả
+- [[concepts/neuro/jet-lag]] — rối loạn nhịp sinh học do di chuyển xuyên múi giờ
+- [[concepts/neuro/adenosine]] — hóa chất tích tụ tạo áp lực ngủ
+- [[concepts/neuro/chung-mat-ngu]] — rối loạn giấc ngủ phổ biến nhất
+- [[concepts/neuro/cung-co-tri-nho]] — quá trình củng cố trí nhớ trong giấc ngủ
+- [[concepts/neuro/oi-thi]] — cửa ngõ giác quan đóng lại khi ngủ
 
 ## Related sources
 

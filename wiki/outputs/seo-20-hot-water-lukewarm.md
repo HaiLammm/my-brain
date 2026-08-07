@@ -10,11 +10,11 @@ covers:
   - sources/huong-dan-viet-bai-seo-cho-setsubi-pro
   - sources/review-bai-seo-cho-setsubi-pro
   - sources/review-seo
-  - concepts/template-seo-3-phan
-  - concepts/seo-symptom-problem-first
-  - concepts/noi-dung-giai-thich-cho-nguoi-khong-chuyen
-  - concepts/cta-mem
-  - concepts/bang-tu-xu-ly-hay-goi-tho
+  - concepts/seo/template-seo-3-phan
+  - concepts/seo/seo-symptom-problem-first
+  - concepts/seo/noi-dung-giai-thich-cho-nguoi-khong-chuyen
+  - concepts/seo/cta-mem
+  - concepts/seo/bang-tu-xu-ly-hay-goi-tho
 ---
 
 ## SEO metadata

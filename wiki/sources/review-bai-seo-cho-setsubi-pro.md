@@ -47,12 +47,12 @@ Tài liệu review chi tiết các quy tắc viết bài SEO tiếng Nhật cho 
 
 ## Related concepts
 
-- [[concepts/seo-symptom-problem-first]]
-- [[concepts/noi-dung-giai-thich-cho-nguoi-khong-chuyen]]
-- [[concepts/cta-mem]]
-- [[concepts/bang-tu-xu-ly-hay-goi-tho]]
-- [[concepts/mat-do-tu-khoa-seo]]
-- [[concepts/cau-truc-heading-seo]]
+- [[concepts/seo/seo-symptom-problem-first]]
+- [[concepts/seo/noi-dung-giai-thich-cho-nguoi-khong-chuyen]]
+- [[concepts/seo/cta-mem]]
+- [[concepts/seo/bang-tu-xu-ly-hay-goi-tho]]
+- [[concepts/seo/mat-do-tu-khoa-seo]]
+- [[concepts/seo/cau-truc-heading-seo]]
 
 ## Related sources
 

@@ -48,12 +48,12 @@ findings: []
 
 ## Related concepts
 
-- [[concepts/blog-giai-quyet-su-co-nha-o]]
-- [[concepts/seo-symptom-problem-first]]
-- [[concepts/mo-hinh-pillar-cluster]]
-- [[concepts/ngan-hang-tu-khoa-theo-thiet-bi-van-de-va-intent]]
-- [[concepts/checklist-seo-100-diem]]
-- [[concepts/lap-lich-xuat-ban-theo-uu-tien-va-pillar]]
+- [[concepts/seo/blog-giai-quyet-su-co-nha-o]]
+- [[concepts/seo/seo-symptom-problem-first]]
+- [[concepts/seo/mo-hinh-pillar-cluster]]
+- [[concepts/seo/ngan-hang-tu-khoa-theo-thiet-bi-van-de-va-intent]]
+- [[concepts/seo/checklist-seo-100-diem]]
+- [[concepts/seo/lap-lich-xuat-ban-theo-uu-tien-va-pillar]]
 
 ## Related sources
 

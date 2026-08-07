@@ -42,9 +42,9 @@ Look là một app launcher điều khiển bằng bàn phím chạy trên Linux
 
 ## Related concepts
 
-- [[concepts/app-launcher]]
-- [[concepts/clipboard-history]]
-- [[concepts/pomodoro-timer]]
+- [[concepts/tools/app-launcher]]
+- [[concepts/tools/clipboard-history]]
+- [[concepts/tools/pomodoro-timer]]
 
 ## Related sources
 

@@ -25,6 +25,6 @@ Triết gia và nhà toán học Pháp, "cha đẻ của triết học hiện đ
 
 ## Khái niệm chính
 
-- [[concepts/sang-tao-tu-vo-thuc]] — Mạc khải triết học
+- [[concepts/jung/sang-tao-tu-vo-thuc]] — Mạc khải triết học
 
 ## Ghi chú

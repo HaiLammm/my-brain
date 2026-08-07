@@ -60,16 +60,16 @@ findings: []
 
 ## Concepts
 
-- [[concepts/payment-webhook-processing]]
-- [[concepts/order-status-pipeline]]
-- [[concepts/rental-return-processing]]
-- [[concepts/customer-self-service-profile]]
-- [[concepts/measurement-versioning]]
-- [[concepts/appointment-booking]]
-- [[concepts/customer-voucher-wallet]]
-- [[concepts/in-app-notification-center]]
-- [[concepts/optimistic-update]]
-- [[concepts/heritage-palette]]
+- [[concepts/tailor/payment-webhook-processing]]
+- [[concepts/tailor/order-status-pipeline]]
+- [[concepts/tailor/rental-return-processing]]
+- [[concepts/tailor/customer-self-service-profile]]
+- [[concepts/tailor/measurement-versioning]]
+- [[concepts/tailor/appointment-booking]]
+- [[concepts/tailor/customer-voucher-wallet]]
+- [[concepts/tailor/in-app-notification-center]]
+- [[concepts/swe/optimistic-update]]
+- [[concepts/tailor/heritage-palette]]
 
 ## Related Sources
 

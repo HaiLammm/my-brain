@@ -55,14 +55,14 @@ Ghi chú nội bộ Setsubi Pro mô tả MỘT trong nhiều cấu trúc bài SE
 
 ## Related concepts
 
-- [[concepts/template-seo-3-phan]]
-- [[concepts/seo-symptom-problem-first]]
-- [[concepts/blog-giai-quyet-su-co-nha-o]]
-- [[concepts/bang-tu-xu-ly-hay-goi-tho]]
-- [[concepts/noi-dung-giai-thich-cho-nguoi-khong-chuyen]]
-- [[concepts/cta-mem]]
-- [[concepts/noi-dung-phong-ngua-bao-tri-thiet-bi]]
-- [[concepts/email-marketing-tu-bai-huong-dan]]
+- [[concepts/seo/template-seo-3-phan]]
+- [[concepts/seo/seo-symptom-problem-first]]
+- [[concepts/seo/blog-giai-quyet-su-co-nha-o]]
+- [[concepts/seo/bang-tu-xu-ly-hay-goi-tho]]
+- [[concepts/seo/noi-dung-giai-thich-cho-nguoi-khong-chuyen]]
+- [[concepts/seo/cta-mem]]
+- [[concepts/seo/noi-dung-phong-ngua-bao-tri-thiet-bi]]
+- [[concepts/seo/email-marketing-tu-bai-huong-dan]]
 
 ## Related sources
 

@@ -47,11 +47,11 @@ Mô tả công việc Lập trình viên Backend (Python) tại công ty EAERA, 
 
 ## Related concepts
 
-- [[concepts/lap-trinh-backend-python]]
-- [[concepts/he-thong-crm]]
-- [[concepts/docker-va-kubernetes]]
-- [[concepts/giao-thuc-nhan-tin]]
-- [[concepts/event-driven-internal-communication]]
+- [[concepts/swe/lap-trinh-backend-python]]
+- [[concepts/swe/he-thong-crm]]
+- [[concepts/swe/docker-va-kubernetes]]
+- [[concepts/swe/giao-thuc-nhan-tin]]
+- [[concepts/swe/event-driven-internal-communication]]
 
 ## Related sources
 

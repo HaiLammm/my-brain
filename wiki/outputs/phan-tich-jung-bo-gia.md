@@ -8,13 +8,13 @@ covers:
   - sources/bo-gia
   - sources/man-and-his-symbols
   - sources/the-quotable-jung
-  - concepts/nguyen-mau-father
-  - concepts/anima
-  - concepts/ca-nhan-hoa
-  - concepts/bon-chuc-nang-tam-ly
-  - concepts/dong-nhat-tam-linh
-  - concepts/mac-cam-quyen-luc
-  - concepts/vo-thuc
+  - concepts/jung/nguyen-mau-father
+  - concepts/jung/anima
+  - concepts/jung/ca-nhan-hoa
+  - concepts/jung/bon-chuc-nang-tam-ly
+  - concepts/jung/dong-nhat-tam-linh
+  - concepts/jung/mac-cam-quyen-luc
+  - concepts/jung/vo-thuc
 ---
 
 # Phân tích Jung xuyên suốt "Bố Già"
@@ -23,7 +23,7 @@ covers:
 
 ## 1. Trục trung tâm — Nguyên mẫu Father
 
-[[people/vito-corleone]] là hiện thân gần hoàn hảo của [[concepts/nguyen-mau-father]], sở hữu cả hai mặt một cách cân bằng:
+[[people/vito-corleone]] là hiện thân gần hoàn hảo của [[concepts/jung/nguyen-mau-father]], sở hữu cả hai mặt một cách cân bằng:
 
 - **Mặt sáng**: bảo vệ, ban phước, nuôi dưỡng — cộng đồng tìm đến "như tìm đến người cha"
 - **Mặt tối**: độc đoán, trừng phạt, bạo lực như công cụ
@@ -41,21 +41,21 @@ Luca là Shadow bị thuần hóa phục vụ trật tự; Sonny là Shadow tự
 
 ## 3. Bốn chức năng tâm lý
 
-Mô hình [[concepts/bon-chuc-nang-tam-ly]] định vị các con:
+Mô hình [[concepts/jung/bon-chuc-nang-tam-ly]] định vị các con:
 
 - **Sonny = Tri giác (Sensation) trội, Trực giác (Intuition) kém** → sống trong hiện tại thể chất, không thấy bẫy Sollozzo, không lường hệ quả. Chức năng kém nằm trong vô thức trở thành "điểm mù chí mạng" → cái chết tại trạm xăng là biểu tượng của Tri giác không được Trực giác cân bằng.
 - **Tom Hagen = Cảm nhận (Feeling) trội** → người hòa giải, trung gian.
 
 ## 4. Anima — Tom Hagen
 
-[[people/tom-hagen]] đóng vai [[concepts/anima]] trong cấu trúc Father:
+[[people/tom-hagen]] đóng vai [[concepts/jung/anima]] trong cấu trúc Father:
 
 - **Cầu nối** giữa gia đình và thế giới bên ngoài (như anima nối ý thức ↔ vô thức)
 - **Người ngoài huyết thống** (con nuôi, giữ họ Hagen) — giống anima luôn là "người khách" mang thông điệp từ vô thức, không hoàn toàn thuộc về ý thức
 
 ## 5. Cá nhân hóa — trục số phận
 
-[[concepts/ca-nhan-hoa]] là khái niệm then chốt đo lường số phận mỗi nhân vật — mức độ họ tách được khỏi nguyên mẫu để thành "bản thân riêng":
+[[concepts/jung/ca-nhan-hoa]] là khái niệm then chốt đo lường số phận mỗi nhân vật — mức độ họ tách được khỏi nguyên mẫu để thành "bản thân riêng":
 
 | Nhân vật | Trạng thái cá nhân hóa |
 |---|---|
@@ -65,7 +65,7 @@ Mô hình [[concepts/bon-chuc-nang-tam-ly]] định vị các con:
 
 ## 6. Mặc cảm (Complex) — Michael
 
-[[people/michael-corleone]] còn được phân tích qua [[concepts/mac-cam-quyen-luc]] và mặc cảm tự ti: quyền lực là cơ chế bù đắp mặc cảm tự ti; càng nắm quyền càng xa rời bản ngã thật — quá trình ngược hoàn toàn với cá nhân hóa.
+[[people/michael-corleone]] còn được phân tích qua [[concepts/jung/mac-cam-quyen-luc]] và mặc cảm tự ti: quyền lực là cơ chế bù đắp mặc cảm tự ti; càng nắm quyền càng xa rời bản ngã thật — quá trình ngược hoàn toàn với cá nhân hóa.
 
 ## Luận đề tổng hợp
 

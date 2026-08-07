@@ -24,9 +24,9 @@ Judith Harris là nhà phân tích Jungian, tốt nghiệp từ Viện Jung ở 
 
 ## Key Concepts
 
-- [[concepts/vo-thuc]]
-- [[concepts/nguyen-mau]]
-- [[concepts/ca-nhan-hoa]]
+- [[concepts/jung/vo-thuc]]
+- [[concepts/jung/nguyen-mau]]
+- [[concepts/jung/ca-nhan-hoa]]
 
 ## Notes
 

@@ -20,7 +20,7 @@ sources:
 ingest_status: finalized
 verify_status: findings_pending
 findings:
-  - {id: 1, reviewer: grounding, class: patch, claim: "Các cạnh introduces_concept từ sources/the-undiscovered-self tới concepts/tam-ly-dam-dong, concepts/tu-hieu-minh, concepts/chuc-nang-ton-giao, concepts/cai-bong, concepts/phong-chieu", evidence: "PDF cho thấy Jung bàn rất đậm về các khái niệm này, nhưng văn bản không cho thấy cuốn này là nơi giới thiệu chúng; đúng hơn nó dùng và triển khai chúng trong một tiểu luận tổng hợp cuối kỳ.", action: "Nếu cần siết ngữ nghĩa đồ thị, đổi các cạnh introduces_concept này thành uses_concept hoặc quy ước tương đương nhẹ hơn."}
+  - {id: 1, reviewer: grounding, class: patch, claim: "Các cạnh introduces_concept từ sources/the-undiscovered-self tới concepts/jung/tam-ly-dam-dong, concepts/jung/tu-hieu-minh, concepts/jung/chuc-nang-ton-giao, concepts/jung/cai-bong, concepts/jung/phong-chieu", evidence: "PDF cho thấy Jung bàn rất đậm về các khái niệm này, nhưng văn bản không cho thấy cuốn này là nơi giới thiệu chúng; đúng hơn nó dùng và triển khai chúng trong một tiểu luận tổng hợp cuối kỳ.", action: "Nếu cần siết ngữ nghĩa đồ thị, đổi các cạnh introduces_concept này thành uses_concept hoặc quy ước tương đương nhẹ hơn."}
 ---
 ## Summary
 
@@ -31,10 +31,10 @@ The Undiscovered Self là tiểu luận xã hội - tâm lý cuối kỳ của C
 - [Cao] Xã hội hiện đại đe dọa cá nhân không chỉ bằng bạo lực vật chất, mà bằng quá trình biến con người thành đơn vị thống kê để bị thao túng bởi nhà nước, tổ chức và khẩu hiệu tập thể.
 - [Cao] Tự hiểu mình không đồng nghĩa với biết bản ngã ý thức của mình; nó đòi hỏi phải nhận ra các động lực, nội dung và xu hướng vô thức đang tác động lên phán đoán và hành vi.
 - [Cao] Lý thuyết tổng quát và cách nhìn thống kê có thể mô tả con người trung bình, nhưng không thể thay thế sự hiểu biết về cá nhân cụ thể và tính độc nhất của mỗi người.
-- [Cao] [[concepts/tam-ly-dam-dong]] làm suy yếu lý trí, trách nhiệm đạo đức và năng lực phán đoán, khiến xã hội dễ rơi vào cuồng tín, chuyên chế và "dịch bệnh tâm thần" tập thể.
-- [Cao] [[concepts/chuc-nang-ton-giao]] là đối trọng tâm lý cần thiết trước sức hút của nhà nước và thế giới bên ngoài, nhưng nó chỉ có tác dụng khi là một kinh nghiệm sống động, không phải chỉ là sự phục tùng giáo điều.
-- [Cao] Tâm hồn con người không thể bị quy gọn thành sản phẩm phụ của não bộ; [[concepts/vo-thuc]], [[concepts/nguyen-mau]] và [[concepts/bieu-tuong]] là các thực tại tâm lý phải được tính đến nếu muốn hiểu con người nghiêm túc.
-- [Cao] Cái ác mà con người thường thấy ở đối thủ chính là thứ mà họ không muốn thấy trong chính mình; không nhận ra [[concepts/cai-bong]] sẽ dẫn tới [[concepts/phong-chieu]] và tăng cường chia rẽ tập thể.
+- [Cao] [[concepts/jung/tam-ly-dam-dong]] làm suy yếu lý trí, trách nhiệm đạo đức và năng lực phán đoán, khiến xã hội dễ rơi vào cuồng tín, chuyên chế và "dịch bệnh tâm thần" tập thể.
+- [Cao] [[concepts/jung/chuc-nang-ton-giao]] là đối trọng tâm lý cần thiết trước sức hút của nhà nước và thế giới bên ngoài, nhưng nó chỉ có tác dụng khi là một kinh nghiệm sống động, không phải chỉ là sự phục tùng giáo điều.
+- [Cao] Tâm hồn con người không thể bị quy gọn thành sản phẩm phụ của não bộ; [[concepts/jung/vo-thuc]], [[concepts/jung/nguyen-mau]] và [[concepts/jung/bieu-tuong]] là các thực tại tâm lý phải được tính đến nếu muốn hiểu con người nghiêm túc.
+- [Cao] Cái ác mà con người thường thấy ở đối thủ chính là thứ mà họ không muốn thấy trong chính mình; không nhận ra [[concepts/jung/cai-bong]] sẽ dẫn tới [[concepts/jung/phong-chieu]] và tăng cường chia rẽ tập thể.
 - [Cao] Mọi nỗ lực cứu vãn xã hội chỉ bằng hành động đại chúng đều có giới hạn; sự biến đổi bền vững phải bắt đầu từ từng cá nhân biết tự phê bình, biết gánh trách nhiệm và biết rút lại các phóng chiếu của mình.
 
 ## Evidence
@@ -47,14 +47,14 @@ The Undiscovered Self là tiểu luận xã hội - tâm lý cuối kỳ của C
 
 ## Concepts
 
-- [[concepts/tam-ly-dam-dong]] — trạng thái tập thể nuốt mất phán đoán và trách nhiệm của cá nhân
-- [[concepts/tu-hieu-minh]] — điều kiện tâm lý để chống lại sự lây nhiễm tập thể và đối diện với bản thân
-- [[concepts/chuc-nang-ton-giao]] — đối trọng nội tâm trước sức ép của nhà nước, thống kê và ý thức hệ
-- [[concepts/cai-bong]] — phần ác, phần kém cao và phần bị chối bỏ trong tâm hồn cá nhân và tập thể
-- [[concepts/phong-chieu]] — cơ chế tống phần tối tâm bên trong sang kẻ thù bên ngoài
-- [[concepts/vo-thuc]] — tầng tâm lý sâu hơn bản ngã mà tự tri phải tiếp cận
-- [[concepts/nguyen-mau]] — các hình thức cổ xưa định hình kinh nghiệm tâm lý và biểu tượng
-- [[concepts/bieu-tuong]] — hình thức biểu đạt nội tâm nối liền tâm lý với ý nghĩa tôn giáo
+- [[concepts/jung/tam-ly-dam-dong]] — trạng thái tập thể nuốt mất phán đoán và trách nhiệm của cá nhân
+- [[concepts/jung/tu-hieu-minh]] — điều kiện tâm lý để chống lại sự lây nhiễm tập thể và đối diện với bản thân
+- [[concepts/jung/chuc-nang-ton-giao]] — đối trọng nội tâm trước sức ép của nhà nước, thống kê và ý thức hệ
+- [[concepts/jung/cai-bong]] — phần ác, phần kém cao và phần bị chối bỏ trong tâm hồn cá nhân và tập thể
+- [[concepts/jung/phong-chieu]] — cơ chế tống phần tối tâm bên trong sang kẻ thù bên ngoài
+- [[concepts/jung/vo-thuc]] — tầng tâm lý sâu hơn bản ngã mà tự tri phải tiếp cận
+- [[concepts/jung/nguyen-mau]] — các hình thức cổ xưa định hình kinh nghiệm tâm lý và biểu tượng
+- [[concepts/jung/bieu-tuong]] — hình thức biểu đạt nội tâm nối liền tâm lý với ý nghĩa tôn giáo
 
 ## People
 

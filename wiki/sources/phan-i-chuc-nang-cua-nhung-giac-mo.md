@@ -51,15 +51,15 @@ Jung lập luận rằng giấc mơ có **chức năng bù đắp** (compensator
 
 ## Khái niệm liên quan
 
-- [[concepts/ngon-ngu-giac-mo]] — Ngôn ngữ biểu tượng, ẩn dụ của giấc mơ
-- [[concepts/chuc-nang-bu-dap]] — Chức năng bù đắp của giấc mơ trong cấu tạo tâm lý
-- [[concepts/dong-nhat-tam-linh]] — Sự đồng nhất tâm linh giữa người và vật trong tư duy nguyên thủy
-- [[concepts/vo-thuc]] — Vô thức chứa các liên kết tâm lý dưới ngưỡng ý thức
-- [[concepts/bieu-tuong]] — Biểu tượng mang tầng ý nghĩa sâu hơn nghĩa hời
-- [[concepts/bieu-tuong-tap-the]] — Biểu tượng mang tính tập thể, bắt nguồn từ vô thức tập thể
-- [[concepts/chung-tiem-ky-uc]] — Các khuôn mẫu cổ xưa trong vô thức tập thể
-- [[concepts/phan-tich-giac-mo]] — Phương pháp phân tích giấc mơ
-- [[concepts/thanh-kien-y-thuc]] — Thành kiến ý thức khiến giấc mơ phải bù đắp
+- [[concepts/jung/ngon-ngu-giac-mo]] — Ngôn ngữ biểu tượng, ẩn dụ của giấc mơ
+- [[concepts/jung/chuc-nang-bu-dap]] — Chức năng bù đắp của giấc mơ trong cấu tạo tâm lý
+- [[concepts/jung/dong-nhat-tam-linh]] — Sự đồng nhất tâm linh giữa người và vật trong tư duy nguyên thủy
+- [[concepts/jung/vo-thuc]] — Vô thức chứa các liên kết tâm lý dưới ngưỡng ý thức
+- [[concepts/jung/bieu-tuong]] — Biểu tượng mang tầng ý nghĩa sâu hơn nghĩa hời
+- [[concepts/jung/bieu-tuong-tap-the]] — Biểu tượng mang tính tập thể, bắt nguồn từ vô thức tập thể
+- [[concepts/jung/chung-tiem-ky-uc]] — Các khuôn mẫu cổ xưa trong vô thức tập thể
+- [[concepts/jung/phan-tich-giac-mo]] — Phương pháp phân tích giấc mơ
+- [[concepts/jung/thanh-kien-y-thuc]] — Thành kiến ý thức khiến giấc mơ phải bù đắp
 
 ## Người được đề cập
 

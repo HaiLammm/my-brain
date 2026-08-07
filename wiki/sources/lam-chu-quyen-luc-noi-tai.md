@@ -42,12 +42,12 @@ Bài viết tổng hợp các chiến lược ngôn ngữ cơ thể và quản t
 
 ## Related Concepts
 
-- [[concepts/mat-na]] — Mặt nạ xã hội như persona chiến lược
-- [[concepts/mac-cam-quyen-luc]] — Bất lực (powerlessness) và mặc cảm quyền lực
-- [[concepts/cai-bong]] — Chuyển hóa bóng tối thành lợi thế
-- [[concepts/tu-tuong-huong-ngoai]] — Thái độ hướng ngoại trong quyến rũ chiến lược
-- [[concepts/ngon-ngu-co-the]] — Đọc vị đối phương qua tín hiệu cơ thể
-- [[concepts/thong-thao]] — Làm chủ kỹ năng qua thực hành sâu
+- [[concepts/jung/mat-na]] — Mặt nạ xã hội như persona chiến lược
+- [[concepts/jung/mac-cam-quyen-luc]] — Bất lực (powerlessness) và mặc cảm quyền lực
+- [[concepts/jung/cai-bong]] — Chuyển hóa bóng tối thành lợi thế
+- [[concepts/jung/tu-tuong-huong-ngoai]] — Thái độ hướng ngoại trong quyến rũ chiến lược
+- [[concepts/comm/ngon-ngu-co-the]] — Đọc vị đối phương qua tín hiệu cơ thể
+- [[concepts/comm/thong-thao]] — Làm chủ kỹ năng qua thực hành sâu
 
 ## People
 

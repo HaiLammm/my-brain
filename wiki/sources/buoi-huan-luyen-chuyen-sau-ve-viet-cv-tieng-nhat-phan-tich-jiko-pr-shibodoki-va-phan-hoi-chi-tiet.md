@@ -52,11 +52,11 @@ Buổi huấn luyện nhóm (17/05/2026) do [[people/pham-thi-thanh-thao]] — c
 
 ## Related concepts
 
-- [[concepts/jiko-pr]]
-- [[concepts/shibodoki]]
-- [[concepts/hourensou]]
-- [[concepts/cv-tot]]
-- [[concepts/khung-trinh-bay-cv]]
+- [[concepts/career/jiko-pr]]
+- [[concepts/career/shibodoki]]
+- [[concepts/career/hourensou]]
+- [[concepts/career/cv-tot]]
+- [[concepts/career/khung-trinh-bay-cv]]
 
 ## Related sources
 
@@ -80,7 +80,7 @@ Chị Thảo đánh giá CV của Lâm **chưa đạt chuẩn CV tiếng Nhật*
 3. **Kinh nghiệm làm việc không nổi bật** — chưa áp dụng khung 5 bước; thành tích kỹ thuật có nhưng không được trình bày theo logic Kết luận → Lí do → Ví dụ → Kết luận lại → Ứng dụng.
 4. **Không có Self-PR** — thiếu phần tự PR bản thân rõ ràng.
 
-**Hướng xử lý**: Viết lại toàn bộ theo khung [[concepts/khung-trinh-bay-cv]], đặc biệt ưu tiên bổ sung Shibodoki nhắm vào JD cụ thể (EAERA).
+**Hướng xử lý**: Viết lại toàn bộ theo khung [[concepts/career/khung-trinh-bay-cv]], đặc biệt ưu tiên bổ sung Shibodoki nhắm vào JD cụ thể (EAERA).
 
 ## Open questions
 

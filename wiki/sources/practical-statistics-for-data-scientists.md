@@ -55,19 +55,19 @@ Practical Statistics for Data Scientists là cuốn nhập môn thực hành v�
 
 ## Related concepts
 
-- [[concepts/exploratory-data-analysis]]
-- [[concepts/random-sampling]]
-- [[concepts/bootstrap]]
-- [[concepts/hypothesis-testing]]
-- [[concepts/linear-regression]]
-- [[concepts/logistic-regression]]
-- [[concepts/k-nearest-neighbors]]
-- [[concepts/decision-tree-models]]
-- [[concepts/random-forest]]
-- [[concepts/boosting]]
-- [[concepts/principal-components-analysis]]
-- [[concepts/k-means-clustering]]
-- [[concepts/hierarchical-clustering]]
+- [[concepts/ml/exploratory-data-analysis]]
+- [[concepts/ml/random-sampling]]
+- [[concepts/ml/bootstrap]]
+- [[concepts/ml/hypothesis-testing]]
+- [[concepts/ml/linear-regression]]
+- [[concepts/ml/logistic-regression]]
+- [[concepts/ml/k-nearest-neighbors]]
+- [[concepts/ml/decision-tree-models]]
+- [[concepts/ml/random-forest]]
+- [[concepts/ml/boosting]]
+- [[concepts/ml/principal-components-analysis]]
+- [[concepts/ml/k-means-clustering]]
+- [[concepts/ml/hierarchical-clustering]]
 
 ## Related sources
 

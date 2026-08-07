@@ -58,13 +58,13 @@ Bác sĩ tâm thần Daniel Amen — người sáng lập Amen Clinics và chuy�
 
 ## Related concepts
 
-- [[concepts/adhd]]
-- [[concepts/suc-khoe-nao]]
-- [[concepts/bright-minds]]
-- [[concepts/suy-nghi-tieu-cuc-tu-dong]]
-- [[concepts/he-lymph-nao]]
-- [[concepts/bien-thien-nhip-tim]]
-- [[concepts/emdr]]
+- [[concepts/neuro/adhd]]
+- [[concepts/neuro/suc-khoe-nao]]
+- [[concepts/neuro/bright-minds]]
+- [[concepts/neuro/suy-nghi-tieu-cuc-tu-dong]]
+- [[concepts/neuro/he-lymph-nao]]
+- [[concepts/neuro/bien-thien-nhip-tim]]
+- [[concepts/neuro/emdr]]
 
 ## Related sources
 

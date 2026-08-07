@@ -25,8 +25,8 @@ Aurélien Géron là cựu kỹ sư Google, từng dẫn dắt nhóm YouTube Vid
 
 ## Key concepts
 
-- [[concepts/artificial-neural-networks]]
-- [[concepts/tensorflow]]
-- [[concepts/keras]]
+- [[concepts/ml/artificial-neural-networks]]
+- [[concepts/ml/tensorflow]]
+- [[concepts/ml/keras]]
 
 ## Notes

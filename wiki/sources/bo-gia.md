@@ -42,9 +42,9 @@ Từ phần Lời tựa (Chương 1): Bố già Corleone là người được c
 
 ## Related Concepts
 
-- [[concepts/mafia]]
-- [[concepts/gia-dinh-mafia]]
-- [[concepts/quyen-luc-tiem-nan]]
+- [[concepts/bo-gia/mafia]]
+- [[concepts/bo-gia/gia-dinh-mafia]]
+- [[concepts/bo-gia/quyen-luc-tiem-nan]]
 
 ## People
 

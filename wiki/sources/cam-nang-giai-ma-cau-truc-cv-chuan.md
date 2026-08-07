@@ -43,9 +43,9 @@ Cẩm nang hướng dẫn viết CV chuẩn cho thị trường tuyển dụng h
 
 ## Related concepts
 
-- [[concepts/ats]]
-- [[concepts/tu-khoa-cv]]
-- [[concepts/cv-tot]]
+- [[concepts/career/ats]]
+- [[concepts/career/tu-khoa-cv]]
+- [[concepts/career/cv-tot]]
 
 ## Related sources
 

@@ -5,7 +5,7 @@ _Append-only. Format: `## [YYYY-MM-DD] skill | details`_
 ## [2026-05-11] init | Wiki initialized. Packs: core, research, reading, learning.
 ## [2026-05-11] init | session:0a878790 | Wiki initialized. Packs: core, research, reading, learning. Created: 14 dirs, seeded index.md and log.md.
 ## [2026-05-11] ingest | session:c9ad8c75 | Added "Làm Chủ Dòng Lệnh Linux: Sổ Tay Phân Loại Cho Người Mới Bắt Đầu" → 8 pages touched (1 source, 6 concepts, 1 existing)
-## [2026-05-11] ask | session:35131648 | Created concept page for nguyen-mau-father in wiki/concepts/nguyen-mau-father.md
+## [2026-05-11] ask | session:35131648 | Created concept page for nguyen-mau-father in wiki/concepts/jung/nguyen-mau-father.md
 ## [2026-05-11] ask | session:38a5dfce | Added Jungian analysis to luca-brasi.md (Shadow archetype) and vito-corleone.md (Father archetype)
 ## [2026-05-12] ask | session:5596d69c | Created concept page for cv_tot (criteria for a good CV) in wiki/concepts/cv_tot.md
 ## [2026-05-12] ingest | session:ab9a00f8 | Added "DaNangNavi — Product Requirements Document" → 7 pages touched (1 source, 6 concepts)
@@ -115,3 +115,4 @@ _Append-only. Format: `## [YYYY-MM-DD] skill | details`_
 ## [2026-08-07] character-track | session:ad41e94b | bo-gia ch1-ch32 -> 62 characters updated, 128 edges added
 ## [2026-08-07] character-track | session:3947b099 | bo-gia -> removed 8 orphan edges (barzini, ginny-fontane) + rebuilt graph: 2507 -> 2499 edges
 ## [2026-08-07] edit | session:69e16e37 | Sửa 7 edge mồ côi ngoài bo-gia: nắn slug sources/chien-luoc-phong-van-ot-pha -> dot-pha (3 concept key_sources + 4 edge, thêm 6 edge introduces_concept/introduced_in); chuyển 3 edge produced từ outputs/cv-jiko-pr-shibodoki-eaera (đã xóa 2026-05-18) sang outputs/cv-luong-hai-lam-tieng-viet. Graph: 0 edge mồ côi, 2501 edge.
+## [2026-08-07] edit | session:5ea71b95 | Namespace hoá concepts/: 271 trang phẳng -> 12 thư mục domain (swe 52, jung 51, ml 49, tailor 38, neuro 20, seo 15, career 11, tools 9, comm 9, khuyen-hoc 8, danangnavi 6, bo-gia 3). Cập nhật 3420 tham chiếu trong 387 file (edges.jsonl, index.md, frontmatter, wikilink). 34 pattern kỹ thuật tái dùng tách khỏi namespace dự án sang concepts/swe/. Bổ sung quy ước namespace + quy tắc lọc dự án theo tuổi thọ vào README.md và page-templates.md.

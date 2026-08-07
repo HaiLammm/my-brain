@@ -29,19 +29,19 @@ Lương Hải Lâm là fullstack developer sinh ngày 12/07/2001, tốt nghiệp
 
 ## Key concepts
 
-- [[concepts/modular-monolith]]
-- [[concepts/event-driven-internal-communication]]
-- [[concepts/authoritative-server-pattern]]
-- [[concepts/multi-tenant-rls]]
-- [[concepts/race-condition-prevention]]
-- [[concepts/fastapi]]
-- [[concepts/cross-language-search]]
+- [[concepts/swe/modular-monolith]]
+- [[concepts/swe/event-driven-internal-communication]]
+- [[concepts/swe/authoritative-server-pattern]]
+- [[concepts/swe/multi-tenant-rls]]
+- [[concepts/swe/race-condition-prevention]]
+- [[concepts/swe/fastapi]]
+- [[concepts/swe/cross-language-search]]
 
 ## CV Status (2026-05-18)
 
 CV tiếng Việt chính thức đã hoàn chỉnh: [[outputs/cv-luong-hai-lam-tieng-viet]]
 
-Cấu trúc theo Narrative CV Framework 7 lớp ([[concepts/khung-trinh-bay-cv]]):
+Cấu trúc theo Narrative CV Framework 7 lớp ([[concepts/career/khung-trinh-bay-cv]]):
 - Giới thiệu bản thân: câu chuyện mẹ + tiệm may → nguồn gốc điểm mạnh
 - PR bản thân: Jiko PR 4 bước, điểm mạnh cốt lõi = "đi từ nghiệp vụ thực tế"
 - Mong muốn làm việc: Shibodoki nhắm vào EAERA (CRM + "In Service of Clients")

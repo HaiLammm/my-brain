@@ -43,7 +43,7 @@ Tài liệu tập trung vào 3 tình huống giao tiếp khó trong phỏng vấ
 
 ## Related concepts
 
-- [[concepts/tu-duy-win-win-phong-van]]
+- [[concepts/career/tu-duy-win-win-phong-van]]
 
 ## Related sources
 

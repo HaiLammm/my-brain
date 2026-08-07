@@ -7,10 +7,10 @@ updated: 2026-05-30
 covers:
   - sources/ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro
   - sources/huong-dan-viet-bai-seo-cho-setsubi-pro
-  - concepts/seo-symptom-problem-first
-  - concepts/noi-dung-giai-thich-cho-nguoi-khong-chuyen
-  - concepts/cta-mem
-  - concepts/bang-tu-xu-ly-hay-goi-tho
+  - concepts/seo/seo-symptom-problem-first
+  - concepts/seo/noi-dung-giai-thich-cho-nguoi-khong-chuyen
+  - concepts/seo/cta-mem
+  - concepts/seo/bang-tu-xu-ly-hay-goi-tho
 ---
 
 ## SEO metadata

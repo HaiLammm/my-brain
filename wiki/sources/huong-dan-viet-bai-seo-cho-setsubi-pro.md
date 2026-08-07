@@ -51,11 +51,11 @@ findings:
 
 ## Related concepts
 
-- [[concepts/seo-symptom-problem-first]]
-- [[concepts/noi-dung-giai-thich-cho-nguoi-khong-chuyen]]
-- [[concepts/cta-mem]]
-- [[concepts/bang-tu-xu-ly-hay-goi-tho]]
-- [[concepts/blog-giai-quyet-su-co-nha-o]]
+- [[concepts/seo/seo-symptom-problem-first]]
+- [[concepts/seo/noi-dung-giai-thich-cho-nguoi-khong-chuyen]]
+- [[concepts/seo/cta-mem]]
+- [[concepts/seo/bang-tu-xu-ly-hay-goi-tho]]
+- [[concepts/seo/blog-giai-quyet-su-co-nha-o]]
 
 ## Related sources
 

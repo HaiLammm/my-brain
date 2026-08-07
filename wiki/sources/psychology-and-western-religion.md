@@ -56,15 +56,15 @@ findings: []
 
 ## Related concepts
 
-- [[concepts/nguyen-mau]] — các biểu tượng tôn giáo Cơ Đốc có nền tảng archetype
-- [[concepts/vo-thuc-tap-the]] — nguồn gốc của các biểu tượng tôn giáo
-- [[concepts/vo-thuc]] — nơi phát xuất các trải nghiệm tôn giáo
-- [[concepts/bieu-tuong]] — biểu tượng tôn giáo như ngôn ngữ của vô thức
-- [[concepts/ban-nga]] — Đấng Christ như biểu tượng của Bản ngã (the Self)
-- [[concepts/cai-bong]] — vấn đề cái ác và yếu tố thứ tư bị thiếu trong Ba Ngôi
-- [[concepts/chuc-nang-ton-giao]] — chức năng tôn giáo tự nhiên của psyche
-- [[concepts/ca-nhan-hoa]] — tiến trình cá nhân hóa được phản ánh trong biểu tượng Ba Ngôi và Thánh lễ
-- [[concepts/dong-nhat-tam-linh]] — tham gia huyền nhiệm trong nghi thức tôn giáo
+- [[concepts/jung/nguyen-mau]] — các biểu tượng tôn giáo Cơ Đốc có nền tảng archetype
+- [[concepts/jung/vo-thuc-tap-the]] — nguồn gốc của các biểu tượng tôn giáo
+- [[concepts/jung/vo-thuc]] — nơi phát xuất các trải nghiệm tôn giáo
+- [[concepts/jung/bieu-tuong]] — biểu tượng tôn giáo như ngôn ngữ của vô thức
+- [[concepts/jung/ban-nga]] — Đấng Christ như biểu tượng của Bản ngã (the Self)
+- [[concepts/jung/cai-bong]] — vấn đề cái ác và yếu tố thứ tư bị thiếu trong Ba Ngôi
+- [[concepts/jung/chuc-nang-ton-giao]] — chức năng tôn giáo tự nhiên của psyche
+- [[concepts/jung/ca-nhan-hoa]] — tiến trình cá nhân hóa được phản ánh trong biểu tượng Ba Ngôi và Thánh lễ
+- [[concepts/jung/dong-nhat-tam-linh]] — tham gia huyền nhiệm trong nghi thức tôn giáo
 
 ## People
 

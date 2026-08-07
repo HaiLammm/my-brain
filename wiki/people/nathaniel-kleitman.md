@@ -25,7 +25,7 @@ Nathaniel Kleitman (1895–1999) là cha đẻ nghiên cứu giấc ngủ hiện
 
 ## Key concepts
 
-- [[concepts/nhip-sinh-hoc]]
-- [[concepts/giac-ngu-rem]]
+- [[concepts/neuro/nhip-sinh-hoc]]
+- [[concepts/neuro/giac-ngu-rem]]
 
 ## Notes

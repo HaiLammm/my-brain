@@ -49,26 +49,26 @@ Báo cáo nghiên cứu kỹ thuật phân tích kiến trúc dịch ngữ Ngữ
 
 ## Concepts
 
-- [[concepts/physical-emotional-compiler]] — Core domain dịch cảm xúc thành tham số hình học
-- [[concepts/modular-monolith]] — Kiến trúc đơn khối module đề xuất cho giai đoạn ban đầu
-- [[concepts/deterministic-guardrails]] — Lớp kiểm soát xác định chặn thiết kế vi phạm vùng an toàn vật lý
-- [[concepts/geometric-delta]] — Sai số hình học từ dịch ngữ cảm xúc
-- [[concepts/langgraph]] — Bộ điều phối reasoning multi-agent có trạng thái
-- [[concepts/pgvector]] — Mở rộng PostgreSQL cho tìm kiếm vector similarity
-- [[concepts/pydantic]] — Thư viện validation Python cho Contract-Driven Development
-- [[concepts/fastapi]] — Web framework hiệu năng cao cho API endpoints
-- [[concepts/clean-architecture]] — Pattern tách biệt core domain khỏi external dependencies
-- [[concepts/semantic-pattern-engine]] — Bộ nhận dạng mẫu ngữ nghĩa cho quan hệ giữa tính chất vải, thành phần thiết kế và tính từ cảm xúc
-- [[concepts/design-atoms]] — Đơn vị thiết kế nguyên thủy với schema typed nghiêm ngặt
-- [[concepts/smart-rules]] — Quy tắc may vá được lưu trữ dưới dạng vector ngữ nghĩa
-- [[concepts/two-stage-query]] — Chiến lược Semantic Recall → Relational Precision cho truy vấn hybrid
-- [[concepts/agentic-rag]] — RAG chủ động với agents tự quyết định cách sử dụng tools
-- [[concepts/contract-driven-development]] — Sử dụng Pydantic models định nghĩa state contracts giữa agents
-- [[concepts/geometric-transformation-engine]] — Bộ chuyển đổi delta ngữ nghĩa thành tham số hình học
-- [[concepts/manufacturing-blueprint]] — Kết xuất CNC-ready từ chuyển đổi hình học
-- [[concepts/atelier-academy]] — Hệ thống fine-tuning lặp dựa trên phản hồi thợ may thực tế
-- [[concepts/pygem]] — Thư viện Python Geometrical Morphing cho parameterization CAD/3D
-- [[concepts/shapely]] — Thư viện tính toán hình học 2D cho pattern calculation
+- [[concepts/tailor/physical-emotional-compiler]] — Core domain dịch cảm xúc thành tham số hình học
+- [[concepts/swe/modular-monolith]] — Kiến trúc đơn khối module đề xuất cho giai đoạn ban đầu
+- [[concepts/tailor/deterministic-guardrails]] — Lớp kiểm soát xác định chặn thiết kế vi phạm vùng an toàn vật lý
+- [[concepts/tailor/geometric-delta]] — Sai số hình học từ dịch ngữ cảm xúc
+- [[concepts/swe/langgraph]] — Bộ điều phối reasoning multi-agent có trạng thái
+- [[concepts/swe/pgvector]] — Mở rộng PostgreSQL cho tìm kiếm vector similarity
+- [[concepts/swe/pydantic]] — Thư viện validation Python cho Contract-Driven Development
+- [[concepts/swe/fastapi]] — Web framework hiệu năng cao cho API endpoints
+- [[concepts/swe/clean-architecture]] — Pattern tách biệt core domain khỏi external dependencies
+- [[concepts/tailor/semantic-pattern-engine]] — Bộ nhận dạng mẫu ngữ nghĩa cho quan hệ giữa tính chất vải, thành phần thiết kế và tính từ cảm xúc
+- [[concepts/tailor/design-atoms]] — Đơn vị thiết kế nguyên thủy với schema typed nghiêm ngặt
+- [[concepts/tailor/smart-rules]] — Quy tắc may vá được lưu trữ dưới dạng vector ngữ nghĩa
+- [[concepts/swe/two-stage-query]] — Chiến lược Semantic Recall → Relational Precision cho truy vấn hybrid
+- [[concepts/swe/agentic-rag]] — RAG chủ động với agents tự quyết định cách sử dụng tools
+- [[concepts/swe/contract-driven-development]] — Sử dụng Pydantic models định nghĩa state contracts giữa agents
+- [[concepts/tailor/geometric-transformation-engine]] — Bộ chuyển đổi delta ngữ nghĩa thành tham số hình học
+- [[concepts/tailor/manufacturing-blueprint]] — Kết xuất CNC-ready từ chuyển đổi hình học
+- [[concepts/tailor/atelier-academy]] — Hệ thống fine-tuning lặp dựa trên phản hồi thợ may thực tế
+- [[concepts/swe/pygem]] — Thư viện Python Geometrical Morphing cho parameterization CAD/3D
+- [[concepts/swe/shapely]] — Thư viện tính toán hình học 2D cho pattern calculation
 
 ## People
 

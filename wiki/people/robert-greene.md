@@ -23,6 +23,6 @@ Robert Greene (sinh 1959) là tác giả người Mỹ nổi tiếng với các 
 
 ## Key Concepts
 
-- [[concepts/thong-thao]]
-- [[concepts/mat-na]]
-- [[concepts/ngon-ngu-co-the]]
+- [[concepts/comm/thong-thao]]
+- [[concepts/jung/mat-na]]
+- [[concepts/comm/ngon-ngu-co-the]]

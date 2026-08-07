@@ -23,7 +23,7 @@ Joseph L. Henderson (1900-1990) là bác sĩ và nhà phân tích tâm lý học
 
 ## Key Concepts
 
-- [[concepts/nguyen-mau]]
+- [[concepts/jung/nguyen-mau]]
 
 ## Notes
 

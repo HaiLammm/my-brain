@@ -46,9 +46,9 @@ Ghi chú cá nhân về chị Phạm Thị Thanh Thảo — chuyên gia HR từn
 
 ## Related concepts
 
-- [[concepts/quan-ly-phat-huy-diem-manh]]
-- [[concepts/khung-trinh-bay-cv]]
-- [[concepts/cv-tot]]
+- [[concepts/career/quan-ly-phat-huy-diem-manh]]
+- [[concepts/career/khung-trinh-bay-cv]]
+- [[concepts/career/cv-tot]]
 
 ## Related sources
 

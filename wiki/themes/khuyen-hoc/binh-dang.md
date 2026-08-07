@@ -25,4 +25,4 @@ Con người sinh ra bình đẳng về tư cách và quyền lợi — đây l�
 
 ## Notes
 
-Là chủ đề gốc rễ, kết nối với khái niệm [[concepts/binh-dang]] đã được nạp từ trang nguồn [[sources/khuyen-hoc]].
+Là chủ đề gốc rễ, kết nối với khái niệm [[concepts/khuyen-hoc/binh-dang]] đã được nạp từ trang nguồn [[sources/khuyen-hoc]].

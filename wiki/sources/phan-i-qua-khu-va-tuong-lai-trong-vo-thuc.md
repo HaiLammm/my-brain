@@ -49,14 +49,14 @@ Jung khám phá tính chất hai chiều của vô thức: vừa là kho lưu k�
 
 ## Khái niệm liên quan
 
-- [[concepts/vo-thuc]] — Vô thức: nơi lưu trữ quá khứ và mầm mống tương lai
-- [[concepts/vo-thuc-ca-nhan]] — Vô thức cá nhân: lớp ký ức cá nhân bị lãng quên
-- [[concepts/kim-nen]] — Kìm nén: cơ chế đẩy ký ức khó chịu xuống vô thức
-- [[concepts/chung-tiem-ky-uc]] — Chứng tiềm ký ức: ký ức thực tế quay lại dưới dạng ý tưởng "mới"
-- [[concepts/nhan-thuc-ngam]] — Nhận thức ngầm: ghi nhận sự kiện dưới ngưỡng ý thức
-- [[concepts/sang-tao-tu-vo-thuc]] — Sáng tạo từ vô thức: ý tưởng mới nảy mầm từ vô thức
-- [[concepts/noi-so-cai-moi]] — Nỗi sợ cái mới: cản trở tâm lý trước ý tưởng đột phá
-- [[concepts/bieu-tuong]] — Biểu tượng: ngôn ngữ của vô thức
+- [[concepts/jung/vo-thuc]] — Vô thức: nơi lưu trữ quá khứ và mầm mống tương lai
+- [[concepts/jung/vo-thuc-ca-nhan]] — Vô thức cá nhân: lớp ký ức cá nhân bị lãng quên
+- [[concepts/jung/kim-nen]] — Kìm nén: cơ chế đẩy ký ức khó chịu xuống vô thức
+- [[concepts/jung/chung-tiem-ky-uc]] — Chứng tiềm ký ức: ký ức thực tế quay lại dưới dạng ý tưởng "mới"
+- [[concepts/jung/nhan-thuc-ngam]] — Nhận thức ngầm: ghi nhận sự kiện dưới ngưỡng ý thức
+- [[concepts/jung/sang-tao-tu-vo-thuc]] — Sáng tạo từ vô thức: ý tưởng mới nảy mầm từ vô thức
+- [[concepts/jung/noi-so-cai-moi]] — Nỗi sợ cái mới: cản trở tâm lý trước ý tưởng đột phá
+- [[concepts/jung/bieu-tuong]] — Biểu tượng: ngôn ngữ của vô thức
 
 ## Người được đề cập
 

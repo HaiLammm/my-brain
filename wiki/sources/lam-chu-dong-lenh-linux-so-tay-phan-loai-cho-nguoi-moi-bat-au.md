@@ -38,12 +38,12 @@ Tài liệu hướng dẫn toàn diện về dòng lệnh Linux dành cho ngư�
 
 ## Concepts
 
-- [[concepts/vim]] — trình soạn thảo văn bản thao tác hoàn toàn bằng bàn phím
-- [[concepts/pipe]] — "cây cầu" kết nối đầu ra của lệnh này làm đầu vào cho lệnh khác
-- [[concepts/shell-alias]] — cách đặt tên ngắn cho câu lệnh dài để tăng năng suất
-- [[concepts/vim-macro]] — tính năng tự động hóa trong VIM bằng cách ghi và lặp lại chuỗi hành động
-- [[concepts/process-management]] — cách theo dõi và quản lý các tiến trình đang chạy trong Linux
-- [[concepts/file-permissions]] — hệ thống quyền read/write/execute trên Linux
+- [[concepts/tools/vim]] — trình soạn thảo văn bản thao tác hoàn toàn bằng bàn phím
+- [[concepts/tools/pipe]] — "cây cầu" kết nối đầu ra của lệnh này làm đầu vào cho lệnh khác
+- [[concepts/tools/shell-alias]] — cách đặt tên ngắn cho câu lệnh dài để tăng năng suất
+- [[concepts/tools/vim-macro]] — tính năng tự động hóa trong VIM bằng cách ghi và lặp lại chuỗi hành động
+- [[concepts/tools/process-management]] — cách theo dõi và quản lý các tiến trình đang chạy trong Linux
+- [[concepts/tools/file-permissions]] — hệ thống quyền read/write/execute trên Linux
 
 ## People
 

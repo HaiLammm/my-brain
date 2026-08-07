@@ -51,16 +51,16 @@ Jung trình bày lý thuyết mẫu người (psychological types) của ông, b
 
 ## Khái niệm liên quan
 
-- [[concepts/tu-tuong-huong-ngoai]] — Thái độ hướng ngoại, ưu tiên thế khách quan
-- [[concepts/tu-tuong-huong-noi]] — Thái độ hướng nội, ưu tiên thế chủ quan
-- [[concepts/bon-chuc-nang-tam-ly]] — Bốn chức năng tâm lý: lý trí, cảm nhận, tri giác, trực giác
-- [[concepts/chuc-nang-bu-dap]] — Chức năng bù đắp của giấc mơ cho sự thiếu hụt ý thức
-- [[concepts/phan-tich-giac-mo]] — Phương pháp phân tích giấc mơ theo ngữ cảnh cá nhân
-- [[concepts/vo-thuc]] — Vô thức chứa các nội dung bị đè nén hoặc chưa ý thức
-- [[concepts/nguyen-mau]] — Các hình ảnh nguyên mẫu trong vô thức tập thể
-- [[concepts/bieu-tuong]] — Biểu tượng là ngôn ngữ của vô thức
-- [[concepts/mac-cam-quyen-luc]] — Mặc cảm quyền lực, mong muốn thống trị
-- [[concepts/mac-cam-tu-ti]] — Mặc cảm tự ti, cảm giác vô dụng
+- [[concepts/jung/tu-tuong-huong-ngoai]] — Thái độ hướng ngoại, ưu tiên thế khách quan
+- [[concepts/jung/tu-tuong-huong-noi]] — Thái độ hướng nội, ưu tiên thế chủ quan
+- [[concepts/jung/bon-chuc-nang-tam-ly]] — Bốn chức năng tâm lý: lý trí, cảm nhận, tri giác, trực giác
+- [[concepts/jung/chuc-nang-bu-dap]] — Chức năng bù đắp của giấc mơ cho sự thiếu hụt ý thức
+- [[concepts/jung/phan-tich-giac-mo]] — Phương pháp phân tích giấc mơ theo ngữ cảnh cá nhân
+- [[concepts/jung/vo-thuc]] — Vô thức chứa các nội dung bị đè nén hoặc chưa ý thức
+- [[concepts/jung/nguyen-mau]] — Các hình ảnh nguyên mẫu trong vô thức tập thể
+- [[concepts/jung/bieu-tuong]] — Biểu tượng là ngôn ngữ của vô thức
+- [[concepts/jung/mac-cam-quyen-luc]] — Mặc cảm quyền lực, mong muốn thống trị
+- [[concepts/jung/mac-cam-tu-ti]] — Mặc cảm tự ti, cảm giác vô dụng
 
 ## Người được đề cập
 

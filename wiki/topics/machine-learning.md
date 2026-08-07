@@ -20,15 +20,15 @@ Chủ đề này gom các ghi chú cốt lõi trong wiki về Machine Learning t
 
 ## Key concepts
 
-- [[concepts/feature-engineering]] — bước biến đổi dữ liệu đầu vào để cải thiện tín hiệu học được của mô hình.
-- [[concepts/cross-validation]] — kỹ thuật đánh giá mô hình giúp ước lượng khả năng tổng quát hóa đáng tin cậy hơn.
-- [[concepts/gradient-descent]] — cơ chế tối ưu hóa nền tảng cho rất nhiều mô hình học máy.
-- [[concepts/regularization]] — nhóm kỹ thuật kiểm soát overfitting và cải thiện khả năng tổng quát hóa.
-- [[concepts/ensemble-learning]] — đại diện cho nhóm phương pháp cổ điển có hiệu năng thực chiến cao.
-- [[concepts/dimensionality-reduction]] — đại diện cho hướng học không giám sát và nén không gian đặc trưng.
-- [[concepts/artificial-neural-networks]] — điểm vào cốt lõi cho nhánh deep learning trong wiki.
-- [[concepts/transformer-architecture]] — đại diện cho lớp kiến trúc hiện đại cho NLP và mô hình chuỗi.
-- [[concepts/reinforcement-learning]] — đại diện cho nhánh học qua tương tác và ra quyết định tuần tự.
+- [[concepts/ml/feature-engineering]] — bước biến đổi dữ liệu đầu vào để cải thiện tín hiệu học được của mô hình.
+- [[concepts/ml/cross-validation]] — kỹ thuật đánh giá mô hình giúp ước lượng khả năng tổng quát hóa đáng tin cậy hơn.
+- [[concepts/ml/gradient-descent]] — cơ chế tối ưu hóa nền tảng cho rất nhiều mô hình học máy.
+- [[concepts/ml/regularization]] — nhóm kỹ thuật kiểm soát overfitting và cải thiện khả năng tổng quát hóa.
+- [[concepts/ml/ensemble-learning]] — đại diện cho nhóm phương pháp cổ điển có hiệu năng thực chiến cao.
+- [[concepts/ml/dimensionality-reduction]] — đại diện cho hướng học không giám sát và nén không gian đặc trưng.
+- [[concepts/ml/artificial-neural-networks]] — điểm vào cốt lõi cho nhánh deep learning trong wiki.
+- [[concepts/ml/transformer-architecture]] — đại diện cho lớp kiến trúc hiện đại cho NLP và mô hình chuỗi.
+- [[concepts/ml/reinforcement-learning]] — đại diện cho nhánh học qua tương tác và ra quyết định tuần tự.
 
 ## Open questions
 

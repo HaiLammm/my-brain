@@ -24,8 +24,8 @@ Maria Moltzer (1874-1944) là cộng sự thân cận của Jung trong giai đo�
 
 ## Key concepts
 
-- [[concepts/truc-giac-tam-ly]] — Moltzer được gắn trực tiếp với bước phát biểu sớm về trực giác như một chức năng tâm lý
-- [[concepts/bon-chuc-nang-tam-ly]] — vai trò của bà giúp nối nhị nguyên hướng nội/hướng ngoại với mô hình chức năng hoàn chỉnh hơn
+- [[concepts/jung/truc-giac-tam-ly]] — Moltzer được gắn trực tiếp với bước phát biểu sớm về trực giác như một chức năng tâm lý
+- [[concepts/jung/bon-chuc-nang-tam-ly]] — vai trò của bà giúp nối nhị nguyên hướng nội/hướng ngoại với mô hình chức năng hoàn chỉnh hơn
 
 ## Notes
 

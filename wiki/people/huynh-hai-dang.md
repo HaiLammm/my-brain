@@ -26,7 +26,7 @@ Huỳnh Hải Đăng (フィン・ハイ・ダン, sinh 12/02/1993, Da Nang) là
 
 ## Key concepts
 
-- [[concepts/jiko-pr]]
-- [[concepts/cv-tot]]
+- [[concepts/career/jiko-pr]]
+- [[concepts/career/cv-tot]]
 
 ## Notes

@@ -52,9 +52,9 @@ CV tiếng Nhật của Huỳnh Hải Đăng (フィン・ハイ・ダン), ứn
 
 ## Related concepts
 
-- [[concepts/jiko-pr]]
-- [[concepts/cv-tot]]
-- [[concepts/natural-language-processing]]
+- [[concepts/career/jiko-pr]]
+- [[concepts/career/cv-tot]]
+- [[concepts/ml/natural-language-processing]]
 
 ## Related sources
 

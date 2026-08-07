@@ -25,8 +25,8 @@ Chu Tử (Chu Hi) là đại biểu tiêu biểu của Tống Nho, có ảnh hư
 
 ## Key concepts
 
-- [[concepts/thuc-hoc]]
-- [[concepts/tu-do]]
-- [[concepts/tiep-thu-co-chon-loc]]
+- [[concepts/khuyen-hoc/thuc-hoc]]
+- [[concepts/khuyen-hoc/tu-do]]
+- [[concepts/khuyen-hoc/tiep-thu-co-chon-loc]]
 
 ## Notes

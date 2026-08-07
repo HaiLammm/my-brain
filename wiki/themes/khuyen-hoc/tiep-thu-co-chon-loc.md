@@ -24,4 +24,4 @@ Học phương Tây là cần thiết nhưng phải có chọn lọc, không sù
 
 ## Notes
 
-Kết nối với khái niệm [[concepts/tiep-thu-co-chon-loc]] đã được nạp từ trang nguồn [[sources/khuyen-hoc]].
+Kết nối với khái niệm [[concepts/khuyen-hoc/tiep-thu-co-chon-loc]] đã được nạp từ trang nguồn [[sources/khuyen-hoc]].

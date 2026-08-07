@@ -24,4 +24,4 @@ Pháp trị là nguyên tắc cai trị bằng luật thay cho tùy tiện cá n
 
 ## Notes
 
-Kết nối với khái niệm [[concepts/phap-tri]] đã được nạp từ trang nguồn [[sources/khuyen-hoc]].
+Kết nối với khái niệm [[concepts/khuyen-hoc/phap-tri]] đã được nạp từ trang nguồn [[sources/khuyen-hoc]].

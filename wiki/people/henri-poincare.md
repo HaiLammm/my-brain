@@ -25,6 +25,6 @@ Nhà toán học Pháp, một trong những nhà khoa học vĩ đại nhất th
 
 ## Khái niệm chính
 
-- [[concepts/sang-tao-tu-vo-thuc]] — Khám phá qua mạc khải từ vô thức
+- [[concepts/jung/sang-tao-tu-vo-thuc]] — Khám phá qua mạc khải từ vô thức
 
 ## Ghi chú

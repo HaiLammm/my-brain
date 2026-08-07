@@ -59,12 +59,12 @@ DaNangNavi là nền tảng cộng đồng hướng dẫn cuộc sống địa p
 
 ## Khái niệm liên quan
 
-- [[concepts/senpai-trust-flywheel]]
-- [[concepts/closed-data-philosophy]]
-- [[concepts/context-aware-voice-translation]]
-- [[concepts/contribution-point-system]]
-- [[concepts/three-sided-cultural-bridge]]
-- [[concepts/camera-only-verification]]
+- [[concepts/danangnavi/senpai-trust-flywheel]]
+- [[concepts/danangnavi/closed-data-philosophy]]
+- [[concepts/danangnavi/context-aware-voice-translation]]
+- [[concepts/danangnavi/contribution-point-system]]
+- [[concepts/danangnavi/three-sided-cultural-bridge]]
+- [[concepts/danangnavi/camera-only-verification]]
 
 ## Nguồn liên quan
 

@@ -39,7 +39,7 @@ Tài liệu cung cấp framework 3 phần để trả lời câu hỏi mở "Tel
 
 ## Related concepts
 
-- [[concepts/tu-duy-win-win-phong-van]]
+- [[concepts/career/tu-duy-win-win-phong-van]]
 
 ## Related sources
 

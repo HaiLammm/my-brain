@@ -34,7 +34,7 @@ tags: []
 
 ---
 
-## Concept page — `wiki/concepts/<slug>.md`
+## Concept page — `wiki/concepts/<domain>/<slug>.md`
 
 ```yaml
 ---
@@ -44,8 +44,34 @@ slug: concept-slug
 date_added: YYYY-MM-DD
 confidence: high
 tags: []
+id: concepts/<domain>/concept-slug
 ---
 ```
+
+**Namespace bắt buộc.** Concept luôn nằm trong một thư mục domain — không bao giờ đặt
+thẳng ở `wiki/concepts/`. `slug` giữ tên ngắn; `id` và mọi wikilink dùng đường dẫn đầy đủ
+`concepts/<domain>/<slug>`.
+
+Domain hiện có (chọn cái sát nhất; chỉ tạo domain mới khi có ≥3 trang):
+
+| Domain | Nội dung |
+|---|---|
+| `swe/` | Kỹ thuật phần mềm dùng chung: kiến trúc, pattern, thư viện, database, auth |
+| `ml/` | Machine learning, deep learning, thống kê |
+| `jung/` | Tâm lý học Jung, giấc mơ, biểu tượng, tôn giáo |
+| `neuro/` | Giấc ngủ, sức khỏe não, thần kinh |
+| `seo/` | SEO và content marketing |
+| `career/` | CV, phỏng vấn, văn hóa làm việc Nhật |
+| `comm/` | Giao tiếp, giọng nói, ngôn ngữ cơ thể |
+| `tools/` | Công cụ cá nhân: linux, vim, productivity |
+| `khuyen-hoc/`, `bo-gia/` | Khái niệm rút từ tác phẩm đang đọc |
+| `tailor/`, `danangnavi/` | Đặc thù nghiệp vụ của từng dự án |
+
+**Dự án đi vào wiki theo tuổi thọ, không theo phạm vi.** Pattern kỹ thuật tái dùng được
+(`audit-trail`, `modular-monolith`, `otp-authentication`) thuộc `swe/` dù phát sinh từ một
+dự án. Chỉ khái niệm đặc thù nghiệp vụ mới nằm trong namespace dự án. Spec dễ lỗi thời —
+mã FR, schema bảng, danh sách endpoint, breakdown epic — **không** vào wiki; chúng thuộc
+repo của dự án. Phép thử: *"Điều này còn đúng khi dự án chết không?"*
 
 **Sections:**
 - `## Definition` — one-paragraph plain-language definition

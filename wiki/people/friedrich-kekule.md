@@ -25,7 +25,7 @@ Nhà hóa học Đức thế kỷ 19. Khi khảo sát cấu trúc phân tử ben
 
 ## Khái niệm chính
 
-- [[concepts/sang-tao-tu-vo-thuc]] — Khám phá cấu trúc benzen qua giấc mơ
-- [[concepts/bieu-tuong]] — Rắn ngậm đuôi: biểu tượng cổ xưa thành hình tượng khoa học
+- [[concepts/jung/sang-tao-tu-vo-thuc]] — Khám phá cấu trúc benzen qua giấc mơ
+- [[concepts/jung/bieu-tuong]] — Rắn ngậm đuôi: biểu tượng cổ xưa thành hình tượng khoa học
 
 ## Ghi chú

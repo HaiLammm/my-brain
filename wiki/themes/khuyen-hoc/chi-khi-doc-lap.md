@@ -29,4 +29,4 @@ Chí khí độc lập là tính cách không dựa dẫm, tự lo việc mình,
 
 ## Notes
 
-Kết nối với khái niệm [[concepts/chi-khi-doc-lap]] đã được nạp từ trang nguồn [[sources/khuyen-hoc]]. Là chủ đề trung tâm của tư tưởng Fukuzawa.
+Kết nối với khái niệm [[concepts/khuyen-hoc/chi-khi-doc-lap]] đã được nạp từ trang nguồn [[sources/khuyen-hoc]]. Là chủ đề trung tâm của tư tưởng Fukuzawa.

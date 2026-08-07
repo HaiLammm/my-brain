@@ -13,7 +13,7 @@ updated: 2026-05-11
 key_sources:
   - sources/bo-gia
 related_concepts:
-  - [[concepts/nguyen-mau-father]]
+  - [[concepts/jung/nguyen-mau-father]]
 ---
 
 ## Overview
@@ -48,5 +48,5 @@ Mặt tối — biểu hiện qua:
 Mọi thành viên được tổ chức theo mô hình gia đình với Vito là "Bố già" — quyền lực tập trung tuyệt đối, không ai dám thách thức.
 
 **Related concepts:**
-- [[concepts/nguyen-mau-father]] — nguyên mẫu Father với hai mặt sáng/tối
-- [[concepts/nguyen-mau]] — bối cảnh các nguyên mẫu cốt lõi
+- [[concepts/jung/nguyen-mau-father]] — nguyên mẫu Father với hai mặt sáng/tối
+- [[concepts/jung/nguyen-mau]] — bối cảnh các nguyên mẫu cốt lõi

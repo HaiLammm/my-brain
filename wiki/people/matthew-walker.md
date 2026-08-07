@@ -25,10 +25,10 @@ Matthew Walker PhD là nhà khoa học thần kinh giấc ngủ hàng đầu th�
 
 ## Key concepts
 
-- [[concepts/nhip-sinh-hoc]]
-- [[concepts/giac-ngu-rem]]
-- [[concepts/giac-ngu-nrem]]
-- [[concepts/cung-co-tri-nho]]
-- [[concepts/mat-ngu]]
+- [[concepts/neuro/nhip-sinh-hoc]]
+- [[concepts/neuro/giac-ngu-rem]]
+- [[concepts/neuro/giac-ngu-nrem]]
+- [[concepts/neuro/cung-co-tri-nho]]
+- [[concepts/neuro/mat-ngu]]
 
 ## Notes

@@ -25,7 +25,7 @@ Nhà văn Anh thế kỷ 19, tác giả *Dr. Jekyll and Mr. Hyde*. Stevenson đ�
 
 ## Khái niệm chính
 
-- [[concepts/sang-tao-tu-vo-thuc]] — Sáng tạo văn học từ giấc mơ
-- [[concepts/vo-thuc]] — Hai nhân cách phản ánh tính hai mặt của vô thức
+- [[concepts/jung/sang-tao-tu-vo-thuc]] — Sáng tạo văn học từ giấc mơ
+- [[concepts/jung/vo-thuc]] — Hai nhân cách phản ánh tính hai mặt của vô thức
 
 ## Ghi chú

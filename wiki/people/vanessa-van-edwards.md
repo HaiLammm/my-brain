@@ -24,8 +24,8 @@ Vanessa Van Edwards là một nhà nghiên cứu hành vi (behavioral investigat
 
 ## Key concepts
 
-- [[concepts/su-am-ap-va-nang-luc]]
-- [[concepts/giao-tiep-phi-ngon-ngu]]
-- [[concepts/ngon-ngu-co-the]]
+- [[concepts/comm/su-am-ap-va-nang-luc]]
+- [[concepts/comm/giao-tiep-phi-ngon-ngu]]
+- [[concepts/comm/ngon-ngu-co-the]]
 
 ## Notes

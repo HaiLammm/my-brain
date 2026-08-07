@@ -25,8 +25,8 @@ Minh (F2) là persona thợ may trong tailor_project — con trai/thợ kế t�
 
 ## Key concepts
 
-- [[concepts/geometric-delta]]
-- [[concepts/pattern-engine]]
-- [[concepts/deterministic-guardrails]]
+- [[concepts/tailor/geometric-delta]]
+- [[concepts/tailor/pattern-engine]]
+- [[concepts/tailor/deterministic-guardrails]]
 
 ## Notes

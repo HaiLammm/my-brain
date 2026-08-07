@@ -24,8 +24,8 @@ Alfred Adler (1870-1937) là nhà tâm lý học người Áo và người sáng
 
 ## Key concepts
 
-- [[concepts/mac-cam-quyen-luc]] — power principle của Adler là trục đối chiếu quan trọng trong cách Jung đọc xung đột lý thuyết đầu thế kỷ 20
-- [[concepts/tu-tuong-huong-noi]] — Jung từng mô tả lập trường của Adler như một cực đối ứng với Freud trong sơ đồ typology ban đầu
+- [[concepts/jung/mac-cam-quyen-luc]] — power principle của Adler là trục đối chiếu quan trọng trong cách Jung đọc xung đột lý thuyết đầu thế kỷ 20
+- [[concepts/jung/tu-tuong-huong-noi]] — Jung từng mô tả lập trường của Adler như một cực đối ứng với Freud trong sơ đồ typology ban đầu
 
 ## Notes
 

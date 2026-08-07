@@ -24,8 +24,8 @@ Hans Schmid-Guisan (1881-1932) là bác sĩ tâm thần người Thụy Sĩ, b�
 
 ## Key concepts
 
-- [[concepts/tu-tuong-huong-ngoai]] — Schmid thường được mô tả như cực hướng ngoại đối ứng với Jung trong cuộc trao đổi
-- [[concepts/hai-binh-dien-dien-giai]] — ông liên tục đẩy vấn đề quan hệ với đối tượng và cách đọc chủ thể/khách thể tới chỗ sắc nét hơn
+- [[concepts/jung/tu-tuong-huong-ngoai]] — Schmid thường được mô tả như cực hướng ngoại đối ứng với Jung trong cuộc trao đổi
+- [[concepts/jung/hai-binh-dien-dien-giai]] — ông liên tục đẩy vấn đề quan hệ với đối tượng và cách đọc chủ thể/khách thể tới chỗ sắc nét hơn
 
 ## Notes
 

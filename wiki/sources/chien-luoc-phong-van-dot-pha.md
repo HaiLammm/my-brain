@@ -43,9 +43,9 @@ Tài liệu đề xuất thay đổi tư duy cốt lõi khi bước vào phỏng
 
 ## Related concepts
 
-- [[concepts/tu-duy-win-win-phong-van]]
-- [[concepts/bo-tu-tru-cot-tuyen-dung]]
-- [[concepts/cv-tot]]
+- [[concepts/career/tu-duy-win-win-phong-van]]
+- [[concepts/career/bo-tu-tru-cot-tuyen-dung]]
+- [[concepts/career/cv-tot]]
 
 ## Related sources
 

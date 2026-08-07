@@ -30,4 +30,4 @@ book: khuyen-hoc
 
 ## Notes
 
-Kết nối với khái niệm [[concepts/thuc-hoc]] đã được nạp từ trang nguồn [[sources/khuyen-hoc]]. Đây là chủ đề được nhắc tới nhiều phần nhất trong sách.
+Kết nối với khái niệm [[concepts/khuyen-hoc/thuc-hoc]] đã được nạp từ trang nguồn [[sources/khuyen-hoc]]. Đây là chủ đề được nhắc tới nhiều phần nhất trong sách.

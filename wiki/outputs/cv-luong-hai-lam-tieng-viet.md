@@ -9,9 +9,9 @@ covers:
   - sources/luong-hai-lam
   - sources/eaera-ho-so-cong-ty
   - sources/huynh-hai-dang-it-ba-qc
-  - concepts/jiko-pr
-  - concepts/shibodoki
-  - concepts/khung-trinh-bay-cv
+  - concepts/career/jiko-pr
+  - concepts/career/shibodoki
+  - concepts/career/khung-trinh-bay-cv
 ---
 
 # BACKEND DEVELOPER / Python

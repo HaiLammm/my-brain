@@ -53,13 +53,13 @@ Man and His Symbols là tác phẩm cuối cùng của Carl Gustav Jung, đượ
 
 ## Related Concepts
 
-- [[concepts/vo-thuc]] (Unconscious)
-- [[concepts/nguyen-mau]] (Archetype)
-- [[concepts/ca-nhan-hoa]] (Individuation)
-- [[concepts/bieu-tuong]] (Symbol)
-- [[concepts/tu-tuong-huong-ngoai]] (Extravert)
-- [[concepts/tu-tuong-huong-noi]] (Introvert)
-- [[concepts/giai-ma-giac-mo]] (Dream interpretation)
+- [[concepts/jung/vo-thuc]] (Unconscious)
+- [[concepts/jung/nguyen-mau]] (Archetype)
+- [[concepts/jung/ca-nhan-hoa]] (Individuation)
+- [[concepts/jung/bieu-tuong]] (Symbol)
+- [[concepts/jung/tu-tuong-huong-ngoai]] (Extravert)
+- [[concepts/jung/tu-tuong-huong-noi]] (Introvert)
+- [[concepts/jung/giai-ma-giac-mo]] (Dream interpretation)
 
 ## People
 

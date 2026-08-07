@@ -14,7 +14,7 @@ updated: 2026-05-14
 key_sources:
   - sources/psychology-and-western-religion
 related_concepts:
-  - concepts/numinosum
+  - concepts/jung/numinosum
 ---
 
 ## Overview
@@ -27,7 +27,7 @@ Rudolf Otto (1869–1937) là nhà thần học Tin Lành người Đức, nổi
 
 ## Key concepts
 
-- [[concepts/numinosum]] — khái niệm cốt lõi của Otto, được Jung sử dụng
+- [[concepts/jung/numinosum]] — khái niệm cốt lõi của Otto, được Jung sử dụng
 
 ## Notes
 

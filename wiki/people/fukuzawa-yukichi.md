@@ -25,9 +25,9 @@ Fukuzawa Yukichi (1834-1901) là nhà tư tưởng, nhà giáo dục và cây b�
 
 ## Key concepts
 
-- [[concepts/thuc-hoc]]
-- [[concepts/chi-khi-doc-lap]]
-- [[concepts/quoc-dan]]
-- [[concepts/khai-hoa-van-minh]]
+- [[concepts/khuyen-hoc/thuc-hoc]]
+- [[concepts/khuyen-hoc/chi-khi-doc-lap]]
+- [[concepts/khuyen-hoc/quoc-dan]]
+- [[concepts/khuyen-hoc/khai-hoa-van-minh]]
 
 ## Notes

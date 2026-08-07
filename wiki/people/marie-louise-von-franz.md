@@ -23,8 +23,8 @@ Marie-Louise von Franz (1915-2011) là bác sĩ tâm thần và nhà phân tích
 
 ## Key Concepts
 
-- [[concepts/ca-nhan-hoa]]
-- [[concepts/vo-thuc]]
+- [[concepts/jung/ca-nhan-hoa]]
+- [[concepts/jung/vo-thuc]]
 
 ## Notes
 

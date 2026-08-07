@@ -55,22 +55,22 @@ Bộ 4 artifact triển khai cho **Epic 5 — Dashboards** của tailor_project.
 
 ## Concepts
 
-- [[concepts/authoritative-server-pattern]]
-- [[concepts/tanstack-query]]
-- [[concepts/optimistic-update]]
-- [[concepts/heritage-palette]]
-- [[concepts/appointment-booking]]
-- [[concepts/server-action-pattern]]
-- [[concepts/order-status-pipeline]]
-- [[concepts/kpi-dashboard]]
-- [[concepts/production-board]]
-- [[concepts/tailor-workstation]]
-- [[concepts/tailor-income-tracking]]
-- [[concepts/command-mode-layout]]
-- [[concepts/workplace-sidebar]]
-- [[concepts/status-badge]]
-- [[concepts/deadline-countdown]]
-- [[concepts/recharts-library]]
+- [[concepts/swe/authoritative-server-pattern]]
+- [[concepts/swe/tanstack-query]]
+- [[concepts/swe/optimistic-update]]
+- [[concepts/tailor/heritage-palette]]
+- [[concepts/tailor/appointment-booking]]
+- [[concepts/swe/server-action-pattern]]
+- [[concepts/tailor/order-status-pipeline]]
+- [[concepts/tailor/kpi-dashboard]]
+- [[concepts/tailor/production-board]]
+- [[concepts/tailor/tailor-workstation]]
+- [[concepts/tailor/tailor-income-tracking]]
+- [[concepts/tailor/command-mode-layout]]
+- [[concepts/tailor/workplace-sidebar]]
+- [[concepts/tailor/status-badge]]
+- [[concepts/tailor/deadline-countdown]]
+- [[concepts/swe/recharts-library]]
 
 ## Related Sources
 

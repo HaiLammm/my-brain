@@ -48,12 +48,12 @@ findings: []
 
 ## Related concepts
 
-- [[concepts/he-thong-crm]]
-- [[concepts/lap-trinh-backend-python]]
-- [[concepts/docker-va-kubernetes]]
-- [[concepts/giao-thuc-nhan-tin]]
-- [[concepts/lap-trinh-giao-dien-web]]
-- [[concepts/tich-hop-he-thong-ben-thu-ba]]
+- [[concepts/swe/he-thong-crm]]
+- [[concepts/swe/lap-trinh-backend-python]]
+- [[concepts/swe/docker-va-kubernetes]]
+- [[concepts/swe/giao-thuc-nhan-tin]]
+- [[concepts/swe/lap-trinh-giao-dien-web]]
+- [[concepts/swe/tich-hop-he-thong-ben-thu-ba]]
 
 ## Related sources
 

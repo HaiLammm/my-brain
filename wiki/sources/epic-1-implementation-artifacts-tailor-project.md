@@ -59,15 +59,15 @@ findings:
 
 ## Related concepts
 
-- [[concepts/multi-tenant-rls]]
-- [[concepts/otp-authentication]]
-- [[concepts/auth-js-v5]]
-- [[concepts/measurement-versioning]]
-- [[concepts/soft-delete]]
-- [[concepts/local-first-data-model]]
-- [[concepts/rbac]]
-- [[concepts/ssot]]
-- [[concepts/audit-trail]]
+- [[concepts/swe/multi-tenant-rls]]
+- [[concepts/swe/otp-authentication]]
+- [[concepts/swe/auth-js-v5]]
+- [[concepts/tailor/measurement-versioning]]
+- [[concepts/swe/soft-delete]]
+- [[concepts/swe/local-first-data-model]]
+- [[concepts/swe/rbac]]
+- [[concepts/swe/ssot]]
+- [[concepts/swe/audit-trail]]
 
 ## Related sources
 

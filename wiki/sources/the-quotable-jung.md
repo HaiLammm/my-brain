@@ -56,26 +56,26 @@ The Quotable Jung là tuyển tập trích dẫn quan trọng nhất từ các t
 
 ## Related Concepts
 
-- [[concepts/vo-thuc]] (Unconscious)
-- [[concepts/vo-thuc-ca-nhan]] (Personal unconscious)
-- [[concepts/vo-thuc-tap-the]] (Collective unconscious)
-- [[concepts/nguyen-mau]] (Archetype)
-- [[concepts/ca-nhan-hoa]] (Individuation)
-- [[concepts/bieu-tuong]] (Symbol)
-- [[concepts/cai-bong]] (Shadow)
-- [[concepts/phong-chieu]] (Projection)
-- [[concepts/giai-ma-giac-mo]] (Dream interpretation)
-- [[concepts/chuc-nang-bu-dap]] (Compensatory function of dreams)
-- [[concepts/tu-hieu-minh]] (Self-knowledge)
-- [[concepts/chuc-nang-ton-giao]] (Religious function)
-- [[concepts/kim-nen]] (Coniunctio/Alchemy)
-- [[concepts/dong-nhat-tam-linh]] (Spiritual identity)
-- [[concepts/phuc-cam]] (Complex)
-- [[concepts/chuc-nang-sieu-viet]] (Transcendent function)
-- [[concepts/dong-thoi-tinh]] (Synchronicity)
-- [[concepts/ban-nga]] (The Self)
-- [[concepts/anima]]
-- [[concepts/mat-na]] (Persona)
+- [[concepts/jung/vo-thuc]] (Unconscious)
+- [[concepts/jung/vo-thuc-ca-nhan]] (Personal unconscious)
+- [[concepts/jung/vo-thuc-tap-the]] (Collective unconscious)
+- [[concepts/jung/nguyen-mau]] (Archetype)
+- [[concepts/jung/ca-nhan-hoa]] (Individuation)
+- [[concepts/jung/bieu-tuong]] (Symbol)
+- [[concepts/jung/cai-bong]] (Shadow)
+- [[concepts/jung/phong-chieu]] (Projection)
+- [[concepts/jung/giai-ma-giac-mo]] (Dream interpretation)
+- [[concepts/jung/chuc-nang-bu-dap]] (Compensatory function of dreams)
+- [[concepts/jung/tu-hieu-minh]] (Self-knowledge)
+- [[concepts/jung/chuc-nang-ton-giao]] (Religious function)
+- [[concepts/jung/kim-nen]] (Coniunctio/Alchemy)
+- [[concepts/jung/dong-nhat-tam-linh]] (Spiritual identity)
+- [[concepts/jung/phuc-cam]] (Complex)
+- [[concepts/jung/chuc-nang-sieu-viet]] (Transcendent function)
+- [[concepts/jung/dong-thoi-tinh]] (Synchronicity)
+- [[concepts/jung/ban-nga]] (The Self)
+- [[concepts/jung/anima]]
+- [[concepts/jung/mat-na]] (Persona)
 
 ## People
 

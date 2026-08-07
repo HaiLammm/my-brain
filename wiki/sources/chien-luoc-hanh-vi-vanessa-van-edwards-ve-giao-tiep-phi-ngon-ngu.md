@@ -56,11 +56,11 @@ Cuộc phỏng vấn giữa Steven Bartlett và Vanessa Van Edwards — một nh
 
 ## Related concepts
 
-- [[concepts/ngon-ngu-co-the]] — ngôn ngữ cơ thể, nền tảng của giao tiếp phi ngôn ngữ
-- [[concepts/giao-tiep-phi-ngon-ngu]] — bốn kênh tín hiệu: cơ thể, giọng nói, từ ngữ, trang phục
-- [[concepts/su-am-ap-va-nang-luc]] — hai trụ cột của sức hút: warmth và competence
-- [[concepts/khoang-cach-giao-tiep]] — bốn vùng không gian (proxemics)
-- [[concepts/vong-lap-tin-hieu]] — vòng lặp cue cycle: tín hiệu → cảm nhận → phản hồi
+- [[concepts/comm/ngon-ngu-co-the]] — ngôn ngữ cơ thể, nền tảng của giao tiếp phi ngôn ngữ
+- [[concepts/comm/giao-tiep-phi-ngon-ngu]] — bốn kênh tín hiệu: cơ thể, giọng nói, từ ngữ, trang phục
+- [[concepts/comm/su-am-ap-va-nang-luc]] — hai trụ cột của sức hút: warmth và competence
+- [[concepts/comm/khoang-cach-giao-tiep]] — bốn vùng không gian (proxemics)
+- [[concepts/comm/vong-lap-tin-hieu]] — vòng lặp cue cycle: tín hiệu → cảm nhận → phản hồi
 
 ## Related sources
 

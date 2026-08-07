@@ -24,4 +24,4 @@ Tự do không phải là làm điều mình thích bất chấp người khác,
 
 ## Notes
 
-Kết nối với khái niệm [[concepts/tu-do]] đã được nạp từ trang nguồn [[sources/khuyen-hoc]].
+Kết nối với khái niệm [[concepts/khuyen-hoc/tu-do]] đã được nạp từ trang nguồn [[sources/khuyen-hoc]].

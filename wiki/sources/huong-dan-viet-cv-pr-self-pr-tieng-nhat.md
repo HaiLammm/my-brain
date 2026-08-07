@@ -47,11 +47,11 @@ Tài liệu tổng hợp phương pháp viết 自己PR (Self PR) và 志望動�
 
 ## Related concepts
 
-- [[concepts/jiko-pr]]
-- [[concepts/shibodoki]]
-- [[concepts/hourensou]]
-- [[concepts/khung-trinh-bay-cv]]
-- [[concepts/cv-tot]]
+- [[concepts/career/jiko-pr]]
+- [[concepts/career/shibodoki]]
+- [[concepts/career/hourensou]]
+- [[concepts/career/khung-trinh-bay-cv]]
+- [[concepts/career/cv-tot]]
 
 ## Related sources
 

@@ -57,15 +57,15 @@ Tài liệu kiến trúc DaNangNavi xác định **modular monolith + event-driv
 
 ## Khái niệm liên quan
 
-- [[concepts/modular-monolith]]
-- [[concepts/cross-language-search]]
-- [[concepts/event-driven-internal-communication]]
-- [[concepts/senpai-trust-flywheel]]
-- [[concepts/camera-only-verification]]
-- [[concepts/closed-data-philosophy]]
-- [[concepts/contribution-point-system]]
-- [[concepts/three-sided-cultural-bridge]]
-- [[concepts/context-aware-voice-translation]]
+- [[concepts/swe/modular-monolith]]
+- [[concepts/swe/cross-language-search]]
+- [[concepts/swe/event-driven-internal-communication]]
+- [[concepts/danangnavi/senpai-trust-flywheel]]
+- [[concepts/danangnavi/camera-only-verification]]
+- [[concepts/danangnavi/closed-data-philosophy]]
+- [[concepts/danangnavi/contribution-point-system]]
+- [[concepts/danangnavi/three-sided-cultural-bridge]]
+- [[concepts/danangnavi/context-aware-voice-translation]]
 
 ## Nguồn liên quan
 

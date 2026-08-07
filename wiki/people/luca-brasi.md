@@ -12,7 +12,7 @@ updated: 2026-05-11
 key_sources:
   - sources/bo-gia
 related_concepts:
-  - [[concepts/nguyen-mau-father]]
+  - [[concepts/jung/nguyen-mau-father]]
 ---
 
 ## Overview
@@ -48,5 +48,5 @@ Dưới góc nhìn tâm lý học Jung, Luca Brasi là hiện thân của **nguy
 **Kết luận:** Luca Brasi là ví dụ cực đoan của Shadow chưa được tích hợp — một con người hoàn toàn bị vô thức thống trị, không có cá nhân hóa, và là công cụ của nguyên mẫu Father.
 
 **Related concepts:**
-- [[concepts/nguyen-mau-father]] — Vito Corleone đại diện cho nguyên mẫu Father
-- [[concepts/vo-thuc]] — vô thức thống trị tâm trí Luca
+- [[concepts/jung/nguyen-mau-father]] — Vito Corleone đại diện cho nguyên mẫu Father
+- [[concepts/jung/vo-thuc]] — vô thức thống trị tâm trí Luca

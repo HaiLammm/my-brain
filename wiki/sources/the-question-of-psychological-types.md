@@ -33,12 +33,12 @@ The Question of Psychological Types là ấn bản học thuật công bố thư
 ## Key Claims
 
 - [Cao] Tập thư cho thấy vấn đề mẫu người của Jung được mài sắc không chỉ bởi suy tư đơn độc hay ca lâm sàng, mà còn bởi đối thoại trực tiếp với Hans Schmid-Guisan như một đối cực tâm lý sống động.
-- [Cao] Phần dẫn nhập đặt câu hỏi về [[concepts/tu-tuong-huong-noi]] và [[concepts/tu-tuong-huong-ngoai]] trong nhiều bối cảnh, gồm lâm sàng, quan hệ cá nhân và tranh luận lý thuyết quanh Freud với Adler.
-- [Cao] Tập thư phản ánh một giai đoạn khái niệm còn đang định hình, trước khi mô hình [[concepts/bon-chuc-nang-tam-ly]] đạt hình thức rõ hơn về sau.
-- [Cao] Phần dẫn nhập liên hệ [[concepts/chuc-nang-ha-dang]] và logic bù trừ của vô thức với những căng thẳng và lệch hiểu giữa các kiểu người.
-- [Cao] Cuộc trao đổi làm nổi bật [[concepts/hai-binh-dien-dien-giai]]: cùng một hình ảnh, quan hệ hay phản ứng có thể được đọc theo lối khách thể hoặc theo lối chủ thể, và khác biệt này có liên hệ với vấn đề type.
+- [Cao] Phần dẫn nhập đặt câu hỏi về [[concepts/jung/tu-tuong-huong-noi]] và [[concepts/jung/tu-tuong-huong-ngoai]] trong nhiều bối cảnh, gồm lâm sàng, quan hệ cá nhân và tranh luận lý thuyết quanh Freud với Adler.
+- [Cao] Tập thư phản ánh một giai đoạn khái niệm còn đang định hình, trước khi mô hình [[concepts/jung/bon-chuc-nang-tam-ly]] đạt hình thức rõ hơn về sau.
+- [Cao] Phần dẫn nhập liên hệ [[concepts/jung/chuc-nang-ha-dang]] và logic bù trừ của vô thức với những căng thẳng và lệch hiểu giữa các kiểu người.
+- [Cao] Cuộc trao đổi làm nổi bật [[concepts/jung/hai-binh-dien-dien-giai]]: cùng một hình ảnh, quan hệ hay phản ứng có thể được đọc theo lối khách thể hoặc theo lối chủ thể, và khác biệt này có liên hệ với vấn đề type.
 - [Trung bình] Hans Schmid-Guisan hiện lên không chỉ như người nhận thư mà như một đối thoại viên quan trọng, qua đó Jung phải làm rõ thêm những chỗ còn căng thẳng hoặc chưa ổn định trong tư duy typology của mình.
-- [Cao] Phần hậu sử nêu Maria Moltzer như một nhân vật có liên hệ tới bước Jung dần xem [[concepts/truc-giac-tam-ly]] như một chức năng riêng.
+- [Cao] Phần hậu sử nêu Maria Moltzer như một nhân vật có liên hệ tới bước Jung dần xem [[concepts/jung/truc-giac-tam-ly]] như một chức năng riêng.
 - [Trung bình] Sách cho thấy typology của Jung nên được đọc như lịch sử phát sinh của một hệ thống, chứ không chỉ như một bảng phân loại tính cách đã đóng kín.
 
 ## Evidence
@@ -50,16 +50,16 @@ The Question of Psychological Types là ấn bản học thuật công bố thư
 
 ## Concepts
 
-- [[concepts/tu-tuong-huong-noi]] — một cực thái độ mà Jung dùng để mô tả sự quy hướng về thế giới chủ quan và thao tác trừu tượng hóa
-- [[concepts/tu-tuong-huong-ngoai]] — cực thái độ đối ứng, quy hướng về đối tượng, quan hệ và sự thích nghi ra bên ngoài
-- [[concepts/bon-chuc-nang-tam-ly]] — khung trưởng thành về sau mà phần dẫn nhập cho thấy đã được thai nghén từ các thư này
-- [[concepts/ly-tri-tam-ly]] — chức năng được Jung gắn mạnh với lập trường hướng nội ở giai đoạn đang hình thành lý thuyết
-- [[concepts/cam-nhan-tam-ly]] — chức năng được Jung gắn mạnh với lập trường hướng ngoại trong các thư đầu
-- [[concepts/tri-giac-tam-ly]] — chức năng được làm rõ dần khi Jung rời mô hình nhị nguyên ban đầu
-- [[concepts/truc-giac-tam-ly]] — chức năng được phần dẫn nhập gắn với đóng góp quan trọng của Maria Moltzer
-- [[concepts/chuc-nang-ha-dang]] — chức năng yếu và kém biệt hóa, nơi xung đột type bộc lộ rõ nhất
-- [[concepts/hai-binh-dien-dien-giai]] — phân biệt giữa cách đọc khách thể và cách đọc chủ thể trong phân tích tâm lý
-- [[concepts/chuc-nang-bu-dap]] — nguyên lý cho thấy vô thức phản ứng lại thiên lệch ý thức bằng một đối cực bù trừ
+- [[concepts/jung/tu-tuong-huong-noi]] — một cực thái độ mà Jung dùng để mô tả sự quy hướng về thế giới chủ quan và thao tác trừu tượng hóa
+- [[concepts/jung/tu-tuong-huong-ngoai]] — cực thái độ đối ứng, quy hướng về đối tượng, quan hệ và sự thích nghi ra bên ngoài
+- [[concepts/jung/bon-chuc-nang-tam-ly]] — khung trưởng thành về sau mà phần dẫn nhập cho thấy đã được thai nghén từ các thư này
+- [[concepts/jung/ly-tri-tam-ly]] — chức năng được Jung gắn mạnh với lập trường hướng nội ở giai đoạn đang hình thành lý thuyết
+- [[concepts/jung/cam-nhan-tam-ly]] — chức năng được Jung gắn mạnh với lập trường hướng ngoại trong các thư đầu
+- [[concepts/jung/tri-giac-tam-ly]] — chức năng được làm rõ dần khi Jung rời mô hình nhị nguyên ban đầu
+- [[concepts/jung/truc-giac-tam-ly]] — chức năng được phần dẫn nhập gắn với đóng góp quan trọng của Maria Moltzer
+- [[concepts/jung/chuc-nang-ha-dang]] — chức năng yếu và kém biệt hóa, nơi xung đột type bộc lộ rõ nhất
+- [[concepts/jung/hai-binh-dien-dien-giai]] — phân biệt giữa cách đọc khách thể và cách đọc chủ thể trong phân tích tâm lý
+- [[concepts/jung/chuc-nang-bu-dap]] — nguyên lý cho thấy vô thức phản ứng lại thiên lệch ý thức bằng một đối cực bù trừ
 
 ## People
 

@@ -31,12 +31,12 @@ Carl Gustav Jung (1875-1961) là bác sĩ tâm thần và nhà tư tưởng ngư
 
 ## Key Concepts
 
-- [[concepts/vo-thuc]] — khái niệm cốt lõi trong tâm lý học Jung
-- [[concepts/nguyen-mau]] — các mô hình tâm lý bẩm sinh
-- [[concepts/ca-nhan-hoa]] — quá trình phát triển tâm lý toàn vẹn
-- [[concepts/tu-tuong-huong-ngoai]] — extrovert (người hướng ngoại)
-- [[concepts/tu-tuong-huong-noi]] — introvert (người hướng nội)
-- [[concepts/bon-chuc-nang-tam-ly]] — bốn chức năng tâm lý
+- [[concepts/jung/vo-thuc]] — khái niệm cốt lõi trong tâm lý học Jung
+- [[concepts/jung/nguyen-mau]] — các mô hình tâm lý bẩm sinh
+- [[concepts/jung/ca-nhan-hoa]] — quá trình phát triển tâm lý toàn vẹn
+- [[concepts/jung/tu-tuong-huong-ngoai]] — extrovert (người hướng ngoại)
+- [[concepts/jung/tu-tuong-huong-noi]] — introvert (người hướng nội)
+- [[concepts/jung/bon-chuc-nang-tam-ly]] — bốn chức năng tâm lý
 
 ## Notes
 
