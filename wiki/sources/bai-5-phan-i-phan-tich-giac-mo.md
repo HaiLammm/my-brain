@@ -50,6 +50,7 @@ Jung phân biệt giữa **dấu hiệu** (chỉ biểu đơn nghĩa) và **bi�
 - [[concepts/jung/vo-thuc-tap-the]] — Lớp vô thức chia sẻ bởi toàn nhân loại
 - [[concepts/jung/phan-tich-giac-mo]] — Phương pháp và kỹ thuật phân tích giấc mơ
 - [[concepts/jung/anh-huong-psychoanalytic]] — Ảnh hưởng qua lại với Freud và trường phái phân tích
+- [[concepts/jung/chia-tay-freud]] — Giấc mơ ngôi nhà nhiều tầng kể ở đây là chỗ Jung tách khỏi Freud
 
 ## Người được đề cập
 
@@ -63,3 +64,7 @@ Jung phân biệt giữa **dấu hiệu** (chỉ biểu đơn nghĩa) và **bi�
 
 - Làm thế nào để phân biệt biểu tượng cá nhân và biểu tượng tập thể trong một giấc mơ cụ thể?
 - Phương pháp nào để kiểm tra độ chính xác của việc diễn giải giấc mơ mà không áp đặt ý nghĩa từ bên ngoài?
+
+## Topics
+
+- [[topics/tam-ly-hoc-phan-tich-jung]] — bản đồ tổng năm nhánh tư tưởng Jung

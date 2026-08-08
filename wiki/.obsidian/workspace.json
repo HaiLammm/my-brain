@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "3f2a8fc4f5f19df8",
+        "id": "8d1d68955b817b3c",
         "type": "tabs",
         "children": [
           {
-            "id": "f1c50d5b9545a7d7",
+            "id": "bd238b1fe56df92b",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "concepts/tarot/truc-chat-so.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "truc-chat-so"
             }
           }
         ]
@@ -180,31 +184,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "f1c50d5b9545a7d7",
+  "active": "bd238b1fe56df92b",
   "lastOpenFiles": [
-    "sources/tool-sales-architecture-docs.md.tmp",
-    "concepts/tool-sales/operator-leverage.md",
-    "concepts/tool-sales/operator-leverage.md.tmp.29936.6197e742029a",
-    "concepts/tool-sales/ai-prospecting.md",
-    "concepts/tool-sales/ai-prospecting.md.tmp.29936.146765fd3c85",
-    "concepts/tool-sales/submission-verification.md",
-    "concepts/tool-sales/submission-verification.md.tmp.29936.0c83bed9143a",
-    "concepts/tool-sales/form-understanding.md",
-    "concepts/tool-sales/form-understanding.md.tmp.29936.1933e825b9dd",
+    "log.md.tmp",
+    "graph/edges.jsonl.tmp",
+    "outputs/trai-bai-quan-he-2026-08-08.md.tmp.897699.0bf50d756cc3",
+    "outputs/trai-bai-quan-he-2026-08-08.md.tmp.897699.95a3e36dd6ed",
+    "outputs/trai-bai-quan-he-2026-08-08.md.tmp.897699.6d1fbe2eeea8",
+    "people/plato.md.tmp.101490.776d924ac62e",
+    "people/luong-hai-lam.md.tmp.101490.ffca4e3cd41a",
+    "concepts/khuyen-hoc/thuc-hoc.md.tmp.101490.bbeeb13ac537",
+    "concepts/literature/su-menh-nha-van.md",
+    "concepts/literature/su-menh-nha-van.md.tmp.101490.feddda983e41",
+    "concepts/literature/hien-thuc-to-ve-vien-vong.md",
+    "concepts/literature/hien-thuc-to-ve-vien-vong.md.tmp.101490.fdca8bc182e1",
+    "concepts/literature/chuc-nang-cuu-roi-van-chuong.md.tmp.101490.23a8183151da",
+    "concepts/literature/chuc-nang-cuu-roi-van-chuong.md",
+    "concepts/jung/chia-tay-freud.md",
     "concepts/tool-sales/sales-form-pipeline.md",
-    "concepts/tool-sales/sales-form-pipeline.md.tmp.29936.60c3857a1ca5",
-    "concepts/tool-sales/ng-detection.md",
-    "concepts/tool-sales/ng-detection.md.tmp.29936.bc713c12e982",
-    "concepts/swe/unicode-normalization-boundary.md",
-    "concepts/swe/unicode-normalization-boundary.md.tmp.29936.19483a00cfba",
-    "concepts/swe/connection-pool-budget.md",
-    "concepts/swe/connection-pool-budget.md.tmp.29936.a96475e2361b",
-    "concepts/swe/tiered-refresh-cadence.md",
-    "concepts/swe/tiered-refresh-cadence.md.tmp.29936.c4cc87819f70",
-    "concepts/swe/shared-db-no-callback.md",
-    "concepts/swe/shared-db-no-callback.md.tmp.29936.4775d24270cf",
-    "concepts/swe/pure-core-gated-io.md",
     "concepts/swe/graceful-degradation.md",
+    "topics/tam-ly-hoc-phan-tich-jung.md",
+    "concepts/tool-sales/operator-leverage.md",
+    "concepts/tool-sales/ai-prospecting.md",
+    "concepts/tool-sales/submission-verification.md",
+    "concepts/tool-sales/form-understanding.md",
+    "concepts/tool-sales/ng-detection.md",
+    "concepts/swe/unicode-normalization-boundary.md",
+    "concepts/swe/connection-pool-budget.md",
+    "concepts/swe/tiered-refresh-cadence.md",
+    "concepts/swe/shared-db-no-callback.md",
+    "concepts/swe/pure-core-gated-io.md",
     "concepts/swe/rescue-ladder.md",
     "concepts/swe/rule-llm-dual-run.md",
     "concepts/swe/budget-tiered-circuit-breaker.md",
@@ -212,11 +221,6 @@
     "concepts/swe/db-backed-job-queue.md",
     "sources/tool-sales-architecture-docs.md",
     "concepts/swe/payment-webhook-processing.md",
-    "concepts/swe/inline-form-validation.md",
-    "concepts/swe/idempotent-scheduled-job.md",
-    "concepts/tailor/checkout-and-payment.md",
-    "concepts/tailor/booking-flow.md",
-    "concepts/tailor/workplace-dashboards.md",
-    "concepts/tailor/design-system.md"
+    "concepts/swe/inline-form-validation.md"
   ]
 }

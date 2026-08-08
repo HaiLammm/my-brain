@@ -1,0 +1,26 @@
+{
+  "title": "Negative feedback",
+  "pageid": 213328,
+  "description": "Control concept",
+  "extract": "Negative feedback (or balancing feedback) occurs when some function of the output of a system, process, or mechanism is fed back in a manner that tends to reduce the fluctuations in the output, whether caused by changes in the input or by other disturbances. \nWhereas positive feedback tends to instability via exponential growth, oscillation or chaotic behavior, negative feedback generally promotes stability. Negative feedback tends to promote a settling to equilibrium, and reduces the effects of perturbations. Negative feedback loops in which just the right amount of correction is applied with optimum timing, can be very stable, accurate, and responsive.\nNegative feedback is widely used in mechanical and electronic engineering, and it is observed in many other fields including biology, chemistry and economics. General negative feedback systems are studied in control systems engineering. \nNegative feedback loops also play an integral role in maintaining the atmospheric balance in various climate systems on Earth. One such feedback system is the interaction between solar radiation, cloud cover, and planet temperature.",
+  "url": "https://en.wikipedia.org/wiki/Negative_feedback",
+  "categories": [
+    "All articles needing additional references",
+    "All articles with style issues",
+    "Analog circuits",
+    "Articles needing additional references from March 2025",
+    "Articles with multiple maintenance issues",
+    "Articles with short description",
+    "CS1: long volume value",
+    "Control theory",
+    "Cybernetics",
+    "Feedback",
+    "Pages displaying short descriptions of redirect targets via Module:Annotated link",
+    "Short description is different from Wikidata",
+    "Signal processing",
+    "Wikipedia articles with style issues from March 2025"
+  ],
+  "external_ids": {
+    "url": "https://en.wikipedia.org/wiki/Negative_feedback"
+  }
+}

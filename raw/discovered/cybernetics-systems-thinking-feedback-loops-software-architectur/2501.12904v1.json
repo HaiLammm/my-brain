@@ -1,0 +1,24 @@
+{
+  "id": "2501.12904v1",
+  "title": "A Functional Software Reference Architecture for LLM-Integrated Systems",
+  "authors": [
+    "Alessio Bucaioni",
+    "Martin Weyssow",
+    "Junda He",
+    "Yunbo Lyu",
+    "David Lo"
+  ],
+  "summary": "The integration of large language models into software systems is transforming capabilities such as natural language understanding, decision-making, and autonomous task execution. However, the absence of a commonly accepted software reference architecture hinders systematic reasoning about their design and quality attributes. This gap makes it challenging to address critical concerns like privacy, security, modularity, and interoperability, which are increasingly important as these systems grow in complexity and societal impact. In this paper, we describe our \\textit{emerging} results for a preliminary functional reference architecture as a conceptual framework to address these challenges and guide the design, evaluation, and evolution of large language model-integrated systems. We identify key architectural concerns for these systems, informed by current research and practice. We then evaluate how the architecture addresses these concerns and validate its applicability using three open-source large language model-integrated systems in computer vision, text processing, and coding.",
+  "published": "2025-01-22T14:30:40Z",
+  "updated": "2025-01-22T14:30:40Z",
+  "primary_category": "cs.SE",
+  "categories": [
+    "cs.SE"
+  ],
+  "url": "http://arxiv.org/abs/2501.12904v1",
+  "external_ids": {
+    "arxiv": "2501.12904",
+    "url": "https://arxiv.org/abs/2501.12904v1",
+    "doi": "10.48550/arxiv.2501.12904"
+  }
+}

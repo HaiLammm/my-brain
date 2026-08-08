@@ -1,0 +1,25 @@
+{
+  "id": "1510.02710v1",
+  "title": "Procams-Based Cybernetics",
+  "authors": [
+    "Kosuke Sato",
+    "Daisuke Iwai",
+    "Sei Ikeda",
+    "Noriko Takemura"
+  ],
+  "summary": "Procams-based cybernetics is a unique, emerging research field, which aims at enhancing and supporting our activities by naturally connecting human and computers/machines as a cooperative integrated system via projector-camera systems (procams). It rests on various research domains such as virtual/augmented reality, computer vision, computer graphics, projection display, human computer interface, human robot interaction and so on. This laboratory presentation provides a brief history including recent achievements of our procams-based cybernetics project.",
+  "published": "2015-10-09T15:47:00Z",
+  "updated": "2015-10-09T15:47:00Z",
+  "primary_category": "cs.CV",
+  "categories": [
+    "cs.CV",
+    "cs.GR",
+    "cs.HC"
+  ],
+  "url": "http://arxiv.org/abs/1510.02710v1",
+  "external_ids": {
+    "arxiv": "1510.02710",
+    "url": "https://arxiv.org/abs/1510.02710v1",
+    "doi": "10.48550/arxiv.1510.02710"
+  }
+}

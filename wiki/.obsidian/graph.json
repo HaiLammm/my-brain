@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "bo-gia",
+  "search": "truc-chat-so",
   "showTags": true,
   "showAttachments": true,
   "hideUnresolved": true,
@@ -17,6 +17,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.9630941115532596,
-  "close": true
+  "scale": 1.4446411673298893,
+  "close": false
 }

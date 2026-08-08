@@ -1,0 +1,16 @@
+{
+  "title": "Good regulator theorem",
+  "pageid": 12941407,
+  "description": "Theorem in cybernetics",
+  "extract": "The good regulator theorem is a theorem conceived by Roger C. Conant and W. Ross Ashby that is central to cybernetics. It was originally stated as \"every good regulator of a system must be a model of that system\". That is, any regulator that is maximally simple among optimal regulators must behave as an image of that system under a homomorphism.\nMore accurately, every good regulator must contain or have access to a model of the system it regulates. And while the authors sometimes say the regulator and regulated are 'isomorphic', the mapping they construct is only a homomorphism, meaning the model can lose information about the entity that is modeled. So, while the system that is regulated is a pattern of behavior in the world, it is not necessarily the only pattern of behavior observable in a regulated entity.",
+  "url": "https://en.wikipedia.org/wiki/Good_regulator_theorem",
+  "categories": [
+    "Articles with short description",
+    "Cybernetics",
+    "Short description matches Wikidata",
+    "Webarchive template wayback links"
+  ],
+  "external_ids": {
+    "url": "https://en.wikipedia.org/wiki/Good_regulator_theorem"
+  }
+}

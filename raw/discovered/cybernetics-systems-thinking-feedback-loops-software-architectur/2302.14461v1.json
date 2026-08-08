@@ -1,0 +1,20 @@
+{
+  "id": "2302.14461v1",
+  "title": "Role-playing software architecture styles",
+  "authors": [
+    "Laura M. Castro"
+  ],
+  "summary": "Software Architecture, from definition to maintenance and evolution, is a complex aspect of software development and, consequently, a challenging subject when it comes to teaching it, and learning it.\n  Many research efforts have been devoted to designing teaching approaches, strategies and tools. Most of them, however, focus on the knowledge itself and the ways to convey it to students, rather than on the different learning styles of students themselves.\n  Teaching methods which predominantly rely on verbal and written communication, are very well aligned with some learning styles. However, students with learning styles that benefit more from physical activity or first-hand experience, need to defer to cognitive processes that are less natural to them.\n  In this work, we propose an innovative use of role-playing as teaching strategy for architecture models of reference (i.e. layered, pipe and filter, client-server, etc.). This role-playing of different software architectures, in which students play the part of specific components in the system, intends to complement other classical teaching materials, such as in-person or recorded lectures, lab assignments, or development projects.\n  Addressing all learning styles within a classroom is key to ensure that we favour and foster the students' different learning processes, and give everyone an even playfield in which to best develop their capabilities as Software Architects.",
+  "published": "2023-02-28T10:08:57Z",
+  "updated": "2023-02-28T10:08:57Z",
+  "primary_category": "cs.SE",
+  "categories": [
+    "cs.SE"
+  ],
+  "url": "http://arxiv.org/abs/2302.14461v1",
+  "external_ids": {
+    "arxiv": "2302.14461",
+    "url": "https://arxiv.org/abs/2302.14461v1",
+    "doi": "10.48550/arxiv.2302.14461"
+  }
+}

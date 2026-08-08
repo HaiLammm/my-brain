@@ -1,0 +1,23 @@
+{
+  "id": "2604.09278v1",
+  "title": "Toward an Architectural Blueprint to Observe Sustainability in and by Software Systems",
+  "authors": [
+    "Klervie Toczé",
+    "Andrei Dragomir",
+    "Vincenzo Stoico",
+    "Patricia Lago"
+  ],
+  "summary": "Enabling observability in software systems brings many benefits. It can, for example, ease the identification of issues or the implementation of improvements. It is especially critical to be able to observe sustainability-related dimensions of systems to know and mitigate their impact. However, adding observability to a system, especially related to software sustainability, requires technical knowledge that may not be available in every project that would benefit from it.\n  In this work, we propose an architectural blueprint along with its deployment code that can be used to facilitate the addition of observability in software systems. As a special case, it includes measuring the energy consumption of software. This toolkit provides support in defining which components are necessary for a given use case and for structuring their deployment. Moreover, we exemplify the addition of observability in two different use cases.",
+  "published": "2026-04-10T12:46:21Z",
+  "updated": "2026-04-10T12:46:21Z",
+  "primary_category": "cs.SE",
+  "categories": [
+    "cs.SE"
+  ],
+  "url": "http://arxiv.org/abs/2604.09278v1",
+  "external_ids": {
+    "arxiv": "2604.09278",
+    "url": "https://arxiv.org/abs/2604.09278v1",
+    "doi": "10.48550/arxiv.2604.09278"
+  }
+}

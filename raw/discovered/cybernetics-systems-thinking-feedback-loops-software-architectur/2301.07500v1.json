@@ -1,0 +1,21 @@
+{
+  "id": "2301.07500v1",
+  "title": "Multi-objective Software Architecture Refactoring driven by Quality Attributes",
+  "authors": [
+    "Daniele Di Pompeo",
+    "Michele Tucci"
+  ],
+  "summary": "Architecture optimization is the process of automatically generating design options, typically to enhance software's quantifiable quality attributes, such as performance and reliability. Multi-objective optimization approaches have been used in this situation to assist the designer in selecting appropriate trade-offs between a number of non-functional features. Through automated refactoring, design alternatives can be produced in this process, and assessed using non-functional models.\n  This type of optimization tasks are hard and time- and resource-intensive, which frequently hampers their use in software engineering procedures.\n  In this paper, we present our optimization framework where we examined the performance of various genetic algorithms. We also exercised our framework with two case studies with various levels of size, complexity, and domain served as our test subjects.",
+  "published": "2023-01-18T13:17:16Z",
+  "updated": "2023-01-18T13:17:16Z",
+  "primary_category": "cs.SE",
+  "categories": [
+    "cs.SE"
+  ],
+  "url": "http://arxiv.org/abs/2301.07500v1",
+  "external_ids": {
+    "arxiv": "2301.07500",
+    "url": "https://arxiv.org/abs/2301.07500v1",
+    "doi": "10.48550/arxiv.2301.07500"
+  }
+}

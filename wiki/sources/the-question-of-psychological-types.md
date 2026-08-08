@@ -60,6 +60,7 @@ The Question of Psychological Types là ấn bản học thuật công bố thư
 - [[concepts/jung/chuc-nang-ha-dang]] — chức năng yếu và kém biệt hóa, nơi xung đột type bộc lộ rõ nhất
 - [[concepts/jung/hai-binh-dien-dien-giai]] — phân biệt giữa cách đọc khách thể và cách đọc chủ thể trong phân tích tâm lý
 - [[concepts/jung/chuc-nang-bu-dap]] — nguyên lý cho thấy vô thức phản ứng lại thiên lệch ý thức bằng một đối cực bù trừ
+- [[concepts/jung/chia-tay-freud]] — bối cảnh tranh luận Freud–Adler mà phần dẫn nhập đặt lý thuyết loại hình vào
 
 ## People
 
@@ -76,3 +77,7 @@ The Question of Psychological Types là ấn bản học thuật công bố thư
 - Có nên nạp riêng Psychological Types (1921) để đối chiếu bản hệ thống đã hoàn tất với giai đoạn phôi thai trong thư từ 1915-1916?
 - Nếu nạp thêm Liber Novus / Red Book và Black Books, bức tranh về mối nối giữa typology và quá trình tự thử nghiệm của Jung sẽ thay đổi ra sao?
 - Nên hiểu vai trò của Schmid-Guisan như một người đồng kiến tạo khái niệm, hay như một áp lực đối thoại buộc Jung phải tinh luyện những gì vốn đã có trong ông?
+
+## Topics
+
+- [[topics/tam-ly-hoc-phan-tich-jung]] — bản đồ tổng năm nhánh tư tưởng Jung

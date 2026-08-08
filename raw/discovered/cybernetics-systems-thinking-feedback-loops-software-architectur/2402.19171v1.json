@@ -1,0 +1,24 @@
+{
+  "id": "2402.19171v1",
+  "title": "Towards Assessing Spread in Sets of Software Architecture Designs",
+  "authors": [
+    "Vittorio Cortellessa",
+    "J. Andres Diaz-Pace",
+    "Daniele Di Pompeo",
+    "Michele Tucci"
+  ],
+  "summary": "Several approaches have recently used automated techniques to generate architecture design alternatives by means of optimization techniques. These approaches aim at improving an initial architecture with respect to quality aspects, such as performance, reliability, or maintainability. In this context, each optimization experiment usually produces a different set of architecture alternatives that is characterized by specific settings. As a consequence, the designer is left with the task of comparing such sets to identify the settings that lead to better solution sets for the problem. To assess the quality of solution sets, multi-objective optimization commonly relies on quality indicators. Among these, the quality indicator for the maximum spread estimates the diversity of the generated alternatives, providing a measure of how much of the solution space has been explored. However, the maximum spread indicator is computed only on the objective space and does not consider architectural information (e.g., components structure, design decisions) from the architectural space. In this paper, we propose a quality indicator for the spread that assesses the diversity of alternatives by taking into account architectural features. To compute the spread, we rely on a notion of distance between alternatives according to the way they were generated during the optimization. We demonstrate how our architectural quality indicator can be applied to a dataset from the literature.",
+  "published": "2024-02-29T13:52:39Z",
+  "updated": "2024-02-29T13:52:39Z",
+  "primary_category": "cs.SE",
+  "categories": [
+    "cs.SE",
+    "cs.PF"
+  ],
+  "url": "http://arxiv.org/abs/2402.19171v1",
+  "external_ids": {
+    "arxiv": "2402.19171",
+    "url": "https://arxiv.org/abs/2402.19171v1",
+    "doi": "10.48550/arxiv.2402.19171"
+  }
+}

@@ -36,4 +36,8 @@ related_concepts: []
 
 ## Được nhắc đến trong
 
+## Topics
+
+- [[topics/tam-ly-hoc-phan-tich-jung]] — bản đồ tổng năm nhánh tư tưởng Jung
+
 ## Notes

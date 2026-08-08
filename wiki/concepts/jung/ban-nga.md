@@ -42,6 +42,10 @@ Bản ngã (the Self) trong tâm lý học Jung là nguyên mẫu trung tâm —
 - [[concepts/jung/ca-nhan-hoa]]
 - [[concepts/jung/cai-bong]]
 
+## Topics
+
+- [[topics/tam-ly-hoc-phan-tich-jung]] — bản đồ tổng năm nhánh tư tưởng Jung
+
 ## Notes
 
 Jung phân biệt rõ chữ cái viết hoa "Self" (bản ngã) và chữ thường "self" (bản thân). Bản ngã không phải là ý tưởng thần học hay siêu hình — nó là hiện tượng kinh nghiệm có thể quan sát qua giấc mơ, biểu tượng mandala, và trải nghiệm đỉnh cao.

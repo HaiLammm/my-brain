@@ -57,6 +57,7 @@ Jung khám phá tính chất hai chiều của vô thức: vừa là kho lưu k�
 - [[concepts/jung/sang-tao-tu-vo-thuc]] — Sáng tạo từ vô thức: ý tưởng mới nảy mầm từ vô thức
 - [[concepts/jung/noi-so-cai-moi]] — Nỗi sợ cái mới: cản trở tâm lý trước ý tưởng đột phá
 - [[concepts/jung/bieu-tuong]] — Biểu tượng: ngôn ngữ của vô thức
+- [[concepts/jung/chia-tay-freud]] — Bất đồng gốc về bản chất vô thức giữa Jung và Freud
 
 ## Người được đề cập
 
@@ -74,3 +75,7 @@ Jung khám phá tính chất hai chiều của vô thức: vừa là kho lưu k�
 - Ranh giới giữa vô thức cá nhân và vô thức tập thể ở đâu trong quá trình sáng tạo?
 - Cơ chế nào quyết định khi nào ký ức bị kìm nén so với bị lãng quên thông thường?
 - Làm thế nào để phân biệt ý tưởng sáng tạo thực sự từ vô thức với ý tưởng tái tổ hợp từ ký ức cũ?
+
+## Topics
+
+- [[topics/tam-ly-hoc-phan-tich-jung]] — bản đồ tổng năm nhánh tư tưởng Jung

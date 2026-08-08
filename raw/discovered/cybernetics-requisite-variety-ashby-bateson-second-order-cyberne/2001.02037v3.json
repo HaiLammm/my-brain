@@ -1,0 +1,23 @@
+{
+  "id": "2001.02037v3",
+  "title": "Cybernetical Concepts for Cellular Automaton and Artificial Neural Network Modelling and Implementation",
+  "authors": [
+    "Patrik Christen",
+    "Olivier Del Fabbro"
+  ],
+  "summary": "As a discipline cybernetics has a long and rich history. In its first generation it not only had a worldwide span, in the area of computer modelling, for example, its proponents such as John von Neumann, Stanislaw Ulam, Warren McCulloch and Walter Pitts, also came up with models and methods such as cellular automata and artificial neural networks, which are still the foundation of most modern modelling approaches. At the same time, cybernetics also got the attention of philosophers, such as the Frenchman Gilbert Simondon, who made use of cybernetical concepts in order to establish a metaphysics and a natural philosophy of individuation, giving cybernetics thereby a philosophical interpretation, which he baptised allagmatic. In this paper, we emphasise this allagmatic theory by showing how Simondon's philosophical concepts can be used to formulate a generic computer model or metamodel for complex systems modelling and its implementation in program code, according to generic programming. We also present how the developed allagmatic metamodel is capable of building simple cellular automata and artificial neural networks.",
+  "published": "2019-11-24T21:02:34Z",
+  "updated": "2020-08-31T21:41:04Z",
+  "primary_category": "cs.OH",
+  "categories": [
+    "cs.OH",
+    "cs.AI",
+    "cs.NE"
+  ],
+  "url": "http://arxiv.org/abs/2001.02037v3",
+  "external_ids": {
+    "arxiv": "2001.02037",
+    "url": "https://arxiv.org/abs/2001.02037v3",
+    "doi": "10.48550/arxiv.2001.02037"
+  }
+}

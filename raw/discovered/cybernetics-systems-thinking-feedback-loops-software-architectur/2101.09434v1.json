@@ -1,0 +1,20 @@
+{
+  "id": "2101.09434v1",
+  "title": "A Software Architecture Teacher's Dilemmas",
+  "authors": [
+    "Arvind W Kiwelekar"
+  ],
+  "summary": "An instructor teaching a course on Software Architecture needs to be more reflective to engage students productively in the learning activities. In this reflective essay, the author identifies a few decisive moments referred to as instructional dilemmas at which a teacher reflects upon choices and their consequences so that meaningful learning happens. These situations are referred to as dilemmas because they offer two options to instructors. Some of these dilemmas arise from the inherent nature of Software Architecture as a discipline, while the source of others is the background knowledge of learners. The paper suggests a set of principles and small-teaching methods to make teaching and learning more effective in such situations.",
+  "published": "2021-01-23T07:01:38Z",
+  "updated": "2021-01-23T07:01:38Z",
+  "primary_category": "cs.SE",
+  "categories": [
+    "cs.SE"
+  ],
+  "url": "http://arxiv.org/abs/2101.09434v1",
+  "external_ids": {
+    "arxiv": "2101.09434",
+    "url": "https://arxiv.org/abs/2101.09434v1",
+    "doi": "10.48550/arxiv.2101.09434"
+  }
+}

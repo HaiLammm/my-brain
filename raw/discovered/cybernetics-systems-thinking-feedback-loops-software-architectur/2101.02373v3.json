@@ -1,0 +1,27 @@
+{
+  "id": "2101.02373v3",
+  "title": "Architectural Patterns for the Design of Federated Learning Systems",
+  "authors": [
+    "Sin Kit Lo",
+    "Qinghua Lu",
+    "Liming Zhu",
+    "Hye-young Paik",
+    "Xiwei Xu",
+    "Chen Wang"
+  ],
+  "summary": "Federated learning has received fast-growing interests from academia and industry to tackle the challenges of data hungriness and privacy in machine learning. A federated learning system can be viewed as a large-scale distributed system with different components and stakeholders as numerous client devices participate in federated learning. Designing a federated learning system requires software system design thinking apart from machine learning knowledge. Although much effort has been put into federated learning from the machine learning technique aspects, the software architecture design concerns in building federated learning systems have been largely ignored. Therefore, in this paper, we present a collection of architectural patterns to deal with the design challenges of federated learning systems. Architectural patterns present reusable solutions to a commonly occurring problem within a given context during software architecture design. The presented patterns are based on the results of a systematic literature review and include three client management patterns, four model management patterns, three model training patterns, and four model aggregation patterns. The patterns are associated to the particular state transitions in a federated learning model lifecycle, serving as a guidance for effective use of the patterns in the design of federated learning systems.",
+  "published": "2021-01-07T05:11:09Z",
+  "updated": "2021-06-18T05:09:15Z",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.DC",
+    "cs.SE"
+  ],
+  "url": "http://arxiv.org/abs/2101.02373v3",
+  "external_ids": {
+    "arxiv": "2101.02373",
+    "url": "https://arxiv.org/abs/2101.02373v3",
+    "doi": "10.48550/arxiv.2101.02373"
+  }
+}

@@ -51,6 +51,7 @@ Bài viết của Jung trình bày quan điểm về tầm quan trọng của gi
 - [[concepts/jung/bieu-tuong]] — Biểu tượng là ký hiệu mang ý nghĩa vượt xa nghĩa hời của nó
 - [[concepts/jung/trieu-chung-than-kinh]] — Các triệu chứng thần kinh là ngôn ngữ của vô thức
 - [[concepts/jung/phien-tu-dan-vat]] — Sự phân tách tâm lý khi ý thức bị chia rẽ khỏi vô thức
+- [[concepts/jung/chia-tay-freud]] — Chỗ Jung ghi công Freud trước khi tách khỏi ông
 
 ## People
 

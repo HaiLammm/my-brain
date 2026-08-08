@@ -1,0 +1,20 @@
+{
+  "id": "1803.09369v1",
+  "title": "Towards a Cybernetic Foundation for Natural Resource Governance",
+  "authors": [
+    "Talha Manzoor"
+  ],
+  "summary": "This study explores the potential of the cybernetic method of inquiry for the problem of natural resource governance. The systems way of thinking has already enabled scientists to gain considerable headway in framing global environmental challenges. On the other hand, technical solutions to environmental problems have begun to show significant promise, driven by the advent of technology and its increased proliferation in coupled human and natural systems. Such settings lie on the interface of engineering, social and environmental sciences, and as such, require a common language in order for natural resources to be studied, managed and ultimately sustained. In this dissertation, we argue that the systems theoretic tradition of cybernetics may provide the necessary common ground for examining such systems.\n  After discussing the relevance of the cybernetic approach to natural resource governance, we present a mathematical model of resource consumption, grounded in social psychological research on consumer behavior. We also provide interpretations of the model at various levels of abstraction in the social network of the consuming population. We demonstrate the potential of the model by examining it in various theoretic frameworks which include dynamical systems, optimal control theory, game theory and the theory of learning in games. Each framework yields different policy guidelines to avoid Tragedy of the Commons like scenarios in the natural resource system.",
+  "published": "2018-03-20T07:30:12Z",
+  "updated": "2018-03-20T07:30:12Z",
+  "primary_category": "eess.SY",
+  "categories": [
+    "eess.SY"
+  ],
+  "url": "http://arxiv.org/abs/1803.09369v1",
+  "external_ids": {
+    "arxiv": "1803.09369",
+    "url": "https://arxiv.org/abs/1803.09369v1",
+    "doi": "10.48550/arxiv.1803.09369"
+  }
+}

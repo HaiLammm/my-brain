@@ -1,0 +1,24 @@
+{
+  "id": "1311.0257v1",
+  "title": "Application of Cybernetics and Control Theory for a New Paradigm in Cybersecurity",
+  "authors": [
+    "Michael D. Adams",
+    "Seth D. Hitefield",
+    "Bruce Hoy",
+    "Michael C. Fowler",
+    "T. Charles Clancy"
+  ],
+  "summary": "A significant limitation of current cyber security research and techniques is its reactive and applied nature. This leads to a continuous 'cyber cycle' of attackers scanning networks, developing exploits and attacking systems, with defenders detecting attacks, analyzing exploits and patching systems. This reactive nature leaves sensitive systems highly vulnerable to attack due to un-patched systems and undetected exploits. Some current research attempts to address this major limitation by introducing systems that implement moving target defense. However, these ideas are typically based on the intuition that a moving target defense will make it much harder for attackers to find and scan vulnerable systems, and not on theoretical mathematical foundations. The continuing lack of fundamental science and principles for developing more secure systems has drawn increased interest into establishing a 'science of cyber security'. This paper introduces the concept of using cybernetics, an interdisciplinary approach of control theory, systems theory, information theory and game theory applied to regulatory systems, as a foundational approach for developing cyber security principles. It explores potential applications of cybernetics to cyber security from a defensive perspective, while suggesting the potential use for offensive applications. Additionally, this paper introduces the fundamental principles for building non-stationary systems, which is a more general solution than moving target defenses. Lastly, the paper discusses related works concerning the limitations of moving target defense and one implementation based on non-stationary principles.",
+  "published": "2013-11-01T19:02:57Z",
+  "updated": "2013-11-01T19:02:57Z",
+  "primary_category": "cs.CR",
+  "categories": [
+    "cs.CR"
+  ],
+  "url": "http://arxiv.org/abs/1311.0257v1",
+  "external_ids": {
+    "arxiv": "1311.0257",
+    "url": "https://arxiv.org/abs/1311.0257v1",
+    "doi": "10.48550/arxiv.1311.0257"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Observability",
+  "pageid": 871280,
+  "description": "In control theory, visible state of a system",
+  "extract": "Observability is a measure of how well internal states of a system can be inferred from knowledge of its external outputs.\nIn control theory, the observability and controllability of a linear system are mathematical duals.\nThe concept of observability was introduced by the Hungarian-American engineer Rudolf E. Kálmán for linear dynamic systems. A dynamical system designed to estimate the state of a system from measurements of the outputs is called a state observer for that system, such as Kalman filters.",
+  "url": "https://en.wikipedia.org/wiki/Observability",
+  "categories": [
+    "Articles with short description",
+    "Classical control theory",
+    "Short description is different from Wikidata",
+    "Webarchive template wayback links"
+  ],
+  "external_ids": {
+    "url": "https://en.wikipedia.org/wiki/Observability"
+  }
+}

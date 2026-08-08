@@ -1,0 +1,21 @@
+{
+  "id": "2112.05549v1",
+  "title": "Combining Design Thinking and Software Requirements Engineering to create Human-centered Software-intensive Systems",
+  "authors": [
+    "Jennifer Hehn",
+    "Daniel Mendez"
+  ],
+  "summary": "Effective Requirements Engineering is a crucial activity in softwareintensive development projects. The human-centric working mode of Design Thinking is considered a powerful way to complement such activities when designing innovative systems. Research has already made great strides to illustrate the benefits of using Design Thinking for Requirements Engineering. However, it has remained mostly unclear how to actually realize a combination of both. In this chapter, we contribute an artifact-based model that integrates Design Thinking and Requirements Engineering for innovative software-intensive systems. Drawing from our research and project experiences, we suggest three strategies for tailoring and integrating Design Thinking and Requirements Engineering with complementary synergies.",
+  "published": "2021-12-10T14:01:57Z",
+  "updated": "2021-12-10T14:01:57Z",
+  "primary_category": "cs.SE",
+  "categories": [
+    "cs.SE"
+  ],
+  "url": "http://arxiv.org/abs/2112.05549v1",
+  "external_ids": {
+    "arxiv": "2112.05549",
+    "url": "https://arxiv.org/abs/2112.05549v1",
+    "doi": "10.48550/arxiv.2112.05549"
+  }
+}

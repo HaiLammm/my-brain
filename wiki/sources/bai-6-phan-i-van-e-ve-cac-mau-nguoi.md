@@ -73,6 +73,10 @@ Jung trình bày lý thuyết mẫu người (psychological types) của ông, b
 - Mối quan hệ giữa bốn chức năng và nguyên mẫu cụ thể nào?
 - Có bao nhiêu tổ hợp mẫu người khi kết hợp thái độ (hướng ngoại/nội) với bốn chức năng?
 
+## Topics
+
+- [[topics/tam-ly-hoc-phan-tich-jung]] — bản đồ tổng năm nhánh tư tưởng Jung
+
 ## Ghi chú
 
 Chương này nằm trong Phần I của "Man and His Symbols", do chính Carl Jung viết. Đây là chương quan trọng nhất về lý thuyết mẫu người, mở đường cho tác phẩm "Psychological Types" (1921) dài hơn của ông.

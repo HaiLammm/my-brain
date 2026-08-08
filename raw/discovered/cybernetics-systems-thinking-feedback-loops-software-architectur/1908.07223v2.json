@@ -1,0 +1,24 @@
+{
+  "id": "1908.07223v2",
+  "title": "On Integrating Design Thinking for a Human-centered Requirements Engineering",
+  "authors": [
+    "Jennifer Hehn",
+    "Daniel Mendez",
+    "Falk Uebernickel",
+    "Walter Brenner",
+    "Manfred Broy"
+  ],
+  "summary": "In this position paper, we elaborate on the possibilities and needs to integrate Design Thinking into Requirements Engineering. We draw from our research and project experiences to compare what is understood as Design Thinking and Requirements Engineering considering their involved artifacts. We suggest three approaches for tailoring and integrating Design Thinking and Requirements Engineering with complementary synergies and point at open challenges for research and practice.",
+  "published": "2019-08-20T08:45:45Z",
+  "updated": "2019-12-01T21:54:30Z",
+  "primary_category": "cs.SE",
+  "categories": [
+    "cs.SE"
+  ],
+  "url": "http://arxiv.org/abs/1908.07223v2",
+  "external_ids": {
+    "arxiv": "1908.07223",
+    "url": "https://arxiv.org/abs/1908.07223v2",
+    "doi": "10.48550/arxiv.1908.07223"
+  }
+}

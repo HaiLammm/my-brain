@@ -76,6 +76,7 @@ The Quotable Jung là tuyển tập trích dẫn quan trọng nhất từ các t
 - [[concepts/jung/ban-nga]] (The Self)
 - [[concepts/jung/anima]]
 - [[concepts/jung/mat-na]] (Persona)
+- [[concepts/jung/chia-tay-freud]] — Các trục bất đồng lý thuyết giữa Jung và Freud
 
 ## People
 
@@ -93,6 +94,10 @@ The Quotable Jung là tuyển tập trích dẫn quan trọng nhất từ các t
 - Đồng thời tính (synchronicity) và cơ chế phi nhân quả: chưa có kiểm chứng thực nghiệm, vẫn gây tranh luận
 - Anima/Animus trong bối cảnh giới tính phi nhị nguyên — Jung viết trong thế kỷ 20 với quan điểm nhị nguyên, cần tái xem xét
 - Mối liên hệ giữa thuật luyện đan (alchemy) và quá trình cá nhân hóa — Jung coi thuật luyện đan là biểu tượng tiền tâm lý học của cá nhân hóa
+
+## Topics
+
+- [[topics/tam-ly-hoc-phan-tich-jung]] — bản đồ tổng năm nhánh tư tưởng Jung
 
 ## Notes
 

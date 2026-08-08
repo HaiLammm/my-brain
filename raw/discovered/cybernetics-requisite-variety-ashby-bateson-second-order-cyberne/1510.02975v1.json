@@ -1,0 +1,28 @@
+{
+  "id": "1510.02975v1",
+  "title": "Optimal Piecewise Linear Function Approximation for GPU-based Applications",
+  "authors": [
+    "Daniel Berjón",
+    "Guillermo Gallego",
+    "Carlos Cuevas",
+    "Francisco Morán",
+    "Narciso García"
+  ],
+  "summary": "Many computer vision and human-computer interaction applications developed in recent years need evaluating complex and continuous mathematical functions as an essential step toward proper operation. However, rigorous evaluation of this kind of functions often implies a very high computational cost, unacceptable in real-time applications. To alleviate this problem, functions are commonly approximated by simpler piecewise-polynomial representations. Following this idea, we propose a novel, efficient, and practical technique to evaluate complex and continuous functions using a nearly optimal design of two types of piecewise linear approximations in the case of a large budget of evaluation subintervals. To this end, we develop a thorough error analysis that yields asymptotically tight bounds to accurately quantify the approximation performance of both representations. It provides an improvement upon previous error estimates and allows the user to control the trade-off between the approximation error and the number of evaluation subintervals. To guarantee real-time operation, the method is suitable for, but not limited to, an efficient implementation in modern Graphics Processing Units (GPUs), where it outperforms previous alternative approaches by exploiting the fixed-function interpolation routines present in their texture units. The proposed technique is a perfect match for any application requiring the evaluation of continuous functions, we have measured in detail its quality and efficiency on several functions, and, in particular, the Gaussian function because it is extensively used in many areas of computer vision and cybernetics, and it is expensive to evaluate.",
+  "published": "2015-10-10T20:49:17Z",
+  "updated": "2015-10-10T20:49:17Z",
+  "primary_category": "math.OC",
+  "categories": [
+    "math.OC",
+    "cs.CV",
+    "cs.DC",
+    "eess.SY",
+    "math.NA"
+  ],
+  "url": "http://arxiv.org/abs/1510.02975v1",
+  "external_ids": {
+    "arxiv": "1510.02975",
+    "url": "https://arxiv.org/abs/1510.02975v1",
+    "doi": "10.48550/arxiv.1510.02975"
+  }
+}

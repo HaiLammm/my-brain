@@ -41,3 +41,7 @@ Bốn chức năng tâm lý (four psychological functions) là mô hình của J
 - [[concepts/jung/truc-giac-tam-ly]] — Chức năng trực giác
 - [[concepts/jung/tu-tuong-huong-ngoai]] — Có thể kết hợp với mỗi chức năng tạo ra 8 kiểu
 - [[concepts/jung/tu-tuong-huong-noi]] — Có thể kết hợp với mỗi chức năng tạo ra 8 kiểu
+
+## Topics
+
+- [[topics/tam-ly-hoc-phan-tich-jung]] — bản đồ tổng năm nhánh tư tưởng Jung

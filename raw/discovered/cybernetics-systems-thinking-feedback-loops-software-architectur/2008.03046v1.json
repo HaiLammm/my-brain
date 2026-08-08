@@ -1,0 +1,22 @@
+{
+  "id": "2008.03046v1",
+  "title": "Towards Using Probabilistic Models to Design Software Systems with Inherent Uncertainty",
+  "authors": [
+    "Alex Serban",
+    "Erik Poll",
+    "Joost Visser"
+  ],
+  "summary": "The adoption of machine learning (ML) components in software systems raises new engineering challenges. In particular, the inherent uncertainty regarding functional suitability and the operation environment makes architecture evaluation and trade-off analysis difficult. We propose a software architecture evaluation method called Modeling Uncertainty During Design (MUDD) that explicitly models the uncertainty associated to ML components and evaluates how it propagates through a system. The method supports reasoning over how architectural patterns can mitigate uncertainty and enables comparison of different architectures focused on the interplay between ML and classical software components. While our approach is domain-agnostic and suitable for any system where uncertainty plays a central role, we demonstrate our approach using as example a perception system for autonomous driving.",
+  "published": "2020-08-07T09:04:53Z",
+  "updated": "2020-08-07T09:04:53Z",
+  "primary_category": "cs.SE",
+  "categories": [
+    "cs.SE"
+  ],
+  "url": "http://arxiv.org/abs/2008.03046v1",
+  "external_ids": {
+    "arxiv": "2008.03046",
+    "url": "https://arxiv.org/abs/2008.03046v1",
+    "doi": "10.48550/arxiv.2008.03046"
+  }
+}

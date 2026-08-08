@@ -1,0 +1,20 @@
+{
+  "id": "1911.02362v2",
+  "title": "Bayesian Analogical Cybernetics",
+  "authors": [
+    "Adam Safron"
+  ],
+  "summary": "It has been argued that all of cognition can be understood in terms of Bayesian inference. It has also been argued that analogy is the core of cognition. Here I will propose that these perspectives are fully compatible, in that analogical reasoning can be described in terms of Bayesian inference and vice versa, and that both of these positions require a thorough cybernetic grounding in order to fulfill their promise as unifying frameworks for understanding minds. From the Bayesian perspective of the Free Energy Principle and Active Inference framework, thought is constituted by dynamics of cascading belief propagation through the nodes of probabilistic generative models specified by a cortical heterarchy \"rooted\" in action-perception cycles that ground the mind as an embodied control system for an autonomous agent. From the analogical structure mapping perspective, thought is constituted by the alignment and comparison of heterogeneous structural representations. Here I will propose that this core cognitive process for analogical reasoning is naturally implemented by predictive coding mechanisms. However, both Bayesian cognitive science and models of cognitive development via analogical reasoning require rich base domains and priors (or reliably learnable posteriors) from which they can commence the process of bootstrapping minds. Here in the spirit of the work of George Lakoff and Mark Johnson, I propose that embodiment provides many of the inductive biases that are usually described in terms of innate core knowledge. (Please note: this manuscript was written and finalized in 2012.)",
+  "published": "2019-11-04T06:17:55Z",
+  "updated": "2019-11-08T04:13:32Z",
+  "primary_category": "q-bio.NC",
+  "categories": [
+    "q-bio.NC"
+  ],
+  "url": "http://arxiv.org/abs/1911.02362v2",
+  "external_ids": {
+    "arxiv": "1911.02362",
+    "url": "https://arxiv.org/abs/1911.02362v2",
+    "doi": "10.48550/arxiv.1911.02362"
+  }
+}

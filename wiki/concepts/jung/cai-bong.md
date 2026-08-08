@@ -37,8 +37,18 @@ Cái bóng là phần tâm lý bị chối bỏ, bị hạ thấp hoặc bị s�
 - [[concepts/jung/vo-thuc]]
 - [[concepts/jung/nguyen-mau]]
 - [[concepts/jung/tu-hieu-minh]]
+- [[concepts/tarot/shadow-work-tarot]] — thực hành tarot mượn thẳng thuật ngữ này; cùng
+  logic "cái bóng chứa năng lượng có ích chứ không chỉ chứa cái xấu", nhưng nguồn tarot
+  không nhắc tới Jung
+- [[concepts/tarot/trai-bai-soi-bong]] — trải bài 5 lá đi từ mặt nạ vào cái bóng rồi ra
+  món quà và hòa giải
 
 ## Mentioned in
+
+## Topics
+
+- [[topics/tam-ly-hoc-phan-tich-jung]] — bản đồ tổng năm nhánh tư tưởng Jung
+- [[topics/thuc-hanh-tarot-voi-bo-murder-of-crows]] — gốc khái niệm cho nhánh shadow work của chủ đề
 
 ## Notes
 

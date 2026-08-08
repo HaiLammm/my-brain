@@ -1,0 +1,24 @@
+{
+  "id": "2108.11903v1",
+  "title": "Design Thinking and Creativity of Co-located vs. Globally Distributed Software Developers",
+  "authors": [
+    "Rodi Jolak",
+    "Andreas Wortmann",
+    "Grischa Liebel",
+    "Eric Umuhoza",
+    "Michel R. V. Chaudron"
+  ],
+  "summary": "Context: Designing software is an activity in which software developers think and make design decisions that shape the structure and behavior of software products. Designing software is one of the least understood software engineering activities. In a collaborative design setting, various types of distances can lead to challenges and effects that potentially affect how software is designed. Objective: To contribute to a better understanding of collaborative software design, we investigate how geographic distance affects its design thinking and the creativity of its discussions. Method: To this end, we conducted a multiple-case study exploring the design thinking and creativity of co-located and distributed software developers in a collaborative design setting. Results: Compared to co-located developers, distributed developers spend less time on exploring the problem space, which could be related to different socio-technical challenges, such as lack of awareness and common understanding. Distributed development does not seem to affect the creativity of their activities. Conclusion: Developers engaging in collaborative design need to be aware that problem space exploration is reduced in a distributed setting. Unless distributed teams take compensatory measures, this could adversely affect the development. Regarding the effect distance has on creativity, our results are inconclusive and further studies are needed.",
+  "published": "2021-08-26T16:50:31Z",
+  "updated": "2021-08-26T16:50:31Z",
+  "primary_category": "cs.SE",
+  "categories": [
+    "cs.SE"
+  ],
+  "url": "http://arxiv.org/abs/2108.11903v1",
+  "external_ids": {
+    "arxiv": "2108.11903",
+    "url": "https://arxiv.org/abs/2108.11903v1",
+    "doi": "10.48550/arxiv.2108.11903"
+  }
+}

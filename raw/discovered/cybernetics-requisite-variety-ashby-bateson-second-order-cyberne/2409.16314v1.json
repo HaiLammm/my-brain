@@ -1,0 +1,21 @@
+{
+  "id": "2409.16314v1",
+  "title": "Definition of Cybernetical Neuroscience",
+  "authors": [
+    "Alexander Fradkov"
+  ],
+  "summary": "A new scientific field is introduced and discussed, named cybernetical neuroscience, which studies mathematical models adopted in computational neuroscience by methods of cybernetics -- the science of control and communication in a living organism, machine and society. It also considers the practical application of the results obtained when studying mathematical models. The main tasks and methods, as well as some results of cybernetic neuroscience are considered.",
+  "published": "2024-09-14T13:35:59Z",
+  "updated": "2024-09-14T13:35:59Z",
+  "primary_category": "q-bio.NC",
+  "categories": [
+    "q-bio.NC",
+    "math.OC"
+  ],
+  "url": "http://arxiv.org/abs/2409.16314v1",
+  "external_ids": {
+    "arxiv": "2409.16314",
+    "url": "https://arxiv.org/abs/2409.16314v1",
+    "doi": "10.48550/arxiv.2409.16314"
+  }
+}

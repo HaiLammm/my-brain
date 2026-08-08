@@ -37,6 +37,20 @@ Lương Hải Lâm là fullstack developer sinh ngày 12/07/2001, tốt nghiệp
 - [[concepts/swe/fastapi]]
 - [[concepts/swe/cross-language-search]]
 
+Lý luận văn học (ghi chú riêng, 2026-08-08):
+
+- [[concepts/literature/chuc-nang-cuu-roi-van-chuong]]
+- [[concepts/literature/hien-thuc-to-ve-vien-vong]]
+- [[concepts/literature/su-menh-nha-van]]
+
+Tarot (bắt đầu học 2026-08-08):
+
+- [[concepts/tarot/he-thong-rider-waite-smith]] — hệ nghĩa đang học
+- [[concepts/tarot/murder-of-crows]] — bộ bài đang dùng; giữ đúng cấu trúc và hệ nghĩa RWS
+  nhưng vẽ theo lối gothic đen trắng, nên phải đọc bằng cảm giác trước rồi mới đối chiếu nghĩa
+- [[concepts/tarot/la-bai-moi-ngay]] — bài luyện khởi đầu theo lộ trình 8 tuần
+- [[concepts/tarot/shadow-work-tarot]] — hướng dùng mà bộ bài này phục vụ tốt nhất
+
 ## CV Status (2026-05-18)
 
 CV tiếng Việt chính thức đã hoàn chỉnh: [[outputs/cv-luong-hai-lam-tieng-viet]]

@@ -1,0 +1,17 @@
+{
+  "title": "Variety (cybernetics)",
+  "pageid": 12261835,
+  "description": "Number of states of a cybernetic system",
+  "extract": "In cybernetics, the term variety denotes the total number of distinguishable elements of a set, most often the set of states, inputs, or outputs of a finite-state machine or transformation, or the binary logarithm of the same quantity. Variety is used in cybernetics as an information theory that is easily related to deterministic finite automata, and less formally as a conceptual tool for thinking about organization, regulation, and stability. It is an early theory of complexity in automata, complex systems, and operations research.",
+  "url": "https://en.wikipedia.org/wiki/Variety_(cybernetics)",
+  "categories": [
+    "Articles with short description",
+    "Cybernetics",
+    "Short description matches Wikidata",
+    "Use dmy dates from May 2014",
+    "Webarchive template wayback links"
+  ],
+  "external_ids": {
+    "url": "https://en.wikipedia.org/wiki/Variety_(cybernetics)"
+  }
+}

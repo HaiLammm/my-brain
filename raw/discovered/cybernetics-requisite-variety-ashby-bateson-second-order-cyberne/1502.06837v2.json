@@ -1,0 +1,26 @@
+{
+  "id": "1502.06837v2",
+  "title": "Towards Quantum Cybernetics",
+  "authors": [
+    "Davide Girolami",
+    "Rebecca Schmidt",
+    "Gerardo Adesso"
+  ],
+  "summary": "Classical cybernetics is a successful meta-theory to model the regulation of complex systems from an abstract information-theoretic viewpoint, regardless of the properties of the system under scrutiny. Fundamental limits to the controllability of an open system can be formalized in terms of the law of requisite variety, which is derived from the second law of thermodynamics. These concepts are briefly reviewed, and the chances, challenges and potential gains arising from the generalisation of such a framework to the quantum domain are discussed.",
+  "published": "2015-02-24T15:40:36Z",
+  "updated": "2015-11-20T21:50:09Z",
+  "primary_category": "quant-ph",
+  "categories": [
+    "quant-ph",
+    "cond-mat.dis-nn",
+    "hep-th",
+    "math-ph",
+    "physics.soc-ph"
+  ],
+  "url": "http://arxiv.org/abs/1502.06837v2",
+  "external_ids": {
+    "arxiv": "1502.06837",
+    "url": "https://arxiv.org/abs/1502.06837v2",
+    "doi": "10.48550/arxiv.1502.06837"
+  }
+}

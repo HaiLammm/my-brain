@@ -76,6 +76,10 @@ Man and His Symbols là tác phẩm cuối cùng của Carl Gustav Jung, đượ
 - Mối quan hệ giữa các nguyên mẫu và các biểu tượng văn hóa cụ thể
 - Phương pháp đo lường hiệu quả của quá trình cá nhân hóa
 
+## Topics
+
+- [[topics/tam-ly-hoc-phan-tich-jung]] — bản đồ tổng năm nhánh tư tưởng Jung
+
 ## Notes
 
 Cuốn sách được đặt theo yêu cầu của Jung với điều kiện: không chỉ một người viết, và John Freeman (người viết lời nói đầu) đóng vai trò điều phối công việc giữa các tác giả và nhà xuất bản. Jung coi Freeman là "độc giả thông thường" — điều gì ông ấy hiểu thì độc giả khác cũng sẽ hiểu.

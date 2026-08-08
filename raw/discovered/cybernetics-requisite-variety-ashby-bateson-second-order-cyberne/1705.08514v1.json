@@ -1,0 +1,23 @@
+{
+  "id": "1705.08514v1",
+  "title": "Cybernetic Health",
+  "authors": [
+    "Nitish Nag",
+    "Vaibhav Pandey",
+    "Hyungik Oh",
+    "Ramesh Jain"
+  ],
+  "summary": "Future health ecosystems demand the integration of emerging data technology with an increased focus on preventive medicine. Cybernetics extracts the full potential of data to serve the spectrum of health care, from acute to chronic problems. Building actionable cybernetic navigation tools can greatly empower optimal health decisions, especially by quantifying lifestyle and environmental data. This data to decisions transformation is powered by intuitive event analysis to offer the best semantic abstraction of dynamic living systems. Achieving the goal of preventive health systems in the cybernetic model occurs through the flow of several components. From personalized models we can predict health status using perpetual sensing and data streams. Given these predictions, we give precise recommendations to best suit the prediction for that individual. To enact these recommendations we use persuasive technology in order to deliver and execute targeted interventions.",
+  "published": "2017-05-21T21:49:32Z",
+  "updated": "2017-05-21T21:49:32Z",
+  "primary_category": "cs.CY",
+  "categories": [
+    "cs.CY"
+  ],
+  "url": "http://arxiv.org/abs/1705.08514v1",
+  "external_ids": {
+    "arxiv": "1705.08514",
+    "url": "https://arxiv.org/abs/1705.08514v1",
+    "doi": "10.48550/arxiv.1705.08514"
+  }
+}

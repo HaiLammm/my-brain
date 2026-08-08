@@ -39,6 +39,7 @@ Tuyển tập các bài viết và tiểu luận của Carl Gustav Jung về hi�
 - [[concepts/jung/chung-tiem-ky-uc]] — cryptomnesia, ký ức ẩn
 - [[concepts/jung/vo-thuc]] — vô thức và các biểu hiện tâm lý
 - [[concepts/jung/dong-nhat-tam-linh]] — đồng nhất tâm linh
+- [[concepts/jung/chia-tay-freud]] — khác biệt thái độ với hiện tượng huyền bí giữa Jung và Freud
 
 ## People
 
@@ -51,12 +52,18 @@ Tuyển tập các bài viết và tiểu luận của Carl Gustav Jung về hi�
 - [[sources/man-and-his-symbols]] — cùng tác giả, chủ đề vô thức và biểu tượng
 - [[sources/psychology-and-western-religion]] — cùng tác giả, chủ đề tâm lý học và tôn giáo
 - [[sources/the-undiscovered-self]] — cùng tác giả, chủ đề bản ngã và vô thức
+- [[sources/jung-and-tarot-theory-practice-nexus]] — cùng lập trường hiện tượng học; nguồn đó trả lời một phần câu hỏi mở ở đây về vai trò của đồng thời tính
 
 ## Open questions
 
 - Mối quan hệ giữa hiện tượng huyền bí và vô thức tập thể — Jung có coi chúng là biểu hiện trực tiếp của archetype không?
 - Quan điểm của Jung về parapsychology có thay đổi đáng kể từ 1902 đến 1957 không?
 - Vai trò của đồng thời tính (synchronicity) trong các hiện tượng tiền nhận thức
+
+## Topics
+
+- [[topics/tam-ly-hoc-phan-tich-jung]] — bản đồ tổng năm nhánh tư tưởng Jung
+- [[topics/thuc-hanh-tarot-voi-bo-murder-of-crows]] — lập trường hiện tượng học, làm phanh cho chủ đề thực hành tarot
 
 ## Notes
 

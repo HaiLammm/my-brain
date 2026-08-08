@@ -34,10 +34,13 @@ Xung đột đối lập (problem of opposites) là nguyên lý trung tâm trong
 ## Key Sources
 
 - [[sources/the-quotable-jung]]
+- [[sources/jung-and-tarot-theory-practice-nexus]] — năng lượng tâm lý "bật ra từ sức căng của các mặt đối lập" (CW 7. 121); *coincidentia oppositorum*
 
 ## Related Concepts
 
 - [[concepts/jung/chuc-nang-sieu-viet]]
+- [[concepts/jung/unus-mundus]] — nơi cặp đối lập tâm/vật gặp nhau trong trải nghiệm đồng thời tính
+- [[concepts/tarot/shadow-work-tarot]] — lớp đọc "mặt bóng" đặt cạnh nghĩa chuẩn chính là một cặp đối lập được giữ nguyên sức căng
 - [[concepts/jung/cai-bong]]
 - [[concepts/jung/vo-thuc]]
 - [[concepts/jung/kim-nen]]

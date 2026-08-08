@@ -1,0 +1,22 @@
+{
+  "id": "2303.10015v1",
+  "title": "Where and What do Software Architects blog? An Exploratory Study on Architectural Knowledge in Blogs, and their Relevance to Design Steps",
+  "authors": [
+    "Mohamed Soliman",
+    "Kirsten Gericke",
+    "Paris Avgeriou"
+  ],
+  "summary": "Software engineers share their architectural knowledge (AK) in different places on the Web. Recent studies show that architectural blogs contain the most relevant AK, which can help software engineers to make design steps. Nevertheless, we know little about blogs, and specifically architectural blogs, where software engineers share their AK. In this paper, we conduct an exploratory study on architectural blogs to explore their types, topics, and their AK. Moreover, we determine the relevance of architectural blogs to make design steps. Our results support researchers and practitioners to find and re-use AK from blogs.",
+  "published": "2023-03-17T14:44:13Z",
+  "updated": "2023-03-17T14:44:13Z",
+  "primary_category": "cs.SE",
+  "categories": [
+    "cs.SE"
+  ],
+  "url": "http://arxiv.org/abs/2303.10015v1",
+  "external_ids": {
+    "arxiv": "2303.10015",
+    "url": "https://arxiv.org/abs/2303.10015v1",
+    "doi": "10.48550/arxiv.2303.10015"
+  }
+}

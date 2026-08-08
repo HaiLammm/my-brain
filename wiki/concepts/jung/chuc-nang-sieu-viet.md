@@ -32,8 +32,11 @@ Chức năng siêu việt (transcendent function) là cơ chế tâm lý kết n
 ## Key Sources
 
 - [[sources/the-quotable-jung]]
+- [[sources/jung-and-tarot-theory-practice-nexus]] — chức năng siêu việt sinh ra từ chênh lệch giữa hai cực sáng/tối của nguyên mẫu
 
 ## Related Concepts
+
+- [[concepts/tarot/shadow-work-tarot]] — vị trí "Hòa giải" trong trải bài soi bóng nhắm đúng vào chức năng này
 
 - [[concepts/jung/vo-thuc]]
 - [[concepts/jung/ca-nhan-hoa]]

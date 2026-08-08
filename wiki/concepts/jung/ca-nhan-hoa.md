@@ -29,11 +29,19 @@ Quá trình cá nhân hóa (Individuation) là quá trình mà qua đó ý thứ
 ## Key Sources
 
 - [[sources/man-and-his-symbols]] — chương của Marie-Louise von Franz về quá trình cá nhân hóa
+- [[sources/jung-and-tarot-theory-practice-nexus]] — mỗi lần đọc và diễn giải biểu tượng là một bước tiến trong quá trình này
 
 ## Related Concepts
 
 - [[concepts/jung/vo-thuc]] — phần tâm trí được hòa giải trong quá trình cá nhân hóa
+- [[concepts/tarot/tarot-hermeneutic]] — khung diễn giải lấy cá nhân hóa làm đích đến
+- [[concepts/tarot/tarot-nhu-cong-cu-giao-duc]] — ứng dụng giáo dục và tham vấn của cùng mục tiêu
 - [[concepts/jung/nguyen-mau]] — các mô hình tâm lý cần được đối diện trong quá trình này
+
+## Topics
+
+- [[topics/tam-ly-hoc-phan-tich-jung]] — bản đồ tổng năm nhánh tư tưởng Jung
+- [[topics/thuc-hanh-tarot-voi-bo-murder-of-crows]] — đích đến của khung diễn giải trong chủ đề
 
 ## Notes
 

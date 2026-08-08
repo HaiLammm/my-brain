@@ -1,0 +1,22 @@
+{
+  "id": "1402.1141v1",
+  "title": "Quantum Cybernetics and Complex Quantum Systems Science - A Quantum Connectionist Exploration",
+  "authors": [
+    "Carlos Pedro Gonçalves"
+  ],
+  "summary": "Quantum cybernetics and its connections to complex quantum systems science is addressed from the perspective of complex quantum computing systems. In this way, the notion of an autonomous quantum computing system is introduced in regards to quantum artificial intelligence, and applied to quantum artificial neural networks, considered as autonomous quantum computing systems, which leads to a quantum connectionist framework within quantum cybernetics for complex quantum computing systems. Several examples of quantum feedforward neural networks are addressed in regards to Boolean functions' computation, multilayer quantum computation dynamics, entanglement and quantum complementarity. The examples provide a framework for a reflection on the role of quantum artificial neural networks as a general framework for addressing complex quantum systems that perform network-based quantum computation, possible consequences are drawn regarding quantum technologies, as well as fundamental research in complex quantum systems science and quantum biology.",
+  "published": "2014-02-05T19:48:24Z",
+  "updated": "2014-02-05T19:48:24Z",
+  "primary_category": "cs.NE",
+  "categories": [
+    "cs.NE",
+    "cond-mat.dis-nn",
+    "quant-ph"
+  ],
+  "url": "http://arxiv.org/abs/1402.1141v1",
+  "external_ids": {
+    "arxiv": "1402.1141",
+    "url": "https://arxiv.org/abs/1402.1141v1",
+    "doi": "10.48550/arxiv.1402.1141"
+  }
+}

@@ -38,6 +38,10 @@ Chức năng tôn giáo là khuynh hướng tâm lý tự nhiên hướng tới 
 
 ## Mentioned in
 
+## Topics
+
+- [[topics/tam-ly-hoc-phan-tich-jung]] — bản đồ tổng năm nhánh tư tưởng Jung
+
 ## Notes
 
 Jung không đồng nhất chức năng tôn giáo với một hệ phái cụ thể; ông xem nó trước hết là một sự kiện tâm lý có ý nghĩa cân bằng và định hướng.

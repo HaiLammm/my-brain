@@ -19,6 +19,7 @@ key_sources:
 related_concepts:
   - concepts/jung/mac-cam-quyen-luc
   - concepts/jung/mac-cam-tu-ti
+  - concepts/systems/dieu-tiet
 ---
 
 ## Definition
@@ -37,7 +38,12 @@ Chức năng bù đắp (compensatory function) của giấc mơ là khái niệ
 - [[concepts/jung/vo-thuc]] — Vô thức là nguồn gốc của hình ảnh bù đắp
 - [[concepts/jung/thanh-kien-y-thuc]] — Thành kiến ý thức là đối tượng cần bù đắp
 - [[concepts/jung/bieu-tuong]] — Biểu tượng là phương tiện thực hiện chức năng bù đắp
+- [[concepts/systems/dieu-tiet]] — *kết nối do wiki đặt ra, không có trong nguồn*: logic bù đắp của Jung (tâm thần tự khôi phục cân bằng khi ý thức thiên lệch) cùng cấu trúc với điều tiết cybernetic — giữ "biến thiết yếu" trong giới hạn; cần nguồn bắc cầu
 
 ## Được nhắc đến trong
+
+## Topics
+
+- [[topics/tam-ly-hoc-phan-tich-jung]] — bản đồ tổng năm nhánh tư tưởng Jung
 
 ## Notes

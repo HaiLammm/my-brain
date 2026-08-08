@@ -1,0 +1,22 @@
+{
+  "id": "2404.02688v2",
+  "title": "Reinforcement Learning in Categorical Cybernetics",
+  "authors": [
+    "Jules Hedges",
+    "Riu Rodríguez Sakamoto"
+  ],
+  "summary": "We show that several major algorithms of reinforcement learning (RL) fit into the framework of categorical cybernetics, that is to say, parametrised bidirectional processes. We build on our previous work in which we show that value iteration can be represented by precomposition with a certain optic. The outline of the main construction in this paper is: (1) We extend the Bellman operators to parametrised optics that apply to action-value functions and depend on a sample. (2) We apply a representable contravariant functor, obtaining a parametrised function that applies the Bellman iteration. (3) This parametrised function becomes the backward pass of another parametrised optic that represents the model, which interacts with an environment via an agent. Thus, parametrised optics appear in two different ways in our construction, with one becoming part of the other. As we show, many of the major classes of algorithms in RL can be seen as different extremal cases of this general setup: dynamic programming, Monte Carlo methods, temporal difference learning, and deep RL. We see this as strong evidence that this approach is a natural one and believe that it will be a fruitful way to think about RL in the future.",
+  "published": "2024-04-03T12:36:25Z",
+  "updated": "2025-09-24T20:08:42Z",
+  "primary_category": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "math.CT"
+  ],
+  "url": "http://arxiv.org/abs/2404.02688v2",
+  "external_ids": {
+    "arxiv": "2404.02688",
+    "url": "https://arxiv.org/abs/2404.02688v2",
+    "doi": "10.48550/arxiv.2404.02688"
+  }
+}

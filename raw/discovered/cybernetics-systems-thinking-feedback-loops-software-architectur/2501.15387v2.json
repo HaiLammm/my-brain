@@ -1,0 +1,22 @@
+{
+  "id": "2501.15387v2",
+  "title": "Tracing the Lifecycle of Architecture Technical Debt in Software Systems: A Dependency Approach",
+  "authors": [
+    "Edi Sutoyo",
+    "Paris Avgeriou",
+    "Andrea Capiluppi"
+  ],
+  "summary": "Architectural technical debt (ATD) represents trade-offs in software architecture that accelerate initial development but create long-term maintenance challenges. ATD, in particular when self-admitted, impacts the foundational structure of software, making it difficult to detect and resolve. This study investigates the lifecycle of ATD, focusing on how it affects i) the connectivity between classes and ii) the frequency of file modifications. We aim to understand how ATD evolves from introduction to repayment and its implications on software architectures. Our empirical approach was applied to a dataset of SATD items extracted from various software artifacts. We isolated ATD instances, filtered for architectural indicators, and calculated dependencies at different lifecycle stages using FAN-IN and FAN-OUT metrics. Statistical analyses, including the Mann-Whitney U test and Cliff's Delta, were used to assess the significance and effect size of connectivity and dependency changes over time. We observed that ATD repayment increased class connectivity, with FAN-IN increasing by 57.5% on average and FAN-OUT by 26.7%, suggesting a shift toward centralization and increased architectural complexity after repayment. Moreover, ATD files were modified less frequently than Non-ATD files, with changes accumulated in high-dependency portions of the code. Our study shows that resolving ATD improves software quality in the short-term, but can make the architecture more complex by centralizing dependencies. Also, even if dependency metrics (like FAN-IN and FAN-OUT) can help understand the impact of ATD, they should be combined with other measures to capture other effects of ATD on software maintainability.",
+  "published": "2025-01-26T03:58:57Z",
+  "updated": "2025-03-07T13:55:01Z",
+  "primary_category": "cs.SE",
+  "categories": [
+    "cs.SE"
+  ],
+  "url": "http://arxiv.org/abs/2501.15387v2",
+  "external_ids": {
+    "arxiv": "2501.15387",
+    "url": "https://arxiv.org/abs/2501.15387v2",
+    "doi": "10.48550/arxiv.2501.15387"
+  }
+}

@@ -223,6 +223,17 @@ export const EDGE_TYPES = [
   // Any entity -> external URL (core; *://* is in EXEMPTION_GLOBS)
   { name: 'see_also_url',       from: '*', to: '*',           reverse: null, terminal: true, pack: 'core' },
 
+  // --- research pack: topic <-> source / concept ---------------------------
+  // Local addition (2026-08-08). /lumi-research-topic documents these four edge
+  // names in its step 5, but they were absent from this table, so add-edge
+  // rejected them and topic pages could only be wired through markdown
+  // wikilinks. topics/ is not in EXEMPTION_GLOBS, so both directions are
+  // required and L06 enforces the reverse.
+  { name: 'includes_source',    from: 'topics',   to: 'sources',  reverse: 'included_in_topic', symmetric: false, pack: 'research' },
+  { name: 'included_in_topic',  from: 'sources',  to: 'topics',   reverse: 'includes_source',   symmetric: false, pack: 'research' },
+  { name: 'covers_concept',     from: 'topics',   to: 'concepts', reverse: 'covered_by_topic',  symmetric: false, pack: 'research' },
+  { name: 'covered_by_topic',   from: 'concepts', to: 'topics',   reverse: 'covers_concept',    symmetric: false, pack: 'research' },
+
   // --- reading pack --------------------------------------------------------
   { name: 'features',           from: 'chapters',   to: 'characters', reverse: 'appears_in',      symmetric: false, pack: 'reading' },
   { name: 'appears_in',         from: '*',          to: 'chapters',   reverse: null,              symmetric: false, pack: 'reading' },

@@ -38,6 +38,10 @@ Phóng chiếu là cơ chế tâm lý mà qua đó con người gán cho ngườ
 
 ## Mentioned in
 
+## Topics
+
+- [[topics/tam-ly-hoc-phan-tich-jung]] — bản đồ tổng năm nhánh tư tưởng Jung
+
 ## Notes
 
 Rút lại các phóng chiếu là điều kiện mà Jung xem là cần thiết để có hiểu biết lẫn nhau và để xây dựng lại quan hệ người-người.

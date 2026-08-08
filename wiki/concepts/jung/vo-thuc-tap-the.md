@@ -27,12 +27,19 @@ Vô thức tập thể (Collective Unconscious) là lớp vô thức sâu nhất
 ## Key Sources
 
 - [[sources/bai-5-phan-i-phan-tich-giac-mo]]
+- [[sources/jung-and-tarot-theory-practice-nexus]] — vô thức tập thể như psyche khách quan, được đặt song song với thế giới Imaginal của Corbin
 
 ## Related Concepts
+
+- [[concepts/jung/the-gioi-imaginal]] — thuật ngữ của Corbin mà Semetsky đặt dấu bằng với khái niệm này
 
 - [[concepts/jung/vo-thuc-ca-nhan]] — lớp vô thức cá nhân
 - [[concepts/jung/nguyen-mau]] — các mô hình bẩm sinh từ vô thức tập thể
 - [[concepts/jung/bieu-tuong-tap-the]] — biểu tượng xuất phát từ vô thức tập thể
+
+## Topics
+
+- [[topics/tam-ly-hoc-phan-tich-jung]] — bản đồ tổng năm nhánh tư tưởng Jung
 
 ## Notes
 

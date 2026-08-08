@@ -1,0 +1,25 @@
+{
+  "id": "2512.23482v3",
+  "title": "Theory of Mind for Explainable Human-Robot Interaction",
+  "authors": [
+    "Marie S. Bauer",
+    "Julia Gachot",
+    "Matthias Kerzel",
+    "Cornelius Weber",
+    "Stefan Wermter"
+  ],
+  "summary": "Within the context of human-robot interaction (HRI), Theory of Mind (ToM) is intended to serve as a user-friendly backend to the interface of robotic systems, enabling robots to infer and respond to human mental states. When integrated into robots, ToM allows them to adapt their internal models to users' behaviors, enhancing the interpretability and predictability of their actions. Similarly, Explainable Artificial Intelligence (XAI) aims to make AI systems transparent and interpretable, allowing humans to understand and interact with them effectively. Since ToM in HRI serves related purposes, we propose to consider ToM as a form of XAI and evaluate it through the eValuation XAI (VXAI) framework and its seven desiderata. This paper identifies a critical gap in the application of ToM within HRI, as existing methods rarely assess the extent to which explanations correspond to the robot's actual internal reasoning. To address this limitation, we propose to integrate ToM within XAI frameworks. By embedding ToM principles inside XAI, we argue for a shift in perspective, as current XAI research focuses predominantly on the AI system itself and often lacks user-centered explanations. Incorporating ToM would enable a change in focus, prioritizing the user's informational needs and perspective.",
+  "published": "2025-12-29T14:09:05Z",
+  "updated": "2026-02-19T14:01:19Z",
+  "primary_category": "cs.RO",
+  "categories": [
+    "cs.RO",
+    "cs.AI"
+  ],
+  "url": "http://arxiv.org/abs/2512.23482v3",
+  "external_ids": {
+    "arxiv": "2512.23482",
+    "url": "https://arxiv.org/abs/2512.23482v3",
+    "doi": "10.48550/arxiv.2512.23482"
+  }
+}
