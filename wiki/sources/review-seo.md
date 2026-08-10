@@ -4,7 +4,7 @@ title: Review SEO
 slug: review-seo
 date_added: 2026-05-20
 authors:
-  - Setsubi Pro
+  - Quân
 source_type: note
 importance: 3
 confidence: high
@@ -65,6 +65,8 @@ Tài liệu hướng dẫn nội bộ của Setsubi Pro tổng hợp các tiêu 
 - [[sources/cau-truc-3-phan-bai-seo-troubleshooting]]
 
 ## People
+
+- [[people/quan]] — người soạn thảo, **soạn từ đầu** chứ không biên soạn lại từ tài liệu của khách (xác nhận 10/08/2026). Trước đó trang ghi tác giả là "Setsubi Pro" — đó là **tên khách hàng trong tiêu đề**, không phải nguồn gốc nội dung.
 
 ## Open questions
 

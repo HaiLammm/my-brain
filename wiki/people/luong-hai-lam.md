@@ -18,6 +18,8 @@ key_sources:
 
 Lương Hải Lâm là fullstack developer sinh ngày 12/07/2001, tốt nghiệp Công nghệ phần mềm tại Đại học Đông Á. Là tác giả của wiki này và nhân vật trung tâm trong toàn bộ nguồn về dự án cá nhân. Stack chuyên sâu: Python, FastAPI, Next.js 16, TypeScript, PostgreSQL. Hiện đang xây dựng DaNangNavi — nền tảng cộng đồng hỗ trợ người Nhật tại Đà Nẵng — với kiến trúc Modular Monolith + Event-driven.
 
+**Lead team IT tại công ty Wa+Craft** — bộ phận hiện chỉ có một người (bạn cung cấp 10/08/2026). Bộ tiêu chí SEO mà các bài `outputs/seo-*` viết theo là của [[people/quan]], lead team marketing cùng công ty.
+
 Biệt danh: **Lem** — tên dùng trong báo cáo nghiên cứu kỹ thuật của tailor_project. Trang [[people/lem]] là bí danh trỏ về đây, không phải người thứ hai.
 
 Ở lớp câu chuyện, xem [[characters/luong-hai-lam/luong-hai-lam]].

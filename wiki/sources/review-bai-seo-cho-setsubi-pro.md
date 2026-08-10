@@ -3,7 +3,8 @@ type: source
 title: Review bài SEO cho Setsubi-Pro
 slug: review-bai-seo-cho-setsubi-pro
 date_added: 2026-05-21
-authors: []
+authors:
+  - Quân
 source_type: note
 importance: 3
 confidence: unverified
@@ -61,7 +62,7 @@ Tài liệu review chi tiết các quy tắc viết bài SEO tiếng Nhật cho 
 
 ## People
 
-(Không có tác giả được nêu tên.)
+- [[people/quan]] — người soạn thảo, **soạn từ đầu** chứ không biên soạn lại từ tài liệu của khách (xác nhận 10/08/2026). Tài liệu không ghi tên tác giả; danh tính đến từ lời kể, không từ chính văn bản.
 
 ## Open questions
 

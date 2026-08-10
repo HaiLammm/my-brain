@@ -18,11 +18,23 @@ Sinh 12/07/2001. Backend developer chuyên Python, sinh viên Công nghệ phầ
 
 Nhân vật chính. Ở chương 1 là người đi học — nhận phê bình, viết lại, chuyển từ "kê khai những gì đã làm" sang "chọn thứ muốn bị hỏi".
 
+**Nơi làm việc và chức danh:** **lead team IT** tại công ty **Wa+Craft**, do [[characters/luong-hai-lam/nomoto]] đứng tên và đứng đầu (bạn cung cấp 10/08/2026). Cả năm người còn lại trong sách đều ở đây. Sơ đồ tổ chức đầy đủ nằm ở trang [[characters/luong-hai-lam/nomoto]].
+
+Chức danh này đổi cách đọc bốn chương đầu. Trước đó wiki hiểu Lâm là người nhận việc ở đáy chuỗi; thực tế Lâm dẫn một mảng, ngang hàng với [[characters/luong-hai-lam/quan]] bên marketing.
+
+**Nhưng team IT hiện chỉ có mình Lâm.** Chức danh trưởng bộ phận, quân số một. Đây là dữ kiện gọn nhất giải thích được cả bốn chương đầu: mọi tài liệu đều ghi *solo developer* không phải vì Lâm thích làm một mình, mà vì bộ phận kỹ thuật của công ty đúng là một người. Xem [[themes/luong-hai-lam/quy-mo-mot-minh]].
+
+Nghịch lý cần giữ trong đầu: **lead team IT dành hàng tuần liền ở chương 3 để viết bài marketing, theo bộ tiêu chí do lead team marketing soạn, và bị chính người đó chấm bài.**
+
+**Đời riêng:** yêu [[characters/luong-hai-lam/nhung]] từ ngày **31/07/2026**.
+
 ## Key relationships
 
-- [[characters/luong-hai-lam/pham-thi-thanh-thao]] — người hướng dẫn viết CV tiếng Nhật ở chương 1; về sau là quản lý
-- [[characters/luong-hai-lam/huynh-hai-dang]] — quản lý; đồng hành trong tool_sales, DaNangNavi, tool SEO, web Setsubi
-- [[characters/luong-hai-lam/nomoto]] — cấp trên của Đăng và Thảo; quan hệ trực tiếp với Lâm chưa rõ
+- [[characters/luong-hai-lam/nhung]] — người yêu (từ 31/07/2026); đồng thời là đồng nghiệp cùng dự án SEO, web WaCraft, web BPO
+- [[characters/luong-hai-lam/pham-thi-thanh-thao]] — người hướng dẫn viết CV tiếng Nhật ở chương 1; về sau là quản lý (tầng hai)
+- [[characters/luong-hai-lam/huynh-hai-dang]] — quản lý (tầng hai); đồng hành trong tool_sales, DaNangNavi, tool SEO, web Setsubi
+- [[characters/luong-hai-lam/quan]] — đồng cấp (lead team marketing); người review từng bài SEO của Lâm ở chương 3
+- [[characters/luong-hai-lam/nomoto]] — người đứng đầu Wa+Craft, cách hai tầng; quan hệ trực tiếp chưa rõ
 
 ## Appearances
 

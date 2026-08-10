@@ -37,6 +37,8 @@ Sau hơn hai tuần, 20 bài. Kế hoạch tổng là 52 bài trong 26 tuần, t
 ## Characters introduced
 
 - [[characters/luong-hai-lam/luong-hai-lam]] — người viết; lần đầu làm công việc mà sản phẩm là câu chữ
+- [[characters/luong-hai-lam/quan]] — lead team marketing, **người review từng bài**; bộ lọc mà bốn chương trước không có
+- [[characters/luong-hai-lam/nhung]] — nhân viên team marketing dưới quyền Quân, cùng tham gia dự án SEO; mốc thời gian vào dự án chưa xác định
 
 ## Themes
 
@@ -44,8 +46,10 @@ Sau hơn hai tuần, 20 bài. Kế hoạch tổng là 52 bài trong 26 tuần, t
 
 ## Open questions
 
-- **Đăng và Thảo tham gia từ khi nào?** Hai người là quản lý của Lâm và đồng hành trong tool SEO cùng web Setsubi, nhưng 20 bài đầu (16/05–01/06) không có dấu vết nào của họ trong wiki. Họ vào trước hay sau mốc này?
-- **Ai là người review?** Hai tài liệu review được ghi là "hướng dẫn nội bộ Setsubi Pro" nhưng không có tên tác giả. Có một người đọc và phê bài — người đó chưa có mặt trong câu chuyện.
+- **Đăng, Thảo, Quân và Nhung tham gia từ khi nào?** Cả bốn đều dính tới mảng SEO, nhưng 20 bài đầu (16/05–01/06) không có dấu vết nào của họ trong wiki. Họ vào trước hay sau mốc này?
+- ~~**Ai là người review?**~~ **Đã rõ (10/08/2026): [[characters/luong-hai-lam/quan]]**, lead team marketing — và Quân cũng chính là **người soạn thảo bộ tiêu chí**, không chỉ người chấm. Ba tài liệu quy về Quân: [[sources/review-seo]], [[sources/review-bai-seo-cho-setsubi-pro]], [[sources/cau-truc-3-phan-bai-seo-troubleshooting]].
+- **Bốn ngày đầu Lâm viết theo gì?** Bài SEO đầu tiên ra 16/05/2026, nhưng bộ tiêu chí sớm nhất ([[sources/review-seo]]) ghi ngày 20/05. Bài đầu ra trước luật chơi bốn ngày. Nay có một cách đọc hợp lý: bộ khung **không phải soạn mới cho Setsubi-pro** mà được [[characters/luong-hai-lam/quan]] mang sẵn từ B Productions sang, nên ngày 20/05 là ngày *đưa vào dùng* chứ không phải ngày *viết xong*.
+- **Hai tài liệu còn lại do ai viết?** [[sources/huong-dan-viet-bai-seo-cho-setsubi-pro]] và [[sources/ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro]] vẫn chưa có tác giả — chúng là *hướng dẫn* và *kế hoạch*, không phải *tiêu chí*, nên không suy ra được từ dữ kiện về Quân.
 - 32 bài còn lại (20/52) đi tới đâu? Kế hoạch chạy tới 13/11/2026.
 - "tool SEO" trong danh sách dự án là gì — công cụ tự động hóa việc viết, hay chỉ là cách gọi mảng công việc này?
 
@@ -54,6 +58,12 @@ Sau hơn hai tuần, 20 bài. Kế hoạch tổng là 52 bài trong 26 tuần, t
 **Ứng viên chủ đề (chưa tạo trang).** Chương này lộ ra một căng thẳng chưa thấy ở hai chương trước: **quy tắc đo được và người đọc thật kéo về hai hướng.** Một bên là checklist 100 điểm, mật độ 1–3%, URL dưới 75 ký tự — tất cả đều đếm được. Bên kia là "giọng văn bình thường, không quảng cáo", "tránh một màu", "đừng lặp từ đệm" — không cái nào đo được, và đó mới là chỗ bài viết sống hay chết.
 
 Chưa tạo thành trang chủ đề vì mới có một bằng chứng. Nếu chương 4 (tool_sales hoặc DaNangNavi) thấy lại hình thái này thì lúc đó mới tạo.
+
+**Chương này không còn là chương một người (cập nhật 10/08/2026).** Bản đầu dựng chương 3 quanh mỗi mình Lâm vì tài liệu không nhắc ai khác. Nay đã biết đây là **địa bàn của team marketing**: [[characters/luong-hai-lam/quan]] dẫn team và review từng bài, [[characters/luong-hai-lam/nhung]] là nhân viên trong team cũng làm mảng nội dung/SEO. Ba điều đổi theo:
+
+- **Lần đầu Lâm bị người khác chấm sản phẩm.** Ở tailor_project, DaNangNavi và tool_sales, thứ phán xét công việc là cái máy: code chạy hoặc không chạy. Bài viết thì không có trọng tài tự động — phải có người đọc. Chương 3 vì thế là chương đầu tiên Lâm làm việc dưới một con mắt.
+- **Lead team IT đi viết bài cho team marketing, theo tiêu chí do lead team marketing soạn, và bị chính người đó chấm.** Nghịch lý cơ cấu, ghi lại chứ chưa đọc thành gì: có thể công ty nhỏ nên ai cũng làm nhiều vai, có thể bài SEO về thiết bị cần người hiểu kỹ thuật, cũng có thể team IT lúc đó chưa có việc. Thêm một dữ kiện đáng cân nhắc: **team IT chỉ có mình Lâm** — không có ai để Lâm giao lại phần kỹ thuật khi đi viết bài, nghĩa là hai tuần này phần IT của công ty đứng yên.
+- **Nếu Nhung cũng viết bài** thì chương 3 có hai người làm cùng một việc, và những nhận xét trong hai tài liệu review có thể không nhắm vào riêng Lâm. Chưa xác nhận — xem [[characters/luong-hai-lam/nhung]].
 
 **Về dòng thời gian.** Ba chương đầu chồng lấn nhau, không nối đuôi: tailor_project (01–04/2026) → SEO bắt đầu 16/05 → huấn luyện CV 17/05 → CV v4 18/05 → kế hoạch SEO chính thức 19/05, và DaNangNavi chạy song song từ 04/2026. Số chương ở đây là **thứ tự kể**, không phải thứ tự xảy ra.
 

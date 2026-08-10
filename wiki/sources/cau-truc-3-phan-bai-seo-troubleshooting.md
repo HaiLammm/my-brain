@@ -4,7 +4,7 @@ title: Review SEO — Cấu trúc 3 phần cho bài SEO troubleshooting Setsubi-
 slug: cau-truc-3-phan-bai-seo-troubleshooting
 date_added: 2026-06-01
 authors:
-  - Setsubi Pro
+  - Quân
 source_type: note
 importance: 4
 confidence: high
@@ -72,6 +72,8 @@ Ghi chú nội bộ Setsubi Pro mô tả MỘT trong nhiều cấu trúc bài SE
 - [[sources/ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro]]
 
 ## People
+
+- [[people/quan]] — người soạn thảo, **soạn từ đầu** chứ không biên soạn lại từ tài liệu của khách (xác nhận 10/08/2026). Trước đó trang ghi tác giả là "Setsubi Pro" — đó là **tên khách hàng trong tiêu đề**, không phải nguồn gốc nội dung.
 
 ## Open questions
 

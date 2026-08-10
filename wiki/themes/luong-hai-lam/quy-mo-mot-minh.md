@@ -57,4 +57,24 @@ Nói cách khác, mô-típ này có thể không phải về việc *một mình
 
 **Trang này đã phải sửa một lần.** Bản đầu (10/08/2026) đọc mô-típ là *một mình thì không kham nổi quy mô một đội*. Chương 5 buộc phải nới cách đọc: tool_sales cũng nhiều tham vọng, cũng không có đội lớn, nhưng đi tới đích — khác biệt nằm ở chỗ nó có ràng buộc rõ ngay từ đầu. Giữ lại vết sửa này để sau còn biết trang đã nghĩ sai chỗ nào.
 
-**Điều còn phải phân xử.** WaCraft, BPO và giai đoạn tiếp của tool sales là lúc [[characters/luong-hai-lam/huynh-hai-dang]], [[characters/luong-hai-lam/pham-thi-thanh-thao]] và [[characters/luong-hai-lam/nomoto]] bước vào. Nếu có đội mà phạm vi vẫn phình, thì cách đọc thứ hai đúng: vấn đề là ràng buộc, không phải số người.
+**Điều còn phải phân xử.** WaCraft, BPO và giai đoạn tiếp của tool sales là lúc [[characters/luong-hai-lam/huynh-hai-dang]], [[characters/luong-hai-lam/pham-thi-thanh-thao]], [[characters/luong-hai-lam/nomoto]], [[characters/luong-hai-lam/quan]] và [[characters/luong-hai-lam/nhung]] bước vào. Nếu có đội mà phạm vi vẫn phình, thì cách đọc thứ hai đúng: vấn đề là ràng buộc, không phải số người.
+
+**Câu hỏi quyết định đã có lời đáp (10/08/2026).** Ba dữ kiện đến trong ngày, và dữ kiện thứ ba đóng lại một nhánh phân vân:
+
+1. Cả nhóm cùng làm tại công ty Wa+Craft — "một mình" trong bốn chương đầu **không phải vì công ty không có người**.
+2. Lâm là **lead team IT**, không phải nhân viên nhận việc.
+3. **Team IT chỉ có mình Lâm.**
+
+Ba câu ghép lại cho một hình ảnh gọn và khá lạnh: **một công ty có ít nhất sáu người, trong đó bộ phận kỹ thuật là một người, và người đó mang chức danh trưởng bộ phận.**
+
+Đây là câu trả lời cho câu hỏi trang này từng đặt ra. Trong ba khả năng đã liệt kê, nhánh đúng là nhánh thứ nhất: *"Lead" là chức danh chứ không phải đội hình.* Hai nhánh kia — "việc riêng ngoài công ty" và "có người mà không giao" — bị loại.
+
+**Điều này làm mô-típ nặng thêm chứ không nhẹ đi.** Trước đó cách đọc là *một người tự nhận việc quá tầm*. Nay phải đọc lại: người đó **không có lựa chọn nào khác**. Không có ai để giao việc, vì không có ai. Toàn bộ phần kỹ thuật của một công ty — tailor_project, DaNangNavi, tool_sales, tool SEO, sắp tới là web WaCraft và web BPO — dồn vào một người, và người đó viết ra những đặc tả quy mô một đội vì đó là cách làm đúng, rồi tự thi công vì không còn cách nào khác.
+
+Điều đó cũng sửa lại cách đọc từng được ghi ở [[chapters/luong-hai-lam/danangnavi]]. Chữ *solo developer* trong tài liệu không phải cách nói khiêm tốn hay lựa chọn cá nhân — nó là **mô tả chính xác cơ cấu tổ chức**.
+
+**Đối chứng vẫn giữ nguyên giá trị.** tool_sales cũng do một người làm và vẫn tới đích, vì có ràng buộc rõ từ dòng đầu. Nên kết luận của trang không đổi: **thứ quyết định không phải số người, mà là có ràng buộc hay không.** Chỉ có điều giờ đã biết vì sao số người luôn là một.
+
+**Phản biện cần giữ.** "Chỉ có mình Lâm" là tình trạng **hiện tại** (10/08/2026) — bạn dùng đúng chữ *hiện tại*. Không có gì đảm bảo team IT lúc làm tailor_project (01–04/2026) cũng chỉ một người. Nếu từng có người rồi mất, thì câu chuyện khác hẳn.
+
+**Câu hỏi tiếp theo, và nó khó hơn câu trước.** Nếu bộ phận kỹ thuật là một người mà phần lớn danh mục dự án là phần mềm, thì hoặc công ty đang tính tuyển thêm, hoặc đang chấp nhận rằng mọi thứ chạy với tốc độ của một người. Chưa dữ kiện nào cho biết là cái nào.

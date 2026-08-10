@@ -61,7 +61,7 @@ findings: []
 
 ## People
 
-Nguồn này không nêu cá nhân cụ thể nào cần tách thành trang riêng.
+Nguồn này không nêu tên cá nhân nào. Nhưng có một dấu vết đáng kể — xem mục Notes: bên trong checklist có tiêu chí *"tất cả hình ảnh rõ nét, chứa logo **B PRODUCTIONS**"*, tên công ty cũ của [[people/quan]]. Nhiều khả năng tài liệu này cùng gốc với ba tài liệu tiêu chí của Quân, nhưng **chưa xác nhận nên chưa quy tác giả**.
 
 ## Open questions
 
@@ -72,3 +72,13 @@ Nguồn này không nêu cá nhân cụ thể nào cần tách thành trang riê
 ## Notes
 
 Nguồn này rất thiên về vận hành: nó không chỉ nói nên viết gì mà còn quy định cả thứ tự đăng, công thức tạo tiêu đề và tiêu chí kiểm tra trước khi xuất bản. Tên thương hiệu trong tiêu đề raw đang là `setsuki-pro`, trong khi nguồn trước dùng `Setsubi-pro`; hiện xem đây là cùng một nhánh chủ đề nhưng vẫn cần xác nhận cách ghi chính thức.
+
+**Một dấu vết còn sót lại (phát hiện 10/08/2026).** Trong phần chấm điểm mục "Ảnh / Video" của tệp gốc `raw/sources/SEO/KẾ-HOẠCH-NỘI-DUNG-BLOG-SEO.md` có tiêu chí:
+
+> "Có ảnh thumbnail; tất cả hình ảnh rõ nét, chứa logo **B PRODUCTIONS** (2 điểm)"
+
+B Productions là **công ty cũ nơi [[people/quan]] làm SEO ba năm**, cũng là nơi [[people/pham-thi-thanh-thao]] từng làm Manager. Tài liệu đang dùng cho khách hàng Setsubi-pro vẫn còn nguyên yêu cầu gắn logo của công ty cũ — đây là vết của việc **bộ khung được mang theo từ B Productions sang chứ không soạn mới tại Wa+Craft**.
+
+Điều này không mâu thuẫn với việc Quân "soạn từ đầu": cách đọc khớp cả hai dữ kiện là **Quân tự viết ra bộ khung này, chỉ là viết trong ba năm ở B Productions rồi mang theo**, và dòng logo là chỗ quên sửa. Nhưng đây là suy luận, không phải điều đã xác nhận.
+
+Hệ quả cần lưu ý khi dùng tài liệu này: **các tiêu chí ở đây được thiết kế cho thị trường Việt Nam** (B Productions làm thị trường Việt Nam), trong khi bài viết cho Setsubi-pro là tiếng Nhật cho người Nhật. Câu hỏi mở "áp dụng cho thị trường Việt Nam hay cả Nhật Bản" ở [[sources/review-seo]] nay đã có căn cứ để nghiêng về vế thứ nhất.

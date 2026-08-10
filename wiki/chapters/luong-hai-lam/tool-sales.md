@@ -66,4 +66,10 @@ Sau tailor_project phình ra ba lần và DaNangNavi phủ 100% yêu cầu rồi
 
 Nếu [[themes/luong-hai-lam/quy-mo-mot-minh]] đúng, thì chương này là chỗ mô-típ ấy bị bẻ — và bẻ bằng đúng thứ mà nó thiếu: một ràng buộc rõ về nguồn lực, viết ngay từ dòng đầu tiên của tài liệu.
 
+**Một dấu vết B Productions trong tài liệu (phát hiện 10/08/2026).** Tệp gốc `raw/sources/projects/tool-sales/project-context.md` liệt kê `../auto_b_production/src/auto_b/core/` là **bản tham chiếu để port** — logic điền form, phát hiện form, kiểm tra opt-out, worker pool song song, stealth, bộ selector xác minh CSS, hệ placeholder. Nói cách khác, phần cốt lõi nhất của tool_sales không được nghĩ ra từ số không mà **dựng trên một công cụ sẵn có của B Productions**, công ty cũ của [[characters/luong-hai-lam/quan]] và [[characters/luong-hai-lam/pham-thi-thanh-thao]].
+
+Điều này **không làm nhẹ đi** đánh giá ở trên. Tài liệu ghi rõ "PORT (not import)" — chép ý tưởng, viết lại mã. Nhưng nó bổ sung một lớp cho câu chuyện: khi Lâm cắt phạm vi thành nguyên tắc và hoàn tất 7 epic, một phần lý do có thể là **bài toán đã có lời giải tham khảo**, khác hẳn tailor_project và DaNangNavi nơi mọi thứ phải nghĩ từ đầu. Đây là suy luận, không phải điều tài liệu nói.
+
+Bảng đầy đủ bốn dấu vết B Productions trong wiki nằm ở [[people/quan]].
+
 Chương dựng từ 1 nguồn và 6 khái niệm đã có trong wiki. Thông tin rằng tool sales nằm trong kế hoạch sắp tới do bạn cung cấp ngày 10/08/2026.
