@@ -9,7 +9,7 @@ id: concepts/swe/celery
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:
-  - sources/luong-hai-lam
+  - sources/ho-so-luong-hai-lam
   - sources/luong-hai-lam-4
 related_concepts:
   - concepts/swe/event-driven-internal-communication
@@ -29,7 +29,7 @@ Celery là distributed task queue cho Python, cho phép xử lý các tác vụ 
 
 ## Key sources
 
-- [[sources/luong-hai-lam]]
+- [[sources/ho-so-luong-hai-lam]]
 - [[sources/luong-hai-lam-4]]
 
 ## Related concepts

@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8d1d68955b817b3c",
+        "id": "4e907ee4bebde00c",
         "type": "tabs",
         "children": [
           {
-            "id": "bd238b1fe56df92b",
+            "id": "a455c219aa046006",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "concepts/tarot/truc-chat-so.md",
+                "file": "sources/luong-hai-lam.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "truc-chat-so"
+              "title": "luong-hai-lam"
             }
           }
         ]
@@ -184,21 +184,29 @@
       "bases:Create new base": false
     }
   },
-  "active": "bd238b1fe56df92b",
+  "active": "a455c219aa046006",
   "lastOpenFiles": [
+    "sources/luong-hai-lam-4.md",
+    "people/lem.md",
     "log.md.tmp",
+    "index.md.tmp.13045.565d7b115070",
     "graph/edges.jsonl.tmp",
+    "themes/luong-hai-lam/quy-mo-mot-minh.md.tmp.13045.4e3391906cdb",
+    "characters/luong-hai-lam/luong-hai-lam.md",
+    "chapters/luong-hai-lam/seo-setsubi-pro.md.tmp.13045.c4d60bb388f7",
+    "chapters/luong-hai-lam/seo-setsubi-pro.md.tmp.13045.41ee728683c5",
+    "chapters/luong-hai-lam/seo-setsubi-pro.md.tmp.13045.fffeb6ea114d",
+    "characters/luong-hai-lam/pham-thi-thanh-thao.md.tmp.13045.5f96f3237787",
+    "characters/luong-hai-lam/pham-thi-thanh-thao.md.tmp.13045.a1afa9106a5f",
+    "themes/luong-hai-lam/quy-mo-mot-minh.md",
+    "characters/luong-hai-lam/nomoto.md",
+    "concepts/tarot/truc-chat-so.md",
+    "Untitled.canvas",
+    "2026-08-10.md",
+    "people/a-e-waite.md",
     "outputs/trai-bai-quan-he-2026-08-08.md.tmp.897699.0bf50d756cc3",
-    "outputs/trai-bai-quan-he-2026-08-08.md.tmp.897699.95a3e36dd6ed",
-    "outputs/trai-bai-quan-he-2026-08-08.md.tmp.897699.6d1fbe2eeea8",
-    "people/plato.md.tmp.101490.776d924ac62e",
-    "people/luong-hai-lam.md.tmp.101490.ffca4e3cd41a",
-    "concepts/khuyen-hoc/thuc-hoc.md.tmp.101490.bbeeb13ac537",
     "concepts/literature/su-menh-nha-van.md",
-    "concepts/literature/su-menh-nha-van.md.tmp.101490.feddda983e41",
     "concepts/literature/hien-thuc-to-ve-vien-vong.md",
-    "concepts/literature/hien-thuc-to-ve-vien-vong.md.tmp.101490.fdca8bc182e1",
-    "concepts/literature/chuc-nang-cuu-roi-van-chuong.md.tmp.101490.23a8183151da",
     "concepts/literature/chuc-nang-cuu-roi-van-chuong.md",
     "concepts/jung/chia-tay-freud.md",
     "concepts/tool-sales/sales-form-pipeline.md",
@@ -214,13 +222,6 @@
     "concepts/swe/tiered-refresh-cadence.md",
     "concepts/swe/shared-db-no-callback.md",
     "concepts/swe/pure-core-gated-io.md",
-    "concepts/swe/rescue-ladder.md",
-    "concepts/swe/rule-llm-dual-run.md",
-    "concepts/swe/budget-tiered-circuit-breaker.md",
-    "concepts/swe/checkpoint-before-side-effect.md",
-    "concepts/swe/db-backed-job-queue.md",
-    "sources/tool-sales-architecture-docs.md",
-    "concepts/swe/payment-webhook-processing.md",
-    "concepts/swe/inline-form-validation.md"
+    "concepts/swe/rescue-ladder.md"
   ]
 }

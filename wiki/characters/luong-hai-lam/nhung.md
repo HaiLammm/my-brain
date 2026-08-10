@@ -14,7 +14,7 @@ _(chưa có hồ sơ — wiki chưa có nguồn nào về Nhung; những gì ghi
 
 Nhân viên **team marketing** tại công ty Wa+Craft, dưới quyền [[characters/luong-hai-lam/quan]]. Làm mảng nội dung và SEO.
 
-Và — **người yêu của [[characters/luong-hai-lam/luong-hai-lam]], từ ngày 31/07/2026.**
+Và — **người yêu của [[characters/luong-hai-lam/nhan-vat-luong-hai-lam]], từ ngày 31/07/2026.**
 
 ## Role
 
@@ -32,7 +32,7 @@ Hai việc sau nằm ở giai đoạn **sau** khi [[chapters/luong-hai-lam/danan
 
 ## Key relationships
 
-- [[characters/luong-hai-lam/luong-hai-lam]] — người yêu (từ 31/07/2026); đồng thời là đồng nghiệp cùng dự án SEO, web WaCraft, web BPO
+- [[characters/luong-hai-lam/nhan-vat-luong-hai-lam]] — người yêu (từ 31/07/2026); đồng thời là đồng nghiệp cùng dự án SEO, web WaCraft, web BPO
 - [[characters/luong-hai-lam/quan]] — quản lý trực tiếp, lead team marketing
 - [[characters/luong-hai-lam/huynh-hai-dang]] — cấp trên (tầng hai của công ty)
 - [[characters/luong-hai-lam/pham-thi-thanh-thao]] — cấp trên (tầng hai của công ty)

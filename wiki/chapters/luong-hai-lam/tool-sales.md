@@ -40,7 +40,7 @@ Sau tailor_project phình ra ba lần và DaNangNavi phủ 100% yêu cầu rồi
 
 ## Characters introduced
 
-- [[characters/luong-hai-lam/luong-hai-lam]] — người xây
+- [[characters/luong-hai-lam/nhan-vat-luong-hai-lam]] — người xây
 
 ## Themes
 

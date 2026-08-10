@@ -36,7 +36,7 @@ Tháng 8/2026, dự án **tạm dừng**. Hướng mới: lên kế hoạch xây
 
 ## Characters introduced
 
-- [[characters/luong-hai-lam/luong-hai-lam]] — một mình, xuyên suốt
+- [[characters/luong-hai-lam/nhan-vat-luong-hai-lam]] — một mình, xuyên suốt
 
 Cả bộ tài liệu gọi đúng một danh xưng cho đội ngũ: *solo developer*. Không có ai khác trong chương này.
 

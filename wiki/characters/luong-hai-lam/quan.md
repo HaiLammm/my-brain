@@ -12,7 +12,7 @@ first_seen: chapters/luong-hai-lam/seo-setsubi-pro
 
 _(chưa có hồ sơ — wiki chưa có nguồn nào về Quân; những gì ghi dưới đây do bạn cung cấp ngày 10/08/2026)_
 
-**Lead team marketing** tại công ty Wa+Craft. Đồng cấp với [[characters/luong-hai-lam/luong-hai-lam]] (lead team IT) trong sơ đồ tổ chức.
+**Lead team marketing** tại công ty Wa+Craft. Đồng cấp với [[characters/luong-hai-lam/nhan-vat-luong-hai-lam]] (lead team IT) trong sơ đồ tổ chức.
 
 **Ba năm làm SEO tại B Productions** (thị trường Việt Nam) trước khi về Wa+Craft. Đây là nhân vật duy nhất trong sách mang theo kinh nghiệm chuyên môn tích lũy từ nơi khác vào đúng mảng mình đang phụ trách.
 
@@ -47,7 +47,7 @@ Nhưng hai người viết từ hai chỗ đứng rất khác nhau, và đây l�
 ## Key relationships
 
 - [[characters/luong-hai-lam/nhung]] — cấp dưới, team marketing
-- [[characters/luong-hai-lam/luong-hai-lam]] — đồng cấp (lead team IT); đồng thời là người review bài SEO của Lâm
+- [[characters/luong-hai-lam/nhan-vat-luong-hai-lam]] — đồng cấp (lead team IT); đồng thời là người review bài SEO của Lâm
 - [[characters/luong-hai-lam/huynh-hai-dang]] — cấp trên
 - [[characters/luong-hai-lam/pham-thi-thanh-thao]] — cấp trên
 - [[characters/luong-hai-lam/nomoto]] — người đứng đầu công ty

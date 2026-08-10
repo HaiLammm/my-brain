@@ -26,7 +26,7 @@ Chuyển từ vai một sang vai hai là một nước ngoặt đáng theo dõi:
 
 ## Key relationships
 
-- [[characters/luong-hai-lam/luong-hai-lam]] — học viên nhận phản hồi CV ở chương 1; về sau là cấp dưới
+- [[characters/luong-hai-lam/nhan-vat-luong-hai-lam]] — học viên nhận phản hồi CV ở chương 1; về sau là cấp dưới
 - [[characters/luong-hai-lam/huynh-hai-dang]] — đồng cấp; cùng quản lý Lâm
 - [[characters/luong-hai-lam/nomoto]] — cấp trên; người đứng đầu Wa+Craft
 - [[characters/luong-hai-lam/quan]] — cấp dưới, lead team marketing; **đồng nghiệp cũ tại B Productions** (chưa rõ có trùng thời gian không)

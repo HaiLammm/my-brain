@@ -38,7 +38,7 @@ Người **đứng tên và đứng đầu công ty Wa+Craft**, nơi toàn bộ 
 
 **Team IT chỉ có mình Lâm** (tính đến 10/08/2026) — chức danh trưởng bộ phận, quân số một. Team marketing có ít nhất hai người. Đây là chi tiết giải thích được phần lớn cuốn sách; xem [[themes/luong-hai-lam/quy-mo-mot-minh]].
 
-**Wa+Craft là mái nhà chung của cả sách.** Trước dữ kiện này, wiki có mấy người rời rạc nối với nhau bằng quan hệ quản lý mà không biết họ ở đâu; giờ thì [[characters/luong-hai-lam/luong-hai-lam]], [[characters/luong-hai-lam/huynh-hai-dang]], [[characters/luong-hai-lam/pham-thi-thanh-thao]], [[characters/luong-hai-lam/quan]] và [[characters/luong-hai-lam/nhung]] đều thuộc cùng một tổ chức, và loạt dự án (tool_sales, DaNangNavi, tool SEO, web Setsubi, web WaCraft, web BPO) nhiều khả năng là danh mục việc của công ty này chứ không phải các hợp đồng lẻ.
+**Wa+Craft là mái nhà chung của cả sách.** Trước dữ kiện này, wiki có mấy người rời rạc nối với nhau bằng quan hệ quản lý mà không biết họ ở đâu; giờ thì [[characters/luong-hai-lam/nhan-vat-luong-hai-lam]], [[characters/luong-hai-lam/huynh-hai-dang]], [[characters/luong-hai-lam/pham-thi-thanh-thao]], [[characters/luong-hai-lam/quan]] và [[characters/luong-hai-lam/nhung]] đều thuộc cùng một tổ chức, và loạt dự án (tool_sales, DaNangNavi, tool SEO, web Setsubi, web WaCraft, web BPO) nhiều khả năng là danh mục việc của công ty này chứ không phải các hợp đồng lẻ.
 
 **Điều sơ đồ này sửa lại.** Bản trước của trang viết rằng Lâm "nằm dưới cùng" chuỗi quản lý. Sai. Lâm là **lead team IT** — tầng ba, ngang hàng Quân, và có người dưới quyền. Giữ lại vết sửa này vì nó đổi cách đọc cả bốn chương đầu: người viết những tài liệu kiến trúc đó không phải một nhân viên nhận việc, mà là người dẫn một mảng.
 
@@ -48,7 +48,7 @@ Chi tiết đáng chú ý: **"đứng tên"** không đồng nghĩa với "đi�
 
 - [[characters/luong-hai-lam/huynh-hai-dang]] — cấp dưới trực tiếp
 - [[characters/luong-hai-lam/pham-thi-thanh-thao]] — cấp dưới trực tiếp
-- [[characters/luong-hai-lam/luong-hai-lam]] — lead team IT, cách hai tầng; chưa rõ có làm việc trực tiếp không
+- [[characters/luong-hai-lam/nhan-vat-luong-hai-lam]] — lead team IT, cách hai tầng; chưa rõ có làm việc trực tiếp không
 - [[characters/luong-hai-lam/quan]] — lead team marketing, cách hai tầng
 - [[characters/luong-hai-lam/nhung]] — nhân viên team marketing, cách ba tầng
 

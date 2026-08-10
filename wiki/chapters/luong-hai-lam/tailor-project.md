@@ -32,7 +32,7 @@ Về thời gian, chương này xảy ra **trước** [[chapters/luong-hai-lam/u
 
 ## Characters introduced
 
-- [[characters/luong-hai-lam/luong-hai-lam]] — người xây; ở chương này làm việc một mình với tài liệu và code, chưa có ai quản lý
+- [[characters/luong-hai-lam/nhan-vat-luong-hai-lam]] — người xây; ở chương này làm việc một mình với tài liệu và code, chưa có ai quản lý
 
 Chương này gần như không có nhân vật người. Đối tác đối thoại của Lâm là ba persona không có thật và một chồng tài liệu đặc tả. Chi tiết ấy tự nó nói lên điều gì đó về giai đoạn.
 

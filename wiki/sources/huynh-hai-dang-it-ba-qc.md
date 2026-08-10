@@ -58,7 +58,7 @@ CV tiếng Nhật của Huỳnh Hải Đăng (フィン・ハイ・ダン), ứn
 
 ## Related sources
 
-- [[sources/luong-hai-lam]]
+- [[sources/ho-so-luong-hai-lam]]
 - [[sources/buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet]]
 
 ## People

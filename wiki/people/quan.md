@@ -94,6 +94,6 @@ Cách đọc khớp được cả hai dữ kiện bạn đưa: **Quân tự vi�
 
 **Điều KHÔNG được kết luận.** Hai người cùng đến từ B Productions và một tệp mã cùng dòng họ **không đủ để nói Wa+Craft là công ty kế thừa hay tách ra từ B Productions.** Người cũ rủ nhau về làm chỗ mới là chuyện bình thường. Ngoài ra chị Thảo rời B Productions vì *không hợp với sếp Nhật* — nếu bác Nomoto là chính người đó thì chị đã không quay lại, nên nhiều khả năng là hai người khác nhau. Đây là ranh giới giữa quan sát và suy diễn; giữ nguyên ở phía quan sát.
 
-Lớp nhân vật tương ứng: [[characters/luong-hai-lam/quan]] — Quân trong dòng chảy câu chuyện của cuốn sách đời [[characters/luong-hai-lam/luong-hai-lam]].
+Lớp nhân vật tương ứng: [[characters/luong-hai-lam/quan]] — Quân trong dòng chảy câu chuyện của cuốn sách đời [[characters/luong-hai-lam/nhan-vat-luong-hai-lam]].
 
 **Nguồn của trang này:** lời bạn kể ngày 10/08/2026. Chưa có tài liệu nào trong wiki ghi tên Quân.

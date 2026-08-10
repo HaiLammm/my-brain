@@ -36,7 +36,7 @@ Sau hơn hai tuần, 20 bài. Kế hoạch tổng là 52 bài trong 26 tuần, t
 
 ## Characters introduced
 
-- [[characters/luong-hai-lam/luong-hai-lam]] — người viết; lần đầu làm công việc mà sản phẩm là câu chữ
+- [[characters/luong-hai-lam/nhan-vat-luong-hai-lam]] — người viết; lần đầu làm công việc mà sản phẩm là câu chữ
 - [[characters/luong-hai-lam/quan]] — lead team marketing, **người review từng bài**; bộ lọc mà bốn chương trước không có
 - [[characters/luong-hai-lam/nhung]] — nhân viên team marketing dưới quyền Quân, cùng tham gia dự án SEO; mốc thời gian vào dự án chưa xác định
 

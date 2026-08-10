@@ -6,7 +6,7 @@ created: 2026-05-18
 updated: 2026-05-18
 covers:
   - sources/luong-hai-lam-4
-  - sources/luong-hai-lam
+  - sources/ho-so-luong-hai-lam
   - sources/eaera-ho-so-cong-ty
   - sources/huynh-hai-dang-it-ba-qc
   - concepts/career/jiko-pr

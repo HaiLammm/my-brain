@@ -9,7 +9,7 @@ id: concepts/swe/turborepo
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:
-  - sources/luong-hai-lam
+  - sources/ho-so-luong-hai-lam
 related_concepts:
   - concepts/swe/docker-va-kubernetes
   - concepts/swe/lap-trinh-giao-dien-web
@@ -27,7 +27,7 @@ Turborepo là high-performance build system dành cho JavaScript/TypeScript mono
 
 ## Key sources
 
-- [[sources/luong-hai-lam]]
+- [[sources/ho-so-luong-hai-lam]]
 
 ## Related concepts
 

@@ -9,7 +9,7 @@ id: people/luong-hai-lam
 created: 2026-05-14
 updated: 2026-05-18
 key_sources:
-  - sources/luong-hai-lam
+  - sources/ho-so-luong-hai-lam
   - sources/buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet
   - sources/luong-hai-lam-4
 ---
@@ -22,11 +22,11 @@ Lương Hải Lâm là fullstack developer sinh ngày 12/07/2001, tốt nghiệp
 
 Biệt danh: **Lem** — tên dùng trong báo cáo nghiên cứu kỹ thuật của tailor_project. Trang [[people/lem]] là bí danh trỏ về đây, không phải người thứ hai.
 
-Ở lớp câu chuyện, xem [[characters/luong-hai-lam/luong-hai-lam]].
+Ở lớp câu chuyện, xem [[characters/luong-hai-lam/nhan-vat-luong-hai-lam]].
 
 ## Key sources
 
-- [[sources/luong-hai-lam]] — hồ sơ cá nhân tổng hợp
+- [[sources/ho-so-luong-hai-lam]] — hồ sơ cá nhân tổng hợp
 - [[sources/danangnavi-architecture-decision-document]]
 - [[sources/danangnavi-product-requirements-document]]
 - [[sources/tailor-project-prd]]

@@ -65,7 +65,7 @@ CV chính thức dạng PDF của Lương Hải Lâm — Backend Developer chuy�
 
 ## Related sources
 
-- [[sources/luong-hai-lam]]
+- [[sources/ho-so-luong-hai-lam]]
 - [[sources/danangnavi-architecture-decision-document]]
 - [[sources/danangnavi-product-requirements-document]]
 - [[sources/tailor-project-prd]]

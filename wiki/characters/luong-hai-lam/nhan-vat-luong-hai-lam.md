@@ -1,5 +1,5 @@
 ---
-id: characters/luong-hai-lam/luong-hai-lam
+id: characters/luong-hai-lam/nhan-vat-luong-hai-lam
 title: "Lương Hải Lâm"
 type: character
 created: 2026-08-10
@@ -50,6 +50,6 @@ Trang này là **lớp nhân vật** — Lâm trong dòng chảy câu chuyện. 
 
 - [[people/luong-hai-lam]] — Lâm với tư cách tác giả của các nguồn trong wiki
 - [[people/lem]] — bí danh (Lem là biệt danh của Lâm, không phải người thứ hai)
-- [[sources/luong-hai-lam]] — hồ sơ cá nhân, một tài liệu
+- [[sources/ho-so-luong-hai-lam]] — hồ sơ cá nhân, một tài liệu
 
 Ba trang cùng tên nhưng khác vai. Khi cập nhật, hỏi trước: mình đang ghi *câu chuyện*, *người viết*, hay *tài liệu*?

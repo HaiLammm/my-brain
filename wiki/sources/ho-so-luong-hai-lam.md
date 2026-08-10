@@ -1,7 +1,7 @@
 ---
 type: source
 title: Hồ sơ cá nhân — Lương Hải Lâm
-slug: luong-hai-lam
+slug: ho-so-luong-hai-lam
 date_added: 2026-05-14
 authors:
   - Lương Hải Lâm
@@ -15,9 +15,9 @@ raw_paths:
 sources:
   - "provider: pdf"
 ingest_status: finalized
-id: sources/luong-hai-lam
+id: sources/ho-so-luong-hai-lam
 created: 2026-05-14
-updated: 2026-05-14
+updated: 2026-08-10
 year: 2026
 verify_status: passed
 findings: []

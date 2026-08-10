@@ -30,7 +30,7 @@ Chương này khép lại bằng bản CV phiên bản 4, viết lại theo khun
 
 ## Characters introduced
 
-- [[characters/luong-hai-lam/luong-hai-lam]] — nhân vật chính; bước vào chương với hồ sơ kỹ thuật mạnh và cách kể chuyện chưa có
+- [[characters/luong-hai-lam/nhan-vat-luong-hai-lam]] — nhân vật chính; bước vào chương với hồ sơ kỹ thuật mạnh và cách kể chuyện chưa có
 - [[characters/luong-hai-lam/pham-thi-thanh-thao]] — người hướng dẫn; đưa ra bốn lời phê và khung viết lại
 - [[characters/luong-hai-lam/huynh-hai-dang]] — hồ sơ ứng viên IT BA/QC được nạp cùng đợt; về sau là một trong hai người quản lý của Lâm
 

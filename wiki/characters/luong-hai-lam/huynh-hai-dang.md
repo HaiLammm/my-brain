@@ -22,7 +22,7 @@ Nền của Đăng đáng chú ý ở chỗ nó là bản đồ của chính con
 
 ## Key relationships
 
-- [[characters/luong-hai-lam/luong-hai-lam]] — quản lý; đồng hành trong tool_sales, DaNangNavi, tool SEO, web Setsubi
+- [[characters/luong-hai-lam/nhan-vat-luong-hai-lam]] — quản lý; đồng hành trong tool_sales, DaNangNavi, tool SEO, web Setsubi
 - [[characters/luong-hai-lam/pham-thi-thanh-thao]] — đồng cấp; cùng quản lý Lâm
 - [[characters/luong-hai-lam/nomoto]] — cấp trên; người đứng đầu Wa+Craft
 - [[characters/luong-hai-lam/quan]] — cấp dưới, lead team marketing
