@@ -71,10 +71,8 @@ import {
 const INDEX_MARKER_OPEN = '<!-- lumina:index -->';
 const INDEX_MARKER_CLOSE = '<!-- /lumina:index -->';
 
-/** All check IDs in run order.
- *  L15 is intentionally absent — collision check was deferred as premature
- *  for typical wiki size. Adding L15 later is the natural next slot. */
-const ALL_CHECK_IDS = ['L01', 'L02', 'L03', 'L04', 'L05', 'L06', 'L07', 'L08', 'L09', 'L10', 'L11', 'L12', 'L13', 'L14', 'L16'];
+/** All check IDs in run order. */
+const ALL_CHECK_IDS = ['L01', 'L02', 'L03', 'L04', 'L05', 'L06', 'L07', 'L08', 'L09', 'L10', 'L11', 'L12', 'L13', 'L14', 'L15', 'L16'];
 
 /**
  * Legacy frontmatter fields that have been renamed across versions.
@@ -874,6 +872,38 @@ function checkL14(wikiRelPath, fm) {
 }
 
 /**
+ * L15 — CJK middle dot used as a list bullet at the start of a line.
+ *
+ * `・` (U+30FB) and `･` (U+FF65) are Japanese punctuation, not Markdown list
+ * markers. A block written with them renders as one run-on paragraph instead of
+ * a list. Only line-initial occurrences are flagged; mid-line use such as
+ * `修理・交換` or `30A・40A` is valid Japanese and left alone.
+ *
+ * Fenced code blocks are skipped so quoted source text keeps its original form.
+ * Severity: error, auto-fixable.
+ * @param {string} wikiRelPath
+ * @param {string} rawContent
+ * @returns {Finding[]}
+ */
+function checkL15(wikiRelPath, rawContent) {
+  const findings = [];
+  const lines = rawContent.split('\n');
+  let inFence = false;
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    if (/^\s*(```|~~~)/.test(line)) { inFence = !inFence; continue; }
+    if (inFence) continue;
+    if (/^[ \t]*[・･]/.test(line)) {
+      findings.push(finding(
+        'L15-cjk-bullet', 'error', true, wikiRelPath, i + 1,
+        'Line starts with "・" used as a bullet. Markdown needs "- " — as written the block renders as one paragraph.'
+      ));
+    }
+  }
+  return findings;
+}
+
+/**
  * L16 — mismatch between `external_ids[ns]` and the value derived from `urls[]`.
  * Both sides go through the same helpers so canonicalizer drift cannot trigger
  * a false positive.
@@ -947,6 +977,28 @@ function fixL01(filePath, content, l01findings) {
   const newContent = `---\n${newFm}\n${body}`;
   const preview = missingKeys.map(k => `+ ${k}: TODO`).join('\n');
   return { newContent, preview };
+}
+
+/**
+ * Fixer for L15: turn line-initial `・`/`･` into a Markdown `- ` bullet.
+ * Mid-line dots are untouched; fenced code blocks are skipped, matching checkL15.
+ * @param {string} content
+ * @returns {{ newContent: string, preview: string }}
+ */
+function fixL15(content) {
+  const lines = content.split('\n');
+  const preview = [];
+  let inFence = false;
+  for (let i = 0; i < lines.length; i++) {
+    if (/^\s*(```|~~~)/.test(lines[i])) { inFence = !inFence; continue; }
+    if (inFence) continue;
+    const m = lines[i].match(/^([ \t]*)[・･][ \t]*(.*)$/);
+    if (!m) continue;
+    const fixed = `${m[1]}- ${m[2]}`;
+    if (preview.length < 5) preview.push(`${i + 1}: ${lines[i]}\n  -> ${fixed}`);
+    lines[i] = fixed;
+  }
+  return { newContent: lines.join('\n'), preview: preview.join('\n') };
 }
 
 /**
@@ -1170,6 +1222,7 @@ async function runLint(projectRoot, opts) {
     allFindings.push(...await checkL12(wikiRelPath, fm, projectRoot));
     allFindings.push(...checkL13(wikiRelPath, fm));
     allFindings.push(...checkL14(wikiRelPath, fm));
+    allFindings.push(...checkL15(wikiRelPath, content));
     allFindings.push(...checkL16(wikiRelPath, fm));
   }
 
@@ -1247,6 +1300,26 @@ async function applyFixes(findings, wikiRoot, edgesPath, indexPath, indexContent
         }
       }
       f.fix_applied = true;
+    }
+  }
+
+  // Fix L15 — group by file, one rewrite per file.
+  const l15ByFile = new Map();
+  for (const f of findings.filter(f => f.id === 'L15-cjk-bullet')) {
+    if (!l15ByFile.has(f.file)) l15ByFile.set(f.file, []);
+    l15ByFile.get(f.file).push(f);
+  }
+  for (const [wikiRelPath, filefindings] of l15ByFile) {
+    const abs = safejoin(wikiRoot, wikiRelPath);
+    const content = await readFile(abs, 'utf8');
+    const { newContent, preview } = fixL15(content);
+    if (newContent !== content) {
+      if (opts.dryRun) {
+        for (const f of filefindings) { f.proposed_fix = preview; }
+      } else {
+        await atomicWrite(abs, newContent);
+        for (const f of filefindings) { f.fix_applied = true; }
+      }
     }
   }
 
@@ -1335,7 +1408,7 @@ function reportHuman(findings, scannedFiles) {
  * @param {Finding[]} findings
  */
 function reportSummary(findings) {
-  const FIXABLE_IDS = new Set(['L01', 'L03', 'L06', 'L07', 'L09']);
+  const FIXABLE_IDS = new Set(['L01', 'L03', 'L06', 'L07', 'L09', 'L15']);
 
   let errors = 0;
   let warnings = 0;
@@ -1473,7 +1546,7 @@ export {
   entityTypeForPath,
   checkL01, checkL02, checkL03, checkL04, checkL05,
   checkL06, checkL07, checkL08, checkL09, checkL10, checkL11, checkL12,
-  checkL13, checkL14, checkL16,
+  checkL13, checkL14, checkL15, checkL16,
   fixL01, fixL03, fixL06, fixL07, fixL09,
   runLint,
   reportSummary,
