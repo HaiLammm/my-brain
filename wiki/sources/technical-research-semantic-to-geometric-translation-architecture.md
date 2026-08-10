@@ -72,7 +72,8 @@ Báo cáo nghiên cứu kỹ thuật phân tích kiến trúc dịch ngữ Ngữ
 
 ## People
 
-- [[people/lem]] — Tác giả nghiên cứu, kiến trúc sư dự án Tailor
+- [[people/luong-hai-lam]] — tác giả nghiên cứu; viết dưới biệt danh **Lem**
+- [[people/lem]] — bí danh, trỏ về [[people/luong-hai-lam]]
 
 ## Related Sources
 
