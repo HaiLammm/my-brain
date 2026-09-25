@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cẩm nang SEO cho marketer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Be+Vietnam+Pro:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --paper:#FCFCFD;
+  --surface:#F1F2F7;
+  --surface-2:#E7E9F2;
+  --ink:#14161C;
+  --ink-2:#3A3E4D;
+  --muted:#6B7086;
+  --line:#DCDEE9;
+  --accent:#3346B3;
+  --accent-ink:#26359B;
+  --accent-soft:#E8EAF8;
+  --safe:#1F7A54;
+  --safe-soft:#E4F1EA;
+  --warn:#9A6408;
+  --warn-soft:#F7EEDC;
+  --danger:#B23A30;
+  --danger-soft:#F8E9E7;
+  --shadow:0 1px 2px rgba(20,22,28,.05), 0 8px 24px -12px rgba(20,22,28,.14);
+  --radius:10px;
+  --content:44rem;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#101219;
+    --surface:#171A23;
+    --surface-2:#1F2430;
+    --ink:#E9EAF0;
+    --ink-2:#C3C6D4;
+    --muted:#8D92A6;
+    --line:#2A2F3C;
+    --accent:#8B9AF0;
+    --accent-ink:#A3AFF5;
+    --accent-soft:#1D2136;
+    --safe:#5CC392;
+    --safe-soft:#14251D;
+    --warn:#DFAE5B;
+    --warn-soft:#251E12;
+    --danger:#E58A80;
+    --danger-soft:#2A1917;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#101219;
+  --surface:#171A23;
+  --surface-2:#1F2430;
+  --ink:#E9EAF0;
+  --ink-2:#C3C6D4;
+  --muted:#8D92A6;
+  --line:#2A2F3C;
+  --accent:#8B9AF0;
+  --accent-ink:#A3AFF5;
+  --accent-soft:#1D2136;
+  --safe:#5CC392;
+  --safe-soft:#14251D;
+  --warn:#DFAE5B;
+  --warn-soft:#251E12;
+  --danger:#E58A80;
+  --danger-soft:#2A1917;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:1.5rem}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Be Vietnam Pro","Segoe UI",system-ui,-apple-system,sans-serif;
+  font-weight:400;
+  font-size:16px;
+  line-height:1.72;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%}
+
+/* ---------- shell ---------- */
+.shell{display:grid;grid-template-columns:16rem minmax(0,1fr);gap:3.5rem;max-width:76rem;margin:0 auto;padding:0 1.75rem}
+@media (max-width:60rem){.shell{grid-template-columns:minmax(0,1fr);gap:0}}
+
+/* ---------- masthead ---------- */
+.masthead{border-bottom:1px solid var(--line);background:var(--surface)}
+.masthead-in{max-width:76rem;margin:0 auto;padding:2.75rem 1.75rem 2.5rem;display:flex;gap:2rem;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+.eyebrow{
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 .85rem;font-weight:600;
+}
+h1{
+  font-family:Archivo,"Be Vietnam Pro",system-ui,sans-serif;
+  font-weight:700;font-size:clamp(1.85rem,1.2rem + 2.2vw,2.85rem);
+  line-height:1.1;letter-spacing:-.022em;margin:0 0 .7rem;text-wrap:balance;max-width:22ch;
+}
+.standfirst{margin:0;color:var(--ink-2);font-size:1.03rem;max-width:52ch;font-weight:300}
+.masthead-meta{display:flex;flex-direction:column;gap:.85rem;align-items:flex-end}
+.theme-toggle{
+  display:inline-flex;align-items:center;gap:.45rem;
+  border:1px solid var(--line);background:var(--paper);color:var(--ink-2);
+  border-radius:99px;padding:.45rem .85rem;cursor:pointer;
+  font:inherit;font-size:.8rem;line-height:1;
+}
+.theme-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.theme-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.theme-toggle svg{width:15px;height:15px}
+.stats{display:flex;gap:1.4rem;font-size:.78rem;color:var(--muted)}
+.stats b{
+  display:block;font-family:"JetBrains Mono",monospace;font-size:1.15rem;
+  color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums;line-height:1.3;
+}
+
+/* ---------- sidebar ---------- */
+.toc{position:sticky;top:1.5rem;align-self:start;padding:2.5rem 0;max-height:calc(100vh - 3rem);overflow-y:auto}
+.toc-title{
+  font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 1rem;font-weight:600;
+}
+.toc ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.1rem;counter-reset:toc}
+.toc a{
+  display:flex;gap:.65rem;align-items:baseline;
+  padding:.4rem .6rem;border-radius:7px;
+  color:var(--ink-2);text-decoration:none;font-size:.875rem;line-height:1.4;
+}
+.toc a::before{
+  counter-increment:toc;content:counter(toc);
+  font-family:"JetBrains Mono",monospace;font-size:.72rem;color:var(--muted);
+  font-variant-numeric:tabular-nums;min-width:1.1em;
+}
+.toc a:hover{background:var(--surface);color:var(--accent)}
+.toc a:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.toc a.on{background:var(--accent-soft);color:var(--accent-ink);font-weight:500}
+.toc a.on::before{color:var(--accent)}
+@media (max-width:60rem){
+  .toc{position:static;max-height:none;padding:1.75rem 0 0;border-bottom:1px solid var(--line)}
+  .toc ol{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.15rem}
+}
+
+/* ---------- article ---------- */
+article{padding:2.5rem 0 5rem;min-width:0;max-width:var(--content)}
+section{padding-top:2.25rem;margin-bottom:1rem}
+section + section{border-top:1px solid var(--line);margin-top:2.5rem}
+
+h2{
+  font-family:Archivo,sans-serif;font-weight:700;
+  font-size:1.62rem;line-height:1.2;letter-spacing:-.016em;
+  margin:0 0 1.1rem;display:flex;gap:.8rem;align-items:center;text-wrap:balance;
+}
+h2 .ico{
+  flex:none;width:2.15rem;height:2.15rem;border-radius:8px;
+  background:var(--accent-soft);color:var(--accent);
+  display:grid;place-items:center;
+}
+h2 .ico svg{width:1.2rem;height:1.2rem}
+h3{
+  font-family:Archivo,sans-serif;font-weight:600;font-size:1.13rem;
+  letter-spacing:-.008em;margin:2.1rem 0 .7rem;line-height:1.35;text-wrap:balance;
+}
+h4{
+  font-family:Archivo,sans-serif;font-weight:600;font-size:.97rem;
+  margin:1.5rem 0 .5rem;color:var(--ink);
+}
+p{margin:0 0 1rem}
+a{color:var(--accent-ink)}
+strong{font-weight:600;color:var(--ink)}
+ul,ol{margin:0 0 1.15rem;padding-left:1.3rem;display:flex;flex-direction:column;gap:.42rem}
+li{padding-left:.15rem}
+li::marker{color:var(--muted)}
+code{
+  font-family:"JetBrains Mono",monospace;font-size:.86em;
+  background:var(--surface);padding:.12em .38em;border-radius:4px;color:var(--ink-2);
+}
+
+/* ---------- blocks that encode role ---------- */
+.principle{
+  background:var(--surface);border-radius:var(--radius);
+  padding:1.15rem 1.35rem;margin:0 0 1.35rem;
+}
+.principle > :last-child{margin-bottom:0}
+.principle .tag,.example .tag{
+  font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.13em;
+  text-transform:uppercase;font-weight:600;display:flex;align-items:center;gap:.4rem;
+  margin-bottom:.6rem;
+}
+.principle .tag{color:var(--accent)}
+.example .tag{color:var(--muted)}
+.tag svg{width:13px;height:13px;flex:none}
+.example{
+  border-left:2px solid var(--line);padding:.15rem 0 .15rem 1.2rem;
+  margin:0 0 1.35rem;color:var(--ink-2);
+}
+.example > :last-child{margin-bottom:0}
+
+.callout{
+  display:flex;gap:.85rem;border-radius:var(--radius);
+  padding:1rem 1.2rem;margin:0 0 1.35rem;font-size:.94rem;line-height:1.65;
+}
+.callout svg{width:1.15rem;height:1.15rem;flex:none;margin-top:.24rem}
+.callout > div > :last-child{margin-bottom:0}
+.callout.warn{background:var(--warn-soft);color:var(--ink-2)}
+.callout.warn svg{color:var(--warn)}
+.callout.tip{background:var(--accent-soft);color:var(--ink-2)}
+.callout.tip svg{color:var(--accent)}
+.callout.stop{background:var(--danger-soft);color:var(--ink-2)}
+.callout.stop svg{color:var(--danger)}
+.callout b{color:var(--ink)}
+
+/* ---------- tables ---------- */
+.tw{overflow-x:auto;margin:0 0 1.4rem;border:1px solid var(--line);border-radius:var(--radius)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:26rem}
+th,td{text-align:left;padding:.62rem .85rem;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{
+  background:var(--surface);font-family:Archivo,sans-serif;font-weight:600;
+  font-size:.78rem;letter-spacing:.02em;color:var(--ink-2);white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+.wrong{color:var(--danger)}
+.right{color:var(--safe)}
+
+/* ---------- three-layer diagram ---------- */
+.layers{display:flex;flex-direction:column;gap:.5rem;margin:0 0 1.4rem}
+.layer{
+  display:grid;grid-template-columns:auto 1fr auto;gap:1rem;align-items:center;
+  border:1px solid var(--line);border-radius:var(--radius);padding:.85rem 1.1rem;background:var(--paper);
+}
+.layer .lname{font-family:Archivo,sans-serif;font-weight:600;font-size:.97rem}
+.layer .ldesc{font-size:.86rem;color:var(--muted);line-height:1.5}
+.layer .who{
+  font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.06em;
+  text-transform:uppercase;padding:.28rem .6rem;border-radius:99px;white-space:nowrap;font-weight:600;
+}
+.who.you{background:var(--accent-soft);color:var(--accent-ink)}
+.who.dev{background:var(--surface-2);color:var(--ink-2)}
+.layer .lico{width:1.5rem;height:1.5rem;color:var(--muted)}
+@media (max-width:34rem){
+  .layer{grid-template-columns:auto 1fr;row-gap:.5rem}
+  .layer .who{grid-column:2}
+}
+
+/* ---------- 3-part template ---------- */
+.parts{display:flex;flex-direction:column;gap:.75rem;margin:0 0 1.4rem}
+.part{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--paper)}
+.part-h{
+  display:flex;gap:.75rem;align-items:center;padding:.7rem 1.1rem;
+  background:var(--surface);border-bottom:1px solid var(--line);
+}
+.part-n{
+  font-family:"JetBrains Mono",monospace;font-weight:600;font-size:.74rem;
+  width:1.5rem;height:1.5rem;border-radius:5px;display:grid;place-items:center;flex:none;
+  background:var(--accent);color:#fff;
+}
+:root[data-theme="dark"] .part-n{color:#101219}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .part-n{color:#101219}}
+.part-t{font-family:Archivo,sans-serif;font-weight:600;font-size:.95rem}
+.part-b{padding:.9rem 1.1rem}
+.part-b > :last-child{margin-bottom:0}
+.hardrule{display:flex;gap:.5rem;align-items:flex-start;font-size:.9rem;margin-bottom:.35rem}
+.hardrule svg{width:1rem;height:1rem;flex:none;margin-top:.3rem;color:var(--danger)}
+.hardrule.ok svg{color:var(--safe)}
+
+/* ---------- fix flow (symptom -> ask) ---------- */
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.6rem;margin:0 0 1.4rem}
+.step{border:1px solid var(--line);border-radius:var(--radius);padding:.8rem .95rem;background:var(--paper)}
+.step .sl{
+  font-family:"JetBrains Mono",monospace;font-size:.63rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.35rem;font-weight:600;
+}
+.step p{margin:0;font-size:.88rem;line-height:1.55}
+
+/* ---------- SERP mock ---------- */
+.serp{
+  border:1px solid var(--line);border-radius:var(--radius);padding:1.15rem 1.25rem;
+  background:var(--paper);margin:0 0 .6rem;box-shadow:var(--shadow);
+}
+.serp-brand{display:flex;align-items:center;gap:.55rem;margin-bottom:.4rem}
+.serp-fav{
+  width:1.55rem;height:1.55rem;border-radius:99px;background:var(--accent);
+  color:#fff;display:grid;place-items:center;font-size:.72rem;font-weight:600;flex:none;
+  font-family:Archivo,sans-serif;
+}
+:root[data-theme="dark"] .serp-fav{color:#101219}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .serp-fav{color:#101219}}
+.serp-site{font-size:.8rem;line-height:1.25;color:var(--ink)}
+.serp-url{font-size:.72rem;color:var(--muted);font-family:"JetBrains Mono",monospace}
+.serp-title{font-family:Archivo,sans-serif;font-size:1.08rem;font-weight:500;color:var(--accent-ink);margin:.15rem 0 .25rem;line-height:1.35}
+.serp-title .brandsuffix{color:var(--muted)}
+.serp-desc{font-size:.85rem;color:var(--ink-2);line-height:1.55;margin:0}
+.serp-cut{color:var(--muted);opacity:.45}
+.ruler{
+  display:flex;gap:.5rem;align-items:center;font-family:"JetBrains Mono",monospace;
+  font-size:.68rem;color:var(--muted);margin:0 0 1.4rem;padding-left:.15rem;
+}
+.ruler .bar{height:3px;border-radius:2px;flex:none}
+.ruler .bar.keep{background:var(--accent);width:5.5rem}
+.ruler .bar.cut{background:var(--line);width:2.6rem}
+
+/* ---------- brief ---------- */
+pre{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.1rem 1.2rem;overflow-x:auto;margin:0 0 1.4rem;
+  font-family:"JetBrains Mono",monospace;font-size:.79rem;line-height:1.75;color:var(--ink-2);
+}
+pre .fl{color:var(--muted)}
+
+/* ---------- confidence chips ---------- */
+.chip{
+  display:inline-block;font-family:"JetBrains Mono",monospace;font-size:.67rem;
+  font-weight:600;letter-spacing:.05em;padding:.16rem .5rem;border-radius:99px;white-space:nowrap;
+}
+.chip.hi{background:var(--safe-soft);color:var(--safe)}
+.chip.mid{background:var(--warn-soft);color:var(--warn)}
+.chip.lo{background:var(--danger-soft);color:var(--danger)}
+
+/* ---------- closing ---------- */
+.endnote{
+  margin-top:3rem;padding:1.35rem 1.5rem;border-radius:var(--radius);
+  background:var(--surface);font-size:.9rem;color:var(--ink-2);
+}
+.endnote > :last-child{margin-bottom:0}
+.endnote h4{margin-top:0}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<g id="i-layers" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/></g>
+<g id="i-search" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.5-4.5"/><path d="M10.5 8.2a2 2 0 1 1 1.4 3.4v1.1"/></g>
+<g id="i-keys" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="5" height="5" rx="1"/><rect x="3" y="15" width="5" height="5" rx="1"/><rect x="16" y="9.5" width="5" height="5" rx="1"/><path d="M8 6.5h4v5.5m-4 5.5h4V12m0 0h4"/></g>
+<g id="i-cluster" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="3.6" r="1.8"/><circle cx="19.3" cy="16.2" r="1.8"/><circle cx="4.7" cy="16.2" r="1.8"/><path d="M12 9V5.4M14.6 13.6l3.1 1.8M9.4 13.6l-3.1 1.8"/></g>
+<g id="i-frames" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="12" height="16" rx="2"/><path d="M18 7h3v13a1 1 0 0 1-1 1h-9"/><path d="M6.5 8.5h5M6.5 12h5M6.5 15.5h3"/></g>
+<g id="i-pen" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16.4 3.6a2.1 2.1 0 0 1 3 3L8.6 17.4l-4 1 1-4L16.4 3.6Z"/><path d="M14 6 18 10M4 21h16"/></g>
+<g id="i-check" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.5V19a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/><path d="m8.5 11.5 3 3 8-8.5"/></g>
+<g id="i-wrench" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 3.5a5.5 5.5 0 0 0-5 8.2L3.8 18.4a1.8 1.8 0 0 0 2.5 2.5l6.7-6.7a5.5 5.5 0 0 0 6.8-7.6l-2.9 2.9-2.6-.6-.6-2.6 2.9-2.9a5.5 5.5 0 0 0-1.1-.1Z"/></g>
+<g id="i-gap" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.8 21.2 19a1.4 1.4 0 0 1-1.2 2H4a1.4 1.4 0 0 1-1.2-2L12 3.8Z"/><path d="M12 10v4M12 17.4h.01"/></g>
+<g id="i-book" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v18H6.5A1.5 1.5 0 0 1 5 19.5v-15Z"/><path d="M5 17.2h14M9 3v14"/></g>
+<g id="i-star" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 14.4 9l5.6.5-4.3 3.9 1.3 5.6L12 16l-5 3 1.3-5.6L4 9.5 9.6 9 12 3.5Z"/></g>
+<g id="i-alert" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V13M12 16.4h.01"/></g>
+<g id="i-bulb" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.2 17.5a6 6 0 1 1 5.6 0v1.7a1.5 1.5 0 0 1-1.5 1.5h-2.6a1.5 1.5 0 0 1-1.5-1.5v-1.7Z"/><path d="M9.5 17.4h5"/></g>
+<g id="i-x" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6 18 18M18 6 6 18"/></g>
+<g id="i-tick" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 6.5"/></g>
+<g id="i-sun" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></g>
+<g id="i-moon" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4 8.4 8.4 0 1 0 20 14.2Z"/></g>
+</defs></svg>
+
+<header class="masthead">
+  <div class="masthead-in">
+    <div>
+      <p class="eyebrow">Tài liệu nội bộ · 09/2026</p>
+      <h1>Cẩm nang SEO cho marketer</h1>
+      <p class="standfirst">Toàn bộ kiến thức SEO đang tích lũy trong wiki, gom thành một lộ trình đọc từ đầu đến cuối. Dành cho người làm marketing không có nền tảng lập trình.</p>
+    </div>
+    <div class="masthead-meta">
+      <button class="theme-toggle" id="tt" type="button" aria-label="Đổi giao diện sáng tối">
+        <svg aria-hidden="true"><use href="#i-moon"></use></svg><span id="ttl">Nền tối</span>
+      </button>
+          </div>
+  </div>
+</header>
+
+<div class="shell">
+<nav class="toc" aria-label="Mục lục">
+  <p class="toc-title">Mục lục</p>
+  <ol>
+    <li><a href="#p1">Công việc SEO</a></li>
+    <li><a href="#p2">Hãy nghĩ như người đang gặp vấn đề</a></li>
+    <li><a href="#p3">Từ khóa không cần công cụ đắt</a></li>
+    <li><a href="#p4">Kiến trúc blog</a></li>
+    <li><a href="#p5">Chọn khung bài</a></li>
+    <li><a href="#p6">Quy tắc câu chữ</a></li>
+    <li><a href="#p7">Checklist trước khi đăng</a></li>
+    <li><a href="#p8">Phần kỹ thuật</a></li>
+    <li><a href="#p9">Chỗ trống và độ tin cậy</a></li>
+    <li><a href="#p10">Phụ lục</a></li>
+  </ol>
+</nav>
+
+<article>
+
+<!-- ============ 1 ============ -->
+<section id="p1">
+  <h2><span class="ico"><svg aria-hidden="true"><use href="#i-layers"></use></svg></span>Công việc SEO</h2>
+
+  <div class="principle">
+    <div class="tag"><svg aria-hidden="true"><use href="#i-star"></use></svg>Nguyên tắc chung</div>
+    <p>SEO không phải một nghề, mà là ba nghề chồng lên nhau. Nhầm lẫn giữa ba tầng này là lý do phổ biến nhất khiến người làm marketing thấy SEO “khó” — họ đang cố tự làm phần vốn không thuộc về mình.</p>
+  </div>
+
+  <div class="layers">
+    <div class="layer">
+      <svg class="lico" aria-hidden="true"><use href="#i-pen"></use></svg>
+      <div><div class="lname">Nội dung</div><div class="ldesc">Người đọc đang gặp vấn đề gì, bài viết có giải quyết được không?</div></div>
+      <span class="who you">Bạn</span>
+    </div>
+    <div class="layer">
+      <svg class="lico" aria-hidden="true"><use href="#i-cluster"></use></svg>
+      <div><div class="lname">Cấu trúc</div><div class="ldesc">Các bài liên kết với nhau ra sao, đăng theo thứ tự nào?</div></div>
+      <span class="who you">Bạn</span>
+    </div>
+    <div class="layer">
+      <svg class="lico" aria-hidden="true"><use href="#i-wrench"></use></svg>
+      <div><div class="lname">Kỹ thuật</div><div class="ldesc">Google có đọc và hiển thị được trang không?</div></div>
+      <span class="who dev">Lập trình viên</span>
+    </div>
+  </div>
+
+  <p>Tầng kỹ thuật là tầng duy nhất bạn không tự làm. Nhưng nó lại có tính <strong>chặn cứng</strong>: nội dung xuất sắc trên một trang mà Google không hiển thị được ảnh thì vẫn thua bài trung bình có ảnh. Vì vậy <a href="#p8">phần 8</a> dạy bạn cách nhận diện triệu chứng và đặt yêu cầu, chứ không dạy bạn viết code.</p>
+
+  <h3>Tinh thần xuyên suốt: chuyên gia nói chuyện với người thường</h3>
+  <p>Nguyên tắc nền của mọi phần còn lại: giữ <strong>góc nhìn của người có chuyên môn</strong>, nhưng <strong>diễn đạt bằng ngôn ngữ của người không chuyên</strong>. Mục tiêu không phải đào tạo người đọc thành thợ, mà giúp họ hiểu mình đang gặp chuyện gì, nên kiểm tra gì trước, và khi nào thì nên dừng lại nhờ người khác.</p>
+  <ul>
+    <li><strong>Giải thích từ chuyên gia sang người thường</strong> — ưu tiên ví dụ và tình huống thực tế hơn định nghĩa kỹ thuật.</li>
+    <li><strong>Hướng dẫn thực dụng có ý thức về rủi ro</strong> — chỉ chỉ dẫn những bước an toàn, dừng lại trước các thao tác chuyên môn hoặc nguy hiểm.</li>
+  </ul>
+
+  <div class="example">
+    <div class="tag"><svg aria-hidden="true"><use href="#i-frames"></use></svg>Ví dụ Setsubi-pro</div>
+    <p>Setsubi-pro là dịch vụ xử lý sự cố nhà ở tại Nhật: điện, nước, gas, khóa, côn trùng. Blog của họ không dạy người đọc cách sửa máy lạnh — đó là việc của thợ. Blog giúp người đọc hiểu <strong>máy lạnh mình đang bị gì</strong>, thử vài bước an toàn, và nhận ra lúc nào phải gọi thợ.</p>
+  </div>
+</section>
+
+<!-- ============ 2 ============ -->
+<section id="p2">
+  <h2><span class="ico"><svg aria-hidden="true"><use href="#i-search"></use></svg></span>Hãy nghĩ như người đang gặp vấn đề</h2>
+
+  <div class="principle">
+    <div class="tag"><svg aria-hidden="true"><use href="#i-star"></use></svg>Nguyên tắc chung</div>
+    <p><strong>Viết bắt đầu từ vấn đề người đọc đang gặp, không bắt đầu từ kiến thức bạn đang có.</strong></p>
+    <p>Nghe hiển nhiên, nhưng gần như mọi blog doanh nghiệp đều vi phạm. Lý do là người viết vốn am hiểu lĩnh vực, nên đầu họ tự nhiên sắp xếp nội dung theo cấu trúc chuyên môn — trong khi người tìm kiếm không gõ theo cấu trúc chuyên môn, họ gõ theo <strong>thứ đang làm phiền họ</strong>.</p>
+  </div>
+
+  
+  <h3>Ba biến thể áp dụng</h3>
+  <ul>
+    <li><strong>Bám triệu chứng ngay từ tiêu đề</strong> — tiêu đề và mở bài dùng đúng cụm từ người dùng có khả năng gõ.</li>
+    <li><strong>Lai giữa vấn đề và giải thích</strong> — vẫn mở bằng vấn đề cụ thể, nhưng nhanh chóng chuyển sang giải thích nguyên nhân bằng ngôn ngữ dễ hiểu.</li>
+    <li><strong>Bản ngắn cho tình huống khẩn</strong> — với sự cố gấp, ưu tiên thông tin hành động, cắt bớt kiến thức nền.</li>
+  </ul>
+
+  <h3>Bài tập chuyển đổi</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Tiêu đề kiểu “kiến thức”</th><th>Tiêu đề kiểu “vấn đề”</th></tr></thead>
+    <tbody>
+      <tr><td class="wrong">Nguyên lý hoạt động của máy nước nóng</td><td class="right">Máy nước nóng ra nước âm ấm — nguyên nhân và cách xử lý</td></tr>
+      <tr><td class="wrong">Tổng quan hệ thống điện dân dụng</td><td class="right">Cầu dao hay nhảy liên tục — vì sao và làm gì trước</td></tr>
+      <tr><td class="wrong">Các loại khóa cửa phổ biến hiện nay</td><td class="right">Mất chìa khóa nhà giữa đêm — làm gì đầu tiên</td></tr>
+      <tr><td class="wrong">Giới thiệu dịch vụ vệ sinh máy lạnh</td><td class="right">Máy lạnh chạy mà không mát — kiểm tra 5 điểm này trước</td></tr>
+    </tbody>
+  </table></div>
+  <p>Điểm chung của cột phải: chúng đều là <strong>câu người ta thật sự gõ khi đang bực mình</strong>.</p>
+
+  <div class="example">
+    <div class="tag"><svg aria-hidden="true"><use href="#i-frames"></use></svg>Ví dụ Setsubi-pro</div>
+    <p>Blog tổ chức toàn bộ nội dung quanh những sự cố nhà ở quen thuộc, mỗi bài đóng hai vai cùng lúc: giải thích tình trạng theo cách dễ hiểu, và dẫn người đọc tới một quyết định — tự kiểm tra ở mức an toàn, hoặc tìm hỗ trợ chuyên nghiệp. Hai dạng bài chính: <strong>bài sự cố khẩn</strong> (ngắn, đi thẳng vào an toàn và hành động đầu tiên) và <strong>bài giải thích thực dụng</strong> (dài vừa phải, cân bằng nguyên nhân, kiểm tra cơ bản và hướng xử lý).</p>
+  </div>
+</section>
+
+<!-- ============ 3 ============ -->
+<section id="p3">
+  <h2><span class="ico"><svg aria-hidden="true"><use href="#i-keys"></use></svg></span>Từ khóa không cần công cụ đắt tiền</h2>
+
+  <div class="principle">
+    <div class="tag"><svg aria-hidden="true"><use href="#i-star"></use></svg>Nguyên tắc chung</div>
+    <p>Nghiên cứu từ khóa thường bị hình dung là phải mua công cụ đắt tiền. Với một ngành có cấu trúc rõ ràng, bạn dựng được ngân hàng từ khóa <strong>bằng tay</strong> nhờ công thức ghép ba thành phần:</p>
+    <p style="font-family:'JetBrains Mono',monospace;font-size:.9rem;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:.75rem .9rem;text-align:center">Đối tượng / khu vực &nbsp;+&nbsp; Vấn đề &nbsp;+&nbsp; Ý định tìm kiếm</p>
+  </div>
+
+  <ul>
+    <li><strong>Đối tượng / khu vực</strong> — thứ đang gặp chuyện: thiết bị, bộ phận, không gian, sản phẩm.</li>
+    <li><strong>Vấn đề</strong> — triệu chứng cụ thể, diễn đạt bằng lời người thường.</li>
+    <li><strong>Ý định tìm kiếm</strong> — người ta muốn gì: <em>nguyên nhân</em>, <em>cách xử lý</em>, <em>chi phí</em>, <em>phòng ngừa</em>, <em>so sánh</em>.</li>
+  </ul>
+  <p>Lập ma trận ba cột, ghép chéo, bạn có ngay hàng trăm chủ đề bám sát truy vấn thật. Ưu điểm lớn nhất không phải số lượng, mà là <strong>tính nhất quán</strong>: cả đội viết ra tiêu đề cùng một kiểu, thay vì mỗi người nghĩ một phách.</p>
+
+  <h3>Quy tắc một từ khóa — một bài</h3>
+  <p>Mỗi từ khóa chính chỉ được dùng cho <strong>đúng một bài</strong>. Khi hai bài cùng nhắm một từ khóa, chúng cạnh tranh lẫn nhau trên kết quả tìm kiếm, và Google phải tự đoán bài nào là bài chính — thường đoán sai. Đây là lỗi âm thầm hay gặp ở blog đã chạy vài năm.</p>
+
+  <h3>Mật độ từ khóa — và cách hiểu đúng về nó</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Tài liệu</th><th class="num">Ngưỡng</th><th>Đơn vị tính</th></tr></thead>
+    <tbody>
+      <tr><td>Bộ tiêu chí SEO on-page</td><td class="num">1–2%</td><td>trên tổng số <strong>từ</strong></td></tr>
+      <tr><td>Bản review bài tiếng Nhật</td><td class="num">1–3%</td><td>trên tổng số <strong>ký tự</strong></td></tr>
+    </tbody>
+  </table></div>
+  <p>Khác biệt đến từ ngôn ngữ: tiếng Nhật không tách từ bằng dấu cách nên đếm theo ký tự. <strong>Cách dùng an toàn: giữ trong khoảng 1–2%, và đừng biến nó thành mục tiêu.</strong></p>
+
+  <div class="callout warn">
+    <svg aria-hidden="true"><use href="#i-alert"></use></svg>
+    <div><p>Khi thấy mật độ thấp, <b>đừng nhét thêm từ khóa</b> — hãy dùng <b>từ đồng nghĩa và cụm liên quan</b>. Nhồi từ khóa vừa bị Google đánh giá thấp, vừa làm câu văn trở nên kỳ quặc với người đọc thật.</p></div>
+  </div>
+
+  <div class="example">
+    <div class="tag"><svg aria-hidden="true"><use href="#i-frames"></use></svg>Ví dụ Setsubi-pro</div>
+    <p>Ma trận từ khóa trải trên 5 nhóm dịch vụ. Ghép <code>máy lạnh</code> + <code>không mát</code> + <code>nguyên nhân</code> cho ra một bài; đổi ý định thành <code>cách xử lý</code> cho ra bài thứ hai; đổi thành <code>chi phí</code> cho ra bài thứ ba. Riêng nhóm côn trùng dùng ma trận 6 loài × 3 ý định = 18 bài.</p>
+  </div>
+</section>
+
+<!-- ============ 4 ============ -->
+<section id="p4">
+  <h2><span class="ico"><svg aria-hidden="true"><use href="#i-cluster"></use></svg></span>Kiến trúc blog</h2>
+
+  <div class="principle">
+    <div class="tag"><svg aria-hidden="true"><use href="#i-star"></use></svg>Nguyên tắc chung</div>
+    <p>Một blog 50 bài rời rạc yếu hơn hẳn một blog 50 bài có cấu trúc. Mô hình tổ chức phổ biến nhất là <strong>trụ và cụm</strong>: vài <strong>trụ</strong> chủ đề trung tâm — thường trùng với các mảng dịch vụ hoặc dòng sản phẩm — và nhiều bài nhỏ thành <strong>cụm</strong> bao quanh mỗi trụ.</p>
+  </div>
+
+  <p>Hai lợi ích, và lợi ích thứ hai thường bị bỏ qua:</p>
+  <ul>
+    <li><strong>Liên kết nội bộ tự nhiên</strong> — các bài trong cùng cụm có lý do chính đáng để trỏ về nhau, thay vì gắn link gượng ép.</li>
+    <li><strong>Nhìn ra chỗ trống</strong> — khi vẽ bảng trụ × ý định, những ô trống chính là danh sách bài cần viết tiếp. Đây là công cụ lập kế hoạch, không chỉ là công cụ SEO.</li>
+  </ul>
+  <p>Hai cách chia cụm: <strong>theo mảng dịch vụ</strong>, hoặc <strong>theo ý định tìm kiếm</strong> — Tình huống · Giải pháp · Phòng ngừa.</p>
+
+  <h3>Thứ tự xuất bản cũng là một quyết định</h3>
+  <p>Sắp thứ tự đăng bài dựa trên <strong>hai</strong> yếu tố cùng lúc, không chỉ một:</p>
+  <ul>
+    <li><strong>Mức độ cấp thiết của truy vấn</strong> — bài nhắm nhu cầu cao hoặc mang tính khẩn cấp lên trước, để chiếm chỗ sớm.</li>
+    <li><strong>Sự cân bằng giữa các trụ</strong> — xen kẽ các mảng để blog không dồn quá nhiều bài giống nhau trong cùng giai đoạn.</li>
+  </ul>
+  <p>Nhóm nội dung <strong>phòng ngừa</strong> thường được lùi về giai đoạn sau: chúng có vai trò hoàn thiện cụm chủ đề và hỗ trợ các bài đã lên trước, nên chỉ phát huy khi đã có nền.</p>
+
+  <div class="example">
+    <div class="tag"><svg aria-hidden="true"><use href="#i-frames"></use></svg>Ví dụ Setsubi-pro</div>
+    <p>Kế hoạch nội dung được dựng thành <strong>52 bài trong 26 tuần</strong>, nhịp 2 bài/tuần, trải 5 trụ dịch vụ (điện, nước, gas, khóa, côn trùng): 34 bài dịch vụ chính + 18 bài côn trùng. Mỗi chủ đề gắn mức ưu tiên cao / trung bình / thấp để quyết định thứ tự đăng, với logic <strong>ưu tiên cao trước, phòng ngừa sau</strong>.</p>
+  </div>
+</section>
+
+<!-- ============ 5 ============ -->
+<section id="p5">
+  <h2><span class="ico"><svg aria-hidden="true"><use href="#i-frames"></use></svg></span>Chọn khung bài</h2>
+
+  <div class="callout tip">
+    <svg aria-hidden="true"><use href="#i-star"></use></svg>
+    <div><p>Đây là phần có giá trị cao nhất trong cả cẩm nang, vì phần lớn tài liệu SEO phổ thông bỏ qua nó.</p></div>
+  </div>
+
+  <div class="principle">
+    <div class="tag"><svg aria-hidden="true"><use href="#i-star"></use></svg>Nguyên tắc chung</div>
+    <p>Sai lầm rất phổ biến: đội nội dung tìm được một khung bài hiệu quả, rồi áp nó cho <strong>mọi</strong> bài viết. Kết quả là những bài mà khung đó không phù hợp trở nên gượng gạo — đúng hình thức nhưng lệch nhu cầu người đọc.</p>
+    <p><strong>Bạn quản lý một <em>bộ</em> khung bài, không phải một khung duy nhất.</strong> Câu hỏi quyết định không phải <em>“bài này về chủ đề gì”</em> mà là <em>“người đọc đang ở trạng thái tâm lý nào khi gõ truy vấn này”</em>.</p>
+  </div>
+
+  <div class="tw"><table>
+    <thead><tr><th>Người đọc đang…</th><th>Loại bài</th><th>Khung phù hợp</th></tr></thead>
+    <tbody>
+      <tr><td>“Tôi muốn thử tự xử lý trước”</td><td>Chẩn đoán / hỏng hóc</td><td>Khung 3 phần <span aria-hidden="true">↓</span></td></tr>
+      <tr><td>“Tôi cần hành động ngay bây giờ”</td><td>Quy trình khẩn cấp</td><td>Bước 1, 2, 3 — cắt hết giải thích</td></tr>
+      <tr><td>“Tôi muốn tránh chuyện này xảy ra”</td><td>Phòng ngừa / bảo trì</td><td>Lịch trình + mẹo + cảnh báo thói quen xấu</td></tr>
+      <tr><td>“Tôi đang cân nhắc chọn ai”</td><td>So sánh dịch vụ</td><td>Tiêu chí + bảng đối chiếu</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Khung 3 phần cho bài chẩn đoán</h3>
+  <p>Áp dụng riêng cho bài kiểu <em>“X bị Y — nguyên nhân là gì”</em>. <strong>Nhận định nền:</strong> người gõ từ khóa “nguyên nhân” thực ra <strong>không muốn hiểu sâu</strong> — họ muốn <strong>tự sửa trước</strong>, hiểu là phụ. Vì vậy đừng tách “kiểm tra” và “xử lý” thành hai mục riêng; gói cả hai vào phần đầu.</p>
+
+  <div class="parts">
+    <div class="part">
+      <div class="part-h"><span class="part-n">1</span><span class="part-t">Danh sách kiểm tra</span></div>
+      <div class="part-b">
+        <p>Gói kiểm tra và thao tác tự xử lý an toàn vào cùng một chỗ, đi từ <strong>dễ đến khó</strong>:</p>
+        <ol>
+          <li>Cài đặt, nguồn điện, trạng thái hiển thị</li>
+          <li>Bộ lọc, vệ sinh, môi trường lắp đặt</li>
+          <li>Khởi động lại, bật tắt, kiểm tra cơ bản</li>
+        </ol>
+        <p>Mỗi mục chứa <strong>cả</strong> phần kiểm tra <strong>lẫn</strong> thao tác an toàn (tắt điện, khóa nước trước khi làm). Mở đầu bằng một câu định khung tâm thế kiểu <em>“Hãy kiểm tra lần lượt theo thứ tự sau”</em>.</p>
+      </div>
+    </div>
+    <div class="part">
+      <div class="part-h"><span class="part-n">2</span><span class="part-t">Vùng hiểu</span></div>
+      <div class="part-b">
+        <p>Chỉ giải thích nguyên nhân kỹ thuật hoặc nguyên nhân ẩn mà người đọc không tự thấy được: gas, bo mạch, cảm biến. Ba quy tắc cứng:</p>
+        <div class="hardrule"><svg aria-hidden="true"><use href="#i-x"></use></svg><div><strong>Không</strong> hướng dẫn sửa</div></div>
+        <div class="hardrule"><svg aria-hidden="true"><use href="#i-x"></use></svg><div><strong>Không</strong> kêu gọi gọi thợ</div></div>
+        <div class="hardrule ok"><svg aria-hidden="true"><use href="#i-tick"></use></svg><div><strong>Chỉ</strong> giải thích, và giữ ngắn gọn</div></div>
+        <p style="margin-top:.9rem">Cấu trúc mỗi mục đi ngược chiều thông thường: <code>nguyên nhân X → hiện tượng quan sát được</code>. Đi từ nguyên nhân vì phần 1 đã loại trừ hết các triệu chứng dễ rồi.</p>
+        <p>Phần này làm ba việc cùng lúc: tăng hiểu biết, tăng độ tin cậy, và phủ từ khóa dạng “nguyên nhân”.</p>
+      </div>
+    </div>
+    <div class="part">
+      <div class="part-h"><span class="part-n">3</span><span class="part-t">Dừng lại / gọi hỗ trợ</span></div>
+      <div class="part-b">
+        <ul>
+          <li><strong>Dấu hiệu nguy hiểm</strong> — mùi khét, khói, tia lửa, rò nước, rò điện</li>
+          <li><strong>Lỗi vượt khả năng tự xử lý</strong> — vẫn lặp lại sau khi làm hết danh sách kiểm tra, thiết bị không phản ứng</li>
+          <li><strong>Câu kết dứt khoát</strong> — ngừng sử dụng và liên hệ đơn vị chuyên môn</li>
+        </ul>
+        <p>Toàn bộ lời kêu gọi hành động dồn vào đây. Đó chính là lý do phần 2 bị cấm nhắc tới việc gọi thợ: nếu phần 2 đã kêu gọi rồi thì phần 3 mất trọng lượng.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>Nội dung phòng ngừa — nghịch lý đáng làm</h3>
+  <p>Nội dung dạy người đọc tự bảo trì trên lý thuyết làm <strong>giảm</strong> nhu cầu gọi dịch vụ. Nhưng nó vẫn đáng làm, vì ba lý do:</p>
+  <ol>
+    <li><strong>Tăng độ tin cậy và hình ảnh thương hiệu</strong> — bạn cho đi trước khi bán.</li>
+    <li><strong>Tăng lưu lượng và phủ từ khóa</strong> — đây là nhóm truy vấn lớn mà bài chẩn đoán không chạm tới.</li>
+    <li><strong>Thực tế khác lý thuyết</strong> — nhiều người biết cách tự xử lý nhưng vẫn gọi dịch vụ, đơn giản vì ngại làm.</li>
+  </ol>
+  <div class="callout tip">
+    <svg aria-hidden="true"><use href="#i-bulb"></use></svg>
+    <div><p><b>Nguyên tắc rút ra:</b> tối ưu hóa số từ khóa phủ được, thay vì chăm chăm chèn lời kêu gọi “hãy gọi chúng tôi” vào mọi bài. Cách sau phản cảm và không tạo được ấn tượng tốt.</p></div>
+  </div>
+  <p>Bốn dạng nội dung phòng ngừa: hướng dẫn sử dụng đúng cách · lịch bảo trì định kỳ · mẹo kéo dài tuổi thọ · cảnh báo các thói quen gây hỏng.</p>
+</section>
+
+<!-- ============ 6 ============ -->
+<section id="p6">
+  <h2><span class="ico"><svg aria-hidden="true"><use href="#i-pen"></use></svg></span>Quy tắc câu chữ</h2>
+
+  <h3>Cấu trúc heading</h3>
+  <p>Heading không chỉ để trình bày; nó là bộ khung Google dùng để hiểu bài viết.</p>
+  <ul>
+    <li><strong>H1 duy nhất một cái</strong> cho tiêu đề bài, nói rõ vấn đề người đọc đang gặp</li>
+    <li><strong>H2</strong> cho các phần chính, đánh số <code>1.</code>, <code>2.</code></li>
+    <li><strong>H3</strong> cho phần con: <code>1.1</code>, <code>1.2</code> · <strong>H4</strong> cho chi tiết sâu hơn: <code>1.1.1</code></li>
+    <li><strong>Heading mẹ phải có ít nhất 2 heading con</strong> — chỉ có một con nghĩa là bạn chia sai</li>
+    <li><strong>Mục lục bắt buộc có</strong>, liệt kê H2 và H3, bỏ qua H4 trở đi</li>
+  </ul>
+
+  <h3>Mở bài</h3>
+  <ul>
+    <li>Mô tả <strong>đúng</strong> tình huống người đọc đang gặp, có sự đồng cảm thật</li>
+    <li>Từ khóa chính xuất hiện trong <strong>10% ký tự đầu tiên</strong></li>
+    <li>Ngắn gọn, đi thẳng vấn đề</li>
+    <li><strong>Đổi kiểu viết giữa các bài</strong> — nếu mọi bài đều mở giống nhau, cả blog thành “một màu”</li>
+  </ul>
+
+  <h3>Bốn lỗi văn phong hay gặp</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Lỗi</th><th>Vì sao hỏng</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Lặp từ đệm</strong></td><td>Dùng đi dùng lại “trước tiên”, “tiếp theo” ở mọi đoạn khiến mạch logic trở nên giả tạo</td></tr>
+      <tr><td><strong>Dùng từ chuyên môn</strong></td><td>Bạn viết cho người dùng bình thường, không viết cho nhân viên kỹ thuật</td></tr>
+      <tr><td><strong>Tách riêng heading “Tổng kết”</strong></td><td>Viết phần tổng kết liền mạch từ cuối thân bài, rồi mới tới lời kêu gọi hành động</td></tr>
+      <tr><td><strong>Nhắc thương hiệu quá nhiều</strong></td><td>Tối đa 1 lần cuối bài; thật cần thì thêm 1 lần ở mở bài. Nhiều hơn là phản tác dụng</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Bảng so sánh giữa việc tự làm và sử dụng dịch vụ</h3>
+  <p>Một khung trình bày ngắn giúp người đọc phân biệt trường hợp có thể tự xử lý an toàn với trường hợp nên dừng lại. Nó biến lời khuyên trong bài thành <strong>một quyết định thực tế</strong>, dễ lướt mắt — quan trọng khi người đọc đang cần phản ứng nhanh. Hai cách trình bày: <strong>hai cột đối chiếu</strong>, hoặc <strong>phân theo mức rủi ro</strong> (an toàn / cần theo dõi / nên nhờ chuyên môn).</p>
+
+  <h3>Lời kêu gọi hành động mềm</h3>
+  <p>Trong nội dung trợ giúp, lời kêu gọi hành động nên xuất hiện như <strong>một phương án hỗ trợ tự nhiên</strong>, không phải một sức ép bán hàng. Lý do rất đơn giản: người đọc đang tìm <strong>giải pháp</strong>, chưa tìm <strong>dịch vụ</strong>. Chỉ sau khi họ đã hiểu vấn đề và thử các bước an toàn mà không xong, lời mời mới có chỗ đứng.</p>
+  <ul>
+    <li><strong>Trấn an</strong> — nhấn vào cảm giác yên tâm khi có người hỗ trợ</li>
+    <li><strong>Theo tình huống</strong> — chỉ mời liên hệ khi tình huống vượt mức an toàn hoặc vượt khả năng tự xử lý</li>
+  </ul>
+  <p>Giọng văn giữ ở mức bình thường, không quảng cáo.</p>
+</section>
+
+<!-- ============ 7 ============ -->
+<section id="p7">
+  <h2><span class="ico"><svg aria-hidden="true"><use href="#i-check"></use></svg></span>Checklist trước khi đăng</h2>
+
+  <div class="principle">
+    <div class="tag"><svg aria-hidden="true"><use href="#i-star"></use></svg>Nguyên tắc chung</div>
+    <p>Thay vì checklist đánh dấu có/không, dùng <strong>thang chấm có trọng số</strong>: mỗi hạng mục mang số điểm khác nhau theo mức ảnh hưởng. Cách này biến các lưu ý SEO quen thuộc thành một tiêu chuẩn chấm nhanh, và quan trọng hơn — thành <strong>thang so sánh nội bộ</strong> giúp giữ mặt bằng chất lượng ổn định khi xuất bản hàng loạt.</p>
+  </div>
+
+  <div class="callout warn">
+    <svg aria-hidden="true"><use href="#i-alert"></use></svg>
+    <div><p>Các con số dưới đây đến từ tài liệu nội bộ, <b>chưa đối chiếu với tài liệu công khai của Google</b>. Hãy coi chúng là tiêu chuẩn nội bộ để giữ chất lượng đồng đều, không phải quy luật xếp hạng.</p></div>
+  </div>
+
+  <div class="tw"><table>
+    <thead><tr><th>Hạng mục</th><th class="num">Ngưỡng</th></tr></thead>
+    <tbody>
+      <tr><td>Từ khóa chính trong tiêu đề meta</td><td class="num">trong 50 ký tự đầu</td></tr>
+      <tr><td>Từ khóa chính trong mô tả meta</td><td class="num">trong 160 ký tự đầu</td></tr>
+      <tr><td>Từ khóa chính trong thân bài</td><td class="num">trong 10% số từ đầu</td></tr>
+      <tr><td>Mật độ từ khóa toàn bài</td><td class="num">1–2%</td></tr>
+      <tr><td>Độ dài bài — điểm tối đa</td><td class="num">≥ 2500 từ</td></tr>
+      <tr><td>Độ dài bài — điểm 0</td><td class="num">&lt; 600 từ</td></tr>
+      <tr><td>Độ dài URL (tính cả <code>https://</code>)</td><td class="num">&lt; 75 ký tự</td></tr>
+      <tr><td>Alt text chứa từ khóa chính</td><td class="num">60%</td></tr>
+      <tr><td>Alt text chứa từ khóa phụ</td><td class="num">40%</td></tr>
+      <tr><td>Liên kết ngoài tới website uy tín</td><td class="num">≥ 1</td></tr>
+      <tr><td>Liên kết nội bộ</td><td class="num">≥ 1</td></tr>
+      <tr><td>Tên file ảnh</td><td class="num">từ khóa, không dấu, gạch ngang, 01/02</td></tr>
+      <tr><td>Liên kết quảng cáo / affiliate / diễn đàn</td><td class="num">đánh dấu nofollow</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="callout tip">
+    <svg aria-hidden="true"><use href="#i-bulb"></use></svg>
+    <div><p><b>Về ngưỡng 2500 từ.</b> Đừng đọc nó thành “bài nào cũng phải dài 2500 từ”. Bài quy trình khẩn cấp cố kéo dài sẽ hỏng đúng cái nó cần làm — trả lời nhanh. Ngưỡng này hợp lý cho bài giải thích và bài chẩn đoán; với các loại bài khác, ưu tiên <b>đủ để giải quyết vấn đề</b> hơn là đủ điểm.</p></div>
+  </div>
+
+  <p><strong>Cấu trúc bài chuẩn để rà soát:</strong> mở bài → mục lục → nội dung chính (H2/H3) → kết bài → lời kêu gọi hành động → thông tin liên hệ.</p>
+</section>
+
+<!-- ============ 8 ============ -->
+<section id="p8">
+  <h2><span class="ico"><svg aria-hidden="true"><use href="#i-wrench"></use></svg></span>Phần kỹ thuật</h2>
+
+  <p>Phần này viết theo mạch: <strong>triệu chứng bạn nhìn thấy → nguyên nhân → điều cần yêu cầu lập trình viên → cách bạn tự kiểm tra</strong>. Bạn không cần hiểu code, chỉ cần nhận ra vấn đề và diễn đạt được nó.</p>
+
+  <div class="principle">
+    <div class="tag"><svg aria-hidden="true"><use href="#i-star"></use></svg>Nguyên tắc chung</div>
+    <p>Google hiển thị kết quả tìm kiếm không chỉ dựa vào bài viết, mà dựa vào <strong>những mô tả có cấu trúc mà website tự khai báo về chính nó</strong> — tên thương hiệu, logo, ảnh đại diện, loại nội dung. Người đọc không thấy phần khai báo này, nhưng Google đọc nó.</p>
+    <p><strong>Điểm mấu chốt: những lỗi này hỏng một cách âm thầm.</strong> Không có thông báo lỗi, trang vẫn chạy bình thường, chỉ là kết quả trên Google trông tệ. Vì vậy chúng thường tồn tại hàng tháng trời không ai phát hiện.</p>
+  </div>
+
+  <h3>8.1 &nbsp;Bài viết không có ảnh thu nhỏ trên Google</h3>
+  <div class="flow">
+    <div class="step"><span class="sl">Triệu chứng</span><p>Đối thủ có ảnh bên cạnh kết quả tìm kiếm, bài của bạn chỉ có chữ.</p></div>
+    <div class="step"><span class="sl">Nguyên nhân</span><p>Ảnh thu nhỏ là kết quả của bốn điều kiện phải đúng đồng thời, không phải một thiết lập.</p></div>
+    <div class="step"><span class="sl">Yêu cầu dev</span><p>“Kiểm tra 4 điều kiện hiển thị ảnh thu nhỏ.”</p></div>
+    <div class="step"><span class="sl">Tự kiểm tra</span><p>Dán URL vào Rich Results Test hoặc Schema Markup Validator.</p></div>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th class="num">#</th><th>Điều kiện</th><th>Lưu ý</th></tr></thead>
+    <tbody>
+      <tr><td class="num">1</td><td>Ảnh có cạnh dài ≥ 1200px</td><td><strong>Không phóng to vượt kích thước gốc</strong> — ảnh 670px kéo lên 1200px chỉ nặng file chứ không thêm chi tiết</td></tr>
+      <tr><td class="num">2</td><td>Khai báo ảnh đúng định dạng</td><td>Phải là danh sách, và phải là địa chỉ đầy đủ (xem 8.3)</td></tr>
+      <tr><td class="num">3</td><td>Cho phép ảnh xem trước cỡ lớn</td><td>Thiếu thiết lập này, Google chỉ được phép hiện ảnh cỡ nhỏ</td></tr>
+      <tr><td class="num">4</td><td>File ảnh nằm đúng thư mục</td><td>Nơi bộ xử lý website tìm thấy — xem 8.5</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout warn">
+    <svg aria-hidden="true"><use href="#i-alert"></use></svg>
+    <div><p>Thiếu bất kỳ điều kiện nào là mất ảnh. Nhưng đủ cả bốn cũng <b>chỉ là điều kiện cần</b> — Google vẫn tự quyết định có hiện hay không.</p></div>
+  </div>
+
+  <h3>8.2 &nbsp;Ảnh hiển thị trên trang ≠ ảnh dùng để chia sẻ</h3>
+  <p>Một phân biệt nhỏ nhưng gây mất ảnh thu nhỏ rất thường xuyên. Cần <strong>hai bản ảnh cho hai mục đích</strong>:</p>
+  <div class="tw"><table>
+    <thead><tr><th>Bản ảnh</th><th class="num">Kích thước</th><th>Dùng ở đâu</th><th>Vì sao</th></tr></thead>
+    <tbody>
+      <tr><td>Hiển thị trên trang</td><td class="num">~800×450</td><td>trong bài viết</td><td>giữ trang tải nhanh</td></tr>
+      <tr><td>Chia sẻ</td><td class="num">1200×675</td><td>kết quả Google, mạng xã hội</td><td>đủ lớn để Google chấp nhận</td></tr>
+    </tbody>
+  </table></div>
+  <p>Dùng nhầm bản ảnh nhỏ cho phần chia sẻ là cách âm thầm đánh mất ảnh thu nhỏ.</p>
+
+  <h3>8.3 &nbsp;Địa chỉ ảnh phải là địa chỉ đầy đủ</h3>
+  <p>Trong phần khai báo có cấu trúc, mọi trường chứa địa chỉ — ảnh, logo, định danh — phải viết đầy đủ dạng <code>https://tên-miền/...</code>, không được viết rút gọn dạng <code>/images/...</code></p>
+  <p>Đây là cái bẫy tinh vi: <strong>cùng một biến ảnh dùng được cho phần chia sẻ mạng xã hội nhưng vô hiệu trong phần khai báo có cấu trúc</strong>. Triệu chứng duy nhất là mất ảnh trên kết quả tìm kiếm. Bốn trường hay bị quên: ảnh bài viết, logo nhà xuất bản, logo tổ chức, ảnh doanh nghiệp địa phương.</p>
+  <div class="callout warn">
+    <svg aria-hidden="true"><use href="#i-alert"></use></svg>
+    <div><p><b>Về độ tin cậy.</b> Quy tắc này ở mức cao vì rút ra từ một lỗi thực tế đã trả giá. Nhưng cách giải thích “Google bỏ qua địa chỉ rút gọn” thì <b>mạnh hơn bằng chứng hiện có</b> — kiểm chứng bên ngoài cho thấy công cụ kiểm tra của Google vẫn xử lý được địa chỉ rút gọn. Phát biểu chính xác hơn: <em>Google khuyến nghị địa chỉ đầy đủ; hành vi với địa chỉ rút gọn không được tài liệu hóa và không đáng tin cậy.</em> Vẫn nên giữ quy tắc như một thực hành an toàn.</p></div>
+  </div>
+
+  <h3>8.4 &nbsp;Google hiện tên miền trần thay vì tên thương hiệu</h3>
+  <p><strong>Triệu chứng:</strong> chỗ đáng lẽ hiện tên công ty lại hiện <code>www.tenmien.com</code>; không có logo nhỏ bên cạnh. <strong>Nguyên nhân:</strong> website cần khai báo danh tính tổ chức trên <strong>mọi trang</strong>, không chỉ trang chủ.</p>
+  <p><strong>Yêu cầu gửi lập trình viên</strong> — sáu điểm:</p>
+  <ul>
+    <li>Phát khai báo danh tính tổ chức và danh tính website ở khung layout gốc để không trang nào bị sót</li>
+    <li>Danh tính tổ chức mang <strong>một mã định danh cố định duy nhất</strong>; mọi chỗ khác nói về cùng công ty phải dùng lại đúng mã đó, nếu không Google thấy hai thực thể trùng tên trên cùng một trang</li>
+    <li>Khai báo biểu tượng website đủ <strong>bốn kích thước</strong>: 48 và 32 pixel, 192, 512, và bản 180 cho thiết bị di động</li>
+    <li>Mỗi bài viết cần khai báo <strong>ngôn ngữ</strong> và <strong>thuộc về site nào</strong></li>
+    <li>Mỗi bài cần có <strong>đường dẫn phân cấp</strong> — thường do thành phần breadcrumb tự sinh, nên đừng gỡ nó khỏi trang</li>
+    <li><strong>Thống nhất một ký tự phân cách tiêu đề</strong> trên toàn site</li>
+  </ul>
+  <div class="callout warn">
+    <svg aria-hidden="true"><use href="#i-alert"></use></svg>
+    <div><p><b>Về thời gian.</b> Đây là thuộc tính cấp tên miền — sửa một lần áp cho cả site, nhưng Google <b>cần thời gian xác nhận</b>, không có nút bật tức thì.</p></div>
+  </div>
+
+  <h3>8.5 &nbsp;Ảnh đặt sai thư mục thì không được tối ưu</h3>
+  <p><strong>Triệu chứng:</strong> điểm hiệu năng tụt mà không giải thích được; ảnh phục vụ nguyên định dạng gốc thay vì bản đã nén. <strong>Nguyên nhân:</strong> bộ xử lý website chỉ tối ưu những file nó <strong>quét thấy</strong> — thường là một thư mục cố định. File đặt ở thư mục tĩnh được phục vụ nguyên trạng: không đổi định dạng, không nén, không sinh biến thể kích thước. Trang vẫn chạy, ảnh vẫn hiện — chỉ là nặng gấp nhiều lần.</p>
+  <p><strong>Yêu cầu gửi lập trình viên:</strong> <em>“Xác nhận ảnh bài viết nằm trong thư mục được bộ build quét, và thêm một bước kiểm tra sau build xác nhận địa chỉ ảnh trong HTML đã qua bộ tối ưu.”</em></p>
+
+  <h3>8.6 &nbsp;Tiêu đề và mô tả bị cắt trên kết quả tìm kiếm</h3>
+  <p>Google cắt tiêu đề và mô tả theo <strong>bề ngang hiển thị</strong>, không theo số từ, và <strong>không công bố giới hạn ký tự chính thức</strong> — mọi con số bạn đọc được đều là quan sát của cộng đồng.</p>
+  <p>Hệ quả quan trọng: <strong>ngưỡng ký tự khác nhau theo ngôn ngữ</strong>. Chữ Hán và kana chiếm bề ngang gấp đôi chữ Latin, nên ngưỡng “60 ký tự tiêu đề” quen thuộc từ tài liệu SEO tiếng Anh không áp dụng được cho tiếng Nhật.</p>
+
+  <div class="serp">
+    <div class="serp-brand">
+      <div class="serp-fav" aria-hidden="true">設</div>
+      <div><div class="serp-site">設備プロ</div><div class="serp-url">setsubi-pro.net › columns</div></div>
+    </div>
+    <div class="serp-title">エアコンが暖かくならない原因<span class="brandsuffix">｜設備プロ</span></div>
+    <p class="serp-desc">暖房をつけても風がぬるいときに、まず確認したい設定とフィルター周りのポイントを解説します。<span class="serp-cut">危険なサインが出ている場合の判断基準もあわせて紹介しています。</span></p>
+  </div>
+  <div class="ruler">
+    <span class="bar keep"></span><span>24 ký tự tiêu đề thật</span>
+    <span class="bar cut"></span><span>hậu tố thương hiệu ~5</span>
+  </div>
+
+  <div class="tw"><table>
+    <thead><tr><th>Thành phần (tiếng Nhật)</th><th class="num">Ngưỡng</th></tr></thead>
+    <tbody>
+      <tr><td>Tiêu đề — ngưỡng an toàn xuyên thiết bị</td><td class="num">~30–32 ký tự</td></tr>
+      <tr><td>Tiêu đề — mobile thực tế có thể hiện tới</td><td class="num">~41 ký tự</td></tr>
+      <tr><td><strong>Phần tiêu đề thật</strong> (sau khi trừ hậu tố thương hiệu)</td><td class="num"><strong>≤ 24 ký tự</strong></td></tr>
+      <tr><td>Mô tả — mobile</td><td class="num">~50–70 ký tự</td></tr>
+      <tr><td>Mô tả — máy tính</td><td class="num">~90–120 ký tự</td></tr>
+    </tbody>
+  </table></div>
+  <p><strong>Vì sao tiêu đề thật phải ≤ 24:</strong> nếu dài hơn, chính phần hậu tố thương hiệu ở cuối bị cắt mất — đúng phần lẽ ra phải hiện.</p>
+  <div class="callout stop">
+    <svg aria-hidden="true"><use href="#i-alert"></use></svg>
+    <div><p><b>Cảnh báo độ tin cậy.</b> Ghi chú nội bộ ghi ngưỡng mô tả là ~70–80 ký tự, nhưng đối chiếu với các nguồn SEO Nhật hiện hành (tháng 8/2026) cho thấy mobile chỉ hiện ~50–70 ký tự. <b>Bảng trên đã dùng con số đã hiệu chỉnh</b>; ghi chú gốc cần được cập nhật lại.</p></div>
+  </div>
+  <p><strong>Cách làm an toàn, đúng cho mọi ngôn ngữ:</strong> dồn thông tin quan trọng nhất về đầu tiêu đề và đầu mô tả, coi phần đuôi là phần có thể mất.</p>
+
+  <h3>8.7 &nbsp;Nguyên tắc quy trình đáng nhớ nhất</h3>
+  <p>Khi phát hiện cùng một lỗi lặp trên <strong>nhiều bài</strong> — tiêu đề dài quá ngưỡng ở 30 bài, thiếu khai báo ảnh ở 20 bài — phản xạ tự nhiên là sửa từng bài. <strong>Đừng.</strong></p>
+  <p>Nếu các bài được sinh ra tự động từ một bộ sinh (công cụ tạo bài, template, hệ quản trị nội dung), <strong>lỗi phải được sửa ở bộ sinh, không phải ở từng bài đầu ra</strong>. Vá đầu ra khắc phục triệu chứng hôm nay nhưng để nguyên khuyết tật: lần sinh tiếp theo tái tạo lại lỗi, và các bản vá thủ công bị ghi đè mất — công sức biến mất không dấu vết.</p>
+  <p>Vì sao quy tắc này hay bị vi phạm: vá đầu ra <strong>rẻ và thấy kết quả ngay</strong>, còn sửa bộ sinh đòi hỏi hiểu logic và phải sinh lại toàn bộ. Áp lực thời hạn luôn đẩy về phía rẻ; chi phí chỉ hiện ra ở lần sinh sau.</p>
+  <ul>
+    <li>Khi buộc phải vá gấp, <strong>ghi ngay một đầu việc cho bộ sinh</strong> — bản vá là khoản nợ, không phải bản sửa</li>
+    <li>Sau khi sửa bộ sinh, sinh lại toàn bộ và đối chiếu — khác biệt phải chỉ chứa đúng thay đổi mong đợi</li>
+    <li>Với bài <strong>đã xuất bản và đã được Google lập chỉ mục</strong>, cần một quyết định riêng: chỉ áp cho bài sinh mới, hay hồi tố cả tập cũ</li>
+  </ul>
+  <div class="callout tip">
+    <svg aria-hidden="true"><use href="#i-bulb"></use></svg>
+    <div><p>Đây là điều đáng nhớ nhất trong phần 8 với người làm marketing, vì nó quyết định <b>cách bạn đặt yêu cầu</b>. Câu <em>“sửa giúp tiêu đề 30 bài này”</em> và câu <em>“sửa giúp chỗ sinh ra tiêu đề, rồi sinh lại 30 bài”</em> dẫn tới hai kết quả hoàn toàn khác nhau sau sáu tháng.</p></div>
+  </div>
+
+  <h3>8.8 &nbsp;Ba công cụ dùng được ngay, không cần code</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Công cụ</th><th>Dùng để làm gì</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Google Search Console</strong><br>Kiểm tra URL → Yêu cầu lập chỉ mục</td><td>Sau khi sửa xong, thay vì chờ Google tự quét lại, yêu cầu cập nhật cho vài bài đại diện</td></tr>
+      <tr><td><strong>Google Rich Results Test</strong></td><td>Dán URL, xem Google đọc được những gì từ trang</td></tr>
+      <tr><td><strong>Schema Markup Validator</strong></td><td>Kiểm tra phần khai báo có cấu trúc có lỗi cú pháp không</td></tr>
+    </tbody>
+  </table></div>
+  <p><strong>Phần bạn không kiểm soát được:</strong> thời điểm Google quét lại và quyết định hiển thị ảnh thu nhỏ. Markup đúng chỉ là điều kiện cần.</p>
+
+  <h3>8.9 &nbsp;Một chi tiết nhỏ dễ bị bỏ qua</h3>
+  <p>Ngày cập nhật ghi trong bài <strong>điều khiển trực tiếp</strong> ngày cập nhật báo cho Google qua sơ đồ site. Đừng để ngày giả — sửa một dấu chấm rồi ghi “cập nhật hôm nay” là một tín hiệu sai gửi đi.</p>
+</section>
+
+<!-- ============ 9 ============ -->
+<section id="p9">
+  <h2><span class="ico"><svg aria-hidden="true"><use href="#i-gap"></use></svg></span>Chỗ trống và độ tin cậy</h2>
+
+  <p>Bốn mảng dưới đây <strong>chưa có trong kho kiến thức</strong>. Tôi nêu tên để bạn biết chỗ trống nằm ở đâu, không suy đoán nội dung.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Mảng còn thiếu</th><th>Vì sao quan trọng</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Nghiên cứu từ khóa bằng công cụ</strong><br>Ahrefs, Semrush, Keyword Planner</td><td>Phần 3 dạy dựng ngân hàng từ khóa bằng tay — hiệu quả cho ngành có cấu trúc rõ, nhưng không cho bạn dữ liệu về lượng tìm kiếm và độ cạnh tranh</td></tr>
+      <tr><td><strong>Xây dựng liên kết / SEO off-page</strong></td><td>Toàn bộ cẩm nang này là SEO on-page. Uy tín tên miền là một trục hoàn toàn khác</td></tr>
+      <tr><td><strong>Đo lường</strong><br>cấu hình GA4, đọc báo cáo Search Console</td><td>Bạn đang làm SEO mà chưa biết cách đọc kết quả</td></tr>
+      <tr><td><strong>Tốc độ trang, Core Web Vitals, SEO địa phương</strong></td><td>Với dịch vụ tại chỗ, SEO địa phương có khi quan trọng hơn cả blog</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Mức độ tin cậy của từng phần</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Phần</th><th>Mức</th><th>Ghi chú</th></tr></thead>
+    <tbody>
+      <tr><td>1, 2, 5, 6 — nguyên tắc nội dung</td><td><span class="chip mid">Trung bình</span></td><td>Nhiều tài liệu đồng thuận, nhưng phần lớn khái niệm ở trạng thái chưa kiểm chứng — đây là kinh nghiệm nội bộ, không phải kết quả nghiên cứu</td></tr>
+      <tr><td>3, 4 — từ khóa, kiến trúc</td><td><span class="chip mid">Trung bình</span></td><td>Nhất quán giữa các nguồn; mô hình trụ–cụm là nhãn được gán thêm, tài liệu gốc không dùng thuật ngữ này</td></tr>
+      <tr><td>7 — checklist</td><td><span class="chip lo">Thấp–TB</span></td><td>Con số cụ thể nhưng chưa đối chiếu tài liệu Google; nên coi là tiêu chuẩn nội bộ</td></tr>
+      <tr><td>8.1, 8.2, 8.4, 8.5, 8.7</td><td><span class="chip hi">Cao</span></td><td>Rút ra từ lỗi thực tế đã trả giá</td></tr>
+      <tr><td>8.3</td><td><span class="chip hi">Cao</span> <span class="chip lo">quy tắc / giải thích</span></td><td>Quy tắc đáng tin, lời giải thích mạnh hơn bằng chứng — xem cảnh báo trong mục</td></tr>
+      <tr><td>8.6</td><td><span class="chip mid">Trung bình</span></td><td>Đã hiệu chỉnh theo kiểm chứng bên ngoài; ghi chú gốc chưa cập nhật</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section id="p10">
+  <h2><span class="ico"><svg aria-hidden="true"><use href="#i-book"></use></svg></span>Phụ lục</h2>
+
+  <h3>A &nbsp;Bảng tra nhanh các ngưỡng</h3>
+  <h4>Nội dung</h4>
+  <div class="tw"><table>
+    <tbody>
+      <tr><td>Mật độ từ khóa</td><td class="num">1–2% <span style="color:var(--muted)">(tiếng Nhật 1–3% theo ký tự)</span></td></tr>
+      <tr><td>Từ khóa trong tiêu đề meta</td><td class="num">trong 50 ký tự đầu</td></tr>
+      <tr><td>Từ khóa trong mô tả meta</td><td class="num">trong 160 ký tự đầu</td></tr>
+      <tr><td>Từ khóa trong thân bài</td><td class="num">trong 10% số từ đầu</td></tr>
+      <tr><td>Độ dài bài — điểm tối đa</td><td class="num">≥ 2500 từ</td></tr>
+      <tr><td>Độ dài bài — điểm 0</td><td class="num">&lt; 600 từ</td></tr>
+      <tr><td>Nhắc thương hiệu</td><td class="num">1 lần cuối bài, tối đa 2</td></tr>
+      <tr><td>Số H1</td><td class="num">đúng 1</td></tr>
+      <tr><td>Heading con tối thiểu dưới mỗi heading mẹ</td><td class="num">2</td></tr>
+      <tr><td>Mục lục</td><td class="num">H2 + H3, bỏ H4 trở đi</td></tr>
+    </tbody>
+  </table></div>
+  <h4>Kỹ thuật</h4>
+  <div class="tw"><table>
+    <tbody>
+      <tr><td>Độ dài URL</td><td class="num">&lt; 75 ký tự</td></tr>
+      <tr><td>Alt text chứa từ khóa chính / phụ</td><td class="num">60% / 40%</td></tr>
+      <tr><td>Liên kết ngoài · nội bộ mỗi bài</td><td class="num">≥ 1 · ≥ 1</td></tr>
+      <tr><td>Ảnh chia sẻ</td><td class="num">1200×675, cạnh dài ≥ 1200px</td></tr>
+      <tr><td>Ảnh hiển thị trên trang</td><td class="num">~800×450</td></tr>
+      <tr><td>Biểu tượng website</td><td class="num">48+32, 192, 512, 180</td></tr>
+      <tr><td>Tiêu đề SERP tiếng Nhật — an toàn</td><td class="num">~30–32 ký tự</td></tr>
+      <tr><td>Tiêu đề thật (trừ hậu tố thương hiệu)</td><td class="num">≤ 24 ký tự</td></tr>
+      <tr><td>Mô tả SERP tiếng Nhật — mobile / máy tính</td><td class="num">~50–70 / ~90–120 ký tự</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>B &nbsp;Bảng chọn khung bài</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Người đọc đang…</th><th>Loại bài</th><th>Khung</th><th>Trọng tâm</th></tr></thead>
+    <tbody>
+      <tr><td>Muốn thử tự xử lý trước</td><td>Chẩn đoán</td><td>Kiểm tra → Hiểu → Dừng/Gọi</td><td>Phần 1 dài nhất</td></tr>
+      <tr><td>Cần hành động ngay</td><td>Quy trình khẩn cấp</td><td>Bước 1, 2, 3</td><td>Cắt hết giải thích</td></tr>
+      <tr><td>Muốn phòng tránh</td><td>Phòng ngừa</td><td>Lịch trình + mẹo + cảnh báo</td><td>Phủ từ khóa, không ép gọi dịch vụ</td></tr>
+      <tr><td>Đang cân nhắc chọn ai</td><td>So sánh dịch vụ</td><td>Tiêu chí + bảng đối chiếu</td><td>Minh bạch</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>C &nbsp;Mẫu brief một trang để giao bài</h3>
+<pre>BRIEF BÀI VIẾT
+
+<span class="fl">Từ khóa chính:</span>        ......................  (kiểm tra: chưa bài nào dùng)
+<span class="fl">Từ khóa phụ:</span>          ......................
+<span class="fl">Trụ chủ đề:</span>           ......................
+<span class="fl">Ý định tìm kiếm:</span>      nguyên nhân / cách xử lý / chi phí / phòng ngừa / so sánh
+<span class="fl">Người đọc đang:</span>       muốn tự xử lý / cần gấp / muốn phòng tránh / đang so sánh
+<span class="fl">→ Khung bài:</span>          ......................  (tra Phụ lục B)
+
+<span class="fl">Tiêu đề (H1):</span>         ......................  (từ khóa trong 50 ký tự đầu)
+<span class="fl">Mô tả meta:</span>           ......................  (ý chính trong 70 ký tự đầu)
+<span class="fl">URL:</span>                  ......................  (&lt;75 ký tự, có từ khóa)
+<span class="fl">Độ dài mục tiêu:</span>      ...... từ
+
+<span class="fl">Dàn ý H2/H3:</span>
+  1. ..................
+     1.1 ..............
+     1.2 ..............
+  2. ..................
+
+<span class="fl">Cần bảng "tự làm hay nhờ người"?</span>     có / không
+<span class="fl">Lời kêu gọi hành động — kiểu:</span>        trấn an / theo tình huống
+<span class="fl">Nhắc thương hiệu:</span>                    ...... lần (tối đa 2)
+
+<span class="fl">Ảnh:</span>
+  Ảnh trên trang    ~800×450   file: ..................
+  Ảnh chia sẻ       1200×675   file: ..................
+  Alt text:         ......................
+
+<span class="fl">Liên kết:</span>
+  Nội bộ (≥1):      ......................
+  Ngoài  (≥1):      ......................</pre>
+
+  <h3>D &nbsp;Sau khi bài đã đăng</h3>
+  <p>Bài hướng dẫn tốt là <strong>tài sản dùng lại được</strong>, không phải thứ đăng xong rồi bỏ. Nhóm nội dung phòng ngừa và bảo trì đặc biệt phù hợp để tái sử dụng cho email marketing:</p>
+  <ul>
+    <li><strong>Bản tin theo mùa</strong> — chuẩn bị thiết bị trước mùa cao điểm</li>
+    <li><strong>Chuỗi email sau khi khách dùng dịch vụ</strong> — gửi nội dung bảo trì tương ứng</li>
+    <li><strong>Kéo lại khách cũ</strong> — qua nội dung mẹo bảo trì</li>
+  </ul>
+  <p><strong>Điều kiện áp dụng:</strong> bài phải <strong>đủ giá trị để khách lưu lại</strong> — nếu không, họ sẽ không mở email lần sau. Đây là kênh khai thác lại tài sản nội dung đã có, không đòi sản xuất nội dung mới.</p>
+
+  <div class="endnote">
+    <h4>Một câu để mang theo</h4>
+    <p>Nếu chỉ nhớ được một điều từ cả cẩm nang này: <strong>người đọc không tìm bài viết của bạn — họ tìm lối thoát khỏi chuyện đang làm phiền họ.</strong> Mọi quy tắc ở trên chỉ là cách nói khác của điều đó.</p>
+  </div>
+</section>
+
+</article>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('tt'), lbl=document.getElementById('ttl');
+  function icon(dark){btn.querySelector('use').setAttribute('href',dark?'#i-sun':'#i-moon');lbl.textContent=dark?'Nền sáng':'Nền tối';}
+  var saved=null;
+  try{saved=localStorage.getItem('seo-guide-theme');}catch(e){}
+  if(saved==='dark'||saved==='light'){root.setAttribute('data-theme',saved);icon(saved==='dark');}
+  else{icon(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);}
+  btn.addEventListener('click',function(){
+    var isDark=root.getAttribute('data-theme')==='dark'||
+      (!root.hasAttribute('data-theme')&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var next=isDark?'light':'dark';
+    root.setAttribute('data-theme',next);icon(next==='dark');
+    try{localStorage.setItem('seo-guide-theme',next);}catch(e){}
+  });
+
+  var links=[].slice.call(document.querySelectorAll('.toc a'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){links.forEach(function(a){a.classList.remove('on');});
+          if(map[en.target.id])map[en.target.id].classList.add('on');}
+      });
+    },{rootMargin:'-10% 0px -75% 0px'});
+    document.querySelectorAll('section[id]').forEach(function(s){io.observe(s);});
+  }
+})();
+</script>
+</body>
+</html>

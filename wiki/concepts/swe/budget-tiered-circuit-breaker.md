@@ -44,6 +44,8 @@ Biến thể của circuit breaker mà tín hiệu kích hoạt không phải t�
 
 ## Mentioned in
 
+- [[outputs/lo-trinh-tu-chu-tool-sales]] — lộ trình đọc hiểu và làm chủ hệ thống tool_sales (11/08/2026)
+
 ## Notes
 
 Điều kiện để pattern này hoạt động: **phải có đường thoái lui đủ tốt**. Nếu chế độ rule-only cho kết quả không dùng được thì tầng 3 không phải suy giảm mà là ngừng dịch vụ, và lúc đó nên báo lỗi to thay vì âm thầm trả kết quả kém.

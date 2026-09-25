@@ -35,6 +35,10 @@ Nhịp sinh học (circadian rhythm) là chu kỳ sinh học nội tại kéo d�
 - [[concepts/neuro/melatonin]]
 - [[concepts/neuro/ap-luc-ngu]]
 - [[concepts/jung/vo-thuc]]
+- [[concepts/neuro/chronotype]]
+- [[concepts/neuro/giac-ngu-hai-pha]]
+- [[concepts/neuro/anh-sang-xanh]]
+- [[concepts/neuro/than-nhiet-trung-tam]]
 
 ## Mentioned in
 

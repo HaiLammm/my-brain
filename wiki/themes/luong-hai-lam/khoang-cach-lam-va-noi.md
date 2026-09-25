@@ -1,9 +1,9 @@
 ---
 id: themes/luong-hai-lam/khoang-cach-lam-va-noi
-title: "Khoảng cách giữa làm được và nói được"
+title: Khoảng cách giữa làm được và nói được
 type: theme
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-08-14
 book: luong-hai-lam
 ---
 
@@ -40,6 +40,7 @@ Nhưng chính vì nó khớp dễ đến thế mà nó **làm yếu mô-típ đi
 ## Related themes
 
 - [[themes/luong-hai-lam/quy-mo-mot-minh]] — chạm nhau ở chỗ cả hai đều là chuyện *nhìn thấy rõ nhưng không đổi được kết quả*
+- [[themes/luong-hai-lam/hai-tang-su-that]] — họ hàng xa: cùng là độ lệch giữa bề mặt và thực chất, nhưng ở đây là bất lực trình bày, ở đó là chủ ý che
 
 ## Notes
 

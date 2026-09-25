@@ -43,6 +43,8 @@ Bài toán gốc: sau khi tự động gửi một form trên website người k
 
 ## Mentioned in
 
+- [[outputs/lo-trinh-tu-chu-tool-sales]] — lộ trình đọc hiểu và làm chủ hệ thống tool_sales (11/08/2026)
+
 ## Notes
 
 Giá trị của pattern nằm ở chỗ nó biến một câu hỏi nhị phân bất khả thi ("đã gửi được chưa?") thành một chuỗi câu hỏi khả thi kèm mức tin cậy. Cái giá phải trả là **tỷ lệ không xác định không bao giờ về không** — phải có đường xử lý cho phần đó, thường là hàng chờ người xem.

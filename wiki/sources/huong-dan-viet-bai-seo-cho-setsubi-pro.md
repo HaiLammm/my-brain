@@ -60,6 +60,10 @@ findings:
 ## Related sources
 
 - [[sources/cau-truc-3-phan-bai-seo-troubleshooting]]
+- [[sources/rules-toi-uu-seo-cho-bai-viet-setsubi-pro]] — ràng buộc kỹ thuật đi kèm: độ dài tiêu đề/mô tả bị SERP cắt, yêu cầu ảnh thumbnail
+- [[sources/list-keyword-seo-setsubi-pro-thang-8-va-9]] — danh sách từ khóa cụ thể để áp hướng dẫn này lên
+- [[sources/keyword-map-setsubi-pro]] — bản đồ từ khóa cung cấp danh sách chủ đề để áp hướng dẫn này lên
+- [[sources/ban-do-seo-setsubi-pro-net]] — mặt hạ tầng của cùng site
 
 ## People
 

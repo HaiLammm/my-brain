@@ -29,6 +29,7 @@ Nhân trên chéo (suprachiasmatic nucleus — SCN) là cụm ~20.000 tế bào 
 - [[concepts/neuro/nhip-sinh-hoc]]
 - [[concepts/neuro/melatonin]]
 - [[concepts/neuro/oi-thi]]
+- [[concepts/neuro/anh-sang-xanh]]
 
 ## Mentioned in
 

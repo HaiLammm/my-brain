@@ -1,9 +1,9 @@
 ---
 id: themes/luong-hai-lam/quy-mo-mot-minh
-title: "Một người làm việc của một đội"
+title: Một người làm việc của một đội
 type: theme
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-08-14
 book: luong-hai-lam
 ---
 
@@ -48,6 +48,7 @@ Nói cách khác, mô-típ này có thể không phải về việc *một mình
 
 - [[themes/luong-hai-lam/khoang-cach-lam-va-noi]] — hai mô-típ chạm nhau ở chỗ: cả hai đều là chuyện *nhìn thấy rõ nhưng không đổi được kết quả*
 - [[themes/luong-hai-lam/ai-khong-duoc-quyet]] — cùng gốc: tự đặt ràng buộc trước khi bắt tay làm
+- [[themes/luong-hai-lam/ranh-gioi-cong-tu]] — nền chung: tổ chức sáu người thì không ai đủ xa ai để công–tư tách bạch
 
 ## Notes
 
@@ -76,5 +77,9 @@ Ba câu ghép lại cho một hình ảnh gọn và khá lạnh: **một công t
 **Đối chứng vẫn giữ nguyên giá trị.** tool_sales cũng do một người làm và vẫn tới đích, vì có ràng buộc rõ từ dòng đầu. Nên kết luận của trang không đổi: **thứ quyết định không phải số người, mà là có ràng buộc hay không.** Chỉ có điều giờ đã biết vì sao số người luôn là một.
 
 **Phản biện cần giữ.** "Chỉ có mình Lâm" là tình trạng **hiện tại** (10/08/2026) — bạn dùng đúng chữ *hiện tại*. Không có gì đảm bảo team IT lúc làm tailor_project (01–04/2026) cũng chỉ một người. Nếu từng có người rồi mất, thì câu chuyện khác hẳn.
+
+**Một dạng bằng chứng mới, chưa đủ chắc để đưa lên mục Evidence (11/08/2026).** Ba bằng chứng cũ đều nói về việc *xây*. Dữ kiện mới nói về việc *vận hành*: bạn cho biết chính Lâm là người vận hành chiến dịch chào hàng, trong khi bản thiết kế tool_sales viết cho **khoảng năm điều phối viên** ([[chapters/luong-hai-lam/tool-sales]], [[sources/bo-kich-ban-email-marketing-wa-craft]]).
+
+Nếu con số năm ấy thực tế cũng là một, thì mô-típ lặp lại ở một mặt phẳng khác hẳn — và đáng chú ý hơn, vì lần này chính hệ thống được thiết kế để *cần* nhiều người trông. Nhưng bạn chỉ nói Lâm vận hành, không nói Lâm vận hành một mình; giữ ở đây cho tới khi biết đội vận hành có mấy người.
 
 **Câu hỏi tiếp theo, và nó khó hơn câu trước.** Nếu bộ phận kỹ thuật là một người mà phần lớn danh mục dự án là phần mềm, thì hoặc công ty đang tính tuyển thêm, hoặc đang chấp nhận rằng mọi thứ chạy với tốc độ của một người. Chưa dữ kiện nào cho biết là cái nào.

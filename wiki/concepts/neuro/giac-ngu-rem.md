@@ -34,6 +34,11 @@ Giấc ngủ REM (Rapid Eye Movement) là giai đoạn chiếm ~20–25% tổng 
 - [[concepts/neuro/giac-ngu-nrem]]
 - [[concepts/neuro/cung-co-tri-nho]]
 - [[concepts/neuro/nhip-sinh-hoc]]
+- [[concepts/neuro/tri-lieu-qua-dem]]
+- [[concepts/neuro/lien-ket-xa-trong-rem]]
+- [[concepts/neuro/mat-truong-luc-rem]]
+- [[concepts/neuro/ruou-uc-che-rem]]
+- [[concepts/neuro/thoi-gian-vao-hoc-muon]]
 
 ## Mentioned in
 

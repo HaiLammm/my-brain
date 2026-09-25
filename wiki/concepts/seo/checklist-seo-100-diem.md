@@ -13,6 +13,7 @@ created: 2026-05-16
 updated: 2026-05-16
 key_sources:
   - sources/ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro
+  - sources/keyword-map-setsubi-pro
 related_concepts: []
 ---
 
@@ -29,6 +30,7 @@ Checklist SEO 100 điểm là khung kiểm tra chất lượng trước khi xu�
 
 - [[sources/ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro]]
 - [[sources/review-seo]]
+- [[sources/keyword-map-setsubi-pro]] — trang tính thứ ba là bản checklist on-page 38 dòng
 
 ## Related concepts
 

@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "4e907ee4bebde00c",
+        "id": "0b2d1fd2be79be12",
         "type": "tabs",
         "children": [
           {
-            "id": "a455c219aa046006",
+            "id": "9d6647c9ffed3853",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sources/luong-hai-lam.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "luong-hai-lam"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -184,44 +180,44 @@
       "bases:Create new base": false
     }
   },
-  "active": "a455c219aa046006",
+  "active": "9d6647c9ffed3853",
   "lastOpenFiles": [
-    "sources/luong-hai-lam-4.md",
-    "people/lem.md",
+    "sources/ho-so-nang-luc-double-m.md",
+    "sources/sao-chung-ta-lai-ngu.md",
+    "sources/sao-chung-ta-lai-ngu.md.tmp",
     "log.md.tmp",
-    "index.md.tmp.13045.565d7b115070",
+    "concepts/neuro/lien-ket-xa-trong-rem.md.tmp.11887.d1edc5ea1207",
+    "people/matthew-walker.md.tmp.11887.a2ac4699866c",
+    "concepts/neuro/he-lymph-nao.md.tmp.11887.0f069f12596e",
+    "concepts/neuro/he-lymph-nao.md.tmp.11887.74c906317b73",
     "graph/edges.jsonl.tmp",
-    "themes/luong-hai-lam/quy-mo-mot-minh.md.tmp.13045.4e3391906cdb",
-    "characters/luong-hai-lam/luong-hai-lam.md",
-    "chapters/luong-hai-lam/seo-setsubi-pro.md.tmp.13045.c4d60bb388f7",
-    "chapters/luong-hai-lam/seo-setsubi-pro.md.tmp.13045.41ee728683c5",
-    "chapters/luong-hai-lam/seo-setsubi-pro.md.tmp.13045.fffeb6ea114d",
-    "characters/luong-hai-lam/pham-thi-thanh-thao.md.tmp.13045.5f96f3237787",
-    "characters/luong-hai-lam/pham-thi-thanh-thao.md.tmp.13045.a1afa9106a5f",
-    "themes/luong-hai-lam/quy-mo-mot-minh.md",
-    "characters/luong-hai-lam/nomoto.md",
-    "concepts/tarot/truc-chat-so.md",
-    "Untitled.canvas",
-    "2026-08-10.md",
-    "people/a-e-waite.md",
-    "outputs/trai-bai-quan-he-2026-08-08.md.tmp.897699.0bf50d756cc3",
-    "concepts/literature/su-menh-nha-van.md",
-    "concepts/literature/hien-thuc-to-ve-vien-vong.md",
-    "concepts/literature/chuc-nang-cuu-roi-van-chuong.md",
-    "concepts/jung/chia-tay-freud.md",
-    "concepts/tool-sales/sales-form-pipeline.md",
-    "concepts/swe/graceful-degradation.md",
-    "topics/tam-ly-hoc-phan-tich-jung.md",
-    "concepts/tool-sales/operator-leverage.md",
-    "concepts/tool-sales/ai-prospecting.md",
-    "concepts/tool-sales/submission-verification.md",
-    "concepts/tool-sales/form-understanding.md",
-    "concepts/tool-sales/ng-detection.md",
-    "concepts/swe/unicode-normalization-boundary.md",
-    "concepts/swe/connection-pool-budget.md",
-    "concepts/swe/tiered-refresh-cadence.md",
-    "concepts/swe/shared-db-no-callback.md",
-    "concepts/swe/pure-core-gated-io.md",
-    "concepts/swe/rescue-ladder.md"
+    "sources/sao-chung-ta-lai-ngu.md.tmp.11887.5fee31dfd790",
+    "people/daniel-kripke.md",
+    "people/daniel-kripke.md.tmp.11887.c74c6ff1bd56",
+    "people/rosalind-cartwright.md",
+    "people/rosalind-cartwright.md.tmp.11887.cbb8737d8860",
+    "people/maiken-nedergaard.md",
+    "people/eve-van-cauter.md",
+    "people/robert-stickgold.md",
+    "people/david-dinges.md",
+    "people/william-dement.md",
+    "concepts/neuro/ngung-tho-khi-ngu.md",
+    "concepts/neuro/thieu-ngu-va-trao-doi-chat.md",
+    "concepts/neuro/thoi-gian-vao-hoc-muon.md",
+    "concepts/neuro/thuoc-ngu-an-than.md",
+    "concepts/neuro/cbt-i.md",
+    "concepts/neuro/ruou-uc-che-rem.md",
+    "concepts/neuro/than-nhiet-trung-tam.md",
+    "concepts/neuro/anh-sang-xanh.md",
+    "concepts/neuro/beta-amyloid.md",
+    "concepts/neuro/kich-hoat-giao-cam-man-tinh.md",
+    "concepts/neuro/mat-ngu-di-truyen-gay-chet-nguoi.md",
+    "concepts/neuro/mong-du.md",
+    "concepts/neuro/ngu-ru.md",
+    "concepts/neuro/orexin.md",
+    "concepts/neuro/mat-truong-luc-rem.md",
+    "concepts/neuro/lien-ket-xa-trong-rem.md",
+    "concepts/neuro/tri-lieu-qua-dem.md",
+    "Untitled.canvas"
   ]
 }

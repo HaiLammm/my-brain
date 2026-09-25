@@ -17,7 +17,7 @@ raw_paths:
 provenance: replayable
 id: sources/review-seo
 created: 2026-05-20
-updated: 2026-05-20
+updated: 2026-08-11
 sources:
   - {provider: pdf, fetched_at: "2026-05-20T07:27:25Z"}
 ingest_status: linted
@@ -63,6 +63,9 @@ Tài liệu hướng dẫn nội bộ của Setsubi Pro tổng hợp các tiêu 
 - [[sources/huong-dan-viet-bai-seo-cho-setsubi-pro]]
 - [[sources/ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro]]
 - [[sources/cau-truc-3-phan-bai-seo-troubleshooting]]
+- [[sources/rules-toi-uu-seo-cho-bai-viet-setsubi-pro]] — mặt kỹ thuật của cùng site: tài liệu này chấm nội dung, tài liệu kia chấm markup và hiển thị trên SERP
+- [[sources/bo-kich-ban-email-marketing-wa-craft]] — cùng tác giả, cùng cách làm: bộ tiêu chí viết trước, nội dung sản xuất sau
+- [[sources/ban-do-seo-setsubi-pro-net]] — bộ tiêu chí này chấm nội dung, bản đồ kia chấm hạ tầng
 
 ## People
 

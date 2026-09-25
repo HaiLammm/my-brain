@@ -34,6 +34,10 @@ Giấc ngủ NREM (Non-Rapid Eye Movement) là giai đoạn chiếm ~75–80% t�
 - [[concepts/neuro/giac-ngu-rem]]
 - [[concepts/neuro/cung-co-tri-nho]]
 - [[concepts/neuro/adenosine]]
+- [[concepts/neuro/dot-song-nao-ngu]]
+- [[concepts/neuro/mong-du]]
+- [[concepts/neuro/beta-amyloid]]
+- [[concepts/neuro/ngung-tho-khi-ngu]]
 
 ## Mentioned in
 

@@ -13,6 +13,7 @@ created: 2026-05-16
 updated: 2026-05-16
 key_sources:
   - sources/ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro
+  - sources/list-keyword-seo-setsubi-pro-thang-8-va-9
 related_concepts: []
 ---
 
@@ -28,6 +29,7 @@ Lập lịch xuất bản theo ưu tiên và pillar là cách sắp thứ tự �
 ## Key sources
 
 - [[sources/ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro]]
+- [[sources/list-keyword-seo-setsubi-pro-thang-8-va-9]] — biến thể nhịp ngày thay cho nhịp tuần, gom theo nhóm thiết bị
 
 ## Related concepts
 

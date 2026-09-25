@@ -33,6 +33,9 @@ Củng cố trí nhớ (memory consolidation) là quá trình chuyển trí nh�
 
 - [[concepts/neuro/giac-ngu-nrem]]
 - [[concepts/neuro/giac-ngu-rem]]
+- [[concepts/neuro/dot-song-nao-ngu]]
+- [[concepts/neuro/lien-ket-xa-trong-rem]]
+- [[concepts/neuro/ruou-uc-che-rem]]
 
 ## Mentioned in
 

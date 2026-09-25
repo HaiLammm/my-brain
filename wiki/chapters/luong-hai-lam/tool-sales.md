@@ -3,7 +3,7 @@ id: chapters/luong-hai-lam/tool-sales
 title: "Chương 5: tool_sales — ba mươi người thành năm"
 type: chapter
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-08-11
 book: luong-hai-lam
 number: 5
 ---
@@ -49,9 +49,9 @@ Sau tailor_project phình ra ba lần và DaNangNavi phủ 100% yêu cầu rồi
 
 ## Open questions
 
-- **Chương này thuộc thì nào?** Tài liệu (20/06/2026) mô tả mã đã chạy với 7 epic hoàn tất, nhưng theo bạn thì tool sales là việc *sắp làm* sau WaCraft và BPO. Đây là giai đoạn hai của cùng hệ thống, hay một bản mới?
-- **Năm điều phối viên là ai?** Hệ thống thiết kế cho một đội vận hành. Đăng, Thảo, bác Nomoto có nằm trong số đó không — và ai là người thực sự bấm nút mỗi ngày?
-- Ai dùng kết quả? 12.000 lượt gửi/ngày để bán cái gì, cho ai?
+- ~~**Ai dùng kết quả? 12.000 lượt gửi/ngày để bán cái gì, cho ai?**~~ **Đã rõ (11/08/2026):** bán **dịch vụ thuê ngoài của chính Wa+Craft** — EC Operations, BPO, Digital Marketing, Video Production, Sales & CRM — cho doanh nghiệp Nhật ngành cơ khí, chế tạo, xử lý chất thải công nghiệp và kiểm định/nghiên cứu. Nội dung gửi đi nằm ở [[sources/bo-kich-ban-email-marketing-wa-craft]].
+- ~~**Chương này thuộc thì nào?**~~ **Đã rõ (11/08/2026, khảo sát trực tiếp repo `~/Projects/tool_sales`):** chương này thuộc **thì hiện tại tiếp diễn**, và đi xa hơn tài liệu tháng 6 rất nhiều. Repo có **435 commit trong 54 ngày** (18/06 → 10/08/2026), **49 migration Alembic** (tài liệu tháng 6 ghi 23), **2.928 hàm test**, **114 tài liệu story** — và quan trọng nhất: **14 báo cáo phân tích lỗi gửi thật** rải từ 07/07 đến 05/08 kèm thư mục `recordings/` nặng 1,2 GB. Cỗ máy không chỉ xây xong mà **đã gửi thật, thất bại thật, và được sửa theo từng đợt thất bại suốt tháng 7 và đầu tháng 8**. Vậy "sắp làm" phải đọc là *chiến dịch chào hàng mới* đang chuẩn bị, chứ không phải cỗ máy. Số liệu đầy đủ ở [[outputs/lo-trinh-tu-chu-tool-sales]].
+- **Năm điều phối viên là ai?** **Biết một người (bạn cung cấp 11/08/2026): chính Lâm vận hành chiến dịch.** Email thì ký tên bác Nomoto — người ký tên và người bấm nút là hai người khác nhau. Còn treo: có ai vận hành cùng Lâm không, hay con số năm vẫn nằm trên giấy?
 - Hai câu hỏi mở từ chính tài liệu vẫn chưa có lời đáp: ngưỡng tốt nghiệp vài trăm lần khớp dựa trên cơ sở nào, và làm sao đo được tỷ lệ NG bỏ sót khi bỏ sót theo định nghĩa là thứ không phát hiện được.
 
 ## Notes
@@ -72,4 +72,18 @@ Nếu [[themes/luong-hai-lam/quy-mo-mot-minh]] đúng, thì chương này là ch
 
 Bảng đầy đủ bốn dấu vết B Productions trong wiki nằm ở [[people/quan]].
 
-Chương dựng từ 1 nguồn và 6 khái niệm đã có trong wiki. Thông tin rằng tool sales nằm trong kế hoạch sắp tới do bạn cung cấp ngày 10/08/2026.
+**Nửa còn lại của chương, tìm thấy ngày 11/08/2026.** Suốt chương này wiki chỉ có cỗ máy: hàng đợi, bộ dò NG, thang xác minh. Nay có thứ được gửi đi — [[sources/bo-kich-ban-email-marketing-wa-craft]], bảng kịch bản do [[characters/luong-hai-lam/quan]] biên soạn và [[characters/luong-hai-lam/nomoto]] duyệt.
+
+Đặt cạnh nhau thì chương 5 hiện rõ hình dạng thật của nó: **ba người, ba lớp của cùng một việc.** Lâm xây cỗ máy gửi **và vận hành nó** (bạn cung cấp 11/08/2026), Quân viết lời, bác Nomoto cho mượn tên và duyệt lần cuối. Trước đó chương này chỉ có một nhân vật.
+
+**Vai của Lâm trong chương này vì thế là hai, không phải một.** Người viết ra hệ thống "một người trông được nhiều việc" cũng chính là người ngồi trông. Bản thiết kế nói tới khoảng năm điều phối viên; hiện wiki mới xác nhận được một cái tên, và đó là tên người xây. Chưa đủ căn cứ để nói chỉ có Lâm — nhưng đây là chỗ cần hỏi tiếp, vì nếu đúng thì mô-típ [[themes/luong-hai-lam/quy-mo-mot-minh]] có bằng chứng mới ở dạng khác hẳn ba bằng chứng cũ: không phải một người *xây* thay cả đội, mà một người *vận hành* thay cả đội.
+
+**Một mô-típ ứng viên, chưa tạo trang.** Đây là lần thứ hai lead team IT làm việc nằm ngoài mảng kỹ thuật: chương 3 viết bài SEO theo tiêu chí của Quân, giờ vận hành chiến dịch chào hàng với nội dung do Quân viết và tên do bác Nomoto ký. Hai bằng chứng là ngưỡng tối thiểu để dựng chủ đề, nhưng cả hai đều xoay quanh cùng một cặp người — ghi vào đây trước, chờ bằng chứng thứ ba ở mảng khác.
+
+Một chi tiết nhỏ nhưng xác nhận đúng kênh: ngay cạnh ô preview text, bảng ghi *"(gần như không dùng nếu gửi form)"* — người viết nội dung biết rõ nó sẽ đi qua form liên hệ chứ không vào hộp thư.
+
+**Điều mà bản thiết kế không nói, chỉ repo nói (khảo sát 11/08/2026).** Tài liệu tháng 6 trình bày tool_sales như một kiến trúc được nghĩ trước rồi thực hiện: 7 epic, 38 story, các nguyên tắc viết ngay từ dòng đầu. Repo kể một câu chuyện khác ở phần khó nhất. **Epic 5 — khâu gửi form — nở từ 6 story lên 43.** Và tệp lớn nhất hệ thống, `workers/worker/submission/submit.py` với 6.086 dòng, sửa 54 lần, hoá ra **không phải một thuật toán mà là một chồng lớp phòng thủ**: trong 119 hàm cấp cao của nó, phần lớn là công tắc bật/tắt cho từng tình huống đã thực sự gặp — cookie chắn nút gửi, dropdown tự vẽ, ô bắt buộc lộ ra sau khi cuộn, cú bấm không phản hồi, trang xác nhận giữa đường.
+
+Nói cách khác: **phần được cắt gọn thành nguyên tắc là phần biết trước; phần đối diện với website người khác thì phải học bằng cách gửi hỏng.** 14 báo cáo lỗi từ 07/07 đến 05/08 là học phí, và mỗi story 5-x sau đó là bài học được ghi thành mã. Đây là chi tiết làm chương 5 khác hai chương trước không phải ở thái độ với phạm vi, mà ở chỗ lần đầu có một đối tượng **không chịu tuân theo thiết kế**: internet của người khác.
+
+Chương dựng từ 1 nguồn và 6 khái niệm đã có trong wiki. Thông tin rằng tool sales nằm trong kế hoạch sắp tới do bạn cung cấp ngày 10/08/2026; các số liệu repo ở trên do khảo sát trực tiếp ngày 11/08/2026, chi tiết tại [[outputs/lo-trinh-tu-chu-tool-sales]].

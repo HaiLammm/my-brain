@@ -25,7 +25,7 @@ raw_paths:
   - raw/sources/projects/tool-sales/project-context.md
 id: sources/tool-sales-architecture-docs
 created: 2026-08-07
-updated: 2026-08-07
+updated: 2026-08-11
 year: 2026
 provenance: replayable
 verify_status: skipped
@@ -78,6 +78,8 @@ Bộ tài liệu kiến trúc của `tool_sales` — hệ thống tự động g
 ## Related sources
 
 - [[sources/kien-truc-he-thong-lo-trinh-mo-rong-quy-mo-cho-he-thong-hang-trieu-nguoi-dung]]
+- [[sources/bo-kich-ban-email-marketing-wa-craft]] — **nội dung mà hệ thống này gửi đi**: kịch bản tiếng Nhật chào dịch vụ thuê ngoài của Wa+Craft, ký tên Director công ty
+- [[sources/ho-so-cong-ty-wa-craft]] — hồ sơ công ty vận hành cỗ máy này; dòng "tự động hóa bằng AI (ChatGPT API / RPA / Python)" trong hồ sơ chính là hệ thống được mô tả ở đây
 
 ## People
 
@@ -92,5 +94,20 @@ _(không có tác giả cụ thể — tài liệu nội bộ dự án)_
 ## Notes
 
 Bộ tài liệu này được sinh bằng workflow Document Project (deep scan, 2026-06-20) và mô tả **mã thực tế**, không phải ý định thiết kế; nguồn ý định nằm ở `_bmad-output/planning-artifacts/architecture/` trong repo gốc.
+
+**Tài liệu này đã lạc hậu so với mã (đo lại 2026-08-11).** Khảo sát trực tiếp repo `~/Projects/tool_sales` cho thấy hệ thống đi xa hơn ảnh chụp tháng 6 đáng kể — nên khi tra cứu, hãy coi trang này là *bản thiết kế thời điểm 20/06*, không phải trạng thái hiện tại:
+
+| Hạng mục | Tài liệu (20/06/2026) | Đo lại (11/08/2026) |
+|---|---|---|
+| Migration Alembic | 23 (`0023_prospecting_enrich` là HEAD) | 49 |
+| Story Epic 5 (gửi form) | 6 | 43 |
+| Tổng story artifact | 38 | 114 |
+| Lịch sử commit | — | 435 commit, 18/06 → 10/08/2026 |
+| Test | 37 tệp (workers) | 2.928 hàm test / 266 tệp |
+| Vận hành thật | chưa có bằng chứng | 14 báo cáo lỗi gửi (07/07 → 05/08), `recordings/` 1,2 GB |
+
+Hai "known gap" mà tài liệu ghi là còn treo — `_submit()` chưa hiện thực browser và LLM analyzer chưa nối — **đã được lấp**: repo có `workers/worker/submission/submit.py` (6.086 dòng) và `workers/worker/form/{llm,claude_analyzer,gpt,fallback_analyzer}.py`.
+
+Lộ trình đọc hiểu và làm chủ hệ thống này: [[outputs/lo-trinh-tu-chu-tool-sales]].
 
 Không sao chép `docs/data/` vào `raw/` — thư mục đó chứa 65 MB CSV danh sách công ty và email thật.

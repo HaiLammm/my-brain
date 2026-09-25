@@ -42,6 +42,8 @@ Phép thử: bộ kiểm thử mặc định chạy được trên máy trắng,
 
 ## Mentioned in
 
+- [[outputs/lo-trinh-tu-chu-tool-sales]] — lộ trình đọc hiểu và làm chủ hệ thống tool_sales (11/08/2026)
+
 ## Notes
 
 Lợi ích thật không phải là "test nhanh hơn" mà là **test được viết ra**. Khi bộ kiểm thử cần Docker và cơ sở dữ liệu để chạy, các trường hợp biên hiếm gặp sẽ không bao giờ được viết, vì chi phí dựng bối cảnh cho mỗi trường hợp quá cao. Khi lõi là hàm thuần, thêm một trường hợp biên chỉ tốn vài dòng.

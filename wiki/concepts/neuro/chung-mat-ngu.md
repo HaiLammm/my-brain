@@ -35,6 +35,12 @@ Chứng mất ngủ (insomnia) là rối loạn giấc ngủ phổ biến nhất
 - [[concepts/neuro/mat-ngu]]
 - [[concepts/neuro/caffeine]]
 - [[concepts/neuro/ap-luc-ngu]]
+- [[concepts/neuro/mat-ngu-di-truyen-gay-chet-nguoi]]
+- [[concepts/neuro/kich-hoat-giao-cam-man-tinh]]
+- [[concepts/neuro/anh-sang-xanh]]
+- [[concepts/neuro/than-nhiet-trung-tam]]
+- [[concepts/neuro/cbt-i]]
+- [[concepts/neuro/thuoc-ngu-an-than]]
 
 ## Mentioned in
 

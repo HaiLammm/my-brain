@@ -58,6 +58,10 @@ findings: []
 ## Related sources
 
 - [[sources/cau-truc-3-phan-bai-seo-troubleshooting]]
+- [[sources/rules-toi-uu-seo-cho-bai-viet-setsubi-pro]] — quy tắc kỹ thuật để bài xuất bản theo kế hoạch này hiển thị đủ trên Google
+- [[sources/list-keyword-seo-setsubi-pro-thang-8-va-9]] — backlog tháng 8 và 9 triển khai tiếp kế hoạch này ở nhịp ngày
+- [[sources/keyword-map-setsubi-pro]] — bản đồ từ khóa chi tiết triển khai kế hoạch này
+- [[sources/ban-do-seo-setsubi-pro-net]] — hiện trạng thực thi của kế hoạch này sau một năm
 
 ## People
 

@@ -8,10 +8,12 @@ tags:
   - neuroscience
   - sleep
   - brain-health
-id: TODO
+id: concepts/neuro/he-lymph-nao
 created: 2026-05-18
-updated: 2026-05-18
-key_sources: []
+updated: 2026-08-12
+key_sources:
+  - sources/dr-daniel-amen-on-adhd-brain-health-and-trauma
+  - sources/sao-chung-ta-lai-ngu
 related_concepts: []
 ---
 
@@ -26,12 +28,17 @@ Hệ lymph não (glymphatic system) là hệ thống dọn dẹp chất thải c
 ## Key sources
 
 - [[sources/dr-daniel-amen-on-adhd-brain-health-and-trauma]]
+- [[sources/sao-chung-ta-lai-ngu]] — mô tả cơ chế chi tiết qua công trình của
+  [[people/maiken-nedergaard]]: tế bào thần kinh đệm co lại tới 60% trong giấc ngủ NREM,
+  và nhịp mạch của giấc ngủ sâu tăng dòng chảy chất đào thải lên 10–20 lần.
 
 ## Related concepts
 
 - [[concepts/neuro/suc-khoe-nao]]
 - [[concepts/neuro/giac-ngu-rem]]
 - [[concepts/neuro/giac-ngu-nrem]]
+- [[concepts/neuro/beta-amyloid]]
+- [[concepts/neuro/ngung-tho-khi-ngu]]
 
 ## Mentioned in
 

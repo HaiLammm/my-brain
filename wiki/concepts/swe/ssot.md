@@ -17,6 +17,8 @@ related_concepts:
   - concepts/tailor/deterministic-guardrails
   - concepts/tailor/pattern-engine
   - concepts/swe/transition-as-video
+  - concepts/ops/chong-thuoc-nhan-hoa
+  - concepts/ops/chuan-hoa-bang-tai-lieu
 ---
 
 ## Definition
@@ -32,11 +34,15 @@ Single Source of Truth (SSOT — Nguồn Sự thật Duy nhất) là nguyên t�
 
 - [[sources/tailor-project-prd]]
 - [[sources/epic-breakdown-tailor-project]]
+- [[sources/ban-do-seo-setsubi-pro-net]] — luật "sửa lỗi ở nguồn sinh bài, không vá từng file markdown"
 
 ## Related concepts
 
 - [[concepts/tailor/deterministic-guardrails]]
 - [[concepts/tailor/pattern-engine]]
 - [[concepts/swe/transition-as-video]]
+- [[concepts/swe/sua-tai-nguon-sinh]]
+- [[concepts/ops/chong-thuoc-nhan-hoa]] — cùng nguyên tắc ở tầng con người: đừng để sự thật chỉ nằm trong đầu một ai
+- [[concepts/ops/chuan-hoa-bang-tai-lieu]] — cách hiện thực nguyên tắc đó bằng tài liệu vận hành
 
 ## Notes

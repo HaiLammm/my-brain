@@ -17,6 +17,8 @@ related_concepts:
   - concepts/tool-sales/sales-form-pipeline
   - concepts/tool-sales/ng-detection
   - concepts/swe/tiered-refresh-cadence
+  - concepts/ops/bpo-back-office
+  - concepts/ops/chong-thuoc-nhan-hoa
 ---
 
 ## Definition
@@ -42,8 +44,12 @@ Hệ quả trực tiếp: hệ thống không tối ưu cho việc làm thay con
 - [[concepts/tool-sales/sales-form-pipeline]]
 - [[concepts/tool-sales/ng-detection]]
 - [[concepts/swe/tiered-refresh-cadence]]
+- [[concepts/ops/bpo-back-office]] — mô hình kinh doanh mà đòn bẩy này phục vụ
+- [[concepts/ops/chong-thuoc-nhan-hoa]] — mặt trái cần canh: hệ thống nâng sức một người, nhưng nếu chỉ một người hiểu hệ thống thì rủi ro quay lại
 
 ## Mentioned in
+
+- [[outputs/lo-trinh-tu-chu-tool-sales]] — lộ trình đọc hiểu và làm chủ hệ thống tool_sales (11/08/2026)
 
 ## Notes
 

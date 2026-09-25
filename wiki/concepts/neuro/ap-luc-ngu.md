@@ -34,6 +34,9 @@ related_concepts: []
 - [[concepts/neuro/adenosine]]
 - [[concepts/neuro/caffeine]]
 - [[concepts/neuro/nhip-sinh-hoc]]
+- [[concepts/neuro/giac-ngu-hai-pha]]
+- [[concepts/neuro/no-ngu]]
+- [[concepts/neuro/cbt-i]]
 
 ## Mentioned in
 

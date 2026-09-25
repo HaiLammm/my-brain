@@ -10,7 +10,7 @@ tags:
   - pipeline
 id: concepts/tool-sales/sales-form-pipeline
 created: 2026-08-07
-updated: 2026-08-07
+updated: 2026-08-11
 key_sources:
   - sources/tool-sales-architecture-docs
 related_concepts:
@@ -37,6 +37,7 @@ Chuỗi sáu bước đưa một dòng dữ liệu thô về doanh nghiệp thà
 ## Key sources
 
 - [[sources/tool-sales-architecture-docs]]
+- [[sources/bo-kich-ban-email-marketing-wa-craft]] — nội dung được đường ống này điền vào form
 
 ## Related concepts
 
@@ -46,6 +47,8 @@ Chuỗi sáu bước đưa một dòng dữ liệu thô về doanh nghiệp thà
 - [[concepts/swe/db-backed-job-queue]]
 
 ## Mentioned in
+
+- [[outputs/lo-trinh-tu-chu-tool-sales]] — lộ trình đọc hiểu và làm chủ hệ thống tool_sales (11/08/2026)
 
 ## Notes
 

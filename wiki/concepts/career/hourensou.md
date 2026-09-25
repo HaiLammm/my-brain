@@ -16,6 +16,7 @@ key_sources:
   - sources/huong-dan-viet-cv-pr-self-pr-tieng-nhat
 related_concepts:
   - concepts/career/jiko-pr
+  - concepts/ops/chong-thuoc-nhan-hoa
 ---
 
 ## Definition
@@ -34,6 +35,7 @@ Hourensou (報連相) là từ ghép của ba nguyên tắc giao tiếp công s�
 ## Related concepts
 
 - [[concepts/career/jiko-pr]]
+- [[concepts/ops/chong-thuoc-nhan-hoa]] — cùng nền văn hóa quản trị Nhật: chuẩn hóa để thông tin không nằm riêng ở một người
 
 ## Mentioned in
 

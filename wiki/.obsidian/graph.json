@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "Lương Hải Lâm",
+  "search": "seo",
   "showTags": true,
   "showAttachments": true,
   "hideUnresolved": true,
@@ -17,6 +17,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 1.4446411673298893,
+  "scale": 0.6420627410355058,
   "close": false
 }

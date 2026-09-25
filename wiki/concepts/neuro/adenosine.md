@@ -29,6 +29,7 @@ Adenosine là nucleoside tích tụ trong não khi thức, tạo ra áp lực ng
 - [[concepts/neuro/ap-luc-ngu]]
 - [[concepts/neuro/caffeine]]
 - [[concepts/neuro/mat-ngu]]
+- [[concepts/neuro/no-ngu]]
 
 ## Mentioned in
 

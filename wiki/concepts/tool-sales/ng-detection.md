@@ -44,6 +44,8 @@ Quyết định định hình toàn bộ thiết kế: bộ dò chạy **hoàn t
 
 ## Mentioned in
 
+- [[outputs/lo-trinh-tu-chu-tool-sales]] — lộ trình đọc hiểu và làm chủ hệ thống tool_sales (11/08/2026)
+
 ## Notes
 
 **Vì sao không dùng LLM — đây là bài học chuyển được sang bài toán khác.** Ba lý do, xếp theo sức nặng:

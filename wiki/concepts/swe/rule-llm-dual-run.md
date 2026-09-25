@@ -45,6 +45,8 @@ LLM ở đây đóng vai **người dạy**, không phải người làm. Chi ph
 
 ## Mentioned in
 
+- [[outputs/lo-trinh-tu-chu-tool-sales]] — lộ trình đọc hiểu và làm chủ hệ thống tool_sales (11/08/2026)
+
 ## Notes
 
 Điểm yếu nằm ở giả định "LLM đúng khi hai bên lệch nhau". Nếu LLM sai một cách có hệ thống trên một lớp đầu vào nào đó, pattern sẽ **ghi cái sai đó vào luật** rồi tốt nghiệp với nó — và từ đó không còn nguồn nào để phát hiện nữa. Cần một kênh kiểm chứng độc lập với LLM, dù chỉ là lấy mẫu ngẫu nhiên cho người xem, trước khi cho phép tốt nghiệp.

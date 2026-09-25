@@ -43,6 +43,8 @@ Bài toán ánh xạ các ô nhập của một form liên hệ do người khá
 
 ## Mentioned in
 
+- [[outputs/lo-trinh-tu-chu-tool-sales]] — lộ trình đọc hiểu và làm chủ hệ thống tool_sales (11/08/2026)
+
 ## Notes
 
 Chữ ký form là chi tiết nhỏ nhưng làm cho cả kiến trúc chạy được: nó biến một tập vô hạn các form lạ thành một tập hữu hạn các **mẫu** đã gặp. Không có nó thì không phân biệt được "trường hợp mới" với "trường hợp cũ", nên tầng giữa của circuit breaker mất ý nghĩa và cơ chế tốt nghiệp cũng không đo được gì.

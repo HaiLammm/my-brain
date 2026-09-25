@@ -25,6 +25,7 @@ Hệ thống phân cấp heading (H1–H4) trong bài viết SEO. H1 duy nhất 
 ## Key sources
 
 - [[sources/review-bai-seo-cho-setsubi-pro]]
+- [[sources/ban-do-seo-setsubi-pro-net]] — thiếu heading tóm kết khiến bài mất khả năng được AI trích
 
 ## Related concepts
 

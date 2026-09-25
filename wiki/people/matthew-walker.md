@@ -30,5 +30,8 @@ Matthew Walker PhD là nhà khoa học thần kinh giấc ngủ hàng đầu th�
 - [[concepts/neuro/giac-ngu-nrem]]
 - [[concepts/neuro/cung-co-tri-nho]]
 - [[concepts/neuro/mat-ngu]]
+- [[concepts/neuro/tri-lieu-qua-dem]]
+- [[concepts/neuro/beta-amyloid]]
+- [[concepts/neuro/no-ngu]]
 
 ## Notes

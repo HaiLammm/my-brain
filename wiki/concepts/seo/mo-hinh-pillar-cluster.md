@@ -13,6 +13,9 @@ created: 2026-05-16
 updated: 2026-05-16
 key_sources:
   - sources/ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro
+  - sources/review-seo
+  - sources/list-keyword-seo-setsubi-pro-thang-8-va-9
+  - sources/keyword-map-setsubi-pro
 related_concepts: []
 ---
 
@@ -29,6 +32,9 @@ Mô hình pillar-cluster là cách tổ chức nội dung bằng một vài nhó
 
 - [[sources/ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro]]
 - [[sources/review-seo]]
+- [[sources/list-keyword-seo-setsubi-pro-thang-8-va-9]] — mở thêm cụm ăng-ten, máy giặt và máy rửa bát
+- [[sources/keyword-map-setsubi-pro]] — rút từ 3 pillar xuống 2, dự trù 9 bài hub tổng hợp
+- [[sources/ban-do-seo-setsubi-pro-net]] — hub `/water/` và `/electricity/`; 73 bài chưa có bản đồ spoke nào
 
 ## Related concepts
 

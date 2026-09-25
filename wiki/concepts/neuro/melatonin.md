@@ -32,6 +32,9 @@ Melatonin là hormone do tuyến tùng tiết ra khi trời tối, đóng vai tr
 
 - [[concepts/neuro/nhip-sinh-hoc]]
 - [[concepts/neuro/jet-lag]]
+- [[concepts/neuro/chronotype]]
+- [[concepts/neuro/anh-sang-xanh]]
+- [[concepts/neuro/than-nhiet-trung-tam]]
 
 ## Mentioned in
 

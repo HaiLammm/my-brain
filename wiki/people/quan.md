@@ -11,7 +11,7 @@ tags:
   - setsubi-pro
 id: people/quan
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-08-11
 key_sources:
   - sources/review-seo
   - sources/review-bai-seo-cho-setsubi-pro
@@ -26,6 +26,8 @@ Lead team marketing tại công ty Wa+Craft. **Người soạn thảo bộ tiêu
 
 B Productions **không phải cái tên mới trong wiki này**. Xem mục Notes — nó đã nằm sẵn ở bốn chỗ khác nhau từ trước, và một trong số đó là bằng chứng cứng.
 
+**Không chỉ SEO.** Từ 11/08/2026 wiki có thêm [[sources/bo-kich-ban-email-marketing-wa-craft]] — bảng tính bảy sheet Quân biên soạn cho chiến dịch chào hàng ra thị trường Nhật: phương pháp chấm tiêu đề email, bộ quy tắc cold email, khung nội dung cho năm dòng dịch vụ và hàng chục kịch bản tiếng Nhật. Mảng phụ trách vì thế rộng hơn hình dung ban đầu: **SEO là một phần, chào hàng qua email là phần khác**, và cả hai đều được viết ra thành bộ tiêu chí trước khi sản xuất.
+
 Vai trò trong wiki lớn hơn số trang mang tên Quân. Toàn bộ 20 bài SEO tiếng Nhật ở `wiki/outputs/seo-*` đều được viết và chấm theo bộ tiêu chí này — checklist 100 điểm với 36 tiêu chí, quy tắc mật độ từ khóa 1–3%, khung `確認 → 理解ゾーン → 対応の判断`, cùng loạt nhận xét về giọng văn mà checklist không đo được. Nói cách khác, Quân là tác giả của **luật chơi** cho một mảng lớn nội dung trong wiki này.
 
 Và là tác giả theo nghĩa mạnh: bộ tiêu chí này **do Quân soạn từ đầu**, không phải nhận hay biên soạn lại từ phía khách hàng Setsubi-pro (bạn xác nhận 10/08/2026).
@@ -35,6 +37,8 @@ Và là tác giả theo nghĩa mạnh: bộ tiêu chí này **do Quân soạn t�
 - [[sources/review-seo]] — checklist 100 điểm, 36 tiêu chí chia hai nhóm Basic và Additional SEO
 - [[sources/review-bai-seo-cho-setsubi-pro]] — vòng review thứ hai, nhắm vào những gì checklist không đo được
 - [[sources/cau-truc-3-phan-bai-seo-troubleshooting]] — khung 3 phần cho bài chẩn đoán hỏng hóc
+- [[sources/bo-kich-ban-email-marketing-wa-craft]] — bộ kịch bản email chào hàng: CUE-DIVE, Rule of One, quy tắc cold email, khung nội dung năm dòng dịch vụ
+- [[sources/ho-so-cong-ty-wa-craft]] — hồ sơ chính thức của công ty nơi người này dẫn mảng marketing
 
 ## Key concepts
 
@@ -96,4 +100,15 @@ Cách đọc khớp được cả hai dữ kiện bạn đưa: **Quân tự vi�
 
 Lớp nhân vật tương ứng: [[characters/luong-hai-lam/quan]] — Quân trong dòng chảy câu chuyện của cuốn sách đời [[characters/luong-hai-lam/nhan-vat-luong-hai-lam]].
 
-**Nguồn của trang này:** lời bạn kể ngày 10/08/2026. Chưa có tài liệu nào trong wiki ghi tên Quân.
+### Bốn khái niệm mới ngoài cụm SEO (11/08/2026)
+
+Từ [[sources/bo-kich-ban-email-marketing-wa-craft]]:
+
+- [[concepts/marketing/cue-dive-method]] — bảy thuộc tính chấm tiêu đề và preview text
+- [[concepts/marketing/rule-of-one]] — năm tầng "một" phải chốt trước khi viết
+- [[concepts/marketing/khung-email-story-problem-impact]] — bố cục sáu tầng cho thân email B2B
+- [[concepts/marketing/quy-tac-cold-email]] — bộ quy tắc tách đôi cold email và email cho người đăng ký
+
+Cùng một lối làm việc với cụm SEO: dựng bộ tiêu chí thành văn bản trước, rồi mới sản xuất nội dung theo nó.
+
+**Nguồn của trang này:** phần lớn là lời bạn kể ngày 10/08/2026. **Cập nhật 11/08/2026:** đã có tài liệu đầu tiên ghi tên Quân — [[sources/bo-kich-ban-email-marketing-wa-craft]] có cột *"Nội dung email Quân đề xuất／クアンさんの提案したスクリプト"* đề ngày 08/08/2026. Câu "chưa có tài liệu nào trong wiki ghi tên Quân" ở bản trước của trang này nay không còn đúng; giữ lại vết sửa vì nó đánh dấu thời điểm nhân vật này chuyển từ lời kể sang có chứng cứ văn bản.

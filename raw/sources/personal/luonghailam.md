@@ -1,7 +1,7 @@
 Họ và tên : Lương Hải Lâm
   Ngày sinh : 12/07/2001
   Giới tính: Nam
-  Học tập : Đại học Đông Á — Tốt nghiệp [năm]
+  Học tập : Đại học Đông Á — Tốt nghiệp [2026]
   Chuyên ngành: Công nghệ thông tin / Công nghệ phần mềm
 
   ## Kinh nghiệm làm việc
@@ -71,3 +71,13 @@ Họ và tên : Lương Hải Lâm
 
   ## Tiếng Anh
   Giao tiếp cơ bản — đọc technical docs tốt
+
+## Kỹ năng kỹ thuật  
+    - Backend: Python trình độ tạm được chưa thực sự hiểu os tốt , FastAPI, REST API design ở mức cơ bản (asyncio, Celery chưa thực sự giỏi)
+    - Frontend: Next.js 16, TypeScript, React, Zustand, TanStack Query
+    - Database: PostgreSQL, MongoDB, Redis, MySQL
+    - Search: Meilisearch (cross-language JP↔VN)
+    - Container & Deploy: Docker, Kubernetes
+    - Architecture: Modular Monolith, Event-driven, Multi-tenant RLS
+    - Testing: pytest, @testing-library/react
+    - OS: Linux

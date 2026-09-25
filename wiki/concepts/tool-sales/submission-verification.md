@@ -45,6 +45,8 @@ Hai bước cuối của đường ống, gắn liền nhau vì cùng đối m�
 
 ## Mentioned in
 
+- [[outputs/lo-trinh-tu-chu-tool-sales]] — lộ trình đọc hiểu và làm chủ hệ thống tool_sales (11/08/2026)
+
 ## Notes
 
 Điểm khó nhất không phải kỹ thuật điền form mà là **định nghĩa thế nào là thành công**. Một form gửi đi có thể: được nhận và xử lý; được nhận rồi rơi vào hộp thư không ai đọc; bị bộ lọc chặn im lặng; trả về trang cảm ơn nhưng không lưu gì cả. Từ phía tự động hoá, cả bốn trường hợp trông giống nhau.

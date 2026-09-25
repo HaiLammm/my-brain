@@ -10,7 +10,7 @@ tags:
   - shadow-work
 id: concepts/tarot/murder-of-crows
 created: 2026-08-08
-updated: 2026-08-08
+updated: 2026-08-10
 key_sources:
   - sources/cam-nang-tarot-chuyen-sau
 related_concepts:
@@ -51,4 +51,6 @@ Ba điều chỉnh khi đọc bằng bộ này:
 
 Hình tượng quạ được nguồn giải thích riêng: trong nhiều truyền thống, quạ là loài đứng ở ngưỡng — giữa ngày và đêm, sống và chết, biết và chưa biết — và là loài chim đủ khôn để nhìn thẳng vào thứ các loài khác lảng tránh. Khi trải bài, có thể coi mỗi con quạ như một câu hỏi: *ở đây, điều gì đang bị tránh nhìn?* Đó chính là tinh thần shadow work mà bộ bài sinh ra để phục vụ.
 
-Đây là bộ bài [[people/luong-hai-lam]] đang dùng.
+Đây là bộ bài [[people/luong-hai-lam]] **sở hữu** — chủ bộ bài, không phải người mượn dùng (bạn cung cấp 10/08/2026).
+
+Một hệ quả nhỏ nhưng đáng ghi cho cách đọc [[outputs/trai-bai-quan-he-2026-08-08]]: bộ bài là của người hỏi, và trang trải bài không ghi có người đọc nào khác đứng ngoài. Nhiều khả năng đó là **tự rút và tự đọc cho mình** — *suy luận, không phải điều bạn nói*. Nếu đúng thì mẫu hình lệch ghi ở mục 8 của trang đó (ba lá nặng nhất bị đọc nhẹ đi, lá tốt nhất bị đọc dè dặt) không có ai chặn lại tại chỗ; đó là điều kiện của mọi lần tự đọc, không phải lỗi riêng của lần này.

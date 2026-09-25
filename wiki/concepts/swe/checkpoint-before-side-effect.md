@@ -43,6 +43,8 @@ Trực giác thông thường là ghi log sau khi làm xong. Nhưng chính kho�
 
 ## Mentioned in
 
+- [[outputs/lo-trinh-tu-chu-tool-sales]] — lộ trình đọc hiểu và làm chủ hệ thống tool_sales (11/08/2026)
+
 ## Notes
 
 Pattern này **không** cho bạn tính idempotent thật sự — nó chuyển bài toán từ "có thể lặp âm thầm" sang "có thể phát hiện được nghi ngờ lặp". Trạng thái `đang gửi` là mơ hồ theo đúng nghĩa đen: hành động có thể đã tới đích hoặc chưa, và không cách nào biết từ phía mình.

@@ -1,9 +1,9 @@
 ---
 id: characters/luong-hai-lam/huynh-hai-dang
-title: "Huỳnh Hải Đăng (anh Đăng)"
+title: Huỳnh Hải Đăng (anh Đăng)
 type: character
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-08-14
 book: luong-hai-lam
 first_seen: chapters/luong-hai-lam/ung-tuyen-tieng-nhat
 ---
@@ -31,6 +31,8 @@ Nền của Đăng đáng chú ý ở chỗ nó là bản đồ của chính con
 ## Appearances
 
 - [[chapters/luong-hai-lam/ung-tuyen-tieng-nhat]] — hồ sơ được nạp cùng đợt với CV v4 của Lâm
+- [[chapters/luong-hai-lam/bi-mat-thang-tam]] — dự buổi cafe 12/08/2026; đồng quyết định kế hoạch giải thể giả
+- **Ngoài chương (nay thuộc chương 6) — buổi cafe 12/08/2026:** cùng [[characters/luong-hai-lam/pham-thi-thanh-thao]] và [[characters/luong-hai-lam/nomoto]] ngồi cafe với Lâm ([[characters/luong-hai-lam/quan]] vắng mặt). Là một trong hai người phân tích cho Lâm nghe về động cơ và khả năng hành động của Quân — phần phân tích đó được ghi **kèm nhãn suy đoán** tại mục Open questions của trang Quân, không ghi thành sự kiện. Lần đầu Đăng xuất hiện trong sách ở một cảnh đời thường, ngoài vai quản lý.
 
 ## Open questions
 
@@ -40,3 +42,9 @@ Nền của Đăng đáng chú ý ở chỗ nó là bản đồ của chính con
 ## Notes
 
 Lớp tri thức tương ứng: [[people/huynh-hai-dang]], [[sources/huynh-hai-dang-it-ba-qc]].
+
+## Diễn biến (kể ngày 14/08/2026)
+
+**Đồng quyết định kế hoạch giải thể giả.** Cùng [[characters/luong-hai-lam/pham-thi-thanh-thao]] quyết định **giả vờ giải thể Wa+Craft, tuyên bố giải tán nhóm**, rồi kết toán lương và chấm dứt hợp đồng với [[characters/luong-hai-lam/quan]] sau khi bàn giao — lý do đưa ra là visa của [[characters/luong-hai-lam/nomoto]]. Mục đích thật: chặn rủi ro pháp lý từ việc Quân thường xuyên nhắc chuyện làm cho hai anh chị ngay trong phòng sales B Productions. Bối cảnh đầy đủ ở trang [[characters/luong-hai-lam/quan]] và [[characters/luong-hai-lam/pham-thi-thanh-thao]].
+
+Về nhân vật: đây là quyết định nhân sự – pháp lý đầu tiên trong sách có tay Đăng. Rủi ro gốc nằm ở phía chị Thảo (NDA với B Productions); Đăng không có ràng buộc nào với B Productions được ghi nhận, nhưng đứng cùng phía quyết định. Kế hoạch chưa chạy — chưa có mốc thời gian.

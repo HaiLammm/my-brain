@@ -27,6 +27,8 @@ related_concepts: []
 
 - [[concepts/neuro/nhan-tren-cheo]]
 - [[concepts/neuro/giac-ngu-nrem]]
+- [[concepts/neuro/orexin]]
+- [[concepts/neuro/mat-ngu-di-truyen-gay-chet-nguoi]]
 
 ## Mentioned in
 

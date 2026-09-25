@@ -3,7 +3,7 @@ id: outputs/trai-bai-quan-he-2026-08-08
 title: "Trải bài Tấm gương quan hệ — 8/8/2026"
 type: output
 created: 2026-08-09
-updated: 2026-08-09
+updated: 2026-08-10
 confidence: medium
 covers:
   - concepts/tarot/trai-bai-tam-guong-quan-he
@@ -35,6 +35,7 @@ covers:
   - concepts/jung/anima
   - concepts/jung/ca-nhan-hoa
   - people/luong-hai-lam
+  - characters/luong-hai-lam/nhung
   - people/sallie-nichols
   - sources/cam-nang-tarot-chuyen-sau
   - sources/cam-nang-tarot-cho-nguoi-moi-bat-dau
@@ -43,7 +44,7 @@ covers:
 
 # Trải bài Tấm gương quan hệ — 8/8/2026
 
-**Người hỏi:** [[people/luong-hai-lam]] · **Bộ bài:** [[concepts/tarot/murder-of-crows]] · **Ngày rút:** 8/8/2026 · **Hẹn đối chiếu:** 8/9/2026
+**Người hỏi:** [[people/luong-hai-lam]] · **Người kia trong bài:** [[characters/luong-hai-lam/nhung]] *(xác định 10/08/2026 — xem mục 10)* · **Bộ bài:** [[concepts/tarot/murder-of-crows]] (bộ của chính người hỏi) · **Ngày rút:** 8/8/2026 · **Hẹn đối chiếu:** 8/9/2026
 
 **Câu hỏi ban đầu:** coi tarot về chuyện tình yêu trong vòng một tháng tới.
 
@@ -94,7 +95,7 @@ Cột giữa giữ nguyên lời người hỏi, làm dữ liệu để đối c
 | # | Lá | Người hỏi đọc | Nhận xét |
 |---|---|---|---|
 | 1 | Vua Gậy | "người giữ sự kiên định, lí trí, cương quyết của cả 2 và là người đa số sẽ quyết định hành động của 2 đứa" | Đúng phần lớn. Lệch ở chữ "lí trí": Vua Gậy quyết bằng **tầm nhìn và ý chí**, không phải phân tích lạnh (đó là Vua Kiếm). |
-| 2 | 6 Kiếm | "một người mới yêu, đang tìm kiếm sự thật, tìm kiếm bến đỗ cho bản thân mình" | "Tìm bến đỗ" rất sát. "Mới yêu" không có cơ sở. Bỏ sót phần nặng: những thanh kiếm vẫn cắm trên thuyền — người kia đang **rời khỏi** cái gì đó, mang theo, và **chưa tới nơi**. |
+| 2 | 6 Kiếm | "một người mới yêu, đang tìm kiếm sự thật, tìm kiếm bến đỗ cho bản thân mình" | "Tìm bến đỗ" rất sát. ~~"Mới yêu" không có cơ sở.~~ ⟳ **Sửa 10/08/2026:** hai người yêu nhau từ 31/07/2026, tức bài rút vào **ngày thứ tám** — "mới yêu" đúng sự thật, nhưng nó **không đến từ lá**, mà từ đời thật đưa vào. Cùng một thao tác với lá 6, xem mục 10. Bỏ sót phần nặng: những thanh kiếm vẫn cắm trên thuyền — người kia đang **rời khỏi** cái gì đó, mang theo, và **chưa tới nơi**. |
 | 3 | **9 Kiếm** | "trao đi 1 con tim trần trụi với những đổ vỡ về tình yêu" | **Lệch.** Trái tim tan vỡ là 3 Kiếm. 9 Kiếm là **nỗi lo lúc ba giờ sáng** — dằn vặt về thứ chưa xảy ra. Cái được trao đi là **nỗi lo**, không phải vết thương. |
 | 4 | The Tower | "1 lòng tin kiên định" | **Sai ngược.** The Tower là sụp đổ đột ngột, cấu trúc bị phá vỡ. Là lá Ẩn chính duy nhất — điểm hệ trọng nhất của bài. |
 | 5 | Ace Tiền | "1 khởi đầu mới, sự xa lạ giữa 2 bản thể" | "Khởi đầu mới" đúng (Ace = hạt giống). "Sự xa lạ" là thêm vào. Bỏ sót: Tiền = **Đất**, thứ nối hai người là cái **cụ thể, xây được**, không phải cảm xúc. |
@@ -256,6 +257,8 @@ Hệ quả thực hành: **không nghĩ ra được đường thoát khỏi 9 Ki
 
 [[concepts/jung/anima]]: *"Khi không ý thức được, anima được phóng chiếu sang phụ nữ thực ngoài đời, tạo ra sự thu hút hay ác cảm mãnh liệt."* Wiki định nghĩa hẹp theo giới (animus là chiều ngược), và trang này không có đủ dữ kiện về giới của hai người nên **không áp**.
 
+⟳ **10/08/2026 — biết người kia là ai, vẫn không áp.** Lý do "không áp" đổi nội dung chứ không mất đi. Trước đây là *không biết người kia là ai*; nay biết tên nhưng wiki **vẫn không có nguồn nào nói về giới của cả hai người** — suy giới từ tên gọi là phỏng đoán, không phải dữ kiện, và [[concepts/tarot/dao-duc-doc-tarot]] không cho phép dựng chân dung một người vắng mặt bằng phỏng đoán. Thêm nữa, mục 9.8 đã ghi khung này giải thích được mọi phản ứng nên không kiểm chứng được bằng phản ứng nào; biết thêm một cái tên không làm nó kiểm chứng được hơn.
+
 Cơ chế chung vẫn nêu được: phóng chiếu một **hình ảnh nội tâm** lên một **người thật**. Dấu hiệu nhỏ để tự kiểm: lá 2 được đọc thành "người mới yêu, đang tìm kiếm sự thật, tìm bến đỗ" — khá lý tưởng, trong khi lá thật nói người kia đang chở kiếm rời khỏi một cấu trúc vừa sập. Chênh lệch đó *có thể* là dấu hiệu đang nhìn hình ảnh hơn nhìn người. Để ở mức "có thể".
 
 ### 9.7 Phân loại: đâu là wiki, đâu là suy luận
@@ -269,7 +272,7 @@ Cơ chế chung vẫn nêu được: phóng chiếu một **hình ảnh nội t�
 | **Bốn chất tarot ↔ bốn chức năng tâm lý Jung** | **Suy luận, không có trong wiki.** Mắt xích chịu lực nhất của 9.2. |
 | Lá 6 là cái bóng của lá 1 | **Suy luận** — cấu trúc court card cùng chất + định nghĩa cái bóng |
 | Lá 1 là persona | **Suy luận** |
-| Anima/animus đang hoạt động | **Không đủ dữ kiện** |
+| Anima/animus đang hoạt động | **Không đủ dữ kiện** — vẫn vậy sau khi biết người kia là ai, xem 9.6 |
 
 ### 9.8 Phản biện
 
@@ -283,10 +286,60 @@ Dùng mục 9 như **giả thuyết để tự kiểm**, không phải chẩn đ
 
 ---
 
+## 10. Bổ sung 10/8/2026 — người kia là ai
+
+Dữ kiện mới, **do bạn kể ngày 10/08/2026, không có tài liệu**: người kia trong trải bài này là [[characters/luong-hai-lam/nhung]]. Đây cũng là **lần đầu tiên** bạn xem tarot về tình duyên.
+
+Trang này viết xong ngày 9/8 khi "người kia" còn vô danh. Có một tên gọi thì bốn chỗ phải đọc lại — và một ranh giới phải dựng lên.
+
+### 10.1 Mốc thời gian: bài rút vào ngày thứ tám
+
+[[characters/luong-hai-lam/nhung]] ghi hai người yêu nhau từ **31/07/2026**. Bài rút **8/8/2026**. Tức câu hỏi *"coi tarot về chuyện tình yêu trong vòng một tháng tới"* được đặt ra ở **ngày thứ tám** của mối quan hệ, và lá 5 — Ace Tiền, hạt giống cần thời gian nảy mầm — rơi vào đúng một quan hệ tám ngày tuổi.
+
+Ghi lại vì nó là dữ kiện, không phải để suy ra điều gì. Đặc biệt **không** đọc thành "lo sớm quá" hay "vội quá": xem bài ở tuần thứ hai cũng bình thường như xem ở tháng thứ hai, và wiki không có gì để nói khác đi.
+
+### 10.2 Mẫu hình lệch thứ hai — thay lá bằng đời thật
+
+Mục 8 đã tìm ra một mẫu hình: *cả trải bài bị kéo về giữa, ở cả hai đầu*. Dữ kiện mới làm lộ ra mẫu hình thứ hai, độc lập với mẫu hình kia:
+
+| Lá | Người hỏi đọc | Thứ đưa vào | Kiểm chứng được không |
+|---|---|---|---|
+| 2 · 6 Kiếm | "một người **mới yêu**" | quan hệ tám ngày tuổi | **Đúng sự thật** — nhưng là sự thật biết trước, không phải thứ lá nói |
+| 6 · Kị sĩ Gậy | "định kiến **gia đình**, văn hóa, tôn giáo" | hoàn cảnh ngoài bài | Chưa có gì trong wiki xác nhận |
+
+Cùng một thao tác: **lấy điều đã biết ngoài bài lấp vào chỗ của lá**. Ở lá 2 nó cho ra một câu đúng nên trước đây không ai thấy có vấn đề — nhận xét cũ chỉ bảo "không có cơ sở", và về mặt lá bài thì đúng thế thật.
+
+Đây là chỗ khó nhất của việc tự đọc bài, và [[concepts/tarot/dao-duc-doc-tarot]] nói thẳng ở phần đọc thay người vắng mặt: nếu **đã biết câu trả lời trước rồi mới gán vào lá** thì trải bài không cho thêm thông tin nào. Một câu đúng do biết trước vẫn là số không về mặt thông tin — nó chỉ nguy hiểm hơn câu sai, vì nó làm mình tin là mình đọc đúng lá.
+
+Mẫu hình này **không làm yếu** kết luận ở mục 4. Ngược lại: bớt đi hai chỗ mà lá bài thực ra không nói gì, thì phần còn tự đứng được của trải bài càng gọn về quanh lá 3.
+
+### 10.3 Ranh giới: ba lá này không phải là dữ kiện về Nhung
+
+Ba vị trí — lá 2 (người kia), lá 4 (điều người kia trao đi), lá 6 (điều gây xa cách) — nay là phát biểu về **một người có tên, có trang trong wiki, và không có mặt lúc rút bài**.
+
+> **Không được chuyển bất kỳ dòng nào trong ba lá đó sang [[characters/luong-hai-lam/nhung]] như dữ kiện.**
+
+Cụ thể: cách đọc ở mục 3 nói *"người kia vừa qua một cú sập và đang trên chuyến thuyền rời khỏi nó"* (The Tower giải thích 6 Kiếm). Đó là **hình dung của người hỏi về người kia, đọc qua hai lá bài** — wiki không có một dòng nguồn nào về quá khứ của Nhung. Nếu sau này hồ sơ Nhung có câu "từng qua một đổ vỡ", nó phải đến từ chuyện bạn kể hoặc tài liệu, **không** từ trang này.
+
+[[concepts/tarot/dao-duc-doc-tarot]] là chỗ neo cho ranh giới này, và giới hạn đó nay nặng hơn hôm 9/8 đúng một bậc: đọc về "một người kia" trừu tượng khác với đọc về một người mình đang yêu và đang làm việc cùng.
+
+### 10.4 Phân loại
+
+| Mệnh đề | Phân loại |
+|---|---|
+| Người kia trong bài là Nhung; đây là lần đầu xem tarot về tình duyên | **Bạn cung cấp 10/08/2026** — không có tài liệu |
+| Bài rút vào ngày thứ tám của mối quan hệ | **Xác nhận** — 31/07 ([[characters/luong-hai-lam/nhung]]) và 8/8 (trang này) |
+| Lá 2 và lá 6 là chỗ đưa dữ kiện ngoài bài vào thay cho lá | **Suy luận** — đối chiếu lời đọc với mốc 31/07 |
+| Nhung "vừa qua một cú sập", "đang rời khỏi" điều gì đó | **Không đủ dữ kiện** — là hình dung qua lá, không phải thông tin về người |
+| Lá 6 nói về gia đình của Nhung | **Không đủ dữ kiện** — wiki không biết gì về phía đó |
+
+---
+
 ## Giới hạn và ghi chú
 
 - **Nghĩa từng lá đến từ ngoài wiki.** Wiki không có trang nghĩa cho 78 lá — chỉ có phương pháp suy nghĩa ([[concepts/tarot/truc-chat-so]], [[concepts/tarot/so-hoc-tarot]]). Nghĩa RWS dùng ở mục 3 là kiến thức chuẩn bên ngoài, không phải nội dung wiki. Wiki đóng góp **phương pháp**: đọc toàn cảnh, dignities, số học, court card, phép thử kể chuyện.
-- **Lá 6 và người thứ ba.** Cách đọc "định kiến gia đình" chạm giới hạn của [[concepts/tarot/dao-duc-doc-tarot]] về việc đọc thay cho người vắng mặt. Nếu gia đình thật sự đang phản đối thì việc nghĩ tới điều đó không phải bịa — nhưng nếu đã biết câu trả lời trước rồi mới gán vào lá thì trải bài không cho thêm thông tin nào.
+- **Lá 6 và người thứ ba.** Cách đọc "định kiến gia đình" chạm giới hạn của [[concepts/tarot/dao-duc-doc-tarot]] về việc đọc thay cho người vắng mặt. Nếu gia đình thật sự đang phản đối thì việc nghĩ tới điều đó không phải bịa — nhưng nếu đã biết câu trả lời trước rồi mới gán vào lá thì trải bài không cho thêm thông tin nào. ⟳ **10/08/2026:** người vắng mặt nay có tên, nên giới hạn này nặng thêm một bậc — xem mục 10.3.
+- **Bộ bài là của chính người hỏi.** [[concepts/tarot/murder-of-crows]] là bộ [[people/luong-hai-lam]] sở hữu, và trang này không ghi có người đọc nào khác. Nhiều khả năng đây là tự rút tự đọc — *suy luận*. Nếu đúng thì cả hai mẫu hình lệch (mục 8 và mục 10.2) không có ai đứng ngoài chặn lại tại chỗ.
 - **Không đọc lá ngược.** [[concepts/tarot/nghia-nguoc]] là lớp tùy chọn; bài này đọc xuôi toàn bộ.
 - **Bảng nguyên tố chưa chốt.** Cặp Lửa–Đất (lá 5–6) cho hai kết quả khác nhau tùy bảng. Đọc ở trên dùng bảng cẩm nang.
 - **Giới hạn an toàn.** [[concepts/tarot/shadow-work-tarot]] nêu rõ: công cụ tự chiêm nghiệm, **không thay thế trị liệu tâm lý**. 9 Kiếm là lá của mất ngủ và dằn vặt — nếu nỗi lo ấy ăn vào giấc ngủ và sinh hoạt thì đó là chuyện nằm ngoài tầm của bộ bài.

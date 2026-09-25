@@ -43,6 +43,8 @@ Dùng chính cơ sở dữ liệu quan hệ làm hàng đợi công việc thay 
 
 ## Mentioned in
 
+- [[outputs/lo-trinh-tu-chu-tool-sales]] — lộ trình đọc hiểu và làm chủ hệ thống tool_sales (11/08/2026)
+
 ## Notes
 
 Bốn cơ chế trên phải đi cùng nhau. Claim nguyên tử mà thiếu heartbeat thì worker chết sẽ giữ job vĩnh viễn. Có heartbeat mà thiếu fencing thì worker "chết giả" (bị treo rồi tỉnh lại) sẽ ghi đè kết quả của worker đã tiếp quản — đây là lỗi khó tái hiện nhất trong nhóm.

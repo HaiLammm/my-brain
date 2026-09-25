@@ -10,7 +10,7 @@ tags:
   - copywriting
 id: concepts/seo/cta-mem
 created: 2026-05-16
-updated: 2026-05-16
+updated: 2026-08-11
 key_sources:
   - sources/huong-dan-viet-bai-seo-cho-setsubi-pro
 related_concepts: []
@@ -31,6 +31,7 @@ CTA mềm là lời mời hành động xuất hiện như một phương án h�
 - [[sources/review-seo]]
 - [[sources/review-bai-seo-cho-setsubi-pro]]
 - [[sources/cau-truc-3-phan-bai-seo-troubleshooting]]
+- [[sources/bo-kich-ban-email-marketing-wa-craft]] — cùng nguyên tắc mời gọi nhẹ, áp cho email chào hàng
 
 ## Related concepts
 

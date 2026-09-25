@@ -10,10 +10,16 @@ tags:
   - search-intent
 id: concepts/seo/seo-symptom-problem-first
 created: 2026-05-16
-updated: 2026-05-16
+updated: 2026-08-11
 key_sources:
   - sources/huong-dan-viet-bai-seo-cho-setsubi-pro
   - sources/ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro
+  - sources/review-seo
+  - sources/review-bai-seo-cho-setsubi-pro
+  - sources/bo-kich-ban-email-marketing-wa-craft
+  - sources/cau-truc-3-phan-bai-seo-troubleshooting
+  - sources/list-keyword-seo-setsubi-pro-thang-8-va-9
+  - sources/keyword-map-setsubi-pro
 related_concepts: []
 ---
 
@@ -33,7 +39,10 @@ SEO symptom/problem-first là cách viết nội dung bắt đầu trực tiếp
 - [[sources/ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro]]
 - [[sources/review-seo]]
 - [[sources/review-bai-seo-cho-setsubi-pro]]
+- [[sources/bo-kich-ban-email-marketing-wa-craft]] — cùng lối đi từ vấn đề, nhưng ở tầng tổ chức thay vì tầng thiết bị
 - [[sources/cau-truc-3-phan-bai-seo-troubleshooting]]
+- [[sources/list-keyword-seo-setsubi-pro-thang-8-va-9]] — gần như toàn bộ từ khóa là truy vấn triệu chứng
+- [[sources/keyword-map-setsubi-pro]] — phần lớn 200 từ khóa trong bảng là truy vấn triệu chứng
 
 ## Related concepts
 

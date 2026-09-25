@@ -3,7 +3,7 @@ id: chapters/luong-hai-lam/danangnavi
 title: "Chương 4: DaNangNavi — cây cầu ba bên, và cái nút tạm dừng"
 type: chapter
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-08-11
 book: luong-hai-lam
 number: 4
 ---
@@ -50,7 +50,7 @@ Cả bộ tài liệu gọi đúng một danh xưng cho đội ngũ: *solo devel
 - **Tạm dừng vì lý do gì?** Hết nguồn lực, đổi ưu tiên, hay thị trường ngách quá nhỏ như chính PRD đã lo? Wiki không có gì về quyết định này ngoài sự kiện nó đã xảy ra.
 - **Tạm dừng nghĩa là gì?** Code còn đó chờ quay lại, hay khép hẳn? Ba tháng nữa nhìn lại thì "tạm" còn đúng không?
 - **Đăng, Thảo, bác Nomoto vào lúc nào?** DaNangNavi nằm trong nhóm dự án có họ đồng hành, nhưng toàn bộ tài liệu đều viết trong bối cảnh một người. Nếu họ vào sau, thì đúng lúc dự án dừng — đó là một nước ngoặt cần ghi.
-- ~~WaCraft là gì?~~ **Đã rõ (10/08/2026):** Wa+Craft là tên **công ty** nơi cả nhóm làm việc, do [[characters/luong-hai-lam/nomoto]] đứng tên; "web WaCraft" là trang web của chính công ty đó. Còn treo: **BPO** ở đây là mảng dịch vụ công ty nhận làm, hay tên một sản phẩm riêng? Chưa có nguồn nào trong wiki.
+- ~~WaCraft là gì?~~ **Đã rõ (10/08/2026):** Wa+Craft là tên **công ty** nơi cả nhóm làm việc, do [[characters/luong-hai-lam/nomoto]] đứng tên; "web WaCraft" là trang web của chính công ty đó. ~~Còn treo: **BPO** ở đây là mảng dịch vụ công ty nhận làm, hay tên một sản phẩm riêng?~~ **Đã rõ (11/08/2026):** BPO là **một trong năm dòng dịch vụ của Wa+Craft** (cùng EC Operations, Digital Marketing, Video Production, Sales & CRM), có trang riêng `bpo-offshore.com` — nên "web BPO" trong danh sách dự án là website của dòng dịch vụ đó. Nguồn: [[sources/bo-kich-ban-email-marketing-wa-craft]].
 
 ## Notes
 
