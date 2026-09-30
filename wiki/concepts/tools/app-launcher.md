@@ -1,14 +1,12 @@
 ---
 type: concept
 title: App Launcher
-slug: app-launcher
-date_added: 2026-05-15
 confidence: high
 tags:
   - productivity
   - tool
   - linux
-id: concepts/tools/app-launcher
+id: app-launcher
 created: 2026-05-15
 updated: 2026-05-15
 key_sources:

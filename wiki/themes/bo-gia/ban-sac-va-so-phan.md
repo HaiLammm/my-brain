@@ -1,7 +1,6 @@
 ---
 type: theme
-title: "Bản sắc và số phận"
-slug: ban-sac-va-so-phan
+title: Bản sắc và số phận
 book: bo-gia
 created: 2026-05-27
 updated: 2026-05-27

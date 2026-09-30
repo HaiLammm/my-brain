@@ -21,8 +21,6 @@ urls:
   - "https://benebellwen.com/wp-content/uploads/2019/02/the-tarot-1888-by-macgregor-mathers-1.pdf"
 raw_paths:
   - raw/download/web/ee5aea172c30a572.pdf
-slug: the-tarot-mathers-1888
-date_added: 2026-08-08
 external_ids:
   url: "https://benebellwen.com/wp-content/uploads/2019/02/the-tarot-1888-by-macgregor-mathers-1.pdf"
 sources:

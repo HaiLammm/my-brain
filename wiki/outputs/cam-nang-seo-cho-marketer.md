@@ -10,7 +10,6 @@ covers:
   - concepts/seo/noi-dung-giai-thich-cho-nguoi-khong-chuyen
   - concepts/seo/ngan-hang-tu-khoa-theo-thiet-bi-van-de-va-intent
   - concepts/seo/mat-do-tu-khoa
-  - concepts/seo/mat-do-tu-khoa-seo
   - concepts/seo/mo-hinh-pillar-cluster
   - concepts/seo/lap-lich-xuat-ban-theo-uu-tien-va-pillar
   - concepts/seo/template-seo-3-phan
@@ -176,7 +175,7 @@ Khác biệt này đến từ ngôn ngữ: tiếng Nhật không tách từ bằ
 
 Điều quan trọng hơn con số: khi thấy mật độ thấp, **đừng nhét thêm từ khóa** — hãy dùng **từ đồng nghĩa và cụm liên quan** (LSI). Nhồi từ khóa (keyword stuffing) vừa bị Google đánh giá thấp, vừa làm câu văn trở nên kỳ quặc với người đọc thật.
 
-Nguồn: [[concepts/seo/mat-do-tu-khoa]], [[concepts/seo/mat-do-tu-khoa-seo]]
+Nguồn: [[concepts/seo/mat-do-tu-khoa]]
 
 ### Ví dụ Setsubi-pro
 
@@ -682,7 +681,7 @@ Nguồn: [[concepts/seo/email-marketing-tu-bai-huong-dan]]
 [[concepts/seo/seo-symptom-problem-first]] · [[concepts/seo/noi-dung-giai-thich-cho-nguoi-khong-chuyen]] · [[concepts/seo/blog-giai-quyet-su-co-nha-o]] · [[concepts/seo/template-seo-3-phan]] · [[concepts/seo/noi-dung-phong-ngua-bao-tri-thiet-bi]] · [[concepts/seo/bang-tu-xu-ly-hay-goi-tho]] · [[concepts/seo/cta-mem]] · [[concepts/seo/cau-truc-heading-seo]]
 
 **Khái niệm từ khóa và kiến trúc**
-[[concepts/seo/ngan-hang-tu-khoa-theo-thiet-bi-van-de-va-intent]] · [[concepts/seo/mat-do-tu-khoa]] · [[concepts/seo/mat-do-tu-khoa-seo]] · [[concepts/seo/mo-hinh-pillar-cluster]] · [[concepts/seo/lap-lich-xuat-ban-theo-uu-tien-va-pillar]] · [[concepts/seo/checklist-seo-100-diem]]
+[[concepts/seo/ngan-hang-tu-khoa-theo-thiet-bi-van-de-va-intent]] · [[concepts/seo/mat-do-tu-khoa]] · [[concepts/seo/mo-hinh-pillar-cluster]] · [[concepts/seo/lap-lich-xuat-ban-theo-uu-tien-va-pillar]] · [[concepts/seo/checklist-seo-100-diem]]
 
 **Khái niệm kỹ thuật**
 [[concepts/seo/thumbnail-serp-google]] · [[concepts/seo/nhan-dang-site-tren-serp]] · [[concepts/seo/structured-data-url-tuyet-doi]] · [[concepts/seo/gioi-han-hien-thi-serp-nhat]] · [[concepts/swe/sua-tai-nguon-sinh]] · [[concepts/swe/tai-san-ngoai-pipeline-build]]

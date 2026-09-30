@@ -1,7 +1,6 @@
 ---
 type: character
 title: Sharon Moore
-slug: sharon-moore
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-12
 created: 2026-05-27

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Contract-Driven Development (Phát triển Dựa trên Hợp đồng)
-slug: contract-driven-development
-date_added: 2026-05-12
 confidence: medium
 tags:
   - development-methodology
   - pydantic
   - schema
-id: concepts/swe/contract-driven-development
+id: contract-driven-development
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

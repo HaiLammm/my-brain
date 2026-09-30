@@ -1,14 +1,12 @@
 ---
 type: person
 title: Daniel Amen
-slug: daniel-amen
-date_added: 2026-05-18
 affiliation: Amen Clinics
 tags:
   - psychiatrist
   - neuroscientist
   - author
-id: TODO
+id: daniel-amen
 created: 2026-05-18
 updated: 2026-05-18
 key_sources: []

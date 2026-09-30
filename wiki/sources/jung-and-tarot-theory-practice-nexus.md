@@ -19,8 +19,6 @@ tags:
   - education
 raw_paths:
   - raw/download/Jung_and_Tarot_A_Theory_practice_nexus_i.pdf
-slug: jung-and-tarot-theory-practice-nexus
-date_added: 2026-08-08
 sources:
   - {provider: pdf, fetched_at: "2026-08-08T00:00:00Z"}
 ingest_status: finalized

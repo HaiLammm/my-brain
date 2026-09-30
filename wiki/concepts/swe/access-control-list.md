@@ -1,10 +1,8 @@
 ---
 type: concept
 title: Danh sách Kiểm soát Truy cập (ACL)
-slug: access-control-list
-date_added: 2026-05-15
 confidence: unverified
-id: concepts/swe/access-control-list
+id: access-control-list
 created: 2026-05-15
 updated: 2026-05-15
 key_sources:

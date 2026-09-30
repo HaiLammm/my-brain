@@ -1,15 +1,13 @@
 ---
 type: concept
 title: OTP Authentication
-slug: otp-authentication
-date_added: 2026-05-12
 confidence: high
 tags:
   - authentication
   - security
   - email
   - otp
-id: TODO
+id: otp-authentication
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

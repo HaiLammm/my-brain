@@ -1,8 +1,6 @@
 ---
 type: person
 title: Friedrich Nietzsche
-slug: friedrich-nietzsche
-date_added: 2026-05-12
 affiliation: Đức
 tags:
   - philosophy

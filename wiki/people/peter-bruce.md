@@ -1,8 +1,6 @@
 ---
 type: person
 title: Peter Bruce
-slug: peter-bruce
-date_added: 2026-05-16
 id: people/peter-bruce
 created: 2026-05-16
 updated: 2026-05-16

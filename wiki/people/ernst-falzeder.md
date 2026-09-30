@@ -1,8 +1,6 @@
 ---
 type: person
 title: "Ernst Falzeder"
-slug: ernst-falzeder
-date_added: 2026-05-14
 affiliation: ""
 tags:
   - jungian-psychology

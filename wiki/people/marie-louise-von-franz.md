@@ -1,12 +1,10 @@
 ---
 type: person
 title: Marie-Louise von Franz
-slug: marie-louise-von-franz
-date_added: 2026-05-11
 affiliation: Zurich, Switzerland
 tags:
   - jungian-psychology
-id: TODO
+id: marie-louise-von-franz
 created: 2026-05-11
 updated: 2026-05-11
 key_sources:

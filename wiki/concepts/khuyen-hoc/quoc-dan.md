@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Quốc dân
-slug: quoc-dan
-date_added: 2026-05-14
 confidence: medium
 tags:
   - citizenship
   - political-thought
   - japan
-id: concepts/khuyen-hoc/quoc-dan
+id: quoc-dan
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

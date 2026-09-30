@@ -1,14 +1,12 @@
 ---
 type: concept
 title: ADHD (Rối loạn tăng động giảm chú ý)
-slug: adhd
-date_added: 2026-05-18
 confidence: medium
 tags:
   - neuroscience
   - mental-health
   - brain-health
-id: TODO
+id: adhd
 created: 2026-05-18
 updated: 2026-05-18
 key_sources: []

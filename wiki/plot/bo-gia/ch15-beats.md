@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 15"
-slug: ch15-beats
+title: Plot beats — Chương 15
 book: bo-gia
 up_to_chapter: 15
 created: 2026-05-27

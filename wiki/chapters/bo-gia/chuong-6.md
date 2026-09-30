@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 6"
-slug: chuong-6
+title: Chương 6
 book: bo-gia
 number: 6
 created: 2026-05-21

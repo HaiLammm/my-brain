@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Vô thức cá nhân
-slug: vo-thuc-ca-nhan
-date_added: 2026-05-12
 confidence: high
 tags:
   - jungian-psychology
   - unconscious
-id: TODO
+id: vo-thuc-ca-nhan
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

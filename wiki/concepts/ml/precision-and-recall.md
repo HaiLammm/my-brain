@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Precision and Recall
-slug: precision-and-recall
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - evaluation
   - classification
   - machine-learning
-id: concepts/ml/precision-and-recall
+id: precision-and-recall
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

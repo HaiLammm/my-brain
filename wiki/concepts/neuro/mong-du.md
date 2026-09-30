@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Mộng du
-slug: mong-du
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
   - NREM
   - sleep-disorders
-id: concepts/neuro/mong-du
+id: mong-du
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

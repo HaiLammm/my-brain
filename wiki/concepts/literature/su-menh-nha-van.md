@@ -1,8 +1,6 @@
 ---
 type: concept
 title: Sứ mệnh nhà văn
-slug: su-menh-nha-van
-date_added: 2026-08-08
 created: 2026-08-08
 updated: 2026-08-08
 confidence: medium
@@ -10,7 +8,7 @@ tags:
   - ly-luan-van-hoc
   - nha-van
   - nhan-ban
-id: concepts/literature/su-menh-nha-van
+id: su-menh-nha-van
 key_sources: []
 related_concepts:
   - concepts/literature/chuc-nang-cuu-roi-van-chuong

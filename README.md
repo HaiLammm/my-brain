@@ -46,6 +46,7 @@ Ghi nhớ bản đồ tư duy này trong ngữ cảnh tức thì:
 - `wiki/people/` — những người được đề cập trong các nguồn
 - `wiki/summary/` — tổng hợp cấp vùng
 - `wiki/outputs/` — các tạo phẩm được tạo ra (so sánh, xuất bản)
+- `wiki/readings/` — ghi chú đọc có neo số trang cho nguồn dài (sách, luận án), mỗi nguồn một thư mục; do `/lumi-ingest` tạo, truy cập từ trang nguồn thay vì từ mục lục
 - `wiki/graph/` — trạng thái dẫn xuất; không bao giờ chỉnh sửa thủ công
 - `wiki/topics/`, `wiki/foundations/` (gói: research)
 - `wiki/chapters/`, `wiki/characters/`, `wiki/themes/`, `wiki/plot/` (gói: reading)
@@ -74,7 +75,7 @@ Ghi nhớ bản đồ tư duy này trong ngữ cảnh tức thì:
 - `_lumina/config/lumina.config.yaml` — cấu hình workspace; có thể chỉnh sửa
 - `_lumina/schema/` — tài liệu tham chiếu sâu hơn; mở khi tệp này hướng bạn đến đó
 - `_lumina/scripts/` — bộ máy Node (`wiki.mjs`, `lint.mjs`, `reset.mjs`, `schemas.mjs`)
-- `_lumina/tools/` — công cụ Python (luôn có: `extract_pdf.py`, `fetch_pdf.py`, `requirements.txt`; gói research thêm `_env.py`, `prepare_source.py`, `init_discovery.py`, `discover.py` và các công cụ fetcher)
+- `_lumina/tools/` — công cụ Python (luôn có: `extract_pdf.py`, `fetch_pdf.py`, `verify_quotes.py`, `requirements.txt`; gói research thêm `_env.py`, `prepare_source.py`, `init_discovery.py`, `discover.py` và các công cụ fetcher)
 - `_lumina/_state/` — trạng thái checkpoint installer/skill; bị gitignore
 - `_lumina/manifest.json` — trạng thái installer; không bao giờ chỉnh sửa thủ công
 
@@ -87,31 +88,17 @@ Mỗi trang wiki có loại, frontmatter và cấu trúc phần được định
 | Loại       | Thư mục       | Mục đích                                                                  |
 |------------|--------------|---------------------------------------------------------------------------|
 | Source     | `sources/`   | Tóm tắt theo tài liệu: các luận điểm chính, bằng chứng, kết luận, câu hỏi |
-| Concept    | `concepts/<domain>/` | Ý tưởng hoặc kỹ thuật xuyên nguồn với các biến thể và so sánh — **luôn nằm trong thư mục domain** |
+| Concept    | `concepts/`  | Ý tưởng hoặc kỹ thuật xuyên nguồn với các biến thể và so sánh            |
 | Person     | `people/`    | Hồ sơ của người được đề cập với các nguồn chính và mối quan hệ           |
 | Summary    | `summary/`   | Tổng hợp cấp vùng trải rộng nhiều nguồn và khái niệm                     |
-| Topic      | `topics/`     | Cụm chủ đề nhóm các khái niệm và nguồn liên quan; tạo qua `/lumi-research-topic` (research) |
+| Reading note | `readings/` | Ghi chú theo từng chương của một nguồn dài, có trích trang; viết trong quá trình ingest nguồn dài |
+| Topic      | `topics/`     | Cụm chủ đề nhóm các khái niệm và nguồn liên quan; tạo qua `/lumi-research-topic` (research). Cuối trang có danh sách nguồn theo ngày, ghi lại các nguồn xuất hiện sau lần cập nhật gần nhất của chủ đề |
 | Foundation | `foundations/`| Kiến thức nền tảng/tiên quyết; trang cuối cùng (research)               |
 | Chapter    | `chapters/`   | Ghi chú theo chương cho sách hoặc tác phẩm dài (reading)                |
 | Character  | `characters/` | Hồ sơ nhân vật với diễn biến, mối quan hệ, các chương chính (reading)   |
 | Theme      | `themes/`     | Chủ đề xuyên suốt tác phẩm (reading)                                    |
 | Plot       | `plot/`       | Các luồng cốt truyện, nhịp điệu và dòng thời gian (reading)             |
 | Reflection | `reflections/`| Hiểu biết cá nhân về một khái niệm; có thể cập nhật + nhật ký chỉ thêm (learning) |
-
-### Namespace của `concepts/`
-
-Concept **không bao giờ** đặt thẳng ở `wiki/concepts/` — luôn nằm trong một thư mục domain,
-giống cách `characters/` và `chapters/` phân theo book-slug. Danh sách domain hiện có và quy
-tắc chọn nằm trong `_lumina/schema/page-templates.md`; đọc phần đó trước khi tạo concept mới.
-
-Khi nạp một dự án phần mềm vào wiki, lọc theo **tuổi thọ** chứ không theo phạm vi:
-
-- **Vào wiki** — pattern kỹ thuật tái dùng được (`concepts/swe/`), quyết định kiến trúc kèm
-  lý do, cạm bẫy đã trả giá, thuật ngữ nghiệp vụ (`concepts/<tên-dự-án>/`).
-- **Ở lại repo dự án** — mã FR, schema bảng, danh sách endpoint, breakdown epic, cấu hình.
-
-Phép thử một câu: *"Điều này còn đúng khi dự án chết không?"* Ngưỡng gợi ý: mỗi dự án
-khoảng 20 concept. Vượt xa ngưỡng nghĩa là đang chép tài liệu chứ không chưng cất tri thức.
 
 ---
 
@@ -140,6 +127,7 @@ Khi bạn viết một liên kết chiều đi, **luôn viết liên kết ngư�
 | `concepts/K` viết `[[source-E]]`                | `sources/E` thêm K vào `Related concepts`         |
 | `summary/S` viết `[[concept-K]]`                | `concepts/K` thêm S vào `Mentioned in`            |
 | `topics/T` viết `[[concept-K]]`                 | `concepts/K` thêm T vào `Topics`                  |
+| `topics/T` viết `[[source-A]]`                  | `sources/A` thêm T vào `Topics`                   |
 | `chapters/Ch` viết `[[character-X]]`            | `characters/X` thêm Ch vào `Key chapters`         |
 | `chapters/Ch` viết `[[theme-Y]]`                | `themes/Y` thêm Ch vào `Traced in`                |
 
@@ -197,7 +185,7 @@ Các skill nằm trong `.agents/skills/` và được gọi qua lệnh slash. C�
 |----------------|----------------|-------------------------------------------------------------------------|
 | `/lumi-init`   | thủ công, lần đầu | Khởi động wiki từ nội dung `raw/` hiện có                            |
 | `/lumi-ingest` | thủ công       | Đọc nguồn và viết trang wiki. Yêu cầu bạn xem xét bản nháp, rồi tiếp tục tự động trừ khi cần phán đoán của bạn |
-| `/lumi-ask`    | thủ công       | Truy vấn wiki, tổng hợp câu trả lời, tùy chọn tạo trang              |
+| `/lumi-ask`    | thủ công       | Trả lời dựa trên những gì wiki đã biết, trích dẫn các trang nguồn; nếu thiếu thông tin, liệt kê các tệp raw/sources/ phù hợp và gợi ý /lumi-ingest; tùy chọn lưu câu trả lời thành trang |
 | `/lumi-edit`   | thủ công       | Thêm/xóa/sửa nội dung wiki theo yêu cầu người dùng                   |
 | `/lumi-check`  | thủ công/hàng tuần | Lint: liên kết hỏng, trang mồ côi, thiếu liên kết ngược           |
 | `/lumi-reset`  | thủ công       | Dọn dẹp phá hủy có phạm vi                                            |
@@ -205,7 +193,7 @@ Các skill nằm trong `.agents/skills/` và được gọi qua lệnh slash. C�
 
 ### Gói: research
 
-Thêm `/lumi-research-discover` (danh sách ứng viên được xếp hạng), `/lumi-research-watchlist` (chọn chủ đề để khám phá theo lịch với sự hỗ trợ AI), `/lumi-research-survey` (tổng hợp dạng tường thuật), `/lumi-research-prefill` (tạo nền tảng để ngăn trùng lặp khái niệm), `/lumi-research-topic` (nhóm các khái niệm và nguồn hiện có thành trang chủ đề; AI đề xuất cụm từ đồ thị, bạn xác nhận trước khi ghi bất cứ thứ gì), `/lumi-research-setup` (cấu hình API key tương tác).
+Thêm `/lumi-research-discover` (danh sách ứng viên được xếp hạng), `/lumi-research-watchlist` (chọn chủ đề để khám phá theo lịch với sự hỗ trợ AI), `/lumi-research-watch-run` (chạy một lượt khám phá theo lịch trên watchlist — chủ đề + nguồn RSS / Atom — chỉ khi bạn yêu cầu), `/lumi-research-survey` (tổng hợp dạng tường thuật), `/lumi-research-prefill` (tạo nền tảng để ngăn trùng lặp khái niệm), `/lumi-research-topic` (nhóm các khái niệm và nguồn hiện có thành trang chủ đề; AI đề xuất cụm từ đồ thị, bạn xác nhận trước khi ghi bất cứ thứ gì), `/lumi-research-rank` (chấm điểm mức độ ảnh hưởng trích dẫn và chất lượng 4C của một bài báo đã nạp, ghi vào trang nguồn của nó; có thêm tín hiệu Scite/Altmetric khi đã đặt key), `/lumi-research-setup` (cấu hình API key tương tác).
 ### Gói: reading
 
 Thêm `/lumi-reading-chapter-ingest` (lưu chương, cập nhật trang nhân vật/chủ đề/cốt truyện), `/lumi-reading-character-track` (xây dựng hoặc làm mới hồ sơ nhân vật qua các chương), `/lumi-reading-theme-map` (truy tìm chủ đề qua các chương với trích dẫn), `/lumi-reading-plot-recap` (tóm tắt cốt truyện đến một chương, giới hạn spoiler).
@@ -222,6 +210,7 @@ Thêm `/lumi-learning-reflect` (hướng dẫn phiên phản tư; tạo hoặc c
 - **`_lumina/scripts/reset.mjs`** — đặt lại phá hủy có phạm vi.
 - **`_lumina/scripts/discover-runner.mjs`** — trình chạy khám phá theo lịch một lần; thu thập ứng viên được chấm điểm nhưng không nạp hay tải xuống bài báo.
 - **`_lumina/tools/extract_pdf.py`** — trình trích xuất văn bản PDF (dựa trên pypdf); dùng bởi `/lumi-ingest` và `/lumi-reading-chapter-ingest` khi IDE chủ không thể đọc PDF tự nhiên.
+- **`_lumina/tools/verify_quotes.py`** — kiểm tra các trích dẫn có ghi số trang trong ghi chú đọc và trang nguồn so với PDF gốc; dùng bởi `/lumi-ingest` cho nguồn dài.
 - **`_lumina/tools/fetch_pdf.py`** — tải xuống PDF từ URL sang `raw/download/<resource>/` (streaming, nguyên tử, idempotent); dùng bởi `/lumi-ingest` Chế độ B khi đầu vào là URL hoặc định danh bài báo.
 - **`_lumina/tools/requirements.txt`** — các phụ thuộc Python cho công cụ đi kèm. Chạy `pip install -r _lumina/tools/requirements.txt` khi công cụ báo thiếu gói.
 - **`_lumina/tools/_env.py`** — trình tải `.env` dùng chung cho công cụ research.
@@ -244,3 +233,32 @@ Thêm `/lumi-learning-reflect` (hướng dẫn phiên phản tư; tạo hoặc c
 Wiki là sự hợp tác lâu dài. Duy trì nó kiên nhẫn.
 
 <!-- /lumina:schema -->
+
+## Quy ước riêng của workspace
+
+Lumina 1.14 cần Node.js 24. Trong workspace này, chạy `nvm use` trước khi dùng các lệnh Lumina.
+
+### Namespace của `concepts/`
+
+Concept **không bao giờ** đặt thẳng ở `wiki/concepts/` — luôn nằm trong một thư mục domain,
+giống cách `characters/` và `chapters/` phân theo book-slug. Chọn domain từ các thư mục hiện có
+trong `wiki/concepts/`; chỉ tạo domain mới khi không có thư mục nào phù hợp. Quy ước riêng này
+được ưu tiên hơn đường dẫn phẳng trong mẫu Lumina.
+
+Khi nạp một dự án phần mềm vào wiki, lọc theo **tuổi thọ** chứ không theo phạm vi:
+
+- **Vào wiki** — pattern kỹ thuật tái dùng được (`concepts/swe/`), quyết định kiến trúc kèm
+  lý do, cạm bẫy đã trả giá, thuật ngữ nghiệp vụ (`concepts/<tên-dự-án>/`).
+- **Ở lại repo dự án** — mã FR, schema bảng, danh sách endpoint, breakdown epic, cấu hình.
+
+Phép thử một câu: *"Điều này còn đúng khi dự án chết không?"* Ngưỡng gợi ý: mỗi dự án
+khoảng 20 concept. Vượt xa ngưỡng nghĩa là đang chép tài liệu chứ không chưng cất tri thức.
+
+### Viết bài SEO cho Setsubi-pro
+
+Trước khi draft **bất kỳ** bài SEO nào cho Setsubi-pro (các bài `wiki/outputs/seo-*`), BẮT BUỘC đọc trước:
+
+1. `raw/sources/SEO/prompt-viet-bai-seo-setsubi-pro.md` — prompt/checklist chuẩn (khung bài, công thức keyword, checklist on-page, do/don't).
+2. Memory feedback `feedback_seo_article_structure.md` (qua `MEMORY.md`) — các bài học review tích lũy.
+
+Tham khảo thêm khi cần: `wiki/sources/huong-dan-viet-bai-seo-cho-setsubi-pro`, `wiki/sources/review-bai-seo-cho-setsubi-pro`, `wiki/sources/review-seo`. Chạy bước Self-check ở cuối file prompt trước khi báo hoàn thành.

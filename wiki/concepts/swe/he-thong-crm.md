@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Hệ thống CRM
-slug: he-thong-crm
-date_added: 2026-05-14
 confidence: unverified
 tags:
   - crm
   - backend
   - interview
-id: concepts/swe/he-thong-crm
+id: he-thong-crm
 created: 2026-05-14
 updated: 2026-05-15
 key_sources:

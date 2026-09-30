@@ -1,14 +1,12 @@
 ---
 type: person
 title: Rudolf Otto
-slug: rudolf-otto
-date_added: 2026-05-14
 affiliation: Nhà thần học và triết gia Đức
 tags:
   - theology
   - philosophy-of-religion
   - numinosum
-id: TODO
+id: rudolf-otto
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

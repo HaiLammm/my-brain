@@ -1,8 +1,6 @@
 ---
 type: person
 title: René Descartes
-slug: rene-descartes
-date_added: 2026-05-12
 affiliation: Pháp
 tags:
   - philosophy

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Bộ Nhận Dạng Mẫu Ngữ Nghĩa (Semantic Pattern Engine)
-slug: semantic-pattern-engine
-date_added: 2026-05-12
 confidence: medium
 tags:
   - pattern-recognition
   - semantic-mapping
   - tailor-project
-id: concepts/tailor/semantic-pattern-engine
+id: semantic-pattern-engine
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

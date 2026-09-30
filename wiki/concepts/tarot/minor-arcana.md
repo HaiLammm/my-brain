@@ -1,12 +1,10 @@
 ---
 type: concept
 title: Minor Arcana (Ẩn phụ)
-slug: minor-arcana
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
-id: concepts/tarot/minor-arcana
+id: minor-arcana
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

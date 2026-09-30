@@ -1,8 +1,6 @@
 ---
 type: concept
 title: Thánh lễ
-slug: mass-eucharist
-date_added: 2026-05-14
 confidence: unverified
 tags:
   - christianity
@@ -10,7 +8,7 @@ tags:
   - mass
   - ritual
   - transformation
-id: TODO
+id: mass-eucharist
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

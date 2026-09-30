@@ -1,9 +1,7 @@
 ---
 type: concept
-title: "VIM Macro"
-slug: vim-macro
-id: concepts/tools/vim-macro
-date_added: 2026-05-11
+title: VIM Macro
+id: vim-macro
 created: 2026-05-11
 updated: 2026-05-11
 confidence: high

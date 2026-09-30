@@ -1,8 +1,6 @@
 ---
 type: person
 title: Khổng Tử
-slug: khong-tu
-date_added: 2026-05-14
 affiliation: ""
 tags:
   - china

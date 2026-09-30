@@ -1,8 +1,6 @@
 ---
 type: source
 title: Cẩm Nang Giải Mã Cấu Trúc CV Chuẩn
-slug: cam-nang-giai-ma-cau-truc-cv-chuan
-date_added: 2026-05-12
 authors: []
 source_type: note
 importance: 2

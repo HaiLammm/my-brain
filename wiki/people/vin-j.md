@@ -1,14 +1,12 @@
 ---
 type: person
 title: Vin J
-slug: vin-j
-date_added: 2026-05-17
 affiliation: Stage Academy
 tags:
   - dien-gia
   - chuyen-gia-giao-tiep
   - huan-luyen-vien
-id: TODO
+id: vin-j
 created: 2026-05-17
 updated: 2026-05-17
 key_sources:

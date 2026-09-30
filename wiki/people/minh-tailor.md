@@ -1,8 +1,6 @@
 ---
 type: person
 title: Minh (Thợ may F2)
-slug: minh-tailor
-date_added: 2026-05-12
 affiliation: tailor_project — Persona thợ may
 tags:
   - user-persona

@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 4"
-slug: chuong-4
+title: Chương 4
 book: bo-gia
 number: 4
 created: 2026-05-21
@@ -9,7 +8,7 @@ updated: 2026-05-21
 themes:
   - gia-dinh-va-trung-thanh
   - su-ke-thua
-id: TODO
+id: chapters/bo-gia/chuong-4
 tags:
   - mafia
   - gia-dinh-corleone

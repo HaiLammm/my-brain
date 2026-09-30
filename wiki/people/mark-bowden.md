@@ -1,12 +1,10 @@
 ---
 type: person
 title: Mark Bowden
-slug: mark-bowden
-date_added: 2026-05-17
 affiliation: ""
 tags:
   - chuyen-gia-ngon-ngu-co-the
-id: TODO
+id: mark-bowden
 created: 2026-05-17
 updated: 2026-05-17
 key_sources:

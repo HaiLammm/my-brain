@@ -1,15 +1,13 @@
 ---
 type: concept
 title: BPO back-office (thuê ngoài vận hành hậu cần văn phòng)
-slug: bpo-back-office
-date_added: 2026-09-05
 confidence: medium
 tags:
   - bpo
   - van-hanh
   - thue-ngoai
   - nhat-ban
-id: concepts/ops/bpo-back-office
+id: bpo-back-office
 created: 2026-09-05
 updated: 2026-09-06
 provenance: replayable

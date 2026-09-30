@@ -1,8 +1,6 @@
 ---
 type: person
 title: Wolfgang Pauli
-slug: wolfgang-pauli
-date_added: 2026-08-08
 affiliation: "ETH Zurich"
 tags:
   - physics

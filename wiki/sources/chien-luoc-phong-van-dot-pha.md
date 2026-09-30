@@ -1,8 +1,6 @@
 ---
 type: source
 title: Chiến Lược Phỏng Vấn Đột Phá
-slug: chien-luoc-phong-van-dot-pha
-date_added: 2026-05-12
 authors: []
 source_type: note
 importance: 2

@@ -1,8 +1,6 @@
 ---
 type: source
 title: Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow
-slug: hands-on-machine-learning-with-scikit-learn-keras-and-tensorflow
-date_added: 2026-05-16
 authors:
   - Aurélien Géron
 source_type: book

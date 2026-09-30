@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Chứng tiềm ký ức
-slug: chung-tiem-ky-uc
-date_added: 2026-05-12
 confidence: high
 tags:
   - psychoanalysis
   - memory
   - cryptomnesia
-id: concepts/jung/chung-tiem-ky-uc
+id: chung-tiem-ky-uc
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

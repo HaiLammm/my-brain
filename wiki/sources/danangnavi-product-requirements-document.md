@@ -1,8 +1,6 @@
 ---
 type: source
 title: DaNangNavi — Product Requirements Document
-slug: danangnavi-product-requirements-document
-date_added: 2026-05-12
 authors:
   - DaNangNavi Team
 source_type: note

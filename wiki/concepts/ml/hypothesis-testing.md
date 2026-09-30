@@ -1,10 +1,8 @@
 ---
 type: concept
 title: Kiểm định giả thuyết (Hypothesis Testing)
-slug: hypothesis-testing
-date_added: 2026-05-16
 confidence: unverified
-id: concepts/ml/hypothesis-testing
+id: hypothesis-testing
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

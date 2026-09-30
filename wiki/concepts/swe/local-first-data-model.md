@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Local-first Data Model
-slug: local-first-data-model
-date_added: 2026-05-12
 confidence: medium
 tags:
   - data-model
   - local-first
   - sync
   - offline
-id: TODO
+id: local-first-data-model
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

@@ -1,9 +1,7 @@
 ---
 id: sources/wa-craft-dinh-huong-dich-vu-va-chien-luoc-thi-truong-nhat-2026
-slug: wa-craft-dinh-huong-dich-vu-va-chien-luoc-thi-truong-nhat-2026
 created: 2026-09-06
 updated: 2026-09-06
-date_added: 2026-09-06
 confidence: unverified
 provenance: replayable
 raw_paths:

@@ -1,14 +1,12 @@
 ---
 type: person
 title: Immanuel Kant
-slug: immanuel-kant
-date_added: 2026-05-12
 affiliation: Prussia (nay là Đức)
 tags:
   - philosophy
   - critical-philosophy
   - epistemology
-id: TODO
+id: immanuel-kant
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

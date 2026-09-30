@@ -1,14 +1,12 @@
 ---
 type: concept
 title: EMDR (Liệu pháp xử lý chấn thương tâm lý)
-slug: emdr
-date_added: 2026-05-18
 confidence: medium
 tags:
   - therapy
   - trauma
   - mental-health
-id: TODO
+id: emdr
 created: 2026-05-18
 updated: 2026-05-18
 key_sources: []

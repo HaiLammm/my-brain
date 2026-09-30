@@ -1,8 +1,6 @@
 ---
 type: concept
 title: Xung đột đối lập
-slug: doi-lap
-date_added: 2026-05-14
 created: 2026-05-14
 updated: 2026-05-14
 confidence: high
@@ -10,7 +8,7 @@ tags:
   - jungian-psychology
   - opposites
   - enantiodromia
-id: TODO
+id: doi-lap
 key_sources:
   - sources/the-quotable-jung
 related_concepts:

@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Trực giác (chức năng tâm lý)
-slug: truc-giac-tam-ly
-date_added: 2026-05-12
 confidence: high
 tags:
   - jungian-psychology
   - intuition-function
-id: concepts/jung/truc-giac-tam-ly
+id: truc-giac-tam-ly
 created: 2026-05-12
 updated: 2026-05-14
 key_sources:

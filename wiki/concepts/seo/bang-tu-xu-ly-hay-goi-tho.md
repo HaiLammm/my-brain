@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Bảng tự xử lý hay gọi thợ
-slug: bang-tu-xu-ly-hay-goi-tho
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - content
   - decision-support
   - service
-id: concepts/seo/bang-tu-xu-ly-hay-goi-tho
+id: bang-tu-xu-ly-hay-goi-tho
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

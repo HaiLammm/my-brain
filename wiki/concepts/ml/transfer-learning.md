@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Transfer Learning
-slug: transfer-learning
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - deep-learning
   - fine-tuning
   - machine-learning
-id: concepts/ml/transfer-learning
+id: transfer-learning
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

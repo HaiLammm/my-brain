@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Nhận thức ngầm
-slug: nhan-thuc-ngam
-date_added: 2026-05-12
 confidence: high
 tags:
   - perception
   - subliminal
   - unconscious
-id: concepts/jung/nhan-thuc-ngam
+id: nhan-thuc-ngam
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

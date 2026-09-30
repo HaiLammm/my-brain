@@ -1,7 +1,6 @@
 ---
 type: character
 title: Rocco Lampone
-slug: rocco-lampone
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-6
 created: 2026-05-21

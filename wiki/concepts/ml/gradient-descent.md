@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Gradient Descent
-slug: gradient-descent
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - optimization
   - machine-learning
-id: concepts/ml/gradient-descent
+id: gradient-descent
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

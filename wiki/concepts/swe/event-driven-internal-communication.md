@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Event-Driven Internal Communication
-slug: event-driven-internal-communication
-date_added: 2026-05-12
 confidence: high
 tags:
   - architecture
   - design-pattern
   - event-bus
   - decoupling
-id: concepts/swe/event-driven-internal-communication
+id: event-driven-internal-communication
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

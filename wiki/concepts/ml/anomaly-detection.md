@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Anomaly Detection
-slug: anomaly-detection
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - unsupervised-learning
   - outlier-detection
   - machine-learning
-id: concepts/ml/anomaly-detection
+id: anomaly-detection
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

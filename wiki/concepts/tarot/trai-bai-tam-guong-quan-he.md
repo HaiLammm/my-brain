@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Trải bài Tấm gương quan hệ (7 lá)
-slug: trai-bai-tam-guong-quan-he
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - spread
-id: concepts/tarot/trai-bai-tam-guong-quan-he
+id: trai-bai-tam-guong-quan-he
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

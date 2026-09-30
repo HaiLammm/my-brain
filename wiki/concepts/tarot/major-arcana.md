@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Major Arcana (Ẩn chính)
-slug: major-arcana
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - symbolism
-id: concepts/tarot/major-arcana
+id: major-arcana
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

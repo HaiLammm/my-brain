@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Năm nền tảng giọng nói
-slug: nam-nen-tang-giong-noi
-date_added: 2026-05-17
 confidence: unverified
 tags:
   - giong-noi
   - giao-tiep
-id: TODO
+id: nam-nen-tang-giong-noi
 created: 2026-05-17
 updated: 2026-05-17
 key_sources:

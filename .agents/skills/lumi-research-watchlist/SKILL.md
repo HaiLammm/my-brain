@@ -31,6 +31,10 @@ Scheduled discovery uses:
   discovery run.
 - `raw/discovered/` for scored candidate records created later by the runner.
 
+Read `references/watchlist-schema.md` before interpreting, creating, or editing
+the watchlist. Read `references/scheduler-patterns.md` only when the user asks
+to automate a run on a specific platform.
+
 This skill configures the watchlist only. It does not run scheduled discovery
 unless the user explicitly asks for a dry run or a real run.
 
@@ -77,12 +81,19 @@ Use this mapping:
 
 - `id`: short lowercase label, letters/numbers/hyphens only.
 - `query`: the research phrase to search for.
-- `sources`: use `arxiv` by default; add `s2` only when the user has Semantic
-  Scholar set up or asks for broader paper coverage.
+- `sources`: use `arxiv` by default; add `s2` when the user has Semantic
+  Scholar set up; add `openalex` when broader coverage (cross-walk metadata,
+  humanities/biomedicine, older work) is requested. OpenAlex can work without
+  local credentials for small checks; set `OPENALEX_API_KEY` for the free daily
+  API budget and usage tracking.
 - `schedule`: `manual`, `daily`, `weekly`, or `monthly`.
 - `limit`: how many candidates to fetch before deduping.
 - `max_new`: how many new candidates the user wants to see per run.
 - `enabled`: `true` only after the user confirms the topic should be active.
+
+For RSS or Atom feeds, use a `type: feed` item with an HTTPS `url`; read
+`references/watchlist-schema.md` for its fields and safety rules. Do not use
+`sources` or `query` for a feed item.
 
 Good defaults:
 
@@ -123,7 +134,10 @@ does not delete already discovered candidates.
 
 ### 5. Validate
 
-After editing, run a validation-only check when the runner is available:
+First inspect the edited watchlist for enabled `type: feed` items.
+
+If there are no enabled feeds, a topic-only preview is safe when the user asks
+to preview the result:
 
 ```bash
 lumina discover run --dry-run --json
@@ -135,7 +149,13 @@ If `lumina` is not available in the environment, try:
 node _lumina/scripts/discover-runner.mjs --dry-run --json
 ```
 
-If neither command exists yet, manually inspect that the YAML has:
+Do not use `--dry-run` when an enabled feed is present: polling a feed updates
+its ETag and seen-item state. Instead, manually inspect the YAML below. If the
+user explicitly requested a real run, leave it to
+`/lumi-research-watch-run`, which performs one real pass without first polling
+the feed as a preview.
+
+For any watchlist, manually inspect that the YAML has:
 
 - `version: 1`
 - an `items:` list
@@ -143,6 +163,8 @@ If neither command exists yet, manually inspect that the YAML has:
 - valid `schedule` values: `manual`, `daily`, `weekly`, `monthly`
 - valid `sources` values supported by the installed runner
 - positive numeric `limit` and `max_new` values when present
+- for each feed: `type: feed`, a unique safe `id`, and an HTTPS `url` (with no
+  `query` or `sources` fields)
 
 Report validation problems in plain language and fix them before finishing.
 
@@ -157,8 +179,11 @@ Tell the user:
 - papers are downloaded later during `/lumi-ingest`, after the user chooses a
   candidate.
 
-If the user asks how to schedule it, point them to the advanced scheduled
-discovery guide in `docs/user-guide/`.
+If the user asks how to schedule it, use
+`references/scheduler-patterns.md` for GitHub Actions, cron, launchd, or
+Windows Task Scheduler guidance. The `/lumi-research-watch-run` skill runs one
+pass over the watchlist on demand. Keep scheduler setup separate from this
+watchlist edit unless the user explicitly requests and confirms a platform.
 
 ## Constraints
 
@@ -175,7 +200,7 @@ discovery guide in `docs/user-guide/`.
 - `_lumina/config/watchlist.yml` exists and reflects the user's requested
   topic changes.
 - Existing unrelated watchlist items are preserved.
-- The file validates by runner dry-run or by manual shape inspection when the
-  runner is unavailable.
+- The file validates by topic-only runner preview when requested, or by manual
+  shape inspection when an enabled feed is present or the runner is unavailable.
 - The user is told clearly that scheduling is external and ingestion happens
   later.

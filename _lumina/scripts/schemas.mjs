@@ -11,11 +11,13 @@
 // EXTERNAL_ID_NAMESPACES
 // Locked namespace list for the `external_ids` frontmatter map on Source pages.
 // `url` is a post-spec extension (legacy from arxiv-only era; kept for back-compat).
-// `openalex`/`isbn`/`s2_corpus` reserved — add when producer/consumer ship together.
+// `openalex` activated 2026-05 alongside the OpenAlex fetcher (Work IDs only, `^W\d+$`).
+// `isbn`/`s2_corpus` remain reserved — add when producer/consumer ship together.
+// Order matters: `externalIdMatchKey` priority follows this array — `doi > arxiv > s2 > url > openalex`.
 // ---------------------------------------------------------------------------
 
 /** @type {readonly string[]} */
-export const EXTERNAL_ID_NAMESPACES = Object.freeze(['doi', 'arxiv', 's2', 'url']);
+export const EXTERNAL_ID_NAMESPACES = Object.freeze(['doi', 'arxiv', 's2', 'url', 'openalex']);
 
 // ---------------------------------------------------------------------------
 // SCHEMA_VERSION
@@ -71,11 +73,45 @@ const LINK_SYNTAX = /** @type {const} */ (['obsidian']);
 /** Supported slug normalisation styles. */
 const SLUG_STYLE = /** @type {const} */ (['kebab-case']);
 
+/**
+ * Valid `confidence` values on a graph EDGE. Distinct from the page-level
+ * `confidence` frontmatter enum below, which also admits 'unverified'.
+ * wiki.mjs validates writes against this; lint.mjs's L08 reports on it.
+ */
+export const EDGE_CONFIDENCE = /** @type {const} */ (['high', 'medium', 'low']);
+
+// ---------------------------------------------------------------------------
+// TOPIC TIMELINE
+// Topic pages (research pack) have two zones: a compiled zone on top that is
+// rewritten only by `/lumi-research-topic` refresh, and an append-only
+// timeline zone at the bottom bounded by these markers. `wiki.mjs timeline-add`
+// is the only writer of the timeline zone; lint L21 warns when the timeline
+// has entries newer than the page's `compiled_at`.
+// ---------------------------------------------------------------------------
+
+/** @type {string} */
+export const TIMELINE_MARKER_OPEN = '<!-- lumina:timeline -->';
+/** @type {string} */
+export const TIMELINE_MARKER_CLOSE = '<!-- /lumina:timeline -->';
+/** Entry kinds accepted by `timeline-add`. */
+export const TIMELINE_KINDS = Object.freeze(['ingest', 'correction', 'note']);
+
+/**
+ * Safe fallback values for enum fields that have one. wiki.mjs writes them in
+ * `migrate --add-defaults`; lint.mjs's fixL01 writes them for a missing key.
+ * The two used to keep private copies synced by hand.
+ */
+export const LEGACY_ENUM_DEFAULTS = {
+  sources:  { provenance: 'missing', confidence: 'unverified' },
+  concepts: { confidence: 'unverified' },
+};
+
 export const ENUMS = {
   IMPORTANCE,
   BIDI_MODES,
   LINK_SYNTAX,
   SLUG_STYLE,
+  EDGE_CONFIDENCE,
 };
 
 // ---------------------------------------------------------------------------
@@ -105,6 +141,10 @@ export const ENTITY_DIRS = {
   summary:     { dir: 'summary/',     pack: 'core' },
   outputs:     { dir: 'outputs/',     pack: 'core' },
   graph:       { dir: 'graph/',       pack: 'core' },
+  // Per-unit reading notes for long sources (books, theses); nested as
+  // readings/<source-slug>/<nn>-<unit-slug>.md. Named "readings" (not "notes")
+  // to avoid colliding with the raw/notes/ user drop zone.
+  readings:    { dir: 'readings/',    pack: 'core' },
 
   // research pack
   foundations: { dir: 'foundations/', pack: 'research' },
@@ -208,10 +248,20 @@ export const EDGE_TYPES = [
   { name: 'authored_by',        from: 'sources', to: 'people',   reverse: 'authored',        symmetric: false, pack: 'core' },
   { name: 'authored',           from: 'people',  to: 'sources',  reverse: 'authored_by',     symmetric: false, pack: 'core' },
 
+  // --- reading note <-> source ---------------------------------------------
+  { name: 'annotates',          from: 'readings', to: 'sources',  reverse: 'annotated_by',    symmetric: false, pack: 'core' },
+  { name: 'annotated_by',       from: 'sources',  to: 'readings', reverse: 'annotates',       symmetric: false, pack: 'core' },
+
   // --- concept <-> concept -------------------------------------------------
   { name: 'related_to',         from: 'concepts', to: 'concepts', reverse: 'related_to',     symmetric: true,  pack: 'core' },
   { name: 'part_of',            from: 'concepts', to: 'concepts', reverse: 'has_part',        symmetric: false, pack: 'core' },
   { name: 'has_part',           from: 'concepts', to: 'concepts', reverse: 'part_of',         symmetric: false, pack: 'core' },
+
+  // --- research pack: topic organization edges -----------------------------
+  { name: 'includes_source',    from: 'topics',   to: 'sources',  reverse: 'included_in_topic', symmetric: false, pack: 'research' },
+  { name: 'included_in_topic',  from: 'sources',  to: 'topics',   reverse: 'includes_source',   symmetric: false, pack: 'research' },
+  { name: 'covers_concept',     from: 'topics',   to: 'concepts', reverse: 'covered_by_topic',  symmetric: false, pack: 'research' },
+  { name: 'covered_by_topic',   from: 'concepts', to: 'topics',   reverse: 'covers_concept',    symmetric: false, pack: 'research' },
 
   // --- terminal edges (no reverse) — exempt-only rule applies -------------
   // Any entity -> foundations/** (research pack)
@@ -222,17 +272,6 @@ export const EDGE_TYPES = [
 
   // Any entity -> external URL (core; *://* is in EXEMPTION_GLOBS)
   { name: 'see_also_url',       from: '*', to: '*',           reverse: null, terminal: true, pack: 'core' },
-
-  // --- research pack: topic <-> source / concept ---------------------------
-  // Local addition (2026-08-08). /lumi-research-topic documents these four edge
-  // names in its step 5, but they were absent from this table, so add-edge
-  // rejected them and topic pages could only be wired through markdown
-  // wikilinks. topics/ is not in EXEMPTION_GLOBS, so both directions are
-  // required and L06 enforces the reverse.
-  { name: 'includes_source',    from: 'topics',   to: 'sources',  reverse: 'included_in_topic', symmetric: false, pack: 'research' },
-  { name: 'included_in_topic',  from: 'sources',  to: 'topics',   reverse: 'includes_source',   symmetric: false, pack: 'research' },
-  { name: 'covers_concept',     from: 'topics',   to: 'concepts', reverse: 'covered_by_topic',  symmetric: false, pack: 'research' },
-  { name: 'covered_by_topic',   from: 'concepts', to: 'topics',   reverse: 'covers_concept',    symmetric: false, pack: 'research' },
 
   // --- reading pack --------------------------------------------------------
   { name: 'features',           from: 'chapters',   to: 'characters', reverse: 'appears_in',      symmetric: false, pack: 'reading' },
@@ -292,6 +331,10 @@ export const REQUIRED_FRONTMATTER = {
     { key: 'findings',     type: 'array', required: false },
     { key: 'external_ids', type: 'object', required: false },
     { key: 'sources',      type: 'array',  required: false },
+    { key: 'ranking',      type: 'object', required: false },
+    // Citations to works not yet in the wiki: [{ns, value, title?}]. Written by
+    // `add-citation-by-id`, drained by `resolve-pending-citations`.
+    { key: 'pending_citations', type: 'array', required: false },
   ],
 
   // Concept page
@@ -327,6 +370,19 @@ export const REQUIRED_FRONTMATTER = {
     { key: 'covers',  type: 'array',    required: true  },
   ],
 
+  // Reading-note page (core) — per-unit analytical notes for a long source.
+  // `source` is the parent source slug; `part` orders units within the source.
+  readings: [
+    { key: 'id',      type: 'string',   required: true  },
+    { key: 'title',   type: 'string',   required: true  },
+    { key: 'type',    type: 'string',   required: true  },
+    { key: 'created', type: 'iso-date', required: true  },
+    { key: 'updated', type: 'iso-date', required: true  },
+    { key: 'source',  type: 'string',   required: true  },
+    { key: 'part',    type: 'number',   required: true  },
+    { key: 'pages',   type: 'string',   required: false },
+  ],
+
   // Research pack: foundation page (terminal — no back-links required)
   foundations: [
     { key: 'id',      type: 'string',   required: true,  pack: 'research' },
@@ -345,6 +401,9 @@ export const REQUIRED_FRONTMATTER = {
     { key: 'created',     type: 'iso-date', required: true,  pack: 'research' },
     { key: 'updated',     type: 'iso-date', required: true,  pack: 'research' },
     { key: 'key_sources', type: 'array',    required: true,  pack: 'research' },
+    // Date the compiled zone was last rewritten; timeline entries newer than
+    // this trigger lint L21. Absent on pages that predate the timeline.
+    { key: 'compiled_at', type: 'iso-date', required: false, pack: 'research' },
   ],
 
   // Reading pack: chapter page

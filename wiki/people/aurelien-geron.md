@@ -1,8 +1,6 @@
 ---
 type: person
 title: Aurélien Géron
-slug: aurelien-geron
-date_added: 2026-05-16
 affiliation: Kiwisoft S.A.S.
 tags:
   - machine-learning

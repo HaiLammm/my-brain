@@ -1,8 +1,6 @@
 ---
 type: source
 title: Tell Me About Yourself — Interview Framework
-slug: tell-me-about-yourself-interview-framework
-date_added: 2026-05-12
 authors: []
 source_type: note
 importance: 2

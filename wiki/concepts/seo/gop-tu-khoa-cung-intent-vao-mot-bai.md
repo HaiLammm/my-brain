@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Gộp từ khóa cùng intent vào một bài
-slug: gop-tu-khoa-cung-intent-vao-mot-bai
-date_added: 2026-09-16
 confidence: unverified
 tags:
   - seo
   - keyword
   - planning
-id: concepts/seo/gop-tu-khoa-cung-intent-vao-mot-bai
+id: gop-tu-khoa-cung-intent-vao-mot-bai
 created: 2026-09-16
 updated: 2026-09-16
 key_sources:

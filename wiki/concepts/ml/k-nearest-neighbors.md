@@ -1,10 +1,8 @@
 ---
 type: concept
 title: K láng giềng gần nhất (K-Nearest Neighbors)
-slug: k-nearest-neighbors
-date_added: 2026-05-16
 confidence: unverified
-id: concepts/ml/k-nearest-neighbors
+id: k-nearest-neighbors
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

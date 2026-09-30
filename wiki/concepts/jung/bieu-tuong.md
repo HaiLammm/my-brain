@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Biểu tượng
-slug: bieu-tuong
-date_added: 2026-05-11
 confidence: high
 tags:
   - jungian-psychology
   - symbolism
-id: TODO
+id: bieu-tuong
 created: 2026-05-11
 updated: 2026-05-14
 key_sources:

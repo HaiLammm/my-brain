@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Trải bài Soi bóng (5 lá)
-slug: trai-bai-soi-bong
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - spread
   - shadow-work
-id: concepts/tarot/trai-bai-soi-bong
+id: trai-bai-soi-bong
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

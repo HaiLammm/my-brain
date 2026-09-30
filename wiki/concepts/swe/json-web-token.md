@@ -1,10 +1,8 @@
 ---
 type: concept
 title: JSON Web Token (JWT)
-slug: json-web-token
-date_added: 2026-05-15
 confidence: unverified
-id: concepts/swe/json-web-token
+id: json-web-token
 created: 2026-05-15
 updated: 2026-05-15
 key_sources:

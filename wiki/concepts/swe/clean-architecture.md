@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Clean Architecture
-slug: clean-architecture
-date_added: 2026-05-12
 confidence: high
 tags:
   - architecture
   - design-pattern
-id: concepts/swe/clean-architecture
+id: clean-architecture
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

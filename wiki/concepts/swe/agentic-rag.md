@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Agentic RAG (RAG Chủ động)
-slug: agentic-rag
-date_added: 2026-05-12
 confidence: medium
 tags:
   - rag
   - ai-agents
   - retrieval
-id: concepts/swe/agentic-rag
+id: agentic-rag
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

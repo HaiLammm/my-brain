@@ -1,5 +1,5 @@
 ---
-id: concepts/swe/lap-trinh-python
+id: lap-trinh-python
 title: Lập trình Python
 type: concept
 created: 2026-05-14
@@ -13,8 +13,6 @@ related_concepts:
   - concepts/swe/co-so-du-lieu-sql
   - concepts/swe/lap-trinh-backend-python
 confidence: unverified
-slug: lap-trinh-python
-date_added: 2026-05-14
 tags:
   - python
   - software

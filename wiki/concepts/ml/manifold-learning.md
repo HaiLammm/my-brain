@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Manifold Learning
-slug: manifold-learning
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - dimensionality-reduction
   - unsupervised-learning
   - machine-learning
-id: concepts/ml/manifold-learning
+id: manifold-learning
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

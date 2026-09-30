@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Bộ quy tắc cold email và email cho người đăng ký
-slug: quy-tac-cold-email
-date_added: 2026-08-11
 confidence: high
 tags:
   - email-marketing
   - cold-email
   - checklist
-id: concepts/marketing/quy-tac-cold-email
+id: quy-tac-cold-email
 created: 2026-08-11
 updated: 2026-08-11
 provenance: replayable

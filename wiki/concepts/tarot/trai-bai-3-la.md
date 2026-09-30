@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Trải bài 3 lá
-slug: trai-bai-3-la
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - spread
-id: concepts/tarot/trai-bai-3-la
+id: trai-bai-3-la
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 28"
-slug: chuong-28
+title: Chương 28
 book: bo-gia
 number: 28
 created: 2026-05-27

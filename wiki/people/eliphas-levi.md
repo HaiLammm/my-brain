@@ -1,8 +1,6 @@
 ---
 type: person
 title: Eliphas Lévi
-slug: eliphas-levi
-date_added: 2026-08-08
 affiliation: ""
 tags:
   - tarot

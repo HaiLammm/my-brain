@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Bốn chức năng tâm lý
-slug: bon-chuc-nang-tam-ly
-date_added: 2026-05-12
 confidence: high
 tags:
   - jungian-psychology
   - psychological-functions
-id: concepts/jung/bon-chuc-nang-tam-ly
+id: bon-chuc-nang-tam-ly
 created: 2026-05-12
 updated: 2026-05-14
 key_sources:

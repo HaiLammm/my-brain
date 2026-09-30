@@ -1,13 +1,11 @@
 ---
 type: person
 title: Vito Corleone
-slug: vito-corleone
-date_added: 2026-05-11
 affiliation: []
 tags:
   - mafia
   - gia-dinh-corleone
-id: TODO
+id: vito-corleone
 created: 2026-05-11
 updated: 2026-05-11
 key_sources:

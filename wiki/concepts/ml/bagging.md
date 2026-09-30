@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Bagging
-slug: bagging
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - ensemble
   - machine-learning
-id: concepts/ml/bagging
+id: bagging
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

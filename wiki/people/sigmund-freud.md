@@ -1,12 +1,10 @@
 ---
 type: person
 title: Sigmund Freud
-slug: sigmund-freud
-date_added: 2026-05-11
 affiliation: Vienna, Austria
 tags:
   - psychoanalysis
-id: TODO
+id: sigmund-freud
 created: 2026-05-11
 updated: 2026-05-14
 key_sources:

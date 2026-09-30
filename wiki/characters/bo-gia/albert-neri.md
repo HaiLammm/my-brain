@@ -1,7 +1,6 @@
 ---
 type: character
 title: Albert Neri
-slug: albert-neri
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-27
 created: 2026-05-27

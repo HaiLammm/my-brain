@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Mô hình pillar-cluster
-slug: mo-hinh-pillar-cluster
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - seo
   - content
   - structure
-id: concepts/seo/mo-hinh-pillar-cluster
+id: mo-hinh-pillar-cluster
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

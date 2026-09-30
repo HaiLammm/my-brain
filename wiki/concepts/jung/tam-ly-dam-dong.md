@@ -1,5 +1,5 @@
 ---
-id: concepts/jung/tam-ly-dam-dong
+id: tam-ly-dam-dong
 title: Tâm lý đám đông
 type: concept
 created: 2026-05-14
@@ -12,8 +12,6 @@ related_concepts:
   - concepts/jung/phong-chieu
   - concepts/jung/cai-bong
 confidence: unverified
-slug: tam-ly-dam-dong
-date_added: 2026-05-14
 ---
 ## Definition
 

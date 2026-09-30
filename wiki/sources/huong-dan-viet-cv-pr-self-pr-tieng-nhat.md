@@ -1,8 +1,6 @@
 ---
 type: source
 title: Hướng dẫn viết CV / 自己PR (Self PR) Tiếng Nhật
-slug: huong-dan-viet-cv-pr-self-pr-tieng-nhat
-date_added: 2026-05-18
 authors: []
 source_type: note
 importance: 3

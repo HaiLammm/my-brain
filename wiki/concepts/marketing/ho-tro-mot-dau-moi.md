@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Hỗ trợ một đầu mối (一気通貫)
-slug: ho-tro-mot-dau-moi
-date_added: 2026-09-05
 confidence: medium
 tags:
   - b2b
   - dich-vu
   - nhat-ban
-id: concepts/marketing/ho-tro-mot-dau-moi
+id: ho-tro-mot-dau-moi
 created: 2026-09-05
 updated: 2026-09-06
 provenance: replayable

@@ -1,13 +1,11 @@
 ---
 type: person
 title: Plato
-slug: plato
-date_added: 2026-05-14
 affiliation: Hy Lạp cổ đại
 tags:
   - philosophy
   - ancient-greece
-id: TODO
+id: plato
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

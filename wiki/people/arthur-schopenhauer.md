@@ -1,14 +1,12 @@
 ---
 type: person
 title: Arthur Schopenhauer
-slug: arthur-schopenhauer
-date_added: 2026-05-12
 affiliation: Germany
 tags:
   - philosophy
   - pessimism
   - metaphysics
-id: TODO
+id: arthur-schopenhauer
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

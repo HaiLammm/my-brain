@@ -28,7 +28,6 @@ paths:
   log: wiki/log.md
 wiki:
   link_syntax: obsidian
-  slug_style: kebab-case
   log_prefix: '## [{{date}}] {{skill}} | {{details}}'
   bidirectional_links:
     mode: exempt-only
@@ -39,13 +38,6 @@ wiki:
       - reflections/**
   graph:
     enabled: true
-    edge_types_core:
-      - related_to
-      - builds_on
-      - contradicts
-      - cites
-      - mentions
-      - part_of
 lint:
   default_mode: report
   checks:

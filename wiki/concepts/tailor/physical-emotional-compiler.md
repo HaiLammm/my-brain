@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Bộ biên dịch Vật lý-Cảm xúc (Physical-Emotional Compiler)
-slug: physical-emotional-compiler
-date_added: 2026-05-12
 confidence: medium
 tags:
   - ai-bespoke
   - geometric-delta
   - ao-dai
-id: concepts/tailor/physical-emotional-compiler
+id: physical-emotional-compiler
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

@@ -1,9 +1,7 @@
 ---
 type: concept
-title: "VIM"
-slug: vim
-id: concepts/tools/vim
-date_added: 2026-05-11
+title: VIM
+id: vim
 created: 2026-05-11
 updated: 2026-05-11
 confidence: high

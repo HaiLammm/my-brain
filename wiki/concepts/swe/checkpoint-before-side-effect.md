@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Ghi checkpoint trước hành động phụ
-slug: checkpoint-before-side-effect
-date_added: 2026-08-07
 confidence: high
 tags:
   - idempotency
   - crash-safety
   - job-queue
-id: concepts/swe/checkpoint-before-side-effect
+id: checkpoint-before-side-effect
 created: 2026-08-07
 updated: 2026-08-07
 key_sources:

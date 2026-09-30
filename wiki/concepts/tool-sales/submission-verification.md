@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Gửi form và xác minh kết quả
-slug: submission-verification
-date_added: 2026-08-07
 confidence: high
 tags:
   - tool-sales
   - automation
   - verification
-id: concepts/tool-sales/submission-verification
+id: submission-verification
 created: 2026-08-07
 updated: 2026-08-07
 key_sources:

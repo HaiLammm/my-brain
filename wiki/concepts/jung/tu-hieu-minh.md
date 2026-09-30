@@ -1,5 +1,5 @@
 ---
-id: concepts/jung/tu-hieu-minh
+id: tu-hieu-minh
 title: Tự hiểu mình
 type: concept
 created: 2026-05-14
@@ -13,8 +13,6 @@ related_concepts:
   - concepts/jung/phong-chieu
   - concepts/jung/tam-ly-dam-dong
 confidence: unverified
-slug: tu-hieu-minh
-date_added: 2026-05-14
 ---
 ## Definition
 

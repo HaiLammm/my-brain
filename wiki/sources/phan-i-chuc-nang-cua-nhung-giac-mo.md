@@ -1,8 +1,6 @@
 ---
 type: source
 title: Phần I — Chức Năng của Những Giấc Mơ
-slug: phan-i-chuc-nang-cua-nhung-giac-mo
-date_added: 2026-05-12
 authors:
   - Carl Gustav Jung
 source_type: book

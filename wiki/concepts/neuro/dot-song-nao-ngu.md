@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Đợt sóng não giấc ngủ (sleep spindle)
-slug: dot-song-nao-ngu
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
   - NREM
   - memory
   - neuroscience
-id: concepts/neuro/dot-song-nao-ngu
+id: dot-song-nao-ngu
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

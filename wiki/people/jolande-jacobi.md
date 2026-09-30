@@ -1,12 +1,10 @@
 ---
 type: person
 title: Jolande Jacobi
-slug: jolande-jacobi
-date_added: 2026-05-11
 affiliation: Zurich, Switzerland
 tags:
   - jungian-psychology
-id: TODO
+id: jolande-jacobi
 created: 2026-05-11
 updated: 2026-05-11
 key_sources:

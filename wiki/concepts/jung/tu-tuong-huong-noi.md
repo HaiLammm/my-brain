@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Tư tưởng hướng nội
-slug: tu-tuong-huong-noi
-date_added: 2026-05-12
 confidence: high
 tags:
   - tam-ly
   - jung
-id: concepts/jung/tu-tuong-huong-noi
+id: tu-tuong-huong-noi
 created: 2026-05-12
 updated: 2026-05-14
 key_sources:

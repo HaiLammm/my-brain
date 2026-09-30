@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Chúa Ba Ngôi
-slug: trinity
-date_added: 2026-05-14
 confidence: unverified
 tags:
   - christianity
   - trinity
   - archetype
   - jungian-psychology
-id: TODO
+id: trinity
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

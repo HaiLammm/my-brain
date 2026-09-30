@@ -1,14 +1,13 @@
 ---
 type: character
 title: Jack Woltz
-slug: jack-woltz
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-1
 created: 2026-05-21
 updated: 2026-08-07
 tags:
   - bo-gia
-id: TODO
+id: characters/bo-gia/jack-woltz
 ---
 
 ## Overview

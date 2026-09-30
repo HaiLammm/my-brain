@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 1"
-slug: chuong-1
+title: Chương 1
 book: bo-gia
 number: 1
 created: 2026-05-21
@@ -14,8 +13,7 @@ themes:
 tags:
   - mafia
   - gia-dinh-corleone
-id: TODO
-
+id: chapters/bo-gia/chuong-1
 ---
 
 ## Summary

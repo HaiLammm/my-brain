@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Thiếu tín hiệu còn hơn tín hiệu sai
-slug: thieu-tin-hieu-con-hon-tin-hieu-sai
-date_added: 2026-09-25
 confidence: unverified
 tags:
   - seo
   - eeat
   - structured-data
-id: concepts/seo/thieu-tin-hieu-con-hon-tin-hieu-sai
+id: thieu-tin-hieu-con-hon-tin-hieu-sai
 created: 2026-09-25
 updated: 2026-09-25
 key_sources:

@@ -1,8 +1,6 @@
 ---
 type: concept
 title: Liên kết xa và sáng tạo trong REM
-slug: lien-ket-xa-trong-rem
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
@@ -10,7 +8,7 @@ tags:
   - dreams
   - creativity
   - memory
-id: concepts/neuro/lien-ket-xa-trong-rem
+id: lien-ket-xa-trong-rem
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

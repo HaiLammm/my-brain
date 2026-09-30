@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Thanh toán và chiến lược cổng thanh toán
-slug: checkout-and-payment
-date_added: 2026-05-14
 confidence: high
 tags:
   - tailor-project
   - e-commerce
   - payment
-id: concepts/tailor/checkout-and-payment
+id: checkout-and-payment
 created: 2026-05-14
 updated: 2026-08-07
 key_sources:

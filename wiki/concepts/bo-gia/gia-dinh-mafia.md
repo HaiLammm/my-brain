@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Gia đình Mafia
-slug: gia-dinh-mafia
-date_added: 2026-05-11
 confidence: high
 tags:
   - toi-pham-to-chuc
   - mafia
-id: TODO
+id: gia-dinh-mafia
 created: 2026-05-11
 updated: 2026-05-11
 key_sources:

@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Giấc ngủ REM
-slug: giac-ngu-rem
-date_added: 2026-05-13
 confidence: medium
 tags:
   - sleep
   - REM
   - dreams
   - neuroscience
-id: concepts/neuro/giac-ngu-rem
+id: giac-ngu-rem
 created: 2026-05-13
 updated: 2026-05-13
 key_sources:

@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 21"
-slug: chuong-21
+title: Chương 21
 book: bo-gia
 number: 21
 created: 2026-05-27

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Phương pháp CUE-DIVE
-slug: cue-dive-method
-date_added: 2026-08-11
 confidence: high
 tags:
   - email-marketing
   - cold-email
   - subject-line
-id: concepts/marketing/cue-dive-method
+id: cue-dive-method
 created: 2026-08-11
 updated: 2026-08-11
 provenance: replayable

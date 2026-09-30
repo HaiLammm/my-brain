@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Đường ống Trạng thái Đơn hàng
-slug: order-status-pipeline
-date_added: 2026-05-12
 confidence: high
 tags:
   - state-machine
   - sao-dang
   - order-management
-id: concepts/tailor/order-status-pipeline
+id: order-status-pipeline
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

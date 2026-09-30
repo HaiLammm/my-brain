@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 18"
-slug: ch18-beats
+title: Plot beats — Chương 18
 book: bo-gia
 up_to_chapter: 18
 created: 2026-05-27

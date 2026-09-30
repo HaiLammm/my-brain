@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Nguyên tắc Video, Không Must-see
-slug: transition-as-video
-date_added: 2026-05-12
 confidence: high
 tags:
   - event-sourcing
   - sao-dang
   - audit
   - state-machine
-id: concepts/swe/transition-as-video
+id: transition-as-video
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

@@ -1,8 +1,6 @@
 ---
 type: source
 title: tool_sales — Bộ tài liệu kiến trúc dự án
-slug: tool-sales-architecture-docs
-date_added: 2026-08-07
 authors: []
 source_type: note
 importance: 3

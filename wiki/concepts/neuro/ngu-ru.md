@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Ngủ rũ (narcolepsy)
-slug: ngu-ru
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
   - sleep-disorders
   - neuroscience
-id: concepts/neuro/ngu-ru
+id: ngu-ru
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

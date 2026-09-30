@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Đồng nhất tâm linh
-slug: dong-nhat-tam-linh
-date_added: 2026-05-12
 confidence: high
 tags:
   - participation-mystique
   - primitive-psychology
   - unconscious
   - Jung
-id: concepts/jung/dong-nhat-tam-linh
+id: dong-nhat-tam-linh
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

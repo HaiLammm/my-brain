@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Sổ ghi "cố ý không làm"
-slug: so-ghi-co-y-khong-lam
-date_added: 2026-09-25
 confidence: unverified
 tags:
   - swe
   - documentation
   - decision-record
-id: concepts/swe/so-ghi-co-y-khong-lam
+id: so-ghi-co-y-khong-lam
 created: 2026-09-25
 updated: 2026-09-25
 key_sources:

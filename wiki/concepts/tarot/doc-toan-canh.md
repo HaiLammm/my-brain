@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Đọc toàn cảnh trải bài
-slug: doc-toan-canh
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - reading-technique
-id: concepts/tarot/doc-toan-canh
+id: doc-toan-canh
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

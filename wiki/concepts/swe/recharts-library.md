@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Recharts Library
-slug: recharts-library
-date_added: 2026-05-16
 confidence: medium
 tags:
   - tailor-project
   - library
   - chart
   - visualization
-id: TODO
+id: recharts-library
 created: 2026-05-16
 updated: 2026-05-16
 key_sources: []

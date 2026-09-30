@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 20"
-slug: ch20-beats
+title: Plot beats — Chương 20
 book: bo-gia
 up_to_chapter: 20
 created: 2026-05-27

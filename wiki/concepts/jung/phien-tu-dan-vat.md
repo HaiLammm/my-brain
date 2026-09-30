@@ -1,13 +1,11 @@
 ---
 type: concept
-title: "Phiền tư dằn vặt"
-slug: phien-tu-dan-vat
-date_added: 2026-05-12
+title: Phiền tư dằn vặt
 confidence: medium
 tags:
   - jungian-psychology
   - dissociation
-id: concepts/jung/phien-tu-dan-vat
+id: phien-tu-dan-vat
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

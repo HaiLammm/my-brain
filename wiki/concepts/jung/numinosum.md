@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Numinosum
-slug: numinosum
-date_added: 2026-05-14
 confidence: unverified
 tags:
   - religion
   - numinosum
   - rudolf-otto
-id: TODO
+id: numinosum
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

@@ -1,7 +1,6 @@
 ---
 type: character
 title: Fanucci
-slug: fanucci
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-14
 created: 2026-05-27

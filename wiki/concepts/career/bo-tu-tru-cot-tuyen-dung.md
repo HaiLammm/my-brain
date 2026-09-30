@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Bộ tứ trụ cột đánh giá tuyển dụng
-slug: bo-tu-tru-cot-tuyen-dung
-date_added: 2026-05-12
 confidence: medium
 tags:
   - tuyen-dung
   - nha-tuyen-dung
-id: concepts/career/bo-tu-tru-cot-tuyen-dung
+id: bo-tu-tru-cot-tuyen-dung
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

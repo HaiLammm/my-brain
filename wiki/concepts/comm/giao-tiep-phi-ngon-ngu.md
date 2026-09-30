@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Giao tiếp phi ngôn ngữ
-slug: giao-tiep-phi-ngon-ngu
-date_added: 2026-05-17
 confidence: medium
 tags:
   - giao-tiep
   - tam-ly-hoc
-id: TODO
+id: giao-tiep-phi-ngon-ngu
 created: 2026-05-17
 updated: 2026-05-17
 key_sources:

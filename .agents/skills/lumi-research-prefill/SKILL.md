@@ -19,7 +19,7 @@ them, but they do not require reverse links.
 
 ## Context
 
-Read `README.md` first. Use the research pack Wikipedia fetcher when background
+Read `README.md` at the project root before this SKILL.md. Use the research pack Wikipedia fetcher when background
 material should come from a public encyclopedia:
 
 ```bash
@@ -113,7 +113,7 @@ python3 _lumina/tools/fetch_wikipedia.py page "<title>"
 6. Log the addition:
 
 ```bash
-node _lumina/scripts/wiki.mjs log lumi-research-prefill "prefilled foundation <slug>"
+node _lumina/scripts/wiki.mjs log research-prefill "prefilled foundation <slug>"
 ```
 
 7. Run lint with fix so `wiki/index.md` and structural checks stay current:
@@ -121,6 +121,17 @@ node _lumina/scripts/wiki.mjs log lumi-research-prefill "prefilled foundation <s
 ```bash
 node _lumina/scripts/lint.mjs --fix --json
 ```
+
+   Re-run in read mode (no `--fix`) to confirm the true count — the `--fix`
+   run's own `summary.errors` still counts findings it just repaired:
+
+```bash
+node _lumina/scripts/lint.mjs --json
+```
+
+8. Suggest `/lumi-check` in a fresh session or via a subagent after this run.
+   A blank context catches bias from the reasoning chain that just wrote the
+   foundation page.
 
 ## Constraints
 
@@ -131,7 +142,7 @@ node _lumina/scripts/lint.mjs --fix --json
 - When refreshing an existing foundation, preserve the original `created` date and
   any `<!-- user-edited -->` sections verbatim. Only `updated` and non-marked
   sections may change.
-- Aliases must be unique across all foundations. If `lint.mjs --fix --json` reports
+- Aliases must be unique across all foundations. If `lint.mjs` reports
   `L10-alias-conflict`, resolve manually before completing the run — there is no
   automatic fix.
 
@@ -139,7 +150,8 @@ node _lumina/scripts/lint.mjs --fix --json
 
 - Foundation page exists with valid frontmatter and concise source-backed body.
 - `node _lumina/scripts/lint.mjs --fix --json` has updated `wiki/index.md` if
-  needed and leaves `summary.errors === 0`.
-- `wiki/log.md` has an append-only `lumi-research-prefill` entry.
+  needed, and a read-only re-run (`lint.mjs --json`, no `--fix`) leaves
+  `summary.errors === 0`.
+- `wiki/log.md` has an append-only `research-prefill` entry.
 - If the page already existed, the user's choice (skip / refresh / abort) is logged
   in `wiki/log.md` with the actual decision taken.

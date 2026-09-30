@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Mặc cảm quyền lực
-slug: mac-cam-quyen-luc
-date_added: 2026-05-12
 confidence: high
 tags:
   - jungian-psychology
   - power-complex
-id: concepts/jung/mac-cam-quyen-luc
+id: mac-cam-quyen-luc
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

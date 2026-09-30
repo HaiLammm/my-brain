@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Race Condition Prevention
-slug: race-condition-prevention
-date_added: 2026-05-14
 confidence: high
 tags:
   - tailor-project
   - backend
   - database
   - concurrency
-id: TODO
+id: race-condition-prevention
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

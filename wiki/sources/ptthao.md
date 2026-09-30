@@ -1,8 +1,6 @@
 ---
 type: source
 title: Phạm Thị Thanh Thảo — Ghi chú cá nhân
-slug: ptthao
-date_added: 2026-05-14
 authors: []
 source_type: note
 importance: 2
@@ -16,7 +14,7 @@ raw_paths:
   - raw/sources/personal/PTThao.md
 id: sources/ptthao
 created: 2026-05-14
-updated: 2026-05-14
+updated: 2026-09-26
 year: 2026
 provenance: replayable
 ingest_status: finalized
@@ -52,7 +50,7 @@ Ghi chú cá nhân về chị Phạm Thị Thanh Thảo — chuyên gia HR từn
 
 ## Related sources
 
-_(chưa có nguồn liên quan khác được nạp vào wiki)_
+- [[sources/trao-doi-voi-anh-hop-ve-hai-dot-thi-truong-va-chuoi-ke-thua]] — dự án dạy tiếng Nhật của chị Thảo được bàn và phản biện ở đây
 
 ## People
 

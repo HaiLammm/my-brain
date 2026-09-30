@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Nội dung phòng ngừa & bảo trì thiết bị
-slug: noi-dung-phong-ngua-bao-tri-thiet-bi
-date_added: 2026-06-01
 confidence: medium
 tags:
   - seo
   - content-marketing
   - setsubi-pro
-id: concepts/seo/noi-dung-phong-ngua-bao-tri-thiet-bi
+id: noi-dung-phong-ngua-bao-tri-thiet-bi
 created: 2026-06-01
 updated: 2026-06-01
 provenance: replayable

@@ -1,8 +1,6 @@
 ---
 type: source
 title: "Buổi Huấn Luyện Chuyên Sâu về Viết CV Tiếng Nhật: Phân Tích Jiko PR, Shibodoki và Phản Hồi Chi Tiết"
-slug: buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet
-date_added: 2026-05-18
 authors:
   - Phạm Thị Thanh Thảo
 source_type: note

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Elastic Net
-slug: elastic-net
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - regression
   - regularization
   - machine-learning
-id: concepts/ml/elastic-net
+id: elastic-net
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

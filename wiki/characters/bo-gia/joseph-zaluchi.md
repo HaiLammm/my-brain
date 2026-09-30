@@ -1,7 +1,6 @@
 ---
 type: character
 title: Joseph Zaluchi
-slug: joseph-zaluchi
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-20
 created: 2026-05-27

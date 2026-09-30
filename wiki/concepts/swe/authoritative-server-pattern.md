@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Authoritative Server Pattern
-slug: authoritative-server-pattern
-date_added: 2026-05-14
 confidence: high
 tags:
   - tailor-project
   - architecture
   - security
   - e-commerce
-id: TODO
+id: authoritative-server-pattern
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

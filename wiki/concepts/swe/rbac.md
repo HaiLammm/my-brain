@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Kiểm soát Truy cập Dựa trên Vai trò (RBAC)
-slug: rbac
-date_added: 2026-05-12
 confidence: medium
 tags:
   - security
   - access-control
-id: concepts/swe/rbac
+id: rbac
 created: 2026-05-12
 updated: 2026-05-15
 key_sources:

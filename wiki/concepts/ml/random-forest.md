@@ -1,10 +1,8 @@
 ---
 type: concept
 title: Rừng ngẫu nhiên (Random Forest)
-slug: random-forest
-date_added: 2026-05-16
 confidence: unverified
-id: concepts/ml/random-forest
+id: random-forest
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

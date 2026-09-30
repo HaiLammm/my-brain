@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 18"
-slug: chuong-18
+title: Chương 18
 book: bo-gia
 number: 18
 created: 2026-05-27

@@ -1,8 +1,6 @@
 ---
 type: concept
 title: Trị liệu cảm xúc qua đêm
-slug: tri-lieu-qua-dem
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
@@ -10,7 +8,7 @@ tags:
   - dreams
   - mental-health
   - neuroscience
-id: concepts/neuro/tri-lieu-qua-dem
+id: tri-lieu-qua-dem
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

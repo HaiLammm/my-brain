@@ -1,10 +1,8 @@
 ---
 type: concept
 title: Cân bằng tải
-slug: can-bang-tai
-date_added: 2026-05-15
 confidence: unverified
-id: concepts/swe/can-bang-tai
+id: can-bang-tai
 created: 2026-05-15
 updated: 2026-05-15
 key_sources:

@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 30"
-slug: chuong-30
+title: Chương 30
 book: bo-gia
 number: 30
 created: 2026-05-27

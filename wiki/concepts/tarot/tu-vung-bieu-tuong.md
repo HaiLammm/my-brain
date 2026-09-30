@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Từ vựng biểu tượng trong tranh tarot
-slug: tu-vung-bieu-tuong
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - symbolism
-id: concepts/tarot/tu-vung-bieu-tuong
+id: tu-vung-bieu-tuong
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

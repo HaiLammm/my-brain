@@ -1,8 +1,6 @@
 ---
 type: person
 title: Charles Harrington
-slug: charles-harrington
-date_added: 2026-08-08
 affiliation: ""
 tags:
   - tarot

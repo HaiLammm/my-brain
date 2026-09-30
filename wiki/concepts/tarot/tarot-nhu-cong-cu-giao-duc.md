@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Tarot như công cụ giáo dục và tham vấn
-slug: tarot-nhu-cong-cu-giao-duc
-date_added: 2026-08-08
 confidence: high
 tags:
   - tarot
   - education
   - counselling
-id: concepts/tarot/tarot-nhu-cong-cu-giao-duc
+id: tarot-nhu-cong-cu-giao-duc
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

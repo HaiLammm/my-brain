@@ -1,8 +1,6 @@
 ---
 type: person
 title: William Dement
-slug: william-dement
-date_added: 2026-08-12
 affiliation: Đại học Chicago (nghiên cứu sinh), sau đó Đại học Stanford
 tags:
   - sleep

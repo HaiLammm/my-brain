@@ -1,8 +1,6 @@
 ---
 type: person
 title: Robert Stickgold
-slug: robert-stickgold
-date_added: 2026-08-12
 affiliation: Trường Y Harvard
 tags:
   - sleep

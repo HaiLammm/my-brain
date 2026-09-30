@@ -1,8 +1,6 @@
 ---
 type: source
 title: The Quotable Jung
-slug: the-quotable-jung
-date_added: 2026-05-14
 created: 2026-05-14
 updated: 2026-05-14
 authors:
@@ -24,7 +22,7 @@ tags:
   - archetypes
   - individuation
   - analytical-psychology
-id: TODO
+id: the-quotable-jung
 ingest_status: finalized
 verify_status: passed
 ---

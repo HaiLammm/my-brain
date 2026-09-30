@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Kích hoạt giao cảm mạn tính do thiếu ngủ
-slug: kich-hoat-giao-cam-man-tinh
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
   - health
   - cardiovascular
   - stress
-id: concepts/neuro/kich-hoat-giao-cam-man-tinh
+id: kich-hoat-giao-cam-man-tinh
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

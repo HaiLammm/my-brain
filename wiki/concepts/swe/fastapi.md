@@ -1,14 +1,12 @@
 ---
 type: concept
 title: FastAPI
-slug: fastapi
-date_added: 2026-05-12
 confidence: high
 tags:
   - python
   - web-framework
   - api
-id: concepts/swe/fastapi
+id: fastapi
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

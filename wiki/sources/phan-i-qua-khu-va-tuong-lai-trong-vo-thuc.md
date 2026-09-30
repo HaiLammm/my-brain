@@ -1,8 +1,6 @@
 ---
 type: source
 title: Phần I — Quá Khứ Và Tương Lai Trong Vô Thức
-slug: phan-i-qua-khu-va-tuong-lai-trong-vo-thuc
-date_added: 2026-05-12
 authors:
   - Carl Gustav Jung
 source_type: book

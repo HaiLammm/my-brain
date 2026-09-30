@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Two-Stage Query (Truy vấn Hai Giai đoạn)
-slug: two-stage-query
-date_added: 2026-05-12
 confidence: medium
 tags:
   - search-strategy
   - vector-search
   - tailor-project
-id: concepts/swe/two-stage-query
+id: two-stage-query
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

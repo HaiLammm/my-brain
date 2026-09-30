@@ -1,8 +1,6 @@
 ---
 type: person
 title: "Pierre Janet"
-slug: pierre-janet
-date_added: 2026-05-12
 affiliation: Paris, France
 tags:
   - psychology

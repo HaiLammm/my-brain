@@ -1,9 +1,7 @@
 ---
-id: concepts/marketing/su-kien-kich-hoat-mua-hang
-slug: su-kien-kich-hoat-mua-hang
+id: su-kien-kich-hoat-mua-hang
 created: 2026-09-06
 updated: 2026-09-06
-date_added: 2026-09-06
 confidence: unverified
 provenance: replayable
 raw_paths:

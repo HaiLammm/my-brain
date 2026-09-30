@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Sửa tại nguồn sinh, không vá đầu ra
-slug: sua-tai-nguon-sinh
-date_added: 2026-08-11
 confidence: high
 tags:
   - code-generation
   - maintainability
   - pipeline
-id: concepts/swe/sua-tai-nguon-sinh
+id: sua-tai-nguon-sinh
 created: 2026-08-11
 updated: 2026-08-11
 key_sources:

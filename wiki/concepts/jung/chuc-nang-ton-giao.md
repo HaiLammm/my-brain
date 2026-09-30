@@ -1,5 +1,5 @@
 ---
-id: concepts/jung/chuc-nang-ton-giao
+id: chuc-nang-ton-giao
 title: Chức năng tôn giáo
 type: concept
 created: 2026-05-14
@@ -13,8 +13,6 @@ related_concepts:
   - concepts/jung/tam-ly-dam-dong
   - concepts/jung/tu-hieu-minh
 confidence: unverified
-slug: chuc-nang-ton-giao
-date_added: 2026-05-14
 ---
 ## Definition
 

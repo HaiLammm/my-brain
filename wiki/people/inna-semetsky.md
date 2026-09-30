@@ -1,8 +1,6 @@
 ---
 type: person
 title: Inna Semetsky
-slug: inna-semetsky
-date_added: 2026-08-08
 affiliation: "Philosophy of Education Society of Australasia"
 tags:
   - tarot

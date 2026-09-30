@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Ma trận internal link khai báo trước
-slug: ma-tran-internal-link-khai-bao-truoc
-date_added: 2026-09-16
 confidence: unverified
 tags:
   - seo
   - internal-link
   - planning
-id: concepts/seo/ma-tran-internal-link-khai-bao-truoc
+id: ma-tran-internal-link-khai-bao-truoc
 created: 2026-09-16
 updated: 2026-09-16
 key_sources:

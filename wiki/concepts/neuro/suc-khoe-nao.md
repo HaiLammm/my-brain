@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Sức khỏe não (Brain Health)
-slug: suc-khoe-nao
-date_added: 2026-05-18
 confidence: medium
 tags:
   - neuroscience
   - brain-health
   - lifestyle
-id: TODO
+id: suc-khoe-nao
 created: 2026-05-18
 updated: 2026-05-18
 key_sources: []

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Suy giảm mềm thay vì gãy
-slug: graceful-degradation
-date_added: 2026-08-07
 confidence: high
 tags:
   - resilience
   - architecture
   - reliability
-id: concepts/swe/graceful-degradation
+id: graceful-degradation
 created: 2026-08-07
 updated: 2026-08-07
 key_sources:

@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 29"
-slug: ch29-beats
+title: Plot beats — Chương 29
 book: bo-gia
 up_to_chapter: 29
 created: 2026-05-27

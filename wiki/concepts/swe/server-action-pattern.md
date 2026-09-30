@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Server Action Pattern (Next.js)
-slug: server-action-pattern
-date_added: 2026-05-14
 confidence: high
 tags:
   - tailor-project
   - nextjs
   - architecture
   - api
-id: TODO
+id: server-action-pattern
 created: 2026-05-14
 updated: 2026-05-14
 key_sources: []

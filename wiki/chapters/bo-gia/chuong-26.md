@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 26"
-slug: chuong-26
+title: Chương 26
 book: bo-gia
 number: 26
 created: 2026-05-27

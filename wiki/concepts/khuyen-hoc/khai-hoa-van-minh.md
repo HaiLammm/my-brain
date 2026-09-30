@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Khai hóa văn minh
-slug: khai-hoa-van-minh
-date_added: 2026-05-14
 confidence: medium
 tags:
   - modernization
   - political-thought
   - education
-id: concepts/khuyen-hoc/khai-hoa-van-minh
+id: khai-hoa-van-minh
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

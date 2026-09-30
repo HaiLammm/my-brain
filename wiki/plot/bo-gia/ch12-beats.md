@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 12"
-slug: ch12-beats
+title: Plot beats — Chương 12
 book: bo-gia
 up_to_chapter: 12
 created: 2026-05-27

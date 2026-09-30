@@ -1,9 +1,7 @@
 ---
 type: concept
-title: "File Permissions"
-slug: file-permissions
-id: concepts/tools/file-permissions
-date_added: 2026-05-11
+title: File Permissions
+id: file-permissions
 created: 2026-05-11
 updated: 2026-05-11
 confidence: high

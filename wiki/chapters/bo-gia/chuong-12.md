@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 12"
-slug: chuong-12
+title: Chương 12
 book: bo-gia
 number: 12
 created: 2026-05-27

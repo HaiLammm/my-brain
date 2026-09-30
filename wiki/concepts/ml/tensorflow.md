@@ -1,15 +1,13 @@
 ---
 type: concept
 title: TensorFlow
-slug: tensorflow
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - deep-learning
   - python
   - google
   - machine-learning
-id: concepts/ml/tensorflow
+id: tensorflow
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Công cụ Rập Xác định (Pattern Engine)
-slug: pattern-engine
-date_added: 2026-05-12
 confidence: medium
 tags:
   - pattern-generation
   - manufacturing
   - ao-dai
-id: concepts/tailor/pattern-engine
+id: pattern-engine
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

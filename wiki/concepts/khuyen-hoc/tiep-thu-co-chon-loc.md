@@ -1,19 +1,18 @@
 ---
 type: concept
 title: Tiếp thu có chọn lọc
-slug: tiep-thu-co-chon-loc
-date_added: 2026-05-14
 confidence: medium
 tags:
   - modernization
   - westernization
   - political-thought
-id: concepts/khuyen-hoc/tiep-thu-co-chon-loc
+id: tiep-thu-co-chon-loc
 created: 2026-05-14
-updated: 2026-05-14
+updated: 2026-09-26
 key_sources:
   - sources/khuyen-hoc
-related_concepts: []
+related_concepts:
+  - concepts/career/chuoi-ke-thua-ba-tang
 ---
 
 ## Definition
@@ -29,6 +28,7 @@ Tiếp thu có chọn lọc là thái độ học hỏi văn minh phương Tây 
 - [[concepts/khuyen-hoc/thuc-hoc]]
 - [[concepts/khuyen-hoc/khai-hoa-van-minh]]
 - [[concepts/khuyen-hoc/chi-khi-doc-lap]]
+- [[concepts/career/chuoi-ke-thua-ba-tang]] — cùng nguyên tắc lọc trước khi nhận, áp cho di sản gia đình thay vì văn minh phương Tây
 
 ## Mentioned in
 

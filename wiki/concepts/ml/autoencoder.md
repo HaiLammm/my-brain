@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Autoencoder
-slug: autoencoder
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - unsupervised-learning
   - generative-model
   - machine-learning
-id: concepts/ml/autoencoder
+id: autoencoder
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

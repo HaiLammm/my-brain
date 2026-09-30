@@ -1,8 +1,6 @@
 ---
 type: source
 title: CV chính thức — Lương Hải Lâm (phiên bản 4)
-slug: luong-hai-lam-4
-date_added: 2026-05-18
 authors:
   - Lương Hải Lâm
 source_type: note

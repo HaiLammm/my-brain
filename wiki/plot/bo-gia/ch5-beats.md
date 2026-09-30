@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 5"
-slug: ch5-beats
+title: Plot beats — Chương 5
 book: bo-gia
 up_to_chapter: 5
 created: 2026-05-21

@@ -1,10 +1,8 @@
 ---
 type: concept
 title: Phân tích dữ liệu khám phá (Exploratory Data Analysis)
-slug: exploratory-data-analysis
-date_added: 2026-05-16
 confidence: unverified
-id: concepts/ml/exploratory-data-analysis
+id: exploratory-data-analysis
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

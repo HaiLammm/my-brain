@@ -1,14 +1,12 @@
 ---
 type: concept
 title: ANTs — Suy nghĩ tiêu cực tự động
-slug: suy-nghi-tieu-cuc-tu-dong
-date_added: 2026-05-18
 confidence: medium
 tags:
   - cognitive-behavioral
   - mental-health
   - brain-health
-id: TODO
+id: suy-nghi-tieu-cuc-tu-dong
 created: 2026-05-18
 updated: 2026-05-18
 key_sources: []

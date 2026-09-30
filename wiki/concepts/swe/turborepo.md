@@ -1,11 +1,9 @@
 ---
 type: concept
 title: Turborepo
-slug: turborepo
-date_added: 2026-05-14
 confidence: high
 tags: []
-id: concepts/swe/turborepo
+id: turborepo
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

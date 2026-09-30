@@ -1,7 +1,6 @@
 ---
 type: character
 title: Apollonia
-slug: apollonia
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-25
 created: 2026-05-27

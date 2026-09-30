@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Xử lý Webhook Thanh toán (Payment Webhook Processing)
-slug: payment-webhook-processing
-date_added: 2026-05-15
 confidence: unverified
 tags:
   - tailor-project
   - payment
   - webhook
   - backend
-id: concepts/swe/payment-webhook-processing
+id: payment-webhook-processing
 created: 2026-05-15
 updated: 2026-05-15
 key_sources:

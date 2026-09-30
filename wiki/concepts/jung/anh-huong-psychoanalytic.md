@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Ảnh hưởng tâm lý phân tích
-slug: anh-huong-psychoanalytic
-date_added: 2026-05-12
 confidence: medium
 tags:
   - jungian-psychology
   - psychoanalysis
   - freud-jung-relationship
-id: TODO
+id: anh-huong-psychoanalytic
 created: 2026-05-12
 updated: 2026-08-08
 key_sources:

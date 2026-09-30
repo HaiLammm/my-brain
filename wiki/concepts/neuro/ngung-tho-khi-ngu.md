@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Ngưng thở khi ngủ
-slug: ngung-tho-khi-ngu
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
   - sleep-disorders
   - health
   - ADHD
-id: concepts/neuro/ngung-tho-khi-ngu
+id: ngung-tho-khi-ngu
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

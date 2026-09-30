@@ -1,8 +1,6 @@
 ---
 type: source
 title: Review bài SEO cho Setsubi-Pro
-slug: review-bai-seo-cho-setsubi-pro
-date_added: 2026-05-21
 authors:
   - Quân
 source_type: note
@@ -52,7 +50,7 @@ Tài liệu review chi tiết các quy tắc viết bài SEO tiếng Nhật cho 
 - [[concepts/seo/noi-dung-giai-thich-cho-nguoi-khong-chuyen]]
 - [[concepts/seo/cta-mem]]
 - [[concepts/seo/bang-tu-xu-ly-hay-goi-tho]]
-- [[concepts/seo/mat-do-tu-khoa-seo]]
+- [[concepts/seo/mat-do-tu-khoa]]
 - [[concepts/seo/cau-truc-heading-seo]]
 
 ## Related sources

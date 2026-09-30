@@ -1,11 +1,9 @@
 ---
 type: concept
 title: Celery
-slug: celery
-date_added: 2026-05-14
 confidence: high
 tags: []
-id: concepts/swe/celery
+id: celery
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

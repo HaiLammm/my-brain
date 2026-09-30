@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Backpropagation
-slug: backpropagation
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - deep-learning
   - optimization
   - machine-learning
-id: concepts/ml/backpropagation
+id: backpropagation
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

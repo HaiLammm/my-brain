@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Sự ấm áp và năng lực
-slug: su-am-ap-va-nang-luc
-date_added: 2026-05-17
 confidence: medium
 tags:
   - giao-tiep
   - tam-ly-hoc
   - charisma
-id: TODO
+id: su-am-ap-va-nang-luc
 created: 2026-05-17
 updated: 2026-05-17
 key_sources:

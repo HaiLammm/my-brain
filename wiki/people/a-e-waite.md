@@ -1,8 +1,6 @@
 ---
 type: person
 title: A.E. Waite
-slug: a-e-waite
-date_added: 2026-08-08
 affiliation: ""
 tags:
   - tarot

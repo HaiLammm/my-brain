@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 2"
-slug: chuong-2
+title: Chương 2
 book: bo-gia
 number: 2
 created: 2026-05-21
@@ -11,7 +10,7 @@ themes:
   - cong-ly-va-bao-luc
   - the-gioi-ngam
   - su-ke-thua
-id: TODO
+id: chapters/bo-gia/chuong-2
 tags:
   - mafia
   - gia-dinh-corleone

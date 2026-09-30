@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Circuit breaker phân tầng theo ngân sách
-slug: budget-tiered-circuit-breaker
-date_added: 2026-08-07
 confidence: high
 tags:
   - resilience
   - cost-control
   - llm
-id: concepts/swe/budget-tiered-circuit-breaker
+id: budget-tiered-circuit-breaker
 created: 2026-08-07
 updated: 2026-08-07
 key_sources:

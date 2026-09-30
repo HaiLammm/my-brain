@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Rule of One
-slug: rule-of-one
-date_added: 2026-08-11
 confidence: high
 tags:
   - email-marketing
   - copywriting
-id: concepts/marketing/rule-of-one
+id: rule-of-one
 created: 2026-08-11
 updated: 2026-08-11
 provenance: replayable

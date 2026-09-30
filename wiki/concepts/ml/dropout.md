@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Dropout
-slug: dropout
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - deep-learning
   - regularization
   - machine-learning
-id: concepts/ml/dropout
+id: dropout
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

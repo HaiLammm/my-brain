@@ -1,8 +1,6 @@
 ---
 type: person
 title: Rosalind Cartwright
-slug: rosalind-cartwright
-date_added: 2026-08-12
 affiliation: Đại học Rush, Chicago
 tags:
   - sleep

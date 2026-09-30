@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Batch Normalization
-slug: batch-normalization
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - deep-learning
   - optimization
   - machine-learning
-id: concepts/ml/batch-normalization
+id: batch-normalization
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

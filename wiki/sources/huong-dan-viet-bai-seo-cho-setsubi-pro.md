@@ -1,8 +1,6 @@
 ---
 type: source
 title: Hướng dẫn viết bài SEO cho Setsubi-pro
-slug: huong-dan-viet-bai-seo-cho-setsubi-pro
-date_added: 2026-05-16
 authors: []
 source_type: note
 importance: 2

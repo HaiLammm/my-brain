@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 22"
-slug: ch22-beats
+title: Plot beats — Chương 22
 book: bo-gia
 up_to_chapter: 22
 created: 2026-05-27

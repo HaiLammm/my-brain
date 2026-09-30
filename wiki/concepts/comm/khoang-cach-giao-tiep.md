@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Khoảng cách giao tiếp
-slug: khoang-cach-giao-tiep
-date_added: 2026-05-17
 confidence: medium
 tags:
   - giao-tiep
   - tam-ly-hoc
   - proxemics
-id: TODO
+id: khoang-cach-giao-tiep
 created: 2026-05-17
 updated: 2026-05-17
 key_sources:

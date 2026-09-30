@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 23"
-slug: ch23-beats
+title: Plot beats — Chương 23
 book: bo-gia
 up_to_chapter: 23
 created: 2026-05-27

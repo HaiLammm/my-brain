@@ -1,10 +1,8 @@
 ---
 type: concept
 title: Boosting
-slug: boosting
-date_added: 2026-05-16
 confidence: unverified
-id: concepts/ml/boosting
+id: boosting
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

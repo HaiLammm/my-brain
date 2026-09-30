@@ -1,10 +1,8 @@
 ---
 type: concept
 title: Phân tích thành phần chính (Principal Components Analysis)
-slug: principal-components-analysis
-date_added: 2026-05-16
 confidence: unverified
-id: concepts/ml/principal-components-analysis
+id: principal-components-analysis
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

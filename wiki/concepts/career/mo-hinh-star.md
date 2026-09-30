@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Mô hình STAR
-slug: mo-hinh-star
-date_added: 2026-05-12
 confidence: high
 tags:
   - phong-van
   - giao-tiep
   - cau-truc
-id: concepts/career/mo-hinh-star
+id: mo-hinh-star
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

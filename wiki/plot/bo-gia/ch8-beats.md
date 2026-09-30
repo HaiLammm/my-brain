@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 8"
-slug: ch8-beats
+title: Plot beats — Chương 8
 book: bo-gia
 up_to_chapter: 8
 created: 2026-05-21

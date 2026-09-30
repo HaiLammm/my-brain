@@ -1,8 +1,6 @@
 ---
 type: source
 title: DaNangNavi — Architecture Decision Document
-slug: danangnavi-architecture-decision-document
-date_added: 2026-05-12
 authors:
   - Lương Hải Lâm
 source_type: note

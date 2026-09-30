@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Điều khiển học (Cybernetics)
-slug: dieu-khien-hoc
-date_added: 2026-08-08
 confidence: high
 tags:
   - systems
   - cybernetics
-id: concepts/systems/dieu-khien-hoc
+id: dieu-khien-hoc
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

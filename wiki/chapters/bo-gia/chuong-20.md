@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 20"
-slug: chuong-20
+title: Chương 20
 book: bo-gia
 number: 20
 created: 2026-05-27

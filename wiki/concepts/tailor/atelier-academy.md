@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Atelier Academy (Học viện May vá)
-slug: atelier-academy
-date_added: 2026-05-12
 confidence: medium
 tags:
   - fine-tuning
   - feedback-loop
   - tailor-project
-id: concepts/tailor/atelier-academy
+id: atelier-academy
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

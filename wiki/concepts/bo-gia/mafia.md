@@ -1,12 +1,10 @@
 ---
 type: concept
 title: Mafia
-slug: mafia
-date_added: 2026-05-11
 confidence: high
 tags:
   - toi-pham-to-chuc
-id: TODO
+id: mafia
 created: 2026-05-11
 updated: 2026-05-11
 key_sources:

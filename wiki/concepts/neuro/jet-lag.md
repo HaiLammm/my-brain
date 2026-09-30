@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Jet lag
-slug: jet-lag
-date_added: 2026-05-13
 confidence: medium
 tags:
   - sleep
   - circadian-rhythm
   - health
-id: concepts/neuro/jet-lag
+id: jet-lag
 created: 2026-05-13
 updated: 2026-05-13
 key_sources:

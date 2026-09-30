@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Hình ảnh Thượng đế
-slug: god-image
-date_added: 2026-05-14
 confidence: unverified
 tags:
   - jungian-psychology
   - religion
   - god-image
   - archetype
-id: TODO
+id: god-image
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

@@ -9,16 +9,44 @@ Managed by the Lumina installer. Open this file when README.md instructs.
 
 ```yaml
 ---
-type: source
+id: source-slug       # bare kebab-case slug; must match the filename
 title: "Full title here"
-slug: source-slug
-date_added: YYYY-MM-DD
+type: source
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
 authors:
   - Author Name
-source_type: paper   # paper | article | book | podcast | note | other
+year: 2026
+source_type: paper   # paper | article | book | podcast | note | other — free-form label, not schema-validated
 importance: 3        # 1=niche  2=useful  3=field-standard  4=influential  5=seminal
-confidence: high     # high | medium | low
-tags: []
+provenance: missing  # replayable | partial | missing
+confidence: high     # high | medium | low | unverified
+tags: []             # free-form; not schema-validated
+pending_citations: []  # entries are {ns, value, title?}, e.g. {ns: doi, value: "10.1145/...", title: "Cited paper title"}.
+  # Written by `wiki.mjs add-citation-by-id`; drained automatically into a
+  # real citation when the cited work is ingested.
+ranking:             # optional; written by /lumi-research-rank. Omit until the paper is ranked.
+  # Flat map of scalars (one level only, like external_ids). Only include keys you have.
+  influential_citations: 42   # Semantic Scholar influentialCitationCount
+  citation_count: 318         # Semantic Scholar citationCount
+  citation_source: semantic-scholar
+  citation_fetched: YYYY-MM-DD
+  venue_name: "NeurIPS"
+  venue_tier: "CORE A*"       # free-form; agent-estimated, NOT authoritative
+  venue_source: llm-estimated
+  venue_estimated: YYYY-MM-DD
+  scite_supporting: 12        # only when SCITE_API_KEY is set
+  scite_contrasting: 1
+  scite_mentioning: 64
+  scite_fetched: YYYY-MM-DD
+  altmetric_score: 287        # only when ALTMETRIC_API_KEY is set
+  altmetric_fetched: YYYY-MM-DD
+  quality_correctness: 4      # 4C rubric, 1-5 each (LLM-assessed)
+  quality_clarity: 5
+  quality_contribution: 4
+  quality_context: 3
+  quality_source: llm
+  quality_assessed: YYYY-MM-DD
 ---
 ```
 
@@ -30,48 +58,26 @@ tags: []
 - `## Related sources` — wikilinks to other source pages
 - `## People` — wikilinks to person pages
 - `## Open questions` — unanswered questions this source raises
+- `## Ranking` — *(optional; managed by `/lumi-research-rank`)* human-readable influence signals and the 4C quality scorecard (Correctness, Clarity, Contribution, Context) with one-line rationales. Each figure states its source and date. The scorecard lives inside a managed region bounded by `<!-- lumina:ranking -->` and `<!-- /lumina:ranking -->`; only that region is rewritten on refresh. Free-text notes you add outside those markers (or inside `<!-- user-edited -->` markers) are preserved.
 - `## Notes` — free-form notes (user-owned; mark with `<!-- user-edited -->` to preserve on upgrade)
 
 ---
 
-## Concept page — `wiki/concepts/<domain>/<slug>.md`
+## Concept page — `wiki/concepts/<slug>.md`
 
 ```yaml
 ---
-type: concept
+id: concept-slug        # bare kebab-case slug; must match the filename
 title: "Concept name"
-slug: concept-slug
-date_added: YYYY-MM-DD
-confidence: high
-tags: []
-id: concepts/<domain>/concept-slug
+type: concept
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+key_sources: []         # wikilink slugs of sources that introduce or use this concept
+related_concepts: []   # wikilink slugs of related concepts
+confidence: high        # high | medium | low | unverified
+tags: []                # free-form; not schema-validated
 ---
 ```
-
-**Namespace bắt buộc.** Concept luôn nằm trong một thư mục domain — không bao giờ đặt
-thẳng ở `wiki/concepts/`. `slug` giữ tên ngắn; `id` và mọi wikilink dùng đường dẫn đầy đủ
-`concepts/<domain>/<slug>`.
-
-Domain hiện có (chọn cái sát nhất; chỉ tạo domain mới khi có ≥3 trang):
-
-| Domain | Nội dung |
-|---|---|
-| `swe/` | Kỹ thuật phần mềm dùng chung: kiến trúc, pattern, thư viện, database, auth |
-| `ml/` | Machine learning, deep learning, thống kê |
-| `jung/` | Tâm lý học Jung, giấc mơ, biểu tượng, tôn giáo |
-| `neuro/` | Giấc ngủ, sức khỏe não, thần kinh |
-| `seo/` | SEO và content marketing |
-| `career/` | CV, phỏng vấn, văn hóa làm việc Nhật |
-| `comm/` | Giao tiếp, giọng nói, ngôn ngữ cơ thể |
-| `tools/` | Công cụ cá nhân: linux, vim, productivity |
-| `khuyen-hoc/`, `bo-gia/` | Khái niệm rút từ tác phẩm đang đọc |
-| `tailor/`, `danangnavi/` | Đặc thù nghiệp vụ của từng dự án |
-
-**Dự án đi vào wiki theo tuổi thọ, không theo phạm vi.** Pattern kỹ thuật tái dùng được
-(`audit-trail`, `modular-monolith`, `otp-authentication`) thuộc `swe/` dù phát sinh từ một
-dự án. Chỉ khái niệm đặc thù nghiệp vụ mới nằm trong namespace dự án. Spec dễ lỗi thời —
-mã FR, schema bảng, danh sách endpoint, breakdown epic — **không** vào wiki; chúng thuộc
-repo của dự án. Phép thử: *"Điều này còn đúng khi dự án chết không?"*
 
 **Sections:**
 - `## Definition` — one-paragraph plain-language definition
@@ -87,12 +93,14 @@ repo của dự án. Phép thử: *"Điều này còn đúng khi dự án chết
 
 ```yaml
 ---
-type: person
+id: person-slug          # bare kebab-case slug; must match the filename
 title: "Person Name"
-slug: person-slug
-date_added: YYYY-MM-DD
-affiliation: ""
-tags: []
+type: person
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+key_sources: []          # wikilink slugs of sources authored by or featuring this person
+affiliations: []         # optional; list of affiliations
+tags: []                 # free-form; not schema-validated
 ---
 ```
 
@@ -108,12 +116,13 @@ tags: []
 
 ```yaml
 ---
-type: summary
+id: summary-slug         # bare kebab-case slug; must match the filename
 title: "Area summary title"
-slug: summary-slug
-date_added: YYYY-MM-DD
-confidence: medium
-tags: []
+type: summary
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+covers: []               # wikilink slugs of the sources and concepts this summary synthesizes
+tags: []                 # free-form; not schema-validated
 ---
 ```
 
@@ -127,17 +136,52 @@ tags: []
 
 ---
 
+## Reading note — `wiki/readings/<source-slug>/<nn>-<unit-slug>.md`
+
+Written by `/lumi-ingest` for long sources (books, theses, 50+ page documents),
+one note per chapter/part. The source page links to its notes through
+`annotated_by` connections; notes are not listed in `wiki/index.md`.
+
+```yaml
+---
+id: readings/<source-slug>/<nn>-<unit-slug>
+title: "Part N: Title (pp. from–to)"
+type: reading
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+source: source-slug
+part: N
+pages: "from-to"     # optional; omit for sources without page numbers
+---
+```
+
+**Sections:**
+- Opening line (before any heading): `Part N of [[sources/<source-slug>]] (pp. from–to).` — the body wikilink keeps the note reachable and non-orphaned
+- `## Question this unit answers` — the one question the chapter/part addresses
+- `## Key terms` — terms the author defines or uses in a special sense, with page cites
+- `## Propositions` — the unit's leading claims, each with a page cite
+- `## Arguments` — premises → conclusion, page-cited
+- `## Evidence` — data, examples, or experiments offered
+- `## Quotes` — verbatim quotes only, each as `"exact words" (p. N)` — these are machine-checked against the source
+- `## Tensions and links` — where this unit contradicts, extends, or depends on other units
+- `## Open questions`
+
+---
+
 ## Topic page — `wiki/topics/<slug>.md` (research pack)
 
 Created via `/lumi-research-topic`.
 
 ```yaml
 ---
-type: topic
+id: topic-slug           # bare kebab-case slug; must match the filename
 title: "Topic name"
-slug: topic-slug
-date_added: YYYY-MM-DD
-tags: []
+type: topic
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+key_sources: []          # wikilink slugs of sources included in this topic
+compiled_at: YYYY-MM-DD  # date the compiled zone below was last rewritten by a /lumi-research-topic refresh
+tags: []                 # free-form; not schema-validated
 ---
 ```
 
@@ -146,6 +190,25 @@ tags: []
 - `## Key sources`
 - `## Key concepts`
 - `## Open questions`
+- `## Timeline` — the managed region below the compiled zone, bounded by
+  `<!-- lumina:timeline -->` and `<!-- /lumina:timeline -->`. Entries are one
+  line each, English, appended in arrival order:
+  `- **YYYY-MM-DD** | ingest|correction|note | [[sources/<slug>]] — text`.
+
+The page has two zones with different write rules:
+
+| Zone | Sections | Rule |
+|---|---|---|
+| Compiled | Description, Key sources, Key concepts, Open questions | Rewritten wholesale on `/lumi-research-topic` refresh |
+| Timeline | Timeline (marker region) | Append-only — written only by `wiki.mjs timeline-add`, never edited or reordered |
+
+```markdown
+## Timeline
+
+<!-- lumina:timeline -->
+- **2026-09-16** | ingest | [[sources/attention-is-all-you-need]] — Self-attention replaces recurrence
+<!-- /lumina:timeline -->
+```
 
 ---
 
@@ -155,12 +218,13 @@ Terminal pages — receive inward links but do not write reverse links.
 
 ```yaml
 ---
-type: foundation
+id: foundation-slug      # bare kebab-case slug; must match the filename
 title: "Foundation concept"
-slug: foundation-slug
-date_added: YYYY-MM-DD
-tags: []
-aliases: []
+type: foundation
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+tags: []                 # free-form; not schema-validated
+aliases: []              # optional; alternate names for this foundation
 ---
 ```
 
@@ -234,6 +298,30 @@ book: book-slug
 - `## Description`
 - `## Evidence` — chapters and scenes where this theme appears
 - `## Related themes`
+- `## Notes`
+
+---
+
+## Plot page — `wiki/plot/<book-slug>/ch<N>-beats.md` (reading pack)
+
+Written by `/lumi-reading-chapter-ingest` — one plot-beats page per chapter, holding
+the chapter's events in narrative order so `/lumi-reading-plot-recap` can build
+spoiler-safe recaps from them.
+
+```yaml
+---
+id: plot/<book-slug>/ch<N>-beats
+title: "Plot beats: Chapter N"
+type: plot
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+book: book-slug
+up_to_chapter: N
+---
+```
+
+**Sections:**
+- `## Beats` — 3-7 one-sentence event summaries, in narrative order
 - `## Notes`
 
 ---

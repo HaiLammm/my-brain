@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 3"
-slug: chuong-3
+title: Chương 3
 book: bo-gia
 number: 3
 created: 2026-05-21
@@ -9,7 +8,7 @@ updated: 2026-05-21
 themes:
   - the-gioi-ngam
   - su-ke-thua
-id: TODO
+id: chapters/bo-gia/chuong-3
 tags:
   - mafia
   - gia-dinh-corleone

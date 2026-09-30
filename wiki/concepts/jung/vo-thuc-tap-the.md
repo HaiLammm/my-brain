@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Vô thức tập thể
-slug: vo-thuc-tap-the
-date_added: 2026-05-12
 confidence: high
 tags:
   - jungian-psychology
   - collective-unconscious
   - archetypal
-id: TODO
+id: vo-thuc-tap-the
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

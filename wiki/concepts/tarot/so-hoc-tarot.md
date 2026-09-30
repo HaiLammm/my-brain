@@ -1,12 +1,10 @@
 ---
 type: concept
 title: Số học trong tarot — nhịp mười hồi
-slug: so-hoc-tarot
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
-id: concepts/tarot/so-hoc-tarot
+id: so-hoc-tarot
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

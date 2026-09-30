@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 9"
-slug: chuong-9
+title: Chương 9
 book: bo-gia
 number: 9
 created: 2026-05-27

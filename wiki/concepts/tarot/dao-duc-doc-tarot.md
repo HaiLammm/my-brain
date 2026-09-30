@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Đạo đức khi đọc tarot
-slug: dao-duc-doc-tarot
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - ethics
-id: concepts/tarot/dao-duc-doc-tarot
+id: dao-duc-doc-tarot
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

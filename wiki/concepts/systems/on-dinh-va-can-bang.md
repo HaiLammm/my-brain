@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Ổn định và cân bằng (Stability & equilibrium)
-slug: on-dinh-va-can-bang
-date_added: 2026-08-08
 confidence: high
 tags:
   - systems
   - cybernetics
-id: concepts/systems/on-dinh-va-can-bang
+id: on-dinh-va-can-bang
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

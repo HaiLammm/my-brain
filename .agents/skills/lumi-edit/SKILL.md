@@ -30,7 +30,8 @@ authoritative. This skill operates within those conventions.
 
 Key workspace paths:
 - `wiki/<type>/<slug>.md` — the page you edit
-- `_lumina/scripts/wiki.mjs` — engine (read-meta, set-meta, add-edge, dedup-edges)
+- `_lumina/scripts/wiki.mjs` — engine (read-meta, set-meta, add-edge, remove-edge,
+  replace-edge, dedup-edges)
 - `_lumina/scripts/lint.mjs` — linter (--fix, --json)
 
 ## Instructions
@@ -80,9 +81,9 @@ Use the Edit tool to modify the file. Follow these rules from README.md:
 ### Step 5 — Re-derive edges
 
 For every cross-reference you add or change, call `add-edge` once for the forward
-relationship. `wiki.mjs add-edge` is the only graph mutation path; it writes the
-required reverse edge automatically unless the edge is terminal, exempt, or
-symmetric.
+relationship. `add-edge`, `remove-edge`, and `replace-edge` are the supported
+graph mutation paths — all three go through `wiki.mjs` and write the required
+reverse edge automatically unless the edge is terminal, exempt, or symmetric.
 
 ```bash
 node _lumina/scripts/wiki.mjs add-edge <from-slug> <edge-type> <to-slug>
@@ -97,8 +98,33 @@ The call is idempotent: re-running it leaves the graph byte-identical (no
 duplicate edges are written).
 
 For a removed link, removing the wikilink from the body does not auto-remove the
-edge. Run lint and surface stale relationships for user attention; do not
-hand-edit `wiki/graph/edges.jsonl`.
+edge — page bodies do not encode relation type, so the removal is not automatic.
+Use `wiki.mjs remove-edge <from> <type> <to>` to drop the stale relationship
+(both directions, respecting the terminal/exempt/symmetric gate; `--dry-run`
+previews first). It emits an `advisories` note if the page body still contains
+the corresponding wikilink, since remove-edge does not touch page content
+itself. To correct a wrong relation type instead of removing it outright, use
+`wiki.mjs replace-edge <from> <old-type> <to> <new-type>` — because bodies list
+cross-references in a generic, type-agnostic section, a type-only correction
+needs no page edit at all. Never hand-edit `wiki/graph/edges.jsonl` directly.
+
+### Step 4.5 — Correction cause (factual edits only)
+
+If the edit you just applied changed a factual claim on a `sources/*` or
+`concepts/*` page — not a typo, formatting, or wording-only change — ask
+exactly one question in the user's language, with exactly three options,
+before continuing:
+
+```
+Why was this changed?
+  [1] misread       — the page did not match what the source says
+  [2] source-error  — the source itself was wrong or has been superseded
+  [3] update        — new information, not a correction
+```
+
+Record the chosen value (`misread` | `source-error` | `update`) — Step 7 logs
+it. Skip this step entirely for non-factual edits (typos, formatting, link
+fixes, frontmatter-only changes).
 
 ### Step 6 — Lint and fix
 
@@ -108,10 +134,20 @@ Run the linter with fix enabled:
 node _lumina/scripts/lint.mjs --fix --json
 ```
 
-Read the JSON output. If `summary.errors > 0` after fix, address each remaining
-error:
+Then re-run in read mode to see the true remaining count:
+
+```bash
+node _lumina/scripts/lint.mjs --json
+```
+
+The `--fix` run's own `summary.errors` still counts findings it just repaired,
+so trust the read-only re-run, not that number. If `summary.errors > 0` there,
+address each remaining error:
 - L06 (missing reverse edge): re-run the forward `add-edge`; it auto-adds reverse
 - L07 (duplicate symmetric edge): run `dedup-edges`
+- L17 (dangling edge): an edge still points at a slug that no longer resolves
+  to a wiki file — a common side effect of renaming or deleting a page. Run
+  `remove-edge <from> <type> <to>` to drop it, or recreate the missing page
 - Other errors: apply inline
 
 Warnings are advisory, but errors block completion until fixed or surfaced as
@@ -119,9 +155,50 @@ manual follow-up.
 
 ### Step 7 — Log the operation
 
+If Step 4.5 captured a correction cause:
+
+```bash
+node _lumina/scripts/wiki.mjs log edit "corrected <slug> | cause:<misread|source-error|update> | <what changed>"
+```
+
+`to`/`from` values from `read-edges` are canonical paths (e.g. `topics/<name>`) — pass them to `wiki.mjs` unchanged; never prepend `topics/` to one.
+
+If the edited page is `sources/<slug>`, also check whether it belongs to any
+topic, and if so append a `correction` timeline entry to each:
+
+```bash
+node _lumina/scripts/wiki.mjs read-edges sources/<slug> --type included_in_topic
+```
+
+For each `to` value `<t>` returned:
+
+```bash
+node _lumina/scripts/wiki.mjs timeline-add <t> --kind correction --source sources/<slug> --text "<what changed, in English>"
+```
+
+If the edited page is `concepts/<slug>`, also check whether it is covered by
+any topic, and if so append a `correction` timeline entry to each (no
+`--source`; that flag is for sources only):
+
+```bash
+node _lumina/scripts/wiki.mjs read-edges concepts/<slug> --type covered_by_topic --direction outbound
+```
+
+For each `to` value `<t>`:
+
+```bash
+node _lumina/scripts/wiki.mjs timeline-add <t> --kind correction --text "Corrected [[concepts/<slug>]]: <what changed, in English>"
+```
+
+Otherwise (no correction cause captured — a non-factual edit):
+
 ```bash
 node _lumina/scripts/wiki.mjs log edit "Updated <slug>: <brief description>"
 ```
+
+After logging, suggest the user run `/lumi-check` in a fresh session or via a
+sub-agent. Blank context catches bias from the reasoning chain that just made
+this edit.
 
 ## Output Format
 
@@ -135,7 +212,7 @@ Example:
 Edited concepts/softmax-temperature.md:
 - Added definition paragraph in ## Overview
 - Linked back to sources/attention-revisited (used_in edge added)
-Lint: 0 errors, 1 warning (L04: orphan page — advisory)
+Links check out — one advisory note: this page has no inbound links yet (L04)
 ```
 
 ## Examples
@@ -174,11 +251,16 @@ as a template and confirm before continuing. Never silently expand scope.
 ## Guardrails
 
 - Never modify files in `raw/`. This skill is wiki/-only.
-- Never hand-edit `wiki/graph/edges.jsonl`; graph mutation goes through `wiki.mjs`.
+- Never hand-edit `wiki/graph/edges.jsonl`; graph mutation goes through
+  `wiki.mjs` (`add-edge`, `remove-edge`, `replace-edge`).
 - If the user asks to edit multiple pages, process them one at a time and confirm
   each before proceeding.
 - If a page does not exist, do not create it — use `/lumi-ingest` instead.
 - If you are unsure about scope, ask rather than expanding silently.
+- Never rewrite or delete an existing line in a topic page's timeline zone
+  (`<!-- lumina:timeline -->` … `<!-- /lumina:timeline -->`) — only append via
+  `wiki.mjs timeline-add`. The `correction` entry it writes is the only place
+  a retraction is recorded; it never replaces the original line.
 
 ## Definition of Done
 

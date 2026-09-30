@@ -1,8 +1,6 @@
 ---
 type: source
 title: Review SEO
-slug: review-seo
-date_added: 2026-05-20
 authors:
   - Quân
 source_type: note

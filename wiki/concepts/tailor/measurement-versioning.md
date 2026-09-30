@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Measurement Versioning
-slug: measurement-versioning
-date_added: 2026-05-12
 confidence: high
 tags:
   - data-model
   - versioning
   - tailor
   - measurements
-id: TODO
+id: measurement-versioning
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

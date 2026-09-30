@@ -1,8 +1,6 @@
 ---
 type: person
 title: "Alfred Adler"
-slug: alfred-adler
-date_added: 2026-05-14
 affiliation: "Vienna, Austria"
 tags:
   - psychology

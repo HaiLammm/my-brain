@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Khung trình bày CV
-slug: khung-trinh-bay-cv
-date_added: 2026-05-14
 confidence: medium
 tags:
   - cv
   - phong-van
-id: concepts/career/khung-trinh-bay-cv
+id: khung-trinh-bay-cv
 created: 2026-05-14
 updated: 2026-05-18
 key_sources:

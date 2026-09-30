@@ -1,8 +1,6 @@
 ---
 type: concept
 title: Beta-amyloid và vòng xoắn Alzheimer
-slug: beta-amyloid
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
@@ -10,7 +8,7 @@ tags:
   - alzheimer
   - aging
   - neuroscience
-id: concepts/neuro/beta-amyloid
+id: beta-amyloid
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

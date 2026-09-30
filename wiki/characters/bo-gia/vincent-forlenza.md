@@ -1,7 +1,6 @@
 ---
 type: character
 title: Vincent Forlenza
-slug: vincent-forlenza
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-20
 created: 2026-05-27

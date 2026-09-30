@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Nội dung giải thích cho người không chuyên
-slug: noi-dung-giai-thich-cho-nguoi-khong-chuyen
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - content
   - writing
   - audience
-id: concepts/seo/noi-dung-giai-thich-cho-nguoi-khong-chuyen
+id: noi-dung-giai-thich-cho-nguoi-khong-chuyen
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

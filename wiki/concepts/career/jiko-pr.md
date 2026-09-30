@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Jiko PR (自己PR)
-slug: jiko-pr
-date_added: 2026-05-18
 confidence: high
 tags:
   - cv
   - phong-van
   - tieng-nhat
-id: concepts/career/jiko-pr
+id: jiko-pr
 created: 2026-05-18
 updated: 2026-05-18
 key_sources:

@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Ví Voucher Khách hàng (Customer Voucher Wallet)
-slug: customer-voucher-wallet
-date_added: 2026-05-15
 confidence: unverified
 tags:
   - tailor-project
   - voucher
   - customer
   - promotions
-id: concepts/tailor/customer-voucher-wallet
+id: customer-voucher-wallet
 created: 2026-05-15
 updated: 2026-05-15
 key_sources:

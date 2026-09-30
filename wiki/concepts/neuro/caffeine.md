@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Caffeine
-slug: caffeine
-date_added: 2026-05-13
 confidence: high
 tags:
   - sleep
   - stimulant
   - neuroscience
-id: concepts/neuro/caffeine
+id: caffeine
 created: 2026-05-13
 updated: 2026-05-13
 key_sources:

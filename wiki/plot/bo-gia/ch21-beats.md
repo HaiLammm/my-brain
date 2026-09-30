@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 21"
-slug: ch21-beats
+title: Plot beats — Chương 21
 book: bo-gia
 up_to_chapter: 21
 created: 2026-05-27

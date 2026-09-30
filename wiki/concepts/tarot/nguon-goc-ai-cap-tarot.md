@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Thuyết nguồn gốc Ai Cập của tarot
-slug: nguon-goc-ai-cap-tarot
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - history
   - esotericism
-id: concepts/tarot/nguon-goc-ai-cap-tarot
+id: nguon-goc-ai-cap-tarot
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

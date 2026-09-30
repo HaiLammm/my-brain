@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 17"
-slug: ch17-beats
+title: Plot beats — Chương 17
 book: bo-gia
 up_to_chapter: 17
 created: 2026-05-27

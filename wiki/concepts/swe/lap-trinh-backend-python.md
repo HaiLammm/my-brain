@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Lập trình Backend Python
-slug: lap-trinh-backend-python
-date_added: 2026-05-14
 confidence: unverified
 tags:
   - backend
   - python
   - interview
-id: concepts/swe/lap-trinh-backend-python
+id: lap-trinh-backend-python
 created: 2026-05-14
 updated: 2026-05-15
 key_sources:

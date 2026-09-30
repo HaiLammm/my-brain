@@ -1,16 +1,14 @@
 ---
 type: concept
 title: Đội marketing thuê ngoài theo giai đoạn
-slug: doi-marketing-thue-ngoai
-date_added: 2026-09-05
 confidence: medium
 tags:
   - marketing
   - to-chuc
   - tuyen-dung
-id: concepts/marketing/doi-marketing-thue-ngoai
+id: doi-marketing-thue-ngoai
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-26
 provenance: replayable
 key_sources:
   - sources/ho-so-nang-luc-double-m
@@ -18,6 +16,7 @@ related_concepts:
   - concepts/marketing/noi-bo-hoa-nang-luc-marketing
   - concepts/marketing/ho-tro-mot-dau-moi
   - concepts/ops/bpo-back-office
+  - concepts/marketing/hai-nhanh-cua-marketing
 ---
 
 ## Definition
@@ -48,6 +47,7 @@ Bốn điểm tài liệu nhấn:
 - [[concepts/marketing/noi-bo-hoa-nang-luc-marketing]]
 - [[concepts/marketing/ho-tro-mot-dau-moi]]
 - [[concepts/ops/bpo-back-office]] — cùng logic thuê ngoài một chức năng, áp cho mảng vận hành hậu cần thay vì marketing
+- [[concepts/marketing/hai-nhanh-cua-marketing]] — đường cắt tự nhiên để phân vai trong một đội thuê ngoài
 
 ## Mentioned in
 

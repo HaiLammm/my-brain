@@ -1,8 +1,6 @@
 ---
 type: source
 title: Hồ sơ năng lực Double M (株式会社ダブルエム サービス紹介資料)
-slug: ho-so-nang-luc-double-m
-date_added: 2026-09-05
 authors:
   - 株式会社ダブルエム (Double M Inc.)
 source_type: note

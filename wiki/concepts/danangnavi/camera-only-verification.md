@@ -1,21 +1,18 @@
 ---
 type: concept
-title: "Xác thực chỉ-quay-camera (Camera-Only Verification)"
-slug: camera-only-verification
-date_added: 2026-05-12
+title: Xác thực chỉ-quay-camera (Camera-Only Verification)
 confidence: high
 tags:
   - trust
   - content-moderation
   - ux
-id: concepts/danangnavi/camera-only-verification
-created: '2026-05-12'
-updated: '2026-05-12'
+id: camera-only-verification
+created: 2026-05-12
+updated: 2026-05-12
 key_sources:
   - sources/danangnavi-product-requirements-document
 related_concepts:
   - concepts/danangnavi/closed-data-philosophy
-
 ---
 
 ## Definition

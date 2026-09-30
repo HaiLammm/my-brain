@@ -2,10 +2,8 @@
 id: sources/profile-ho-tro-san-xuat-video-va-van-hanh-thuong-mai-ien-tu
 title: Profile — Hỗ trợ sản xuất video và vận hành thương mại điện tử
 type: source
-slug: profile-ho-tro-san-xuat-video-va-van-hanh-thuong-mai-ien-tu
 created: 2026-09-06
 updated: 2026-09-06
-date_added: 2026-09-06
 source_type: note
 authors:
   - Nhung

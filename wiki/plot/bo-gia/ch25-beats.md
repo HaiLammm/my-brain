@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 25"
-slug: ch25-beats
+title: Plot beats — Chương 25
 book: bo-gia
 up_to_chapter: 25
 created: 2026-05-27

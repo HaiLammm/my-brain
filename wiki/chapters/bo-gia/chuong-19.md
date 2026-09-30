@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 19"
-slug: chuong-19
+title: Chương 19
 book: bo-gia
 number: 19
 created: 2026-05-27

@@ -1,8 +1,6 @@
 ---
 type: source
 title: Review SEO — Cấu trúc 3 phần cho bài SEO troubleshooting Setsubi-pro
-slug: cau-truc-3-phan-bai-seo-troubleshooting
-date_added: 2026-06-01
 authors:
   - Quân
 source_type: note

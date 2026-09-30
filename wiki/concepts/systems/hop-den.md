@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Hộp đen (Black Box)
-slug: hop-den
-date_added: 2026-08-08
 confidence: high
 tags:
   - systems
   - cybernetics
   - epistemology
-id: concepts/systems/hop-den
+id: hop-den
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Hồ sơ Khách hàng Tự phục vụ (Customer Self-Service Profile)
-slug: customer-self-service-profile
-date_added: 2026-05-15
 confidence: unverified
 tags:
   - tailor-project
   - profile
   - self-service
   - customer
-id: concepts/tailor/customer-self-service-profile
+id: customer-self-service-profile
 created: 2026-05-15
 updated: 2026-05-15
 key_sources:

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Lõi thuần, vỏ chạm I/O
-slug: pure-core-gated-io
-date_added: 2026-08-07
 confidence: high
 tags:
   - testing
   - architecture
   - design-pattern
-id: concepts/swe/pure-core-gated-io
+id: pure-core-gated-io
 created: 2026-08-07
 updated: 2026-08-07
 key_sources:

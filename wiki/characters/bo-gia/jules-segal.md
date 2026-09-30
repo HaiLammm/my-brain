@@ -1,7 +1,6 @@
 ---
 type: character
 title: Jules Segal
-slug: jules-segal
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-26
 created: 2026-05-27

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Hàng đợi công việc đặt trong cơ sở dữ liệu
-slug: db-backed-job-queue
-date_added: 2026-08-07
 confidence: high
 tags:
   - job-queue
   - concurrency
   - postgresql
-id: concepts/swe/db-backed-job-queue
+id: db-backed-job-queue
 created: 2026-08-07
 updated: 2026-08-07
 key_sources:

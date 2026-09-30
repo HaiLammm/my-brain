@@ -1,8 +1,6 @@
 ---
 type: person
 title: Matthew Walker
-slug: matthew-walker
-date_added: 2026-05-13
 affiliation: UC Berkeley, Humans Sleep Lab
 tags:
   - sleep

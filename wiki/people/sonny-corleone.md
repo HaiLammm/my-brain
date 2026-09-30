@@ -1,14 +1,12 @@
 ---
 type: person
 title: Sonny Corleone
-slug: sonny-corleone
-date_added: 2026-05-11
 affiliation: []
 tags:
   - mafia
   - gia-dinh-corleone
   - jungian-psychology
-id: TODO
+id: sonny-corleone
 created: 2026-05-11
 updated: 2026-05-14
 key_sources:

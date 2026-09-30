@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Điều kiện để bài viết có thumbnail trên Google
-slug: thumbnail-serp-google
-date_added: 2026-08-11
 confidence: high
 tags:
   - technical-seo
   - hinh-anh
   - rich-result
-id: concepts/seo/thumbnail-serp-google
+id: thumbnail-serp-google
 created: 2026-08-11
 updated: 2026-08-11
 key_sources:

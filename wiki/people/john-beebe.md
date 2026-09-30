@@ -1,8 +1,6 @@
 ---
 type: person
 title: "John Beebe"
-slug: john-beebe
-date_added: 2026-05-14
 affiliation: ""
 tags:
   - jungian-psychology

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Lasso Regression
-slug: lasso-regression
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - regression
   - regularization
   - machine-learning
-id: concepts/ml/lasso-regression
+id: lasso-regression
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

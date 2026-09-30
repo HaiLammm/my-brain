@@ -1,22 +1,19 @@
 ---
 type: concept
-title: "Triết lý dữ liệu khép kín (Closed-Data Philosophy)"
-slug: closed-data-philosophy
-date_added: 2026-05-12
+title: Triết lý dữ liệu khép kín (Closed-Data Philosophy)
 confidence: high
 tags:
   - data-strategy
   - trust
   - content-moderation
-id: concepts/danangnavi/closed-data-philosophy
-created: '2026-05-12'
-updated: '2026-05-12'
+id: closed-data-philosophy
+created: 2026-05-12
+updated: 2026-05-12
 key_sources:
   - sources/danangnavi-product-requirements-document
 related_concepts:
   - concepts/danangnavi/senpai-trust-flywheel
   - concepts/danangnavi/camera-only-verification
-
 ---
 
 ## Definition

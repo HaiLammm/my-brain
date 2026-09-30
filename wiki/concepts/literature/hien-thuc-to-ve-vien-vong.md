@@ -1,8 +1,6 @@
 ---
 type: concept
 title: Hiện thực tô vẽ viển vông
-slug: hien-thuc-to-ve-vien-vong
-date_added: 2026-08-08
 created: 2026-08-08
 updated: 2026-08-08
 confidence: medium
@@ -10,7 +8,7 @@ tags:
   - ly-luan-van-hoc
   - hien-thuc
   - phe-binh
-id: concepts/literature/hien-thuc-to-ve-vien-vong
+id: hien-thuc-to-ve-vien-vong
 key_sources: []
 related_concepts:
   - concepts/literature/chuc-nang-cuu-roi-van-chuong

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Pomodoro Timer
-slug: pomodoro-timer
-date_added: 2026-05-15
 confidence: high
 tags:
   - productivity
   - focus
   - time-management
-id: concepts/tools/pomodoro-timer
+id: pomodoro-timer
 created: 2026-05-15
 updated: 2026-05-15
 key_sources:

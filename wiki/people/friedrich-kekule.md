@@ -1,8 +1,6 @@
 ---
 type: person
 title: Friedrich Kekulé
-slug: friedrich-kekule
-date_added: 2026-05-12
 affiliation: Đức
 tags:
   - chemistry

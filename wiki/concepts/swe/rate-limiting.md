@@ -1,10 +1,8 @@
 ---
 type: concept
 title: Giới hạn tốc độ yêu cầu (Rate Limiting)
-slug: rate-limiting
-date_added: 2026-05-15
 confidence: unverified
-id: concepts/swe/rate-limiting
+id: rate-limiting
 created: 2026-05-15
 updated: 2026-05-15
 key_sources:

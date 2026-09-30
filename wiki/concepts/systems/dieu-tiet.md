@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Điều tiết (Regulation)
-slug: dieu-tiet
-date_added: 2026-08-08
 confidence: high
 tags:
   - systems
   - cybernetics
-id: concepts/systems/dieu-tiet
+id: dieu-tiet
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

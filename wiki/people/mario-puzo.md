@@ -1,12 +1,10 @@
 ---
 type: person
 title: Mario Puzo
-slug: mario-puzo
-date_added: 2026-05-11
 affiliation: []
 tags:
   - tac-gia
-id: TODO
+id: mario-puzo
 created: 2026-05-11
 updated: 2026-05-11
 key_sources:

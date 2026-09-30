@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Cross-Language Search
-slug: cross-language-search
-date_added: 2026-05-12
 confidence: high
 tags:
   - search
   - multilingual
   - i18n
   - meilisearch
-id: concepts/swe/cross-language-search
+id: cross-language-search
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

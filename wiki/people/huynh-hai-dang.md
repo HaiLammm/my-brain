@@ -1,8 +1,6 @@
 ---
 type: person
 title: Huynh Hai Dang
-slug: huynh-hai-dang
-date_added: 2026-05-18
 affiliation: RIKKEI 株式会社
 tags:
   - it-qa
@@ -11,9 +9,10 @@ tags:
   - japanese-n2
 id: people/huynh-hai-dang
 created: 2026-05-18
-updated: 2026-05-18
+updated: 2026-09-26
 key_sources:
   - sources/huynh-hai-dang-it-ba-qc
+  - sources/trao-doi-voi-anh-hop-ve-hai-dot-thi-truong-va-chuoi-ke-thua
 ---
 
 ## Overview
@@ -23,6 +22,7 @@ Huỳnh Hải Đăng (フィン・ハイ・ダン, sinh 12/02/1993, Da Nang) là
 ## Key sources
 
 - [[sources/huynh-hai-dang-it-ba-qc]]
+- [[sources/trao-doi-voi-anh-hop-ve-hai-dot-thi-truong-va-chuoi-ke-thua]] — được nhắc như một trong hai người có lợi thế hiểu văn hóa Nhật cho hướng đào tạo kỹ sư xuất khẩu lao động
 
 ## Key concepts
 
@@ -30,3 +30,13 @@ Huỳnh Hải Đăng (フィン・ハイ・ダン, sinh 12/02/1993, Da Nang) là
 - [[concepts/career/cv-tot]]
 
 ## Notes
+
+**Ngoài mảng IT BA/QC (ghi nhận 26/09/2026).** Trong [[sources/trao-doi-voi-anh-hop-ve-hai-dot-thi-truong-va-chuoi-ke-thua]],
+anh Đăng được nhắc cùng [[people/pham-thi-thanh-thao]] như hai người *đã có kinh nghiệm làm việc
+tại Nhật Bản nên hiểu được văn hóa người Nhật* — đây là lợi thế mà [[people/hop]] dựa vào để đề
+xuất chuyển dự án sang mảng đào tạo tiếng Nhật cho kỹ sư xuất khẩu lao động. Ghi chú gốc chỉ ghi
+"anh Đăng"; [[people/luong-hai-lam]] xác nhận 26/09/2026 đúng là người này.
+
+Chi tiết này mở rộng vai trò của anh trong wiki: trước đó anh chỉ xuất hiện như một ứng viên
+IT BA/QC trong hồ sơ tuyển dụng, nay là **người có thể tham gia một dự án đào tạo** — bốn năm
+quản lý sản xuất/QC tại Osaka và Chiba cộng với N2 là đúng thứ mà mảng phái cử lao động cần.

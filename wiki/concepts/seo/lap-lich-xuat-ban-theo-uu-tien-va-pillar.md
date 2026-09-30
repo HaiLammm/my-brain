@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Lập lịch xuất bản theo ưu tiên và pillar
-slug: lap-lich-xuat-ban-theo-uu-tien-va-pillar
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - content
   - planning
   - publishing
-id: concepts/seo/lap-lich-xuat-ban-theo-uu-tien-va-pillar
+id: lap-lich-xuat-ban-theo-uu-tien-va-pillar
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

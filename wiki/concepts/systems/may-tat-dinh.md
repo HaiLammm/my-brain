@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Máy tất định (Determinate machine)
-slug: may-tat-dinh
-date_added: 2026-08-08
 confidence: high
 tags:
   - systems
   - cybernetics
-id: concepts/systems/may-tat-dinh
+id: may-tat-dinh
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

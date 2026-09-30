@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 24"
-slug: ch24-beats
+title: Plot beats — Chương 24
 book: bo-gia
 up_to_chapter: 24
 created: 2026-05-27

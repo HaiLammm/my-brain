@@ -1,8 +1,6 @@
 ---
 type: person
 title: Chu Tử
-slug: chu-tu
-date_added: 2026-05-14
 affiliation: ""
 tags:
   - china

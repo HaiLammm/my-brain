@@ -1,15 +1,13 @@
 ---
 type: concept
-title: "Ngôn ngữ cơ thể"
-slug: ngon-ngu-co-the
+title: Ngôn ngữ cơ thể
 confidence: medium
 tags:
   - giao-tiep
   - tam-ly
-id: concepts/comm/ngon-ngu-co-the
+id: ngon-ngu-co-the
 created: 2026-05-17
 updated: 2026-05-17
-date_added: 2026-05-17
 key_sources:
   - sources/lam-chu-quyen-luc-noi-tai
   - sources/chien-luoc-hanh-vi-vanessa-van-edwards-ve-giao-tiep-phi-ngon-ngu
@@ -17,7 +15,6 @@ related_concepts:
   - concepts/jung/mat-na
   - concepts/comm/giao-tiep-phi-ngon-ngu
   - concepts/comm/su-am-ap-va-nang-luc
-
 ---
 ## Definition
 

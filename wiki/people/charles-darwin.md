@@ -1,14 +1,12 @@
 ---
 type: person
 title: Charles Darwin
-slug: charles-darwin
-date_added: 2026-05-12
 affiliation: England
 tags:
   - biology
   - natural-selection
   - evolution
-id: TODO
+id: charles-darwin
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

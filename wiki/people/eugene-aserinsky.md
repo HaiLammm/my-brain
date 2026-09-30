@@ -1,8 +1,6 @@
 ---
 type: person
 title: Eugene Aserinsky
-slug: eugene-aserinsky
-date_added: 2026-05-13
 affiliation: University of Chicago
 tags:
   - sleep

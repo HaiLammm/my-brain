@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Hourensou (報連相)
-slug: hourensou
-date_added: 2026-05-18
 confidence: high
 tags:
   - van-hoa-nhat-ban
   - quan-ly
   - giao-tiep
-id: concepts/career/hourensou
+id: hourensou
 created: 2026-05-18
 updated: 2026-05-18
 key_sources:

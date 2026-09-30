@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Template SEO 3 phần (CHECKLIST → 理解 → STOP/CALL)
-slug: template-seo-3-phan
-date_added: 2026-06-01
 confidence: high
 tags:
   - seo
   - template
   - troubleshooting
   - setsubi-pro
-id: concepts/seo/template-seo-3-phan
+id: template-seo-3-phan
 created: 2026-06-01
 updated: 2026-06-01
 provenance: replayable

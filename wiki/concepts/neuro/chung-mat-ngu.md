@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Chứng mất ngủ
-slug: chung-mat-ngu
-date_added: 2026-05-13
 confidence: medium
 tags:
   - sleep
   - insomnia
   - health
-id: concepts/neuro/chung-mat-ngu
+id: chung-mat-ngu
 created: 2026-05-13
 updated: 2026-05-13
 key_sources:

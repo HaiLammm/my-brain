@@ -1,12 +1,17 @@
 #!/usr/bin/env node
 import { createHash } from 'node:crypto';
 import { constants as fsConstants } from 'node:fs';
-import { access, mkdir, readdir, readFile, rename, unlink, open } from 'node:fs/promises';
-import { basename, dirname, join, resolve } from 'node:path';
+import { access, readdir, readFile } from 'node:fs/promises';
+import { basename, join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
-import { loadWatchlistConfig, WatchlistConfigError } from './lib/watchlist-config.mjs';
+import {
+  loadWatchlistConfig,
+  WatchlistConfigError,
+  VALID_SCHEDULES,
+  VALID_SOURCES,
+} from './lib/watchlist-config.mjs';
 import {
   getItemState,
   hasSeen,
@@ -14,11 +19,16 @@ import {
   readDiscoveryState,
   writeDiscoveryState,
 } from './lib/discovery-state.mjs';
+import { atomicWrite } from './lib/fsx.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const VALID_SCHEDULES = new Set(['manual', 'daily', 'weekly', 'monthly']);
-const VALID_SOURCES = new Set(['arxiv', 's2']);
+/**
+ * What `--source` accepts on the CLI: the fetchable providers plus `rss`,
+ * which selects feed items rather than a per-topic search source. Kept
+ * separate from VALID_SOURCES so the filter set and the fetcher dispatch set
+ * are visibly different rather than accidentally so.
+ */
+const VALID_CLI_SOURCES = new Set([...VALID_SOURCES, 'rss']);
 
 export async function runDiscover(options = {}) {
   const projectRoot = resolve(options.projectRoot ?? process.cwd());
@@ -60,21 +70,38 @@ export async function runDiscover(options = {}) {
       continue;
     }
 
-    const sources = sourceFilter ? item.sources.filter(source => source === sourceFilter) : item.sources;
-    if (sources.length === 0) {
-      summary.skipped.push({ id: item.id, reason: 'no matching source' });
-      continue;
-    }
-
-    summary.queriesRun += 1;
+    const itemType = item.type ?? 'topic';
     const itemState = getItemState(state, item.id);
     const itemLimit = globalLimit ?? item.limit;
     const maxNew = item.maxNew ?? itemLimit;
 
+    let sources;
+    if (itemType === 'feed') {
+      // Feed items have a single virtual "rss" source — sourceFilter still
+      // applies (rss must be requested explicitly via --source rss).
+      if (sourceFilter && sourceFilter !== 'rss') {
+        summary.skipped.push({ id: item.id, reason: 'no matching source' });
+        continue;
+      }
+      sources = ['rss'];
+    } else {
+      sources = sourceFilter ? item.sources.filter(source => source === sourceFilter) : item.sources;
+      if (sources.length === 0) {
+        summary.skipped.push({ id: item.id, reason: 'no matching source' });
+        continue;
+      }
+    }
+
+    summary.queriesRun += 1;
+
     for (const source of sources) {
       let fetched;
       try {
-        fetched = fetchSource({ projectRoot, source, query: item.query, limit: itemLimit });
+        if (itemType === 'feed') {
+          fetched = fetchFeed({ projectRoot, item, maxNew });
+        } else {
+          fetched = fetchSource({ projectRoot, source, query: item.query, limit: itemLimit });
+        }
       } catch (err) {
         if (source === 's2' && /SEMANTIC_SCHOLAR_API_KEY|API key/i.test(err.message)) {
           summary.skipped.push({ id: item.id, source, reason: 'missing optional key' });
@@ -85,7 +112,9 @@ export async function runDiscover(options = {}) {
       }
 
       summary.fetched += fetched.length;
-      const ranked = rankCandidates({ projectRoot, query: item.query, candidates: fetched });
+      const ranked = itemType === 'feed'
+        ? fetched.map(c => ({ ...c, _score: 0 }))
+        : rankCandidates({ projectRoot, query: item.query, candidates: fetched });
       let writtenForItem = 0;
 
       for (const candidate of ranked) {
@@ -135,13 +164,67 @@ export async function runDiscover(options = {}) {
   return summary;
 }
 
-function fetchSource({ projectRoot, source, query, limit }) {
-  if (!VALID_SOURCES.has(source)) throw new Error(`Unknown source: ${source}`);
+function fetchFeed({ projectRoot, item, maxNew }) {
   const toolsDir = join(projectRoot, '_lumina', 'tools');
-  const script = source === 'arxiv' ? 'fetch_arxiv.py' : 'fetch_s2.py';
-  const args = source === 'arxiv'
-    ? [join(toolsDir, script), 'search', query, '--max', String(limit)]
-    : [join(toolsDir, script), 'search', query, '--limit', String(limit)];
+  const script = join(toolsDir, 'fetch_rss.py');
+  const args = [
+    script,
+    'poll',
+    '--max', String(maxNew ?? 20),
+    '--feed-id', item.id,
+    '--',
+    item.url,
+  ];
+  if (item.extractDois === false) args.splice(args.indexOf('--'), 0, '--no-extract-dois');
+  const result = spawnSync('python3', args, {
+    cwd: projectRoot,
+    encoding: 'utf8',
+    timeout: 60000,
+    env: process.env,
+  });
+  if (result.status !== 0) {
+    throw new Error((result.stderr || result.stdout || 'fetch_rss.py failed').trim());
+  }
+  const parsed = JSON.parse(result.stdout || '{}');
+  if (parsed && parsed.error) {
+    throw new Error(`fetch_rss: ${parsed.error}`);
+  }
+  const items = Array.isArray(parsed.items) ? parsed.items : [];
+  // Map RSS-item shape → discover-candidate shape so normalizeCandidate
+  // can rank/dedup with the existing key strategy.
+  return items.map(rss => ({
+    title: rss.title ?? '',
+    url: rss.link ?? '',
+    abstract: rss.summary ?? '',
+    summary: rss.summary ?? '',
+    publicationDate: rss.published ?? '',
+    published: rss.published ?? '',
+    doi: rss.external_ids?.doi ?? '',
+    arxivId: rss.external_ids?.arxiv ?? '',
+    externalIds: {
+      DOI: rss.external_ids?.doi ?? null,
+      ArXiv: rss.external_ids?.arxiv ?? null,
+    },
+    external_ids: rss.external_ids ?? {},
+    sources: rss.sources ?? [],
+    authors: [],
+    _provider: rss._provider ?? 'rss',
+  }));
+}
+
+/** Per-provider fetcher: script name and the flag it spells `limit` with. */
+const FETCHERS = {
+  arxiv:    { script: 'fetch_arxiv.py',    limitFlag: '--max' },
+  s2:       { script: 'fetch_s2.py',       limitFlag: '--limit' },
+  openalex: { script: 'fetch_openalex.py', limitFlag: '--limit' },
+};
+
+function fetchSource({ projectRoot, source, query, limit }) {
+  const fetcher = FETCHERS[source];
+  if (!fetcher) throw new Error(`Unknown source: ${source}`);
+  const toolsDir = join(projectRoot, '_lumina', 'tools');
+  const script = fetcher.script;
+  const args = [join(toolsDir, script), 'search', query, fetcher.limitFlag, String(limit)];
   const result = spawnSync('python3', args, {
     cwd: projectRoot,
     encoding: 'utf8',
@@ -155,6 +238,7 @@ function fetchSource({ projectRoot, source, query, limit }) {
   if (source === 's2' && parsed && typeof parsed === 'object' && Array.isArray(parsed.data)) {
     return parsed.data;
   }
+  // fetch_openalex.py emits a flat array of normalized records (see normalize_record).
   if (!Array.isArray(parsed)) throw new Error(`${script} returned an unexpected shape.`);
   return parsed;
 }
@@ -196,7 +280,7 @@ function normalizeCandidate({ item, source, candidate, nowIso }) {
     authors: normalizeAuthors(candidate.authors),
     publishedAt: candidate.published ?? candidate.publicationDate ?? (year ? String(year) : ''),
     summary: candidate.summary ?? candidate.abstract ?? '',
-    query: item.query,
+    query: item.query ?? '',
     discoveredAt: nowIso,
     status: 'new',
     score: {
@@ -284,25 +368,6 @@ async function writeCandidate(filePath, record) {
   await atomicWrite(filePath, `${JSON.stringify(record, null, 2)}\n`);
 }
 
-async function atomicWrite(filePath, content) {
-  await mkdir(dirname(filePath), { recursive: true });
-  const tmpPath = `${filePath}.tmp`;
-  let fd;
-  try {
-    fd = await open(tmpPath, 'w');
-    await fd.writeFile(content, 'utf8');
-    await fd.datasync();
-    await fd.close();
-    fd = null;
-    await rename(tmpPath, filePath);
-  } catch (err) {
-    if (fd) {
-      try { await fd.close(); } catch (_) {}
-    }
-    await unlink(tmpPath).catch(() => {});
-    throw err;
-  }
-}
 
 function printSummary(summary) {
   console.log([
@@ -381,7 +446,7 @@ function safeFilePart(value) {
 function normalizeSourceFilter(value) {
   if (!value || value === 'all') return null;
   const source = String(value).trim().toLowerCase();
-  if (!VALID_SOURCES.has(source)) throw new WatchlistConfigError(`Unknown source "${source}".`);
+  if (!VALID_CLI_SOURCES.has(source)) throw new WatchlistConfigError(`Unknown source "${source}".`);
   return source;
 }
 

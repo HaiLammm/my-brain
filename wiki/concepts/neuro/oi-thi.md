@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Đồi thị
-slug: oi-thi
-date_added: 2026-05-13
 confidence: medium
 tags:
   - sleep
   - neuroscience
-id: concepts/neuro/oi-thi
+id: oi-thi
 created: 2026-05-13
 updated: 2026-05-13
 key_sources:

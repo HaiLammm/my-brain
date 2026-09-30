@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Nhịp làm mới phân tầng theo độ biến động
-slug: tiered-refresh-cadence
-date_added: 2026-08-07
 confidence: high
 tags:
   - frontend
   - performance
   - real-time
-id: concepts/swe/tiered-refresh-cadence
+id: tiered-refresh-cadence
 created: 2026-08-07
 updated: 2026-08-07
 key_sources:

@@ -1,7 +1,6 @@
 ---
 type: person
 title: Malcolm X
-slug: malcolm-x
 affiliation: 
 tags:
   - activist
@@ -9,7 +8,6 @@ tags:
 id: people/malcolm-x
 created: 2026-05-17
 updated: 2026-05-17
-date_added: 2026-05-17
 key_sources:
   - sources/lam-chu-quyen-luc-noi-tai
 ---

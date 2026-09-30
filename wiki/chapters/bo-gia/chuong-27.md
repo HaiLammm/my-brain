@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 27"
-slug: chuong-27
+title: Chương 27
 book: bo-gia
 number: 27
 created: 2026-05-27

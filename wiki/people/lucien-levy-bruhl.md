@@ -1,8 +1,6 @@
 ---
 type: person
 title: "Lucien Lévy-Bruhl"
-slug: lucien-levy-bruhl
-date_added: 2026-05-12
 affiliation: Paris, France
 tags:
   - anthropology

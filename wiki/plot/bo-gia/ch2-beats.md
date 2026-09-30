@@ -1,12 +1,11 @@
 ---
 type: plot
-title: "Plot beats — Chương 2"
-slug: ch2-beats
+title: Plot beats — Chương 2
 book: bo-gia
 up_to_chapter: 2
 created: 2026-05-21
 updated: 2026-05-21
-id: TODO
+id: plot/bo-gia/ch2-beats
 ---
 
 ## Beats

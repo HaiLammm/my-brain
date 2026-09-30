@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Củng cố trí nhớ
-slug: cung-co-tri-nho
-date_added: 2026-05-13
 confidence: medium
 tags:
   - sleep
   - memory
   - neuroscience
-id: concepts/neuro/cung-co-tri-nho
+id: cung-co-tri-nho
 created: 2026-05-13
 updated: 2026-05-13
 key_sources:

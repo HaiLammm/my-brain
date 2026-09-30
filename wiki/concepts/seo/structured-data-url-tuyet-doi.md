@@ -1,14 +1,12 @@
 ---
 type: concept
 title: URL tuyệt đối trong dữ liệu có cấu trúc
-slug: structured-data-url-tuyet-doi
-date_added: 2026-08-11
 confidence: high
 tags:
   - structured-data
   - json-ld
   - technical-seo
-id: concepts/seo/structured-data-url-tuyet-doi
+id: structured-data-url-tuyet-doi
 created: 2026-08-11
 updated: 2026-08-11
 key_sources:

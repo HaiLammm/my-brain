@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Recurrent Neural Networks (RNN)
-slug: recurrent-neural-networks
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - deep-learning
   - sequence-modeling
   - machine-learning
-id: concepts/ml/recurrent-neural-networks
+id: recurrent-neural-networks
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

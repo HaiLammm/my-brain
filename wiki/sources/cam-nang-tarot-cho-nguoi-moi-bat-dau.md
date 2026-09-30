@@ -18,8 +18,6 @@ tags:
   - beginner-guide
 raw_paths:
   - raw/download/cam_nang_tarot.pdf
-slug: cam-nang-tarot-cho-nguoi-moi-bat-dau
-date_added: 2026-08-08
 sources:
   - {provider: pdf, fetched_at: "2026-08-08T07:58:18Z"}
 ingest_status: finalized

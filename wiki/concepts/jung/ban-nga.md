@@ -1,8 +1,6 @@
 ---
 type: concept
 title: Bản ngã (The Self)
-slug: ban-nga
-date_added: 2026-05-14
 created: 2026-05-14
 updated: 2026-05-14
 confidence: high
@@ -10,7 +8,7 @@ tags:
   - jungian-psychology
   - self
   - archetype
-id: TODO
+id: ban-nga
 key_sources:
   - sources/the-quotable-jung
   - sources/man-and-his-symbols

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Orexin và công tắc ngủ-thức
-slug: orexin
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
   - neuroscience
   - neurotransmitter
-id: concepts/neuro/orexin
+id: orexin
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

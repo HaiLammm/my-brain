@@ -1,8 +1,6 @@
 ---
 type: person
 title: Yasui Mayo (安井麻代)
-slug: yasui-mayo
-date_added: 2026-09-05
 affiliation: 株式会社ダブルエム — Seminar Producer
 tags:
   - seminar-marketing

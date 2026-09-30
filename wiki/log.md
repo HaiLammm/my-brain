@@ -191,3 +191,19 @@ _Append-only. Format: `## [YYYY-MM-DD] skill | details`_
 ## [2026-09-16] ingest | session:f18e8810 | Added "Keyword map Setsubi-pro" → 11 pages touched
 ## [2026-09-25] ingest | session:91942091 | Added "SEO.md — Bản đồ SEO setsubi-pro.net" → 17 pages touched (1 source, 10 new concepts, 6 existing concepts, 1 person, 5 related sources)
 ## [2026-09-25] check | session:752ef93b | 0 errors fixed, 0 warnings advisory. 0 errors remain.
+## [2026-09-26] lumi-research-topic | session:8d4bf22d | created topic seo covering 9 sources, 30 concepts
+## [2026-09-26] lumi-edit | session:8190f34a | merged concepts/seo/mat-do-tu-khoa-seo into concepts/seo/mat-do-tu-khoa; redirected 5 pages and 5 graph edges; topic seo now covers 29 concepts
+## [2026-09-26] lumi-edit | session:1e034f24 | resolved keyword-density conflict on concepts/seo/mat-do-tu-khoa: adopted 1-3% of character count per user decision
+## [2026-09-26] verify | session:46be84a3 | Verified 1 entries (grounding only): 0 passed, 1 findings, 0 skipped, 0 drift.
+## [2026-09-26] ingest | session:7e194789 | Added "Trao đổi với anh Hợp — hai đợt thị trường, chuỗi kế thừa và hướng đi marketing" → 11 pages touched (1 source, 3 concepts, 1 person new; 6 updated)
+## [2026-09-29] installer | session:5b53b392 | upgrade v1.5.0->v1.14.0: 136 errors, 1524 warnings — 780 auto-fixable via lint --fix, 880 need /lumi-migrate-legacy
+## [2026-09-29] migrate-legacy | session:5711f15d | Nâng cấp schema sau Lumina 1.14.0: áp dụng 866 sửa chữa tự động trên 574 tệp wiki, chuyển 8 cạnh trích dẫn sang kho trích dẫn, sửa id cv-tot; kiểm tra còn 0 lỗi và 794 cảnh báo về slug cũ và id khái niệm theo thư mục domain.
+## [2026-09-29] migrate-legacy | session:1e96002a | Hoàn tất chuẩn hóa dữ liệu cũ: 331 id trang khái niệm khớp tên tệp; loại bỏ 463 trường slug lỗi thời bằng set-meta và bộ sửa tự động; kiểm tra cuối cùng 0 lỗi, 0 cảnh báo. Giữ nguyên đường dẫn, liên kết và nội dung trang.
+## [2026-09-29] verify | session:7f5f62af | Verified 1 entry: 1 passed, 0 findings, 0 skipped, 0 drift. Grounding-only check for Tạ Thị Hiền–Mamsell PDF.
+## [2026-09-29] ingest | session:f6b7cec2 | Added "Trường hợp Tạ Thị Hiền – Mamsell: tranh chấp chấm dứt hợp đồng lao động" → 2 pages touched (case and lessons)
+## [2026-09-29] verify | session:b012f0bc | Verified 1 entries: 0 passed, 1 findings, 0 skipped, 0 drift (grounding-only mode; blind + external skipped by request).
+## [2026-09-30] verify | session:927848ae | Verified 1 entries: 0 passed, 1 findings, 0 skipped, 0 drift.
+## [2026-09-30] verify | session:4a734ef1 | Verified 1 entries: 1 passed, 0 findings, 0 skipped, 0 drift.
+## [2026-09-30] ingest | session:551c359a | Added "SEO Starter Guide — hướng dẫn SEO cơ bản của Google" → 13 pages touched | 1 topic timelines updated
+## [2026-09-30] research-topic | session:cbea82b1 | refreshed topic seo | +0 sources | 4 tensions marked
+## [2026-09-30] check | session:a603f9a0 | 0 errors fixed, 0 warnings advisory, 2 info (pending citations). 0 errors remain.

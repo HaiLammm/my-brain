@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Luồng đặt lịch tư vấn
-slug: booking-flow
-date_added: 2026-05-12
 confidence: medium
 tags:
   - tailor-project
   - booking
   - ao-dai
-id: concepts/tailor/booking-flow
+id: booking-flow
 created: 2026-05-12
 updated: 2026-08-07
 key_sources:

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Định lý good regulator (Good regulator theorem)
-slug: dinh-ly-good-regulator
-date_added: 2026-08-08
 confidence: high
 tags:
   - systems
   - cybernetics
   - modeling
-id: concepts/systems/dinh-ly-good-regulator
+id: dinh-ly-good-regulator
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

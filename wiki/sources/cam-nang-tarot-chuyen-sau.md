@@ -18,8 +18,6 @@ tags:
   - symbolism
 raw_paths:
   - raw/download/cam_nang_tarot_chuyen_sau.pdf
-slug: cam-nang-tarot-chuyen-sau
-date_added: 2026-08-08
 sources:
   - {provider: pdf, fetched_at: "2026-08-08T08:37:58Z"}
 ingest_status: finalized

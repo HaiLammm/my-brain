@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Thế giới Imaginal (Mundus Imaginalis)
-slug: the-gioi-imaginal
-date_added: 2026-08-08
 confidence: medium
 tags:
   - jungian-psychology
   - archetype
   - imaginal
-id: concepts/jung/the-gioi-imaginal
+id: the-gioi-imaginal
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

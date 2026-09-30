@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Nhân trên chéo
-slug: nhan-tren-cheo
-date_added: 2026-05-13
 confidence: medium
 tags:
   - sleep
   - neuroscience
   - circadian-rhythm
-id: concepts/neuro/nhan-tren-cheo
+id: nhan-tren-cheo
 created: 2026-05-13
 updated: 2026-05-13
 key_sources:

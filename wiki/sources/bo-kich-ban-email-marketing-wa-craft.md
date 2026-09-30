@@ -1,8 +1,6 @@
 ---
 type: source
 title: Bộ kịch bản email marketing Wa+Craft (Email MKT)
-slug: bo-kich-ban-email-marketing-wa-craft
-date_added: 2026-08-11
 authors:
   - Quân
   - 野本 享彦 (Nomoto Takahiko)

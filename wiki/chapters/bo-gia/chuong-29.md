@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 29"
-slug: chuong-29
+title: Chương 29
 book: bo-gia
 number: 29
 created: 2026-05-27

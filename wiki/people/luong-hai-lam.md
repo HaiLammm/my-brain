@@ -1,17 +1,16 @@
 ---
 type: person
 title: Lương Hải Lâm
-slug: luong-hai-lam
-date_added: 2026-05-14
 affiliation: Đại học Đông Á — Công nghệ phần mềm
 tags: []
 id: people/luong-hai-lam
 created: 2026-05-14
-updated: 2026-08-11
+updated: 2026-09-26
 key_sources:
   - sources/ho-so-luong-hai-lam
   - sources/buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet
   - sources/luong-hai-lam-4
+  - sources/trao-doi-voi-anh-hop-ve-hai-dot-thi-truong-va-chuoi-ke-thua
 ---
 
 ## Overview
@@ -58,6 +57,7 @@ Khoảng cách giữa tự đánh giá này và quy mô hai dự án đã làm l
 - [[sources/luong-hai-lam-4]]
 - [[sources/technical-research-semantic-to-geometric-translation-architecture]] — viết dưới biệt danh Lem
 - [[sources/rules-toi-uu-seo-cho-bai-viet-setsubi-pro]] — kiến trúc SEO kỹ thuật Lâm tự thiết kế cho Setsubi-pro (xác nhận 11/08/2026)
+- [[sources/trao-doi-voi-anh-hop-ve-hai-dot-thi-truong-va-chuoi-ke-thua]] — ghi chú buổi cà phê với [[people/hop]] ngày 26/09/2026, có nhận định về tính khả thi của dự án quảng cáo dạy tiếng Nhật
 - [[sources/bo-kich-ban-email-marketing-wa-craft]] — không phải tài liệu của Lâm, nhưng là nội dung Lâm vận hành gửi đi qua tool_sales (bạn cung cấp 11/08/2026)
 - [[sources/ho-so-cong-ty-wa-craft]] — hồ sơ chính thức của công ty nơi người này làm kỹ thuật; nêu địa chỉ, mã số doanh nghiệp và hai lĩnh vực kinh doanh
 - [[sources/ban-do-seo-setsubi-pro-net]] — bản đồ SEO toàn cảnh setsubi-pro.net (09/2026)
@@ -101,3 +101,12 @@ Cấu trúc theo Narrative CV Framework 7 lớp ([[concepts/career/khung-trinh-b
 CV v4 gốc (PDF): [[sources/luong-hai-lam-4]]
 
 ## Notes
+
+### Dự án quảng cáo dạy tiếng Nhật — đang treo (26/09/2026)
+
+Ngoài hai dự án cá nhân, Lâm còn chạy quảng cáo cho dự án dạy tiếng Nhật và tiếng Nhật business
+của chị Thảo ([[people/pham-thi-thanh-thao]]), nhắm vào sinh viên IT và người mới đi làm.
+[[people/hop]] đánh giá hướng này **không khả thi** vì thị trường đã sang đợt chuyên nghiệp
+(xem [[concepts/marketing/hai-dot-thi-truong]]), và đề xuất chuyển sang đào tạo tiếng Nhật cho
+kỹ sư xuất khẩu lao động. Chi tiết và phần phản biện ở
+[[sources/trao-doi-voi-anh-hop-ve-hai-dot-thi-truong-va-chuoi-ke-thua]]. Chưa có quyết định.

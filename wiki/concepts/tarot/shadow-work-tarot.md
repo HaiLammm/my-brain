@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Shadow work bằng tarot
-slug: shadow-work-tarot
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - shadow-work
-id: concepts/tarot/shadow-work-tarot
+id: shadow-work-tarot
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

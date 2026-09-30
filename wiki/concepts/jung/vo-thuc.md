@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Vô thức
-slug: vo-thuc
-date_added: 2026-05-11
 confidence: high
 tags:
   - jungian-psychology
   - unconscious
-id: TODO
+id: vo-thuc
 created: 2026-05-11
 updated: 2026-05-14
 key_sources:

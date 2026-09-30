@@ -1,14 +1,12 @@
 ---
 type: concept
 title: TanStack Query
-slug: tanstack-query
-date_added: 2026-05-14
 confidence: high
 tags:
   - tailor-project
   - state-management
   - react
-id: TODO
+id: tanstack-query
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

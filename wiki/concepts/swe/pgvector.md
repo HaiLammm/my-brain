@@ -1,14 +1,12 @@
 ---
 type: concept
 title: pgvector
-slug: pgvector
-date_added: 2026-05-12
 confidence: high
 tags:
   - database
   - vector-search
   - postgresql
-id: concepts/swe/pgvector
+id: pgvector
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

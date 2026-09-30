@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Trải bài Vòng năm (13 lá)
-slug: trai-bai-vong-nam
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - spread
-id: concepts/tarot/trai-bai-vong-nam
+id: trai-bai-vong-nam
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

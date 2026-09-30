@@ -1,21 +1,18 @@
 ---
 type: concept
-title: "Hệ thống điểm đóng góp (Contribution Point System)"
-slug: contribution-point-system
-date_added: 2026-05-12
+title: Hệ thống điểm đóng góp (Contribution Point System)
 confidence: high
 tags:
   - gamification
   - community
   - engagement
-id: concepts/danangnavi/contribution-point-system
-created: '2026-05-12'
-updated: '2026-05-12'
+id: contribution-point-system
+created: 2026-05-12
+updated: 2026-05-12
 key_sources:
   - sources/danangnavi-product-requirements-document
 related_concepts:
   - concepts/danangnavi/senpai-trust-flywheel
-
 ---
 
 ## Definition

@@ -1,14 +1,12 @@
 ---
 type: theme
-title: "Công lý và bạo lực"
-slug: cong-ly-va-bao-luc
+title: Công lý và bạo lực
 book: bo-gia
 created: 2026-05-21
 updated: 2026-05-21
 tags:
   - bo-gia
-id: TODO
-
+id: themes/bo-gia/cong-ly-va-bao-luc
 ---
 
 ## Overview

@@ -1,10 +1,8 @@
 ---
 type: concept
 title: Mô hình cây quyết định (Decision Tree Models)
-slug: decision-tree-models
-date_added: 2026-05-16
 confidence: unverified
-id: concepts/ml/decision-tree-models
+id: decision-tree-models
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

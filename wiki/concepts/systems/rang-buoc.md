@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Ràng buộc (Constraint)
-slug: rang-buoc
-date_added: 2026-08-08
 confidence: high
 tags:
   - systems
   - cybernetics
-id: concepts/systems/rang-buoc
+id: rang-buoc
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

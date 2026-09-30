@@ -1,13 +1,11 @@
 ---
 type: concept
-title: "Triệu chứng thần kinh"
-slug: trieu-chung-than-kinh
-date_added: 2026-05-12
+title: Triệu chứng thần kinh
 confidence: medium
 tags:
   - jungian-psychology
   - neurosis
-id: concepts/jung/trieu-chung-than-kinh
+id: trieu-chung-than-kinh
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

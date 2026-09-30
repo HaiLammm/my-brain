@@ -1,8 +1,6 @@
 ---
 type: source
 title: Sao Chúng Ta Lại Ngủ
-slug: sao-chung-ta-lai-ngu
-date_added: 2026-05-13
 authors:
   - Matthew Walker
 source_type: book

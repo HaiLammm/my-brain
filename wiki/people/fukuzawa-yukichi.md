@@ -1,8 +1,6 @@
 ---
 type: person
 title: Fukuzawa Yukichi
-slug: fukuzawa-yukichi
-date_added: 2026-05-14
 affiliation: Keio Gijuku, Meirokusha
 tags:
   - japan

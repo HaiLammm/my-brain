@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 7"
-slug: chuong-7
+title: Chương 7
 book: bo-gia
 number: 7
 created: 2026-05-21

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Reinforcement Learning (RL)
-slug: reinforcement-learning
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - machine-learning
   - rl
   - agent
-id: concepts/ml/reinforcement-learning
+id: reinforcement-learning
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

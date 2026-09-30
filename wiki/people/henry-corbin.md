@@ -1,8 +1,6 @@
 ---
 type: person
 title: Henry Corbin
-slug: henry-corbin
-date_added: 2026-08-08
 affiliation: ""
 tags:
   - philosophy

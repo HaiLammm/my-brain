@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Doorway page (trang cửa ngõ)
-slug: doorway-page
-date_added: 2026-09-25
 confidence: unverified
 tags:
   - seo
   - guideline
   - local-seo
-id: concepts/seo/doorway-page
+id: doorway-page
 created: 2026-09-25
 updated: 2026-09-25
 key_sources:

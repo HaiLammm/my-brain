@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Ensemble Learning
-slug: ensemble-learning
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - machine-learning
   - ensemble
-id: concepts/ml/ensemble-learning
+id: ensemble-learning
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

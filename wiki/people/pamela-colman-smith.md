@@ -1,8 +1,6 @@
 ---
 type: person
 title: Pamela Colman Smith
-slug: pamela-colman-smith
-date_added: 2026-08-08
 affiliation: ""
 tags:
   - tarot

@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 22"
-slug: chuong-22
+title: Chương 22
 book: bo-gia
 number: 22
 created: 2026-05-27

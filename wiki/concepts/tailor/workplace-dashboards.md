@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Bảng điều khiển vận hành theo vai trò
-slug: workplace-dashboards
-date_added: 2026-05-16
 confidence: medium
 tags:
   - tailor-project
   - dashboard
   - task-management
-id: concepts/tailor/workplace-dashboards
+id: workplace-dashboards
 created: 2026-05-16
 updated: 2026-08-07
 key_sources:

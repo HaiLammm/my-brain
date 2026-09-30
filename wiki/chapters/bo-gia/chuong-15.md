@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 15"
-slug: chuong-15
+title: Chương 15
 book: bo-gia
 number: 15
 created: 2026-05-27

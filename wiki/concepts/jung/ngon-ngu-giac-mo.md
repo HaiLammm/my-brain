@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Ngôn ngữ giấc mơ
-slug: ngon-ngu-giac-mo
-date_added: 2026-05-12
 confidence: high
 tags:
   - dreams
   - symbolism
   - unconscious
   - Jung
-id: concepts/jung/ngon-ngu-giac-mo
+id: ngon-ngu-giac-mo
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

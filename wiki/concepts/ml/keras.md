@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Keras
-slug: keras
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - deep-learning
   - python
   - tensorflow
   - machine-learning
-id: concepts/ml/keras
+id: keras
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

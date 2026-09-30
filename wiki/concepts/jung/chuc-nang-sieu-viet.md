@@ -1,8 +1,6 @@
 ---
 type: concept
 title: Chức năng siêu việt
-slug: chuc-nang-sieu-viet
-date_added: 2026-05-14
 created: 2026-05-14
 updated: 2026-05-14
 confidence: high
@@ -10,7 +8,7 @@ tags:
   - jungian-psychology
   - transcendent-function
   - opposites
-id: TODO
+id: chuc-nang-sieu-viet
 key_sources:
   - sources/the-quotable-jung
 related_concepts:

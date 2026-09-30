@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Softmax Regression
-slug: softmax-regression
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - classification
   - regression
   - machine-learning
-id: concepts/ml/softmax-regression
+id: softmax-regression
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

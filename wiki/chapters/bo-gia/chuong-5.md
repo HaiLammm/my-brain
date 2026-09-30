@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 5"
-slug: chuong-5
+title: Chương 5
 book: bo-gia
 number: 5
 created: 2026-05-21

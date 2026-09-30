@@ -1,8 +1,6 @@
 ---
 type: person
 title: Henri Poincaré
-slug: henri-poincare
-date_added: 2026-05-12
 affiliation: Pháp
 tags:
   - mathematics

@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 16"
-slug: ch16-beats
+title: Plot beats — Chương 16
 book: bo-gia
 up_to_chapter: 16
 created: 2026-05-27

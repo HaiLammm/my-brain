@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Trải bài Celtic Cross
-slug: celtic-cross
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - spread
-id: concepts/tarot/celtic-cross
+id: celtic-cross
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

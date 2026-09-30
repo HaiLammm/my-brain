@@ -1,8 +1,6 @@
 ---
 type: person
 title: W. Ross Ashby
-slug: w-ross-ashby
-date_added: 2026-08-08
 affiliation: Barnwood House, Gloucester
 tags:
   - cybernetics

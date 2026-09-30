@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Multi-tenant RLS
-slug: multi-tenant-rls
-date_added: 2026-05-12
 confidence: high
 tags:
   - database
   - postgresql
   - multi-tenant
   - security
-id: TODO
+id: multi-tenant-rls
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

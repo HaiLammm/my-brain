@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Mất ngủ di truyền gây chết người (FFI)
-slug: mat-ngu-di-truyen-gay-chet-nguoi
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
   - sleep-disorders
   - genetics
   - neuroscience
-id: concepts/neuro/mat-ngu-di-truyen-gay-chet-nguoi
+id: mat-ngu-di-truyen-gay-chet-nguoi
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

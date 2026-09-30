@@ -1,7 +1,6 @@
 ---
 type: character
 title: Siriani
-slug: siriani
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-15
 created: 2026-05-27

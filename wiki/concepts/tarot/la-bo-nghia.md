@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Lá bổ nghĩa (clarifier)
-slug: la-bo-nghia
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - reading-technique
-id: concepts/tarot/la-bo-nghia
+id: la-bo-nghia
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

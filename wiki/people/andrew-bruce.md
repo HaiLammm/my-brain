@@ -1,8 +1,6 @@
 ---
 type: person
 title: Andrew Bruce
-slug: andrew-bruce
-date_added: 2026-05-16
 id: people/andrew-bruce
 created: 2026-05-16
 updated: 2026-05-16

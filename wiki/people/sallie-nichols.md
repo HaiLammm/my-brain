@@ -1,8 +1,6 @@
 ---
 type: person
 title: Sallie Nichols
-slug: sallie-nichols
-date_added: 2026-08-08
 affiliation: "C.G. Jung Institute, Zurich / Los Angeles"
 tags:
   - tarot

@@ -2,8 +2,8 @@
 name: lumi-check
 description: >
   Run lint.mjs --json, summarize findings by severity, offer to apply --fix for
-  auto-fixable checks (L01/L03/L06/L07/L09), self-check re-run to confirm 0
-  errors, and surface advisory warnings for user attention.
+  auto-fixable checks (L01/L02/L03/L05/L06/L07/L09/L19), self-check re-run to confirm 0
+  errors, and surface remaining errors and advisory warnings.
   Use this whenever the user asks to "check the wiki", "run lint", "verify the
   graph", "are there broken links?", "what's wrong with the wiki?", "health
   check", or "are there missing reverse links?". Also fires for: weekly review
@@ -99,7 +99,14 @@ node _lumina/scripts/lint.mjs --fix --json
 
 The `--fix` pass:
 - Applies the supported auto-fixes listed in `references/lint-checks.md`
-- Leaves L02, L05, and L08 for manual correction
+  (L01, L02, L03, L05, L06, L07, L09, L19)
+- Leaves every other check (L04, L08, L10, L11, L12, L13, L14, L16, L17, L18, L20, L21, L22)
+  for manual correction
+- Within a fixable check, some individual findings still can't be repaired
+  safely (e.g. an L01 on a `number`/`enum` field with no safe default, or an
+  L05 wikilink whose basename matches more than one page). Those specific
+  findings are left standing on purpose — a correct error beats a silently
+  wrong value — and show up again in Step 4
 
 ### Step 4 — Self-check re-run
 
@@ -112,16 +119,40 @@ node _lumina/scripts/lint.mjs --json
 If errors remain, do not report done. Address each remaining error specifically:
 - If L06 persists after `--fix`, the reverse edge target may not exist yet. Identify
   the missing page and suggest `/lumi-ingest` or `/lumi-edit` to create it.
-- If L01 persists, the placeholder inserted by `--fix` may have the wrong type.
-  Use `wiki.mjs set-meta` to correct it:
+- If L01 or L02 persist, `--fix` recognized the check but could not safely
+  repair this particular finding — most often a `number` or `enum` field
+  (e.g. a source's `year` or `importance`) with no value it could infer on its
+  own. It never writes a wrong-typed placeholder; a standing finding means it
+  genuinely needs a human or an inference pass. Run
+  `node _lumina/scripts/lint.mjs --suggest --json` and read each finding's
+  `suggestion` field for a concrete value or next step, then either apply it
+  yourself with `wiki.mjs set-meta` or hand the batch to `/lumi-migrate-legacy`
+  (`set-meta` will refuse a value that doesn't match the field's declared
+  type, so a bad guess never lands silently):
   ```bash
   node _lumina/scripts/wiki.mjs set-meta <slug> <key> "<value>"
   ```
-- If L02, L05, or L08 remain, report the exact fields, wikilinks, or edges that
-  need manual correction.
+- If L05 persists, the wikilink's basename matched zero or more than one page
+  — `--fix` only rewrites a link when exactly one match exists. Run
+  `node _lumina/scripts/lint.mjs --suggest --json` and read each finding's
+  `candidates` array (the matching pages, if any) and `suggestion` field, then
+  either pick the right target yourself or hand it to `/lumi-migrate-legacy`
+  to decide from page context.
+- If L08 or L10 remain, report the exact edges or alias conflicts that need
+  manual correction.
+- If L13 or L16 persist, suggest `/lumi-migrate-legacy --backfill-ids` — these
+  are not fixed by `lint.mjs --fix`.
+- If L17 (dangling edge) persists, the edge still points at a slug with no
+  wiki file. Run `wiki.mjs remove-edge <from> <type> <to>` to drop it, or
+  recreate the missing page if the relationship should still hold.
+- If L20 (dangling citation) persists, run
+  `wiki.mjs remove-citation <from> <to>` to remove it, or restore the missing
+  page. Do not hand-edit `citations.jsonl`.
 
 Repeat until `summary.errors === 0`. Do not loop more than 3 times — if errors
-persist, surface them to the user as needing manual attention.
+persist, surface them to the user as needing manual attention (point them at
+`/lumi-migrate-legacy` if the remaining findings are the judgment-only kind
+above).
 
 ### Step 5 — Log the check
 
@@ -137,12 +168,12 @@ Present findings in a structured list. Group errors first, then warnings.
 Lint check: <scanned_files> files scanned
 
 Errors (N):
-  [L06] concepts/positional-encoding.md:18 — Missing reverse edge to sources/attention-revisited
-  [L05] summary/transformers-overview.md:42 — Broken link [[flash-decoding]] (page not found)
+  concepts/positional-encoding.md:18 — a return link is missing, pointing back to sources/attention-revisited (L06)
+  summary/transformers-overview.md:42 — a link points to a page that does not exist: [[flash-decoding]] (L05)
 
 Warnings (M, advisory):
-  [L04] concepts/rotary-embeddings.md — Orphan page (no inbound links)
-  [L09] wiki/index.md — Index catalog is stale
+  concepts/rotary-embeddings.md — this page has no inbound or outbound links yet (L04)
+  wiki/index.md — the page catalog is out of date (L09)
 
 Fixes available: L06, L09 (N total). Apply? [yes/no]
 ```

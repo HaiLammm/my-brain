@@ -23,8 +23,6 @@ urls:
 raw_paths:
   - raw/download/web/eca44d64d9ab497b.pdf
   - raw/discovered/dieu-khien-hoc-tu-duy-he-thong/wikipedia-an-introduction-to-cybernetics.json
-slug: an-introduction-to-cybernetics
-date_added: 2026-08-08
 external_ids:
   url: "https://pespmc1.vub.ac.be/books/IntroCyb.pdf"
 sources:

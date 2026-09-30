@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Xử lý Trả đồ Thuê (Rental Return Processing)
-slug: rental-return-processing
-date_added: 2026-05-15
 confidence: unverified
 tags:
   - tailor-project
   - rental
   - returns
   - operations
-id: concepts/tailor/rental-return-processing
+id: rental-return-processing
 created: 2026-05-15
 updated: 2026-05-15
 key_sources:

@@ -1,5 +1,5 @@
 ---
-id: concepts/jung/cai-bong
+id: cai-bong
 title: Cái bóng
 type: concept
 created: 2026-05-14
@@ -14,8 +14,6 @@ related_concepts:
   - concepts/jung/nguyen-mau
   - concepts/jung/tu-hieu-minh
 confidence: unverified
-slug: cai-bong
-date_added: 2026-05-14
 ---
 ## Definition
 

@@ -1,15 +1,13 @@
 ---
 type: person
 title: Judith Harris
-slug: judith-harris
-date_added: 2026-05-14
 created: 2026-05-14
 updated: 2026-05-14
 affiliation: C. G. Jung Institute, Zürich
 tags:
   - jungian-analyst
   - editor
-id: TODO
+id: judith-harris
 key_sources:
   - sources/the-quotable-jung
 ---

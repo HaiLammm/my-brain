@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Rượu ức chế giấc ngủ REM
-slug: ruou-uc-che-rem
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
   - REM
   - alcohol
   - memory
-id: concepts/neuro/ruou-uc-che-rem
+id: ruou-uc-che-rem
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

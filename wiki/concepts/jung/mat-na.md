@@ -1,8 +1,6 @@
 ---
 type: concept
 title: Mặt nạ (Persona)
-slug: mat-na
-date_added: 2026-05-14
 created: 2026-05-14
 updated: 2026-05-14
 confidence: high
@@ -17,7 +15,7 @@ related_concepts:
   - concepts/jung/cai-bong
   - concepts/jung/ban-nga
   - concepts/jung/vo-thuc
-id: TODO
+id: mat-na
 ---
 
 ## Definition

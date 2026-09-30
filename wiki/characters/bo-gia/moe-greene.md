@@ -1,7 +1,6 @@
 ---
 type: character
 title: Moe Greene
-slug: moe-greene
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-27
 created: 2026-05-27

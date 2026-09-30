@@ -1,8 +1,6 @@
 ---
 type: concept
 title: Phức cảm
-slug: phuc-cam
-date_added: 2026-05-14
 created: 2026-05-14
 updated: 2026-05-14
 confidence: high
@@ -10,7 +8,7 @@ tags:
   - jungian-psychology
   - complex
   - unconscious
-id: TODO
+id: phuc-cam
 key_sources:
   - sources/the-quotable-jung
   - sources/man-and-his-symbols

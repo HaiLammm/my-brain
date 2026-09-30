@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 24"
-slug: chuong-24
+title: Chương 24
 book: bo-gia
 number: 24
 created: 2026-05-27

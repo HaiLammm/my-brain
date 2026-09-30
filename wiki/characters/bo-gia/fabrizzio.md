@@ -1,7 +1,6 @@
 ---
 type: character
 title: Fabrizzio
-slug: fabrizzio
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-28
 created: 2026-05-27

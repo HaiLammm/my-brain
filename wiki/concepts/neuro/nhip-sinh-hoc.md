@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Nhịp sinh học
-slug: nhip-sinh-hoc
-date_added: 2026-05-13
 confidence: medium
 tags:
   - sleep
   - circadian-rhythm
   - neuroscience
-id: concepts/neuro/nhip-sinh-hoc
+id: nhip-sinh-hoc
 created: 2026-05-13
 updated: 2026-05-13
 key_sources:

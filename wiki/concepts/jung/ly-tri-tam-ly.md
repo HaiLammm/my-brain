@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Lý trí (chức năng tâm lý)
-slug: ly-tri-tam-ly
-date_added: 2026-05-12
 confidence: high
 tags:
   - jungian-psychology
   - thinking-function
-id: concepts/jung/ly-tri-tam-ly
+id: ly-tri-tam-ly
 created: 2026-05-12
 updated: 2026-05-14
 key_sources:

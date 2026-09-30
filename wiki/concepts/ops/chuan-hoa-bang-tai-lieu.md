@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Chuẩn hóa bằng tài liệu viết trước
-slug: chuan-hoa-bang-tai-lieu
-date_added: 2026-09-05
 confidence: medium
 tags:
   - van-hanh
   - chuan-hoa
   - tai-lieu
   - chat-luong
-id: concepts/ops/chuan-hoa-bang-tai-lieu
+id: chuan-hoa-bang-tai-lieu
 created: 2026-09-05
 updated: 2026-09-05
 provenance: replayable

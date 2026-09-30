@@ -1,9 +1,7 @@
 ---
 type: concept
-title: "Shell Alias"
-slug: shell-alias
-id: concepts/tools/shell-alias
-date_added: 2026-05-11
+title: Shell Alias
+id: shell-alias
 created: 2026-05-11
 updated: 2026-05-11
 confidence: high

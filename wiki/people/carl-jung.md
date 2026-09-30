@@ -1,13 +1,11 @@
 ---
 type: person
 title: Carl Gustav Jung
-slug: carl-jung
-date_added: 2026-05-11
 affiliation: Zurich, Switzerland
 tags:
   - jungian-psychology
   - psychiatrist
-id: TODO
+id: carl-jung
 created: 2026-05-11
 updated: 2026-05-14
 key_sources:

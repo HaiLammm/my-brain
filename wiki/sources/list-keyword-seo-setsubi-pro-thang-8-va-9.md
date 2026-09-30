@@ -1,8 +1,6 @@
 ---
 type: source
 title: List keyword SEO Setsubi-pro tháng 8 và 9
-slug: list-keyword-seo-setsubi-pro-thang-8-va-9
-date_added: 2026-09-16
 authors: []
 source_type: note
 importance: 3

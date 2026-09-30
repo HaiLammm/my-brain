@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 28"
-slug: ch28-beats
+title: Plot beats — Chương 28
 book: bo-gia
 up_to_chapter: 28
 created: 2026-05-27

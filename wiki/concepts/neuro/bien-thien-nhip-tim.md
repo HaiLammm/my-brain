@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Biến thiên nhịp tim (Heart Rate Variability — HRV)
-slug: bien-thien-nhip-tim
-date_added: 2026-05-18
 confidence: medium
 tags:
   - health
   - neuroscience
   - brain-health
-id: TODO
+id: bien-thien-nhip-tim
 created: 2026-05-18
 updated: 2026-05-18
 key_sources: []

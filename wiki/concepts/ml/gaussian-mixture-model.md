@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Gaussian Mixture Model
-slug: gaussian-mixture-model
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - clustering
   - unsupervised-learning
   - density-estimation
   - machine-learning
-id: concepts/ml/gaussian-mixture-model
+id: gaussian-mixture-model
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

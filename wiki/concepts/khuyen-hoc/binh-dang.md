@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Bình đẳng
-slug: binh-dang
-date_added: 2026-05-14
 confidence: medium
 tags:
   - political-thought
   - citizenship
   - ethics
-id: concepts/khuyen-hoc/binh-dang
+id: binh-dang
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

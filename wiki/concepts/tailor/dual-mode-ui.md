@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Giao diện Hai Chế độ
-slug: dual-mode-ui
-date_added: 2026-05-12
 confidence: high
 tags:
   - ux-architecture
   - sao-dang
   - responsive-design
-id: concepts/tailor/dual-mode-ui
+id: dual-mode-ui
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

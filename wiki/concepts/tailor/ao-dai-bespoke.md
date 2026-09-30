@@ -1,14 +1,12 @@
 ---
 type: concept
 title: May đo Áo dài Bespoke (Áo dài Bespoke)
-slug: ao-dai-bespoke
-date_added: 2026-05-12
 confidence: medium
 tags:
   - ao-dai
   - fashion
   - bespoke
-id: concepts/tailor/ao-dai-bespoke
+id: ao-dai-bespoke
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

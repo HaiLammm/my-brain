@@ -1,8 +1,6 @@
 ---
 type: person
 title: Lem (biệt danh của Lương Hải Lâm)
-slug: lem
-date_added: 2026-05-12
 affiliation: Tailor Project
 tags:
   - architect

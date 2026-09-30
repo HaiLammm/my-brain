@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Generative Adversarial Network (GAN)
-slug: generative-adversarial-network
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - generative-model
   - deep-learning
   - machine-learning
-id: concepts/ml/generative-adversarial-network
+id: generative-adversarial-network
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

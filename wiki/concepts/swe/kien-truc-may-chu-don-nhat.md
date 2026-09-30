@@ -1,10 +1,8 @@
 ---
 type: concept
 title: Kiến trúc Máy chủ Đơn nhất
-slug: kien-truc-may-chu-don-nhat
-date_added: 2026-05-15
 confidence: unverified
-id: concepts/swe/kien-truc-may-chu-don-nhat
+id: kien-truc-may-chu-don-nhat
 created: 2026-05-15
 updated: 2026-05-15
 key_sources:

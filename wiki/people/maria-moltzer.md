@@ -1,8 +1,6 @@
 ---
 type: person
 title: "Maria Moltzer"
-slug: maria-moltzer
-date_added: 2026-05-14
 affiliation: "Zurich, Switzerland"
 tags:
   - jungian-psychology

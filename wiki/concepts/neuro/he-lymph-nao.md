@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Hệ lymph não (Glymphatic System)
-slug: he-lymph-nao
-date_added: 2026-05-18
 confidence: medium
 tags:
   - neuroscience
   - sleep
   - brain-health
-id: concepts/neuro/he-lymph-nao
+id: he-lymph-nao
 created: 2026-05-18
 updated: 2026-08-12
 key_sources:

@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Cross-Validation
-slug: cross-validation
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - evaluation
   - machine-learning
-id: concepts/ml/cross-validation
+id: cross-validation
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 27"
-slug: ch27-beats
+title: Plot beats — Chương 27
 book: bo-gia
 up_to_chapter: 27
 created: 2026-05-27

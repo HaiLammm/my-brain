@@ -1,8 +1,6 @@
 ---
 type: concept
 title: Chỗ rẽ Jung–Freud
-slug: chia-tay-freud
-date_added: 2026-08-08
 created: 2026-08-08
 updated: 2026-08-08
 confidence: medium
@@ -10,7 +8,7 @@ tags:
   - jungian-psychology
   - psychoanalysis
   - freud-jung-relationship
-id: concepts/jung/chia-tay-freud
+id: chia-tay-freud
 key_sources:
   - sources/bai-5-phan-i-phan-tich-giac-mo
   - sources/the-quotable-jung

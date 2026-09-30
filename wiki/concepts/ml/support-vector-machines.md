@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Support Vector Machines (SVM)
-slug: support-vector-machines
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - classification
   - machine-learning
-id: concepts/ml/support-vector-machines
+id: support-vector-machines
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

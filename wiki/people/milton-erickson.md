@@ -1,7 +1,6 @@
 ---
 type: person
 title: Milton Erickson
-slug: milton-erickson
 affiliation: 
 tags:
   - psychotherapy
@@ -9,7 +8,6 @@ tags:
 id: people/milton-erickson
 created: 2026-05-17
 updated: 2026-05-17
-date_added: 2026-05-17
 key_sources:
   - sources/lam-chu-quyen-luc-noi-tai
 ---

@@ -22,8 +22,6 @@ tags:
   - rule-of-law
 raw_paths:
   - raw/sources/book/Khuyen Hoc - Fukuzawa Yukichi.pdf
-slug: khuyen-hoc
-date_added: 2026-05-14
 sources:
   - {provider: pdf, url: ""}
 ingest_status: finalized

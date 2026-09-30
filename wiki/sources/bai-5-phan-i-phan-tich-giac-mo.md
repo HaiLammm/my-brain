@@ -1,8 +1,6 @@
 ---
 type: source
 title: Phần I — Phân Tích Giấc Mơ
-slug: bai-5-phan-i-phan-tich-giac-mo
-date_added: 2026-05-12
 authors:
   - Carl Gustav Jung
 source_type: book

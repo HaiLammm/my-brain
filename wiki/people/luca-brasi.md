@@ -1,12 +1,10 @@
 ---
 type: person
 title: Luca Brasi
-slug: luca-brasi
-date_added: 2026-05-11
 affiliation: []
 tags:
   - mafia
-id: TODO
+id: luca-brasi
 created: 2026-05-11
 updated: 2026-05-11
 key_sources:

@@ -1,13 +1,11 @@
 ---
 type: person
 title: Steven Bartlett
-slug: steven-bartlett
-date_added: 2026-05-17
 affiliation: The Diary of a CEO
 tags:
   - podcaster
   - doanh-nhan
-id: TODO
+id: steven-bartlett
 created: 2026-05-17
 updated: 2026-05-17
 key_sources:

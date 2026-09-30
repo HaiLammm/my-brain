@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 9"
-slug: ch9-beats
+title: Plot beats — Chương 9
 book: bo-gia
 up_to_chapter: 9
 created: 2026-05-27

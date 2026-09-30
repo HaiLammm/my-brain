@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Shapely
-slug: shapely
-date_added: 2026-05-12
 confidence: low
 tags:
   - python
   - geometric-computation
   - 2d-pattern
-id: concepts/swe/shapely
+id: shapely
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

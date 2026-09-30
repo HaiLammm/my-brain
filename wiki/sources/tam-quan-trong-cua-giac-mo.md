@@ -1,8 +1,6 @@
 ---
 type: source
 title: "Phần I: Tầm Quan Trọng Của Giấc Mơ"
-slug: tam-quan-trong-cua-giac-mo
-date_added: 2026-05-12
 authors:
   - Carl Jung
 source_type: book
@@ -16,7 +14,7 @@ tags:
 raw_paths:
   - raw/sources/book/Carl-Jung/[Bài 2] - Phần I - Tầm Quan Trọng Của Giấc Mơ.pdf
 ingest_status: drafted
-id: TODO
+id: tam-quan-trong-cua-giac-mo
 created: 2026-05-12
 updated: 2026-05-12
 year: 1964

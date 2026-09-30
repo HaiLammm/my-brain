@@ -1,13 +1,11 @@
 ---
 type: concept
-title: "Chức năng hạ đẳng"
-slug: chuc-nang-ha-dang
-date_added: 2026-05-14
+title: Chức năng hạ đẳng
 confidence: medium
 tags:
   - jungian-psychology
   - typology
-id: concepts/jung/chuc-nang-ha-dang
+id: chuc-nang-ha-dang
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

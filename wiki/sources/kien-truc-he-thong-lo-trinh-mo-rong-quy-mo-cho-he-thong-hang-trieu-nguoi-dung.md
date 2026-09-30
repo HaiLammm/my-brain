@@ -1,8 +1,6 @@
 ---
 type: source
 title: "Kiến trúc Hệ thống: Lộ trình Mở rộng Quy mô cho Hệ thống Hàng triệu Người dùng"
-slug: kien-truc-he-thong-lo-trinh-mo-rong-quy-mo-cho-he-thong-hang-trieu-nguoi-dung
-date_added: 2026-05-15
 authors: []
 source_type: note
 importance: 3

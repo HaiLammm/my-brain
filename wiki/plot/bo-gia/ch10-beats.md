@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 10"
-slug: ch10-beats
+title: Plot beats — Chương 10
 book: bo-gia
 up_to_chapter: 10
 created: 2026-05-27

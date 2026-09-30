@@ -1,10 +1,8 @@
 ---
 type: concept
 title: Phân cụm K-means (K-Means Clustering)
-slug: k-means-clustering
-date_added: 2026-05-16
 confidence: unverified
-id: concepts/ml/k-means-clustering
+id: k-means-clustering
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

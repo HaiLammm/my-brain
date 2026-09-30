@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Blog giải quyết sự cố nhà ở
-slug: blog-giai-quyet-su-co-nha-o
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - content
   - editorial
   - home-services
-id: concepts/seo/blog-giai-quyet-su-co-nha-o
+id: blog-giai-quyet-su-co-nha-o
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

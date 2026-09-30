@@ -1,13 +1,11 @@
 ---
 type: concept
-title: "Mặc cảm tự ti"
-slug: mac-cam-tu-ti
-date_added: 2026-05-12
+title: Mặc cảm tự ti
 confidence: high
 tags:
   - jungian-psychology
   - inferiority-complex
-id: concepts/jung/mac-cam-tu-ti
+id: mac-cam-tu-ti
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:
@@ -16,7 +14,6 @@ related_concepts:
   - concepts/jung/mac-cam-quyen-luc
   - concepts/jung/chuc-nang-bu-dap
   - concepts/jung/vo-thuc
-
 ---
 
 ## Definition

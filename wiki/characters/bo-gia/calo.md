@@ -1,7 +1,6 @@
 ---
 type: character
 title: Calo
-slug: calo
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-23
 created: 2026-05-27

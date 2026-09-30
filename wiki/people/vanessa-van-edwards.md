@@ -1,13 +1,11 @@
 ---
 type: person
 title: Vanessa Van Edwards
-slug: vanessa-van-edwards
-date_added: 2026-05-17
 affiliation: Science of People
 tags:
   - nha-nghien-cuu-hanh-vi
   - tac-gia
-id: TODO
+id: vanessa-van-edwards
 created: 2026-05-17
 updated: 2026-05-17
 key_sources:

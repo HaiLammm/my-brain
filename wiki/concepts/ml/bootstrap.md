@@ -1,10 +1,8 @@
 ---
 type: concept
 title: Lấy mẫu bootstrap (Bootstrap)
-slug: bootstrap
-date_added: 2026-05-16
 confidence: unverified
-id: concepts/ml/bootstrap
+id: bootstrap
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

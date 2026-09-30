@@ -1,7 +1,6 @@
 ---
 type: person
 title: 50 Cent (Curtis Jackson)
-slug: 50-cent
 affiliation: 
 tags:
   - musician
@@ -9,7 +8,6 @@ tags:
 id: people/50-cent
 created: 2026-05-17
 updated: 2026-05-17
-date_added: 2026-05-17
 key_sources:
   - sources/lam-chu-quyen-luc-noi-tai
 ---

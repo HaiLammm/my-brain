@@ -1,14 +1,12 @@
 ---
 type: concept
 title: MEO và Google Business Profile
-slug: meo-google-business-profile
-date_added: 2026-09-25
 confidence: unverified
 tags:
   - seo
   - meo
   - local-seo
-id: concepts/seo/meo-google-business-profile
+id: meo-google-business-profile
 created: 2026-09-25
 updated: 2026-09-25
 key_sources:

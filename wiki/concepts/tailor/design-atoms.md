@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Design Atoms
-slug: design-atoms
-date_added: 2026-05-12
 confidence: medium
 tags:
   - design-system
   - schema
   - tailor-project
-id: concepts/tailor/design-atoms
+id: design-atoms
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

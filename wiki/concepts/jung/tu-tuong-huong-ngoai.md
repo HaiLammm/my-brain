@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Tư tưởng hướng ngoại
-slug: tu-tuong-huong-ngoai
-date_added: 2026-05-11
 confidence: high
 tags:
   - jungian-psychology
   - personality-type
-id: TODO
+id: tu-tuong-huong-ngoai
 created: 2026-05-11
 updated: 2026-05-14
 key_sources:

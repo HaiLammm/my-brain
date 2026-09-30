@@ -1,8 +1,6 @@
 ---
 type: source
 title: Hướng dẫn sử dụng Look trên Linux Mint
-slug: huong-dan-su-dung-look-tren-linux-mint
-date_added: 2026-05-15
 authors: []
 source_type: note
 importance: 2

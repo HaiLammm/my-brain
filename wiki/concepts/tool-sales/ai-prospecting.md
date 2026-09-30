@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Tìm lead bằng AI
-slug: ai-prospecting
-date_added: 2026-08-07
 confidence: medium
 tags:
   - tool-sales
   - lead-generation
   - llm
-id: concepts/tool-sales/ai-prospecting
+id: ai-prospecting
 created: 2026-08-07
 updated: 2026-08-07
 key_sources:

@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 30"
-slug: ch30-beats
+title: Plot beats — Chương 30
 book: bo-gia
 up_to_chapter: 30
 created: 2026-05-27

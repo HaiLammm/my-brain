@@ -1,8 +1,6 @@
 ---
 type: person
 title: Robert Louis Stevenson
-slug: robert-louis-stevenson
-date_added: 2026-05-12
 affiliation: Anh
 tags:
   - literature

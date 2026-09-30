@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Lớp nghĩa bài tiền-RWS (dòng Etteilla)
-slug: nghia-bai-etteilla
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - history
-id: concepts/tarot/nghia-bai-etteilla
+id: nghia-bai-etteilla
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

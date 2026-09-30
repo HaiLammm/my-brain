@@ -1,8 +1,6 @@
 ---
 type: person
 title: Quân
-slug: quan
-date_added: 2026-08-10
 affiliation: Wa+Craft
 tags:
   - nhan-vat
@@ -54,7 +52,7 @@ Từ [[sources/review-bai-seo-cho-setsubi-pro]]:
 
 - [[concepts/seo/noi-dung-giai-thich-cho-nguoi-khong-chuyen]]
 - [[concepts/seo/bang-tu-xu-ly-hay-goi-tho]]
-- [[concepts/seo/mat-do-tu-khoa-seo]]
+- [[concepts/seo/mat-do-tu-khoa]]
 - [[concepts/seo/cau-truc-heading-seo]]
 
 Từ [[sources/cau-truc-3-phan-bai-seo-troubleshooting]]:

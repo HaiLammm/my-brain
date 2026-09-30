@@ -1,12 +1,10 @@
 ---
 type: person
 title: Joseph L. Henderson
-slug: joseph-henderson
-date_added: 2026-05-11
 affiliation: San Francisco, USA
 tags:
   - jungian-psychology
-id: TODO
+id: joseph-henderson
 created: 2026-05-11
 updated: 2026-05-11
 key_sources:

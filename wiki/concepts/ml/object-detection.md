@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Object Detection
-slug: object-detection
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - computer-vision
   - deep-learning
   - machine-learning
-id: concepts/ml/object-detection
+id: object-detection
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

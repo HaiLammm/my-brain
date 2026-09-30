@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Auth.js v5
-slug: auth-js-v5
-date_added: 2026-05-12
 confidence: high
 tags:
   - authentication
   - nextjs
   - oauth
   - jwt
-id: TODO
+id: auth-js-v5
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

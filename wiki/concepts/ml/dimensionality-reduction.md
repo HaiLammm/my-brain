@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Dimensionality Reduction
-slug: dimensionality-reduction
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - unsupervised-learning
   - preprocessing
   - machine-learning
-id: concepts/ml/dimensionality-reduction
+id: dimensionality-reduction
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

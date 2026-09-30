@@ -1,21 +1,18 @@
 ---
 type: concept
-title: "Thông thạo"
-slug: thong-thao
+title: Thông thạo
 confidence: medium
 tags:
   - hoc-tap
   - ky-nang
   - tam-ly
-id: concepts/comm/thong-thao
+id: thong-thao
 created: 2026-05-17
 updated: 2026-05-17
-date_added: 2026-05-17
 key_sources:
   - sources/lam-chu-quyen-luc-noi-tai
 related_concepts:
   - concepts/jung/tu-tuong-huong-ngoai
-
 ---
 ## Definition
 

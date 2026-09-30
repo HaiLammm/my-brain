@@ -1,8 +1,6 @@
 ---
 type: person
 title: Maiken Nedergaard
-slug: maiken-nedergaard
-date_added: 2026-08-12
 affiliation: Đại học Rochester
 tags:
   - sleep

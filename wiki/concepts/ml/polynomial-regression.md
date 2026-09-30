@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Polynomial Regression
-slug: polynomial-regression
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - regression
   - machine-learning
-id: concepts/ml/polynomial-regression
+id: polynomial-regression
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

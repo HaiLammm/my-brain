@@ -1,8 +1,6 @@
 ---
 type: concept
 title: Anima
-slug: anima
-date_added: 2026-05-14
 created: 2026-05-14
 updated: 2026-05-14
 confidence: high
@@ -10,7 +8,7 @@ tags:
   - jungian-psychology
   - anima
   - archetype
-id: TODO
+id: anima
 key_sources:
   - sources/the-quotable-jung
 related_concepts:

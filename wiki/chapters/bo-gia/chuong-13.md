@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 13"
-slug: chuong-13
+title: Chương 13
 book: bo-gia
 number: 13
 created: 2026-05-27

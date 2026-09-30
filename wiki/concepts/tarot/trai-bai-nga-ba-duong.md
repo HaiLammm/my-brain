@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Trải bài Ngã ba đường (7 lá)
-slug: trai-bai-nga-ba-duong
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - spread
-id: concepts/tarot/trai-bai-nga-ba-duong
+id: trai-bai-nga-ba-duong
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

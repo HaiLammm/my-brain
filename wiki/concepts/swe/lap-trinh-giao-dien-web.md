@@ -1,5 +1,5 @@
 ---
-id: concepts/swe/lap-trinh-giao-dien-web
+id: lap-trinh-giao-dien-web
 title: Lập trình giao diện web
 type: concept
 created: 2026-05-14
@@ -10,8 +10,6 @@ key_sources:
 related_concepts:
   - concepts/swe/lap-trinh-python
 confidence: unverified
-slug: lap-trinh-giao-dien-web
-date_added: 2026-05-14
 tags:
   - frontend
   - web

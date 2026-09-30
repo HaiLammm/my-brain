@@ -1,8 +1,6 @@
 ---
 type: source
 title: EAERA - Hồ sơ công ty
-slug: eaera-ho-so-cong-ty
-date_added: 2026-05-15
 authors: []
 source_type: note
 importance: 2

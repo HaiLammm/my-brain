@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Đường ống tự động gửi form bán hàng
-slug: sales-form-pipeline
-date_added: 2026-08-07
 confidence: high
 tags:
   - tool-sales
   - automation
   - pipeline
-id: concepts/tool-sales/sales-form-pipeline
+id: sales-form-pipeline
 created: 2026-08-07
 updated: 2026-08-11
 key_sources:

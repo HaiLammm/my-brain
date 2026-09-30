@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Chia sẻ cơ sở dữ liệu thay vì gọi lại qua API
-slug: shared-db-no-callback
-date_added: 2026-08-07
 confidence: high
 tags:
   - architecture
   - integration
   - design-decision
-id: concepts/swe/shared-db-no-callback
+id: shared-db-no-callback
 created: 2026-08-07
 updated: 2026-08-07
 key_sources:

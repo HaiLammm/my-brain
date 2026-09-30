@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Khuếch đại điều tiết (Amplifying regulation)
-slug: khuech-dai-dieu-tiet
-date_added: 2026-08-08
 confidence: high
 tags:
   - systems
   - cybernetics
-id: concepts/systems/khuech-dai-dieu-tiet
+id: khuech-dai-dieu-tiet
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

@@ -1,8 +1,6 @@
 ---
 type: person
 title: Linh (Khách hàng)
-slug: linh-customer
-date_added: 2026-05-12
 affiliation: tailor_project — Persona khách hàng
 tags:
   - user-persona

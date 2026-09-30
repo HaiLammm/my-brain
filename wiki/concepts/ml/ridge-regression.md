@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Ridge Regression
-slug: ridge-regression
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - regression
   - regularization
   - machine-learning
-id: concepts/ml/ridge-regression
+id: ridge-regression
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Ngân hàng từ khóa theo thiết bị, vấn đề và intent
-slug: ngan-hang-tu-khoa-theo-thiet-bi-van-de-va-intent
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - seo
   - keyword
   - planning
-id: concepts/seo/ngan-hang-tu-khoa-theo-thiet-bi-van-de-va-intent
+id: ngan-hang-tu-khoa-theo-thiet-bi-van-de-va-intent
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

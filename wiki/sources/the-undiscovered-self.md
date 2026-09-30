@@ -13,8 +13,6 @@ confidence: unverified
 source_type: book
 raw_paths:
   - raw/sources/book/Carl-Jung/Jung, C. G. - Undiscovered Self, The (Routledge, 2002).pdf
-slug: the-undiscovered-self
-date_added: 2026-05-14
 sources:
   - {provider: pdf, url: ""}
 ingest_status: finalized

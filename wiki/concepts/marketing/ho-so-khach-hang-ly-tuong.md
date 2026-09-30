@@ -1,9 +1,7 @@
 ---
-id: concepts/marketing/ho-so-khach-hang-ly-tuong
-slug: ho-so-khach-hang-ly-tuong
+id: ho-so-khach-hang-ly-tuong
 created: 2026-09-06
-updated: 2026-09-06
-date_added: 2026-09-06
+updated: 2026-09-26
 confidence: unverified
 provenance: replayable
 raw_paths:
@@ -17,7 +15,9 @@ title: Hồ sơ khách hàng lý tưởng (ICP)
 type: concept
 key_sources:
   - sources/wa-craft-dinh-huong-dich-vu-va-chien-luoc-thi-truong-nhat-2026
-related_concepts: []
+  - sources/trao-doi-voi-anh-hop-ve-hai-dot-thi-truong-va-chuoi-ke-thua
+related_concepts:
+  - concepts/marketing/hai-dot-thi-truong
 ---
 ## Definition
 
@@ -31,10 +31,12 @@ Hồ sơ khách hàng lý tưởng (Ideal Customer Profile, ICP) là bộ tiêu 
 ## Key sources
 
 - [[sources/wa-craft-dinh-huong-dich-vu-va-chien-luoc-thi-truong-nhat-2026]] — Sheet2!B10:E18; số doanh thu và ngân sách cần xác nhận trước khi áp dụng.
+- [[sources/trao-doi-voi-anh-hop-ve-hai-dot-thi-truong-va-chuoi-ke-thua]] — khái niệm được dùng để giải thích vì sao câu "tại sao chọn chúng tôi" là chỗ vỡ của một dự án
 
 ## Related concepts
 
 Chưa bổ sung.
+- [[concepts/marketing/hai-dot-thi-truong]] — ở đợt chuyên nghiệp, chốt được khách hàng lý tưởng là điều kiện để trả lời "tại sao chọn chúng tôi"
 
 ## Mentioned in
 

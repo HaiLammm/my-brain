@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Artificial Neural Networks (ANN)
-slug: artificial-neural-networks
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - deep-learning
   - neural-networks
   - machine-learning
-id: concepts/ml/artificial-neural-networks
+id: artificial-neural-networks
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

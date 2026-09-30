@@ -1,7 +1,6 @@
 ---
 type: character
 title: Bruno Tattaglia
-slug: bruno-tattaglia
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-7
 created: 2026-05-21

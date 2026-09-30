@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 23"
-slug: chuong-23
+title: Chương 23
 book: bo-gia
 number: 23
 created: 2026-05-27

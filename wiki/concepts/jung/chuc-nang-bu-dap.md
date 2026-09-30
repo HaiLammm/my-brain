@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Chức năng bù đắp của giấc mơ
-slug: chuc-nang-bu-dap
-date_added: 2026-05-12
 confidence: high
 tags:
   - dreams
   - compensation
   - psychological-balance
   - Jung
-id: concepts/jung/chuc-nang-bu-dap
+id: chuc-nang-bu-dap
 created: 2026-05-12
 updated: 2026-05-14
 key_sources:

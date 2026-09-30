@@ -1,5 +1,5 @@
 ---
-id: concepts/swe/co-so-du-lieu-sql
+id: co-so-du-lieu-sql
 title: Cơ sở dữ liệu SQL
 type: concept
 created: 2026-05-14
@@ -12,8 +12,6 @@ related_concepts:
   - concepts/swe/he-thong-erp
   - concepts/swe/tich-hop-he-thong-ben-thu-ba
 confidence: unverified
-slug: co-so-du-lieu-sql
-date_added: 2026-05-14
 tags:
   - sql
   - database

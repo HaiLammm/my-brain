@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Gác cổng tự động so với quy ước
-slug: gac-cong-tu-dong-vs-quy-uoc
-date_added: 2026-09-25
 confidence: unverified
 tags:
   - swe
   - ci-cd
   - quality-gate
-id: concepts/swe/gac-cong-tu-dong-vs-quy-uoc
+id: gac-cong-tu-dong-vs-quy-uoc
 created: 2026-09-25
 updated: 2026-09-25
 key_sources:

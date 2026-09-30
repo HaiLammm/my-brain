@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Manufacturing Blueprint (Bản Vẽ Sản Xuất)
-slug: manufacturing-blueprint
-date_added: 2026-05-12
 confidence: medium
 tags:
   - manufacturing
   - cnc
   - output-format
-id: concepts/tailor/manufacturing-blueprint
+id: manufacturing-blueprint
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

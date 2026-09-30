@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Hệ tương ứng Golden Dawn
-slug: tuong-ung-golden-dawn
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - golden-dawn
   - astrology
-id: concepts/tarot/tuong-ung-golden-dawn
+id: tuong-ung-golden-dawn
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

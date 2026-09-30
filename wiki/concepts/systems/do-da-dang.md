@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Độ đa dạng (Variety)
-slug: do-da-dang
-date_added: 2026-08-08
 confidence: high
 tags:
   - systems
   - cybernetics
   - information-theory
-id: concepts/systems/do-da-dang
+id: do-da-dang
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

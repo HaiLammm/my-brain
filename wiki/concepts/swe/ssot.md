@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Nguồn Sự thật Duy nhất (SSOT)
-slug: ssot
-date_added: 2026-05-12
 confidence: medium
 tags:
   - architecture
   - data-design
-id: concepts/swe/ssot
+id: ssot
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

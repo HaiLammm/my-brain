@@ -1,7 +1,6 @@
 ---
 type: character
 title: Bác sĩ Taza
-slug: bac-si-taza
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-23
 created: 2026-05-27

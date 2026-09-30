@@ -1,10 +1,8 @@
 ---
 type: concept
 title: Hồi quy logistic (Logistic Regression)
-slug: logistic-regression
-date_added: 2026-05-16
 confidence: unverified
-id: concepts/ml/logistic-regression
+id: logistic-regression
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 32"
-slug: chuong-32
+title: Chương 32
 book: bo-gia
 number: 32
 created: 2026-05-27

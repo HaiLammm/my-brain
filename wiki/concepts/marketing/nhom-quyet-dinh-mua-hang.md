@@ -1,9 +1,7 @@
 ---
-id: concepts/marketing/nhom-quyet-dinh-mua-hang
-slug: nhom-quyet-dinh-mua-hang
+id: nhom-quyet-dinh-mua-hang
 created: 2026-09-06
 updated: 2026-09-06
-date_added: 2026-09-06
 confidence: unverified
 provenance: replayable
 raw_paths:

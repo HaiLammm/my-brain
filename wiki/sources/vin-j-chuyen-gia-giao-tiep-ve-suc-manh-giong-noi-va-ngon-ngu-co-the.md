@@ -1,8 +1,6 @@
 ---
 type: source
 title: Vin J — Chuyên gia giao tiếp số 1 về sức mạnh giọng nói và ngôn ngữ cơ thể
-slug: vin-j-chuyen-gia-giao-tiep-ve-suc-manh-giong-noi-va-ngon-ngu-co-the
-date_added: 2026-05-17
 authors:
   - Vin J
   - Steven Bartlett

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Hiểu cấu trúc form lạ
-slug: form-understanding
-date_added: 2026-08-07
 confidence: high
 tags:
   - tool-sales
   - automation
   - parsing
-id: concepts/tool-sales/form-understanding
+id: form-understanding
 created: 2026-08-07
 updated: 2026-08-07
 key_sources:

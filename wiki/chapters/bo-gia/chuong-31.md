@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 31"
-slug: chuong-31
+title: Chương 31
 book: bo-gia
 number: 31
 created: 2026-05-27

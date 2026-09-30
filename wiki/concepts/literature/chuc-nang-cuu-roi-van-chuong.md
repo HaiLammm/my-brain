@@ -1,8 +1,6 @@
 ---
 type: concept
 title: Chức năng cứu rỗi của văn chương
-slug: chuc-nang-cuu-roi-van-chuong
-date_added: 2026-08-08
 created: 2026-08-08
 updated: 2026-08-08
 confidence: medium
@@ -10,7 +8,7 @@ tags:
   - ly-luan-van-hoc
   - chuc-nang-van-hoc
   - nhan-ban
-id: concepts/literature/chuc-nang-cuu-roi-van-chuong
+id: chuc-nang-cuu-roi-van-chuong
 key_sources: []
 related_concepts:
   - concepts/literature/hien-thuc-to-ve-vien-vong

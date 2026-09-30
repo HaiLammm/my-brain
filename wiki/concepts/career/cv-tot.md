@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Tiêu chuẩn CV tốt
-slug: cv_tot
-date_added: 2026-05-12
 confidence: high
 tags:
   - tuyen-dung
   - cv
-id: concepts/cv_tot
+id: cv-tot
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

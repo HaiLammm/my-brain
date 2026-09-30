@@ -1,8 +1,6 @@
 ---
 type: person
 title: Norbert Wiener
-slug: norbert-wiener
-date_added: 2026-08-08
 affiliation: "MIT"
 tags:
   - cybernetics

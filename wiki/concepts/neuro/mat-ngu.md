@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Mất ngủ
-slug: mat-ngu
-date_added: 2026-05-13
 confidence: medium
 tags:
   - sleep
   - health
   - neuroscience
-id: concepts/neuro/mat-ngu
+id: mat-ngu
 created: 2026-05-13
 updated: 2026-05-13
 key_sources:

@@ -1,8 +1,6 @@
 ---
 type: person
 title: Corrado Roi
-slug: corrado-roi
-date_added: 2026-08-08
 affiliation: ""
 tags:
   - tarot

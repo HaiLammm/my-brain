@@ -1,14 +1,12 @@
 ---
 type: concept
 title: CTA mềm
-slug: cta-mem
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - content
   - conversion
   - copywriting
-id: concepts/seo/cta-mem
+id: cta-mem
 created: 2026-05-16
 updated: 2026-08-11
 key_sources:

@@ -1,15 +1,13 @@
 ---
 type: concept
 title: CBT-I — Liệu pháp nhận thức-hành vi cho mất ngủ
-slug: cbt-i
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
   - insomnia
   - therapy
   - mental-health
-id: concepts/neuro/cbt-i
+id: cbt-i
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

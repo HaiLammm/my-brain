@@ -1,8 +1,6 @@
 ---
 type: person
 title: "Hans Schmid-Guisan"
-slug: hans-schmid-guisan
-date_added: 2026-05-14
 affiliation: "Basel, Switzerland"
 tags:
   - psychiatry

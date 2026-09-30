@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Convolutional Neural Networks (CNN)
-slug: convolutional-neural-networks
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - deep-learning
   - computer-vision
   - machine-learning
-id: concepts/ml/convolutional-neural-networks
+id: convolutional-neural-networks
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

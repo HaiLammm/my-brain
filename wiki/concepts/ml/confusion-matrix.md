@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Confusion Matrix
-slug: confusion-matrix
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - evaluation
   - classification
   - machine-learning
-id: concepts/ml/confusion-matrix
+id: confusion-matrix
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

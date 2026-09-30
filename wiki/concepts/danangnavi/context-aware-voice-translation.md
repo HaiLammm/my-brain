@@ -1,22 +1,19 @@
 ---
 type: concept
-title: "Dịch giọng theo ngữ cảnh (Context-Aware Voice Translation)"
-slug: context-aware-voice-translation
-date_added: 2026-05-12
+title: Dịch giọng theo ngữ cảnh (Context-Aware Voice Translation)
 confidence: high
 tags:
   - translation
   - i18n
   - ux
   - da-nang
-id: concepts/danangnavi/context-aware-voice-translation
-created: '2026-05-12'
-updated: '2026-05-12'
+id: context-aware-voice-translation
+created: 2026-05-12
+updated: 2026-05-12
 key_sources:
   - sources/danangnavi-product-requirements-document
 related_concepts:
   - concepts/danangnavi/three-sided-cultural-bridge
-
 ---
 
 ## Definition

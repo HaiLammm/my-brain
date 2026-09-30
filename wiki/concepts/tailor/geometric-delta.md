@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Sai số Hình học (Geometric Delta)
-slug: geometric-delta
-date_added: 2026-05-12
 confidence: medium
 tags:
   - ai-bespoke
   - pattern-engine
-id: concepts/tailor/geometric-delta
+id: geometric-delta
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

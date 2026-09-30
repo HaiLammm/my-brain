@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Tarot Marseilles
-slug: tarot-marseilles
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - marseilles
-id: concepts/tarot/tarot-marseilles
+id: tarot-marseilles
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

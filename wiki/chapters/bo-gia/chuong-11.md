@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 11"
-slug: chuong-11
+title: Chương 11
 book: bo-gia
 number: 11
 created: 2026-05-27

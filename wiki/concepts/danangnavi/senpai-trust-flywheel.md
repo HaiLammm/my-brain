@@ -1,23 +1,20 @@
 ---
 type: concept
-title: "Vòng bay Senpai (Senpai Trust Flywheel)"
-slug: senpai-trust-flywheel
-date_added: 2026-05-12
+title: Vòng bay Senpai (Senpai Trust Flywheel)
 confidence: high
 tags:
   - trust
   - community
   - gamification
   - da-nang
-id: concepts/danangnavi/senpai-trust-flywheel
-created: '2026-05-12'
-updated: '2026-05-12'
+id: senpai-trust-flywheel
+created: 2026-05-12
+updated: 2026-05-12
 key_sources:
   - sources/danangnavi-product-requirements-document
 related_concepts:
   - concepts/danangnavi/contribution-point-system
   - concepts/danangnavi/closed-data-philosophy
-
 ---
 
 ## Definition

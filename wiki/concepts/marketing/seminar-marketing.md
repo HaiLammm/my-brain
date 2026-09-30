@@ -1,22 +1,21 @@
 ---
 type: concept
 title: Seminar marketing (セミナーマーケティング)
-slug: seminar-marketing
-date_added: 2026-09-05
 confidence: medium
 tags:
   - seminar-marketing
   - b2b
   - nhat-ban
-id: concepts/marketing/seminar-marketing
+id: seminar-marketing
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-26
 provenance: replayable
 key_sources:
   - sources/ho-so-nang-luc-double-m
 related_concepts:
   - concepts/marketing/ho-tro-mot-dau-moi
   - concepts/marketing/noi-bo-hoa-nang-luc-marketing
+  - concepts/marketing/hai-nhanh-cua-marketing
 ---
 
 ## Definition
@@ -46,6 +45,7 @@ Lập luận vì sao nó khác quảng cáo, theo [[sources/ho-so-nang-luc-doubl
 
 - [[concepts/marketing/ho-tro-mot-dau-moi]]
 - [[concepts/marketing/noi-bo-hoa-nang-luc-marketing]]
+- [[concepts/marketing/hai-nhanh-cua-marketing]] — ví dụ mà sản xuất và phân phối dính chặt nhau: buổi hội thảo vừa là nội dung vừa là kênh
 
 ## Mentioned in
 

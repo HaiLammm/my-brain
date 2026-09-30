@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 25"
-slug: chuong-25
+title: Chương 25
 book: bo-gia
 number: 25
 created: 2026-05-27

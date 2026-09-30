@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Docker và Kubernetes
-slug: docker-va-kubernetes
-date_added: 2026-05-14
 confidence: unverified
 tags:
   - docker
   - kubernetes
   - devops
   - interview
-id: concepts/swe/docker-va-kubernetes
+id: docker-va-kubernetes
 created: 2026-05-14
 updated: 2026-05-15
 key_sources:

@@ -1,12 +1,10 @@
 ---
 type: person
 title: Aniela Jaffé
-slug: aniela-jaffe
-date_added: 2026-05-11
 affiliation: Zurich, Switzerland
 tags:
   - jungian-psychology
-id: TODO
+id: aniela-jaffe
 created: 2026-05-11
 updated: 2026-05-11
 key_sources:

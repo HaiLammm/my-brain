@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Tự do
-slug: tu-do
-date_added: 2026-05-14
 confidence: medium
 tags:
   - political-thought
   - ethics
   - citizenship
-id: concepts/khuyen-hoc/tu-do
+id: tu-do
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

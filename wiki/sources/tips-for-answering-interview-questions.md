@@ -1,8 +1,6 @@
 ---
 type: source
 title: Tips for Answering Interview Questions
-slug: tips-for-answering-interview-questions
-date_added: 2026-05-12
 authors: []
 source_type: note
 importance: 2

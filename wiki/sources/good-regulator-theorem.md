@@ -23,8 +23,6 @@ urls:
 raw_paths:
   - raw/download/web/c437346ab223db0d.pdf
   - raw/discovered/dieu-khien-hoc-tu-duy-he-thong/wikipedia-good-regulator.json
-slug: good-regulator-theorem
-date_added: 2026-08-08
 external_ids:
   url: "https://pespmc1.vub.ac.be/books/Conant_Ashby.pdf"
 sources:

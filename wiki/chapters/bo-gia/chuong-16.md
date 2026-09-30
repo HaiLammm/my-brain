@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 16"
-slug: chuong-16
+title: Chương 16
 book: bo-gia
 number: 16
 created: 2026-05-27

@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Xác định thời điểm trong tarot
-slug: xac-dinh-thoi-diem
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - reading-technique
-id: concepts/tarot/xac-dinh-thoi-diem
+id: xac-dinh-thoi-diem
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

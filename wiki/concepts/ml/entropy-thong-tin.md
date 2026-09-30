@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Entropy thông tin (Information entropy)
-slug: entropy-thong-tin
-date_added: 2026-08-08
 confidence: high
 tags:
   - ml
   - information-theory
   - systems
-id: concepts/ml/entropy-thong-tin
+id: entropy-thong-tin
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

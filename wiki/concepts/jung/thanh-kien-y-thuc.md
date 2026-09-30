@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Thành kiến ý thức
-slug: thanh-kien-y-thuc
-date_added: 2026-05-12
 confidence: high
 tags:
   - consciousness
   - prejudice
   - psychological-balance
   - Jung
-id: concepts/jung/thanh-kien-y-thuc
+id: thanh-kien-y-thuc
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

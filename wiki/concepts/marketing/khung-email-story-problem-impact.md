@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Khung nội dung email Story → Problem → Impact
-slug: khung-email-story-problem-impact
-date_added: 2026-08-11
 confidence: high
 tags:
   - email-marketing
   - cold-email
   - b2b
-id: concepts/marketing/khung-email-story-problem-impact
+id: khung-email-story-problem-impact
 created: 2026-08-11
 updated: 2026-08-11
 provenance: replayable

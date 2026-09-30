@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Deep Q-Learning
-slug: deep-q-learning
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - rl
   - deep-learning
   - machine-learning
-id: concepts/ml/deep-q-learning
+id: deep-q-learning
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Natural Language Processing (NLP)
-slug: natural-language-processing
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - nlp
   - deep-learning
   - machine-learning
-id: concepts/ml/natural-language-processing
+id: natural-language-processing
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

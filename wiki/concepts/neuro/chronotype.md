@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Kiểu thời gian sinh học (chronotype)
-slug: chronotype
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
   - circadian-rhythm
   - genetics
   - neuroscience
-id: concepts/neuro/chronotype
+id: chronotype
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

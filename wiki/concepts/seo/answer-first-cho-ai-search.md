@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Answer-first cho AI search (GEO/AIO)
-slug: answer-first-cho-ai-search
-date_added: 2026-09-25
 confidence: unverified
 tags:
   - seo
   - geo-aio
   - content-structure
-id: concepts/seo/answer-first-cho-ai-search
+id: answer-first-cho-ai-search
 created: 2026-09-25
 updated: 2026-09-25
 key_sources:

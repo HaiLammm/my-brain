@@ -1,9 +1,7 @@
 ---
 type: concept
-title: "Process Management"
-slug: process-management
-id: concepts/tools/process-management
-date_added: 2026-05-11
+title: Process Management
+id: process-management
 created: 2026-05-11
 updated: 2026-05-11
 confidence: high

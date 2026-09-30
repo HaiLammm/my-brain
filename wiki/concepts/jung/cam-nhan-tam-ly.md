@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Cảm nhận (chức năng tâm lý)
-slug: cam-nhan-tam-ly
-date_added: 2026-05-12
 confidence: high
 tags:
   - jungian-psychology
   - feeling-function
-id: concepts/jung/cam-nhan-tam-ly
+id: cam-nhan-tam-ly
 created: 2026-05-12
 updated: 2026-05-14
 key_sources:

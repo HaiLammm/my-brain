@@ -1,14 +1,12 @@
 ---
 type: concept
 title: React Hook Form + Zod
-slug: react-hook-form-zod
-date_added: 2026-05-14
 confidence: high
 tags:
   - tailor-project
   - form-validation
   - react
-id: TODO
+id: react-hook-form-zod
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

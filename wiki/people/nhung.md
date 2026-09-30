@@ -1,8 +1,6 @@
 ---
 type: person
 title: Nhung
-slug: nhung
-date_added: 2026-09-06
 affiliation: WA CRAFT (Đà Nẵng) — team marketing
 tags:
   - wa-craft

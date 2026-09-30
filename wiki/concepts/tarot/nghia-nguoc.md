@@ -1,12 +1,10 @@
 ---
 type: concept
 title: Nghĩa ngược
-slug: nghia-nguoc
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
-id: concepts/tarot/nghia-nguoc
+id: nghia-nguoc
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

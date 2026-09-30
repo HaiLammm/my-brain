@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 31"
-slug: ch31-beats
+title: Plot beats — Chương 31
 book: bo-gia
 up_to_chapter: 31
 created: 2026-05-27

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Kìm nén
-slug: kim-nen
-date_added: 2026-05-12
 confidence: high
 tags:
   - psychoanalysis
   - defense-mechanism
   - repression
-id: concepts/jung/kim-nen
+id: kim-nen
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

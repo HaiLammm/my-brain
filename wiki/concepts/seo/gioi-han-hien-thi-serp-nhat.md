@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Giới hạn hiển thị tiêu đề và mô tả trên SERP tiếng Nhật
-slug: gioi-han-hien-thi-serp-nhat
-date_added: 2026-08-11
 confidence: medium
 tags:
   - technical-seo
   - meta-title
   - meta-description
   - tieng-nhat
-id: concepts/seo/gioi-han-hien-thi-serp-nhat
+id: gioi-han-hien-thi-serp-nhat
 created: 2026-08-11
 updated: 2026-08-11
 key_sources:

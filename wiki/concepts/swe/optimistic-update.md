@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Optimistic Update
-slug: optimistic-update
-date_added: 2026-05-14
 confidence: high
 tags:
   - tailor-project
   - ux-pattern
   - state-management
-id: TODO
+id: optimistic-update
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

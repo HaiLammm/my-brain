@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Phân tích giấc mơ
-slug: phan-tich-giac-mo
-date_added: 2026-05-12
 confidence: high
 tags:
   - jungian-psychology
   - dream-analysis
-id: TODO
+id: phan-tich-giac-mo
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

@@ -1,24 +1,24 @@
 {
   "schemaVersion": 4,
-  "packageVersion": "1.5.0",
+  "packageVersion": "1.14.0",
   "locale": "vi",
   "installedAt": "2026-05-11T13:19:51.712Z",
-  "updatedAt": "2026-05-11T13:19:51.712Z",
+  "updatedAt": "2026-09-29T02:24:52.195Z",
   "packs": {
     "core": {
-      "version": "1.5.0",
+      "version": "1.14.0",
       "source": "built-in"
     },
     "research": {
-      "version": "1.5.0",
+      "version": "1.14.0",
       "source": "built-in"
     },
     "reading": {
-      "version": "1.5.0",
+      "version": "1.14.0",
       "source": "built-in"
     },
     "learning": {
-      "version": "1.5.0",
+      "version": "1.14.0",
       "source": "built-in"
     }
   },
@@ -42,7 +42,9 @@
     "lumi-research-prefill": "symlink",
     "lumi-research-setup": "symlink",
     "lumi-research-topic": "symlink",
+    "lumi-research-rank": "symlink",
     "lumi-research-watchlist": "symlink",
+    "lumi-research-watch-run": "symlink",
     "lumi-reading-chapter-ingest": "symlink",
     "lumi-reading-character-track": "symlink",
     "lumi-reading-theme-map": "symlink",
@@ -55,5 +57,7 @@
     "raw": "/home/luonghailam/Projects/my-brain/raw",
     "agents": "/home/luonghailam/Projects/my-brain/.agents",
     "lumina": "/home/luonghailam/Projects/my-brain/_lumina"
-  }
+  },
+  "profile": "full",
+  "legacyMigrationNeeded": false
 }

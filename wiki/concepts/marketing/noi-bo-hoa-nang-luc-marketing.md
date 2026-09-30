@@ -1,16 +1,14 @@
 ---
 type: concept
 title: Nội bộ hóa năng lực marketing (内製化)
-slug: noi-bo-hoa-nang-luc-marketing
-date_added: 2026-09-05
 confidence: medium
 tags:
   - marketing
   - to-chuc
   - nhat-ban
-id: concepts/marketing/noi-bo-hoa-nang-luc-marketing
+id: noi-bo-hoa-nang-luc-marketing
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-26
 provenance: replayable
 key_sources:
   - sources/ho-so-nang-luc-double-m
@@ -19,6 +17,7 @@ related_concepts:
   - concepts/marketing/ho-tro-mot-dau-moi
   - concepts/marketing/seminar-marketing
   - concepts/ops/bpo-back-office
+  - concepts/marketing/hai-dot-thi-truong
 ---
 
 ## Definition
@@ -50,6 +49,7 @@ Sáu lợi ích mà [[sources/ho-so-nang-luc-double-m]] liệt kê cho việc t�
 - [[concepts/marketing/ho-tro-mot-dau-moi]]
 - [[concepts/marketing/seminar-marketing]]
 - [[concepts/ops/bpo-back-office]] — đầu đối lập ở mảng vận hành: giao đứt ra ngoài thay vì nuôi năng lực trong nhà
+- [[concepts/marketing/hai-dot-thi-truong]] — nghiệp vụ mà đợt chuyên nghiệp đòi hỏi thường là thứ không thuê ngoài trọn gói được
 
 ## Mentioned in
 

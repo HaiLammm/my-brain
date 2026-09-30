@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Thang cứu hộ tín hiệu
-slug: rescue-ladder
-date_added: 2026-08-07
 confidence: high
 tags:
   - verification
   - heuristics
   - automation
-id: concepts/swe/rescue-ladder
+id: rescue-ladder
 created: 2026-08-07
 updated: 2026-08-07
 key_sources:

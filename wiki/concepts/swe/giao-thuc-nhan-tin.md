@@ -1,8 +1,6 @@
 ---
 type: concept
 title: Giao thức nhắn tin
-slug: giao-thuc-nhan-tin
-date_added: 2026-05-14
 confidence: unverified
 tags:
   - messaging
@@ -10,7 +8,7 @@ tags:
   - rpc
   - pub-sub
   - interview
-id: concepts/swe/giao-thuc-nhan-tin
+id: giao-thuc-nhan-tin
 created: 2026-05-14
 updated: 2026-05-15
 key_sources:

@@ -1,8 +1,6 @@
 ---
 type: source
 title: Practical Statistics for Data Scientists
-slug: practical-statistics-for-data-scientists
-date_added: 2026-05-16
 authors:
   - Peter Bruce
   - Andrew Bruce

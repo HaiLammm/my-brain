@@ -1,10 +1,8 @@
 ---
 type: concept
 title: Mở rộng chiều ngang
-slug: mo-rong-ngang
-date_added: 2026-05-15
 confidence: unverified
-id: concepts/swe/mo-rong-ngang
+id: mo-rong-ngang
 created: 2026-05-15
 updated: 2026-05-15
 key_sources:

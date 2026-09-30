@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Email marketing dựa trên bài hướng dẫn
-slug: email-marketing-tu-bai-huong-dan
-date_added: 2026-06-01
 confidence: low
 tags:
   - email-marketing
   - content-marketing
   - setsubi-pro
-id: concepts/seo/email-marketing-tu-bai-huong-dan
+id: email-marketing-tu-bai-huong-dan
 created: 2026-06-01
 updated: 2026-06-01
 provenance: replayable

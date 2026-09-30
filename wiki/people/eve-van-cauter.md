@@ -1,8 +1,6 @@
 ---
 type: person
 title: Eve Van Cauter
-slug: eve-van-cauter
-date_added: 2026-08-12
 affiliation: Đại học Chicago
 tags:
   - sleep

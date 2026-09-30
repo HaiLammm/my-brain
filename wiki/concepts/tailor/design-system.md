@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Hệ thống thiết kế tailor_project
-slug: design-system
-date_added: 2026-05-14
 confidence: high
 tags:
   - tailor-project
   - design-system
   - ui
-id: concepts/tailor/design-system
+id: design-system
 created: 2026-05-14
 updated: 2026-08-07
 key_sources:

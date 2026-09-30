@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Lá bài mỗi ngày
-slug: la-bai-moi-ngay
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - practice
-id: concepts/tarot/la-bai-moi-ngay
+id: la-bai-moi-ngay
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

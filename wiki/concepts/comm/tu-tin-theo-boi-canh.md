@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Tự tin theo bối cảnh
-slug: tu-tin-theo-boi-canh
-date_added: 2026-05-17
 confidence: unverified
 tags:
   - tam-ly-hoc
   - tu-tin
   - giao-tiep
-id: TODO
+id: tu-tin-theo-boi-canh
 created: 2026-05-17
 updated: 2026-05-17
 key_sources:

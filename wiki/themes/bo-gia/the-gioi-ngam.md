@@ -1,14 +1,12 @@
 ---
 type: theme
-title: "Thế giới ngầm"
-slug: the-gioi-ngam
+title: Thế giới ngầm
 book: bo-gia
 created: 2026-05-21
 updated: 2026-05-21
 tags:
   - bo-gia
-id: TODO
-
+id: themes/bo-gia/the-gioi-ngam
 ---
 
 ## Overview

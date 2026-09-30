@@ -1,8 +1,6 @@
 ---
 type: source
 title: Dr. Daniel Amen về ADHD, Sức Khỏe Não và Chấn Thương Tâm Lý
-slug: dr-daniel-amen-on-adhd-brain-health-and-trauma
-date_added: 2026-05-18
 authors:
   - Daniel Amen
   - Steven Bartlett
@@ -19,7 +17,7 @@ raw_paths:
   - raw/sources/podcast/ADHD.md
 provenance: replayable
 ingest_status: finalized
-id: TODO
+id: dr-daniel-amen-on-adhd-brain-health-and-trauma
 created: 2026-05-18
 updated: 2026-05-18
 year: 0

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Shibodoki (志望動機)
-slug: shibodoki
-date_added: 2026-05-18
 confidence: high
 tags:
   - cv
   - phong-van
   - tieng-nhat
-id: concepts/career/shibodoki
+id: shibodoki
 created: 2026-05-18
 updated: 2026-05-18
 key_sources:

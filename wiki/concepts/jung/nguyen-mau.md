@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Nguyên mẫu
-slug: nguyen-mau
-date_added: 2026-05-11
 confidence: high
 tags:
   - jungian-psychology
   - archetype
-id: TODO
+id: nguyen-mau
 created: 2026-05-11
 updated: 2026-05-14
 key_sources:

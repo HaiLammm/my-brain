@@ -1,22 +1,19 @@
 ---
 type: concept
-title: "Cầu nối văn hóa ba bên (Three-Sided Cultural Bridge)"
-slug: three-sided-cultural-bridge
-date_added: 2026-05-12
+title: Cầu nối văn hóa ba bên (Three-Sided Cultural Bridge)
 confidence: high
 tags:
   - i18n
   - multi-sided-platform
   - cultural-bridge
-id: concepts/danangnavi/three-sided-cultural-bridge
-created: '2026-05-12'
-updated: '2026-05-12'
+id: three-sided-cultural-bridge
+created: 2026-05-12
+updated: 2026-05-12
 key_sources:
   - sources/danangnavi-product-requirements-document
 related_concepts:
   - concepts/danangnavi/context-aware-voice-translation
   - concepts/danangnavi/closed-data-philosophy
-
 ---
 
 ## Definition

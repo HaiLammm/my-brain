@@ -1,7 +1,6 @@
 ---
 type: character
 title: Roy McElroy
-slug: roy-mcelroy
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-13
 created: 2026-05-27

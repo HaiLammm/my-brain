@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Hệ rất lớn (Very large system)
-slug: he-rat-lon
-date_added: 2026-08-08
 confidence: high
 tags:
   - systems
   - cybernetics
   - complexity
-id: concepts/systems/he-rat-lon
+id: he-rat-lon
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

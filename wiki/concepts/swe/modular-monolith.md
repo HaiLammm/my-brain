@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Modular Monolith
-slug: modular-monolith
-date_added: 2026-05-12
 confidence: high
 tags:
   - architecture
   - design-pattern
   - solo-development
-id: concepts/swe/modular-monolith
+id: modular-monolith
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

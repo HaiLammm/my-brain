@@ -1,8 +1,6 @@
 ---
 type: source
 title: Psychology and Western Religion
-slug: psychology-and-western-religion
-date_added: 2026-05-14
 authors:
   - C. G. Jung
 translator: R. F. C. Hull
@@ -23,7 +21,7 @@ year: 1988
 created: 2026-05-14
 updated: 2026-05-14
 ingest_status: finalized
-id: TODO
+id: psychology-and-western-religion
 verify_status: passed
 findings: []
 ---

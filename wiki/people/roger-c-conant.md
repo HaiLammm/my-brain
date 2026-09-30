@@ -1,8 +1,6 @@
 ---
 type: person
 title: Roger C. Conant
-slug: roger-c-conant
-date_added: 2026-08-08
 affiliation: "University of Illinois at Chicago"
 tags:
   - cybernetics

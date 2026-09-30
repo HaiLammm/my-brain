@@ -1,14 +1,12 @@
 ---
 type: theme
-title: "Quyền lực và tình bạn"
-slug: quyen-luc-va-tinh-ban
+title: Quyền lực và tình bạn
 book: bo-gia
 created: 2026-05-21
 updated: 2026-05-21
 tags:
   - bo-gia
-id: TODO
-
+id: themes/bo-gia/quyen-luc-va-tinh-ban
 ---
 
 ## Overview

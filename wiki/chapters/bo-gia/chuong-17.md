@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 17"
-slug: chuong-17
+title: Chương 17
 book: bo-gia
 number: 17
 created: 2026-05-27

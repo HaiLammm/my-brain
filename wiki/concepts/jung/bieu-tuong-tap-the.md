@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Biểu tượng tập thể
-slug: bieu-tuong-tap-the
-date_added: 2026-05-12
 confidence: high
 tags:
   - jungian-psychology
   - archetypal
   - symbolism
-id: TODO
+id: bieu-tuong-tap-the
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

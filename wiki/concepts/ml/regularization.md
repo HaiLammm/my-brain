@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Regularization
-slug: regularization
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - machine-learning
   - overfitting
-id: concepts/ml/regularization
+id: regularization
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Nợ ngủ
-slug: no-ngu
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
   - health
   - performance
-id: concepts/neuro/no-ngu
+id: no-ngu
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

@@ -19,8 +19,6 @@ tags:
   - mid-level
 raw_paths:
   - raw/sources/interview/jd/middle-python.md
-slug: lap-trinh-vien-python-mid-level-2-3-nam-kinh-nghiem-thai-binh
-date_added: 2026-05-14
 ingest_status: finalized
 verify_status: findings_pending
 findings:

@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Clipboard History
-slug: clipboard-history
-date_added: 2026-05-15
 confidence: high
 tags:
   - productivity
   - tool
-id: concepts/tools/clipboard-history
+id: clipboard-history
 created: 2026-05-15
 updated: 2026-05-15
 key_sources:

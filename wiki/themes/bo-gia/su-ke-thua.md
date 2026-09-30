@@ -1,13 +1,12 @@
 ---
 type: theme
-title: "Sự kế thừa"
-slug: su-ke-thua
+title: Sự kế thừa
 book: bo-gia
 created: 2026-05-21
 updated: 2026-05-21
 tags:
   - bo-gia
-id: TODO
+id: themes/bo-gia/su-ke-thua
 ---
 
 ## Overview

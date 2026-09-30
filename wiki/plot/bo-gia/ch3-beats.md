@@ -1,12 +1,11 @@
 ---
 type: plot
-title: "Plot beats — Chương 3"
-slug: ch3-beats
+title: Plot beats — Chương 3
 book: bo-gia
 up_to_chapter: 3
 created: 2026-05-21
 updated: 2026-05-21
-id: TODO
+id: plot/bo-gia/ch3-beats
 ---
 
 ## Beats

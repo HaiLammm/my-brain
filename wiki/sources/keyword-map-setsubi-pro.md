@@ -1,8 +1,6 @@
 ---
 type: source
 title: Keyword map Setsubi-pro
-slug: keyword-map-setsubi-pro
-date_added: 2026-09-16
 authors: []
 source_type: note
 importance: 4

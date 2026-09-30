@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Thân nhiệt trung tâm và khởi phát giấc ngủ
-slug: than-nhiet-trung-tam
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
   - circadian-rhythm
   - physiology
-id: concepts/neuro/than-nhiet-trung-tam
+id: than-nhiet-trung-tam
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

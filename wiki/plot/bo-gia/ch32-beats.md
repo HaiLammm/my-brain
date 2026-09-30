@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 32"
-slug: ch32-beats
+title: Plot beats — Chương 32
 book: bo-gia
 up_to_chapter: 32
 created: 2026-05-27

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Validation form nội tuyến không dùng thư viện schema
-slug: inline-form-validation
-date_added: 2026-05-14
 confidence: high
 tags:
   - frontend
   - validation
   - form
-id: concepts/swe/inline-form-validation
+id: inline-form-validation
 created: 2026-05-14
 updated: 2026-08-07
 key_sources:

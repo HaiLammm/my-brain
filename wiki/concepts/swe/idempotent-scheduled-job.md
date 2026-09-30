@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Tác vụ định kỳ idempotent
-slug: idempotent-scheduled-job
-date_added: 2026-05-14
 confidence: high
 tags:
   - background-task
   - idempotency
   - scheduling
-id: concepts/swe/idempotent-scheduled-job
+id: idempotent-scheduled-job
 created: 2026-05-14
 updated: 2026-08-07
 key_sources:

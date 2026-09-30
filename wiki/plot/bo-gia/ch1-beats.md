@@ -1,13 +1,11 @@
 ---
 type: plot
-title: "Plot beats — Chương 1"
-slug: ch1-beats
+title: Plot beats — Chương 1
 book: bo-gia
 up_to_chapter: 1
 created: 2026-05-21
 updated: 2026-05-21
-id: TODO
-
+id: plot/bo-gia/ch1-beats
 ---
 
 ## Beats

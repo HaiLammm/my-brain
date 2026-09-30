@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Nguyên mẫu Father (Người Cha)
-slug: nguyen-mau-father
-date_added: 2026-05-11
 confidence: high
 tags:
   - jungian-psychology
   - archetype
-id: TODO
+id: nguyen-mau-father
 created: 2026-05-11
 updated: 2026-05-11
 key_sources:

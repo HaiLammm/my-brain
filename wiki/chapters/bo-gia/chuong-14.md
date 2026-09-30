@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 14"
-slug: chuong-14
+title: Chương 14
 book: bo-gia
 number: 14
 created: 2026-05-27

@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Tư duy Win-Win trong phỏng vấn
-slug: tu-duy-win-win-phong-van
-date_added: 2026-05-12
 confidence: high
 tags:
   - phong-van
   - tam-ly
-id: concepts/career/tu-duy-win-win-phong-van
+id: tu-duy-win-win-phong-van
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Vòng lặp tín hiệu
-slug: vong-lap-tin-hieu
-date_added: 2026-05-17
 confidence: medium
 tags:
   - giao-tiep
   - tam-ly-hoc
   - cue-cycle
-id: TODO
+id: vong-lap-tin-hieu
 created: 2026-05-17
 updated: 2026-05-17
 key_sources:

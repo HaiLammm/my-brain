@@ -1,8 +1,6 @@
 ---
 type: source
 title: Kế hoạch nội dung blog và SEO cho Setsuki-pro
-slug: ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro
-date_added: 2026-05-16
 authors: []
 source_type: note
 importance: 3

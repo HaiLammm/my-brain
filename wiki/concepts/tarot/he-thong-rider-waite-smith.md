@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Hệ thống Rider–Waite–Smith
-slug: he-thong-rider-waite-smith
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - rider-waite-smith
-id: concepts/tarot/he-thong-rider-waite-smith
+id: he-thong-rider-waite-smith
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

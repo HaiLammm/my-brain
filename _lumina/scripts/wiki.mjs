@@ -20,31 +20,57 @@
 // 1. Imports + schemas import
 // ---------------------------------------------------------------------------
 
-import { createHash, randomBytes, randomUUID } from 'node:crypto';
-import { open, readFile, writeFile, rename, unlink, mkdir, access, stat, readdir } from 'node:fs/promises';
+import { randomUUID } from 'node:crypto';
+import { readFile, mkdir, access, readdir } from 'node:fs/promises';
 import { constants as fsConstants } from 'node:fs';
-import { dirname, join, resolve, relative, normalize, sep } from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { createReadStream } from 'node:fs';
+import { dirname, join, resolve, relative, sep } from 'node:path';
 
 import {
   ENTITY_DIRS,
-  EDGE_TYPES,
-  EXEMPTION_GLOBS,
   SCHEMA_VERSION,
   REQUIRED_FRONTMATTER,
+  EDGE_CONFIDENCE,
+  LEGACY_ENUM_DEFAULTS,
+  TIMELINE_MARKER_OPEN,
+  TIMELINE_MARKER_CLOSE,
+  TIMELINE_KINDS,
+  EXTERNAL_ID_NAMESPACES,
 } from './schemas.mjs';
-import { sanitizeExternalIdsObject } from './external-ids.mjs';
+import { sanitizeExternalIdsObject, normalizeExternalId, expandExternalIds } from './external-ids.mjs';
+import { atomicWrite } from './lib/fsx.mjs';
+import { isExempt } from './lib/globs.mjs';
+import { slugify } from './lib/slug.mjs';
+import {
+  CITATION_EDGE_TYPES,
+  edgeTypeByName,
+  skipReverseFor,
+  reverseEdgeFor,
+  edgeKey,
+  normalizeEdge,
+} from './lib/edges.mjs';
 
 // ---------------------------------------------------------------------------
 // 2. Constants
 // ---------------------------------------------------------------------------
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
 /** Minimum valid edge confidence values. */
-const CONFIDENCE_VALUES = new Set(['high', 'medium', 'low']);
+const CONFIDENCE_VALUES = new Set(EDGE_CONFIDENCE);
+
+/**
+ * Message for a command that was handed a citation edge type. `remove` points
+ * at the removal command, `add` at the creation one.
+ * @param {'add'|'remove'} direction
+ * @returns {string}
+ */
+function citationEdgeMessage(direction) {
+  return direction === 'add'
+    ? 'Citations live in wiki/graph/citations.jsonl, not edges.jsonl; use `add-citation <citing> <cited>` (for a cited_by relation, the citing source is the <cited> argument). Writing one as a graph edge puts it in the wrong file, where read-citations cannot see it and remove-citation cannot remove it.'
+    : 'Citations live in wiki/graph/citations.jsonl, not edges.jsonl; use `remove-citation <citing> <cited>` (for a cited_by relation, the citing source is the <cited> argument).';
+}
+
+function citationReplaceEdgeMessage() {
+  return 'Citations live in wiki/graph/citations.jsonl, not edges.jsonl; replace-edge cannot retype cites/cited_by edges. Use add-citation / remove-citation to manage citations.';
+}
 
 /** Regex for a single frontmatter line: `key: value` */
 const FM_LINE_RE = /^([A-Za-z_][A-Za-z0-9_]*)\s*:\s*(.*)/;
@@ -58,54 +84,6 @@ const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 // ---------------------------------------------------------------------------
 // 3. Utils
 // ---------------------------------------------------------------------------
-
-/**
- * Write content to path atomically: write to <path>.tmp, fsync fd, rename.
- * @param {string} filePath - Destination path.
- * @param {string} content - String content to write (UTF-8).
- * @returns {Promise<void>}
- */
-async function atomicWrite(filePath, content) {
-  const tmpPath = filePath + '.tmp';
-  let fd;
-  try {
-    fd = await open(tmpPath, 'w');
-    await fd.writeFile(content, 'utf8');
-    await fd.datasync();
-    await fd.close();
-    fd = null;
-    await rename(tmpPath, filePath);
-  } catch (err) {
-    if (fd) {
-      try { await fd.close(); } catch (_) { /* ignore */ }
-    }
-    // Best-effort cleanup of .tmp
-    await unlink(tmpPath).catch(() => {});
-    throw err;
-  }
-}
-
-/**
- * Convert a title string to a kebab-case slug.
- * Lowercase, hyphenate, strip punctuation, collapse whitespace.
- * Pure function, no I/O.
- * @param {string} title
- * @returns {string}
- */
-function slugify(title) {
-  return title
-    .toLowerCase()
-    // Replace accented chars with ascii equivalents where possible
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
-    // Replace non-alphanumeric (except spaces and hyphens) with space
-    .replace(/[^a-z0-9\s-]/g, ' ')
-    // Collapse any whitespace and hyphens to a single hyphen
-    .trim()
-    .replace(/[\s-]+/g, '-')
-    // Remove leading/trailing hyphens
-    .replace(/^-+|-+$/g, '');
-}
 
 /**
  * Parse YAML frontmatter from a markdown file string.
@@ -221,16 +199,6 @@ function parseFrontmatter(content) {
         currentMapKey = null;
       }
       continue;
-    }
-
-    // Indented list item without matching pattern (fallback)
-    if (line.match(/^\s+-\s/) && currentListKey !== null) {
-      const rawFallback = line.replace(/^\s+-\s+/, '').trim();
-      if (rawFallback.startsWith('{') && rawFallback.endsWith('}')) {
-        frontmatter[currentListKey].push(_parseFlowMapping(rawFallback));
-      } else {
-        frontmatter[currentListKey].push(unquoteValue(rawFallback));
-      }
     }
   }
 
@@ -410,6 +378,11 @@ function stringifyFrontmatter(fm) {
 /**
  * Quote a string value if it contains special YAML characters or looks like
  * a scalar that would be misinterpreted (true/false/null/number).
+ *
+ * The empty string is quoted for the same reason: emitting a bare `key:` makes
+ * the value indistinguishable from a key with a block list under it, and
+ * parseFrontmatter reads it back as `[]` — so `set-meta <slug> title ''` would
+ * silently retype a string field as an array, and report ok while doing it.
  * @param {any} val
  * @returns {string}
  */
@@ -418,7 +391,7 @@ function quoteIfNeeded(val) {
   const special = ['true', 'false', 'null', '~'];
   if (special.includes(val.toLowerCase())) return `"${val}"`;
   if (!isNaN(Number(val)) && val.trim() !== '') return `"${val}"`;
-  if (val.includes(':') || val.includes('#') || val.startsWith('*') || val.includes('\n')) {
+  if (val === '' || val.includes(':') || val.includes('#') || val.startsWith('*') || val.includes('\n')) {
     return `"${val.replace(/"/g, '\\"')}"`;
   }
   return val;
@@ -428,11 +401,9 @@ function quoteIfNeeded(val) {
  * Reassemble a markdown file from parsed frontmatter + body.
  * @param {Record<string,any>} fm
  * @param {string} body
- * @param {boolean} hasFrontmatter
  * @returns {string}
  */
-function assembleMd(fm, body, hasFrontmatter) {
-  if (!hasFrontmatter && Object.keys(fm).length === 0) return body;
+function assembleMd(fm, body) {
   const yamlBlock = stringifyFrontmatter(fm);
   return `---\n${yamlBlock}\n---\n${body}`;
 }
@@ -477,7 +448,14 @@ function pathSafe(segment, projectRoot) {
   // Check resolved path stays inside projectRoot
   const resolved = resolve(join(projectRoot, segment));
   const rootResolved = resolve(projectRoot);
-  if (!resolved.startsWith(rootResolved + sep) && resolved !== rootResolved) return false;
+  // rootResolved already ends with `sep` when it IS a filesystem root (POSIX
+  // "/" or a Windows drive root like "C:\\") -- resolve() only leaves a
+  // trailing separator in that one case. Appending another `sep`
+  // unconditionally would double it ("//" / "C:\\\\"), a prefix no real
+  // resolved path ever has, so every path inside a root-level workspace was
+  // rejected as unsafe. Only add the separator when it isn't already there.
+  const rootWithSep = rootResolved.endsWith(sep) ? rootResolved : rootResolved + sep;
+  if (!resolved.startsWith(rootWithSep) && resolved !== rootResolved) return false;
   return true;
 }
 
@@ -494,52 +472,18 @@ function today() {
 }
 
 /**
- * Check whether a target slug/path matches any of the exemption globs.
- * Supported glob patterns: `**` anywhere, `*` (single segment).
- * @param {string} target
+ * Check a YYYY-MM-DD string is a real calendar date (not just shape-matching
+ * DATE_RE). Rejects e.g. 2026-13-01 or 2026-02-30, which `new Date(str)`
+ * would silently roll over into a different date.
+ * @param {string} s
  * @returns {boolean}
  */
-function isExempt(target) {
-  for (const glob of EXEMPTION_GLOBS) {
-    if (matchGlob(glob, target)) return true;
-  }
-  return false;
-}
-
-/**
- * Simple glob matcher supporting `*` and `**`.
- * @param {string} pattern
- * @param {string} str
- * @returns {boolean}
- */
-function matchGlob(pattern, str) {
-  // Normalize separators
-  const p = pattern.replace(/\\/g, '/');
-  const s = str.replace(/\\/g, '/');
-
-  // Special pattern: *://* matches URLs
-  if (p === '*://*') {
-    return /^[a-zA-Z][a-zA-Z0-9+\-.]*:\/\//.test(s);
-  }
-
-  // Convert glob to regex
-  const regexStr = p
-    .replace(/[.+^${}()|[\]\\]/g, '\\$&') // escape regex special chars
-    .replace(/\*\*/g, '{{DOUBLESTAR}}')
-    .replace(/\*/g, '[^/]*')
-    .replace(/{{DOUBLESTAR}}/g, '.*');
-
-  const re = new RegExp(`^${regexStr}$`);
-  return re.test(s);
-}
-
-/**
- * Compute SHA-256 hash of a string.
- * @param {string} content
- * @returns {string} hex digest
- */
-function sha256(content) {
-  return createHash('sha256').update(content, 'utf8').digest('hex');
+function isValidIsoDate(s) {
+  if (!DATE_RE.test(s)) return false;
+  const [y, m, d] = s.split('-').map(Number);
+  if (m < 1 || m > 12) return false;
+  const dt = new Date(Date.UTC(y, m - 1, d));
+  return dt.getUTCFullYear() === y && dt.getUTCMonth() === m - 1 && dt.getUTCDate() === d;
 }
 
 /**
@@ -631,7 +575,34 @@ async function readMeta(projectRoot, slug) {
 }
 
 /**
+ * Determine the entity type for a file path by matching its parent
+ * directory (relative to wiki/) against ENTITY_DIRS.
+ * @param {string} projectRoot
+ * @param {string} filePath - Absolute path to a file under wiki/.
+ * @returns {string|null} Entity type key, or null if not under a known dir.
+ */
+function _entityTypeForFilePath(projectRoot, filePath) {
+  const wikiDir = join(projectRoot, 'wiki');
+  const relPath = relative(wikiDir, filePath);
+  const dirParts = relPath.split(sep);
+  const entityDirName = dirParts[0] + '/';
+  return Object.entries(ENTITY_DIRS).find(
+    ([, v]) => v.dir === entityDirName,
+  )?.[0] ?? null;
+}
+
+/**
  * Set a frontmatter key in an entity file.
+ *
+ * Schema gate: if the entity's type declares a field definition for `key`
+ * in REQUIRED_FRONTMATTER, the supplied `value` must satisfy that field's
+ * declared type or the write is rejected outright (no --force escape
+ * hatch — see _checkFieldType). Only the single key being set is checked;
+ * the rest of the document (including fields not yet present) is left
+ * alone, so mid-draft pages can still set fields one at a time. Keys with
+ * no declared type for this entity type (free-form keys like `tags`) are
+ * always writable.
+ *
  * @param {string} projectRoot
  * @param {string} slug
  * @param {string} key
@@ -647,17 +618,65 @@ async function setMeta(projectRoot, slug, key, value) {
   }
   const content = await readFile(filePath, 'utf8');
   const { frontmatter, body, hasFrontmatter } = parseFrontmatter(content);
+
+  const entityType = _entityTypeForFilePath(projectRoot, filePath);
+  if (entityType) {
+    const fields = REQUIRED_FRONTMATTER[entityType] ?? null;
+    const field = fields ? fields.find((f) => f.key === key) : null;
+    // Clearing an OPTIONAL declared field stays allowed. The gate exists to stop
+    // wrong-typed values, and `null` on a field the schema marks `required:
+    // false` is not a wrong value — it is the absence the schema already
+    // permits. Type-checking it would leave no way at all to undo an optional
+    // field once set. A required field still cannot be cleared: that just
+    // trades this error for an L01 one.
+    const clearingOptional = (value === null || value === undefined) && field && field.required === false;
+    if (field && !clearingOptional) {
+      const violation = _checkFieldType(field, value);
+      if (violation) {
+        // The TODO sentinel gets its own hint: --json-value re-encodes the
+        // same string ("TODO" stays "TODO" whether it arrives via parseScalar
+        // or JSON.parse), so pointing the user at --json-value here would be
+        // actively wrong — it cannot make this value acceptable. Every other
+        // violation is a real type/shape mismatch, where --json-value (or
+        // quoting the value) genuinely can fix it. Detected off the
+        // violation text itself (not the raw value) so a "TODO" rejected by
+        // a DIFFERENT branch — e.g. an iso-date field, which keeps its own
+        // "must be an ISO date" message — still gets that branch's own hint
+        // (none, today) rather than this one.
+        const isTodoPlaceholder = /is set to the placeholder "TODO"/.test(violation);
+        let hint;
+        if (isTodoPlaceholder) {
+          hint = ' — supply a real value; this is not a quoting issue, so --json-value will not help';
+        } else {
+          // Scalars arrive already coerced by parseScalar, so a value the user
+          // typed as text can reach us as a number or a bare string where the
+          // schema wants a list. That is exactly what --json-value is for, and an
+          // error that does not say so reads as "this value is forbidden" rather
+          // than "quote it".
+          const coercible = field.type === 'string' || field.type === 'array' || field.type === 'object';
+          hint = coercible
+            ? ' — if this is the value you meant, pass it with --json-value (e.g. --json-value \'"1706.03762"\' or \'["a","b"]\')'
+            : '';
+        }
+        const err = new Error(`Schema violation: ${violation}${hint}`);
+        err.code = 2;
+        throw err;
+      }
+    }
+  }
+
   // external_ids is the only object-typed frontmatter today; sanitize untrusted
   // input (CLI / JSON.parse / fetcher output) against the namespace allowlist.
   // Note: `sources` array entries are validated at write time by buildSourceEntry
   // / build_source_entry (provider slug, URL parse, length bounds), so no
-  // sanitization gate is needed here. Other typed fields are checked by lint.
+  // sanitization gate is needed here. Other typed fields are checked above and
+  // by lint.
   if (key === 'external_ids') {
     frontmatter[key] = sanitizeExternalIdsObject(value);
   } else {
     frontmatter[key] = value;
   }
-  const newContent = assembleMd(frontmatter, body, hasFrontmatter || true);
+  const newContent = assembleMd(frontmatter, body);
   await atomicWrite(filePath, newContent);
   return { filePath };
 }
@@ -670,10 +689,6 @@ async function setMeta(projectRoot, slug, key, value) {
  * make legacy state explicit so verify/lint can flag what still needs review,
  * rather than silently asserting trust.
  */
-const LEGACY_DEFAULTS = {
-  sources:  { provenance: 'missing', confidence: 'unverified' },
-  concepts: { confidence: 'unverified' },
-};
 
 /**
  * Backfill missing frontmatter fields on legacy entities (sources/concepts).
@@ -690,7 +705,7 @@ async function migrateLegacyDefaults(projectRoot, dryRun) {
   let skipped = 0;
 
   for (const entity of entities) {
-    const defaults = LEGACY_DEFAULTS[entity.type];
+    const defaults = LEGACY_ENUM_DEFAULTS[entity.type];
     if (!defaults) { skipped++; continue; }
 
     const content = await readFile(entity.filePath, 'utf8');
@@ -707,7 +722,7 @@ async function migrateLegacyDefaults(projectRoot, dryRun) {
     if (Object.keys(added).length === 0) { skipped++; continue; }
 
     if (!dryRun) {
-      const newContent = assembleMd(frontmatter, body, hasFrontmatter || true);
+      const newContent = assembleMd(frontmatter, body);
       await atomicWrite(entity.filePath, newContent);
     }
     updated.push({ slug: entity.slug, type: entity.type, added });
@@ -775,6 +790,56 @@ async function listEntities(projectRoot, prefix = null) {
   return results;
 }
 
+/**
+ * Resolve `slugArg` to an entity file, requiring it live under the
+ * `expectedType`'s ENTITY_DIRS directory (e.g. 'topics', 'sources'). Accepts
+ * both a bare slug and one already qualified with the directory prefix, same
+ * as `findEntityFile`. Exit-2 class error when not found or of the wrong type.
+ *
+ * A bare (untyped) slugArg tries `expectedType`'s directory first, so e.g.
+ * `timeline-add foo` still finds `topics/foo.md` even when `concepts/foo.md`
+ * also exists — `findEntityFile`'s ENTITY_DIRS scan order would otherwise
+ * return the concepts hit first and this function would then reject it as
+ * the wrong type. Only when no file exists at that direct path does it fall
+ * back to the generic (first-hit) lookup.
+ *
+ * @param {string} projectRoot
+ * @param {string} slugArg
+ * @param {string} expectedType - key in ENTITY_DIRS
+ * @param {string} label - noun for the error message (e.g. 'Topic', 'Source')
+ * @returns {Promise<{filePath: string, slug: string}>} slug is the full
+ *   wiki-relative slug (e.g. "topics/foo"), regardless of how slugArg was spelled.
+ */
+async function requireEntityInDir(projectRoot, slugArg, expectedType, label) {
+  let filePath = null;
+  if (!isTypedEntitySlug(slugArg)) {
+    const candidate = join(projectRoot, 'wiki', ENTITY_DIRS[expectedType].dir, `${slugArg}.md`);
+    try {
+      await access(candidate, fsConstants.F_OK);
+      filePath = candidate;
+    } catch (_) {
+      // not there under expectedType — fall through to the generic lookup
+    }
+  }
+  if (!filePath) {
+    filePath = await findEntityFile(projectRoot, slugArg);
+  }
+  if (!filePath) {
+    const err = new Error(`${label} not found: ${slugArg}`);
+    err.code = 2;
+    throw err;
+  }
+  const entityType = _entityTypeForFilePath(projectRoot, filePath);
+  if (entityType !== expectedType) {
+    const err = new Error(`${label} must be a page under wiki/${ENTITY_DIRS[expectedType].dir}: ${slugArg}`);
+    err.code = 2;
+    throw err;
+  }
+  const wikiDir = join(projectRoot, 'wiki');
+  const slug = stripMdSuffix(toPosixPath(relative(wikiDir, filePath)));
+  return { filePath, slug };
+}
+
 // ---------------------------------------------------------------------------
 // 5. Edge ops
 // ---------------------------------------------------------------------------
@@ -809,36 +874,6 @@ async function writeJsonl(filePath, records) {
 }
 
 /**
- * Create a canonical edge key for deduplication.
- * For symmetric edges: sorted endpoints joined with `|`.
- * For asymmetric edges: `from|type|to`.
- * @param {object} edge
- * @returns {string}
- */
-function edgeKey(edge) {
-  const typeDef = EDGE_TYPES.find(t => t.name === edge.type);
-  if (typeDef && typeDef.symmetric) {
-    const endpoints = [edge.from, edge.to].sort();
-    return `${endpoints[0]}|${edge.type}|${endpoints[1]}`;
-  }
-  return `${edge.from}|${edge.type}|${edge.to}`;
-}
-
-/**
- * Normalize a symmetric edge so endpoints are sorted.
- * @param {object} edge
- * @returns {object}
- */
-function normalizeEdge(edge) {
-  const typeDef = EDGE_TYPES.find(t => t.name === edge.type);
-  if (typeDef && typeDef.symmetric) {
-    const [a, b] = [edge.from, edge.to].sort();
-    return { ...edge, from: a, to: b };
-  }
-  return edge;
-}
-
-/**
  * Add an edge (and its reverse unless target is exempt or edge is terminal).
  * Idempotent: re-running same add-edge produces byte-identical files.
  *
@@ -851,9 +886,18 @@ function normalizeEdge(edge) {
  * @returns {Promise<{added: boolean, reason: string}>}
  */
 async function addEdge(projectRoot, fromSlug, edgeType, toSlug, opts = {}) {
-  const typeDef = EDGE_TYPES.find(t => t.name === edgeType);
+  const typeDef = edgeTypeByName(edgeType);
   if (!typeDef) {
     const err = new Error(`Unknown edge type: ${edgeType}`);
+    err.code = 2;
+    throw err;
+  }
+  // Guarded here rather than at the dispatch case, so a future caller of
+  // addEdge cannot reopen the hole. remove-edge and replace-edge have refused
+  // citation types since they were written; add-edge never did, which is the
+  // wrong way round — it let the rows in and then left no way to take them out.
+  if (CITATION_EDGE_TYPES.has(edgeType)) {
+    const err = new Error(citationEdgeMessage('add'));
     err.code = 2;
     throw err;
   }
@@ -886,26 +930,9 @@ async function addEdge(projectRoot, fromSlug, edgeType, toSlug, opts = {}) {
 
   const toAdd = [forwardEdge];
 
-  // Add reverse unless:
-  // 1. edge is terminal
-  // 2. target matches EXEMPTION_GLOBS
-  // 3. edge is symmetric (already covered by sorted endpoints)
-  const skipReverse =
-    typeDef.terminal ||
-    isExempt(toSlug) ||
-    typeDef.symmetric;
-
-  if (!skipReverse && typeDef.reverse) {
-    const reverseEdge = {
-      from: toSlug,
-      type: typeDef.reverse,
-      to: fromSlug,
-      ...(opts.confidence ? { confidence: opts.confidence } : {}),
-    };
-    const revKey = edgeKey(reverseEdge);
-    if (!existingKeys.has(revKey)) {
-      toAdd.push(reverseEdge);
-    }
+  const reverseEdge = reverseEdgeFor(typeDef, fromSlug, toSlug, opts.confidence);
+  if (reverseEdge && !existingKeys.has(edgeKey(reverseEdge))) {
+    toAdd.push(reverseEdge);
   }
 
   const newEdges = [...existing, ...toAdd];
@@ -940,6 +967,36 @@ async function addCitation(projectRoot, fromSlug, toSlug) {
   await writeJsonl(citationsFile, newEdges);
 
   return { added: true, reason: 'citation added' };
+}
+
+/**
+ * Remove a citation edge (cites) from wiki/graph/citations.jsonl.
+ * Idempotent.
+ * @param {string} projectRoot
+ * @param {string} fromSlug
+ * @param {string} toSlug
+ * @param {{dryRun?: boolean}} [opts]
+ * @returns {Promise<{removed: number, before: number, after?: number, dryRun?: boolean, matched?: object[]}>}
+ */
+async function removeCitation(projectRoot, fromSlug, toSlug, opts = {}) {
+  const graphDir = join(projectRoot, 'wiki', 'graph');
+  const citationsFile = join(graphDir, 'citations.jsonl');
+
+  const existing = await readJsonl(citationsFile);
+  const before = existing.length;
+
+  const matched = existing.filter(e => e.from === fromSlug && e.to === toSlug);
+  const remaining = existing.filter(e => !(e.from === fromSlug && e.to === toSlug));
+
+  if (opts.dryRun) {
+    return { dryRun: true, removed: matched.length, before, matched };
+  }
+
+  if (matched.length > 0) {
+    await writeJsonl(citationsFile, remaining);
+  }
+
+  return { removed: matched.length, before, after: remaining.length };
 }
 
 /**
@@ -982,9 +1039,12 @@ async function batchEdges(projectRoot, jsonFilePath) {
       errors.push(`Record ${i}: missing from, type, or to`);
       continue;
     }
-    const typeDef = EDGE_TYPES.find(t => t.name === rec.type);
+    const typeDef = edgeTypeByName(rec.type);
     if (!typeDef) {
       errors.push(`Record ${i}: unknown edge type '${rec.type}'`);
+    }
+    if (CITATION_EDGE_TYPES.has(rec.type)) {
+      errors.push(`Record ${i}: ${citationEdgeMessage('add')}`);
     }
     if (rec.confidence && !CONFIDENCE_VALUES.has(rec.confidence)) {
       errors.push(`Record ${i}: invalid confidence '${rec.confidence}'`);
@@ -1009,7 +1069,7 @@ async function batchEdges(projectRoot, jsonFilePath) {
   const toAdd = [];
 
   for (const rec of records) {
-    const typeDef = EDGE_TYPES.find(t => t.name === rec.type);
+    const typeDef = edgeTypeByName(rec.type);
     const forwardEdge = normalizeEdge({
       from: rec.from,
       type: rec.type,
@@ -1027,18 +1087,8 @@ async function batchEdges(projectRoot, jsonFilePath) {
     existingKeys.add(fwdKey);
     added++;
 
-    const skipReverse =
-      typeDef.terminal ||
-      isExempt(rec.to) ||
-      typeDef.symmetric;
-
-    if (!skipReverse && typeDef.reverse) {
-      const reverseEdge = {
-        from: rec.to,
-        type: typeDef.reverse,
-        to: rec.from,
-        ...(rec.confidence ? { confidence: rec.confidence } : {}),
-      };
+    const reverseEdge = reverseEdgeFor(typeDef, rec.from, rec.to, rec.confidence);
+    if (reverseEdge) {
       const revKey = edgeKey(reverseEdge);
       if (!existingKeys.has(revKey)) {
         toAdd.push(reverseEdge);
@@ -1084,9 +1134,663 @@ async function dedupEdges(projectRoot) {
   return { before, after, removed: before - after };
 }
 
+/**
+ * Partition an edge list into the edges matching a from/type/to relationship
+ * (forward + its reverse, per the same gate addEdge uses) versus the rest.
+ * Confidence is ignored when matching (edgeKey already ignores it).
+ *
+ * @param {object[]} edges
+ * @param {string} fromSlug
+ * @param {object} typeDef - EDGE_TYPES entry for the relationship's type.
+ * @param {string} toSlug
+ * @returns {{
+ *   remaining: object[],
+ *   matched: object[],
+ *   forwardRemoved: number,
+ *   reverseRemoved: number,
+ *   forwardMatch: object|null,
+ *   reverseMatch: object|null,
+ * }}
+ */
+function partitionEdgesForRemoval(edges, fromSlug, typeDef, toSlug) {
+  const fwdKey = edgeKey(normalizeEdge({ from: fromSlug, type: typeDef.name, to: toSlug }));
+
+  let revKey = null;
+  if (!skipReverseFor(typeDef, toSlug)) {
+    revKey = edgeKey(normalizeEdge({ from: toSlug, type: typeDef.reverse, to: fromSlug }));
+  }
+
+  const remaining = [];
+  const matched = [];
+  let forwardMatch = null;
+  let reverseMatch = null;
+
+  for (const edge of edges) {
+    const key = edgeKey(edge);
+    if (key === fwdKey) {
+      matched.push(edge);
+      forwardMatch = edge;
+    } else if (revKey && key === revKey) {
+      matched.push(edge);
+      reverseMatch = edge;
+    } else {
+      remaining.push(edge);
+    }
+  }
+
+  return {
+    remaining,
+    matched,
+    forwardRemoved: forwardMatch ? 1 : 0,
+    reverseRemoved: reverseMatch ? 1 : 0,
+    forwardMatch,
+    reverseMatch,
+  };
+}
+
+/**
+ * Best-effort advisory scan: for from/to slugs that resolve to a wiki page,
+ * check whether the page's markdown still contains a `[[other-slug]]`
+ * wikilink after the edge that justified it was removed. Never throws —
+ * missing pages or read errors are skipped silently.
+ * @param {string} projectRoot
+ * @param {string} fromSlug
+ * @param {string} toSlug
+ * @returns {Promise<string[]>}
+ */
+async function collectRemovalAdvisories(projectRoot, fromSlug, toSlug) {
+  const advisories = [];
+
+  async function checkWikilink(pageSlug, linkedSlug) {
+    if (isExempt(pageSlug)) return; // e.g. external URL slug — no page to read
+    try {
+      const filePath = await findEntityFile(projectRoot, pageSlug);
+      if (!filePath) return;
+      const content = await readFile(filePath, 'utf8');
+      if (content.includes(`[[${linkedSlug}]]`)) {
+        advisories.push(
+          `Page ${pageSlug} still contains wikilink [[${linkedSlug}]]; review whether the mention should stay.`,
+        );
+      }
+    } catch (_) {
+      // best-effort — ignore fs errors
+    }
+  }
+
+  await checkWikilink(fromSlug, toSlug);
+  await checkWikilink(toSlug, fromSlug);
+
+  return advisories;
+}
+
+/**
+ * Remove a from/type/to relationship (forward + reverse, per the same gate
+ * addEdge uses) from edges.jsonl. Idempotent: matching ignores confidence,
+ * and removing an edge that isn't there exits 0 with removed:0.
+ *
+ * @param {string} projectRoot
+ * @param {string} fromSlug
+ * @param {string} edgeType
+ * @param {string} toSlug
+ * @param {object} [opts]
+ * @param {boolean} [opts.dryRun]
+ * @returns {Promise<object>}
+ */
+async function removeEdge(projectRoot, fromSlug, edgeType, toSlug, opts = {}) {
+  if (CITATION_EDGE_TYPES.has(edgeType)) {
+    const err = new Error(citationEdgeMessage('remove'));
+    err.code = 2;
+    throw err;
+  }
+  const typeDef = edgeTypeByName(edgeType);
+  if (!typeDef) {
+    const err = new Error(`Unknown edge type: ${edgeType}`);
+    err.code = 2;
+    throw err;
+  }
+
+  const edgesFile = join(projectRoot, 'wiki', 'graph', 'edges.jsonl');
+  const existing = await readJsonl(edgesFile);
+  const before = existing.length;
+
+  const { remaining, matched, forwardRemoved, reverseRemoved } =
+    partitionEdgesForRemoval(existing, fromSlug, typeDef, toSlug);
+
+  if (opts.dryRun) {
+    return {
+      dryRun: true,
+      removed: matched.length,
+      forwardRemoved,
+      reverseRemoved,
+      before,
+      matched,
+    };
+  }
+
+  if (matched.length > 0) {
+    await writeJsonl(edgesFile, remaining);
+  }
+
+  const advisories = await collectRemovalAdvisories(projectRoot, fromSlug, toSlug);
+
+  return {
+    removed: matched.length,
+    forwardRemoved,
+    reverseRemoved,
+    before,
+    after: remaining.length,
+    advisories,
+  };
+}
+
+/**
+ * Replace a from/old-type/to relationship with from/new-type/to: removes the
+ * old edge (forward + reverse, per the same gate addEdge uses for oldType)
+ * and adds the new edge (forward + reverse, per the same gate for newType),
+ * deduping by edgeKey, in a single read + single write.
+ *
+ * Confidence: an explicit opts.confidence wins; otherwise the confidence of
+ * the existing forward old edge (if any) is carried over; otherwise none.
+ *
+ * @param {string} projectRoot
+ * @param {string} fromSlug
+ * @param {string} oldType
+ * @param {string} toSlug
+ * @param {string} newType
+ * @param {object} [opts]
+ * @param {string} [opts.confidence]
+ * @param {boolean} [opts.dryRun]
+ * @returns {Promise<object>}
+ */
+async function replaceEdge(projectRoot, fromSlug, oldType, toSlug, newType, opts = {}) {
+  if (CITATION_EDGE_TYPES.has(oldType) || CITATION_EDGE_TYPES.has(newType)) {
+    const err = new Error(citationReplaceEdgeMessage());
+    err.code = 2;
+    throw err;
+  }
+  const oldTypeDef = edgeTypeByName(oldType);
+  if (!oldTypeDef) {
+    const err = new Error(`Unknown edge type: ${oldType}`);
+    err.code = 2;
+    throw err;
+  }
+  const newTypeDef = edgeTypeByName(newType);
+  if (!newTypeDef) {
+    const err = new Error(`Unknown edge type: ${newType}`);
+    err.code = 2;
+    throw err;
+  }
+  if (opts.confidence && !CONFIDENCE_VALUES.has(opts.confidence)) {
+    const err = new Error(`Invalid confidence: ${opts.confidence}. Must be high|medium|low`);
+    err.code = 2;
+    throw err;
+  }
+
+  const edgesFile = join(projectRoot, 'wiki', 'graph', 'edges.jsonl');
+  const existing = await readJsonl(edgesFile);
+  const before = existing.length;
+
+  const { remaining, matched, forwardMatch } =
+    partitionEdgesForRemoval(existing, fromSlug, oldTypeDef, toSlug);
+  const removed = matched.length;
+
+  let confidence = opts.confidence;
+  if (!confidence && forwardMatch && forwardMatch.confidence) {
+    confidence = forwardMatch.confidence;
+  }
+
+  const workingSet = remaining.slice();
+  const workingKeys = new Set(workingSet.map(edgeKey));
+
+  const forwardEdge = normalizeEdge({
+    from: fromSlug,
+    type: newType,
+    to: toSlug,
+    ...(confidence ? { confidence } : {}),
+  });
+  const fwdKey = edgeKey(forwardEdge);
+
+  let added = false;
+  if (!workingKeys.has(fwdKey)) {
+    workingSet.push(forwardEdge);
+    workingKeys.add(fwdKey);
+    added = true;
+  }
+
+  let reverseEdge = null;
+  if (!skipReverseFor(newTypeDef, toSlug)) {
+    reverseEdge = { from: toSlug, type: newTypeDef.reverse, to: fromSlug };
+    const candidate = { ...reverseEdge, ...(confidence ? { confidence } : {}) };
+    const revKey = edgeKey(candidate);
+    if (!workingKeys.has(revKey)) {
+      workingSet.push(candidate);
+      workingKeys.add(revKey);
+      added = true;
+    }
+  }
+
+  const plan = {
+    oldType,
+    newType,
+    forward: { from: fromSlug, type: newType, to: toSlug },
+    reverse: reverseEdge,
+    confidence: confidence || null,
+  };
+
+  if (opts.dryRun) {
+    return {
+      dryRun: true,
+      willRemove: removed,
+      willAdd: { forward: plan.forward, reverse: plan.reverse },
+      confidence: plan.confidence,
+    };
+  }
+
+  // Convergent: old edge already gone and new edge already present — no-op.
+  if (removed === 0 && !added) {
+    return { removed: 0, added: false, ...plan, before, after: before };
+  }
+
+  await writeJsonl(edgesFile, workingSet);
+
+  return { removed, added, ...plan, before, after: workingSet.length };
+}
+
+// ---------------------------------------------------------------------------
+// 5b. Topic timeline + retro-linked citation ops
+// ---------------------------------------------------------------------------
+
+/**
+ * Check whether `line` already appears verbatim as one full line inside
+ * `zoneContent` (the markdown between the timeline markers, exclusive).
+ * A trailing `\r` is stripped from each zone line before comparing, so a
+ * CRLF page still matches a freshly built (LF-only) `line`.
+ * @param {string} zoneContent
+ * @param {string} line
+ * @returns {boolean}
+ */
+function timelineZoneHasLine(zoneContent, line) {
+  return zoneContent.split('\n').some((l) => l.replace(/\r$/, '') === line);
+}
+
+/**
+ * Escape a string for embedding as a literal (non-metacharacter) fragment in
+ * a `RegExp` source.
+ * @param {string} s
+ * @returns {string}
+ */
+function escapeRegExp(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/**
+ * Check whether the timeline zone already has an `ingest` entry citing
+ * `sourceSlug`, regardless of date or text. Used instead of an exact-line
+ * match so a resumed ingest on a later day doesn't append a second row for
+ * a source already ingested into this topic.
+ * @param {string} zoneContent
+ * @param {string} sourceSlug
+ * @returns {boolean}
+ */
+function timelineZoneHasIngestSource(zoneContent, sourceSlug) {
+  const re = new RegExp(`^- \\*\\*\\d{4}-\\d{2}-\\d{2}\\*\\* \\| ingest \\| \\[\\[${escapeRegExp(sourceSlug)}\\]\\]`);
+  return zoneContent.split('\n').some((l) => re.test(l));
+}
+
+/**
+ * Append a fresh `## Timeline` section (heading + open/close markers + the
+ * first entry) to the end of a page body. Normalizes trailing whitespace so
+ * exactly one blank line separates existing body content from the heading.
+ * @param {string} body
+ * @param {string} line
+ * @returns {string}
+ */
+function appendTimelineSection(body, line) {
+  const base = body.replace(/\s+$/, '');
+  const prefix = base.length > 0 ? `${base}\n\n` : '';
+  return `${prefix}## Timeline\n\n${TIMELINE_MARKER_OPEN}\n${line}\n${TIMELINE_MARKER_CLOSE}\n`;
+}
+
+/**
+ * Insert one entry into a topic page's timeline zone, never touching any
+ * existing line. Three cases per the topic-timeline spec:
+ *   - no open marker: create the `## Timeline` section at EOF.
+ *   - open marker, no close marker: zone runs to EOF; append the line there
+ *     and add the close marker.
+ *   - both markers: insert the line immediately before the close marker.
+ * In every case, if `isDuplicate(zoneContent)` says the entry is already
+ * there, nothing changes.
+ * @param {string} body
+ * @param {string} line
+ * @param {(zoneContent: string) => boolean} [isDuplicate] - Defaults to an
+ *   exact-line match against `line` via `timelineZoneHasLine`.
+ * @returns {{ body: string, added: boolean }}
+ */
+function insertTimelineEntry(body, line, isDuplicate = (zoneContent) => timelineZoneHasLine(zoneContent, line)) {
+  const openIdx = body.indexOf(TIMELINE_MARKER_OPEN);
+  if (openIdx === -1) {
+    return { body: appendTimelineSection(body, line), added: true };
+  }
+
+  const zoneStart = openIdx + TIMELINE_MARKER_OPEN.length;
+  const closeIdx = body.indexOf(TIMELINE_MARKER_CLOSE, zoneStart);
+
+  if (closeIdx === -1) {
+    const zoneContent = body.slice(zoneStart);
+    if (isDuplicate(zoneContent)) return { body, added: false };
+    const base = body.endsWith('\n') ? body : `${body}\n`;
+    return { body: `${base}${line}\n${TIMELINE_MARKER_CLOSE}\n`, added: true };
+  }
+
+  const zoneContent = body.slice(zoneStart, closeIdx);
+  if (isDuplicate(zoneContent)) return { body, added: false };
+  const before = body.slice(0, closeIdx);
+  const after = body.slice(closeIdx);
+  const beforeNormalized = before.endsWith('\n') ? before : `${before}\n`;
+  return { body: `${beforeNormalized}${line}\n${after}`, added: true };
+}
+
+/**
+ * `timeline-add`: append one dated entry to a topic page's append-only
+ * timeline zone, optionally ensuring an `includes_source` edge (+ reverse)
+ * to a source page. Idempotent, with two duplicate rules:
+ *   - `kind === 'ingest'` with `--source`: a duplicate is ANY existing zone
+ *     line already recording an `ingest` entry for that same source,
+ *     regardless of date or text — a resumed ingest on a later day must not
+ *     append a second row for a source already ingested into this topic.
+ *   - `correction` and `note` (and `ingest` without `--source`): a duplicate
+ *     is an exact-line match, as before.
+ * The duplicate check runs before any graph or file mutation: a duplicate
+ * line means the graph is left untouched too, so a topic refresh that
+ * deliberately dropped the `includes_source` edge (while the historical
+ * timeline row stays) is not resurrected by replaying the original
+ * `timeline-add ... --source` call.
+ *
+ * @param {string} projectRoot
+ * @param {string} topicArg
+ * @param {{ text: string, kind: string, date: string, source: string|null }} opts
+ * @returns {Promise<object>}
+ */
+async function timelineAdd(projectRoot, topicArg, opts) {
+  const topic = await requireEntityInDir(projectRoot, topicArg, 'topics', 'Topic');
+
+  let sourceInfo = null;
+  if (opts.source) {
+    sourceInfo = await requireEntityInDir(projectRoot, opts.source, 'sources', 'Source');
+  }
+
+  const line = sourceInfo
+    ? `- **${opts.date}** | ${opts.kind} | [[${sourceInfo.slug}]] — ${opts.text}`
+    : `- **${opts.date}** | ${opts.kind} | ${opts.text}`;
+
+  const isIngestRerun = opts.kind === 'ingest' && Boolean(sourceInfo);
+  const isDuplicate = isIngestRerun
+    ? (zoneContent) => timelineZoneHasIngestSource(zoneContent, sourceInfo.slug)
+    : undefined;
+
+  const content = await readFile(topic.filePath, 'utf8');
+  const { frontmatter, body } = parseFrontmatter(content);
+  const { body: newBody, added } = insertTimelineEntry(body, line, isDuplicate);
+
+  if (!added) {
+    const reason = isIngestRerun ? 'ingest entry for this source already exists' : 'entry already exists';
+    return { added: false, topic: topic.slug, line, edge: 'skipped', reason };
+  }
+
+  let edge = 'none';
+  if (sourceInfo) {
+    const result = await addEdge(projectRoot, topic.slug, 'includes_source', sourceInfo.slug, {});
+    edge = result.added ? 'added' : 'exists';
+  }
+
+  frontmatter.updated = today();
+  const newContent = assembleMd(frontmatter, newBody);
+  await atomicWrite(topic.filePath, newContent);
+
+  return { added: true, topic: topic.slug, line, edge };
+}
+
+/**
+ * Expand an external_ids-shaped object through the doi<->arxiv crosswalk and
+ * return the resulting `ns:normalizedValue` keys as a Set, so a citation
+ * given as one form (e.g. an arXiv DOI) matches a source stored in the other
+ * form (e.g. a bare arxiv id), and vice versa.
+ *
+ * @param {object|null|undefined} idsObject
+ * @returns {Set<string>}
+ */
+function externalIdKeys(idsObject) {
+  const expanded = expandExternalIds(idsObject);
+  const keys = new Set();
+  for (const ns of EXTERNAL_ID_NAMESPACES) {
+    const raw = expanded[ns];
+    if (typeof raw !== 'string' || !raw) continue;
+    const norm = normalizeExternalId(ns, raw);
+    if (norm.valid) keys.add(`${ns}:${norm.id}`);
+  }
+  return keys;
+}
+
+/**
+ * True if two `externalIdKeys()` sets share at least one key — the
+ * crosswalk-aware equivalent of an exact ns+value match (e.g. a DOI-form
+ * arXiv id and its bare arXiv id expand to the same key).
+ *
+ * @param {Set<string>} a
+ * @param {Set<string>} b
+ * @returns {boolean}
+ */
+function keysIntersect(a, b) {
+  for (const key of a) {
+    if (b.has(key)) return true;
+  }
+  return false;
+}
+
+/**
+ * `add-citation-by-id`: resolve a citation target by external id. Scans all
+ * source pages' `external_ids[ns]` (normalized on both sides) for a unique
+ * match. A unique match becomes a real `cites` citation via `addCitation`.
+ * No match queues `{ns, value, title?}` on `from`'s `pending_citations`,
+ * deduped on ns+value, drained later by `resolve-pending-citations`.
+ *
+ * Self-citation guard: the scan below skips `from` itself, so if `from`'s
+ * own `external_ids[ns]` normalizes to the same `value`, it would otherwise
+ * never match anything and sit pending forever. Checked up front instead —
+ * exit 2, no write.
+ *
+ * @param {string} projectRoot
+ * @param {string} fromArg
+ * @param {string} ns
+ * @param {string} rawValue
+ * @param {string|undefined} title
+ * @returns {Promise<object>}
+ */
+async function addCitationById(projectRoot, fromArg, ns, rawValue, title) {
+  const from = await requireEntityInDir(projectRoot, fromArg, 'sources', 'Source');
+
+  if (!EXTERNAL_ID_NAMESPACES.includes(ns)) {
+    const err = new Error(`Unknown external-id namespace: ${ns}. Must be one of: ${EXTERNAL_ID_NAMESPACES.join(', ')}`);
+    err.code = 2;
+    throw err;
+  }
+  const norm = normalizeExternalId(ns, rawValue);
+  if (!norm.valid) {
+    const err = new Error(`Invalid ${ns} id: ${rawValue}`);
+    err.code = 2;
+    throw err;
+  }
+  const value = norm.id;
+  const queryKeys = externalIdKeys({ [ns]: value });
+
+  const content = await readFile(from.filePath, 'utf8');
+  const { frontmatter, body } = parseFrontmatter(content);
+
+  const selfKeys = externalIdKeys(frontmatter.external_ids);
+  if (keysIntersect(selfKeys, queryKeys)) {
+    const err = new Error('A page cannot cite itself');
+    err.code = 2;
+    throw err;
+  }
+
+  const allSources = await listEntities(projectRoot, 'sources');
+  const matches = [];
+  for (const entity of allSources) {
+    if (entity.path === from.slug) continue;
+    const entityContent = await readFile(entity.filePath, 'utf8');
+    const { frontmatter: entityFm } = parseFrontmatter(entityContent);
+    const candidateKeys = externalIdKeys(entityFm.external_ids);
+    if (keysIntersect(candidateKeys, queryKeys)) {
+      matches.push(entity.path);
+    }
+  }
+
+  if (matches.length > 1) {
+    const err = new Error(`Ambiguous target for ${ns}:${value} — candidates: ${matches.join(', ')}`);
+    err.code = 2;
+    throw err;
+  }
+
+  if (matches.length === 1) {
+    const result = await addCitation(projectRoot, from.slug, matches[0]);
+    // A pending entry for this id may linger from an earlier call made before
+    // the target existed; drain it here so nothing waits for a resolve pass.
+    const pending = Array.isArray(frontmatter.pending_citations) ? frontmatter.pending_citations : [];
+    const keep = pending.filter((p) => !(p && keysIntersect(externalIdKeys({ [p.ns]: p.value }), queryKeys)));
+    if (keep.length !== pending.length) {
+      frontmatter.pending_citations = keep;
+      frontmatter.updated = today();
+      await atomicWrite(from.filePath, assembleMd(frontmatter, body));
+    }
+    return { resolved: true, to: matches[0], added: result.added };
+  }
+
+  // No match — record as a pending citation on `from`.
+  const pending = Array.isArray(frontmatter.pending_citations) ? frontmatter.pending_citations : [];
+  const alreadyPending = pending.some((p) => p && keysIntersect(externalIdKeys({ [p.ns]: p.value }), queryKeys));
+  if (alreadyPending) {
+    return { resolved: false, pending: true, added: false };
+  }
+
+  const entry = { ns, value };
+  if (typeof title === 'string' && title.trim() !== '') {
+    entry.title = title;
+  }
+  frontmatter.pending_citations = [...pending, entry];
+  frontmatter.updated = today();
+  const newContent = assembleMd(frontmatter, body);
+  await atomicWrite(from.filePath, newContent);
+
+  return { resolved: false, pending: true, added: true };
+}
+
+/**
+ * `resolve-pending-citations`: drain every other source page's
+ * `pending_citations` entries that match one of `newArg`'s `external_ids`
+ * (normalized comparison). For each match: add the real citation, drop the
+ * pending entry, and bump that page's `updated` — unless `dryRun`, which
+ * only reports what would happen and writes nothing.
+ *
+ * @param {string} projectRoot
+ * @param {string} newArg
+ * @param {boolean} dryRun
+ * @returns {Promise<{ resolved: object[], scanned: number, dryRun: boolean }>}
+ */
+async function resolvePendingCitations(projectRoot, newArg, dryRun) {
+  const newEntity = await requireEntityInDir(projectRoot, newArg, 'sources', 'Source');
+  const newContent = await readFile(newEntity.filePath, 'utf8');
+  const { frontmatter: newFm } = parseFrontmatter(newContent);
+
+  const targetKeys = externalIdKeys(newFm.external_ids);
+
+  const allSources = await listEntities(projectRoot, 'sources');
+  const resolved = [];
+  let scanned = 0;
+
+  for (const entity of allSources) {
+    if (entity.path === newEntity.slug) continue;
+    scanned++;
+
+    const content = await readFile(entity.filePath, 'utf8');
+    const { frontmatter, body } = parseFrontmatter(content);
+    const pending = Array.isArray(frontmatter.pending_citations) ? frontmatter.pending_citations : [];
+    if (pending.length === 0) continue;
+
+    const keep = [];
+    const matchedHere = [];
+    for (const p of pending) {
+      const validShape = p && typeof p.ns === 'string' && typeof p.value === 'string';
+      const norm = validShape ? normalizeExternalId(p.ns, p.value) : { valid: false };
+      const pendingKeys = validShape ? externalIdKeys({ [p.ns]: p.value }) : new Set();
+      const matched = keysIntersect(pendingKeys, targetKeys);
+      if (matched) {
+        matchedHere.push({ from: entity.path, to: newEntity.slug, ns: p.ns, value: norm.valid ? norm.id : p.value });
+      } else {
+        keep.push(p);
+      }
+    }
+
+    if (matchedHere.length === 0) continue;
+    resolved.push(...matchedHere);
+
+    if (!dryRun) {
+      for (const m of matchedHere) {
+        await addCitation(projectRoot, m.from, m.to);
+      }
+      frontmatter.pending_citations = keep;
+      frontmatter.updated = today();
+      const rewritten = assembleMd(frontmatter, body);
+      await atomicWrite(entity.filePath, rewritten);
+    }
+  }
+
+  return { resolved, scanned, dryRun };
+}
+
 // ---------------------------------------------------------------------------
 // 6. Checkpoint ops
 // ---------------------------------------------------------------------------
+
+/**
+ * Resolve a checkpoint file's path, rejecting any skill/phase that would put it
+ * somewhere other than _lumina/_state.
+ *
+ * These two are identifiers, not paths, and were previously interpolated into a
+ * filename with no validation at all -- the only wiki.mjs arguments reaching a
+ * constructed path without even a `..` check. `phase` in particular carries the
+ * basename of a user's raw file (`checkpoint-read ingest <file-basename>`), so
+ * it is attacker-influenced and cannot be assumed clean. A separator in either
+ * value escaped the state dir, and the read side turned that into an arbitrary
+ * file read printed to stdout.
+ *
+ * Only separators are rejected. Characters that are merely awkward in a
+ * filename -- spaces, dots, parentheses -- stay legal, because real basenames
+ * contain them, they cannot traverse, and refusing them would break resuming an
+ * ingest of `Paper (2017).pdf`. The pathSafe call is a backstop on the composed
+ * path so the guarantee is asserted rather than only argued.
+ * @param {string} projectRoot
+ * @param {string} skill
+ * @param {string} phase
+ * @returns {string} absolute path to the checkpoint file
+ */
+function checkpointPath(projectRoot, skill, phase) {
+  for (const [label, value] of [['skill', skill], ['phase', phase]]) {
+    if (value.includes('/') || value.includes('\\') || value.includes('\0')) {
+      const err = new Error(
+        `Invalid checkpoint ${label}: ${JSON.stringify(value)} may not contain a path separator`,
+      );
+      err.code = 2;
+      throw err;
+    }
+  }
+  const rel = join('_lumina', '_state', `${skill}-${phase}.json`);
+  if (!pathSafe(rel, projectRoot)) {
+    const err = new Error(`Unsafe checkpoint path for skill ${JSON.stringify(skill)} phase ${JSON.stringify(phase)}`);
+    err.code = 2;
+    throw err;
+  }
+  return join(projectRoot, rel);
+}
 
 /**
  * Read a checkpoint file. Returns {} if missing.
@@ -1096,8 +1800,7 @@ async function dedupEdges(projectRoot) {
  * @returns {Promise<object>}
  */
 async function checkpointRead(projectRoot, skill, phase) {
-  const stateDir = join(projectRoot, '_lumina', '_state');
-  const cpFile = join(stateDir, `${skill}-${phase}.json`);
+  const cpFile = checkpointPath(projectRoot, skill, phase);
   try {
     const content = await readFile(cpFile, 'utf8');
     return JSON.parse(content);
@@ -1115,9 +1818,8 @@ async function checkpointRead(projectRoot, skill, phase) {
  * @param {object} data
  */
 async function checkpointWrite(projectRoot, skill, phase, data) {
-  const stateDir = join(projectRoot, '_lumina', '_state');
-  await ensureDir(stateDir);
-  const cpFile = join(stateDir, `${skill}-${phase}.json`);
+  const cpFile = checkpointPath(projectRoot, skill, phase);
+  await ensureDir(join(projectRoot, '_lumina', '_state'));
   await atomicWrite(cpFile, JSON.stringify(data, null, 2) + '\n');
 }
 
@@ -1168,37 +1870,43 @@ async function appendLog(projectRoot, skill, details) {
 // ---------------------------------------------------------------------------
 
 /**
- * Core wiki directories to create (always).
+ * Installable (non-core) pack names, derived from ENTITY_DIRS so a new pack
+ * added to schemas.mjs becomes selectable via `init --pack` without touching
+ * this file.
+ * @type {string[]}
  */
-const CORE_WIKI_DIRS = [
-  'wiki/sources',
-  'wiki/concepts',
-  'wiki/people',
-  'wiki/summary',
-  'wiki/outputs',
-  'wiki/graph',
-];
+const INSTALLABLE_PACKS = [...new Set(Object.values(ENTITY_DIRS).map(e => e.pack))]
+  .filter(pack => pack !== 'core');
 
-/** Research pack additional wiki dirs */
-const RESEARCH_WIKI_DIRS = [
-  'wiki/foundations',
-  'wiki/topics',
-];
+/**
+ * Additional wiki dirs owned by a given pack, derived from ENTITY_DIRS.
+ * Preserves ENTITY_DIRS declaration order.
+ * @param {string} pack
+ * @returns {string[]}
+ */
+function wikiDirsForPack(pack) {
+  return Object.values(ENTITY_DIRS)
+    .filter(e => e.pack === pack)
+    .map(e => `wiki/${e.dir}`.replace(/\/$/, ''));
+}
 
-/** Reading pack additional wiki dirs */
-const READING_WIKI_DIRS = [
-  'wiki/chapters',
-  'wiki/characters',
-  'wiki/themes',
-  'wiki/plot',
-];
+/**
+ * Core wiki directories, created on every init. Derived from ENTITY_DIRS for
+ * the same reason INSTALLABLE_PACKS is: a hand-maintained copy drifts. This
+ * one had: it was missing `wiki/readings`. Commit e067795 added that dir to
+ * schemas.mjs and to the installer's own two lists but not to this array, which
+ * has not changed since e72fbaa — so `npx lumina-wiki install` created the dir
+ * and `wiki.mjs init` (i.e. `/lumi-init`) did not.
+ * @type {string[]}
+ */
+const CORE_WIKI_DIRS = wikiDirsForPack('core');
 
 /**
  * Initialize a workspace skeleton.
  * Idempotent: re-running on an existing workspace is a no-op.
  * @param {string} projectRoot
  * @param {object} [opts]
- * @param {string} [opts.pack] - 'research' | 'reading' | undefined
+ * @param {string} [opts.pack] - one of INSTALLABLE_PACKS | undefined
  * @returns {Promise<{created: string[], skipped: string[]}>}
  */
 async function initWorkspace(projectRoot, opts = {}) {
@@ -1206,10 +1914,8 @@ async function initWorkspace(projectRoot, opts = {}) {
   const skipped = [];
 
   let dirs = [...CORE_WIKI_DIRS];
-  if (opts.pack === 'research') {
-    dirs = [...dirs, ...RESEARCH_WIKI_DIRS];
-  } else if (opts.pack === 'reading') {
-    dirs = [...dirs, ...READING_WIKI_DIRS];
+  if (opts.pack && INSTALLABLE_PACKS.includes(opts.pack)) {
+    dirs = [...dirs, ...wikiDirsForPack(opts.pack)];
   }
 
   // Add _lumina/_state dir
@@ -1286,6 +1992,70 @@ async function readCitationsForSlug(projectRoot, slug) {
 }
 
 /**
+ * Check a single frontmatter value against its declared field type.
+ * Mirrors lint.mjs's L02 check word-for-word so the two can never diverge —
+ * this is the single source of truth for frontmatter type semantics, used
+ * both by whole-document validation (_validateFrontmatter, read-only) and
+ * by the setMeta write-path gate (single-key, hard reject, no --force). That
+ * includes L02's TODO-placeholder rule, which lives in checkL02's 'string'
+ * branch only (not a blanket pre-switch guard): the literal "TODO" (trimmed,
+ * case-sensitive) is never a real value for a declared string field, so
+ * setMeta can no longer be used to write the exact defect L02 flags on read.
+ * Other types keep their own natural mismatch message for a "TODO" value
+ * (e.g. iso-date still says "must be an ISO date... got \"TODO\""), exactly
+ * as checkL02 does — only the 'string' branch's outcome changes.
+ *
+ * @param {import('./schemas.mjs').FrontmatterField} field
+ * @param {any} val - Already-present value (never undefined/null; callers
+ *   handle missing-field logic themselves before calling this).
+ * @returns {string|null} Human-readable violation (unprefixed), or null if valid.
+ */
+function _checkFieldType(field, val) {
+  switch (field.type) {
+    case 'string':
+      if (typeof val !== 'string') {
+        return `"${field.key}" must be a string, got ${typeof val}`;
+      } else if (val.trim() === 'TODO') {
+        // Task 2 sentinel rule (mirrors checkL02 in lint.mjs word-for-word):
+        // the exact literal "TODO" (trimmed, case-sensitive) is never a real
+        // value for a DECLARED schema field — it is the placeholder a prior
+        // Lumina version could write for a missing string field. It satisfies
+        // `typeof val === 'string'` above, so without this check the write
+        // path would happily persist it — precisely the defect this gate
+        // exists to close.
+        return `"${field.key}" is set to the placeholder "TODO", which is not a real value`;
+      }
+      break;
+    case 'number':
+      if (typeof val !== 'number' || Number.isNaN(val)) {
+        return `"${field.key}" must be a number, got ${JSON.stringify(val)}`;
+      }
+      break;
+    case 'array':
+      if (!Array.isArray(val)) {
+        return `"${field.key}" must be an array, got ${typeof val}`;
+      }
+      break;
+    case 'iso-date':
+      if (typeof val !== 'string' || !isValidIsoDate(val)) {
+        return `"${field.key}" must be an ISO date (YYYY-MM-DD), got ${JSON.stringify(val)}`;
+      }
+      break;
+    case 'enum':
+      if (field.values && !field.values.includes(val)) {
+        return `"${field.key}" must be one of [${field.values.join(', ')}], got ${JSON.stringify(val)}`;
+      }
+      break;
+    case 'object':
+      if (typeof val !== 'object' || val === null || Array.isArray(val)) {
+        return `"${field.key}" must be an object, got ${Array.isArray(val) ? 'array' : typeof val}`;
+      }
+      break;
+  }
+  return null;
+}
+
+/**
  * Validate frontmatter fields against REQUIRED_FRONTMATTER schema.
  * Returns a list of validation errors (empty if valid).
  * @param {Record<string,any>} frontmatter
@@ -1293,10 +2063,7 @@ async function readCitationsForSlug(projectRoot, slug) {
  * @returns {string[]}
  */
 function _validateFrontmatter(frontmatter, entityType) {
-  // Import REQUIRED_FRONTMATTER from the already-imported schemas module.
-  // Because schemas.mjs is pure data, this import is a no-op (already cached).
-  // We use a dynamic import workaround via a re-export alias loaded at startup.
-  const fields = _getRequiredFrontmatterFields(entityType);
+  const fields = REQUIRED_FRONTMATTER[entityType] ?? null;
   if (!fields) return [`Unknown entity type: ${entityType}`];
 
   const errors = [];
@@ -1308,34 +2075,8 @@ function _validateFrontmatter(frontmatter, entityType) {
       }
       continue;
     }
-    // Type checks
-    switch (field.type) {
-      case 'string':
-        if (typeof val !== 'string') {
-          errors.push(`Field '${field.key}' must be a string, got ${typeof val}`);
-        }
-        break;
-      case 'number':
-        if (typeof val !== 'number') {
-          errors.push(`Field '${field.key}' must be a number, got ${typeof val}`);
-        }
-        break;
-      case 'array':
-        if (!Array.isArray(val)) {
-          errors.push(`Field '${field.key}' must be an array, got ${typeof val}`);
-        }
-        break;
-      case 'enum':
-        if (field.values && !field.values.includes(val)) {
-          errors.push(`Field '${field.key}' must be one of [${field.values.join(', ')}], got ${val}`);
-        }
-        break;
-      case 'iso-date':
-        if (typeof val !== 'string' || !DATE_RE.test(val)) {
-          errors.push(`Field '${field.key}' must be a YYYY-MM-DD date, got '${val}'`);
-        }
-        break;
-    }
+    const violation = _checkFieldType(field, val);
+    if (violation) errors.push(violation);
   }
   return errors;
 }
@@ -1379,24 +2120,6 @@ function _validateFindingsItems(findings) {
   return errors;
 }
 
-/**
- * Lookup required frontmatter fields for an entity type.
- * Merges _base fields with type-specific fields.
- * @param {string} entityType
- * @returns {import('./schemas.mjs').FrontmatterField[]|null}
- */
-function _getRequiredFrontmatterFields(entityType) {
-  // REQUIRED_FRONTMATTER is imported at module level from schemas.mjs.
-  // We access it through the module-scoped import binding.
-  const typeFields = _REQUIRED_FRONTMATTER[entityType];
-  if (!typeFields) return null;
-  return typeFields;
-}
-
-// Module-level alias to the imported REQUIRED_FRONTMATTER for use by
-// _getRequiredFrontmatterFields without a dynamic import inside the function.
-const _REQUIRED_FRONTMATTER = REQUIRED_FRONTMATTER;
-
 // ---------------------------------------------------------------------------
 // 10. Output helpers
 // ---------------------------------------------------------------------------
@@ -1420,11 +2143,43 @@ function emitError(message, code) {
 }
 
 /**
- * Print info/status to stderr (non-JSON, non-blocking).
+ * Emit the error envelope and exit with that same code. Never returns — the
+ * CLI dispatch paired `emitError(msg, N); process.exit(N);` at every one of
+ * these call sites.
  * @param {string} message
+ * @param {number} code
+ * @returns {never}
  */
-function info(message) {
-  process.stderr.write(`[wiki] ${message}\n`);
+function fail(message, code) {
+  emitError(message, code);
+  process.exit(code);
+}
+
+/**
+ * Reject an edge command's endpoint pair: a path-shaped slug must resolve
+ * inside the project, and neither endpoint may contain `..`. Extracted from
+ * three verbatim copies in the dispatch. Never returns on rejection.
+ *
+ * Note the citation subcommands deliberately still carry their own, narrower
+ * checks: they run before requireProjectRoot(), so they have no projectRoot to
+ * validate against, and widening them here would change which error a user sees
+ * outside a project. That reasoning once named the checkpoint subcommands too,
+ * which was simply wrong -- they call requireProjectRoot() before doing any
+ * work, and they now validate in checkpointPath().
+ * @param {string} fromSlug
+ * @param {string} toSlug
+ * @param {string} projectRoot
+ */
+function requireSafeEdgeSlugs(fromSlug, toSlug, projectRoot) {
+  if (fromSlug.includes('/') && !pathSafe(fromSlug, projectRoot)) {
+    fail(`Unsafe from-slug: ${fromSlug}`, 2);
+  }
+  if (toSlug.includes('/') && !pathSafe(toSlug, projectRoot)) {
+    fail(`Unsafe to-slug: ${toSlug}`, 2);
+  }
+  if (fromSlug.includes('..') || toSlug.includes('..')) {
+    fail('Slug may not contain ..', 2);
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -1433,6 +2188,12 @@ function info(message) {
 
 /**
  * Parse argv flags into an options object.
+ *
+ * Supports `--key=value` (split on the first `=`; everything after it is the
+ * value verbatim, even if it starts with `--`) alongside the space-separated
+ * `--key value` form. Space-separated values still can't start with `--`
+ * (that's read as the next flag) — use `--key=value` when the value itself
+ * begins with dashes.
  * @param {string[]} args - raw argv slice after subcommand
  * @returns {{ flags: Record<string, string|boolean>, positional: string[] }}
  */
@@ -1443,6 +2204,12 @@ function parseArgs(args) {
   while (i < args.length) {
     const arg = args[i];
     if (arg.startsWith('--')) {
+      const eqIdx = arg.indexOf('=');
+      if (eqIdx !== -1) {
+        flags[arg.slice(2, eqIdx)] = arg.slice(eqIdx + 1);
+        i++;
+        continue;
+      }
       const key = arg.slice(2);
       const next = args[i + 1];
       if (next && !next.startsWith('--')) {
@@ -1461,6 +2228,25 @@ function parseArgs(args) {
 }
 
 /**
+ * Read an optional string flag out of `parseArgs()`'s `flags`, exiting 2 if
+ * the flag was given with no value. `--key` with nothing after it (or
+ * followed by another `--flag`) parses as boolean `true`, not a string —
+ * left unchecked, callers used to treat that the same as the flag being
+ * absent entirely (falling back to a default instead of erroring on the
+ * user's typo). A flag not given at all still returns `undefined`.
+ * @param {object} flags
+ * @param {string} key
+ * @returns {string|undefined}
+ */
+function requireFlagValue(flags, key) {
+  if (!Object.prototype.hasOwnProperty.call(flags, key)) return undefined;
+  if (typeof flags[key] !== 'string') {
+    fail(`--${key} requires a value`, 2);
+  }
+  return flags[key];
+}
+
+/**
  * Require project root, exit 2 if not found.
  * @param {string} [startDir]
  * @returns {Promise<string>}
@@ -1468,8 +2254,7 @@ function parseArgs(args) {
 async function requireProjectRoot(startDir) {
   const root = await findProjectRoot(startDir);
   if (!root) {
-    emitError('No Lumina workspace found (wiki/ directory not found in current directory or ancestors). Run `node wiki.mjs init` first.', 2);
-    process.exit(2);
+    fail('No Lumina workspace found (wiki/ directory not found in current directory or ancestors). Run `node wiki.mjs init` first.', 2);
   }
   return root;
 }
@@ -1506,15 +2291,22 @@ async function main(argv) {
       'Usage: node wiki.mjs <subcommand> [flags]',
       '',
       'Subcommands:',
-      '  init [--pack research|reading]  Create workspace skeleton',
+      `  init [--pack ${INSTALLABLE_PACKS.join('|')}]  Create workspace skeleton`,
       '  slug <title>                    Emit kebab-case slug',
       '  log <skill> <details...>        Append to wiki/log.md',
       '  read-meta <slug>                Read entity frontmatter as JSON',
       '  set-meta <slug> <key> <value> [--json-value]  Set frontmatter key',
       '  add-edge <from> <type> <to> [--confidence high|medium|low]',
       '  add-citation <from> <to>        Append cites edge to citations.jsonl',
+      '  add-citation-by-id <from> <ns> <value> [--title "<title>"]  Resolve citation by external id, or queue pending',
+      '  remove-citation <from> <to> [--dry-run]  Remove cites edge from citations.jsonl',
+      '  resolve-pending-citations <new-source-slug> [--dry-run]  Drain pending citations matching a new source',
       '  batch-edges <json-file>         Apply array of edges from JSON file',
       '  dedup-edges                     Deduplicate edges.jsonl',
+      '  remove-edge <from> <type> <to> [--dry-run]',
+      '  replace-edge <from> <old-type> <to> <new-type> [--confidence high|medium|low] [--dry-run]',
+      '  timeline-add <topic-slug> --text "<text>" [--source <source-slug>] [--kind ingest|correction|note] [--date YYYY-MM-DD]',
+      '    (use --text=<text> when the text itself begins with --)',
       '  list-entities [path-prefix] [--type <type>]  List entity slugs as JSON',
       '  resolve-alias <text>            Map free-text query to a foundations/* slug',
       '  read-edges <slug>|--from <slug> [--type <type>] [--direction outbound|inbound|both]',
@@ -1539,9 +2331,8 @@ async function main(argv) {
         // init does not require an existing workspace; it creates one
         const projectRoot = process.cwd();
         const pack = flags.pack && typeof flags.pack === 'string' ? flags.pack : undefined;
-        if (pack && pack !== 'research' && pack !== 'reading') {
-          emitError(`Invalid --pack value: ${pack}. Must be research or reading.`, 2);
-          process.exit(2);
+        if (pack && !INSTALLABLE_PACKS.includes(pack)) {
+          fail(`Invalid --pack value: ${pack}. Must be one of: ${INSTALLABLE_PACKS.join(', ')}.`, 2);
         }
         const result = await initWorkspace(projectRoot, { pack });
         emitJson({ ok: true, created: result.created, skipped: result.skipped });
@@ -1552,8 +2343,7 @@ async function main(argv) {
       case 'slug': {
         const title = positional.join(' ');
         if (!title) {
-          emitError('slug requires a title argument', 2);
-          process.exit(2);
+          fail('slug requires a title argument', 2);
         }
         emitJson({ slug: slugify(title) });
         break;
@@ -1564,12 +2354,10 @@ async function main(argv) {
         const skill = positional[0];
         const details = positional.slice(1).join(' ');
         if (!skill) {
-          emitError('log requires <skill> argument', 2);
-          process.exit(2);
+          fail('log requires <skill> argument', 2);
         }
         if (!details) {
-          emitError('log requires <details> argument', 2);
-          process.exit(2);
+          fail('log requires <details> argument', 2);
         }
         const projectRoot = await requireProjectRoot();
         await appendLog(projectRoot, skill, details);
@@ -1581,13 +2369,11 @@ async function main(argv) {
       case 'read-meta': {
         const slug = positional[0];
         if (!slug) {
-          emitError('read-meta requires <slug> argument', 2);
-          process.exit(2);
+          fail('read-meta requires <slug> argument', 2);
         }
         const projectRoot = await requireProjectRoot();
         if (!pathSafe(slug, projectRoot)) {
-          emitError(`Unsafe slug: ${slug}`, 2);
-          process.exit(2);
+          fail(`Unsafe slug: ${slug}`, 2);
         }
         const { frontmatter, filePath } = await readMeta(projectRoot, slug);
         emitJson({ slug, filePath: relative(projectRoot, filePath), frontmatter });
@@ -1601,14 +2387,12 @@ async function main(argv) {
         const rawValue = positional[2];
 
         if (!slug || !key || rawValue === undefined) {
-          emitError('set-meta requires <slug> <key> <value>', 2);
-          process.exit(2);
+          fail('set-meta requires <slug> <key> <value>', 2);
         }
 
         const projectRoot = await requireProjectRoot();
         if (!pathSafe(slug, projectRoot)) {
-          emitError(`Unsafe slug: ${slug}`, 2);
-          process.exit(2);
+          fail(`Unsafe slug: ${slug}`, 2);
         }
 
         let value;
@@ -1616,8 +2400,7 @@ async function main(argv) {
           try {
             value = JSON.parse(rawValue);
           } catch (err) {
-            emitError(`Invalid JSON value: ${err.message}`, 2);
-            process.exit(2);
+            fail(`Invalid JSON value: ${err.message}`, 2);
           }
         } else {
           // Auto-coerce scalar types (number, boolean) — mirrors YAML parsing behavior.
@@ -1637,25 +2420,13 @@ async function main(argv) {
         const toSlug = positional[2];
 
         if (!fromSlug || !edgeType || !toSlug) {
-          emitError('add-edge requires <from-slug> <edge-type> <to-slug>', 2);
-          process.exit(2);
+          fail('add-edge requires <from-slug> <edge-type> <to-slug>', 2);
         }
 
         const projectRoot = await requireProjectRoot();
 
         // Path safety for slugs (only if they look like paths)
-        if (fromSlug.includes('/') && !pathSafe(fromSlug, projectRoot)) {
-          emitError(`Unsafe from-slug: ${fromSlug}`, 2);
-          process.exit(2);
-        }
-        if (toSlug.includes('/') && !pathSafe(toSlug, projectRoot)) {
-          emitError(`Unsafe to-slug: ${toSlug}`, 2);
-          process.exit(2);
-        }
-        if (fromSlug.includes('..') || toSlug.includes('..')) {
-          emitError('Slug may not contain ..', 2);
-          process.exit(2);
-        }
+        requireSafeEdgeSlugs(fromSlug, toSlug, projectRoot);
 
         const confidence = flags.confidence && typeof flags.confidence === 'string'
           ? flags.confidence
@@ -1672,12 +2443,10 @@ async function main(argv) {
         const toSlug = positional[1];
 
         if (!fromSlug || !toSlug) {
-          emitError('add-citation requires <from-slug> <to-slug>', 2);
-          process.exit(2);
+          fail('add-citation requires <from-slug> <to-slug>', 2);
         }
         if (fromSlug.includes('..') || toSlug.includes('..')) {
-          emitError('Slug may not contain ..', 2);
-          process.exit(2);
+          fail('Slug may not contain ..', 2);
         }
 
         const projectRoot = await requireProjectRoot();
@@ -1687,11 +2456,71 @@ async function main(argv) {
       }
 
       // -----------------------------------------------------------------------
+      case 'remove-citation': {
+        const fromSlug = positional[0];
+        const toSlug = positional[1];
+
+        if (!fromSlug || !toSlug) {
+          fail('remove-citation requires <from-slug> <to-slug>', 2);
+        }
+        if (fromSlug.includes('..') || toSlug.includes('..')) {
+          fail('Slug may not contain ..', 2);
+        }
+
+        const projectRoot = await requireProjectRoot();
+        const dryRun = Boolean(flags['dry-run']);
+        const result = await removeCitation(projectRoot, fromSlug, toSlug, { dryRun });
+        emitJson(result);
+        break;
+      }
+
+      // -----------------------------------------------------------------------
+      case 'add-citation-by-id': {
+        const fromArg = positional[0];
+        const ns = positional[1];
+        const value = positional[2];
+
+        if (!fromArg || !ns || value === undefined) {
+          fail('add-citation-by-id requires <from-source-slug> <ns> <value>', 2);
+        }
+        if (fromArg.includes('..')) {
+          fail('Slug may not contain ..', 2);
+        }
+
+        // One frontmatter value is one flow-mapping scalar: collapse embedded
+        // newlines/whitespace runs the same way timeline-add normalizes --text,
+        // so a stray newline in --title cannot corrupt the YAML.
+        const rawTitle = (requireFlagValue(flags, 'title') ?? '').replace(/\s+/g, ' ').trim();
+        const title = rawTitle ? rawTitle : undefined;
+
+        const projectRoot = await requireProjectRoot();
+        const result = await addCitationById(projectRoot, fromArg, ns, value, title);
+        emitJson(result);
+        break;
+      }
+
+      // -----------------------------------------------------------------------
+      case 'resolve-pending-citations': {
+        const newArg = positional[0];
+        if (!newArg) {
+          fail('resolve-pending-citations requires <new-source-slug>', 2);
+        }
+        if (newArg.includes('..')) {
+          fail('Slug may not contain ..', 2);
+        }
+
+        const dryRun = Boolean(flags['dry-run']);
+        const projectRoot = await requireProjectRoot();
+        const result = await resolvePendingCitations(projectRoot, newArg, dryRun);
+        emitJson(result);
+        break;
+      }
+
+      // -----------------------------------------------------------------------
       case 'batch-edges': {
         const jsonFile = positional[0];
         if (!jsonFile) {
-          emitError('batch-edges requires <json-file>', 2);
-          process.exit(2);
+          fail('batch-edges requires <json-file>', 2);
         }
         const projectRoot = await requireProjectRoot();
         const resolvedFile = resolve(jsonFile);
@@ -1709,12 +2538,107 @@ async function main(argv) {
       }
 
       // -----------------------------------------------------------------------
+      case 'remove-edge': {
+        const fromSlug = positional[0];
+        const edgeType = positional[1];
+        const toSlug = positional[2];
+
+        if (!fromSlug || !edgeType || !toSlug) {
+          fail('remove-edge requires <from-slug> <edge-type> <to-slug>', 2);
+        }
+
+        if (CITATION_EDGE_TYPES.has(edgeType)) {
+          emitError(citationEdgeMessage('remove'), 2);
+          process.exit(2);
+        }
+
+        const projectRoot = await requireProjectRoot();
+
+        requireSafeEdgeSlugs(fromSlug, toSlug, projectRoot);
+
+        const dryRun = Boolean(flags['dry-run']);
+        const result = await removeEdge(projectRoot, fromSlug, edgeType, toSlug, { dryRun });
+        emitJson(result);
+        break;
+      }
+
+      // -----------------------------------------------------------------------
+      case 'replace-edge': {
+        const fromSlug = positional[0];
+        const oldType = positional[1];
+        const toSlug = positional[2];
+        const newType = positional[3];
+
+        if (!fromSlug || !oldType || !toSlug || !newType) {
+          fail('replace-edge requires <from-slug> <old-type> <to-slug> <new-type>', 2);
+        }
+
+        if (CITATION_EDGE_TYPES.has(oldType) || CITATION_EDGE_TYPES.has(newType)) {
+          emitError(citationReplaceEdgeMessage(), 2);
+          process.exit(2);
+        }
+
+        const projectRoot = await requireProjectRoot();
+
+        requireSafeEdgeSlugs(fromSlug, toSlug, projectRoot);
+
+        const confidence = flags.confidence && typeof flags.confidence === 'string'
+          ? flags.confidence
+          : undefined;
+        const dryRun = Boolean(flags['dry-run']);
+
+        const result = await replaceEdge(projectRoot, fromSlug, oldType, toSlug, newType, { confidence, dryRun });
+        emitJson(result);
+        break;
+      }
+
+      // -----------------------------------------------------------------------
+      case 'timeline-add': {
+        const topicArg = positional[0];
+        if (!topicArg) {
+          fail('timeline-add requires <topic-slug>', 2);
+        }
+        if (topicArg.includes('..')) {
+          fail('Slug may not contain ..', 2);
+        }
+
+        // One entry is one line: collapse any embedded newlines/runs of
+        // whitespace so the zone stays line-addressable and idempotent.
+        const text = typeof flags.text === 'string' ? flags.text.replace(/\s+/g, ' ').trim() : '';
+        if (!text) {
+          fail('timeline-add requires --text "<text>"', 2);
+        }
+        if (text.includes('<!--')) {
+          fail('timeline-add --text may not contain an HTML comment marker', 2);
+        }
+
+        const kind = requireFlagValue(flags, 'kind') ?? 'note';
+        if (!TIMELINE_KINDS.includes(kind)) {
+          fail(`Invalid --kind: ${kind}. Must be one of: ${TIMELINE_KINDS.join(', ')}`, 2);
+        }
+
+        const date = requireFlagValue(flags, 'date') ?? today();
+        if (!isValidIsoDate(date)) {
+          fail(`Invalid --date: ${date}. Must be a real calendar date (YYYY-MM-DD)`, 2);
+        }
+
+        const source = requireFlagValue(flags, 'source') ?? null;
+        if (source && source.includes('..')) {
+          fail('Slug may not contain ..', 2);
+        }
+
+        const projectRoot = await requireProjectRoot();
+        const result = await timelineAdd(projectRoot, topicArg, { text, kind, date, source });
+        emitJson(result);
+        break;
+      }
+
+      // -----------------------------------------------------------------------
       case 'checkpoint-read': {
         const skill = positional[0];
         const phase = positional[1];
         if (!skill || !phase) {
-          emitError('checkpoint-read requires <skill> <phase>', 2);
-          process.exit(2);
+          fail('checkpoint-read requires <skill> <phase>', 2);
         }
         const projectRoot = await requireProjectRoot();
         const data = await checkpointRead(projectRoot, skill, phase);
@@ -1729,8 +2653,7 @@ async function main(argv) {
         const source = positional[2]; // json-file path, '-', or undefined (stdin)
 
         if (!skill || !phase) {
-          emitError('checkpoint-write requires <skill> <phase> [<json-file>|-]', 2);
-          process.exit(2);
+          fail('checkpoint-write requires <skill> <phase> [<json-file>|-]', 2);
         }
 
         const projectRoot = await requireProjectRoot();
@@ -1740,8 +2663,7 @@ async function main(argv) {
           try {
             data = await readStdin();
           } catch (err) {
-            emitError(err.message, 2);
-            process.exit(2);
+            fail(err.message, 2);
           }
         } else {
           const absSource = resolve(source);
@@ -1752,8 +2674,7 @@ async function main(argv) {
             const msg = err.code === 'ENOENT'
               ? `File not found: ${source}`
               : `Error reading ${source}: ${err.message}`;
-            emitError(msg, 2);
-            process.exit(2);
+            fail(msg, 2);
           }
         }
 
@@ -1768,12 +2689,10 @@ async function main(argv) {
         const typeFilter = flags.type && typeof flags.type === 'string' ? flags.type : null;
         const prefix = positional[0] || null;
         if (typeFilter && !ENTITY_DIRS[typeFilter]) {
-          emitError(`Unknown entity type: ${typeFilter}. Valid types: ${Object.keys(ENTITY_DIRS).join(', ')}`, 2);
-          process.exit(2);
+          fail(`Unknown entity type: ${typeFilter}. Valid types: ${Object.keys(ENTITY_DIRS).join(', ')}`, 2);
         }
         if (prefix && !pathSafe(prefix, projectRoot)) {
-          emitError(`Unsafe prefix: ${prefix}`, 2);
-          process.exit(2);
+          fail(`Unsafe prefix: ${prefix}`, 2);
         }
         const entities = await listEntities(projectRoot, prefix);
         const filtered = typeFilter ? entities.filter(e => e.type === typeFilter) : entities;
@@ -1794,22 +2713,18 @@ async function main(argv) {
       case 'read-edges': {
         const slug = (flags.from && typeof flags.from === 'string') ? flags.from : positional[0];
         if (!slug) {
-          emitError('read-edges requires <slug> or --from <slug>', 2);
-          process.exit(2);
+          fail('read-edges requires <slug> or --from <slug>', 2);
         }
         if (slug.includes('..')) {
-          emitError('Slug may not contain ..', 2);
-          process.exit(2);
+          fail('Slug may not contain ..', 2);
         }
         const typeFilter = flags.type && typeof flags.type === 'string' ? flags.type : null;
         const direction = flags.direction && typeof flags.direction === 'string' ? flags.direction : 'both';
-        if (typeFilter && !EDGE_TYPES.some(t => t.name === typeFilter)) {
-          emitError(`Unknown edge type: ${typeFilter}`, 2);
-          process.exit(2);
+        if (typeFilter && !edgeTypeByName(typeFilter)) {
+          fail(`Unknown edge type: ${typeFilter}`, 2);
         }
         if (!['outbound', 'inbound', 'both'].includes(direction)) {
-          emitError(`Invalid --direction: ${direction}. Must be outbound, inbound, or both.`, 2);
-          process.exit(2);
+          fail(`Invalid --direction: ${direction}. Must be outbound, inbound, or both.`, 2);
         }
         const projectRoot = await requireProjectRoot();
         const { outbound, inbound } = await readEdgesForSlug(projectRoot, slug, { type: typeFilter, direction });
@@ -1821,12 +2736,10 @@ async function main(argv) {
       case 'read-citations': {
         const slug = positional[0];
         if (!slug) {
-          emitError('read-citations requires <slug>', 2);
-          process.exit(2);
+          fail('read-citations requires <slug>', 2);
         }
         if (slug.includes('..')) {
-          emitError('Slug may not contain ..', 2);
-          process.exit(2);
+          fail('Slug may not contain ..', 2);
         }
         const projectRoot = await requireProjectRoot();
         const { citing, citedBy } = await readCitationsForSlug(projectRoot, slug);
@@ -1838,26 +2751,19 @@ async function main(argv) {
       case 'verify-frontmatter': {
         const slug = positional[0];
         if (!slug) {
-          emitError('verify-frontmatter requires <slug>', 2);
-          process.exit(2);
+          fail('verify-frontmatter requires <slug>', 2);
         }
         const projectRoot = await requireProjectRoot();
         if (!pathSafe(slug, projectRoot)) {
-          emitError(`Unsafe slug: ${slug}`, 2);
-          process.exit(2);
+          fail(`Unsafe slug: ${slug}`, 2);
         }
         const { frontmatter, filePath } = await readMeta(projectRoot, slug);
 
         // Determine entity type from directory
-        const wikiDir = join(projectRoot, 'wiki');
-        const relPath = relative(wikiDir, filePath);
-        const dirParts = relPath.split(sep);
-        const entityDirName = dirParts[0] + '/';
-        const entityType = Object.entries(ENTITY_DIRS).find(
-          ([, v]) => v.dir === entityDirName,
-        )?.[0] ?? null;
+        const entityType = _entityTypeForFilePath(projectRoot, filePath);
 
         if (!entityType) {
+          const relPath = relative(join(projectRoot, 'wiki'), filePath);
           emitJson({ slug, valid: false, errors: [`Cannot determine entity type from path: ${relPath}`] });
           break;
         }
@@ -1900,8 +2806,7 @@ async function main(argv) {
       // -----------------------------------------------------------------------
       case 'migrate': {
         if (!flags['add-defaults']) {
-          emitError('migrate requires --add-defaults (no other migration modes are defined)', 2);
-          process.exit(2);
+          fail('migrate requires --add-defaults (no other migration modes are defined)', 2);
         }
         const projectRoot = await requireProjectRoot();
         const dryRun = Boolean(flags['dry-run']);
@@ -1914,12 +2819,12 @@ async function main(argv) {
       case 'resolve-alias': {
         const text = positional.join(' ').trim();
         if (!text) {
-          emitError('resolve-alias requires <text>', 2);
-          process.exit(2);
+          fail('resolve-alias requires <text>', 2);
         }
         const projectRoot = await requireProjectRoot();
-        const allEntities = await listEntities(projectRoot);
-        const foundations = allEntities.filter(e => e.type === 'foundations');
+        // Scoped scan: listEntities walks all 13 entity dirs without a prefix,
+        // and every result but foundations/ was discarded a line later.
+        const foundations = await listEntities(projectRoot, 'foundations');
 
         const needle = text.toLowerCase();
         const matches = [];
@@ -1960,8 +2865,7 @@ async function main(argv) {
         }
 
         if (matches.length === 0) {
-          emitError(`no match for query: ${text}`, 2);
-          process.exit(2);
+          fail(`no match for query: ${text}`, 2);
         }
 
         // Sort ascending by slug for deterministic output
@@ -1977,8 +2881,7 @@ async function main(argv) {
 
       // -----------------------------------------------------------------------
       default: {
-        emitError(`Unknown subcommand: ${subcommand}. Run node wiki.mjs --help for usage.`, 2);
-        process.exit(2);
+        fail(`Unknown subcommand: ${subcommand}. Run node wiki.mjs --help for usage.`, 2);
       }
     }
   } catch (err) {
@@ -1996,4 +2899,8 @@ async function main(argv) {
 // Entry point
 // ---------------------------------------------------------------------------
 
-main(process.argv);
+if (process.argv[1] && (process.argv[1].endsWith('wiki.mjs') || process.argv[1].endsWith('wiki'))) {
+  main(process.argv);
+}
+
+export { removeEdge, replaceEdge };

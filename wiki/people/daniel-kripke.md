@@ -1,8 +1,6 @@
 ---
 type: person
 title: Daniel Kripke
-slug: daniel-kripke
-date_added: 2026-08-12
 affiliation: Đại học California, San Diego
 tags:
   - sleep

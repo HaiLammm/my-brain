@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Kể trải bài thành một câu chuyện
-slug: ke-chuyen-trai-bai
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - reading-technique
-id: concepts/tarot/ke-chuyen-trai-bai
+id: ke-chuyen-trai-bai
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

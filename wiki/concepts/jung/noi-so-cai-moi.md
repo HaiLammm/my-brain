@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Nỗi sợ cái mới
-slug: noi-so-cai-moi
-date_added: 2026-05-12
 confidence: high
 tags:
   - psychology
   - neophobia
   - resistance
-id: concepts/jung/noi-so-cai-moi
+id: noi-so-cai-moi
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

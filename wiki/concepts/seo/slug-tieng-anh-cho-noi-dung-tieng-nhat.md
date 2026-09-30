@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Slug tiếng Anh cho nội dung tiếng Nhật
-slug: slug-tieng-anh-cho-noi-dung-tieng-nhat
-date_added: 2026-09-16
 confidence: unverified
 tags:
   - seo
   - url
   - japanese
-id: concepts/seo/slug-tieng-anh-cho-noi-dung-tieng-nhat
+id: slug-tieng-anh-cho-noi-dung-tieng-nhat
 created: 2026-09-16
 updated: 2026-09-16
 key_sources:

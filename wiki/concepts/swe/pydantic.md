@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Pydantic
-slug: pydantic
-date_added: 2026-05-12
 confidence: high
 tags:
   - python
   - validation
   - contract-driven
-id: concepts/swe/pydantic
+id: pydantic
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

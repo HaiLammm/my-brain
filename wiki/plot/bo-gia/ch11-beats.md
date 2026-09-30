@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 11"
-slug: ch11-beats
+title: Plot beats — Chương 11
 book: bo-gia
 up_to_chapter: 11
 created: 2026-05-27

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Chạy song song luật và LLM để tốt nghiệp khỏi LLM
-slug: rule-llm-dual-run
-date_added: 2026-08-07
 confidence: high
 tags:
   - llm
   - cost-control
   - automation
-id: concepts/swe/rule-llm-dual-run
+id: rule-llm-dual-run
 created: 2026-08-07
 updated: 2026-08-07
 key_sources:

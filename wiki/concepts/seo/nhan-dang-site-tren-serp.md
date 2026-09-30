@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Nhận dạng site trên SERP (tên site, favicon)
-slug: nhan-dang-site-tren-serp
-date_added: 2026-08-11
 confidence: high
 tags:
   - technical-seo
   - branding
   - json-ld
-id: concepts/seo/nhan-dang-site-tren-serp
+id: nhan-dang-site-tren-serp
 created: 2026-08-11
 updated: 2026-08-11
 key_sources:

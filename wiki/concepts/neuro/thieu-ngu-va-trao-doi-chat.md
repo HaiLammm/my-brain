@@ -1,8 +1,6 @@
 ---
 type: concept
 title: Thiếu ngủ và trao đổi chất
-slug: thieu-ngu-va-trao-doi-chat
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
@@ -10,7 +8,7 @@ tags:
   - diabetes
   - obesity
   - health
-id: concepts/neuro/thieu-ngu-va-trao-doi-chat
+id: thieu-ngu-va-trao-doi-chat
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

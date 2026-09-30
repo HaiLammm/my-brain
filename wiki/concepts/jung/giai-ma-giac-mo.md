@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Giải mã giấc mơ
-slug: giai-ma-giac-mo
-date_added: 2026-05-11
 confidence: medium
 tags:
   - jungian-psychology
   - dream-analysis
-id: TODO
+id: giai-ma-giac-mo
 created: 2026-05-11
 updated: 2026-05-11
 key_sources:

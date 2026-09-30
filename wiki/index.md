@@ -3,19 +3,12 @@ id: index
 title: Wiki Index
 type: index
 created: 2026-05-11
-updated: 2026-09-06
+updated: 2026-09-26
 ---
 
 # Wiki Index
 
 <!-- lumina:index -->
-- [[sources/ban-do-seo-setsubi-pro-net]]
-- [[sources/profile-ho-tro-san-xuat-video-va-van-hanh-thuong-mai-ien-tu]] — Giới thiệu dịch vụ video và vận hành EC của WA CRAFT, do Nhung soạn theo xác nhận người dùng.
-- [[people/nhung]] — Nhân viên team marketing WA CRAFT; trang người đầu tiên có tài liệu neo.
-- [[sources/wa-craft-dinh-huong-dich-vu-va-chien-luoc-thi-truong-nhat-2026]] — Định hướng năm dịch vụ và chiến lược thị trường Nhật 2026; đã đối chiếu với bảng tính.
-- [[concepts/marketing/ho-so-khach-hang-ly-tuong]] — Tiêu chí chọn doanh nghiệp ưu tiên tiếp cận.
-- [[concepts/marketing/su-kien-kich-hoat-mua-hang]] — Tín hiệu thay đổi làm phát sinh nhu cầu mua.
-- [[concepts/marketing/nhom-quyet-dinh-mua-hang]] — Các vai trò tham gia quyết định mua trong doanh nghiệp.
 - [[chapters/bo-gia/chuong-1]]
 - [[chapters/bo-gia/chuong-10]]
 - [[chapters/bo-gia/chuong-11]]
@@ -180,6 +173,7 @@ updated: 2026-09-06
 - [[concepts/bo-gia/quyen-luc-tiem-nan]]
 - [[concepts/career/ats]]
 - [[concepts/career/bo-tu-tru-cot-tuyen-dung]]
+- [[concepts/career/chuoi-ke-thua-ba-tang]] — Kế thừa quan hệ, tài sản, tri thức — và điều kiện phải đạt trước khi nhận.
 - [[concepts/career/cv-tot]]
 - [[concepts/career/hourensou]]
 - [[concepts/career/jiko-pr]]
@@ -189,6 +183,7 @@ updated: 2026-09-06
 - [[concepts/career/shibodoki]]
 - [[concepts/career/tu-duy-win-win-phong-van]]
 - [[concepts/career/tu-khoa-cv]]
+- [[concepts/career/ung-pho-tranh-chap-cham-dut-hop-dong-lao-dong]] — Tám bài học để giữ hồ sơ, quản lý chứng cứ và tính đường giải quyết tranh chấp lao động.
 - [[concepts/comm/giao-tiep-phi-ngon-ngu]]
 - [[concepts/comm/khoang-cach-giao-tiep]]
 - [[concepts/comm/ky-thuat-ghi-am-va-xem-lai]]
@@ -207,8 +202,8 @@ updated: 2026-09-06
 - [[concepts/jung/anh-huong-psychoanalytic]]
 - [[concepts/jung/anima]]
 - [[concepts/jung/ban-nga]]
-- [[concepts/jung/bieu-tuong-tap-the]]
 - [[concepts/jung/bieu-tuong]]
+- [[concepts/jung/bieu-tuong-tap-the]]
 - [[concepts/jung/bon-chuc-nang-tam-ly]]
 - [[concepts/jung/ca-nhan-hoa]]
 - [[concepts/jung/cai-bong]]
@@ -233,8 +228,8 @@ updated: 2026-09-06
 - [[concepts/jung/mass-eucharist]]
 - [[concepts/jung/mat-na]]
 - [[concepts/jung/ngon-ngu-giac-mo]]
-- [[concepts/jung/nguyen-mau-father]]
 - [[concepts/jung/nguyen-mau]]
+- [[concepts/jung/nguyen-mau-father]]
 - [[concepts/jung/nhan-thuc-ngam]]
 - [[concepts/jung/noi-so-cai-moi]]
 - [[concepts/jung/numinosum]]
@@ -255,9 +250,9 @@ updated: 2026-09-06
 - [[concepts/jung/tu-tuong-huong-ngoai]]
 - [[concepts/jung/tu-tuong-huong-noi]]
 - [[concepts/jung/unus-mundus]]
+- [[concepts/jung/vo-thuc]]
 - [[concepts/jung/vo-thuc-ca-nhan]]
 - [[concepts/jung/vo-thuc-tap-the]]
-- [[concepts/jung/vo-thuc]]
 - [[concepts/khuyen-hoc/binh-dang]]
 - [[concepts/khuyen-hoc/chi-khi-doc-lap]]
 - [[concepts/khuyen-hoc/khai-hoa-van-minh]]
@@ -271,12 +266,17 @@ updated: 2026-09-06
 - [[concepts/literature/su-menh-nha-van]]
 - [[concepts/marketing/cue-dive-method]]
 - [[concepts/marketing/doi-marketing-thue-ngoai]]
+- [[concepts/marketing/hai-dot-thi-truong]] — Thị trường đi qua đợt nhanh chậm rồi đợt chuyên nghiệp; mỗi đợt thưởng một loại năng lực.
+- [[concepts/marketing/hai-nhanh-cua-marketing]] — Nhập môn marketing chia làm sản xuất và phân phối sản phẩm truyền thông.
+- [[concepts/marketing/ho-so-khach-hang-ly-tuong]] — Tiêu chí chọn doanh nghiệp ưu tiên tiếp cận.
 - [[concepts/marketing/ho-tro-mot-dau-moi]]
 - [[concepts/marketing/khung-email-story-problem-impact]]
+- [[concepts/marketing/nhom-quyet-dinh-mua-hang]] — Các vai trò tham gia quyết định mua trong doanh nghiệp.
 - [[concepts/marketing/noi-bo-hoa-nang-luc-marketing]]
 - [[concepts/marketing/quy-tac-cold-email]]
 - [[concepts/marketing/rule-of-one]]
 - [[concepts/marketing/seminar-marketing]]
+- [[concepts/marketing/su-kien-kich-hoat-mua-hang]] — Tín hiệu thay đổi làm phát sinh nhu cầu mua.
 - [[concepts/ml/anomaly-detection]]
 - [[concepts/ml/artificial-neural-networks]]
 - [[concepts/ml/attention-mechanism]]
@@ -327,9 +327,6 @@ updated: 2026-09-06
 - [[concepts/ml/tensorflow]]
 - [[concepts/ml/transfer-learning]]
 - [[concepts/ml/transformer-architecture]]
-- [[concepts/ops/bpo-back-office]]
-- [[concepts/ops/chong-thuoc-nhan-hoa]]
-- [[concepts/ops/chuan-hoa-bang-tai-lieu]]
 - [[concepts/neuro/adenosine]]
 - [[concepts/neuro/adhd]]
 - [[concepts/neuro/anh-sang-xanh]]
@@ -351,8 +348,8 @@ updated: 2026-09-06
 - [[concepts/neuro/jet-lag]]
 - [[concepts/neuro/kich-hoat-giao-cam-man-tinh]]
 - [[concepts/neuro/lien-ket-xa-trong-rem]]
-- [[concepts/neuro/mat-ngu-di-truyen-gay-chet-nguoi]]
 - [[concepts/neuro/mat-ngu]]
+- [[concepts/neuro/mat-ngu-di-truyen-gay-chet-nguoi]]
 - [[concepts/neuro/mat-truong-luc-rem]]
 - [[concepts/neuro/melatonin]]
 - [[concepts/neuro/mong-du]]
@@ -371,6 +368,9 @@ updated: 2026-09-06
 - [[concepts/neuro/thoi-gian-vao-hoc-muon]]
 - [[concepts/neuro/thuoc-ngu-an-than]]
 - [[concepts/neuro/tri-lieu-qua-dem]]
+- [[concepts/ops/bpo-back-office]]
+- [[concepts/ops/chong-thuoc-nhan-hoa]]
+- [[concepts/ops/chuan-hoa-bang-tai-lieu]]
 - [[concepts/seo/aggregate-rating-tu-dang]]
 - [[concepts/seo/answer-first-cho-ai-search]]
 - [[concepts/seo/bang-tu-xu-ly-hay-goi-tho]]
@@ -382,25 +382,31 @@ updated: 2026-09-06
 - [[concepts/seo/doorway-page]]
 - [[concepts/seo/email-marketing-tu-bai-huong-dan]]
 - [[concepts/seo/gioi-han-hien-thi-serp-nhat]]
+- [[concepts/seo/google-thu-thap-va-lap-chi-muc]] — Google tự thu thập và lập chỉ mục: crawler, kiểm tra bằng `site:`, và điều kiện để Google thấy trang như người dùng.
 - [[concepts/seo/gop-tu-khoa-cung-intent-vao-mot-bai]]
 - [[concepts/seo/lap-lich-xuat-ban-theo-uu-tien-va-pillar]]
 - [[concepts/seo/ma-tran-internal-link-khai-bao-truoc]]
-- [[concepts/seo/mat-do-tu-khoa-seo]]
 - [[concepts/seo/mat-do-tu-khoa]]
 - [[concepts/seo/meo-google-business-profile]]
 - [[concepts/seo/mo-hinh-pillar-cluster]]
 - [[concepts/seo/mot-url-canonical-duy-nhat]]
 - [[concepts/seo/ngan-hang-tu-khoa-theo-thiet-bi-van-de-va-intent]]
 - [[concepts/seo/nhan-dang-site-tren-serp]]
+- [[concepts/seo/nhung-thu-khong-nen-toi-uu-seo]] — Chín chủ đề Google nói không đáng tập trung, kèm hai điểm đụng quy ước nội bộ Setsubi-pro.
 - [[concepts/seo/noi-dung-giai-thich-cho-nguoi-khong-chuyen]]
+- [[concepts/seo/noi-dung-huong-nguoi-dung-va-eeat]] — Bốn thuộc tính nội dung hữu ích, và chỗ đứng thật của E-E-A-T: không phải yếu tố xếp hạng.
 - [[concepts/seo/noi-dung-phong-ngua-bao-tri-thiet-bi]]
+- [[concepts/seo/quang-ba-website]] — Trục off-page: mạng xã hội, cộng đồng, quảng cáo, truyền miệng, và ranh giới lạm dụng.
 - [[concepts/seo/seo-symptom-problem-first]]
+- [[concepts/seo/sitemap]] — Tệp liệt kê URL: tuỳ chọn, không bắt buộc, và `lastmod` phải là ngày thật.
 - [[concepts/seo/slug-tieng-anh-cho-noi-dung-tieng-nhat]]
 - [[concepts/seo/structured-data-url-tuyet-doi]]
 - [[concepts/seo/technical-seo-khong-du-de-len-hang]]
 - [[concepts/seo/template-seo-3-phan]]
 - [[concepts/seo/thieu-tin-hieu-con-hon-tin-hieu-sai]]
 - [[concepts/seo/thumbnail-serp-google]]
+- [[concepts/seo/tieu-de-lien-ket]] — Tiêu đề trên kết quả tìm kiếm do Google tự sinh từ `<title>` và các heading khác.
+- [[concepts/seo/van-ban-lien-ket-anchor-text]] — Chữ trong liên kết, và khi nào phải gắn `nofollow`.
 - [[concepts/swe/abac]]
 - [[concepts/swe/access-control-list]]
 - [[concepts/swe/agentic-rag]]
@@ -472,8 +478,8 @@ updated: 2026-09-06
 - [[concepts/swe/unicode-normalization-boundary]]
 - [[concepts/swe/zustand-cart-store]]
 - [[concepts/systems/dieu-khien-hoc]]
-- [[concepts/systems/dieu-tiet-theo-sai-so]]
 - [[concepts/systems/dieu-tiet]]
+- [[concepts/systems/dieu-tiet-theo-sai-so]]
 - [[concepts/systems/dinh-ly-good-regulator]]
 - [[concepts/systems/do-da-dang]]
 - [[concepts/systems/he-rat-lon]]
@@ -554,8 +560,8 @@ updated: 2026-09-06
 - [[concepts/tools/pomodoro-timer]]
 - [[concepts/tools/process-management]]
 - [[concepts/tools/shell-alias]]
-- [[concepts/tools/vim-macro]]
 - [[concepts/tools/vim]]
+- [[concepts/tools/vim-macro]]
 - [[foundations/machine-learning]]
 - [[outputs/cam-nang-seo-cho-marketer]]
 - [[outputs/cv-luong-hai-lam-tieng-viet]]
@@ -613,6 +619,7 @@ updated: 2026-09-06
 - [[people/hans-schmid-guisan]]
 - [[people/henri-poincare]]
 - [[people/henry-corbin]]
+- [[people/hop]] — Người làm marketing, nguồn của ba khung tư duy về thị trường và kế thừa.
 - [[people/huynh-hai-dang]]
 - [[people/immanuel-kant]]
 - [[people/inna-semetsky]]
@@ -637,7 +644,7 @@ updated: 2026-09-06
 - [[people/milton-erickson]]
 - [[people/minh-tailor]]
 - [[people/nathaniel-kleitman]]
-- [[people/nhung]]
+- [[people/nhung]] — Nhân viên team marketing WA CRAFT; trang người đầu tiên có tài liệu neo.
 - [[people/nomoto]]
 - [[people/norbert-wiener]]
 - [[people/pamela-colman-smith]]
@@ -729,6 +736,7 @@ updated: 2026-09-06
 - [[sources/an-introduction-to-cybernetics]]
 - [[sources/bai-5-phan-i-phan-tich-giac-mo]]
 - [[sources/bai-6-phan-i-van-e-ve-cac-mau-nguoi]]
+- [[sources/ban-do-seo-setsubi-pro-net]]
 - [[sources/bo-gia]]
 - [[sources/bo-kich-ban-email-marketing-wa-craft]]
 - [[sources/buoi-huan-luyen-chuyen-sau-ve-viet-cv-tieng-nhat-phan-tich-jiko-pr-shibodoki-va-phan-hoi-chi-tiet]]
@@ -749,6 +757,7 @@ updated: 2026-09-06
 - [[sources/epic-5-implementation-artifacts-tailor-project]]
 - [[sources/epic-breakdown-tailor-project]]
 - [[sources/good-regulator-theorem]]
+- [[sources/google-seo-starter-guide]] — Tài liệu chính thức của Google Search Central: tầng nền tảng và danh sách những thứ không nên tập trung.
 - [[sources/hands-on-machine-learning-with-scikit-learn-keras-and-tensorflow]]
 - [[sources/ho-so-cong-ty-wa-craft]]
 - [[sources/ho-so-luong-hai-lam]]
@@ -773,6 +782,7 @@ updated: 2026-09-06
 - [[sources/phan-i-chuc-nang-cua-nhung-giac-mo]]
 - [[sources/phan-i-qua-khu-va-tuong-lai-trong-vo-thuc]]
 - [[sources/practical-statistics-for-data-scientists]]
+- [[sources/profile-ho-tro-san-xuat-video-va-van-hanh-thuong-mai-ien-tu]] — Giới thiệu dịch vụ video và vận hành EC của WA CRAFT, do Nhung soạn theo xác nhận người dùng.
 - [[sources/psychology-and-the-occult]]
 - [[sources/psychology-and-western-religion]]
 - [[sources/ptthao]]
@@ -790,7 +800,10 @@ updated: 2026-09-06
 - [[sources/the-undiscovered-self]]
 - [[sources/tips-for-answering-interview-questions]]
 - [[sources/tool-sales-architecture-docs]]
+- [[sources/trao-doi-voi-anh-hop-ve-hai-dot-thi-truong-va-chuoi-ke-thua]] — Ghi chú cà phê 26/09/2026 với anh Hợp: hai đợt thị trường, chuỗi kế thừa ba tầng, phản biện dự án dạy tiếng Nhật.
+- [[sources/truong-hop-ta-thi-hien-mamsell-cham-dut-hop-dong-lao-dong]] — Trường hợp tranh chấp chấm dứt hợp đồng lao động qua sơ thẩm, phúc thẩm và thi hành án, theo bản tường thuật của Tạ Thị Hiền.
 - [[sources/vin-j-chuyen-gia-giao-tiep-ve-suc-manh-giong-noi-va-ngon-ngu-co-the]]
+- [[sources/wa-craft-dinh-huong-dich-vu-va-chien-luoc-thi-truong-nhat-2026]] — Định hướng năm dịch vụ và chiến lược thị trường Nhật 2026; đã đối chiếu với bảng tính.
 - [[themes/bo-gia/ban-sac-va-so-phan]]
 - [[themes/bo-gia/cong-ly-va-bao-luc]]
 - [[themes/bo-gia/gia-dinh-va-trung-thanh]]
@@ -830,6 +843,7 @@ updated: 2026-09-06
 - [[themes/ostep/luu-tru-ben-vung]]
 - [[themes/ostep/tuong-tranh]]
 - [[topics/machine-learning]]
+- [[topics/seo]]
 - [[topics/tam-ly-hoc-phan-tich-jung]]
 - [[topics/thuc-hanh-tarot-voi-bo-murder-of-crows]]
 <!-- /lumina:index -->

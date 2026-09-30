@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Kỹ thuật ghi âm và xem lại
-slug: ky-thuat-ghi-am-va-xem-lai
-date_added: 2026-05-17
 confidence: unverified
 tags:
   - giao-tiep
   - tu-nhan-thuc
-id: TODO
+id: ky-thuat-ghi-am-va-xem-lai
 created: 2026-05-17
 updated: 2026-05-17
 key_sources:

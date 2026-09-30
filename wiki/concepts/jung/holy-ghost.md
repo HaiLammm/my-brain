@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Chúa Thánh Thần
-slug: holy-ghost
-date_added: 2026-05-14
 confidence: unverified
 tags:
   - christianity
   - holy-spirit
   - trinity
-id: TODO
+id: holy-ghost
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

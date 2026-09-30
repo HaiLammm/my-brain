@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Quản lý phát huy điểm mạnh
-slug: quan-ly-phat-huy-diem-manh
-date_added: 2026-05-14
 confidence: medium
 tags:
   - quan-ly
   - nhat-ban
-id: concepts/career/quan-ly-phat-huy-diem-manh
+id: quan-ly-phat-huy-diem-manh
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Thuốc ngủ an thần
-slug: thuoc-ngu-an-than
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
   - insomnia
   - pharmacology
   - health
-id: concepts/neuro/thuoc-ngu-an-than
+id: thuoc-ngu-an-than
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

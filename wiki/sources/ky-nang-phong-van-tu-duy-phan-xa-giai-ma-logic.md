@@ -1,8 +1,6 @@
 ---
 type: source
 title: "Kỹ Năng Phỏng Vấn: Tư duy Phản xạ & Giải mã Logic"
-slug: ky-nang-phong-van-tu-duy-phan-xa-giai-ma-logic
-date_added: 2026-05-12
 authors: []
 source_type: note
 importance: 2

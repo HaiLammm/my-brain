@@ -1,8 +1,6 @@
 ---
 type: person
 title: David Dinges
-slug: david-dinges
-date_added: 2026-08-12
 affiliation: Đại học Pennsylvania
 tags:
   - sleep

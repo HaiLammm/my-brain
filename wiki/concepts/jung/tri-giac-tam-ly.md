@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Tri giác (chức năng tâm lý)
-slug: tri-giac-tam-ly
-date_added: 2026-05-12
 confidence: high
 tags:
   - jungian-psychology
   - sensation-function
-id: concepts/jung/tri-giac-tam-ly
+id: tri-giac-tam-ly
 created: 2026-05-12
 updated: 2026-05-14
 key_sources:

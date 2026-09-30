@@ -1,14 +1,12 @@
 ---
 type: concept
 title: NG Detection — cổng chặn pháp lý
-slug: ng-detection
-date_added: 2026-08-07
 confidence: high
 tags:
   - tool-sales
   - compliance
   - japan
-id: concepts/tool-sales/ng-detection
+id: ng-detection
 created: 2026-08-07
 updated: 2026-08-07
 key_sources:

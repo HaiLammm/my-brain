@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Significator
-slug: significator
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - reading-technique
-id: concepts/tarot/significator
+id: significator
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

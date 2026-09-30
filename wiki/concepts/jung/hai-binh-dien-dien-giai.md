@@ -1,14 +1,12 @@
 ---
 type: concept
-title: "Hai bình diện diễn giải"
-slug: hai-binh-dien-dien-giai
-date_added: 2026-05-14
+title: Hai bình diện diễn giải
 confidence: medium
 tags:
   - jungian-psychology
   - interpretation
   - dream-analysis
-id: concepts/jung/hai-binh-dien-dien-giai
+id: hai-binh-dien-dien-giai
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 26"
-slug: ch26-beats
+title: Plot beats — Chương 26
 book: bo-gia
 up_to_chapter: 26
 created: 2026-05-27

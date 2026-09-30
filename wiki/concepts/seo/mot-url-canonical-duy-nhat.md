@@ -1,21 +1,22 @@
 ---
 type: concept
 title: Một URL canonical duy nhất
-slug: mot-url-canonical-duy-nhat
-date_added: 2026-09-25
 confidence: unverified
 tags:
   - seo
   - technical-seo
   - canonical
-id: concepts/seo/mot-url-canonical-duy-nhat
+id: mot-url-canonical-duy-nhat
 created: 2026-09-25
-updated: 2026-09-25
+updated: 2026-09-29
 key_sources:
   - sources/ban-do-seo-setsubi-pro-net
+  - sources/rules-toi-uu-seo-cho-bai-viet-setsubi-pro
+  - sources/google-seo-starter-guide
 related_concepts:
   - concepts/seo/structured-data-url-tuyet-doi
   - concepts/swe/gac-cong-tu-dong-vs-quy-uoc
+  - concepts/seo/nhung-thu-khong-nen-toi-uu-seo
 ---
 
 ## Definition
@@ -35,10 +36,20 @@ Mỗi trang chỉ nên tồn tại ở đúng một địa chỉ, và mọi bi�
 - [[sources/ban-do-seo-setsubi-pro-net]] — sự cố 70/108 trang không index truy về trailing slash cộng với lỗi sinh link ở pipeline
 - [[sources/rules-toi-uu-seo-cho-bai-viet-setsubi-pro]] — nguồn gốc của luật (R15–R18)
 
+## Đối chiếu với tài liệu Google (29/09/2026)
+
+Tài liệu chính thức [[sources/google-seo-starter-guide]] xác nhận hướng dẫn ở trên, và **nới lỏng mức độ khẩn cấp** ở hai điểm (§Reduce duplicate content; §Things we believe you shouldn't focus on):
+
+- **Nội dung trùng lặp không vi phạm chính sách chống spam** và không gây xử phạt thủ công; cái giá phải trả là trải nghiệm người dùng kém và lãng phí tài nguyên crawl. (Sao chép nội dung của người khác là chuyện khác.)
+- **Nếu bạn không tự khai canonical, Google sẽ tự chọn giúp.** Thứ tự Google khuyến nghị khi tự xử lý: đặt **redirect** từ URL không ưu tiên về URL đại diện trước; nếu không redirect được thì mới dùng `rel="canonical"`.
+
+Vì vậy, việc giữ một URL canonical duy nhất ở đây nên được hiểu là **thực hành tốt nên làm**, không phải việc phải xử lý như sự cố khẩn cấp — khác với tình huống đã gặp trên setsubi-pro.net, nơi trailing slash cộng lỗi sinh link khiến 70/108 trang không được index.
+
 ## Related concepts
 
 - [[concepts/seo/structured-data-url-tuyet-doi]]
 - [[concepts/swe/gac-cong-tu-dong-vs-quy-uoc]]
+- [[concepts/seo/nhung-thu-khong-nen-toi-uu-seo]]
 
 ## Mentioned in
 

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Murder of Crows Tarot
-slug: murder-of-crows
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - deck
   - shadow-work
-id: concepts/tarot/murder-of-crows
+id: murder-of-crows
 created: 2026-08-08
 updated: 2026-08-10
 key_sources:

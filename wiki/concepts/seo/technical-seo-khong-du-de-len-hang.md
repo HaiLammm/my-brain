@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Technical SEO sạch vẫn không đủ để lên hạng
-slug: technical-seo-khong-du-de-len-hang
-date_added: 2026-09-25
 confidence: unverified
 tags:
   - seo
   - technical-seo
   - strategy
-id: concepts/seo/technical-seo-khong-du-de-len-hang
+id: technical-seo-khong-du-de-len-hang
 created: 2026-09-25
 updated: 2026-09-25
 key_sources:

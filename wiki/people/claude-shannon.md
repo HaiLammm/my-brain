@@ -1,8 +1,6 @@
 ---
 type: person
 title: Claude Shannon
-slug: claude-shannon
-date_added: 2026-08-08
 affiliation: "Bell Telephone Laboratories"
 tags:
   - information-theory

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: LangGraph
-slug: langgraph
-date_added: 2026-05-12
 confidence: medium
 tags:
   - orchestration
   - multi-agent
   - langchain
-id: concepts/swe/langgraph
+id: langgraph
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

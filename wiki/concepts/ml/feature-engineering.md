@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Feature Engineering
-slug: feature-engineering
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - preprocessing
   - machine-learning
-id: concepts/ml/feature-engineering
+id: feature-engineering
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

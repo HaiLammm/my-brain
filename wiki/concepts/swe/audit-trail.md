@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Dấu vết Kiểm toán (Audit Trail)
-slug: audit-trail
-date_added: 2026-05-12
 confidence: medium
 tags:
   - traceability
   - order-management
-id: concepts/swe/audit-trail
+id: audit-trail
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

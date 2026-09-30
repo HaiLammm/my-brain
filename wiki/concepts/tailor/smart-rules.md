@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Smart Rules (Quy tắc Thông minh)
-slug: smart-rules
-date_added: 2026-05-12
 confidence: medium
 tags:
   - rule-engine
   - vector-search
   - tailor-project
-id: concepts/tailor/smart-rules
+id: smart-rules
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

@@ -1,10 +1,8 @@
 ---
 type: concept
 title: Hồi quy tuyến tính (Linear Regression)
-slug: linear-regression
-date_added: 2026-05-16
 confidence: unverified
-id: concepts/ml/linear-regression
+id: linear-regression
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

@@ -1,12 +1,10 @@
 ---
 type: concept
 title: Lá bài Hoàng gia (Court cards)
-slug: la-bai-hoang-gia
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
-id: concepts/tarot/la-bai-hoang-gia
+id: la-bai-hoang-gia
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

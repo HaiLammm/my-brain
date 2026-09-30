@@ -1,8 +1,6 @@
 ---
 type: source
 title: Phần I — Vấn Đề về Các Mẫu Người
-slug: bai-6-phan-i-van-e-ve-cac-mau-nguoi
-date_added: 2026-05-12
 authors:
   - Carl Gustav Jung
 source_type: book

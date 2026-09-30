@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Tài sản nằm ngoài pipeline build
-slug: tai-san-ngoai-pipeline-build
-date_added: 2026-08-11
 confidence: high
 tags:
   - build-tooling
   - asset-pipeline
   - performance
-id: concepts/swe/tai-san-ngoai-pipeline-build
+id: tai-san-ngoai-pipeline-build
 created: 2026-08-11
 updated: 2026-08-11
 key_sources:

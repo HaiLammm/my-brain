@@ -1,8 +1,6 @@
 ---
 type: concept
 title: Đồng thời tính
-slug: dong-thoi-tinh
-date_added: 2026-05-14
 created: 2026-05-14
 updated: 2026-05-14
 confidence: high
@@ -10,7 +8,7 @@ tags:
   - jungian-psychology
   - synchronicity
   - acausal
-id: TODO
+id: dong-thoi-tinh
 key_sources:
   - sources/the-quotable-jung
   - sources/jung-and-tarot-theory-practice-nexus

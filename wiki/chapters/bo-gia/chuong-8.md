@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 8"
-slug: chuong-8
+title: Chương 8
 book: bo-gia
 number: 8
 created: 2026-05-21

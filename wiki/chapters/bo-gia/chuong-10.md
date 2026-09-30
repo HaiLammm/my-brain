@@ -1,7 +1,6 @@
 ---
 type: chapter
-title: "Chương 10"
-slug: chuong-10
+title: Chương 10
 book: bo-gia
 number: 10
 created: 2026-05-27

@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Điều tiết theo sai số (Error-controlled regulator)
-slug: dieu-tiet-theo-sai-so
-date_added: 2026-08-08
 confidence: high
 tags:
   - systems
   - cybernetics
-id: concepts/systems/dieu-tiet-theo-sai-so
+id: dieu-tiet-theo-sai-so
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Unus Mundus (một thế giới)
-slug: unus-mundus
-date_added: 2026-08-08
 confidence: medium
 tags:
   - jungian-psychology
   - synchronicity
   - metaphysics
-id: concepts/jung/unus-mundus
+id: unus-mundus
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

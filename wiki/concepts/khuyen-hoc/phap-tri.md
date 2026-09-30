@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Pháp trị
-slug: phap-tri
-date_added: 2026-05-14
 confidence: medium
 tags:
   - law
   - political-thought
   - citizenship
-id: concepts/khuyen-hoc/phap-tri
+id: phap-tri
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

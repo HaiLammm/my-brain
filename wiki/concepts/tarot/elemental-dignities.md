@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Elemental dignities
-slug: elemental-dignities
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - golden-dawn
   - reading-technique
-id: concepts/tarot/elemental-dignities
+id: elemental-dignities
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

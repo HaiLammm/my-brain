@@ -1,8 +1,6 @@
 ---
 type: source
 title: Hồ sơ cá nhân — Lương Hải Lâm
-slug: ho-so-luong-hai-lam
-date_added: 2026-05-14
 authors:
   - Lương Hải Lâm
 source_type: note

@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Rào chắn Xác định (Deterministic Guardrails)
-slug: deterministic-guardrails
-date_added: 2026-05-12
 confidence: medium
 tags:
   - ai-bespoke
   - safety
-id: concepts/tailor/deterministic-guardrails
+id: deterministic-guardrails
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

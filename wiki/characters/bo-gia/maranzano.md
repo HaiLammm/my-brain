@@ -1,7 +1,6 @@
 ---
 type: character
 title: Maranzano
-slug: maranzano
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-14
 created: 2026-05-27

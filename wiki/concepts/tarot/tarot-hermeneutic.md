@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Tarot hermeneutic (diễn giải tarot)
-slug: tarot-hermeneutic
-date_added: 2026-08-08
 confidence: high
 tags:
   - tarot
   - jungian-psychology
   - hermeneutics
-id: concepts/tarot/tarot-hermeneutic
+id: tarot-hermeneutic
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

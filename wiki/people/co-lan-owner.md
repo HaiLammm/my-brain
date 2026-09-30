@@ -1,8 +1,6 @@
 ---
 type: person
 title: Cô Lan (Chủ tiệm)
-slug: co-lan-owner
-date_added: 2026-05-12
 affiliation: tailor_project — Persona chủ tiệm/sáng lập
 tags:
   - user-persona

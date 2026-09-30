@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Thực học
-slug: thuc-hoc
-date_added: 2026-05-14
 confidence: medium
 tags:
   - education
   - political-thought
   - modernization
-id: concepts/khuyen-hoc/thuc-hoc
+id: thuc-hoc
 created: 2026-05-14
 updated: 2026-08-08
 key_sources:

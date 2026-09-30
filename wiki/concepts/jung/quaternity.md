@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Tứ phân
-slug: quaternity
-date_added: 2026-05-14
 confidence: unverified
 tags:
   - jungian-psychology
   - quaternity
   - archetype
-id: TODO
+id: quaternity
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

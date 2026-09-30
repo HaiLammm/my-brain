@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Attention Mechanism
-slug: attention-mechanism
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - deep-learning
   - nlp
   - machine-learning
-id: concepts/ml/attention-mechanism
+id: attention-mechanism
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

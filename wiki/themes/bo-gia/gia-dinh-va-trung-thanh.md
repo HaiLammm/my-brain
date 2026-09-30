@@ -1,14 +1,12 @@
 ---
 type: theme
-title: "Gia đình và trung thành"
-slug: gia-dinh-va-trung-thanh
+title: Gia đình và trung thành
 book: bo-gia
 created: 2026-05-21
 updated: 2026-05-21
 tags:
   - bo-gia
-id: TODO
-
+id: themes/bo-gia/gia-dinh-va-trung-thanh
 ---
 
 ## Overview

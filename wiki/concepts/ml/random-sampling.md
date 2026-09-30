@@ -1,10 +1,8 @@
 ---
 type: concept
 title: Lấy mẫu ngẫu nhiên (Random Sampling)
-slug: random-sampling
-date_added: 2026-05-16
 confidence: unverified
-id: concepts/ml/random-sampling
+id: random-sampling
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

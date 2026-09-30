@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Đòn bẩy điều phối viên
-slug: operator-leverage
-date_added: 2026-08-07
 confidence: high
 tags:
   - tool-sales
   - automation
   - operations
-id: concepts/tool-sales/operator-leverage
+id: operator-leverage
 created: 2026-08-07
 updated: 2026-08-07
 key_sources:

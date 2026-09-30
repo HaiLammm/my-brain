@@ -1,10 +1,8 @@
 ---
 type: concept
 title: gRPC
-slug: grpc
-date_added: 2026-05-15
 confidence: unverified
-id: concepts/swe/grpc
+id: grpc
 created: 2026-05-15
 updated: 2026-05-15
 key_sources:

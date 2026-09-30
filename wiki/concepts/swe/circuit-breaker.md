@@ -1,11 +1,9 @@
 ---
 type: concept
 title: Circuit Breaker
-slug: circuit-breaker
-date_added: 2026-05-14
 confidence: high
 tags: []
-id: concepts/swe/circuit-breaker
+id: circuit-breaker
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

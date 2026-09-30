@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Trung tâm Thông báo Trong ứng dụng (In-App Notification Center)
-slug: in-app-notification-center
-date_added: 2026-05-15
 confidence: unverified
 tags:
   - tailor-project
   - notifications
   - event-driven
   - customer-experience
-id: concepts/tailor/in-app-notification-center
+id: in-app-notification-center
 created: 2026-05-15
 updated: 2026-05-15
 key_sources:

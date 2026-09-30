@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Digital Showroom
-slug: digital-showroom
-date_added: 2026-05-14
 confidence: high
 tags:
   - tailor-project
   - ecommerce
   - product-catalog
-id: concepts/tailor/digital-showroom
+id: digital-showroom
 created: 2026-05-14
 updated: 2026-08-07
 key_sources:

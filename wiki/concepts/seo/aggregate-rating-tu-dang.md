@@ -1,14 +1,12 @@
 ---
 type: concept
 title: aggregateRating từ review tự đăng
-slug: aggregate-rating-tu-dang
-date_added: 2026-09-25
 confidence: unverified
 tags:
   - seo
   - structured-data
   - guideline
-id: concepts/seo/aggregate-rating-tu-dang
+id: aggregate-rating-tu-dang
 created: 2026-09-25
 updated: 2026-09-25
 key_sources:

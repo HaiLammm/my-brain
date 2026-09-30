@@ -1,9 +1,7 @@
 ---
 type: concept
-title: "Pipe"
-slug: pipe
-id: concepts/tools/pipe
-date_added: 2026-05-11
+title: Pipe
+id: pipe
 created: 2026-05-11
 updated: 2026-05-11
 confidence: high

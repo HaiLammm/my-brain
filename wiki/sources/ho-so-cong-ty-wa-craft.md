@@ -1,8 +1,6 @@
 ---
 type: source
 title: WA CRAFT — Hồ sơ công ty (会社概要 / Company Profile, bản HP)
-slug: ho-so-cong-ty-wa-craft
-date_added: 2026-09-05
 authors:
   - CÔNG TY TNHH WA CRAFT
 source_type: note

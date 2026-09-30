@@ -1,5 +1,5 @@
 ---
-id: concepts/swe/tich-hop-he-thong-ben-thu-ba
+id: tich-hop-he-thong-ben-thu-ba
 title: Tích hợp hệ thống bên thứ ba
 type: concept
 created: 2026-05-14
@@ -12,8 +12,6 @@ related_concepts:
   - concepts/swe/he-thong-erp
   - concepts/swe/co-so-du-lieu-sql
 confidence: unverified
-slug: tich-hop-he-thong-ben-thu-ba
-date_added: 2026-05-14
 tags:
   - integration
   - enterprise

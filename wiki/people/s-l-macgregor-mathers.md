@@ -1,8 +1,6 @@
 ---
 type: person
 title: S.L. MacGregor Mathers
-slug: s-l-macgregor-mathers
-date_added: 2026-08-08
 affiliation: Hermetic Order of the Golden Dawn
 tags:
   - tarot

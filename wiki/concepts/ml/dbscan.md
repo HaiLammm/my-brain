@@ -1,14 +1,12 @@
 ---
 type: concept
 title: DBSCAN
-slug: dbscan
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - clustering
   - unsupervised-learning
   - machine-learning
-id: concepts/ml/dbscan
+id: dbscan
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

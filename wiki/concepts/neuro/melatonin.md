@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Melatonin
-slug: melatonin
-date_added: 2026-05-13
 confidence: medium
 tags:
   - sleep
   - hormone
   - circadian-rhythm
-id: concepts/neuro/melatonin
+id: melatonin
 created: 2026-05-13
 updated: 2026-05-13
 key_sources:

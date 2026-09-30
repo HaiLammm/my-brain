@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Zustand Cart Store
-slug: zustand-cart-store
-date_added: 2026-05-14
 confidence: high
 tags:
   - tailor-project
   - state-management
   - react
   - e-commerce
-id: TODO
+id: zustand-cart-store
 created: 2026-05-14
 updated: 2026-05-14
 key_sources: []

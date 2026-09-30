@@ -1,13 +1,11 @@
 ---
 type: person
 title: R. F. C. Hull
-slug: r-f-c-hull
-date_added: 2026-05-14
 affiliation: Dịch giả Collected Works of C. G. Jung từ tiếng Đức sang tiếng Anh
 tags:
   - translator
   - jungian-psychology
-id: TODO
+id: r-f-c-hull
 created: 2026-05-14
 updated: 2026-05-14
 key_sources:

@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Chuẩn hoá Unicode tại một biên duy nhất
-slug: unicode-normalization-boundary
-date_added: 2026-08-07
 confidence: high
 tags:
   - i18n
   - text-processing
   - data-quality
-id: concepts/swe/unicode-normalization-boundary
+id: unicode-normalization-boundary
 created: 2026-08-07
 updated: 2026-08-07
 key_sources:

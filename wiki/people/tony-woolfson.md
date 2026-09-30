@@ -1,15 +1,13 @@
 ---
 type: person
 title: Tony Woolfson
-slug: tony-woolfson
-date_added: 2026-05-14
 created: 2026-05-14
 updated: 2026-05-14
 affiliation: 
 tags:
   - editor
   - collaborator
-id: TODO
+id: tony-woolfson
 key_sources:
   - sources/the-quotable-jung
 ---

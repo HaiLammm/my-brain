@@ -1,5 +1,5 @@
 ---
-id: concepts/jung/phong-chieu
+id: phong-chieu
 title: Phóng chiếu
 type: concept
 created: 2026-05-14
@@ -13,8 +13,6 @@ related_concepts:
   - concepts/jung/vo-thuc
   - concepts/jung/tam-ly-dam-dong
 confidence: unverified
-slug: phong-chieu
-date_added: 2026-05-14
 ---
 ## Definition
 

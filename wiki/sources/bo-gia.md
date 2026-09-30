@@ -1,8 +1,6 @@
 ---
 type: source
 title: Bố già
-slug: bo-gia
-date_added: 2026-05-11
 authors:
   - Mario Puzo
 source_type: book
@@ -18,7 +16,7 @@ provenance: replayable
 raw_paths:
   - raw/sources/book/Bo-gia/SachMoi.net-Bo-gia.epub
 ingest_status: drafted
-id: TODO
+id: bo-gia
 created: 2026-05-11
 updated: 2026-05-11
 ---

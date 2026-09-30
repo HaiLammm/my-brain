@@ -1,7 +1,6 @@
 ---
 type: character
 title: Philips
-slug: philips
 book: bo-gia
 first_seen: chapters/bo-gia/chuong-10
 created: 2026-05-27

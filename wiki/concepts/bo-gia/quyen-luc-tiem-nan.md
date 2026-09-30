@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Quyền lực ngầm
-slug: quyen-luc-tiem-nan
-date_added: 2026-05-11
 confidence: high
 tags:
   - quyen-luc
   - toi-pham-to-chuc
-id: TODO
+id: quyen-luc-tiem-nan
 created: 2026-05-11
 updated: 2026-05-11
 key_sources:

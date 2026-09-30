@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Quy trình Đặt hàng Thống nhất (Unified Order Workflow)
-slug: unified-order-workflow
-date_added: 2026-05-12
 confidence: medium
 tags:
   - e-commerce
   - order-management
-id: concepts/tailor/unified-order-workflow
+id: unified-order-workflow
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

@@ -1,8 +1,6 @@
 ---
 type: source
 title: "Man and His Symbols"
-slug: man-and-his-symbols
-date_added: 2026-05-11
 created: 2026-05-11
 updated: 2026-05-11
 authors:
@@ -29,7 +27,7 @@ tags:
   - unconscious
   - dreams
   - symbolism
-id: TODO
+id: man-and-his-symbols
 
 ---
 

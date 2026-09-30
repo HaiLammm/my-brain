@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Thời gian vào học muộn
-slug: thoi-gian-vao-hoc-muon
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
   - education
   - policy
   - adolescence
-id: concepts/neuro/thoi-gian-vao-hoc-muon
+id: thoi-gian-vao-hoc-muon
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

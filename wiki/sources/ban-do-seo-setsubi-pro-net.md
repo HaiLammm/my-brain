@@ -1,8 +1,6 @@
 ---
 type: source
 title: "SEO.md — Bản đồ SEO setsubi-pro.net: đã làm, cố ý không làm, và chưa làm"
-slug: ban-do-seo-setsubi-pro-net
-date_added: 2026-09-25
 authors:
   - Lương Hải Lâm
 source_type: note

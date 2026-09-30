@@ -1,14 +1,12 @@
 ---
 type: concept
 title: SEO symptom/problem-first
-slug: seo-symptom-problem-first
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - seo
   - content
   - search-intent
-id: concepts/seo/seo-symptom-problem-first
+id: seo-symptom-problem-first
 created: 2026-05-16
 updated: 2026-08-11
 key_sources:

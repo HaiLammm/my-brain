@@ -1,15 +1,13 @@
 ---
 type: concept
 title: PyGeM (Python Geometrical Morphing)
-slug: pygem
-date_added: 2026-05-12
 confidence: low
 tags:
   - python
   - cad
   - morphing
   - parameterization
-id: concepts/swe/pygem
+id: pygem
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

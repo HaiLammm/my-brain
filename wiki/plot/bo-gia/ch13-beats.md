@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 13"
-slug: ch13-beats
+title: Plot beats — Chương 13
 book: bo-gia
 up_to_chapter: 13
 created: 2026-05-27

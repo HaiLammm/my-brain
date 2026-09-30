@@ -1,8 +1,6 @@
 ---
 type: source
 title: Huynh Hai Dang - IT BA/QC
-slug: huynh-hai-dang-it-ba-qc
-date_added: 2026-05-18
 authors:
   - Huynh Hai Dang
 source_type: note

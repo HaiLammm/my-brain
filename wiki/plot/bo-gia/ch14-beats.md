@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 14"
-slug: ch14-beats
+title: Plot beats — Chương 14
 book: bo-gia
 up_to_chapter: 14
 created: 2026-05-27

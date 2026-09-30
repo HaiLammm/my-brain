@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Geometric Transformation Engine (Bộ Chuyển đổi Hình học)
-slug: geometric-transformation-engine
-date_added: 2026-05-12
 confidence: medium
 tags:
   - geometric-computation
   - parameterization
   - tailor-project
-id: concepts/tailor/geometric-transformation-engine
+id: geometric-transformation-engine
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

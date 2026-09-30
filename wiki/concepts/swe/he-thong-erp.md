@@ -1,5 +1,5 @@
 ---
-id: concepts/swe/he-thong-erp
+id: he-thong-erp
 title: Hệ thống ERP
 type: concept
 created: 2026-05-14
@@ -12,8 +12,6 @@ related_concepts:
   - concepts/swe/tich-hop-he-thong-ben-thu-ba
   - concepts/swe/he-thong-crm
 confidence: unverified
-slug: he-thong-erp
-date_added: 2026-05-14
 tags:
   - erp
   - enterprise

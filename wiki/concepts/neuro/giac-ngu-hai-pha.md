@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Giấc ngủ hai pha
-slug: giac-ngu-hai-pha
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
   - anthropology
   - health
   - circadian-rhythm
-id: concepts/neuro/giac-ngu-hai-pha
+id: giac-ngu-hai-pha
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

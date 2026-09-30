@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Hành trình Kẻ Khờ
-slug: hanh-trinh-ke-kho
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - narrative
-id: concepts/tarot/hanh-trinh-ke-kho
+id: hanh-trinh-ke-kho
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

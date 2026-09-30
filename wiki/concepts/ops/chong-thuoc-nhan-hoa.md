@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Chống thuộc-nhân-hóa (属人化 / zokujinka)
-slug: chong-thuoc-nhan-hoa
-date_added: 2026-09-05
 confidence: medium
 tags:
   - van-hanh
   - van-hoa-nhat
   - chuan-hoa
   - rui-ro
-id: concepts/ops/chong-thuoc-nhan-hoa
+id: chong-thuoc-nhan-hoa
 created: 2026-09-05
 updated: 2026-09-06
 provenance: replayable

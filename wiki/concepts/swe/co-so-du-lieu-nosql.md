@@ -1,10 +1,8 @@
 ---
 type: concept
 title: Cơ sở dữ liệu NoSQL
-slug: co-so-du-lieu-nosql
-date_added: 2026-05-15
 confidence: unverified
-id: concepts/swe/co-so-du-lieu-nosql
+id: co-so-du-lieu-nosql
 created: 2026-05-15
 updated: 2026-05-15
 key_sources:

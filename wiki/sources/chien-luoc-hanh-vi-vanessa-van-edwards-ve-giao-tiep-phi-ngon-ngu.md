@@ -1,8 +1,6 @@
 ---
 type: source
 title: Chiến lược hành vi — Vanessa Van Edwards về giao tiếp phi ngôn ngữ
-slug: chien-luoc-hanh-vi-vanessa-van-edwards-ve-giao-tiep-phi-ngon-ngu
-date_added: 2026-05-17
 authors:
   - Vanessa Van Edwards
   - Steven Bartlett

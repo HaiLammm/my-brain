@@ -11,10 +11,14 @@
             "id": "9d6647c9ffed3853",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "outputs/ho-so-nang-luc-wa-craft.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ho-so-nang-luc-wa-craft"
             }
           }
         ]
@@ -182,15 +186,17 @@
   },
   "active": "9d6647c9ffed3853",
   "lastOpenFiles": [
+    "log.md.tmp",
+    "graph/edges.jsonl.tmp",
+    "graph/sedObxbp3",
+    "topics/seo.md",
     "sources/ho-so-nang-luc-double-m.md",
     "sources/sao-chung-ta-lai-ngu.md",
     "sources/sao-chung-ta-lai-ngu.md.tmp",
-    "log.md.tmp",
     "concepts/neuro/lien-ket-xa-trong-rem.md.tmp.11887.d1edc5ea1207",
     "people/matthew-walker.md.tmp.11887.a2ac4699866c",
     "concepts/neuro/he-lymph-nao.md.tmp.11887.0f069f12596e",
     "concepts/neuro/he-lymph-nao.md.tmp.11887.74c906317b73",
-    "graph/edges.jsonl.tmp",
     "sources/sao-chung-ta-lai-ngu.md.tmp.11887.5fee31dfd790",
     "people/daniel-kripke.md",
     "people/daniel-kripke.md.tmp.11887.c74c6ff1bd56",
@@ -216,8 +222,6 @@
     "concepts/neuro/ngu-ru.md",
     "concepts/neuro/orexin.md",
     "concepts/neuro/mat-truong-luc-rem.md",
-    "concepts/neuro/lien-ket-xa-trong-rem.md",
-    "concepts/neuro/tri-lieu-qua-dem.md",
     "Untitled.canvas"
   ]
 }

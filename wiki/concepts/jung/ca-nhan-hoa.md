@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Cá nhân hóa
-slug: ca-nhan-hoa
-date_added: 2026-05-11
 confidence: high
 tags:
   - jungian-psychology
   - individuation
-id: TODO
+id: ca-nhan-hoa
 created: 2026-05-11
 updated: 2026-05-11
 key_sources:

@@ -1,13 +1,11 @@
 ---
 type: concept
 title: Luật đa dạng cần thiết (Law of Requisite Variety)
-slug: luat-da-dang-can-thiet
-date_added: 2026-08-08
 confidence: high
 tags:
   - systems
   - cybernetics
-id: concepts/systems/luat-da-dang-can-thiet
+id: luat-da-dang-can-thiet
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

@@ -1,8 +1,6 @@
 ---
 type: source
 title: NOTE — Rules tối ưu SEO cho bài viết (コラム) Setsubi-pro
-slug: rules-toi-uu-seo-cho-bai-viet-setsubi-pro
-date_added: 2026-08-11
 authors:
   - Lương Hải Lâm
 source_type: note

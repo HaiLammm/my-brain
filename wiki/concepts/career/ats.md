@@ -1,14 +1,12 @@
 ---
 type: concept
 title: ATS (Applicant Tracking System)
-slug: ats
-date_added: 2026-05-12
 confidence: high
 tags:
   - tuyen-dung
   - hr
   - cong-nghe
-id: concepts/career/ats
+id: ats
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

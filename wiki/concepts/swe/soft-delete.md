@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Soft Delete
-slug: soft-delete
-date_added: 2026-05-12
 confidence: high
 tags:
   - data-model
   - database
   - soft-delete
   - local-first
-id: TODO
+id: soft-delete
 created: 2026-05-12
 updated: 2026-05-12
 key_sources:

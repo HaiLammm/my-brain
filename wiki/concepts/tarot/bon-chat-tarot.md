@@ -1,12 +1,10 @@
 ---
 type: concept
 title: Bốn chất và nguyên tố trong tarot
-slug: bon-chat-tarot
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
-id: concepts/tarot/bon-chat-tarot
+id: bon-chat-tarot
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

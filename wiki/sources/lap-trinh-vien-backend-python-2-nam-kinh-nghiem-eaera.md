@@ -1,8 +1,6 @@
 ---
 type: source
 title: Lập Trình Viên Backend (Python) - 2+ Năm Kinh Nghiệm - EAERA
-slug: lap-trinh-vien-backend-python-2-nam-kinh-nghiem-eaera
-date_added: 2026-05-14
 authors:
   - EAERA
 source_type: note

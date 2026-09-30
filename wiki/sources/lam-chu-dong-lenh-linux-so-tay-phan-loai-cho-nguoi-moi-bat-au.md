@@ -1,9 +1,7 @@
 ---
 type: source
 title: Lệnh Linux
-slug: lam-chu-dong-lenh-linux-so-tay-phan-loai-cho-nguoi-moi-bat-au
 id: sources/lam-chu-dong-lenh-linux-so-tay-phan-loai-cho-nguoi-moi-bat-au
-date_added: 2026-05-11
 created: 2026-05-11
 updated: 2026-05-11
 authors:

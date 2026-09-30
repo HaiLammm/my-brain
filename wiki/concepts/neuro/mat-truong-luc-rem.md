@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Mất trương lực cơ trong REM
-slug: mat-truong-luc-rem
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
   - REM
   - neuroscience
   - sleep-disorders
-id: concepts/neuro/mat-truong-luc-rem
+id: mat-truong-luc-rem
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

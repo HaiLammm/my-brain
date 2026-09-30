@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Ánh sáng xanh và ức chế melatonin
-slug: anh-sang-xanh
-date_added: 2026-08-12
 confidence: medium
 tags:
   - sleep
   - melatonin
   - circadian-rhythm
   - technology
-id: concepts/neuro/anh-sang-xanh
+id: anh-sang-xanh
 created: 2026-08-12
 updated: 2026-08-12
 key_sources:

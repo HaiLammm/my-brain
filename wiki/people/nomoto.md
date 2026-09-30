@@ -1,8 +1,6 @@
 ---
 type: person
 title: Nomoto Takahiko (野本 享彦)
-slug: nomoto
-date_added: 2026-08-11
 affiliation: CÔNG TY TNHH WA CRAFT (Đà Nẵng) — Director / Giám đốc, người đại diện pháp luật
 tags:
   - wa-craft

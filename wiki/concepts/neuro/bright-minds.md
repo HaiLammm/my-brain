@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Khung BRIGHT MINDS (11 yếu tố rủi ro não)
-slug: bright-minds
-date_added: 2026-05-18
 confidence: medium
 tags:
   - brain-health
   - framework
   - neuroscience
-id: TODO
+id: bright-minds
 created: 2026-05-18
 updated: 2026-05-18
 key_sources: []

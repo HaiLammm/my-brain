@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Ngân sách kết nối chia theo dịch vụ
-slug: connection-pool-budget
-date_added: 2026-08-07
 confidence: high
 tags:
   - database
   - operations
   - capacity-planning
-id: concepts/swe/connection-pool-budget
+id: connection-pool-budget
 created: 2026-08-07
 updated: 2026-08-07
 key_sources:

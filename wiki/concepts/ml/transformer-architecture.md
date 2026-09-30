@@ -1,15 +1,13 @@
 ---
 type: concept
 title: Transformer Architecture
-slug: transformer-architecture
-date_added: 2026-05-16
 confidence: unverified
 tags:
   - deep-learning
   - nlp
   - attention
   - machine-learning
-id: concepts/ml/transformer-architecture
+id: transformer-architecture
 created: 2026-05-16
 updated: 2026-05-16
 key_sources:

@@ -1,7 +1,6 @@
 ---
 type: plot
-title: "Plot beats — Chương 7"
-slug: ch7-beats
+title: Plot beats — Chương 7
 book: bo-gia
 up_to_chapter: 7
 created: 2026-05-21

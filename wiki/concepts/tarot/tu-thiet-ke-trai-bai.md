@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Tự thiết kế trải bài
-slug: tu-thiet-ke-trai-bai
-date_added: 2026-08-08
 confidence: medium
 tags:
   - tarot
   - spread
   - reading-technique
-id: concepts/tarot/tu-thiet-ke-trai-bai
+id: tu-thiet-ke-trai-bai
 created: 2026-08-08
 updated: 2026-08-08
 key_sources:

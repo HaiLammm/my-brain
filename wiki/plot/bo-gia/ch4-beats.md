@@ -1,12 +1,11 @@
 ---
 type: plot
-title: "Plot beats — Chương 4"
-slug: ch4-beats
+title: Plot beats — Chương 4
 book: bo-gia
 up_to_chapter: 4
 created: 2026-05-21
 updated: 2026-05-21
-id: TODO
+id: plot/bo-gia/ch4-beats
 ---
 
 ## Beats

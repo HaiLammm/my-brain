@@ -1,14 +1,12 @@
 ---
 type: concept
 title: Áp lực ngủ
-slug: ap-luc-ngu
-date_added: 2026-05-13
 confidence: medium
 tags:
   - sleep
   - adenosine
   - neuroscience
-id: concepts/neuro/ap-luc-ngu
+id: ap-luc-ngu
 created: 2026-05-13
 updated: 2026-05-13
 key_sources:
