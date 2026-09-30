@@ -9,9 +9,10 @@ tags:
   - indexing
 id: google-thu-thap-va-lap-chi-muc
 created: 2026-09-29
-updated: 2026-09-29
+updated: 2026-10-01
 key_sources:
   - sources/google-seo-starter-guide
+  - sources/google-title-link
 related_concepts:
   - concepts/seo/sitemap
   - concepts/seo/mot-url-canonical-duy-nhat
@@ -30,11 +31,14 @@ Crawler khám phá trang mới **chủ yếu qua liên kết** từ những tran
 - **Google phải thấy trang giống như người dùng thấy**: crawler cần truy cập được cùng tài nguyên như trình duyệt, gồm CSS và JavaScript. Chặn hoặc ẩn các thành phần quan trọng có thể khiến Google không hiểu trang, dẫn tới không xuất hiện hoặc xếp hạng kém.
 - **Nội dung phụ thuộc vị trí**: nếu trang hiển thị khác nhau theo vị trí người dùng, cần chấp nhận rằng Google nhìn từ vị trí crawler, thường là Mỹ.
 - **Chủ động không cho vào index**: Google hỗ trợ nhiều cách chặn một trang, một thư mục, hoặc cả site khỏi kết quả tìm kiếm — dùng khi có phần nội dung không muốn công khai.
+- **robots.txt không phải cách chặn index**: robots.txt chặn Google crawl trang nhưng không phải lúc nào cũng chặn được việc lập chỉ mục — Google vẫn có thể index trang tìm thấy qua liên kết từ site khác, và dựng tiêu đề từ nội dung ngoài trang như anchor text. Muốn chặn lập chỉ mục thì dùng quy tắc `noindex` ([[sources/google-title-link]]).
+- **Độ trễ khi thay đổi**: trong bối cảnh title link, Google phải crawl và xử lý lại trang mới thấy thay đổi ở các nguồn sinh tiêu đề, mất vài ngày tới vài tuần; có thể yêu cầu Google crawl lại ([[sources/google-title-link]]).
 - **Cách nhìn từ phía Google**: dùng công cụ kiểm tra URL trong Search Console để xem Google đọc được gì từ một trang cụ thể.
 
 ## Key sources
 
 - [[sources/google-seo-starter-guide]] — §How does Google Search work?, §Help Google find your content, §Check if Google can see your page the same way a user does, §Don't want a page in Google's search results?
+- [[sources/google-title-link]] — §Be careful about disallowing search engines, §How title links in Google Search are created
 
 ## Related concepts
 

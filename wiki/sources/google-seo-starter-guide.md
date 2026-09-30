@@ -3,7 +3,7 @@ id: sources/google-seo-starter-guide
 title: SEO Starter Guide — hướng dẫn SEO cơ bản của Google
 type: source
 created: 2026-09-29
-updated: 2026-09-30
+updated: 2026-10-01
 authors:
   - Google Search Central
 year: 2025
@@ -43,7 +43,6 @@ pending_citations:
   - {ns: url, value: "https://developers.google.com/search/docs/appearance/snippet?hl=en", title: Control your snippets in search results}
   - {ns: url, value: "https://developers.google.com/search/docs/essentials/spam-policies?hl=en", title: Spam policies for Google web search}
   - {ns: url, value: "https://developers.google.com/search/docs/essentials/technical?hl=en", title: Google Search technical requirements}
-  - {ns: url, value: "https://developers.google.com/search/docs/appearance/title-link?hl=en", title: Influencing your title links in search results}
   - {ns: url, value: "https://developers.google.com/search/docs/appearance/video?hl=en", title: Video SEO best practices}
 ingest_status: finalized
 verify_status: passed
@@ -109,12 +108,13 @@ Tài liệu chính thức của Google Search Central dành cho người mới l
 - [[sources/ban-do-seo-setsubi-pro-net]] — bản đồ nội bộ của setsubi-pro.net, phần bổ sung ở tầng chiến lược và đo lường mà tài liệu Google không nói tới
 - [[sources/rules-toi-uu-seo-cho-bai-viet-setsubi-pro]] — bộ luật kỹ thuật nội bộ; nhiều luật trùng hướng với tài liệu này
 - [[sources/review-seo]] — tiêu chí chấm nội dung nội bộ, nơi có các ngưỡng số cần đối chiếu lại
+- [[sources/google-title-link]] — tài liệu chuyên về title link mà §Influence your title links trỏ tới; trả lời phần tiêu đề của câu hỏi mở bên dưới
 
 ## Open questions
 
 - Mười chín tài liệu Search Central khác đã được tải về `raw/download/google-search/` nhưng chưa nạp — nên nạp theo thứ tự nào, và tài liệu nào thật sự cần cho công việc của Setsubi-pro?
 - Hai hạng mục nội bộ đặt trọng số vào thứ Google nói không nên tập trung vì xếp hạng (điểm theo độ dài ≥2500 từ; yêu cầu URL chứa từ khóa chính) nên được sửa, hay giữ nguyên kèm nhãn "tiêu chuẩn nội bộ, không phải quy luật xếp hạng"? Với URL, lưu ý Google vẫn khuyên đưa từ ngữ có ích cho người dùng vào URL (§Use descriptive URLs).
-- Cách Google cắt tiêu đề và mô tả theo **bề ngang hiển thị** (và việc Google không công bố giới hạn ký tự) **không nằm trong tài liệu này** mà ở hai tài liệu đã tải nhưng chưa nạp: `raw/download/google-search/title-link.md` và `snippet.md`. Wiki đang dùng ngưỡng ký tự nội bộ cho SERP tiếng Nhật — cần đối chiếu khi nạp hai tài liệu đó.
+- Cách Google cắt tiêu đề và mô tả theo **bề ngang hiển thị** (và việc Google không công bố giới hạn ký tự) **không nằm trong tài liệu này** mà ở hai tài liệu đã tải nhưng chưa nạp: `raw/download/google-search/title-link.md` và `snippet.md`. Wiki đang dùng ngưỡng ký tự nội bộ cho SERP tiếng Nhật — cần đối chiếu khi nạp hai tài liệu đó. *(Cập nhật 01/10/2026: phần tiêu đề đã được trả lời khi nạp [[sources/google-title-link]] — `<title>` không có giới hạn độ dài, title link bị cắt thường để vừa bề ngang thiết bị. Phần mô tả vẫn chờ `snippet.md`.)*
 - Với site chỉ 128 trang, khuyến nghị "nhóm theo thư mục để Google học tần suất thay đổi" (dành cho site vài nghìn URL trở lên) có áp dụng được không, hay chỉ là thông tin tham khảo?
 
 ## Notes

@@ -8,11 +8,12 @@ tags:
   - content-marketing
 id: mat-do-tu-khoa
 created: 2026-05-20
-updated: 2026-09-29
+updated: 2026-10-01
 key_sources:
   - sources/review-seo
   - sources/review-bai-seo-cho-setsubi-pro
   - sources/google-seo-starter-guide
+  - sources/google-title-link
 related_concepts:
   - concepts/seo/checklist-seo-100-diem
   - concepts/seo/mo-hinh-pillar-cluster
@@ -45,6 +46,8 @@ Tài liệu chính thức [[sources/google-seo-starter-guide]] nói hai điều 
 
 Cách phát biểu an toàn cho ngưỡng 1–3% ở trên: đây là **tiêu chuẩn nội bộ để giữ bài đọc tự nhiên và đều chất lượng**, không phải quy luật xếp hạng — xem [[concepts/seo/nhung-thu-khong-nen-toi-uu-seo]].
 
+Tài liệu title link [[sources/google-title-link]] áp cùng nguyên tắc cho thẻ `<title>`: vài từ mô tả là có ích, nhưng lặp cùng một từ hoặc cụm từ là nhồi từ khóa, và có thể khiến kết quả trông như spam với cả Google lẫn người dùng.
+
 ## Variants
 
 - **Mật độ từ khóa chính** — tỷ lệ xuất hiện của từ khóa mục tiêu chính.
@@ -57,6 +60,7 @@ Cách phát biểu an toàn cho ngưỡng 1–3% ở trên: đây là **tiêu ch
 - [[sources/review-seo]]
 - [[sources/review-bai-seo-cho-setsubi-pro]]
 - [[sources/google-seo-starter-guide]]
+- [[sources/google-title-link]] — nhồi từ khóa trong thẻ `<title>`
 
 ## Related concepts
 

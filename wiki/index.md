@@ -758,6 +758,7 @@ updated: 2026-09-26
 - [[sources/epic-breakdown-tailor-project]]
 - [[sources/good-regulator-theorem]]
 - [[sources/google-seo-starter-guide]] — Tài liệu chính thức của Google Search Central: tầng nền tảng và danh sách những thứ không nên tập trung.
+- [[sources/google-title-link]] — Tài liệu Google về title link: chín nguồn sinh tiêu đề, bảy trường hợp Google tự viết lại, cắt theo bề ngang thiết bị.
 - [[sources/hands-on-machine-learning-with-scikit-learn-keras-and-tensorflow]]
 - [[sources/ho-so-cong-ty-wa-craft]]
 - [[sources/ho-so-luong-hai-lam]]

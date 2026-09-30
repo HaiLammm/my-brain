@@ -207,3 +207,7 @@ _Append-only. Format: `## [YYYY-MM-DD] skill | details`_
 ## [2026-09-30] ingest | session:551c359a | Added "SEO Starter Guide — hướng dẫn SEO cơ bản của Google" → 13 pages touched | 1 topic timelines updated
 ## [2026-09-30] research-topic | session:cbea82b1 | refreshed topic seo | +0 sources | 4 tensions marked
 ## [2026-09-30] check | session:a603f9a0 | 0 errors fixed, 0 warnings advisory, 2 info (pending citations). 0 errors remain.
+## [2026-10-01] verify | session:3ab1841e | Verified 1 entries: 0 passed, 1 findings, 0 skipped, 0 drift.
+## [2026-10-01] verify | session:08146c68 | Verified 1 entries: 1 passed, 0 findings, 0 skipped, 0 drift.
+## [2026-10-01] ingest | session:8dd43fa7 | Added "Title link — hướng dẫn của Google về tiêu đề trên kết quả tìm kiếm" → 7 pages touched | 1 earlier citations linked | 1 topic timelines updated
+## [2026-10-01] research-topic | session:16ccaec5 | refreshed topic seo | +1 sources | 0 tensions marked

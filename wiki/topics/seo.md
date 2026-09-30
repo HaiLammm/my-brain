@@ -3,7 +3,7 @@ id: seo
 title: SEO — cơ sở tri thức tái dùng cho nhiều site
 type: topic
 created: 2026-09-26
-updated: 2026-09-30
+updated: 2026-10-01
 key_sources:
   - sources/ban-do-seo-setsubi-pro-net
   - sources/rules-toi-uu-seo-cho-bai-viet-setsubi-pro
@@ -15,14 +15,15 @@ key_sources:
   - sources/keyword-map-setsubi-pro
   - sources/list-keyword-seo-setsubi-pro-thang-8-va-9
   - sources/google-seo-starter-guide
-compiled_at: 2026-09-30
+  - sources/google-title-link
+compiled_at: 2026-10-01
 ---
 
 ## Description
 
 Trang này là điểm vào duy nhất cho toàn bộ tri thức SEO trong wiki, được tổ chức theo nguyên tắc kế thừa: phần lớn khái niệm là **lớp cha** — nguyên lý đúng với bất kỳ website nào — còn một nhóm nhỏ là **lớp con**, tức cách áp dụng các nguyên lý đó vào một site cụ thể. Hiện chỉ có một thể hiện đã được nạp đầy đủ là setsubi-pro.net (dịch vụ sửa thiết bị gia dụng, thị trường Nhật).
 
-Kho có hai loại nguồn. Chín nguồn là tài liệu nội bộ sinh ra từ công việc trên setsubi-pro.net: bản đồ SEO, bộ luật on-page, hướng dẫn và hai vòng review bài viết, khung bài chẩn đoán, kế hoạch nội dung và dữ liệu keyword. Nguồn thứ mười là SEO Starter Guide của Google Search Central — tài liệu chính thức đầu tiên của kho. Nó mang tới tầng "Google vận hành thế nào" mà các nguồn nội bộ không có, và một thước đo bên ngoài để tách hai thứ vẫn bị gộp làm một: điều gì là quy luật xếp hạng, điều gì chỉ là tiêu chuẩn biên tập nội bộ tự đặt.
+Kho có hai loại nguồn. Chín nguồn là tài liệu nội bộ sinh ra từ công việc trên setsubi-pro.net: bản đồ SEO, bộ luật on-page, hướng dẫn và hai vòng review bài viết, khung bài chẩn đoán, kế hoạch nội dung và dữ liệu keyword. Hai nguồn là tài liệu chính thức của Google Search Central: SEO Starter Guide cho bức tranh tổng quan, và tài liệu chuyên về title link đi sâu vào một mảng hẹp là tiêu đề trên kết quả tìm kiếm. Chúng mang tới tầng "Google vận hành thế nào" mà các nguồn nội bộ không có, và một thước đo bên ngoài để tách hai thứ vẫn bị gộp làm một: điều gì là quy luật xếp hạng hay hiển thị của Google, điều gì chỉ là tiêu chuẩn biên tập nội bộ tự đặt.
 
 Ranh giới chung/riêng được vẽ bằng một phép thử: *"Điều này còn đúng khi đổi sang một site khác ngành, khác ngôn ngữ không?"* Nếu còn đúng, khái niệm thuộc lớp cha và nằm ở `concepts/seo/`. Nếu chỉ đúng vì site bán dịch vụ sửa chữa hoặc vì SERP tiếng Nhật, nó thuộc lớp con và về lâu dài nên chuyển sang một namespace riêng theo site.
 
@@ -33,6 +34,7 @@ Các tầng khái niệm bên dưới xếp từ nền lên: Google thu thập v
 ### Tài liệu chính thức
 
 - [[sources/google-seo-starter-guide]] — tài liệu chính thức đầu tiên của kho (Google Search Central, nạp 29/09/2026): cách Google thu thập, lập chỉ mục và hiển thị trang, cùng danh sách những thứ không nên tập trung vì mục đích xếp hạng; là thước đo bên ngoài cho các quy ước nội bộ, và đang thách thức hai hạng mục chấm điểm của [[sources/review-seo]]
+- [[sources/google-title-link]] — tài liệu Google chuyên về title link (nạp 01/10/2026): chín nguồn Google dùng để tự sinh tiêu đề, bảy trường hợp Google tự viết lại, `<title>` không có giới hạn độ dài và tiêu đề bị cắt khi cần, thường theo bề ngang thiết bị; là căn cứ chính thức để đọc lại các ngưỡng ký tự nội bộ cho SERP tiếng Nhật
 
 ### Tài liệu nội bộ setsubi-pro.net
 
@@ -59,15 +61,15 @@ Các tầng khái niệm bên dưới xếp từ nền lên: Google thu thập v
 - [[concepts/seo/mot-url-canonical-duy-nhat]] — mỗi nội dung chỉ được có một địa chỉ chính thức; nền móng của mọi thứ phía sau
 - [[concepts/seo/structured-data-url-tuyet-doi]] — dữ liệu có cấu trúc phải dùng URL tuyệt đối để máy đọc không hiểu sai phạm vi
 - [[concepts/seo/aggregate-rating-tu-dang]] — vì sao điểm đánh giá do chính site tự đăng là tín hiệu sai chứ không phải tín hiệu tốt
-- [[concepts/seo/tieu-de-lien-ket]] — tiêu đề trên kết quả tìm kiếm do Google tự sinh từ `<title>` và các heading khác; muốn ảnh hưởng thì phải viết tiêu đề tốt
+- [[concepts/seo/tieu-de-lien-ket]] — tiêu đề trên kết quả tìm kiếm do Google tự sinh từ chín nguồn, trong đó có `<title>` và heading; Google tự viết lại trong bảy trường hợp, nên muốn ảnh hưởng thì phải viết tiêu đề tốt chứ không có cách chốt cứng
 - [[concepts/seo/thumbnail-serp-google]] — điều kiện để ảnh đại diện thật sự xuất hiện trên kết quả tìm kiếm
-- [[concepts/seo/nhan-dang-site-tren-serp]] — site hiện ra như thế nào dưới mắt người tìm kiếm trước khi họ bấm vào
+- [[concepts/seo/nhan-dang-site-tren-serp]] — site hiện ra như thế nào dưới mắt người tìm kiếm trước khi họ bấm vào; tên site trong tiêu đề nên ngắn, ở đầu hoặc cuối, và Google có thể bỏ nó khỏi tiêu đề nếu đã hiện ở dòng tên site
 - [[concepts/seo/technical-seo-khong-du-de-len-hang]] — luận điểm bản lề: sạch kỹ thuật là điều kiện cần, không phải điều kiện đủ
 
 ### Tầng nội dung (lớp cha)
 
 - [[concepts/seo/noi-dung-huong-nguoi-dung-va-eeat]] — bốn thuộc tính của nội dung hữu ích; theo Google đây nhiều khả năng là đòn bẩy lớn nhất, còn E-E-A-T không phải yếu tố xếp hạng
-- [[concepts/seo/cau-truc-heading-seo]] — bộ khung heading phục vụ người đọc và trình đọc màn hình; với xếp hạng thì thứ tự heading không quan trọng
+- [[concepts/seo/cau-truc-heading-seo]] — bộ khung heading phục vụ người đọc và trình đọc màn hình; với xếp hạng thì thứ tự heading không quan trọng, còn với hiển thị thì tiêu đề chính cần nổi bật nhất trang để Google nhận đúng
 - [[concepts/seo/mat-do-tu-khoa]] — mật độ từ khóa nên hiểu là hệ quả của viết đúng chủ đề, không phải chỉ tiêu cần đạt; ngưỡng đang dùng là 1–3% trên số ký tự
 - [[concepts/seo/checklist-seo-100-diem]] — danh sách kiểm trước khi đăng; hai hạng mục của nó (độ dài bài, từ khóa trong URL) là tiêu chuẩn nội bộ chứ không phải quy luật xếp hạng
 - [[concepts/seo/van-ban-lien-ket-anchor-text]] — chữ trong liên kết giúp người đọc và Google hiểu trang đích; khi nào phải gắn `nofollow`
@@ -100,7 +102,7 @@ Các tầng khái niệm bên dưới xếp từ nền lên: Google thu thập v
 - [[concepts/seo/noi-dung-phong-ngua-bao-tri-thiet-bi]] — nhánh nội dung phòng ngừa, mở rộng vòng đời khách hàng của ngành sửa chữa
 - [[concepts/seo/ngan-hang-tu-khoa-theo-thiet-bi-van-de-va-intent]] — cách dựng bản đồ keyword ba trục cho một site dịch vụ thiết bị
 - [[concepts/seo/bang-tu-xu-ly-hay-goi-tho]] — thành phần đặc thù của bài sự cố, dẫn người đọc tới quyết định gọi thợ
-- [[concepts/seo/gioi-han-hien-thi-serp-nhat]] — ràng buộc độ dài tiêu đề và mô tả riêng của SERP tiếng Nhật
+- [[concepts/seo/gioi-han-hien-thi-serp-nhat]] — ngưỡng độ dài tiêu đề và mô tả cho SERP tiếng Nhật; theo tài liệu Google, các con số ký tự chỉ là ước lượng vì tiêu đề bị cắt theo bề ngang thiết bị
 - [[concepts/seo/slug-tieng-anh-cho-noi-dung-tieng-nhat]] — quy ước đặt slug khi nội dung là tiếng Nhật
 - [[concepts/seo/meo-google-business-profile]] — SEO bản đồ cho doanh nghiệp có phạm vi phục vụ theo địa lý
 - [[concepts/seo/email-marketing-tu-bai-huong-dan]] — tái sử dụng bài hướng dẫn thành chuỗi email, cầu nối sang nhóm khái niệm marketing
@@ -114,9 +116,10 @@ Các tầng khái niệm bên dưới xếp từ nền lên: Google thu thập v
   - Cặp thứ tư, mật độ từ khóa 1–3% theo ký tự (vòng 1) so với 1–2% theo từ (vòng 2), đã được chốt ngày 26/09/2026 theo vòng 1 — xem [[concepts/seo/mat-do-tu-khoa]].
 - Ranh giới lớp cha / lớp con hiện mới được vẽ trên trang này, chưa phản ánh vào cấu trúc thư mục. Tám khái niệm ở nhóm cuối vẫn nằm trong `concepts/seo/` — có nên chuyển sang một namespace riêng theo site không, và khi nào?
 - Vài khái niệm ở nhóm lớp con thật ra có lõi dùng chung. `seo-symptom-problem-first` đã được xếp lên lớp cha, nhưng `bang-tu-xu-ly-hay-goi-tho` cũng có dạng tổng quát là "bảng tự làm hay thuê" dùng được cho mọi ngành dịch vụ. Nên chưng cất tiếp hay để nguyên?
-- Tài liệu của Google xác nhận nhiều nguyên lý lớp cha từ bên ngoài, nhưng toàn bộ phần áp dụng vẫn rút ra từ đúng một site, trong đúng một ngành, ở đúng một thị trường. Khái niệm nào thật ra phụ thuộc bối cảnh chỉ lộ ra khi áp dụng cho site thứ hai.
+- Hai tài liệu của Google xác nhận nhiều nguyên lý lớp cha từ bên ngoài, nhưng toàn bộ phần áp dụng vẫn rút ra từ đúng một site, trong đúng một ngành, ở đúng một thị trường. Khái niệm nào thật ra phụ thuộc bối cảnh chỉ lộ ra khi áp dụng cho site thứ hai.
 - Tầng đo lường và tầng quảng bá ngoài site đã có điểm tựa đầu tiên ([[concepts/seo/do-luong-truoc-khi-toi-uu]] với Search Console và mốc chờ vài tuần; [[concepts/seo/quang-ba-website]]), nhưng xây dựng liên kết (backlink), phân tích đối thủ và cách đọc số liệu sau khi đo vẫn trắng. Đây là khoảng trống lớn nhất của kho.
-- Mười chín tài liệu Search Central khác đã được tải về nhưng chưa nạp (chính sách chống spam, title link, snippet, ảnh, video, redirect, sitemap chi tiết, Search Console…). Nên nạp hai tài liệu title link và snippet trước: theo ghi chú trên trang Starter Guide, đó là nơi Google nói cách cắt tiêu đề và mô tả, nên có thể xác nhận hoặc bác ngưỡng ký tự mà [[concepts/seo/gioi-han-hien-thi-serp-nhat]] đang dùng. Các tài liệu còn lại cần nạp sao cho không tạo khái niệm trùng với bảy khái niệm đã có từ Starter Guide.
+- Hậu tố `｜設備プロ` và quy tắc tiêu đề ≤24 ký tự: tài liệu title link cho biết Google có thể bỏ tên site cấp domain khỏi tiêu đề nếu đã hiện ở dòng tên site. Wiki suy luận rằng khi đó hậu tố có thể không hiện, và lý do của quy tắc ≤24 ký tự nên chuyển từ "bảo vệ hậu tố" sang "giữ trọn phần tiêu đề thật". Suy luận này chỉ kiểm được bằng kết quả tìm kiếm thật: setsubi-pro.net đã được hiện tên site chưa, và hậu tố có đang hiện không?
+- Mười tám tài liệu Search Central khác đã được tải về nhưng chưa nạp (chính sách chống spam, snippet, ảnh, video, redirect, sitemap chi tiết, Search Console…). Nên nạp tài liệu snippet trước: phần tiêu đề đã được đối chiếu qua tài liệu title link, còn ngưỡng mô tả trên [[concepts/seo/gioi-han-hien-thi-serp-nhat]] vẫn chưa được đối chiếu với tài liệu Google. Các tài liệu còn lại cần nạp sao cho không tạo khái niệm trùng với các khái niệm đã có từ hai tài liệu Google.
 
 ## Timeline
 
@@ -126,4 +129,5 @@ Các tầng khái niệm bên dưới xếp từ nền lên: Google thu thập v
 - **2026-09-30** | note | Marked [[sources/ban-do-seo-setsubi-pro-net]] challenges [[sources/review-bai-seo-cho-setsubi-pro]]: the SEO map counts the missing まとめ summary heading as a reason articles are not cited by AI engines, while the first review round forbids a separate まとめ heading
 - **2026-09-30** | note | Marked [[sources/cau-truc-3-phan-bai-seo-troubleshooting]] challenges [[sources/review-bai-seo-cho-setsubi-pro]]: for diagnostic articles the 3-part structure puts the self-fix checklist before causes, while the first review round orders situation, causes, self-fix, then calling a technician
 - **2026-09-30** | note | Marked [[sources/review-bai-seo-cho-setsubi-pro]] challenges [[sources/review-seo]]: keyword density 1-3% of characters versus 1-2% of words, and first 10% of characters versus first 10% of words; resolved on 2026-09-26 in favour of the first review round
+- **2026-10-01** | ingest | [[sources/google-title-link]] — Google's title-link guide says the <title> element has no length limit and title links are truncated as needed, typically to fit device width, and Google may drop a domain-level site name from the title link
 <!-- /lumina:timeline -->

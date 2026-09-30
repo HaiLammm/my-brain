@@ -17,7 +17,7 @@ raw_paths:
 provenance: replayable
 id: sources/rules-toi-uu-seo-cho-bai-viet-setsubi-pro
 created: 2026-08-11
-updated: 2026-08-11
+updated: 2026-10-01
 year: 2026
 ingest_status: finalized
 verify_status: findings_pending
@@ -78,6 +78,7 @@ Ghi chú kỹ thuật nội bộ liệt kê 16 quy tắc bắt buộc (đánh s�
 - [[sources/ke-hoach-noi-dung-blog-va-seo-cho-setsuki-pro]]
 - [[sources/list-keyword-seo-setsubi-pro-thang-8-va-9]] — backlog từ khóa mà các quy tắc này áp lên khi xuất bản
 - [[sources/ban-do-seo-setsubi-pro-net]] — bản đồ toàn cảnh 09/2026: đo lại hiện trạng theo các luật ở đây và bổ sung tầng chiến lược
+- [[sources/google-title-link]] — tài liệu Google về title link: title link bị cắt khi cần, thường để vừa bề ngang thiết bị, và `<title>` không có giới hạn độ dài; Google có thể bỏ tên site cấp domain khỏi title link
 
 ## People
 
